@@ -11,7 +11,7 @@ dist-ssr/
 # Source atlas PDF (not redistributed)
 tools/atlas.pdf
 
-# Extracted atlas photographs — not redistributed until licensing is settled (#4).
-# Regenerate with `npm run atlas` once tools/atlas.pdf is in place.
-public/atlas/plates/
+# The extracted plates ARE committed: GitHub Pages builds from the repo and the
+# 59 MB source PDF is not carried here, so they cannot be regenerated in CI.
+# Regenerate locally with `npm run atlas` once tools/atlas.pdf is in place.
 .verify/

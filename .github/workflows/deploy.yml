@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow one deploy at a time, and let a newer push supersede a queued one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # The plate corpus is committed, not generated here: building it needs the
+      # 59 MB source PDF, which the repo does not carry.
+      - name: Check the atlas corpus is present
+        run: |
+          test -f public/atlas/plates.json || { echo "::error::public/atlas/plates.json is missing"; exit 1; }
+          count=$(ls public/atlas/plates/*.webp 2>/dev/null | wc -l)
+          echo "plates: $count"
+          test "$count" -gt 0 || { echo "::error::no plate images; run 'npm run atlas'"; exit 1; }
+
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

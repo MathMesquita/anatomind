@@ -1,0 +1,4 @@
+# AnatoMind is a personal study tool built on a third-party anatomy atlas.
+# It is reachable by link, but should not be indexed or crawled.
+User-agent: *
+Disallow: /

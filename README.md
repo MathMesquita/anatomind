@@ -3,6 +3,8 @@
 A quiz PWA for human anatomy, built on the *Atlas Fotográfico de Anatomia Humana*
 of UFRJ Campus Macaé. A photograph appears with one structure marked; you name it.
 
+**Live: https://mathmesquita.github.io/anatomind/** — installable as a PWA.
+
 > **Prototype.** Built to settle how the app should play before the full thing is
 > written. The open questions are tracked on the [wayfinder map](https://github.com/MathMesquita/anatomind/issues/1).
 
@@ -55,8 +57,20 @@ Requires Python 3 with `pymupdf` and `pillow` for the extractor.
 
 Vite · React · TypeScript · Tailwind v4 · shadcn/ui · vite-plugin-pwa
 
+## Deployment
+
+Pushing to `main` builds and deploys to GitHub Pages. The plate images are
+committed rather than generated in CI, because building them needs the 59 MB
+source PDF, which the repo does not carry — so **run `npm run atlas` and commit
+`public/atlas/` whenever the extractor changes**, or the deployed app will serve
+stale plates against fresh coordinates.
+
+The site carries `robots.txt` and a `noindex` meta tag. It is reachable by link
+and not meant to be found by search.
+
 ## Source
 
 *Atlas Fotográfico de Anatomia Humana*, org. Vivian de Oliveira Sousa Corrêa,
-UFRJ Campus Macaé. The PDF and the extracted photographs are **not** committed;
-redistribution is an open question ([#4](https://github.com/MathMesquita/anatomind/issues/4)).
+UFRJ Campus Macaé. The source PDF is **not** committed. The extracted
+photographs are, in order to deploy; whether that redistribution is licensed
+remains open ([#4](https://github.com/MathMesquita/anatomind/issues/4)).
