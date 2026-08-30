@@ -224,7 +224,13 @@ def page_plates(page: fitz.Page) -> list[dict]:
     # `xrefs=True` costs ~18s a page and we never need the xref: plates are
     # rendered from the page region, not pulled from the image object.
     for order, info in enumerate(page.get_image_info()):
-        rect = fitz.Rect(info["bbox"])
+        # Photographs are routinely placed part-way off the slide, and rendering
+        # clips to the page. The plate is the visible intersection: measuring
+        # markers against the full placement would put them in a frame nobody,
+        # including the exported image, ever sees.
+        rect = fitz.Rect(info["bbox"]) & page.rect
+        if rect.is_empty:
+            continue
         is_banner = rect.y0 < BANNER_MAX_Y and rect.width > BANNER_MIN_WIDTH
         too_small = rect.width < MIN_PLATE_SIDE or rect.height < MIN_PLATE_SIDE
         if is_banner or too_small:
@@ -563,18 +569,28 @@ def content_box(image: Image.Image, markers: list[dict]) -> tuple[float, float, 
     )
 
 
+Box = tuple[float, float, float, float]
+FULL_FRAME: Box = (0.0, 0.0, 1.0, 1.0)
+
+
 def export_image(
     doc: fitz.Document,
     index: int,
     source: bytes,
     plate: Plate,
     out_dir: Path,
-    skip: bool,
-) -> tuple[str, tuple[float, float, float, float]]:
-    """Render a plate on its own and trim it, returning the name and crop box."""
+    skip: Box | None,
+) -> tuple[str, Box]:
+    """Render a plate on its own and trim it, returning the name and crop box.
+
+    `skip` carries the crop box of an existing export instead of rendering. The
+    box is not cosmetic -- it sets the stored size and moves every marker into
+    the trimmed picture -- so a text-only re-run must reuse the box the plates
+    on disk were actually cut to, or the JSON and the images disagree.
+    """
     name = f"p{plate.page:03d}-{plate.index}.webp"
-    if skip:
-        return name, (0.0, 0.0, 1.0, 1.0)
+    if skip is not None:
+        return name, skip
 
     painted = isolate_image(doc, index, source, plate.order)
     scale = IMAGE_LONG_EDGE / max(plate.rect.width, plate.rect.height)
@@ -624,6 +640,16 @@ def main() -> None:
     else:
         pages = range(doc.page_count)
 
+    # A text-only re-run must not restate the geometry of images it did not
+    # cut, so the previous run's crop boxes are carried forward.
+    previous: dict[str, Box] = {}
+    if args.no_images:
+        existing = out / "plates.json"
+        if existing.exists():
+            for record in json.loads(existing.read_text())["plates"]:
+                if "crop" in record:
+                    previous[record["id"]] = tuple(record["crop"])
+
     records, stats = [], Counter()
     for i in pages:
         page = doc[i]
@@ -649,19 +675,24 @@ def main() -> None:
                 unique.append(marker)
             plate.markers = unique
             key, label = system_for(page_no - PAGE_OFFSET)
-            image, box = export_image(doc, i, source, plate, img_dir, args.no_images)
+            plate_id = f"p{plate.page:03d}-{plate.index}"
+            reuse = previous.get(plate_id, FULL_FRAME) if args.no_images else None
+            if args.no_images and plate_id not in previous:
+                stats["crop_unknown"] += 1
+            image, box = export_image(doc, i, source, plate, img_dir, reuse)
             markers = [recentre(m, box) for m in plate.markers]
             width = plate.rect.width * (box[2] - box[0])
             height = plate.rect.height * (box[3] - box[1])
             records.append(
                 {
-                    "id": f"p{plate.page:03d}-{plate.index}",
+                    "id": plate_id,
                     "page": plate.page,
                     "system": key,
                     "systemLabel": label,
                     "region": getattr(plate, "title", ""),
                     "caption": plate.caption,
                     "image": image,
+                    "crop": [round(v, 5) for v in box],
                     "width": round(width, 2),
                     "height": round(height, 2),
                     "markers": markers,
@@ -673,6 +704,11 @@ def main() -> None:
     (out / "plates.json").write_text(
         json.dumps({"plates": records}, ensure_ascii=False, indent=1), encoding="utf-8"
     )
+    stray = sorted({r["page"] for r in records if r["system"] == "outros"})
+    if stray:
+        # PAGE_OFFSET converts book pages to PDF indices; if it were wrong, whole
+        # runs of pages would land outside every range rather than a stray few.
+        print(f"warning: {len(stray)} plates outside all system ranges: {stray}")
     print(json.dumps(dict(stats), indent=2))
     print(f"terms: {len({m['slug'] for r in records for m in r['markers']})} distinct")
 

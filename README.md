@@ -32,10 +32,15 @@ npm run atlas           # -> public/atlas/plates.json + public/atlas/plates/*.we
 npm run atlas:verify    # draw the computed markers back onto the plates and look
 ```
 
-`atlas:verify` renders each plate **with** the atlas's own labels and leader lines
-still on it, so a marker can be checked against the line that produced it. It is
-the only honest test of the extraction: a mis-assigned leader yields perfectly
-well-formed JSON pointing at the wrong structure.
+`atlas:verify` is the only honest test of the extraction — a mis-assigned leader
+yields perfectly well-formed JSON pointing at the wrong structure. It has two
+views, because they catch different failures:
+
+- **default** draws on the WebP the app serves, testing leader matching, cropping
+  and recentring together;
+- **`--annotated`** re-cuts the plate from the PDF with the atlas's own labels and
+  leader lines still on it, so a marker can be checked against the line that
+  produced it.
 
 ## Running it
 

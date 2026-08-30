@@ -5,10 +5,18 @@ a leader mis-assigned to the neighbouring label, or a crop applied without
 moving the points with it, produces perfectly well-formed JSON pointing at the
 wrong place. The only honest check is to look.
 
-This draws on the WebP files the app actually serves, so it tests the whole
-chain -- leader matching, cropping and recentring together.
+Two views, because they catch different failures:
+
+  default      draw on the WebP the app serves. Tests the whole chain -- leader
+               matching, cropping and recentring together -- but the atlas's own
+               leader lines are gone, so a marker cannot be checked against the
+               line that produced it.
+  --annotated  re-render the plate from the PDF with the atlas's labels and
+               leader lines still on it. A marker should sit on the end of its
+               own leader; this is what catches a mis-assigned label.
 
 Usage:  python tools/verify.py --data public/atlas --out .verify [--ids p008-0]
+        python tools/verify.py --data public/atlas --out .verify --annotated
 """
 
 from __future__ import annotations
@@ -18,7 +26,10 @@ import json
 import random
 from pathlib import Path
 
+import fitz
 from PIL import Image, ImageDraw, ImageFont
+
+from extract import IMAGE_LONG_EDGE, page_plates
 
 
 def font(size: int) -> ImageFont.ImageFont:
@@ -31,8 +42,31 @@ def font(size: int) -> ImageFont.ImageFont:
     return ImageFont.load_default()
 
 
-def render(plate: dict, plates_dir: Path, out_dir: Path) -> Path:
-    image = Image.open(plates_dir / plate["image"]).convert("RGB")
+def annotated_plate(doc: fitz.Document, plate: dict) -> Image.Image:
+    """Re-cut the plate from the PDF with the atlas's own annotation intact."""
+    page = doc[plate["page"] - 1]
+    index = int(plate["id"].rsplit("-", 1)[1])
+    rect = page_plates(page)[index]["rect"]
+    scale = IMAGE_LONG_EDGE / max(rect.width, rect.height)
+    pix = page.get_pixmap(clip=rect, matrix=fitz.Matrix(scale, scale), alpha=False)
+    image = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+    box = plate.get("crop", [0.0, 0.0, 1.0, 1.0])
+    return image.crop(
+        (
+            round(box[0] * pix.width),
+            round(box[1] * pix.height),
+            round(box[2] * pix.width),
+            round(box[3] * pix.height),
+        )
+    )
+
+
+def render(plate: dict, plates_dir: Path, out_dir: Path, doc: fitz.Document | None) -> Path:
+    image = (
+        annotated_plate(doc, plate)
+        if doc is not None
+        else Image.open(plates_dir / plate["image"]).convert("RGB")
+    )
     draw = ImageDraw.Draw(image)
     label_font = font(max(13, image.width // 60))
     radius = max(5, image.width // 130)
@@ -67,6 +101,8 @@ def main() -> None:
     ap.add_argument("--ids", default="")
     ap.add_argument("--sample", type=int, default=0, help="render N random plates")
     ap.add_argument("--seed", type=int, default=1)
+    ap.add_argument("--annotated", action="store_true", help="re-cut from the PDF")
+    ap.add_argument("--pdf", default="tools/atlas.pdf")
     args = ap.parse_args()
 
     data = Path(args.data)
@@ -82,8 +118,9 @@ def main() -> None:
     else:
         chosen = plates
 
+    doc = fitz.open(args.pdf) if args.annotated else None
     for plate in chosen:
-        print(render(plate, data / "plates", out))
+        print(render(plate, data / "plates", out, doc))
 
 
 if __name__ == "__main__":
