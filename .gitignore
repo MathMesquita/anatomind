@@ -10,3 +10,8 @@ dist-ssr/
 
 # Source atlas PDF (not redistributed)
 tools/atlas.pdf
+
+# Extracted atlas photographs — not redistributed until licensing is settled (#4).
+# Regenerate with `npm run atlas` once tools/atlas.pdf is in place.
+public/atlas/plates/
+.verify/
