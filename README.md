@@ -21,8 +21,9 @@ so the corpus needs no OCR and no hand annotation:
 5. Strip the page down to its image draws and render the plate — otherwise every
    picture ships with its own answer key printed beside it.
 
-Current yield: **361 plates, 3531 markers, 1775 distinct terms** across 9 systems.
-About 3% of markers are flagged `suspect` and excluded from play — see
+Current yield: **361 plates, 3535 markers, 1768 distinct terms** across 9 systems.
+About 2.8% of markers are flagged `suspect` and excluded from play, leaving 3387
+playable structures over 338 plates — see
 [#7](https://github.com/MathMesquita/anatomind/issues/7).
 
 ```bash

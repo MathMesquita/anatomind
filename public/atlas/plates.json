@@ -282,8 +282,8 @@
      "outside": false
     },
     {
-     "term": "Margemsupra-orbital",
-     "slug": "margemsupra-orbital",
+     "term": "Margem supra-orbital",
+     "slug": "margem-supra-orbital",
      "x": 0.8613,
      "y": 0.48079,
      "outside": false
@@ -296,7 +296,7 @@
      "outside": false
     },
     {
-     "term": "Incisura supra-orbital",
+     "term": "Incisura supra- orbital",
      "slug": "incisura-supra-orbital",
      "x": 0.2037,
      "y": 0.43891,
@@ -338,7 +338,7 @@
      "outside": false
     },
     {
-     "term": "Margem infra-orbital",
+     "term": "Margem infra- orbital",
      "slug": "margem-infra-orbital",
      "x": 0.15678,
      "y": 0.91876,
@@ -837,7 +837,7 @@
      "outside": false
     },
     {
-     "term": "Forame estilo-mastóideo",
+     "term": "Forame estilo- mastóideo",
      "slug": "forame-estilo-mastoideo",
      "x": 0.8173,
      "y": 0.60828,
@@ -2523,7 +2523,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Vértebra Torácica",
-   "caption": "Vétebral Torácica; Vista lateral esquerda",
+   "caption": "Vértebra Torácica; vista posterior",
    "image": "p029-1.webp",
    "width": 222.95,
    "height": 143.21,
@@ -2550,8 +2550,8 @@
      "outside": false
     },
     {
-     "term": "Corpo vertebral",
-     "slug": "corpo-vertebral",
+     "term": "Corpo vertebral Vétebral Torácica; Vista lateral esquerda",
+     "slug": "corpo-vertebral-vetebral-toracica-vista-lateral-esquerda",
      "x": 0.20407,
      "y": 0.65578,
      "outside": false
@@ -2964,8 +2964,8 @@
      "outside": false
     },
     {
-     "term": "Hiatosacral",
-     "slug": "hiatosacral",
+     "term": "Hiato sacral",
+     "slug": "hiato-sacral",
      "x": 0.49539,
      "y": 0.75011,
      "outside": false
@@ -3020,8 +3020,8 @@
      "outside": false
     },
     {
-     "term": "Processoarticular superior",
-     "slug": "processoarticular-superior",
+     "term": "Processo articular superior",
+     "slug": "processo-articular-superior",
      "x": 0.34523,
      "y": 0.08825,
      "outside": false
@@ -3571,7 +3571,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Clavícula",
-   "caption": "Clavícula direita; aproximação na extremidade",
+   "caption": "Clavícula direita; aproximação na extremidade esternal",
    "image": "p041-2.webp",
    "width": 295.29,
    "height": 156.81,
@@ -3985,7 +3985,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Úmero",
-   "caption": "Úmero direito; vista",
+   "caption": "Úmero direito; vista anterior",
    "image": "p044-0.webp",
    "width": 165.43,
    "height": 561.2,
@@ -4045,10 +4045,11 @@
      "slug": "crista-supra",
      "x": 0.64736,
      "y": 0.83862,
-     "outside": false
+     "outside": false,
+     "suspect": true
     },
     {
-     "term": "Crista supra-epicondilar lateral",
+     "term": "Crista supra- epicondilar lateral",
      "slug": "crista-supra-epicondilar-lateral",
      "x": 0.27638,
      "y": 0.8315,
@@ -4112,14 +4113,14 @@
      "outside": false
     },
     {
-     "term": "Face ântero-medial",
+     "term": "Face ântero- medial",
      "slug": "face-antero-medial",
      "x": 0.49555,
      "y": 0.77402,
      "outside": false
     },
     {
-     "term": "Face ântero-lateral",
+     "term": "Face ântero- lateral",
      "slug": "face-antero-lateral",
      "x": 0.33756,
      "y": 0.79538,
@@ -4140,7 +4141,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Úmero",
-   "caption": "Úmero direito; vista",
+   "caption": "Úmero direito; vista posterior",
    "image": "p044-1.webp",
    "width": 171.58,
    "height": 561.94,
@@ -4199,7 +4200,7 @@
      "suspect": true
     },
     {
-     "term": "Crista supra-epicondilar lateral",
+     "term": "Crista supra- epicondilar lateral",
      "slug": "crista-supra-epicondilar-lateral",
      "x": 0.72477,
      "y": 0.84196,
@@ -4271,7 +4272,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Úmero",
-   "caption": "Úmero direito; vista superior",
+   "caption": "Úmero direito; vista superior aproximada da cabeça do úmero",
    "image": "p045-0.webp",
    "width": 244.91,
    "height": 183.6,
@@ -4312,7 +4313,7 @@
      "outside": false
     },
     {
-     "term": "Crista supra-epicondilar medial",
+     "term": "Crista supra- epicondilar medial",
      "slug": "crista-supra-epicondilar-medial",
      "x": 0.52037,
      "y": 0.69893,
@@ -4326,7 +4327,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Úmero",
-   "caption": "Úmero direito; vista ântero-medial",
+   "caption": "Úmero direito; vista ântero-medial aproximada",
    "image": "p045-1.webp",
    "width": 226.6,
    "height": 170.08,
@@ -4374,7 +4375,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Úmero",
-   "caption": "Úmero direito; vista póstero-",
+   "caption": "Úmero direito; vista póstero- lateral",
    "image": "p045-2.webp",
    "width": 316.57,
    "height": 237.46,
@@ -4436,7 +4437,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Úmero",
-   "caption": "lateral",
+   "caption": "",
    "image": "p045-3.webp",
    "width": 444.08,
    "height": 166.11,
@@ -4505,7 +4506,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Ulna",
-   "caption": "Ulna direita; vista ântero-",
+   "caption": "Ulna direita; vista ântero- lateral",
    "image": "p046-0.webp",
    "width": 189.24,
    "height": 619.57,
@@ -4623,7 +4624,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Ulna",
-   "caption": "Ulna direita; aproximação na",
+   "caption": "Ulna direita; aproximação na extremidade proximal",
    "image": "p046-2.webp",
    "width": 279.58,
    "height": 209.73,
@@ -4678,7 +4679,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Ulna",
-   "caption": "Ulna direita; aproximação na",
+   "caption": "Ulna direita; aproximação na cabeça da ulna",
    "image": "p046-3.webp",
    "width": 203.13,
    "height": 224.53,
@@ -4823,7 +4824,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Rádio",
-   "caption": "Rádio direito; aproximação na cabeça",
+   "caption": "Rádio direito; aproximação na cabeça do rádio",
    "image": "p047-1.webp",
    "width": 162.06,
    "height": 232.44,
@@ -5975,7 +5976,8 @@
      "slug": "sulco-supra",
      "x": 0.57044,
      "y": 0.37223,
-     "outside": false
+     "outside": false,
+     "suspect": true
     },
     {
      "term": "Asa do ílio",
@@ -6103,7 +6105,7 @@
      "outside": false
     },
     {
-     "term": "ilíaca póstero-inferior Incisura isquiástica maior",
+     "term": "ilíaca póstero- inferior Incisura isquiástica maior",
      "slug": "iliaca-postero-inferior-incisura-isquiastica-maior",
      "x": 0.55421,
      "y": 0.5317,
@@ -6125,7 +6127,7 @@
      "outside": false
     },
     {
-     "term": "Espinha ilíaca póstero-superior",
+     "term": "Espinha ilíaca póstero- superior",
      "slug": "espinha-iliaca-postero-superior",
      "x": 0.90395,
      "y": 0.5535,
@@ -7004,7 +7006,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Fíbula",
-   "caption": "Fíbula esquerda; aproximação na",
+   "caption": "Fíbula esquerda; aproximação na extremidade distal",
    "image": "p064-0.webp",
    "width": 303.48,
    "height": 539.83,
@@ -7323,7 +7325,7 @@
    "system": "osteoarticular",
    "systemLabel": "Sistema osteoarticular",
    "region": "Articulação do joelho",
-   "caption": "Joelho direito; vista anterior com lateralização da",
+   "caption": "Joelho direito; vista anterior com lateralização da patela e seus ligamentos",
    "image": "p068-0.webp",
    "width": 310.45,
    "height": 552.02,
@@ -8772,8 +8774,8 @@
      "outside": false
     },
     {
-     "term": "M. Flexor radial",
-     "slug": "m-flexor-radial",
+     "term": "M. Flexor radial do carpo",
+     "slug": "m-flexor-radial-do-carpo",
      "x": 0.16896,
      "y": 0.83001,
      "outside": false
@@ -8972,8 +8974,8 @@
      "outside": false
     },
     {
-     "term": "M. tríceps braquial",
-     "slug": "m-triceps-braquial",
+     "term": "M. tríceps braquial; cabeça longa",
+     "slug": "m-triceps-braquial-cabeca-longa",
      "x": 0.15303,
      "y": 0.51507,
      "outside": false
@@ -9131,29 +9133,28 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Superior e Tórax",
-   "caption": "M. Peitoral",
+   "caption": "Membro superior e tórax; vista anterior; com rebatimento do m. Peitoral maior",
    "image": "p091-0.webp",
    "width": 374.26,
    "height": 220.17,
    "markers": [
     {
-     "term": "M. Peitoral",
-     "slug": "m-peitoral",
+     "term": "M. Peitoral maior",
+     "slug": "m-peitoral-maior",
      "x": 0.35893,
      "y": 0.26742,
      "outside": false
     },
     {
-     "term": "do Abdome",
-     "slug": "do-abdome",
+     "term": "M. Reto do Abdome",
+     "slug": "m-reto-do-abdome",
      "x": 0.85784,
      "y": 0.21579,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
-     "term": "Braquiorradial",
-     "slug": "braquiorradial",
+     "term": "M. Braquiorradial",
+     "slug": "m-braquiorradial",
      "x": 0.90328,
      "y": 0.6807,
      "outside": false
@@ -9166,8 +9167,8 @@
      "outside": false
     },
     {
-     "term": "Subclávia",
-     "slug": "subclavia",
+     "term": "Veia Subclávia",
+     "slug": "veia-subclavia",
      "x": 0.20768,
      "y": 0.52453,
      "outside": false
@@ -9208,14 +9209,14 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Superior e Tórax",
-   "caption": "Membro superior e tórax; vista anterior; com rebatimento do m. Peitoral maior",
+   "caption": "",
    "image": "p091-1.webp",
    "width": 374.26,
    "height": 220.17,
    "markers": [
     {
-     "term": "Menor",
-     "slug": "menor",
+     "term": "M. Peitoral Menor",
+     "slug": "m-peitoral-menor",
      "x": 0.38802,
      "y": 0.45243,
      "outside": false
@@ -9325,12 +9326,11 @@
      "outside": false
     },
     {
-     "term": "Flexor Superficial dos",
-     "slug": "flexor-superficial-dos",
+     "term": "Tendão do Músculo Flexor Superficial dos Dedos",
+     "slug": "tendao-do-musculo-flexor-superficial-dos-dedos",
      "x": 0.6317,
      "y": 0.56846,
-     "outside": false,
-     "suspect": true
+     "outside": false
     }
    ]
   },
@@ -9340,7 +9340,7 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Superior",
-   "caption": "(Parte Posterior)",
+   "caption": "Membro superior; vista lateral",
    "image": "p093-0.webp",
    "width": 453.49,
    "height": 189.3,
@@ -9381,8 +9381,8 @@
      "outside": false
     },
     {
-     "term": "M. Deltóide",
-     "slug": "m-deltoide",
+     "term": "M. Deltóide (Parte Posterior)",
+     "slug": "m-deltoide-parte-posterior",
      "x": 0.34779,
      "y": 0.71967,
      "outside": false
@@ -9436,30 +9436,37 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Superior",
-   "caption": "do Carpo",
+   "caption": "Membro superior; vista posterior",
    "image": "p094-0.webp",
    "width": 504.62,
    "height": 204.41,
    "markers": [
     {
-     "term": "Longo do Carpo",
-     "slug": "longo-do-carpo",
+     "term": "M. Extensor Radial Longo do Carpo",
+     "slug": "m-extensor-radial-longo-do-carpo",
      "x": 0.3722,
      "y": 0.4403,
      "outside": false
     },
     {
-     "term": "Radial Curto do Carpo",
-     "slug": "radial-curto-do-carpo",
+     "term": "M. Extensor Radial Curto do Carpo",
+     "slug": "m-extensor-radial-curto-do-carpo",
      "x": 0.47326,
      "y": 0.46596,
      "outside": false
     },
     {
-     "term": "Polegar",
-     "slug": "polegar",
+     "term": "M. Abdutor Longo do Polegar",
+     "slug": "m-abdutor-longo-do-polegar",
      "x": 0.76553,
      "y": 0.46596,
+     "outside": false
+    },
+    {
+     "term": "M. Extensor Curto do Polegar",
+     "slug": "m-extensor-curto-do-polegar",
+     "x": 0.85569,
+     "y": 0.39509,
      "outside": false
     },
     {
@@ -9470,8 +9477,8 @@
      "outside": false
     },
     {
-     "term": "M. Extensor Ulnar",
-     "slug": "m-extensor-ulnar",
+     "term": "M. Extensor Ulnar do Carpo",
+     "slug": "m-extensor-ulnar-do-carpo",
      "x": 0.47326,
      "y": 0.76924,
      "outside": false
@@ -9498,7 +9505,7 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Superior",
-   "caption": "Do Carpo (Tendão)",
+   "caption": "Membro superior; vista anterior",
    "image": "p094-1.webp",
    "width": 670.85,
    "height": 215.15,
@@ -9518,12 +9525,11 @@
      "outside": false
     },
     {
-     "term": "do Carpo",
-     "slug": "do-carpo",
+     "term": "M. Flexor Ulnar do Carpo",
+     "slug": "m-flexor-ulnar-do-carpo",
      "x": 0.68212,
      "y": 0.28999,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "M. Flexor Superficial dos Dedos",
@@ -9540,8 +9546,8 @@
      "outside": false
     },
     {
-     "term": "M. Flexor Radial",
-     "slug": "m-flexor-radial",
+     "term": "M. Flexor Radial Do Carpo (Tendão)",
+     "slug": "m-flexor-radial-do-carpo-tendao",
      "x": 0.72442,
      "y": 0.55138,
      "outside": false
@@ -9581,8 +9587,8 @@
      "outside": false
     },
     {
-     "term": "Externo",
-     "slug": "externo",
+     "term": "M. Oblíquo Externo",
+     "slug": "m-obliquo-externo",
      "x": 0.91136,
      "y": 0.3791,
      "outside": false
@@ -9609,8 +9615,8 @@
      "outside": false
     },
     {
-     "term": "Nervo Músculo",
-     "slug": "nervo-musculo",
+     "term": "Nervo Músculo Cutâneo",
+     "slug": "nervo-musculo-cutaneo",
      "x": 0.1818,
      "y": 0.29181,
      "outside": false
@@ -9678,8 +9684,8 @@
      "outside": false
     },
     {
-     "term": "M. Redondo",
-     "slug": "m-redondo",
+     "term": "M. Redondo Menor",
+     "slug": "m-redondo-menor",
      "x": 0.69218,
      "y": 0.56059,
      "outside": false
@@ -9767,8 +9773,8 @@
    "height": 531.86,
    "markers": [
     {
-     "term": "M. Latíssimo",
-     "slug": "m-latissimo",
+     "term": "M. Latíssimo do Dorso",
+     "slug": "m-latissimo-do-dorso",
      "x": 0.44887,
      "y": 0.48766,
      "outside": false
@@ -9802,8 +9808,8 @@
      "outside": false
     },
     {
-     "term": "Externo (Costela)",
-     "slug": "externo-costela",
+     "term": "M. Intercostal Externo (Costela)",
+     "slug": "m-intercostal-externo-costela",
      "x": 0.93793,
      "y": 0.48691,
      "outside": false
@@ -9836,12 +9842,11 @@
      "outside": false
     },
     {
-     "term": "curto do carpo",
-     "slug": "curto-do-carpo",
+     "term": "M. extensor radial curto do carpo",
+     "slug": "m-extensor-radial-curto-do-carpo",
      "x": 0.62483,
      "y": 0.68329,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "M. abdutor longo do polegar",
@@ -9927,8 +9932,8 @@
      "outside": false
     },
     {
-     "term": "N",
-     "slug": "n",
+     "term": "N. ulnar",
+     "slug": "n-ulnar",
      "x": 0.94307,
      "y": 0.39419,
      "outside": false
@@ -9941,18 +9946,17 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Superior",
-   "caption": "dos dedos",
+   "caption": "Mão direita; vista anterior",
    "image": "p099-1.webp",
    "width": 388.63,
    "height": 245.4,
    "markers": [
     {
-     "term": "polegar",
-     "slug": "polegar",
+     "term": "M. Abdutor curto do polegar",
+     "slug": "m-abdutor-curto-do-polegar",
      "x": 0.68527,
      "y": 0.38362,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "M. Flexor curto do polegar",
@@ -9962,15 +9966,15 @@
      "outside": false
     },
     {
-     "term": "Tendão do M. Flexor",
-     "slug": "tendao-do-m-flexor",
+     "term": "Tendão do M. Flexor profundo dos dedos",
+     "slug": "tendao-do-m-flexor-profundo-dos-dedos",
      "x": 0.25915,
      "y": 0.61638,
      "outside": false
     },
     {
-     "term": "Tendão do M. Flexor superficial",
-     "slug": "tendao-do-m-flexor-superficial",
+     "term": "Tendão do M. Flexor superficial dos dedos",
+     "slug": "tendao-do-m-flexor-superficial-dos-dedos",
      "x": 0.42611,
      "y": 0.70394,
      "outside": false
@@ -10003,12 +10007,11 @@
      "outside": false
     },
     {
-     "term": "curto do polegar",
-     "slug": "curto-do-polegar",
+     "term": "Tendão do M. Extensor curto do polegar",
+     "slug": "tendao-do-m-extensor-curto-do-polegar",
      "x": 0.2035,
      "y": 0.34204,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "M. interósseo dorsal",
@@ -10018,12 +10021,11 @@
      "outside": false
     },
     {
-     "term": "Retináculo dos",
-     "slug": "retinaculo-dos",
+     "term": "Retináculo dos Músculos Extensores",
+     "slug": "retinaculo-dos-musculos-extensores",
      "x": 0.12954,
      "y": 0.50691,
-     "outside": false,
-     "suspect": true
+     "outside": false
     }
    ]
   },
@@ -10039,16 +10041,15 @@
    "height": 258.41,
    "markers": [
     {
-     "term": "M. Flexor profundo dos",
-     "slug": "m-flexor-profundo-dos",
+     "term": "Tendões do M. Flexor profundo dos dedos",
+     "slug": "tendoes-do-m-flexor-profundo-dos-dedos",
      "x": 0.72225,
      "y": 0.24825,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
-     "term": "Tendões do M",
-     "slug": "tendoes-do-m",
+     "term": "Tendões do M. Flexor superficial dos dedos",
+     "slug": "tendoes-do-m-flexor-superficial-dos-dedos",
      "x": 0.58556,
      "y": 0.63855,
      "outside": false
@@ -10137,12 +10138,11 @@
      "outside": false
     },
     {
-     "term": "M. tensor da",
-     "slug": "m-tensor-da",
+     "term": "M. tensor da fáscia lata",
+     "slug": "m-tensor-da-fascia-lata",
      "x": 0.12672,
      "y": 0.40882,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "N. femoral",
@@ -10242,12 +10242,11 @@
      "outside": false
     },
     {
-     "term": "semimembranáceo",
-     "slug": "semimembranaceo",
+     "term": "Músculos bíceps femoral, semitendíneo e semimembranáceo",
+     "slug": "musculos-biceps-femoral-semitendineo-e-semimembranaceo",
      "x": 0.47995,
      "y": 0.91059,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "N. glúteo inferior",
@@ -10326,15 +10325,15 @@
      "outside": false
     },
     {
-     "term": "Femoral",
-     "slug": "femoral",
+     "term": "Músculo Reto Femoral",
+     "slug": "musculo-reto-femoral",
      "x": 0.68485,
      "y": 0.64676,
      "outside": false
     },
     {
-     "term": "Veia safena",
-     "slug": "veia-safena",
+     "term": "Veia safena Magna",
+     "slug": "veia-safena-magna",
      "x": 0.2855,
      "y": 0.59419,
      "outside": false
@@ -10442,8 +10441,8 @@
      "outside": false
     },
     {
-     "term": "Músculo Bíceps",
-     "slug": "musculo-biceps",
+     "term": "Músculo Bíceps Femoral Cabeça Curta",
+     "slug": "musculo-biceps-femoral-cabeca-curta",
      "x": 0.52979,
      "y": 0.50645,
      "outside": false
@@ -10463,8 +10462,8 @@
      "outside": false
     },
     {
-     "term": "Femoral Cabeça Longa",
-     "slug": "femoral-cabeca-longa",
+     "term": "Músculo Bíceps Femoral Cabeça Longa",
+     "slug": "musculo-biceps-femoral-cabeca-longa",
      "x": 0.47347,
      "y": 0.37105,
      "outside": false
@@ -10566,8 +10565,8 @@
      "outside": false
     },
     {
-     "term": "M. Bíceps femoral",
-     "slug": "m-biceps-femoral",
+     "term": "M. Bíceps femoral; cabeça longa",
+     "slug": "m-biceps-femoral-cabeca-longa",
      "x": 0.24275,
      "y": 0.40005,
      "outside": false
@@ -10598,6 +10597,13 @@
      "slug": "m-gastrocnemio-cabeca-lateral",
      "x": 0.32491,
      "y": 0.92003,
+     "outside": false
+    },
+    {
+     "term": "M. Bíceps femoral; cabeça curta",
+     "slug": "m-biceps-femoral-cabeca-curta",
+     "x": 0.32491,
+     "y": 0.58666,
      "outside": false
     },
     {
@@ -10642,12 +10648,11 @@
      "outside": false
     },
     {
-     "term": "femoral; cabeça",
-     "slug": "femoral-cabeca",
+     "term": "M. Bíceps femoral; cabeça longa",
+     "slug": "m-biceps-femoral-cabeca-longa",
      "x": 0.27511,
      "y": 0.12801,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "M. Semitendíneo",
@@ -10657,15 +10662,22 @@
      "outside": false
     },
     {
-     "term": "M. Gastrocnêmio",
-     "slug": "m-gastrocnemio",
+     "term": "M. Gastrocnêmio; cabeça lateral",
+     "slug": "m-gastrocnemio-cabeca-lateral",
      "x": 0.42664,
      "y": 0.65905,
      "outside": false
     },
     {
-     "term": "M. Bíceps femoral",
-     "slug": "m-biceps-femoral",
+     "term": "M. Gastrocnêmio; cabeça medial",
+     "slug": "m-gastrocnemio-cabeca-medial",
+     "x": 0.7501,
+     "y": 0.70973,
+     "outside": false
+    },
+    {
+     "term": "M. Bíceps femoral; cabeça curta",
+     "slug": "m-biceps-femoral-cabeca-curta",
      "x": 0.32641,
      "y": 0.3304,
      "outside": false
@@ -10705,8 +10717,8 @@
      "outside": false
     },
     {
-     "term": "Longo dos Dedos",
-     "slug": "longo-dos-dedos",
+     "term": "Músculo Extensor Longo dos Dedos",
+     "slug": "musculo-extensor-longo-dos-dedos",
      "x": 0.62779,
      "y": 0.53348,
      "outside": false
@@ -10739,8 +10751,8 @@
    "height": 109.3,
    "markers": [
     {
-     "term": "Cabeça Medial",
-     "slug": "cabeca-medial",
+     "term": "Músculo Gastrocnêmio Cabeça Medial",
+     "slug": "musculo-gastrocnemio-cabeca-medial",
      "x": 0.60559,
      "y": 0.28138,
      "outside": false
@@ -10767,8 +10779,8 @@
      "outside": false
     },
     {
-     "term": "Da Artéria Poplítea",
-     "slug": "da-arteria-poplitea",
+     "term": "Ramos Colaterais Da Artéria Poplítea",
+     "slug": "ramos-colaterais-da-arteria-poplitea",
      "x": 0.85296,
      "y": 0.38563,
      "outside": false
@@ -10781,14 +10793,14 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Inferior",
-   "caption": "dos flexores",
+   "caption": "Membro inferior direito; vista medial",
    "image": "p110-0.webp",
    "width": 424.63,
    "height": 218.78,
    "markers": [
     {
-     "term": "Aponeurose",
-     "slug": "aponeurose",
+     "term": "Aponeurose plantar",
+     "slug": "aponeurose-plantar",
      "x": 0.15274,
      "y": 0.62568,
      "outside": false
@@ -10808,19 +10820,18 @@
      "outside": false
     },
     {
-     "term": "Retináculo",
-     "slug": "retinaculo",
+     "term": "Retináculo dos flexores",
+     "slug": "retinaculo-dos-flexores",
      "x": 0.4241,
      "y": 0.65418,
      "outside": false
     },
     {
-     "term": "posterior",
-     "slug": "posterior",
+     "term": "N. tibial posterior",
+     "slug": "n-tibial-posterior",
      "x": 0.55948,
      "y": 0.61311,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "Tendão do M. flexor longo do hálux Tendão do M. flexor",
@@ -10836,6 +10847,13 @@
      "y": 0.59653,
      "outside": false,
      "suspect": true
+    },
+    {
+     "term": "Tendão do M. tibial posterior",
+     "slug": "tendao-do-m-tibial-posterior",
+     "x": 0.37256,
+     "y": 0.57307,
+     "outside": false
     },
     {
      "term": "M. tibial posterior",
@@ -10859,7 +10877,7 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Inferior",
-   "caption": "curto",
+   "caption": "Membro inferior direito; vista lateral",
    "image": "p110-1.webp",
    "width": 424.49,
    "height": 217.42,
@@ -10886,8 +10904,8 @@
      "outside": false
     },
     {
-     "term": "M. fibular",
-     "slug": "m-fibular",
+     "term": "M. fibular curto",
+     "slug": "m-fibular-curto",
      "x": 0.40681,
      "y": 0.76805,
      "outside": false
@@ -10927,12 +10945,11 @@
    "height": 236.78,
    "markers": [
     {
-     "term": "flexores",
-     "slug": "flexores",
+     "term": "Retináculo dos flexores",
+     "slug": "retinaculo-dos-flexores",
      "x": 0.19992,
      "y": 0.60816,
-     "outside": false,
-     "suspect": true
+     "outside": false
     },
     {
      "term": "M. abdutor do hálux",
@@ -10991,7 +11008,7 @@
    "system": "muscular",
    "systemLabel": "Sistema muscular",
    "region": "Músculos do Membro Inferior",
-   "caption": "do dedo mínimo",
+   "caption": "Pé direito; vista inferior",
    "image": "p111-1.webp",
    "width": 467.86,
    "height": 162.54,
@@ -11018,8 +11035,8 @@
      "outside": false
     },
     {
-     "term": "M. flexor curto",
-     "slug": "m-flexor-curto",
+     "term": "M. flexor curto do dedo mínimo",
+     "slug": "m-flexor-curto-do-dedo-minimo",
      "x": 0.4306,
      "y": 0.75288,
      "outside": false
@@ -11927,8 +11944,8 @@
      "outside": false
     },
     {
-     "term": "Parte ascendenteda a. aorta",
-     "slug": "parte-ascendenteda-a-aorta",
+     "term": "Parte ascendente da a. aorta",
+     "slug": "parte-ascendente-da-a-aorta",
      "x": 0.45172,
      "y": 0.28834,
      "outside": false
@@ -11962,8 +11979,8 @@
      "outside": false
     },
     {
-     "term": "A. e v. interventricularesanteriores",
-     "slug": "a-e-v-interventricularesanteriores",
+     "term": "A. e v. interventriculares anteriores",
+     "slug": "a-e-v-interventriculares-anteriores",
      "x": 0.96373,
      "y": 0.73502,
      "outside": false
@@ -12010,8 +12027,8 @@
      "outside": false
     },
     {
-     "term": "Parte ascendenteda a. aorta",
-     "slug": "parte-ascendenteda-a-aorta",
+     "term": "Parte ascendente da a. aorta",
+     "slug": "parte-ascendente-da-a-aorta",
      "x": 0.47372,
      "y": 0.25459,
      "outside": false
@@ -12024,8 +12041,8 @@
      "outside": false
     },
     {
-     "term": "A. e v. interventricularesanteriores",
-     "slug": "a-e-v-interventricularesanteriores",
+     "term": "A. e v. interventriculares anteriores",
+     "slug": "a-e-v-interventriculares-anteriores",
      "x": 0.87431,
      "y": 0.7573,
      "outside": false
@@ -12686,8 +12703,8 @@
      "outside": false
     },
     {
-     "term": "Valva atrioventricularesquerda",
-     "slug": "valva-atrioventricularesquerda",
+     "term": "Valva atrioventricular esquerda",
+     "slug": "valva-atrioventricular-esquerda",
      "x": 0.46862,
      "y": 0.50975,
      "outside": false
@@ -13099,8 +13116,8 @@
      "outside": false
     },
     {
-     "term": "Ventrículodireito",
-     "slug": "ventriculodireito",
+     "term": "Ventrículo direito",
+     "slug": "ventriculo-direito",
      "x": 0.54638,
      "y": 0.68923,
      "outside": false
@@ -14358,7 +14375,8 @@
      "slug": "membrana-tireo",
      "x": 0.71793,
      "y": 0.74236,
-     "outside": false
+     "outside": false,
+     "suspect": true
     },
     {
      "term": "Lig. Cricotireoideo mediano",
@@ -14464,14 +14482,14 @@
      "outside": false
     },
     {
-     "term": "Prega glosso-epiglótica mediana",
+     "term": "Prega glosso- epiglótica mediana",
      "slug": "prega-glosso-epiglotica-mediana",
      "x": 0.50012,
      "y": 0.43572,
      "outside": false
     },
     {
-     "term": "Prega glosso-epiglótica lateral",
+     "term": "Prega glosso- epiglótica lateral",
      "slug": "prega-glosso-epiglotica-lateral",
      "x": 0.658,
      "y": 0.46927,
@@ -15167,8 +15185,8 @@
      "outside": false
     },
     {
-     "term": "Anéis traqueais de cartilagemhialina",
-     "slug": "aneis-traqueais-de-cartilagemhialina",
+     "term": "Anéis traqueais de cartilagem hialina",
+     "slug": "aneis-traqueais-de-cartilagem-hialina",
      "x": 0.59261,
      "y": 0.19381,
      "outside": false
@@ -15689,7 +15707,7 @@
      ]
     },
     {
-     "term": "Forame estilo-mastoideo",
+     "term": "Forame estilo- mastoideo",
      "slug": "forame-estilo-mastoideo",
      "x": 0.66877,
      "y": 0.63823,
@@ -17969,7 +17987,7 @@
    "height": 528.52,
    "markers": [
     {
-     "term": "Giro pré-central",
+     "term": "Giro pré- central",
      "slug": "giro-pre-central",
      "x": 0.5224,
      "y": 0.40172,
@@ -17983,7 +18001,7 @@
      "outside": false
     },
     {
-     "term": "Sulco pré-central",
+     "term": "Sulco pré- central",
      "slug": "sulco-pre-central",
      "x": 0.57212,
      "y": 0.40874,
@@ -18053,7 +18071,7 @@
      "outside": false
     },
     {
-     "term": "Giro supra-marginal",
+     "term": "Giro supra- marginal",
      "slug": "giro-supra-marginal",
      "x": 0.4389,
      "y": 0.49037,
@@ -18067,14 +18085,14 @@
      "outside": false
     },
     {
-     "term": "Giro pós-central",
+     "term": "Giro pós- central",
      "slug": "giro-pos-central",
      "x": 0.47265,
      "y": 0.4052,
      "outside": false
     },
     {
-     "term": "Sulco pós-central",
+     "term": "Sulco pós- central",
      "slug": "sulco-pos-central",
      "x": 0.45423,
      "y": 0.39893,
@@ -18381,7 +18399,7 @@
      "outside": false
     },
     {
-     "term": "Ângulo ponte-cerebelar",
+     "term": "Ângulo ponte- cerebelar",
      "slug": "angulo-ponte-cerebelar",
      "x": 0.41119,
      "y": 0.60659,
@@ -18402,7 +18420,7 @@
      "outside": false
     },
     {
-     "term": "Sulco bulbo-pontino",
+     "term": "Sulco bulbo- pontino",
      "slug": "sulco-bulbo-pontino",
      "x": 0.50663,
      "y": 0.58126,
@@ -18423,7 +18441,7 @@
      "outside": false
     },
     {
-     "term": "Giro para-hipocampal",
+     "term": "Giro para- hipocampal",
      "slug": "giro-para-hipocampal",
      "x": 0.61263,
      "y": 0.47775,
@@ -18687,7 +18705,7 @@
    "height": 404.96,
    "markers": [
     {
-     "term": "Giro pré-central",
+     "term": "Giro pré- central",
      "slug": "giro-pre-central",
      "x": 0.56515,
      "y": 0.3628,
@@ -18701,15 +18719,15 @@
      "outside": false
     },
     {
-     "term": "Sulco pré-central",
+     "term": "Sulco pré- central",
      "slug": "sulco-pre-central",
      "x": 0.60505,
      "y": 0.41068,
      "outside": false
     },
     {
-     "term": "Ramo ascendentedo sulco lateral",
-     "slug": "ramo-ascendentedo-sulco-lateral",
+     "term": "Ramo ascendente do sulco lateral",
+     "slug": "ramo-ascendente-do-sulco-lateral",
      "x": 0.64495,
      "y": 0.48054,
      "outside": false
@@ -18771,7 +18789,7 @@
      "outside": false
     },
     {
-     "term": "Giro supra-marginal",
+     "term": "Giro supra- marginal",
      "slug": "giro-supra-marginal",
      "x": 0.36104,
      "y": 0.39367,
@@ -18785,14 +18803,14 @@
      "outside": false
     },
     {
-     "term": "Giro pós-central",
+     "term": "Giro pós- central",
      "slug": "giro-pos-central",
      "x": 0.50005,
      "y": 0.37001,
      "outside": false
     },
     {
-     "term": "Sulco pós-central",
+     "term": "Sulco pós- central",
      "slug": "sulco-pos-central",
      "x": 0.4874,
      "y": 0.37099,
@@ -18958,7 +18976,7 @@
      "outside": false
     },
     {
-     "term": "Giro para-hipocampal",
+     "term": "Giro para- hipocampal",
      "slug": "giro-para-hipocampal",
      "x": 0.5,
      "y": 0.45349,
@@ -19711,8 +19729,8 @@
      "outside": false
     },
     {
-     "term": "Colículo superiordireito",
-     "slug": "coliculo-superiordireito",
+     "term": "Colículo superior direito",
+     "slug": "coliculo-superior-direito",
      "x": 0.55868,
      "y": 0.55145,
      "outside": false
@@ -21508,7 +21526,7 @@
      "outside": false
     },
     {
-     "term": "Ramo pós-comunicante da A. cerebral anterior (A2)",
+     "term": "Ramo pós- comunicante da A. cerebral anterior (A2)",
      "slug": "ramo-pos-comunicante-da-a-cerebral-anterior-a2",
      "x": 0.5082,
      "y": 0.59867,
@@ -21626,7 +21644,7 @@
      "outside": false
     },
     {
-     "term": "Ramo pré-comunicante da A. cerebral anterior",
+     "term": "Ramo pré- comunicante da A. cerebral anterior",
      "slug": "ramo-pre-comunicante-da-a-cerebral-anterior",
      "x": 0.52998,
      "y": 0.65925,
@@ -21906,7 +21924,7 @@
    "system": "nervoso",
    "systemLabel": "Sistema nervoso",
    "region": "Corte coronal através do encéfalo",
-   "caption": "Núcleo",
+   "caption": "Núcleo lentiforme",
    "image": "p251-0.webp",
    "width": 350.76,
    "height": 467.72,
@@ -22167,7 +22185,7 @@
      "outside": false
     },
     {
-     "term": "Giro para-hipocampal",
+     "term": "Giro para- hipocampal",
      "slug": "giro-para-hipocampal",
      "x": 0.38209,
      "y": 0.78138,
@@ -22188,7 +22206,7 @@
    "system": "nervoso",
    "systemLabel": "Sistema nervoso",
    "region": "Corte coronal através do encéfalo",
-   "caption": "Núcleo",
+   "caption": "Núcleo lentiforme*",
    "image": "p252-0.webp",
    "width": 352.83,
    "height": 470.41,
@@ -23723,7 +23741,7 @@
    "height": 433.81,
    "markers": [
     {
-     "term": "Fissura inter-hemisférica",
+     "term": "Fissura inter- hemisférica",
      "slug": "fissura-inter-hemisferica",
      "x": 0.49334,
      "y": 0.50568,
@@ -23758,14 +23776,14 @@
      "outside": false
     },
     {
-     "term": "Sulco pós-central",
+     "term": "Sulco pós- central",
      "slug": "sulco-pos-central",
      "x": 0.76196,
      "y": 0.64963,
      "outside": false
     },
     {
-     "term": "Sulco pré-central",
+     "term": "Sulco pré- central",
      "slug": "sulco-pre-central",
      "x": 0.78775,
      "y": 0.47347,
@@ -24013,7 +24031,7 @@
      "outside": false
     },
     {
-     "term": "V. lenticulo-estriada",
+     "term": "V. lenticulo- estriada",
      "slug": "v-lenticulo-estriada",
      "x": 0.4101,
      "y": 0.53974,
@@ -25344,7 +25362,8 @@
      "slug": "fissura-pos",
      "x": 1.00513,
      "y": 0.36617,
-     "outside": true
+     "outside": true,
+     "suspect": true
     },
     {
      "term": "VI ventrículo",
@@ -27044,7 +27063,7 @@
      "outside": false
     },
     {
-     "term": "Segmento Antero-superior",
+     "term": "Segmento Antero- superior",
      "slug": "segmento-antero-superior",
      "x": 0.65472,
      "y": 0.37548,
@@ -27424,8 +27443,8 @@
      "outside": false
     },
     {
-     "term": "Artéria do segmento inferioresquerda",
-     "slug": "arteria-do-segmento-inferioresquerda",
+     "term": "Artéria do segmento inferior esquerda",
+     "slug": "arteria-do-segmento-inferior-esquerda",
      "x": 0.5455,
      "y": 0.51407,
      "outside": false
@@ -27438,8 +27457,8 @@
      "outside": false
     },
     {
-     "term": "Artéria do segmento posterioresquerda",
-     "slug": "arteria-do-segmento-posterioresquerda",
+     "term": "Artéria do segmento posterior esquerda",
+     "slug": "arteria-do-segmento-posterior-esquerda",
      "x": 0.60705,
      "y": 0.51081,
      "outside": false
@@ -27480,15 +27499,15 @@
      "outside": false
     },
     {
-     "term": "Artéria do segmento superioresquerda",
-     "slug": "arteria-do-segmento-superioresquerda",
+     "term": "Artéria do segmento superior esquerda",
+     "slug": "arteria-do-segmento-superior-esquerda",
      "x": 0.63782,
      "y": 0.49486,
      "outside": false
     },
     {
-     "term": "Ramo anterior da artériarenal esquerda",
-     "slug": "ramo-anterior-da-arteriarenal-esquerda",
+     "term": "Ramo anterior da artéria renal esquerda",
+     "slug": "ramo-anterior-da-arteria-renal-esquerda",
      "x": 0.63782,
      "y": 0.50477,
      "outside": false
@@ -27722,15 +27741,15 @@
      "outside": false
     },
     {
-     "term": "Veia ilíaca comumdireita",
-     "slug": "veia-iliaca-comumdireita",
+     "term": "Veia ilíaca comum direita",
+     "slug": "veia-iliaca-comum-direita",
      "x": 0.61152,
      "y": 0.71642,
      "outside": false
     },
     {
-     "term": "Veia ilíaca comumesquerda",
-     "slug": "veia-iliaca-comumesquerda",
+     "term": "Veia ilíaca comum esquerda",
+     "slug": "veia-iliaca-comum-esquerda",
      "x": 0.46208,
      "y": 0.74313,
      "outside": false
@@ -28749,15 +28768,15 @@
      "outside": false
     },
     {
-     "term": "Óstio internodo útero",
-     "slug": "ostio-internodo-utero",
+     "term": "Óstio interno do útero",
+     "slug": "ostio-interno-do-utero",
      "x": 0.56658,
      "y": 0.55805,
      "outside": false
     },
     {
-     "term": "Istmo doútero",
-     "slug": "istmo-doutero",
+     "term": "Istmo do útero",
+     "slug": "istmo-do-utero",
      "x": 0.59567,
      "y": 0.54693,
      "outside": false
@@ -28797,8 +28816,8 @@
    "height": 471.26,
    "markers": [
     {
-     "term": "Ligamento Redondodo útero",
-     "slug": "ligamento-redondodo-utero",
+     "term": "Ligamento Redondo do útero",
+     "slug": "ligamento-redondo-do-utero",
      "x": 0.45781,
      "y": 0.55206,
      "outside": false
@@ -28894,8 +28913,8 @@
      "outside": false
     },
     {
-     "term": "Ligamento Redondo doútero",
-     "slug": "ligamento-redondo-doutero",
+     "term": "Ligamento Redondo do útero",
+     "slug": "ligamento-redondo-do-utero",
      "x": 0.32734,
      "y": 0.50775,
      "outside": false

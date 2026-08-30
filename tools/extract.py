@@ -32,6 +32,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import fitz
+from PIL import Image
 
 # ---------------------------------------------------------------- tuning knobs
 
@@ -64,6 +65,9 @@ SYSTEMS: list[tuple[str, str, int, int]] = [
 BULLET_RE = re.compile(r"^[\u2022\u00b7\u25aa\u25cf\u2043\-]+$")
 SIZE_TOLERANCE = 0.75   # pt; same-size lines belong to the same label
 DETAIL_MAX_GAP = 9.0    # pt; how far below a heading its bullet list may start
+# Stacked lines in one label are set solid, and their boxes overlap by a hair.
+# Requiring a non-negative gap drops the line above and truncates the label.
+LINE_OVERLAP_SLACK = 2.0
 
 # Portuguese function words a real structure name never ends on. A term ending
 # here was cut mid-phrase -- the label splitter mangled it.
@@ -74,11 +78,18 @@ def looks_truncated(term: str) -> bool:
     """Whether a term reads as a fragment of a longer label.
 
     Several leaders converging on one multi-line label each claim a line of it,
-    leaving pieces like "Cabeça do" or "(respectivamente)". Case matters here:
-    the atlas capitalises every real structure name, so a lowercase opening is
-    itself the tell.
+    leaving pieces like "Cabeça do", "Crista supra-" or "(respectivamente)".
+
+    Deliberately narrow. Stacked labels in a column look structurally identical
+    to a carved-up one, so any rule keyed on that geometry throws away far more
+    good terms ("Atlas", "Arco da aorta") than bad ones it catches.
     """
-    return bool(DANGLING_RE.search(term)) or term[:1].islower() or term.startswith("(")
+    return (
+        bool(DANGLING_RE.search(term))
+        or term.endswith("-")
+        or term[:1].islower()
+        or term.startswith("(")
+    )
 
 
 
@@ -110,6 +121,7 @@ class Leader:
 class Plate:
     page: int
     index: int
+    order: int
     rect: fitz.Rect
     caption: str = ""
     markers: list[dict] = field(default_factory=list)
@@ -211,13 +223,15 @@ def page_plates(page: fitz.Page) -> list[dict]:
     plates = []
     # `xrefs=True` costs ~18s a page and we never need the xref: plates are
     # rendered from the page region, not pulled from the image object.
-    for info in page.get_image_info():
+    for order, info in enumerate(page.get_image_info()):
         rect = fitz.Rect(info["bbox"])
         is_banner = rect.y0 < BANNER_MAX_Y and rect.width > BANNER_MIN_WIDTH
         too_small = rect.width < MIN_PLATE_SIDE or rect.height < MIN_PLATE_SIDE
         if is_banner or too_small:
             continue
-        plates.append({"rect": rect})
+        # `order` indexes the page's image draws, which appear in content-stream
+        # order -- that is what lets one photograph be painted on its own.
+        plates.append({"rect": rect, "order": order})
     plates.sort(key=lambda p: (round(p["rect"].y0), p["rect"].x0))
     return plates
 
@@ -275,7 +289,7 @@ def heading_index(lines: list[TextLine]) -> dict[int, int]:
                 continue
             if other.bbox.x1 < line.bbox.x0 - 24 or other.bbox.x0 > line.bbox.x1 + 24:
                 continue
-            if not 0 <= bottom - other.bbox.y1 <= DETAIL_MAX_GAP:
+            if not -LINE_OVERLAP_SLACK <= bottom - other.bbox.y1 <= DETAIL_MAX_GAP:
                 break
             if other.size >= heading - SIZE_TOLERANCE:
                 promote[index] = promote.get(above, above)
@@ -335,8 +349,8 @@ def grow_label(anchor: TextLine, lines: list[TextLine], reserved: set[int]) -> s
             overlap = min(right, line.bbox.x1) - max(left, line.bbox.x0)
             if overlap <= 2.0:
                 continue
-            below = 0 <= line.bbox.y0 - bottom <= LINE_MERGE_GAP
-            above = 0 <= top - line.bbox.y1 <= LINE_MERGE_GAP
+            below = -LINE_OVERLAP_SLACK <= line.bbox.y0 - bottom <= LINE_MERGE_GAP
+            above = -LINE_OVERLAP_SLACK <= top - line.bbox.y1 <= LINE_MERGE_GAP
             if below or above:
                 line.claimed = True
                 block.append(line)
@@ -353,14 +367,16 @@ def join_lines(block: list[TextLine]) -> str:
     with a space yields "Incisur a Costal II".
 
     A space usually survives a real word break, but not always: "Nervo Cutâneo"
-    / "Lateral do Antebraço" has none. The two are told apart by what follows --
-    a wrap that split a word continues in lower case, a new word does not.
+    / "Lateral do Antebraço" and "Parte ascendente" / "da a. aorta" both lack
+    one. What marks the split word is the size of what follows -- a broken word
+    leaves a tiny lowercase orphan on its own line, never a phrase.
     """
     parts: list[str] = []
     for index, line in enumerate(block):
         if index:
             spaced = block[index - 1].raw.endswith(" ") or line.raw.startswith(" ")
-            if spaced or not line.text[:1].islower():
+            orphan = line.text.islower() and len(line.text) <= 2
+            if spaced or not orphan:
                 parts.append(" ")
         parts.append(line.text)
     return normalise_term("".join(parts))
@@ -384,7 +400,8 @@ def collect_detail(block: list[TextLine], lines: list[TextLine], reserved: set[i
             continue
         if line.bbox.x1 < left - 12 or line.bbox.x0 > right + 12:
             continue
-        if not 0 <= line.bbox.y0 - bottom <= DETAIL_MAX_GAP * (len(detail) + 1):
+        offset = line.bbox.y0 - bottom
+        if not -LINE_OVERLAP_SLACK <= offset <= DETAIL_MAX_GAP * (len(detail) + 1):
             continue
         line.claimed = True
         detail.append(normalise_term(line.text))
@@ -423,7 +440,8 @@ def extract_page(page: fitz.Page, page_no: int) -> list[Plate]:
         return []
 
     plates = [
-        Plate(page=page_no, index=i, rect=p["rect"]) for i, p in enumerate(plates_raw)
+        Plate(page=page_no, index=i, order=p["order"], rect=p["rect"])
+        for i, p in enumerate(plates_raw)
     ]
 
     leaders = page_leaders(page, lines)
@@ -438,6 +456,7 @@ def extract_page(page: fitz.Page, page_no: int) -> list[Plate]:
         if not term:
             continue
         detail = collect_detail(block, lines, reserved - {anchor_of[li]})
+        doubtful = looks_truncated(term)
         plate = min(plates, key=lambda p: _distance_to_rect(leader.head, p.rect))
         rect = plate.rect
         plate.markers.append(
@@ -449,7 +468,7 @@ def extract_page(page: fitz.Page, page_no: int) -> list[Plate]:
                 "y": round((leader.head.y - rect.y0) / rect.height, 5),
                 "outside": not rect.contains(leader.head),
                 **({"detail": detail} if detail else {}),
-                **({"suspect": True} if looks_truncated(term) else {}),
+                **({"suspect": True} if doubtful else {}),
             }
         )
 
@@ -465,9 +484,19 @@ def extract_page(page: fitz.Page, page_no: int) -> list[Plate]:
             and l.bbox.x0 < plate.rect.x1 + 60
         ]
         if below:
-            best = min(below, key=lambda l: l.bbox.y0 - plate.rect.y1)
-            plate.caption = normalise_term(best.text)
-            leftovers.remove(best)
+            first = min(below, key=lambda l: l.bbox.y0 - plate.rect.y1)
+            # "Corte transversal através do / corpo caloso" wraps like any label.
+            stack = [first]
+            for line in sorted(below, key=lambda l: l.bbox.y0):
+                previous = stack[-1]
+                if line is first or line.bbox.y0 < previous.bbox.y1:
+                    continue
+                if line.bbox.y0 - previous.bbox.y1 > LINE_MERGE_GAP:
+                    continue
+                stack.append(line)
+            plate.caption = join_lines(stack)
+            for line in stack:
+                leftovers.remove(line)
 
     for plate in plates:
         plate.title = title  # type: ignore[attr-defined]
@@ -482,21 +511,26 @@ IMAGE_DRAW_RE = re.compile(
 )
 
 
-def strip_labels(doc: fitz.Document, page: fitz.Page) -> fitz.Page:
-    """Rewrite the page down to its photographs alone.
+def isolate_image(doc: fitz.Document, index: int, source: bytes, order: int) -> fitz.Page:
+    """Rewrite the page so it paints one photograph and nothing else.
 
-    The atlas prints every answer beside the structure it names, so a plate
-    rendered straight from the page ships with its own answer key -- and the
-    leader line points at the marker for good measure. Dropping everything but
-    the image draws leaves each photograph in exactly the geometry the markers
-    were measured in, with the labels gone.
+    Two problems in one. The atlas prints every answer beside the structure it
+    names, so a plate rendered from the page ships with its own answer key --
+    and where a photograph's rectangle reaches up under the UFRJ banner or
+    across a neighbouring picture, cropping alone drags those in too. Keeping a
+    single image draw removes both, with the plate still in exactly the geometry
+    the markers were measured in.
 
     The document is never saved, so this only affects rendering in this process.
     """
+    # Fetched fresh each call: reloading a page invalidates earlier handles to
+    # it, and a page with two plates is rewritten once per plate.
+    page = doc[index]
     streams = page.get_contents()
     if not streams:
         return page
-    kept = b"\n".join(m.group(0) for m in IMAGE_DRAW_RE.finditer(page.read_contents()))
+    draws = [m.group(0) for m in IMAGE_DRAW_RE.finditer(source)]
+    kept = draws[order] if order < len(draws) else b""
     background = f"1 1 1 rg 0 0 {page.rect.width:.3f} {page.rect.height:.3f} re f\n"
     doc.update_stream(streams[0], background.encode() + kept)
     for extra in streams[1:]:
@@ -504,15 +538,70 @@ def strip_labels(doc: fitz.Document, page: fitz.Page) -> fitz.Page:
     return doc.reload_page(page)
 
 
-def export_image(page: fitz.Page, plate: Plate, out_dir: Path, skip: bool) -> str:
-    """Render the plate's region of a label-stripped page."""
+def content_box(image: Image.Image, markers: list[dict]) -> tuple[float, float, float, float]:
+    """The photograph's own extent within its frame, as fractions of the frame.
+
+    Slides pad photographs with white to place them, which on some pages leaves
+    the subject small in a mostly empty plate. Trimming to the ink gives the
+    quiz a usable picture; the box is then widened to cover every marker, so no
+    structure can be cropped out from under its own dot.
+    """
+    ink = image.convert("L").point(lambda v: 0 if v > 244 else 255).getbbox()
+    width, height = image.size
+    if ink is None:
+        return 0.0, 0.0, 1.0, 1.0
+    x0, y0, x1, y1 = (ink[0] / width, ink[1] / height, ink[2] / width, ink[3] / height)
+    for marker in markers:
+        x0, y0 = min(x0, marker["x"] - 0.02), min(y0, marker["y"] - 0.02)
+        x1, y1 = max(x1, marker["x"] + 0.02), max(y1, marker["y"] + 0.02)
+    pad = 0.012
+    return (
+        max(0.0, x0 - pad),
+        max(0.0, y0 - pad),
+        min(1.0, x1 + pad),
+        min(1.0, y1 + pad),
+    )
+
+
+def export_image(
+    doc: fitz.Document,
+    index: int,
+    source: bytes,
+    plate: Plate,
+    out_dir: Path,
+    skip: bool,
+) -> tuple[str, tuple[float, float, float, float]]:
+    """Render a plate on its own and trim it, returning the name and crop box."""
     name = f"p{plate.page:03d}-{plate.index}.webp"
     if skip:
-        return name  # --no-images: keep the name so an existing export stays valid
+        return name, (0.0, 0.0, 1.0, 1.0)
+
+    painted = isolate_image(doc, index, source, plate.order)
     scale = IMAGE_LONG_EDGE / max(plate.rect.width, plate.rect.height)
-    pix = page.get_pixmap(clip=plate.rect, matrix=fitz.Matrix(scale, scale), alpha=False)
-    pix.pil_save(out_dir / name, format="WEBP", quality=IMAGE_QUALITY, method=4)
-    return name
+    pix = painted.get_pixmap(clip=plate.rect, matrix=fitz.Matrix(scale, scale), alpha=False)
+    image = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+
+    box = content_box(image, plate.markers)
+    crop = image.crop(
+        (
+            round(box[0] * pix.width),
+            round(box[1] * pix.height),
+            round(box[2] * pix.width),
+            round(box[3] * pix.height),
+        )
+    )
+    crop.save(out_dir / name, format="WEBP", quality=IMAGE_QUALITY, method=4)
+    return name, box
+
+
+def recentre(marker: dict, box: tuple[float, float, float, float]) -> dict:
+    """Move a marker into the trimmed plate's coordinates."""
+    width, height = box[2] - box[0], box[3] - box[1]
+    return {
+        **marker,
+        "x": round((marker["x"] - box[0]) / width, 5),
+        "y": round((marker["y"] - box[1]) / height, 5),
+    }
 
 
 def main() -> None:
@@ -543,22 +632,27 @@ def main() -> None:
         stats["plates_seen"] += len(plates)
         keep = [p for p in plates if len(p.markers) >= args.min_markers]
         stats["plates_dropped_thin"] += len(plates) - len(keep)
-        # Text must be read before it is stripped, so this happens last.
-        if keep and not args.no_images:
-            page = strip_labels(doc, page)
+        # Rendering rewrites the page, so hold the original for every plate.
+        source = page.read_contents() if keep else b""
+        # `reload_page` only takes effect while nothing else holds the page.
+        del page
 
         for plate in keep:
             # A term repeated on one plate (bilateral structures) keeps only its
             # first point -- the quiz must have a single correct answer.
-            seen, markers = set(), []
-            for m in plate.markers:
-                if m["slug"] in seen:
+            seen, unique = set(), []
+            for marker in plate.markers:
+                if marker["slug"] in seen:
                     stats["markers_dropped_dupe"] += 1
                     continue
-                seen.add(m["slug"])
-                markers.append(m)
+                seen.add(marker["slug"])
+                unique.append(marker)
+            plate.markers = unique
             key, label = system_for(page_no - PAGE_OFFSET)
-            image = export_image(page, plate, img_dir, args.no_images)
+            image, box = export_image(doc, i, source, plate, img_dir, args.no_images)
+            markers = [recentre(m, box) for m in plate.markers]
+            width = plate.rect.width * (box[2] - box[0])
+            height = plate.rect.height * (box[3] - box[1])
             records.append(
                 {
                     "id": f"p{plate.page:03d}-{plate.index}",
@@ -568,8 +662,8 @@ def main() -> None:
                     "region": getattr(plate, "title", ""),
                     "caption": plate.caption,
                     "image": image,
-                    "width": round(plate.rect.width, 2),
-                    "height": round(plate.rect.height, 2),
+                    "width": round(width, 2),
+                    "height": round(height, 2),
                     "markers": markers,
                 }
             )
