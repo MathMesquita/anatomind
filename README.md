@@ -51,6 +51,26 @@ npm install
 npm run dev
 ```
 
+The web prototype now includes subject selection, the existing anatomy quiz,
+five numbered body-region examples, and small Anamnese demonstration rounds.
+The latter currently have two disease groups, three pain-characteristic
+stories, and four interrogation examples; they are not the full planned content
+bank and need qualified clinical and editorial review before educational use.
+
+Progress is kept separately for each activity in browser storage. Tapping the
+home logo 20 times toggles the persistent debug control on answer feedback.
+Primary round and result actions stay fixed at the bottom, including the device
+safe area; the scrolling content reserves room beneath the feedback.
+The production PWA precaches the complete atlas and region images (about 23 MB)
+when its service worker installs; keep the app online until installation
+finishes before relying on offline use. Storage availability depends on the
+browser. Verify redistribution rights for the region images before publishing.
+
+```bash
+npm test
+npm run build
+```
+
 Requires Python 3 with `pymupdf` and `pillow` for the extractor.
 
 ## Stack

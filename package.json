@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "oxlint",
+    "test": "node --test tests/*.test.mjs",
     "atlas": "python3 tools/extract.py --pdf tools/atlas.pdf --out public/atlas",
     "atlas:verify": "python3 tools/verify.py --data public/atlas --out .verify"
   },

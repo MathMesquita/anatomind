@@ -19,14 +19,14 @@ export default defineConfig(() => ({
     tailwindcss(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg"],
+      includeAssets: ["favicon.svg", "icon-192.png", "icon-512.png"],
       manifest: {
         name: "AnatoMind",
         short_name: "AnatoMind",
-        description: "Quiz de anatomia humana a partir do Atlas Fotográfico UFRJ-Macaé",
+        description: "Atividades de anatomia, propedêutica médica e anamnese",
         lang: "pt-BR",
-        theme_color: "#0c0a09",
-        background_color: "#0c0a09",
+        theme_color: "#46634e",
+        background_color: "#f5f3ee",
         display: "standalone",
         id: BASE,
         start_url: BASE,
@@ -38,19 +38,9 @@ export default defineConfig(() => ({
         ],
       },
       workbox: {
-        // The plate corpus is far too heavy to precache -- see issue #8. The app
-        // shell and the index precache; photographs are cached as they are seen.
-        globPatterns: ["**/*.{js,css,html,svg,woff2}", "atlas/plates.json"],
-        runtimeCaching: [
-          {
-            urlPattern: /\/atlas\/plates\/.*\.webp$/,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "atlas-plates",
-              expiration: { maxEntries: 220, maxAgeSeconds: 60 * 60 * 24 * 60 },
-            },
-          },
-        ],
+        // The complete corpus is cached at installation for offline study.
+        // A successful service-worker installation is required before going offline.
+        globPatterns: ["**/*.{js,css,html,svg,woff2}", "atlas/plates.json", "atlas/plates/*.webp", "regions/*.{jpg,jpeg,png,webp}"],
       },
     }),
   ],

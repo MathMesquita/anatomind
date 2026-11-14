@@ -1,9 +1,10 @@
-import { RotateCcw, Trophy } from "lucide-react"
+import { Trophy } from "lucide-react"
 
 import { PLATE_URL } from "@/lib/atlas"
 import type { Answer } from "@/lib/round"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { StudyFooter, StudyHeader, StudyPage } from "@/components/StudyLayout"
 
 interface ResultsScreenProps {
   answers: Answer[]
@@ -25,7 +26,8 @@ export function ResultsScreen({
   const accuracy = answers.length ? Math.round((hits / answers.length) * 100) : 0
 
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 py-8">
+    <StudyPage footer={<StudyFooter label="Outra rodada" onClick={onRestart} secondary={<Button variant="outline" className="h-12 rounded-[10px]" onClick={onHome}>Sistemas</Button>} />}>
+      <StudyHeader onBack={onHome} label="Anatomia · resultado" />
       <div className="mb-6 text-center">
         <Trophy className="mx-auto mb-3 size-10 text-primary" />
         <h1 className="text-2xl font-semibold tracking-tight">
@@ -34,15 +36,6 @@ export function ResultsScreen({
         <p className="mt-1 text-sm text-muted-foreground">
           {deckLabel} · {accuracy}% de acerto · {score} pontos
         </p>
-      </div>
-
-      <div className="mb-6 grid grid-cols-2 gap-2">
-        <Button variant="outline" onClick={onHome}>
-          Trocar sistema
-        </Button>
-        <Button onClick={onRestart}>
-          <RotateCcw className="size-4" /> Outra rodada
-        </Button>
       </div>
 
       {missed.length > 0 && (
@@ -74,6 +67,6 @@ export function ResultsScreen({
           </div>
         </section>
       )}
-    </div>
+    </StudyPage>
   )
 }
