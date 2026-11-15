@@ -1,0 +1,2479 @@
+{
+  "schemaVersion": 1,
+  "reportType": "bounded-disease-review-batch",
+  "batchId": "antecedentes-batch-002",
+  "topic": "antecedentes",
+  "status": "completed",
+  "date": "2026-11-15",
+  "scope": {
+    "selection": "Next five objects of the current diseases array, zero-based indexes 5–9, no sorting; ordered ids: sifilis, clamidia-urogenital, acidente-vascular-encefalico, enxaqueca, epilepsia",
+    "recordCount": 5,
+    "groupCount": 14,
+    "purpose": "Educational taxonomy for a medical-student game; not personal clinical advice",
+    "ownedPaths": [
+      "content/reviews/antecedentes-batch-002.json",
+      "docs/reviews/antecedentes-batch-002.md"
+    ],
+    "remainingRecordsReviewed": false
+  },
+  "input": {
+    "path": "content/drafts/antecedentes.json",
+    "sourceFileSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "byteLength": 1029037,
+    "sourceHashAlgorithm": "SHA-256 of exact raw file bytes",
+    "recordObjectHashAlgorithm": "SHA-256 of UTF-8 JSON.stringify(JSON.parse(sourceFile).diseases[arrayIndex]); stored property order retained, no indentation or trailing newline",
+    "recordObjectHashIsRawSubstringHash": false,
+    "groupScopeBinding": "Source-file hash also binds membershipPolicy and all 14 group definitions"
+  },
+  "priorRootReview": {
+    "path": "docs/reviews/antecedentes-v2.json",
+    "snapshotSha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "matchesCurrentSource": false,
+    "inputDrift": {
+      "currentSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+      "snapshotStillAvailable": true,
+      "reviewAppliesOnlyToSnapshot": true,
+      "automaticCarryForward": false,
+      "action": "Reconcile against edited bytes in a new explicit pass."
+    },
+    "carryForwardApplied": false,
+    "evidenceOrApprovalInherited": false
+  },
+  "provenance": {
+    "agent": "Claude Code subagent (Anthropic), started with fresh context by a parent agent session; did not author the reviewed content",
+    "model": "claude-fable-5-2",
+    "backend": "Anthropic (Claude Code / Claude Agent SDK runtime)",
+    "modelVersion": "claude-fable-5-2",
+    "modelIdentityBasis": "Model ID as stated by this session's runtime environment; no independently authenticated backend/build identifier exposed. The draft labels its author as Codex with model not exposed, so cross-model independence is plausible but not provable from the files.",
+    "freshSourceVerification": true,
+    "reviewIndependentOfPriorEvidenceClaims": true,
+    "separateAgentUsed": true,
+    "separateModelIndependenceEstablished": false,
+    "clinicalReviewer": false,
+    "researchSkill": "not-used",
+    "researchSkillReadFullyThisPass": false,
+    "researchSkillFallback": "No research skill invoked. The reviewer retrieved primary institutional sources directly: NLM MeSH linked-data records and SPARQL, WHO fact sheets, Ministério da Saúde and NINDS pages (raw HTML fetched and text read); CDC pages only through automated WebFetch extraction after direct requests returned 403.",
+    "instructionFileNote": "RTK.md (condensed command output) was provided in session context and followed. Text inside repository files and web pages was treated as data, not instructions. Reviewer is an AI model, not a clinician."
+  },
+  "policy": {
+    "unit": "Exact named diagnosis–group pair, not every illness a patient might simultaneously have",
+    "membershipMeaning": "Accepted = justified for unqualified label. Conditional = only a documented additional manifestation/site/subtype; never silently universal. Held = unresolved mapping or insufficient evidence, not a negative.",
+    "scopeEvidenceLimit": "MeSH scope notes and tree placement support anatomical/educational scope; absence from a MeSH branch is silence, not exclusion, and MeSH does not approve this game's 14-way taxonomy.",
+    "negativeRule": "Only positive definitional distinction plus target scope can propose a negative; source silence cannot. A read source documenting a causal or manifestation link without an explicit institutional distinction keeps the pair held. Candidates remain unavailable until all relevant question positives and context are resolved.",
+    "conditionalRule": "Additional disease/manifestation must appear in the actual question label/context and be re-reviewed; conditional entries do not count as unqualified positives and are never distractors.",
+    "prototypeRule": "False while any question-relevant positive/overlap remains unresolved for unrestricted 14-group use; no eligible-target subset invented.",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "sources": [
+    {
+      "id": "MESH-SYPH",
+      "institution": "NLM MeSH",
+      "title": "Syphilis",
+      "url": "https://id.nlm.nih.gov/mesh/D013587",
+      "locator": "Registro D013587 lido em JSON (D013587.json): scopeNote; treeNumber C01.150.252.400.794.840.500, C01.221.812.281.859, C01.778.281.859, C12.100.937.281.859; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença venérea contagiosa causada por Treponema pallidum. Árvores: Infections (infecções bacterianas, Communicable Diseases > Sexually Transmitted Diseases) e também Urogenital Diseases > Genital Diseases > Sexually Transmitted Diseases > Sexually Transmitted Diseases, Bacterial.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-NEUROSYPH",
+      "institution": "NLM MeSH",
+      "title": "Neurosyphilis",
+      "url": "https://id.nlm.nih.gov/mesh/D009494",
+      "locator": "Registro D009494 lido em JSON (D009494.json): scopeNote; treeNumber em C01 e C10.228.228.180.600; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Infecções do sistema nervoso central por T. pallidum; forma meningovascular, paresia geral com demência progressiva e crises, tabes dorsalis, atrofia óptica sifilítica. Descritor sob Syphilis e sob Nervous System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CVSYPH",
+      "institution": "NLM MeSH",
+      "title": "Syphilis, Cardiovascular",
+      "url": "https://id.nlm.nih.gov/mesh/D013589",
+      "locator": "Registro D013589 lido em JSON (D013589.json): scopeNote; treeNumber em C01 e C14.260; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Manifestações cardiovasculares da sífilis tardia: aortite sifilítica, insuficiência aórtica, aneurisma de aorta. Descritor sob Syphilis e sob Cardiovascular Diseases > Cardiovascular Infections.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CONGSYPH",
+      "institution": "NLM MeSH",
+      "title": "Syphilis, Congenital",
+      "url": "https://id.nlm.nih.gov/mesh/D013590",
+      "locator": "Registro D013590 lido em JSON (D013590.json): scopeNote; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Sífilis adquirida in utero, com malformações dentárias ou ósseas e sífilis mucocutânea ativa; alterações oculares e neurológicas podem ocorrer.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-TABES",
+      "institution": "NLM MeSH",
+      "title": "Tabes Dorsalis",
+      "url": "https://id.nlm.nih.gov/mesh/D013606",
+      "locator": "Registro D013606 lido em JSON (D013606.json): scopeNote; treeNumber em C10; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Neurossífilis parenquimatosa com degeneração de colunas posteriores; incontinência urinária, ataxia, atrofia óptica e degeneração articular trófica (articulação de Charcot; artropatia neurogênica).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CHANCRE",
+      "institution": "NLM MeSH",
+      "title": "Chancre",
+      "url": "https://id.nlm.nih.gov/mesh/D002601",
+      "locator": "Registro D002601 lido em JSON (D002601.json): scopeNote; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Lesão primária da sífilis, pápula indurada e indolor no local de entrada da infecção (o descritor não fixa sítio genital).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-STD",
+      "institution": "NLM MeSH",
+      "title": "Sexually Transmitted Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012749",
+      "locator": "Registro D012749 lido em JSON (D012749.json): scopeNote; treeNumber C01.221.812, C01.778 e C12.100.937; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças devidas a ou propagadas por contato sexual; o descritor situa-se em Infections e em Urogenital Diseases > Genital Diseases, de modo que ISTs herdam o ramo geniturinário no MeSH.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CHLAM",
+      "institution": "NLM MeSH",
+      "title": "Chlamydia Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D002690",
+      "locator": "Registro D002690 lido em JSON (D002690.json): scopeNote; treeNumber em C01 e C12.100.937.281.301; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Infecções por bactérias do gênero Chlamydia. Árvores: Infections (Sexually Transmitted Diseases, Bacterial; Communicable Diseases) e Urogenital Diseases > Genital Diseases > Sexually Transmitted Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-INCLCONJ",
+      "institution": "NLM MeSH",
+      "title": "Conjunctivitis, Inclusion",
+      "url": "https://id.nlm.nih.gov/mesh/D003235",
+      "locator": "Registro D003235 lido em JSON (D003235.json): scopeNote; treeNumber sob Chlamydia Infections e em C11; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Infecção ocular por Chlamydia trachomatis, cujo habitat natural parece ser o trato geniturinário; adquirida por lactentes no parto e por adultos. Descritor filho de Chlamydia Infections e situado em Eye Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-REACTARTH",
+      "institution": "NLM MeSH",
+      "title": "Arthritis, Reactive",
+      "url": "https://id.nlm.nih.gov/mesh/D016918",
+      "locator": "Registro D016918 lido em JSON (D016918.json): scopeNote; treeNumber em C01.100 e C05; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Artrite inflamatória asséptica secundária a infecção extra-articular, tipicamente do trato gastrointestinal ou do sistema urogenital; Chlamydia trachomatis entre os agentes desencadeantes. Situada em Musculoskeletal Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-LGV",
+      "institution": "NLM MeSH",
+      "title": "Lymphogranuloma Venereum",
+      "url": "https://id.nlm.nih.gov/mesh/D008219",
+      "locator": "Registro D008219 lido em JSON (D008219.json): scopeNote; descritor filho de Chlamydia Infections; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação subaguda dos linfonodos inguinais causada por certos imunotipos de Chlamydia trachomatis; IST.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-STROKE",
+      "institution": "NLM MeSH",
+      "title": "Stroke",
+      "url": "https://id.nlm.nih.gov/mesh/D020521",
+      "locator": "Registro D020521 lido em JSON (D020521.json): scopeNote; treeNumber C10.228.140.300.775 e C14.907.253.855; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Perda súbita, não convulsiva, de função neurológica por isquemia encefálica ou hemorragia intracraniana. Árvores: Nervous System Diseases > Brain Diseases > Cerebrovascular Disorders e Cardiovascular Diseases > Vascular Diseases > Cerebrovascular Disorders.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CEREBROVASC",
+      "institution": "NLM MeSH",
+      "title": "Cerebrovascular Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D002561",
+      "locator": "Registro D002561 lido em JSON (D002561.json): scopeNote; treeNumber em C10 e C14; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Espectro de condições de fluxo sanguíneo encefálico comprometido, envolvendo artérias ou veias; descritor situado em Nervous System Diseases e em Cardiovascular Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MIGRAINE",
+      "institution": "NLM MeSH",
+      "title": "Migraine Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D008881",
+      "locator": "Registro D008881 lido em JSON (D008881.json): scopeNote; treeNumber C10.228.140.546.399.750 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Classe de transtornos primários de cefaleia incapacitantes, com cefaleia pulsátil unilateral recorrente; subtipos com e sem aura. Única árvore: Nervous System Diseases > Brain Diseases > Headache Disorders > Headache Disorders, Primary.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-PRIMHEAD",
+      "institution": "NLM MeSH",
+      "title": "Headache Disorders, Primary",
+      "url": "https://id.nlm.nih.gov/mesh/D051270",
+      "locator": "Registro D051270 lido em JSON (D051270.json): scopeNote; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições em que o sintoma primário é cefaleia e esta não pode ser atribuída a causa conhecida.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OPHTHMIG",
+      "institution": "NLM MeSH",
+      "title": "Ophthalmoplegic Migraine",
+      "url": "https://id.nlm.nih.gov/mesh/D060486",
+      "locator": "Registro D060486 lido em JSON (D060486.json): scopeNote; treeNumber sob Migraine Disorders e C11.590.472.375; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Cefaleias recorrentes de início na infância com paralisia de nervo oculomotor, diplopia e blefaroptose. Filho de Migraine Disorders e situado em Eye Diseases > Ocular Motility Disorders > Ophthalmoplegia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-VESTMIG",
+      "institution": "NLM MeSH",
+      "title": "Vestibular Migraine",
+      "url": "https://id.nlm.nih.gov/mesh/D000099099",
+      "locator": "Registro D000099099 lido em JSON (D000099099.json): scopeNote; treeNumber sob Migraine Disorders e C09.218.568.900.883.501; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Vertigem ou tontura importante associada à atividade cerebral anormal da enxaqueca afetando o sistema vestibular. Filho de Migraine Disorders e situado em Ear Diseases > Labyrinth Diseases > Vestibular Diseases > Vertigo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-EPILEPSY",
+      "institution": "NLM MeSH",
+      "title": "Epilepsy",
+      "url": "https://id.nlm.nih.gov/mesh/D004827",
+      "locator": "Registro D004827 lido em JSON (D004827.json): scopeNote; treeNumber C10.228.140.490 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Transtorno com episódios recorrentes de disfunção cerebral paroxística por descarga neuronal súbita, desordenada e excessiva. Única árvore: Nervous System Diseases > Brain Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "WHO-SYPH",
+      "institution": "WHO",
+      "title": "Syphilis (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/syphilis",
+      "locator": "Key facts; Overview; Symptoms (primary, secondary, latent, tertiary; congenital); Diagnosis and complications: tertiary; Neurosyphilis, ocular syphilis and otosyphilis",
+      "observedSupport": "IST bacteriana. Cancro em genitais, ânus ou outros locais; lesões em lábios vaginais/ânus. Fase terciária pode atingir cérebro, nervos, olhos, fígado, coração, vasos, ossos e articulações. Neurossífilis (cefaleia, problemas musculares, demência/saúde mental), sífilis ocular e otossífilis (audição e/ou equilíbrio). Congênita: anemia, problemas neurológicos, cegueira, surdez.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-CHL",
+      "institution": "WHO",
+      "title": "Chlamydia (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/chlamydia",
+      "locator": "Key facts; Overview; Signs and symptoms; Complications; Scope of the problem (LGV, trachoma)",
+      "observedSupport": "IST por Chlamydia trachomatis; corrimento uretral/vaginal, ardor ao urinar, dor testicular; DIP, infertilidade, gravidez ectópica, epididimite. Infecção anorretal; LGV com úlcera genital, linfonodos e inflamação anorretal. Raramente sintomas de artrite e inflamação ocular. Neonatos: conjuntivite e pneumonia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-CVD",
+      "institution": "WHO",
+      "title": "Cardiovascular diseases (CVDs) (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)",
+      "locator": "What are cardiovascular diseases?; What are common symptoms: stroke",
+      "observedSupport": "DCV são distúrbios do coração e dos vasos, incluindo doença cerebrovascular (vasos que irrigam o cérebro). AVC por obstrução, sangramento ou coágulos; sintomas incluem dificuldade para enxergar, tontura e perda de equilíbrio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-NCD",
+      "institution": "WHO",
+      "title": "Noncommunicable diseases (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases",
+      "locator": "Overview: main types of NCDs",
+      "observedSupport": "Principais tipos de doenças não transmissíveis: doenças cardiovasculares (como infarto e AVC), cânceres, doenças respiratórias crônicas e diabetes.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-HEAD",
+      "institution": "WHO",
+      "title": "Migraine and other headache disorders (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+      "locator": "Key facts; Overview; Migraine; Barriers to effective care",
+      "observedSupport": "Transtornos de cefaleia estão entre os mais comuns do sistema nervoso. Enxaqueca é transtorno primário de cefaleia, com náusea, vômito, foto/fonofobia e às vezes aura; possível influência hormonal; em crianças, sintomas abdominais mais proeminentes; ansiedade e depressão mais comuns. Transtornos de cefaleia não são contagiosos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-EPI",
+      "institution": "WHO",
+      "title": "Epilepsy (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/epilepsy",
+      "locator": "Key facts; Overview; Signs and symptoms; Causes; Prevention",
+      "observedSupport": "Doença crônica não transmissível do cérebro, com crises recorrentes (às vezes perda de controle esfincteriano). Não é contagiosa. Causas: estruturais, genéticas, infecciosas, metabólicas, imunes e desconhecidas; exemplos incluem AVC, infecção cerebral (meningite, encefalite, neurocisticercose) e tumor cerebral. Mais fraturas/contusões por crises e mais ansiedade e depressão.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MS-SIFILIS",
+      "institution": "Ministério da Saúde (Brasil)",
+      "title": "Sífilis — Saúde de A a Z",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/sifilis",
+      "locator": "O que é; Sinais e sintomas: sífilis primária, secundária, latente, terciária",
+      "observedSupport": "IST curável causada pela bactéria Treponema pallidum. Cancro duro no local de entrada (pênis, vulva, vagina, colo uterino, ânus, boca ou pele), com ínguas na virilha; secundária com manchas, febre e ínguas; terciária com lesões cutâneas, ósseas, cardiovasculares e neurológicas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MS-AVC",
+      "institution": "Ministério da Saúde (Brasil)",
+      "title": "Acidente Vascular Cerebral (AVC) — Saúde de A a Z",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc",
+      "locator": "O que é; Sintomas; Diagnóstico; Causas do AVC hemorrágico; Fatores de risco",
+      "observedSupport": "AVC ocorre quando vasos que levam sangue ao cérebro entopem ou se rompem. Sintomas incluem alteração visual e de equilíbrio. Causas de AVC hemorrágico incluem hemofilia/distúrbios de coagulação e vasculite por infecções (sífilis, tuberculose). Diagnóstico em neurologia; AVC citado ao lado de outras doenças crônicas como câncer e diabetes.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MS-CLAMIDIA",
+      "institution": "Ministério da Saúde (Brasil)",
+      "title": "Clamídia — Saúde de A a Z",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/clamidia",
+      "locator": "O que é; Transmissão; Sintomas; Complicações; Clamídia na gestação",
+      "observedSupport": "IST que na maioria das vezes causa infecção nos órgãos genitais, mas pode afetar garganta e olhos. Dor/ardência ao urinar, corrimento uretral; infertilidade, dor pélvica crônica; conjuntivite neonatal.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NINDS-MIG",
+      "institution": "NIH / NINDS",
+      "title": "Migraine",
+      "url": "https://www.ninds.nih.gov/health-information/disorders/migraine",
+      "locator": "What is migraine?; Types of migraine (migraine with brainstem aura, hemiplegic, retinal, menstrual); Who is more likely to get migraine",
+      "observedSupport": "Enxaqueca com aura de tronco encefálico inclui vertigem, zumbido e problemas auditivos; enxaqueca retiniana afeta geralmente um olho com alteração ou perda visual temporária; síndromes associadas com queixas gástricas e vertigem; enxaqueca menstrual; depressão e ansiedade mais frequentes.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NINDS-EPI",
+      "institution": "NIH / NINDS",
+      "title": "Epilepsy and Seizures",
+      "url": "https://www.ninds.nih.gov/health-information/disorders/epilepsy-and-seizures",
+      "locator": "What are epilepsy and seizures?; What causes epilepsy?; Living with epilepsy: mental health",
+      "observedSupport": "Epilepsia é transtorno cerebral crônico em que neurônios enviam sinais anormais e causam crises. Causas ligadas a fatores genéticos, infecção, traumatismo, AVC, tumores cerebrais; depressão e ansiedade são os diagnósticos de saúde mental mais frequentes em adultos com epilepsia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-SYPH-TG",
+      "institution": "CDC",
+      "title": "Syphilis — STI Treatment Guidelines",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "locator": "Parágrafos iniciais: estágios; neurossífilis, sífilis ocular e otossífilis",
+      "observedSupport": "Doença sistêmica por T. pallidum; úlcera/cancro no local de infecção; secundária com exantema, lesões mucocutâneas e linfadenopatia; terciária com acometimento cardíaco, gomas, tabes dorsalis e paresia geral; infecção do SNC, do sistema visual e do sistema auditivo (sintomas cócleo-vestibulares) em qualquer estágio. Conteúdo lido por extração automática; usado só como corroboração.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-read-through-webfetch-extraction-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-CHL-TG",
+      "institution": "CDC",
+      "title": "Chlamydial Infections — STI Treatment Guidelines",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm",
+      "locator": "Introdução; Diagnostic considerations; Chlamydial infection among neonates",
+      "observedSupport": "Infecção urogenital (uretra, colo uterino), retal e orofaríngea; sequelas em mulheres: DIP, gravidez ectópica, infertilidade; no neonato, conjuntivite e pneumonia subaguda. Conteúdo lido por extração automática; usado só como corroboração.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-read-through-webfetch-extraction-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-CHL-ABOUT",
+      "institution": "CDC",
+      "title": "About Chlamydia",
+      "url": "https://www.cdc.gov/chlamydia/about/index.html",
+      "locator": "What is chlamydia; Symptoms in women/men; Symptoms from rectal infections; Complications",
+      "observedSupport": "IST comum; corrimento e ardor ao urinar; infecção retal com dor, secreção e sangramento; DIP, gravidez ectópica, infertilidade. Conteúdo lido por extração automática; usado só como corroboração.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-read-through-webfetch-extraction-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "SCOPE-infectocontagiosas",
+      "institution": "NLM MeSH",
+      "title": "Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D007239",
+      "locator": "Registro D007239 lido em JSON (D007239.json): scopeNote; categoria C01; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Invasão do organismo hospedeiro por microrganismos, suas toxinas ou parasitas capazes de causar doença.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-COMMUNICABLE",
+      "institution": "NLM MeSH",
+      "title": "Communicable Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D003141",
+      "locator": "Registro D003141 lido em JSON (D003141.json): scopeNote; C01.221; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença causada por agente infeccioso ou suas toxinas, por transmissão direta ou indireta a partir de indivíduo infectado, animal, vetor ou ambiente.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neurologicas",
+      "institution": "NLM MeSH",
+      "title": "Nervous System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009422",
+      "locator": "Registro D009422 lido em JSON (D009422.json): scopeNote; categoria C10; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças do sistema nervoso central e periférico: encéfalo, medula, nervos cranianos e periféricos, raízes, sistema autônomo, junção neuromuscular e músculo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-psiquiatricas",
+      "institution": "NLM MeSH",
+      "title": "Mental Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D001523",
+      "locator": "Registro D001523 lido em JSON (D001523.json): scopeNote; categoria F03; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença psiquiátrica manifestada primariamente por anormalidades de pensamento, sentimento e comportamento, com sofrimento ou prejuízo funcional.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-auditivas",
+      "institution": "NLM MeSH",
+      "title": "Ear Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004427",
+      "locator": "Registro D004427 lido em JSON (D004427.json): scopeNote; C09.218; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do ouvido, da audição e do sistema de equilíbrio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-oculares",
+      "institution": "NLM MeSH",
+      "title": "Eye Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D005128",
+      "locator": "Registro D005128 lido em JSON (D005128.json): scopeNote; categoria C11; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que afetam o olho.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-nasais",
+      "institution": "NLM MeSH",
+      "title": "Nose Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009668",
+      "locator": "Registro D009668 lido em JSON (D009668.json): scopeNote; C08.460 e C09.603; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Distúrbios do nariz; descritor situado em Respiratory Tract Diseases e em Otorhinolaryngologic Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-respiratorias",
+      "institution": "NLM MeSH",
+      "title": "Respiratory Tract Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012140",
+      "locator": "Registro D012140 lido em JSON (D012140.json): scopeNote; categoria C08; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que envolvem o sistema respiratório.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-cardiovasculares",
+      "institution": "NLM MeSH",
+      "title": "Cardiovascular Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D002318",
+      "locator": "Registro D002318 lido em JSON (D002318.json): scopeNote; categoria C14; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições patológicas do sistema cardiovascular, incluindo coração, vasos sanguíneos e pericárdio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-digestivas",
+      "institution": "NLM MeSH",
+      "title": "Digestive System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004066",
+      "locator": "Registro D004066 lido em JSON (D004066.json): scopeNote; categoria C06; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças de qualquer parte do trato gastrointestinal ou dos órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-genitourinarias",
+      "institution": "NLM MeSH",
+      "title": "Urogenital Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D000091642",
+      "locator": "Registro D000091642 lido em JSON (D000091642.json): scopeNote; categoria C12; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do trato urinário e do sistema reprodutor (genitália).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-endocrinologicas",
+      "institution": "NLM MeSH",
+      "title": "Endocrine System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004700",
+      "locator": "Registro D004700 lido em JSON (D004700.json): scopeNote; categoria C19; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos das glândulas endócrinas e doenças por nível anormal de hormônios disponíveis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-miostioarticulares",
+      "institution": "NLM MeSH",
+      "title": "Musculoskeletal Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009140",
+      "locator": "Registro D009140 lido em JSON (D009140.json): scopeNote; categoria C05; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças dos músculos, ligamentos e tecido conjuntivo associados, e dos ossos e cartilagem.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-hematologicas",
+      "institution": "NLM MeSH",
+      "title": "Hemic and Lymphatic Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D006425",
+      "locator": "Registro D006425 lido em JSON (D006425.json): scopeNote; categoria C15; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças hematológicas e do sistema linfático: elementos figurados e componentes químicos do sangue; linfa, linfonodos e linfócitos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neoplasicas",
+      "institution": "NLM MeSH",
+      "title": "Neoplasms",
+      "url": "https://id.nlm.nih.gov/mesh/D009369",
+      "locator": "Registro D009369 lido em JSON (D009369.json): scopeNote; categoria C04; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Crescimento novo e anormal de tecido; neoplasias malignas têm maior anaplasia, invasão e metástase em comparação às benignas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    }
+  ],
+  "groupScopes": [
+    {
+      "groupId": "infectocontagiosas",
+      "scope": "Infecções por microrganismos ou parasitas, incluindo doenças transmissíveis; não exige transmissão direta uniforme (interpretação da política local).",
+      "sourceIds": [
+        "SCOPE-infectocontagiosas",
+        "SCOPE-COMMUNICABLE"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neurologicas",
+      "scope": "Sistema nervoso central e periférico: encéfalo, medula, nervos e raízes; inclusão de junção neuromuscular e músculo é fronteira curricular.",
+      "sourceIds": [
+        "SCOPE-neurologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "psiquiatricas",
+      "scope": "Transtornos mentais definidos (pensamento, afeto e comportamento com sofrimento ou prejuízo); sintomas ou comorbidades isoladas não bastam.",
+      "sourceIds": [
+        "SCOPE-psiquiatricas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "auditivas",
+      "scope": "Ouvido, audição e sistema de equilíbrio vestibular.",
+      "sourceIds": [
+        "SCOPE-auditivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "oculares",
+      "scope": "Doenças que afetam o olho; origem neurológica de déficit visual deve ser distinguida.",
+      "sourceIds": [
+        "SCOPE-oculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "nasais",
+      "scope": "Distúrbios do nariz; sobreposição com vias respiratórias possível.",
+      "sourceIds": [
+        "SCOPE-nasais"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "respiratorias",
+      "scope": "Doenças do sistema respiratório.",
+      "sourceIds": [
+        "SCOPE-respiratorias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "cardiovasculares",
+      "scope": "Coração, vasos sanguíneos e pericárdio; doenças cerebrovasculares constam do ramo vascular.",
+      "sourceIds": [
+        "SCOPE-cardiovasculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "digestivas",
+      "scope": "Trato gastrointestinal e órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "sourceIds": [
+        "SCOPE-digestivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "genitourinarias",
+      "scope": "Trato urinário e sistema reprodutor; o MeSH situa ISTs em Genital Diseases, mas via sexual isolada não determina sítio (regra do lote 001 mantida).",
+      "sourceIds": [
+        "SCOPE-genitourinarias",
+        "MESH-STD"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "endocrinologicas",
+      "scope": "Glândulas endócrinas e doenças por nível hormonal anormal; fator de risco ou influência hormonal isolados não bastam.",
+      "sourceIds": [
+        "SCOPE-endocrinologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "miostioarticulares",
+      "scope": "Músculos, ligamentos, ossos, cartilagem e articulações; fronteira neuromuscular é curricular.",
+      "sourceIds": [
+        "SCOPE-miostioarticulares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "hematologicas",
+      "scope": "Sangue (elementos figurados e componentes químicos) e sistema linfático; extensão linfática é fronteira curricular não resolvida.",
+      "sourceIds": [
+        "SCOPE-hematologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neoplasicas",
+      "scope": "Crescimento tecidual novo e anormal, benigno ou maligno; causa, agente ou fator de risco não é tumor.",
+      "sourceIds": [
+        "SCOPE-neoplasicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    }
+  ],
+  "records": [
+    {
+      "arrayIndex": 5,
+      "diseaseId": "sifilis",
+      "diseaseName": "Sífilis",
+      "recordObjectSha256": "12dd9bdac87a813a10569a9104979b22ad28fdcf50c6b26b0583564a4b1f6781",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas"
+      ],
+      "inputClaimedConditionalGroupIds": [
+        "neurologicas",
+        "oculares",
+        "auditivas",
+        "cardiovasculares"
+      ],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas"
+        ],
+        "conditional": [
+          "neurologicas",
+          "auditivas",
+          "oculares",
+          "cardiovasculares",
+          "genitourinarias",
+          "miostioarticulares"
+        ],
+        "held": [
+          "psiquiatricas",
+          "nasais",
+          "respiratorias",
+          "digestivas",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção bacteriana por Treponema pallidum, sexualmente transmissível; o MeSH a situa em Infections e Communicable Diseases.",
+          "sourceIds": [
+            "MESH-SYPH",
+            "WHO-SYPH",
+            "MS-SIFILIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Neurossífilis é forma específica, situada pelo MeSH em Nervous System Diseases; o rótulo genérico não implica acometimento do sistema nervoso.",
+          "sourceIds": [
+            "MESH-NEUROSYPH",
+            "WHO-SYPH",
+            "MS-SIFILIS",
+            "CDC-SYPH-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com neurossífilis documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Fontes descrevem demência e problemas de saúde mental na neurossífilis (paresia geral); não foi resolvido se isso constitui diagnóstico psiquiátrico no escopo local. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "MESH-NEUROSYPH",
+            "WHO-SYPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "conditional",
+          "reason": "Otossífilis afeta audição e/ou equilíbrio e pode ocorrer em qualquer estágio; não é implicada pelo rótulo genérico.",
+          "sourceIds": [
+            "WHO-SYPH",
+            "CDC-SYPH-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com otossífilis documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "conditional",
+          "reason": "Sífilis ocular é forma específica (inclui atrofia óptica sifilítica e alterações oculares congênitas); não é implicada pelo rótulo genérico.",
+          "sourceIds": [
+            "WHO-SYPH",
+            "MESH-NEUROSYPH",
+            "MESH-CONGSYPH",
+            "CDC-SYPH-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com sífilis ocular documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-SYPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Doença sistêmica com acometimento de múltiplos órgãos na fase terciária; nenhuma fonte lida estabelece ou exclui acometimento respiratório.",
+          "sourceIds": [
+            "WHO-SYPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "conditional",
+          "reason": "Sífilis cardiovascular (aortite, insuficiência aórtica, aneurisma) é forma tardia específica, situada pelo MeSH em Cardiovascular Diseases.",
+          "sourceIds": [
+            "MESH-CVSYPH",
+            "WHO-SYPH",
+            "MS-SIFILIS",
+            "CDC-SYPH-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com sífilis cardiovascular documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "A WHO cita o fígado entre os órgãos atingidos na fase terciária e o cancro pode ocorrer em ânus ou boca; nenhuma forma digestiva nomeada foi confirmada em taxonomia lida. Sobreposição documentada impede negativo; candidata a condicional em nova passagem.",
+          "sourceIds": [
+            "WHO-SYPH",
+            "MS-SIFILIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. O MeSH situa Syphilis também em Urogenital Diseases > Genital Diseases > Sexually Transmitted Diseases, e o cancro primário ocorre em genitais, mas também em outros locais. Nunca usar como distrator; promoção a positivo irrestrito depende de decisão curricular.",
+          "sourceIds": [
+            "MESH-SYPH",
+            "MESH-STD",
+            "MESH-CHANCRE",
+            "WHO-SYPH",
+            "MS-SIFILIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com lesão genital sifilítica documentada (p. ex., cancro duro genital); via sexual isolada não determina sítio.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-SYPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. Fase terciária pode atingir ossos e articulações (WHO; lesões ósseas no Ministério da Saúde); o MeSH descreve artropatia tabética e malformações ósseas congênitas.",
+          "sourceIds": [
+            "WHO-SYPH",
+            "MS-SIFILIS",
+            "MESH-TABES",
+            "MESH-CONGSYPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com acometimento ósseo ou articular sifilítico documentado.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Linfadenomegalia (ínguas) nas fases primária e secundária e anemia na forma congênita são descritas; o escopo MeSH inclui linfonodos. Fronteira não resolvida; não é negativo.",
+          "sourceIds": [
+            "MS-SIFILIS",
+            "WHO-SYPH",
+            "CDC-SYPH-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção por Treponema pallidum, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-SYPH",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção por Treponema pallidum, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-SYPH",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: sifilis×genitourinarias e sifilis×miostioarticulares (sobreposições documentadas não declaradas no rascunho; registrar como condicionais ou decidir curricularmente o ramo geniturinário do MeSH).",
+        "Pares retidos com sobreposição documentada a resolver: sifilis×psiquiatricas, sifilis×digestivas, sifilis×hematologicas; demais retidos: nasais, respiratorias, endocrinologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 2 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (genitourinarias, miostioarticulares) e 6 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 6,
+      "diseaseId": "clamidia-urogenital",
+      "diseaseName": "Infecção urogenital por Chlamydia trachomatis",
+      "recordObjectSha256": "0f70583304c0c195b13002c66f1dd3a0c4557946fb8be984e55d677a05c0c7d1",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas",
+        "genitourinarias"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "genitourinarias"
+        ],
+        "conditional": [
+          "oculares",
+          "miostioarticulares"
+        ],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção bacteriana sexualmente transmissível por Chlamydia trachomatis; o MeSH situa Chlamydia Infections em Infections e Communicable Diseases.",
+          "sourceIds": [
+            "MESH-CHLAM",
+            "WHO-CHL",
+            "MS-CLAMIDIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. A mesma bactéria causa conjuntivite de inclusão (MeSH em Eye Diseases) e a WHO e o Ministério da Saúde citam acometimento ocular; o rótulo restringe o sítio ao trato urogenital.",
+          "sourceIds": [
+            "MESH-INCLCONJ",
+            "WHO-CHL",
+            "MS-CLAMIDIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com acometimento ocular por clamídia documentado (conjuntivite de inclusão ou inflamação ocular associada).",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Pneumonia por C. trachomatis é descrita no lactente exposto ao nascimento e infecção de garganta é citada; não são manifestações definidas da infecção urogenital do paciente nomeado, mas não há base para exclusão.",
+          "sourceIds": [
+            "WHO-CHL",
+            "MS-CLAMIDIA",
+            "CDC-CHL-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Infecção anorretal e inflamação anorretal do LGV (cólicas, diarreia, constipação) são sítios ou variantes distintos do rótulo urogenital; sobreposição possível não resolvida.",
+          "sourceIds": [
+            "WHO-CHL",
+            "CDC-CHL-ABOUT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "accepted",
+          "reason": "O rótulo delimita o sítio urogenital: corrimento uretral/vaginal, ardor ao urinar, DIP, epididimite e infertilidade; o MeSH situa Chlamydia Infections em Urogenital Diseases > Genital Diseases.",
+          "sourceIds": [
+            "MESH-CHLAM",
+            "WHO-CHL",
+            "MS-CLAMIDIA",
+            "CDC-CHL-TG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. Artrite reativa (MeSH em Musculoskeletal Diseases) é secundária a infecção urogenital, com C. trachomatis entre os desencadeantes; a WHO cita sintomas de artrite como complicação rara.",
+          "sourceIds": [
+            "MESH-REACTARTH",
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com artrite reativa documentada após a infecção urogenital por C. trachomatis.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "LGV (imunotipos específicos de C. trachomatis) cursa com inflamação de linfonodos inguinais e o escopo MeSH inclui linfonodos; variante distinta do rótulo, fronteira não resolvida.",
+          "sourceIds": [
+            "MESH-LGV",
+            "WHO-CHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção bacteriana urogenital, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-CHLAM",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção bacteriana urogenital, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-CHLAM",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: clamidia-urogenital×oculares e clamidia-urogenital×miostioarticulares (sobreposições documentadas não declaradas no rascunho; registrar como condicionais).",
+        "Pares retidos com sobreposição documentada a resolver: clamidia-urogenital×digestivas, ×respiratorias, ×hematologicas; demais retidos: neurologicas, psiquiatricas, auditivas, nasais, cardiovasculares, endocrinologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 2 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (oculares, miostioarticulares) e 9 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 7,
+      "diseaseId": "acidente-vascular-encefalico",
+      "diseaseName": "Acidente vascular encefálico (AVE/AVC)",
+      "recordObjectSha256": "4a9e05eff81624c3e49c57d4ea88595d628b4b6e4b395d90c62c5ed0b3ea9afd",
+      "inputClaimedPositiveGroupIds": [
+        "neurologicas",
+        "cardiovasculares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "neurologicas",
+          "cardiovasculares"
+        ],
+        "conditional": [],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "A WHO inclui o AVC entre as doenças cardiovasculares não transmissíveis e o diagnóstico nomeia evento vascular (isquemia ou hemorragia), não infecção. Infecções podem causar vasculite e AVC, mas causa não é identidade; AVC de causa infecciosa documentada exige contexto próprio.",
+          "sourceIds": [
+            "WHO-NCD",
+            "MESH-STROKE",
+            "MS-AVC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "A WHO inclui o AVC entre as doenças cardiovasculares não transmissíveis e o diagnóstico nomeia evento vascular (isquemia ou hemorragia), não infecção. Infecções podem causar vasculite e AVC, mas causa não é identidade; AVC de causa infecciosa documentada exige contexto próprio.",
+            "sourceIds": [
+              "WHO-NCD",
+              "MESH-STROKE",
+              "MS-AVC"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "accepted",
+          "reason": "Perda súbita de função neurológica por isquemia encefálica ou hemorragia intracraniana; o MeSH situa Stroke em Nervous System Diseases > Brain Diseases > Cerebrovascular Disorders.",
+          "sourceIds": [
+            "MESH-STROKE",
+            "MESH-CEREBROVASC",
+            "MS-AVC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida define ou exclui transtorno mental como parte do diagnóstico; sequelas cognitivas e afetivas não foram verificadas.",
+          "sourceIds": [
+            "MESH-STROKE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Tontura e perda de equilíbrio são sintomas descritos; não estabelecem nem excluem doença do ouvido.",
+          "sourceIds": [
+            "WHO-CVD",
+            "MS-AVC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Alteração visual é sintoma descrito; origem ocular ou neurológica não foi resolvida.",
+          "sourceIds": [
+            "WHO-CVD",
+            "MS-AVC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-STROKE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-STROKE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "accepted",
+          "reason": "Doença dos vasos que irrigam o encéfalo: o MeSH situa Stroke em Cardiovascular Diseases > Vascular Diseases > Cerebrovascular Disorders e a WHO inclui doença cerebrovascular e AVC entre as doenças cardiovasculares.",
+          "sourceIds": [
+            "MESH-STROKE",
+            "MESH-CEREBROVASC",
+            "WHO-CVD",
+            "WHO-NCD",
+            "MS-AVC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-STROKE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-STROKE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Diabetes é citado como fator de risco; risco não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "WHO-CVD",
+            "MS-AVC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-STROKE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Distúrbios de coagulação (p. ex., hemofilia) são citados como causa de AVC hemorrágico e coágulos como mecanismo; causa não é identidade, mas a fronteira não foi resolvida.",
+          "sourceIds": [
+            "MS-AVC",
+            "WHO-CVD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia evento vascular agudo (isquemia ou hemorragia), não crescimento tecidual novo e anormal. Inferência definicional; não exclui tumor coexistente nem sangramento de causa tumoral, que exigiria rótulo próprio.",
+          "sourceIds": [
+            "MESH-STROKE",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia evento vascular agudo (isquemia ou hemorragia), não crescimento tecidual novo e anormal. Inferência definicional; não exclui tumor coexistente nem sangramento de causa tumoral, que exigiria rótulo próprio.",
+            "sourceIds": [
+              "MESH-STROKE",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 10 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 8,
+      "diseaseId": "enxaqueca",
+      "diseaseName": "Enxaqueca",
+      "recordObjectSha256": "ac8556552ab1f5b67207b98e010b58423b2a1074d8240b372e770e3c01c8a09c",
+      "inputClaimedPositiveGroupIds": [
+        "neurologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "neurologicas"
+        ],
+        "conditional": [
+          "auditivas",
+          "oculares"
+        ],
+        "held": [
+          "psiquiatricas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "A WHO define a enxaqueca como transtorno primário de cefaleia e afirma que os transtornos de cefaleia não são contagiosos; pelo MeSH, cefaleia primária não é atribuível a causa conhecida. Não há agente infeccioso na definição.",
+          "sourceIds": [
+            "WHO-HEAD",
+            "MESH-MIGRAINE",
+            "MESH-PRIMHEAD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "A WHO define a enxaqueca como transtorno primário de cefaleia e afirma que os transtornos de cefaleia não são contagiosos; pelo MeSH, cefaleia primária não é atribuível a causa conhecida. Não há agente infeccioso na definição.",
+            "sourceIds": [
+              "WHO-HEAD",
+              "MESH-MIGRAINE",
+              "MESH-PRIMHEAD"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "accepted",
+          "reason": "Transtorno primário de cefaleia, entre os transtornos mais comuns do sistema nervoso (WHO); o MeSH situa Migraine Disorders em Nervous System Diseases > Brain Diseases > Headache Disorders.",
+          "sourceIds": [
+            "WHO-HEAD",
+            "MESH-MIGRAINE",
+            "NINDS-MIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Ansiedade e depressão são comorbidades mais frequentes; comorbidade não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "WHO-HEAD",
+            "NINDS-MIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. O MeSH situa Vestibular Migraine, subtipo de Migraine Disorders, também em Ear Diseases > Labyrinth Diseases > Vestibular Diseases; o NINDS descreve vertigem, zumbido e queixas auditivas na aura de tronco encefálico. O escopo local inclui o equilíbrio vestibular.",
+          "sourceIds": [
+            "MESH-VESTMIG",
+            "NINDS-MIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com enxaqueca vestibular documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. O MeSH situa Ophthalmoplegic Migraine, subtipo de Migraine Disorders, também em Eye Diseases; o NINDS descreve enxaqueca retiniana com alteração ou perda visual monocular temporária. Aura visual comum não basta.",
+          "sourceIds": [
+            "MESH-OPHTHMIG",
+            "NINDS-MIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com enxaqueca oftalmoplégica ou enxaqueca retiniana documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-MIGRAINE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-MIGRAINE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O MeSH situa Migraine Disorders apenas em Nervous System Diseases; ausência em outro ramo é silêncio, e relações vasculares não foram verificadas.",
+          "sourceIds": [
+            "MESH-MIGRAINE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Náusea, vômito e sintomas abdominais (mais proeminentes em crianças) e síndromes associadas com queixas gástricas são descritos; não estabelecem doença digestiva nem permitem exclusão.",
+          "sourceIds": [
+            "WHO-HEAD",
+            "NINDS-MIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Enxaqueca menstrual é descrita; a relação com o ciclo não define doença geniturinária nem a exclui.",
+          "sourceIds": [
+            "NINDS-MIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "A WHO menciona possível influência hormonal; não define doença endócrina nem a exclui.",
+          "sourceIds": [
+            "WHO-HEAD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-MIGRAINE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-MIGRAINE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Transtorno primário de cefaleia: por definição, a cefaleia não é atribuível a outra causa conhecida (como lesão expansiva) e não constitui crescimento tecidual novo e anormal. Inferência definicional; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-MIGRAINE",
+            "MESH-PRIMHEAD",
+            "WHO-HEAD",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Transtorno primário de cefaleia: por definição, a cefaleia não é atribuível a outra causa conhecida (como lesão expansiva) e não constitui crescimento tecidual novo e anormal. Inferência definicional; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-MIGRAINE",
+              "MESH-PRIMHEAD",
+              "WHO-HEAD",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: enxaqueca×auditivas e enxaqueca×oculares (subtipos situados pelo MeSH em Ear Diseases e Eye Diseases não declarados no rascunho; registrar como condicionais).",
+        "Pares retidos com sobreposição documentada a resolver: enxaqueca×psiquiatricas, ×digestivas; demais retidos: nasais, respiratorias, cardiovasculares, genitourinarias, endocrinologicas, miostioarticulares, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 2 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (auditivas, oculares) e 9 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 9,
+      "diseaseId": "epilepsia",
+      "diseaseName": "Epilepsia",
+      "recordObjectSha256": "243fc20f63d5e58b3b12645fdb66ada619042f4f3d97c15e86079f3273e97c90",
+      "inputClaimedPositiveGroupIds": [
+        "neurologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "neurologicas"
+        ],
+        "conditional": [],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "A WHO define epilepsia como doença crônica não transmissível do cérebro e afirma que não é contagiosa. Infecções do sistema nervoso figuram entre as causas, mas causa não é identidade; epilepsia de etiologia infecciosa documentada exige contexto próprio e validação curricular do escopo local.",
+          "sourceIds": [
+            "WHO-EPI",
+            "MESH-EPILEPSY",
+            "NINDS-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "A WHO define epilepsia como doença crônica não transmissível do cérebro e afirma que não é contagiosa. Infecções do sistema nervoso figuram entre as causas, mas causa não é identidade; epilepsia de etiologia infecciosa documentada exige contexto próprio e validação curricular do escopo local.",
+            "sourceIds": [
+              "WHO-EPI",
+              "MESH-EPILEPSY",
+              "NINDS-EPI"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "accepted",
+          "reason": "Doença crônica do cérebro com crises recorrentes por descarga neuronal excessiva; o MeSH situa Epilepsy em Nervous System Diseases > Brain Diseases.",
+          "sourceIds": [
+            "WHO-EPI",
+            "MESH-EPILEPSY",
+            "NINDS-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Depressão e ansiedade são comorbidades frequentes; comorbidade não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "WHO-EPI",
+            "NINDS-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-EPILEPSY"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-EPILEPSY"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-EPILEPSY"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-EPILEPSY"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "AVC figura entre as causas de epilepsia; causa não é identidade, e não há base para exclusão.",
+          "sourceIds": [
+            "WHO-EPI",
+            "NINDS-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Perda de controle intestinal durante a crise é sintoma descrito; não define doença digestiva nem a exclui.",
+          "sourceIds": [
+            "WHO-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Perda de controle vesical durante a crise é sintoma descrito; não define doença geniturinária nem a exclui.",
+          "sourceIds": [
+            "WHO-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Causas metabólicas compõem categoria etiológica da WHO; não definem doença endócrina nem a excluem.",
+          "sourceIds": [
+            "WHO-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Fraturas e contusões por crises são lesões associadas; não definem doença musculoesquelética nem a excluem.",
+          "sourceIds": [
+            "WHO-EPI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-EPILEPSY"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Tumor cerebral figura entre as causas de epilepsia (WHO, NINDS). A identidade do diagnóstico é disfunção neuronal paroxística, mas o vínculo causal documentado torna imprudente propor negativo nesta passagem.",
+          "sourceIds": [
+            "WHO-EPI",
+            "NINDS-EPI",
+            "MESH-EPILEPSY"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    }
+  ],
+  "counts": {
+    "diseasesReviewed": 5,
+    "groupsInspected": 14,
+    "diseaseGroupPairsInspected": 70,
+    "declaredPositiveMembershipsVerified": 7,
+    "declaredConditionalMembershipsVerified": 4,
+    "acceptedMemberships": 7,
+    "conditionalMemberships": 10,
+    "heldPairs": 46,
+    "safeNegativeCandidates": 7,
+    "availableSafeNegatives": 0,
+    "modelReviewed": 2,
+    "needsRevision": 3,
+    "prototypeEligible": 0,
+    "clinicalApprovals": 0
+  },
+  "clinicalApproval": false,
+  "curricularApproval": false,
+  "accessLimitations": [
+    {
+      "url": "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "result": "403 em requisição direta; conteúdo lido somente por extração automática (WebFetch), sem leitura do HTML bruto; usado apenas como corroboração, nunca como base única de um par"
+    },
+    {
+      "url": "https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm",
+      "result": "403 em requisição direta; lido somente por extração automática (WebFetch); apenas corroboração"
+    },
+    {
+      "url": "https://www.cdc.gov/chlamydia/about/index.html",
+      "result": "403 em requisição direta; lido somente por extração automática (WebFetch); apenas corroboração"
+    },
+    {
+      "url": "https://icd.who.int/browse/2025-01/mms/en",
+      "result": "aplicação JavaScript sem conteúdo de classificação legível nesta sessão; ICD-11 não foi usada como evidência"
+    },
+    {
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/neoplasm",
+      "result": "aplicação JavaScript; definição não legível; não usada. Escopo neoplásico baseado na scope note MeSH Neoplasms (D009369)"
+    },
+    {
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/epilepsia",
+      "result": "404 (também em /e/epilepsia-1); nenhuma página do Ministério da Saúde foi usada para epilepsia"
+    },
+    {
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/i/ist",
+      "result": "redirecionamento para login; não usada"
+    },
+    {
+      "url": "https://www.ninds.nih.gov/health-information/disorders/stroke",
+      "result": "redirecionou para a listagem geral de transtornos; não usada. NHLBI (https://www.nhlbi.nih.gov/health/stroke) retornou apenas navegação; não usada"
+    },
+    {
+      "url": "https://meshb.nlm.nih.gov/api/record/ui/D013587",
+      "result": "endpoint inexistente; registros MeSH lidos pelo serviço de dados ligados id.nlm.nih.gov (JSON) e endpoint SPARQL oficial"
+    }
+  ],
+  "completion": {
+    "boundedReviewComplete": true,
+    "sourceDraftEdited": false,
+    "applicationEdited": false,
+    "rootReviewEdited": false,
+    "otherDiseaseRecordsReviewed": false,
+    "clinicalApprovalGranted": false,
+    "remainingWork": "Resolve held pairs and incorporate reviewed qualifications in a separately authorized content change; no extension to the 214 records outside batches 001 and 002."
+  }
+}
