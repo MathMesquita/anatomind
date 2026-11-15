@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs"
 import { createHash } from "node:crypto"
 import { regionCoverage, regionQuestions, regionViews } from "../src/data/regions.ts"
 import { buildRegionRound } from "../src/lib/region-round.ts"
-import { emptyExposure } from "../src/lib/sampling.ts"
+import { createExposureStore, emptyExposure } from "../src/lib/sampling.ts"
 
 const rng = (seed = 321) => () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296 }
 
@@ -84,9 +84,32 @@ test("coverage favors an unseen region and an unseen view of that region", () =>
   const id = "regiao-18", views = regionQuestions.filter((q) => q.regionId === id)
   assert.ok(views.length > 1)
   const questions = Object.fromEntries([...new Set(regionQuestions.map((q) => q.regionId))].filter((region) => region !== id).map((region) => [`propedeutica:region:${region}`, { count: 1, lastSeen: 1 }]))
-  questions[`propedeutica:question:${views[0].id}`] = { count: 1, lastSeen: 1 }
   const history = { ...emptyExposure(), sequence: 1, questions }
   const round = buildRegionRound(regionQuestions, 10, history, rng())
   assert.equal(round[0].regionId, id)
-  assert.notEqual(round[0].id, views[0].id)
+  questions[`propedeutica:question:${views[0].id}`] = { count: 1, lastSeen: 1 }
+  assert.notEqual(buildRegionRound(views, 1, history, rng())[0].id, views[0].id)
+})
+
+test("five completed rounds cover every region before a repeat and eventually show every view", () => {
+  const exposure = createExposureStore(null), random = rng(81), first = new Set(), targets = new Set()
+  for (let roundIndex = 0; roundIndex < 100; roundIndex++) {
+    const round = buildRegionRound(regionQuestions, 10, exposure.read(), random)
+    for (const question of round) {
+      if (roundIndex < 5) { assert.ok(!first.has(question.regionId)); first.add(question.regionId) }
+      targets.add(question.id)
+      exposure.record([`propedeutica:region:${question.regionId}`, `propedeutica:question:${question.id}`], [], `coverage:${roundIndex}:${question.id}`)
+    }
+  }
+  assert.equal(first.size, 50)
+  assert.equal(targets.size, 71)
+})
+
+test("legacy target-only history cannot make previously seen starter regions look unseen", () => {
+  const old = regionQuestions.find((question) => question.id === "superficie-anterior-25")
+  const history = { ...emptyExposure(), sequence: 1, questions: { [`propedeutica:question:${old.id}`]: { count: 1, lastSeen: 1 } } }
+  const round = buildRegionRound(regionQuestions, 50, history, rng())
+  assert.equal(round.at(-1).regionId, old.regionId)
+  assert.equal(round.filter((question) => question.regionId === old.regionId).length, 1)
+  assert.equal(history.questions[`propedeutica:region:${old.regionId}`], undefined, "sampling must not mutate stored history")
 })
