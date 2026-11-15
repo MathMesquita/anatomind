@@ -23,7 +23,7 @@ export default defineConfig(() => ({
         // five-item release does not invalidate every other subject's content.
         // https://rolldown.rs/reference/OutputOptions.codeSplitting
         codeSplitting: { groups: [
-          { name: "content-caracteres", test: /content\/releases\/caracteres\./ },
+          { name: "content-caracteres", test: /content\/releases\/caracteres[.-]/ },
           { name: "content-interrogatorio", test: /content\/releases\/interrogatorio\./ },
           { name: "content-interrogatorio-lotes", test: /content\/releases\/interrogatorio-batch-/ },
           { name: "content-regioes", test: /content\/releases\/regioes\./ },

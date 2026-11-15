@@ -53,3 +53,32 @@ test("partial reports, changed inputs, unreviewed text, incomplete coverage, and
   review.stories[0].textSha256 = hash("Registro a."); review.stories[0].answerFieldIds = []
   assert.throws(() => prepare(review), /answer differs/)
 })
+
+test("repaired symptom stories ship only after a fresh independent review, each once", async () => {
+  const { readdirSync } = await import("node:fs")
+  const { prepareCharacteristicRepairsFromFiles, serializeRepairsRelease } = await import("../tools/prepare-characteristic-repairs.mjs")
+  const { characteristicReleases, characteristicStories } = await import("../src/data/characteristics.ts")
+  const root = new URL("../", import.meta.url)
+  const base = JSON.parse(readFileSync(new URL("content/releases/caracteres.v1.json", root)))
+  const reports = readdirSync(new URL("content/reviews/", root)).filter((file) => /^caracteres-repairs-\d+\.json$/.test(file))
+  assert.ok(reports.length >= 1)
+  const cwd = process.cwd()
+  process.chdir(new URL(".", root).pathname)
+  let repaired = 0
+  try {
+    for (const file of reports) {
+      const expected = prepareCharacteristicRepairsFromFiles(`content/reviews/${file}`)
+      assert.equal(readFileSync(`content/releases/${expected.release.id}.json`, "utf8"), serializeRepairsRelease(expected))
+      assert.ok(characteristicReleases.some((release) => release.release.id === expected.release.id))
+      for (const story of expected.stories) {
+        assert.ok(base.coverage.withheld.some((item) => item.id === story.id))
+        assert.equal(story.review.independentReview.decision.hold, false)
+      }
+      for (const item of expected.coverage.withheld) assert.ok(!characteristicStories.some((story) => story.id === item.id))
+      repaired += expected.stories.length
+    }
+  } finally { process.chdir(cwd) }
+  assert.equal(characteristicReleases.length, reports.length + 1)
+  assert.equal(characteristicStories.length, 192 + repaired)
+  assert.equal(new Set(characteristicStories.map((story) => story.id)).size, characteristicStories.length)
+})

@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "caracteres-repairs-001",
+  "status": "completed-independent-review",
+  "clinicalApproval": false,
+  "releaseAuthorized": false,
+  "completedAt": "2026-11-15T21:12:28.923Z",
+  "reviewer": {
+    "name": "Claude (Anthropic)",
+    "model": "claude-fable-5-2",
+    "execution": "Claude Code subagent, fresh context",
+    "role": "independent model reviewer; not a clinician and not a clinical approver",
+    "independence": "Did not write, edit or repair the reviewed stories, the batch or the base draft. Wrote only content/reviews/caracteres-repairs-001.json and docs/reviews/caracteres-repairs-001.md.",
+    "method": "Read each story in full; decided every checklist field from the literal text; verified quotes/offsets, derived lists, hashes and label preservation with a Node script; read the three pages of the course PDF; consulted the v2 review items and findings for the five stories."
+  },
+  "input": {
+    "path": "content/batches/caracteres-repairs-001.json",
+    "sha256": "de6ff956f688d25bb76470822537f81a02f9edeab4357bb05b26d96a91f5687d",
+    "byteLength": 31538,
+    "baseInventory": {
+      "path": "content/drafts/caracteres.json",
+      "sha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda"
+    }
+  },
+  "hashMethods": {
+    "input": "SHA-256 of exact file bytes.",
+    "text": "SHA-256 of UTF-8 story.text; no normalization.",
+    "storyObject": "SHA-256 of UTF-8 JSON.stringify(parsed story), retaining key order."
+  },
+  "reviewedStoryIds": [
+    "cianose-01",
+    "ictericia-02",
+    "dor-08",
+    "tosse-05",
+    "tosse-13"
+  ],
+  "modelReviewedStoryIds": [
+    "cianose-01",
+    "ictericia-02",
+    "tosse-05",
+    "tosse-13"
+  ],
+  "heldStoryIds": [
+    "dor-08"
+  ],
+  "prototypeEligibleStoryIds": [
+    "cianose-01",
+    "ictericia-02",
+    "tosse-05",
+    "tosse-13"
+  ],
+  "counts": {
+    "stories": 5,
+    "read": 5,
+    "semanticallyReviewed": 5,
+    "modelReviewed": 4,
+    "needsRevision": 1,
+    "hold": 1,
+    "prototypeEligible": 4,
+    "clinicalApproved": 0
+  },
+  "findings": [
+    {
+      "id": "CR001-01",
+      "severity": "blocking",
+      "hold": true,
+      "storyIds": [
+        "dor-08"
+      ],
+      "fieldId": "relacao-funcoes-organicas",
+      "kind": "field-status-and-answer",
+      "batchStatus": "omitted",
+      "reviewerStatus": "documented",
+      "evidenceQuote": "apoiar o pé piora. Retirar o apoio alivia",
+      "issue": "O gabarito inclui \"Relação com funções orgânicas\" como dado ausente. O texto, porém, relaciona a dor ao apoio/carga do tornozelo. Na definição de livro-texto deste item (Porto & Porto, Semiologia Médica, conforme reproduzido na fonte secundária consultada), a função pesquisada depende do local da dor: em dor articular ou muscular, a movimentação da estrutura; em membros inferiores, a deambulação. Um aluno que considere o item presente seria marcado como errado. A revisão v2 (CAR2-006) tratou o apoio apenas como agravante mecânico; as duas leituras divergem e a decisão é clínica/pedagógica.",
+      "requiredStoryChange": "Decisão de clínico/educador sobre o item. Se movimento/carga contam como função orgânica em dor musculoesquelética: marcar documented com citação e recalcular o gabarito para qualidade-carater, intensidade. Se a política do banco restringe o item a funções viscerais: registrar essa regra no checklist do grupo dor e reescrever a história para que não haja relato funcional ambíguo. O revisor não alterou a história.",
+      "referenceIds": [
+        "sanar-decalogo-dor-porto"
+      ]
+    },
+    {
+      "id": "CR001-02",
+      "severity": "non-blocking",
+      "hold": false,
+      "storyIds": [
+        "ictericia-02"
+      ],
+      "fieldId": "periodos",
+      "kind": "pedagogical-ambiguity",
+      "issue": "Após a remoção da frase final, \"A intensidade parece estável\" sustenta sozinha Evolução e Períodos. A regra registrada na revisão v2 permite isso, e o status documented foi mantido. Nas outras histórias de icterícia aprovadas, Períodos tem frase própria sobre continuidade ou acalmia; aqui nada é dito sobre acalmia. Um aluno pode assinalar Períodos como ausente.",
+      "requiredStoryChange": null,
+      "recommendation": "Confirmação por educador antes de release; não bloqueia protótipo."
+    },
+    {
+      "id": "CR001-03",
+      "severity": "non-blocking",
+      "hold": false,
+      "storyIds": [
+        "cianose-01",
+        "ictericia-02",
+        "dor-08",
+        "tosse-05",
+        "tosse-13"
+      ],
+      "kind": "style-and-answer-cue",
+      "issue": "As cinco histórias são narração clínica em terceira pessoa, não fala leiga, e contêm frases de narrador que nomeiam o componente ausente (\"não foi informado se algo intensifica\", \"não foi atribuída uma graduação\", \"sem escala ou nota de intensidade\", \"início e duração total não foram informados\"). Em tosse-05 e tosse-13 essa frase aponta diretamente a única resposta. O padrão é preexistente (apenas ictericia-02 teve texto alterado) e ocorre em 15 das 192 histórias aprovadas na v2; por coerência com esse precedente não foi tratado como bloqueio.",
+      "requiredStoryChange": null,
+      "recommendation": "Decisão editorial sobre manter a pista explícita em campos parciais."
+    },
+    {
+      "id": "CR001-04",
+      "severity": "non-blocking",
+      "hold": false,
+      "storyIds": [
+        "dor-08"
+      ],
+      "kind": "style",
+      "issue": "Redundância: \"mais fraca hoje do que ontem\" e, na frase seguinte, \"Hoje está menos intensa do que ontem\" repetem o mesmo dado para sustentar Intensidade (parcial) e Evolução.",
+      "requiredStoryChange": null
+    },
+    {
+      "id": "CR001-05",
+      "severity": "out-of-scope-observation",
+      "hold": false,
+      "storyIds": [
+        "dor-16"
+      ],
+      "kind": "same-pattern-in-published-story",
+      "issue": "Fora do escopo desta revisão e não reavaliada: dor-16 (aprovada na v2) descreve dor na planta do pé em que \"caminhar mais a intensifica\" e tem relacao-funcoes-organicas no gabarito como ausente. É o mesmo padrão de CR001-01; a decisão tomada para dor-08 deve ser aplicada de forma coerente.",
+      "requiredStoryChange": null
+    },
+    {
+      "id": "CR001-06",
+      "severity": "info",
+      "hold": false,
+      "storyIds": [],
+      "kind": "label-preservation",
+      "issue": "sourceLabel e safeUiLabel dos quatro grupos são idênticos entre si, ao label do rascunho-base e aos rótulos da revisão v2, e conferem com o impresso nas páginas 1 a 3 do PDF do curso (SHA-256 ec6d0dab868f2eb171bc099306015f48d8dd74b976ec5f441576ce0383e6ebb7), inclusive \"Acolia fecal/ Colúria\" e \"Início / duração / evolução\". Nenhum rótulo foi reescrito. No lote, apenas o grupo cianose traz reviewRule por campo; as regras dos demais grupos foram lidas na revisão v2.",
+      "requiredStoryChange": null
+    }
+  ],
+  "reviewerClinicalSources": [
+    {
+      "id": "sanar-decalogo-dor-porto",
+      "title": "Sanar — Os 10 mandamentos da dor e sua fisiopatologia (coluna)",
+      "url": "https://sanarmed.com/os-10-mandamentos-da-dor-e-sua-fisiopatologia-colunistas/",
+      "sourceType": "secondary",
+      "accessed": "2026-11-15",
+      "claim": "Na seção sobre relação com funções orgânicas, a função pesquisada varia com o local da dor; para dor articular ou muscular é o movimento da estrutura e, para membros inferiores, a deambulação. A coluna cita como referência Porto & Porto, Semiologia Médica, 8. ed., Guanabara Koogan, 2019.",
+      "limitation": "Fonte secundária, lida por resumo automático da página; não é fonte institucional primária. O livro-texto citado não foi aberto. Não foi localizada na web uma fonte institucional primária com a definição; duas tentativas (USP e-Disciplinas, livro da UEMASUL) falharam. Por isso o achado é hold para decisão humana, não correção."
+    }
+  ],
+  "limitations": [
+    "Revisão por modelo, não aprovação clínica nem editorial; clinicalApproval e releaseAuthorized permanecem false.",
+    "A definição clínica usada em CR001-01 vem de fonte secundária; o livro-texto primário não foi consultado.",
+    "O status documented de periodos em ictericia-02 depende da regra editorial registrada na revisão v2, não de fonte clínica.",
+    "Apenas as cinco histórias do lote foram revisadas; dor-16 foi lida somente para comparar precedente.",
+    "O lote, o rascunho-base e a revisão v2 foram lidos no checkout principal do repositório (branch main), único lugar onde o lote existe. Um hook da sessão impede escrita no checkout principal, então este relatório e o resumo em docs/reviews foram gravados no worktree da sessão (.claude/worktrees/chatgpt-session-logs-72a873), nos mesmos caminhos relativos; input.path é relativo à raiz do repositório. Nenhuma história, lote ou rascunho foi alterado; nenhum comando git de escrita.",
+    "Nenhuma execução do aplicativo ou de construtor de release foi testada."
+  ],
+  "stories": [
+    {
+      "id": "cianose-01",
+      "groupId": "cianose",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "prototypeEligible": true,
+      "reviewedText": "Há quatro dias, a família notou coloração arroxeada nos lábios durante episódios de frio intenso, com duração aproximada de dez minutos. Não percebeu alteração nos dedos nem falta de ar. Ao entrar em local aquecido, a cor volta gradualmente ao habitual; não foi informado se algo intensifica a coloração depois que ela aparece. Os episódios ocorreram em duas manhãs e não apareceram nos demais dias.",
+      "textSha256": "bcc75646759bdd41fe671c3c1eec734bddc34943d77c6ddd5b4056a04fe9435f",
+      "storyObjectSha256": "227b91b0b827c3dec625a64eca70d3d8bfce357f371f24dd3fc54c0686c11207",
+      "answerFieldIds": [
+        "fatores-melhora-piora"
+      ],
+      "fieldDecisions": [
+        {
+          "fieldId": "inicio",
+          "status": "documented",
+          "evidenceQuote": "Há quatro dias, a família notou coloração arroxeada",
+          "note": "Data relativa situa o primeiro aparecimento."
+        },
+        {
+          "fieldId": "fatores-desencadeantes",
+          "status": "documented",
+          "evidenceQuote": "durante episódios de frio intenso",
+          "note": "Frio intenso é a circunstância de aparecimento narrada."
+        },
+        {
+          "fieldId": "localizacao",
+          "status": "documented",
+          "evidenceQuote": "coloração arroxeada nos lábios",
+          "note": "Região nomeada (lábios); dedos são negados na frase seguinte."
+        },
+        {
+          "fieldId": "duracao",
+          "status": "documented",
+          "evidenceQuote": "com duração aproximada de dez minutos",
+          "note": "Duração do episódio explicitamente narrada; a regra aceita escala de episódio."
+        },
+        {
+          "fieldId": "fenomenos-acompanhantes",
+          "status": "documented",
+          "evidenceQuote": "Não percebeu alteração nos dedos nem falta de ar",
+          "note": "Negativa explícita de acompanhante (falta de ar), no alcance observado."
+        },
+        {
+          "fieldId": "fatores-melhora-piora",
+          "status": "partial",
+          "evidenceQuote": "Ao entrar em local aquecido, a cor volta gradualmente ao habitual; não foi informado se algo intensifica a coloração depois que ela aparece",
+          "note": "Melhora descrita; piora declarada como não informada. Dado não informado é ausência do componente (não é resposta desconhecida do paciente); frio é gatilho e não prova piora após instalação."
+        },
+        {
+          "fieldId": "periodos",
+          "status": "documented",
+          "evidenceQuote": "Os episódios ocorreram em duas manhãs e não apareceram nos demais dias",
+          "note": "Presença de acalmia: dias sem episódio."
+        }
+      ],
+      "priorFindingsResolved": true,
+      "reason": "Sete campos conferidos no texto literal; única lacuna é Fatores de melhora e piora (melhora descrita, piora não informada). Gabarito, citações e offsets corretos; Início reassociado como pedia CAR2-001."
+    },
+    {
+      "id": "ictericia-02",
+      "groupId": "ictericia",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "prototypeEligible": true,
+      "reviewedText": "Há duas semanas, percebeu a pele amarelada, mais evidente no tronco do que nos braços; não foi atribuída uma graduação como leve, moderada ou intensa. Notou fezes claras e urina escura. O quadro começou alguns dias após iniciar um medicamento prescrito; essa sequência temporal não confirma causa, e não identifica outro fator. Tem enjoo e coceira, sem febre. A intensidade parece estável.",
+      "textSha256": "ba9aa95ea8e63d694d32f22430066e8cb6fe7172bb45172868d728559b8fa1f8",
+      "storyObjectSha256": "45d8a49e754a062448cbbc8fb36839c316239839001fbc1816880e1705fcc081",
+      "answerFieldIds": [
+        "intensidade-localizacao",
+        "fatores-melhora-piora"
+      ],
+      "fieldDecisions": [
+        {
+          "fieldId": "inicio",
+          "status": "documented",
+          "evidenceQuote": "Há duas semanas, percebeu a pele amarelada",
+          "note": "Data relativa situa o início."
+        },
+        {
+          "fieldId": "duracao",
+          "status": "documented",
+          "evidenceQuote": "Há duas semanas",
+          "note": "Duração global do quadro em curso; mesma convenção das demais histórias de icterícia aprovadas."
+        },
+        {
+          "fieldId": "evolucao",
+          "status": "documented",
+          "evidenceQuote": "A intensidade parece estável",
+          "note": "Curso temporal: estabilidade."
+        },
+        {
+          "fieldId": "acolia-coluria",
+          "status": "documented",
+          "evidenceQuote": "Notou fezes claras e urina escura",
+          "note": "Cor das fezes e da urina, ambas explícitas."
+        },
+        {
+          "fieldId": "intensidade-localizacao",
+          "status": "partial",
+          "evidenceQuote": "mais evidente no tronco do que nos braços; não foi atribuída uma graduação como leve, moderada ou intensa",
+          "note": "Distribuição por local descrita; grau atual expressamente ausente. A regra exige grau e distribuição."
+        },
+        {
+          "fieldId": "fatores-desencadeantes",
+          "status": "documented",
+          "evidenceQuote": "O quadro começou alguns dias após iniciar um medicamento prescrito; essa sequência temporal não confirma causa, e não identifica outro fator",
+          "note": "Circunstância temporal (medicamento) relatada, sem afirmar causalidade, e negativa de outro fator."
+        },
+        {
+          "fieldId": "fenomenos-acompanhantes",
+          "status": "documented",
+          "evidenceQuote": "Tem enjoo e coceira, sem febre",
+          "note": "Acompanhantes presentes e negativa explícita de febre."
+        },
+        {
+          "fieldId": "fatores-melhora-piora",
+          "status": "omitted",
+          "evidenceQuote": null,
+          "note": "Nenhuma frase trata de fator que melhore ou piore, nem nega relação percebida."
+        },
+        {
+          "fieldId": "periodos",
+          "status": "documented",
+          "evidenceQuote": "A intensidade parece estável",
+          "note": "Aceito pela regra documentada \"comparação OU acalmia; a mesma frase pode cumprir evolução e períodos\": estabilidade afirma semelhança ao longo do período. Ressalva não bloqueante CR001-02: é a única história de icterícia em que uma única frase curta sustenta Evolução e Períodos, e nada é dito sobre acalmia."
+        }
+      ],
+      "priorFindingsResolved": true,
+      "reason": "Nove campos conferidos; lacunas são Intensidade e relação com a localização (parcial: sem grau) e Fatores de melhora e piora (omitido). Gabarito, citações e offsets corretos. CAR2-002 resolvido: a frase contraditória foi removida e a estabilidade documenta Períodos pela regra \"comparação OU acalmia\". Ressalva não bloqueante CR001-02."
+    },
+    {
+      "id": "dor-08",
+      "groupId": "dor",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "prototypeEligible": false,
+      "reviewedText": "Durante a consulta, descreve dor no tornozelo direito, sem se espalhar para outro local, mais fraca hoje do que ontem, sem escala ou nota de intensidade, desde a manhã de ontem. Hoje está menos intensa do que ontem. Começou após uma torção; apoiar o pé piora. Retirar o apoio alivia. Há inchaço no mesmo local, sem outras manifestações relatadas.",
+      "textSha256": "0467f331fd47e0d059734da929f76e06a8202a704180c4665315663f2a0aa17e",
+      "storyObjectSha256": "2b5fb52450b4abaa1d43dafa4ef757bb6c9c8309ba91e098bccd97c474bdc6ae",
+      "answerFieldIds": null,
+      "fieldDecisions": [
+        {
+          "fieldId": "localizacao",
+          "status": "documented",
+          "evidenceQuote": "dor no tornozelo direito",
+          "note": "Região nomeada."
+        },
+        {
+          "fieldId": "irradiacao",
+          "status": "documented",
+          "evidenceQuote": "sem se espalhar para outro local",
+          "note": "Negativa explícita de propagação."
+        },
+        {
+          "fieldId": "qualidade-carater",
+          "status": "omitted",
+          "evidenceQuote": null,
+          "note": "Nenhum descritor de qualidade (pontada, peso, queimação etc.)."
+        },
+        {
+          "fieldId": "intensidade",
+          "status": "partial",
+          "evidenceQuote": "mais fraca hoje do que ontem, sem escala ou nota de intensidade",
+          "note": "Apenas comparação relativa; sem grau atual."
+        },
+        {
+          "fieldId": "duracao",
+          "status": "documented",
+          "evidenceQuote": "desde a manhã de ontem",
+          "note": "Tempo desde o qual a dor existe."
+        },
+        {
+          "fieldId": "evolucao",
+          "status": "documented",
+          "evidenceQuote": "Hoje está menos intensa do que ontem",
+          "note": "Curso: redução de ontem para hoje."
+        },
+        {
+          "fieldId": "relacao-funcoes-organicas",
+          "status": "documented",
+          "evidenceQuote": "apoiar o pé piora. Retirar o apoio alivia",
+          "note": "DIVERGE DO GABARITO (lote marca omitted). O texto literal relaciona a dor à carga/apoio do tornozelo. Na definição de livro-texto deste item do decálogo da dor, a função pesquisada depende do local: em dor articular/muscular, a movimentação da estrutura; em membros inferiores, a deambulação. Assim o item não pode ser afirmado como ausente; marcar o aluno como errado por não assinalá-lo é contestável. Exige decisão de clínico/educador (ver CR001-01)."
+        },
+        {
+          "fieldId": "desencadeantes-agravantes",
+          "status": "documented",
+          "evidenceQuote": "Começou após uma torção; apoiar o pé piora",
+          "note": "Gatilho (torção) e agravante (apoio)."
+        },
+        {
+          "fieldId": "atenuantes",
+          "status": "documented",
+          "evidenceQuote": "Retirar o apoio alivia",
+          "note": "Fator de alívio explícito."
+        },
+        {
+          "fieldId": "manifestacoes-concomitantes",
+          "status": "documented",
+          "evidenceQuote": "Há inchaço no mesmo local, sem outras manifestações relatadas",
+          "note": "Inchaço presente e negativa de outras manifestações."
+        }
+      ],
+      "priorFindingsResolved": true,
+      "reason": "HOLD. Campo relacao-funcoes-organicas: o lote marca omitted e o inclui no gabarito, mas o texto diz \"apoiar o pé piora\" / \"Retirar o apoio alivia\"; pela definição de livro-texto do item (dor articular/muscular -> movimentação da estrutura; membros inferiores -> deambulação) a relação com a função não pode ser dada como ausente. Leitura do revisor: lacunas = qualidade-carater, intensidade. Citações e offsets estão corretos; os achados CAR2-003 a CAR2-006 foram aplicados como prescritos, mas o status prescrito em CAR2-006 é o ponto contestado. Exige decisão de clínico/educador."
+    },
+    {
+      "id": "tosse-05",
+      "groupId": "tosse",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "prototypeEligible": true,
+      "reviewedText": "Descreve tosse seca, moderada, sem horário predominante, a cada duas horas. O ar frio desencadeia os acessos; o ambiente aquecido os alivia e a volta ao frio os intensifica. Deitar não altera a tosse. Nega outros sintomas junto. O padrão se manteve semelhante de um dia para outro; o início e a duração total não foram informados.",
+      "textSha256": "cece9021b34061695fa3a3ba41ff7298b951197d3f10030e0c4d27a77f51114b",
+      "storyObjectSha256": "957580dcb6b33d8f84513e4dbe59213e78bcd312bc7b685747d4f353e7855db0",
+      "answerFieldIds": [
+        "inicio-duracao-evolucao"
+      ],
+      "fieldDecisions": [
+        {
+          "fieldId": "inicio-duracao-evolucao",
+          "status": "partial",
+          "evidenceQuote": "O padrão se manteve semelhante de um dia para outro; o início e a duração total não foram informados",
+          "note": "Curso descrito; início e duração total expressamente ausentes. O composto exige os três."
+        },
+        {
+          "fieldId": "horario",
+          "status": "documented",
+          "evidenceQuote": "sem horário predominante",
+          "note": "Negativa explícita de horário predominante."
+        },
+        {
+          "fieldId": "frequencia",
+          "status": "documented",
+          "evidenceQuote": "a cada duas horas",
+          "note": "Intervalo entre acessos."
+        },
+        {
+          "fieldId": "intensidade",
+          "status": "documented",
+          "evidenceQuote": "moderada",
+          "note": "Grau qualitativo."
+        },
+        {
+          "fieldId": "fatores-desencadeantes",
+          "status": "documented",
+          "evidenceQuote": "O ar frio desencadeia os acessos",
+          "note": "Gatilho explícito."
+        },
+        {
+          "fieldId": "fenomenos-acompanhantes",
+          "status": "documented",
+          "evidenceQuote": "Nega outros sintomas junto",
+          "note": "Negativa explícita de acompanhantes."
+        },
+        {
+          "fieldId": "fatores-melhora-piora",
+          "status": "documented",
+          "evidenceQuote": "o ambiente aquecido os alivia e a volta ao frio os intensifica",
+          "note": "Melhora e piora (intensificação dos acessos) explícitas."
+        },
+        {
+          "fieldId": "relacao-decubito",
+          "status": "documented",
+          "evidenceQuote": "Deitar não altera a tosse",
+          "note": "Ausência de relação com o decúbito, explícita."
+        },
+        {
+          "fieldId": "seca-produtiva",
+          "status": "documented",
+          "evidenceQuote": "tosse seca",
+          "note": "Caracterizada como seca."
+        },
+        {
+          "fieldId": "periodos",
+          "status": "documented",
+          "evidenceQuote": "O padrão se manteve semelhante de um dia para outro",
+          "note": "Comparação explícita entre dias (semelhança)."
+        }
+      ],
+      "priorFindingsResolved": true,
+      "reason": "Dez campos conferidos; única lacuna é Início / duração / evolução (parcial: curso descrito, início e duração total ausentes). Gabarito, citações e offsets corretos; CAR2-007 a CAR2-011 resolvidos."
+    },
+    {
+      "id": "tosse-13",
+      "groupId": "tosse",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "prototypeEligible": true,
+      "reviewedText": "Apresenta tosse produtiva, leve, concentrada no fim da manhã, três ou quatro vezes ao dia. Nega chiado e falta de ar. Sentar ou deitar não muda a tosse. Não identifica gatilho nem fator de melhora ou piora. Há dias sem tosse alternados com dias de padrão semelhante; início e duração total não foram informados.",
+      "textSha256": "e352576dbb236e5dba905e06c3002351387a28991654d69b649439161d27970f",
+      "storyObjectSha256": "95b9d5284ea388dd49b816e820e79f9337315358054e179cedccc3672ce1b764",
+      "answerFieldIds": [
+        "inicio-duracao-evolucao"
+      ],
+      "fieldDecisions": [
+        {
+          "fieldId": "inicio-duracao-evolucao",
+          "status": "partial",
+          "evidenceQuote": "Há dias sem tosse alternados com dias de padrão semelhante; início e duração total não foram informados",
+          "note": "Alternância descreve o curso; início e duração total expressamente ausentes."
+        },
+        {
+          "fieldId": "horario",
+          "status": "documented",
+          "evidenceQuote": "concentrada no fim da manhã",
+          "note": "Período do dia explícito."
+        },
+        {
+          "fieldId": "frequencia",
+          "status": "documented",
+          "evidenceQuote": "três ou quatro vezes ao dia",
+          "note": "Frequência diária."
+        },
+        {
+          "fieldId": "intensidade",
+          "status": "documented",
+          "evidenceQuote": "leve",
+          "note": "Grau qualitativo."
+        },
+        {
+          "fieldId": "fatores-desencadeantes",
+          "status": "documented",
+          "evidenceQuote": "Não identifica gatilho",
+          "note": "Negativa percebida de gatilho."
+        },
+        {
+          "fieldId": "fenomenos-acompanhantes",
+          "status": "documented",
+          "evidenceQuote": "Nega chiado e falta de ar",
+          "note": "Negativas explícitas de acompanhantes."
+        },
+        {
+          "fieldId": "fatores-melhora-piora",
+          "status": "documented",
+          "evidenceQuote": "Não identifica gatilho nem fator de melhora ou piora",
+          "note": "Negativa percebida nas duas direções."
+        },
+        {
+          "fieldId": "relacao-decubito",
+          "status": "documented",
+          "evidenceQuote": "Sentar ou deitar não muda a tosse",
+          "note": "Ausência de relação com a posição, explícita."
+        },
+        {
+          "fieldId": "seca-produtiva",
+          "status": "documented",
+          "evidenceQuote": "tosse produtiva",
+          "note": "Caracterizada como produtiva."
+        },
+        {
+          "fieldId": "periodos",
+          "status": "documented",
+          "evidenceQuote": "Há dias sem tosse alternados com dias de padrão semelhante",
+          "note": "Acalmia (dias sem tosse) e semelhança entre os dias com tosse."
+        }
+      ],
+      "priorFindingsResolved": true,
+      "reason": "Dez campos conferidos; única lacuna é Início / duração / evolução (parcial: alternância descreve o curso, início e duração total ausentes). Gabarito, citações e offsets corretos; CAR2-012 a CAR2-015 resolvidos."
+    }
+  ]
+}

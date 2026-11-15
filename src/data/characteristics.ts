@@ -1,6 +1,7 @@
-import type { CharacteristicStory } from "../lib/characteristic-bank.ts"
+import type { CharacteristicRelease, CharacteristicStory } from "../lib/characteristic-bank.ts"
 import { adaptCharacteristicRelease } from "../lib/characteristic-bank.ts"
 import release from "../../content/releases/caracteres.v1.json" with { type: "json" }
+import repairs001 from "../../content/releases/caracteres-repairs-001.json" with { type: "json" }
 
 const fields = ["Localização", "Irradiação", "Qualidade/caráter", "Intensidade", "Duração", "Evolução", "Relação com funções orgânicas", "Fatores desencadeantes/agravantes", "Fatores atenuantes", "Manifestações concomitantes"]
 
@@ -11,5 +12,7 @@ export const starterCharacteristicStories: CharacteristicStory[] = [
   { text: "Paciente relata dor lombar em aperto há dois dias, que vem aumentando desde o início. Não percebe relação com refeições, urina ou evacuação.\n\nA dor piora ao caminhar e melhora com repouso. Nega outros sintomas associados.", missing: ["Irradiação", "Intensidade"], context: "O registro não informa a intensidade nem se a dor se espalha." },
 ].map((story, index) => ({ ...story, id: `prototype-v1:${index}`, groupId: "dor", groupLabel: "Dor", fields, fieldKeys: Object.fromEntries(fields.map((field) => [field, field])) }))
 
-export const characteristicStories = adaptCharacteristicRelease(release)
+// Frozen, independently model-reviewed releases only. Add one line per new reviewed repairs batch.
+export const characteristicReleases = [release, repairs001] as unknown as CharacteristicRelease[]
+export const characteristicStories = characteristicReleases.flatMap(adaptCharacteristicRelease)
 export const characteristicCatalog = { stories: characteristicStories.length, groups: new Set(characteristicStories.map((story) => story.groupId)).size, reviewedPrototype: true }
