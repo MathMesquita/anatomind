@@ -1,0 +1,1700 @@
+{
+  "schemaVersion": 1,
+  "topic": "interrogatorio",
+  "sourceDocuments": [
+    {
+      "id": "interrogatorio-complementar-2026",
+      "filename": "Interrogatorio complementar.pdf",
+      "pages": 12,
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de"
+    }
+  ],
+  "contexts": [
+    {
+      "id": "ic-elementos-gerais-febre-prurido",
+      "term": "Prurido",
+      "group": "ELEMENTOS GERAIS",
+      "subgroup": "FEBRE:",
+      "originalDescription": "coceira",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "ELEMENTOS GERAIS",
+        "subgroup": "FEBRE:",
+        "term": "Prurido"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos.",
+        "FEBRE e ALTERAÇÕES DE PESO são títulos efetivamente impressos; pertencimento documental não afirma febre, mudança de peso ou nexo causal."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido",
+      "term": "Prurido",
+      "group": "PELE",
+      "subgroup": null,
+      "originalDescription": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 6,
+        "locator": "PELE > Prurido"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "PELE",
+        "subgroup": null,
+        "term": "Prurido"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-01",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-003.json",
+          "reportSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+          "reviewId": "interrogatorio-batch-003",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+            "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+            "exactModelVersion": "claude-fable-5-2",
+            "runId": "unknown",
+            "role": "independent model reviewer; not a clinician and not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to the batch-001/002 review conversations; the batch-002 report and markdown were read only as the output contract.",
+            "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+            "researchSkill": {
+              "used": false,
+              "note": "No research skill loaded. Primary sources were opened directly with the session web-fetch tool, which returns the page content through a summarizing model; quotes are as returned by that tool."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-prurido-story-01",
+            "stableId": "ic-elementos-gerais-febre-prurido-story-01",
+            "contextId": "ic-elementos-gerais-febre-prurido",
+            "sourceArrayIndex": 10,
+            "sourceOrdinal": 11,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+            "textSha256": "d777c03f0b116a16776b699f1d2d85d3ebc33620af37ea62efd9aad50c4fca3c",
+            "storyObjectSha256": "8892d5b7a505858b50fb5b1f31b43bf5a55875935754b477878da75783810e6b",
+            "rawStorySha256": "7b60d1a38e6c26f8d58629d20ff90a52bd8cc141a710bb8e0b6b7b3446078896",
+            "rawStoryByteLength": 3184,
+            "acceptedTermIds": [
+              "prurido"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-prurido",
+              "ic-pele-sem-subgrupo-prurido"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "coceira",
+                "sourceExactLine": "Prurido: coceira",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "Sinto uma coceira espalhada pelos braços e pelas pernas",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A fala usa a palavra “coceira”, que é a descrição integral desta entrada na apostila; a rubrica FEBRE apenas localiza a entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              },
+              {
+                "contextId": "ic-pele-sem-subgrupo-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "PELE",
+                "subgroup": null,
+                "sourceHierarchy": {
+                  "group": "PELE",
+                  "subgroup": null,
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 6,
+                  "locator": "PELE > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+                "sourceExactLine": "Prurido: Coceira; sensação desagradável na pele que evoca o desejo de coçar.",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A coceira é referida na superfície do corpo/pele e vem acompanhada de desejo ou ato de coçar, esfregar ou arranhar, como na descrição desta entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "A fala nomeia coceira, distribui-a por braços e pernas e relata o ato de se coçar. “Coceira” é a descrição literal de ELEMENTOS GERAIS > FEBRE: > Prurido; coceira na superfície do corpo acompanhada do ato de coçar corresponde à descrição de PELE > Prurido. Linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho. A distribuição não indica causa; lesões, febre e região genital não são mencionadas e permanecem desconhecidas.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: and PELE (no printed subgroup) are the actual source placements; FEBRE is not evidence of fever and PELE is not evidence of skin disease.",
+              "clinicalMeaning": "Subjectively reported itch with location and urge/act of scratching or rubbing; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Braços e pernas são superfície cutânea; não há menção a vulva/vagina (Prurido do aparelho genital feminino) nem a formigamento, dormência, queimação ou alfinetadas (Parestesias)."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "Both source paths for generic/cutaneous Prurido are accepted with full credit. The third Prurido context (APARELHO GENITAL FEMININO) is not supported: no vulvar/vaginal location is stated. No additional source-supported coherent path or partial-credit subgroup identified."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B003-01",
+              "B003-02",
+              "B003-03",
+              "B003-04",
+              "B003-05"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-02",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-003.json",
+          "reportSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+          "reviewId": "interrogatorio-batch-003",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+            "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+            "exactModelVersion": "claude-fable-5-2",
+            "runId": "unknown",
+            "role": "independent model reviewer; not a clinician and not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to the batch-001/002 review conversations; the batch-002 report and markdown were read only as the output contract.",
+            "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+            "researchSkill": {
+              "used": false,
+              "note": "No research skill loaded. Primary sources were opened directly with the session web-fetch tool, which returns the page content through a summarizing model; quotes are as returned by that tool."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-prurido-story-02",
+            "stableId": "ic-elementos-gerais-febre-prurido-story-02",
+            "contextId": "ic-elementos-gerais-febre-prurido",
+            "sourceArrayIndex": 11,
+            "sourceOrdinal": 12,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+            "textSha256": "fdb9037047246a5abc4989d55e3bbbe7f8b6bc4de63f6d2511dc9724b02d9606",
+            "storyObjectSha256": "ada8dcfda30dfadbfdd59c8dbd58efe3ba978a9dacc5845531a619399c77db90",
+            "rawStorySha256": "5a870a4027f04c4d47da1ef257df32db6239c9157d334051370887ec8d9ebda6",
+            "rawStoryByteLength": 3139,
+            "acceptedTermIds": [
+              "prurido"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-prurido",
+              "ic-pele-sem-subgrupo-prurido"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "coceira",
+                "sourceExactLine": "Prurido: coceira",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "uma coceira pelo corpo",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A fala usa a palavra “coceira”, que é a descrição integral desta entrada na apostila; a rubrica FEBRE apenas localiza a entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              },
+              {
+                "contextId": "ic-pele-sem-subgrupo-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "PELE",
+                "subgroup": null,
+                "sourceHierarchy": {
+                  "group": "PELE",
+                  "subgroup": null,
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 6,
+                  "locator": "PELE > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+                "sourceExactLine": "Prurido: Coceira; sensação desagradável na pele que evoca o desejo de coçar.",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A coceira é referida na superfície do corpo/pele e vem acompanhada de desejo ou ato de coçar, esfregar ou arranhar, como na descrição desta entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "Coceira “pelo corpo”, à noite, que interrompe a leitura e leva a pessoa a esfregar a pele. A palavra “coceira” sustenta a entrada geral; a referência explícita à pele e ao ato de esfregá-la sustenta PELE > Prurido. “De noite” é circunstância: a fala não relata dificuldade para dormir nem sonolência. Sem termo técnico, diagnóstico ou conselho; causa não afirmada.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: and PELE (no printed subgroup) are the actual source placements; FEBRE is not evidence of fever and PELE is not evidence of skin disease.",
+              "clinicalMeaning": "Subjectively reported itch with location and urge/act of scratching or rubbing; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "“Pelo corpo” é localização difusa e a pele é nomeada; isso não equivale a afirmar coceira na vulva ou na vagina. Interromper a leitura à noite não descreve Insônia / sonolência."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "Both source paths for generic/cutaneous Prurido are accepted with full credit. The third Prurido context (APARELHO GENITAL FEMININO) is not supported: no vulvar/vaginal location is stated. No additional source-supported coherent path or partial-credit subgroup identified."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B003-01",
+              "B003-02",
+              "B003-03",
+              "B003-04",
+              "B003-05"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-03",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-003.json",
+          "reportSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+          "reviewId": "interrogatorio-batch-003",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+            "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+            "exactModelVersion": "claude-fable-5-2",
+            "runId": "unknown",
+            "role": "independent model reviewer; not a clinician and not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to the batch-001/002 review conversations; the batch-002 report and markdown were read only as the output contract.",
+            "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+            "researchSkill": {
+              "used": false,
+              "note": "No research skill loaded. Primary sources were opened directly with the session web-fetch tool, which returns the page content through a summarizing model; quotes are as returned by that tool."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-prurido-story-03",
+            "stableId": "ic-elementos-gerais-febre-prurido-story-03",
+            "contextId": "ic-elementos-gerais-febre-prurido",
+            "sourceArrayIndex": 12,
+            "sourceOrdinal": 13,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+            "textSha256": "afe820075b87c88ce237a6341e0b9bf6bb73ea43d48880319f49d233d0bd1c98",
+            "storyObjectSha256": "e90974c9a1b7979b1f1f2ec55a58d522e4af30a4bb5235339e6a643eac54cd96",
+            "rawStorySha256": "6c9e647e22a70f38704976ecbeda066fc9a0536e79ffd1ce7c12aff34aeac16c",
+            "rawStoryByteLength": 3189,
+            "acceptedTermIds": [
+              "prurido"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-prurido",
+              "ic-pele-sem-subgrupo-prurido"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "coceira",
+                "sourceExactLine": "Prurido: coceira",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "estou com coceira no tronco",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A fala usa a palavra “coceira”, que é a descrição integral desta entrada na apostila; a rubrica FEBRE apenas localiza a entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              },
+              {
+                "contextId": "ic-pele-sem-subgrupo-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "PELE",
+                "subgroup": null,
+                "sourceHierarchy": {
+                  "group": "PELE",
+                  "subgroup": null,
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 6,
+                  "locator": "PELE > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+                "sourceExactLine": "Prurido: Coceira; sensação desagradável na pele que evoca o desejo de coçar.",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A coceira é referida na superfície do corpo/pele e vem acompanhada de desejo ou ato de coçar, esfregar ou arranhar, como na descrição desta entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "Coceira no tronco desde ontem, com vontade de coçar. “Coceira” sustenta a entrada geral; localização em superfície corporal e “vontade de coçar” reproduzem o núcleo da descrição de PELE > Prurido (“evoca o desejo de coçar”). “Não vejo nada diferente” é autorrelato de que a pessoa não percebe alteração visível: não é exame, não exclui clinicamente lesões e não cria apoio a PELE > Lesões. Sem termo técnico, diagnóstico ou conselho.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: and PELE (no printed subgroup) are the actual source placements; FEBRE is not evidence of fever and PELE is not evidence of skin disease.",
+              "clinicalMeaning": "Subjectively reported itch with location and urge/act of scratching or rubbing; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "PELE > Lesões não é sustentado: a única referência a aspecto é a negativa autorreferida. Tronco não é vulva/vagina; não há sensação do tipo Parestesias."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "Both source paths for generic/cutaneous Prurido are accepted with full credit. The third Prurido context (APARELHO GENITAL FEMININO) is not supported: no vulvar/vaginal location is stated. No additional source-supported coherent path or partial-credit subgroup identified."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B003-01",
+              "B003-02",
+              "B003-03",
+              "B003-04",
+              "B003-05"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-04",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-003.json",
+          "reportSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+          "reviewId": "interrogatorio-batch-003",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+            "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+            "exactModelVersion": "claude-fable-5-2",
+            "runId": "unknown",
+            "role": "independent model reviewer; not a clinician and not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to the batch-001/002 review conversations; the batch-002 report and markdown were read only as the output contract.",
+            "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+            "researchSkill": {
+              "used": false,
+              "note": "No research skill loaded. Primary sources were opened directly with the session web-fetch tool, which returns the page content through a summarizing model; quotes are as returned by that tool."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-prurido-story-04",
+            "stableId": "ic-elementos-gerais-febre-prurido-story-04",
+            "contextId": "ic-elementos-gerais-febre-prurido",
+            "sourceArrayIndex": 13,
+            "sourceOrdinal": 14,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+            "textSha256": "9d4fd92b5d6c651e59bb057b9628307ca722039cf1e0128949f2b0034b74a9b5",
+            "storyObjectSha256": "feb73a0c8e40856db26fd7cca78780624bc5b5591b9c3efd5cb5fcbacab88ca6",
+            "rawStorySha256": "944a1dd455caa8628cc2cfe0a4d57155ddca7d2b41538f496ddd3e0461ef0819",
+            "rawStoryByteLength": 3219,
+            "acceptedTermIds": [
+              "prurido"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-prurido",
+              "ic-pele-sem-subgrupo-prurido"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "coceira",
+                "sourceExactLine": "Prurido: coceira",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "a coceira aparece nos braços",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A fala usa a palavra “coceira”, que é a descrição integral desta entrada na apostila; a rubrica FEBRE apenas localiza a entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              },
+              {
+                "contextId": "ic-pele-sem-subgrupo-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "PELE",
+                "subgroup": null,
+                "sourceHierarchy": {
+                  "group": "PELE",
+                  "subgroup": null,
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 6,
+                  "locator": "PELE > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+                "sourceExactLine": "Prurido: Coceira; sensação desagradável na pele que evoca o desejo de coçar.",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A coceira é referida na superfície do corpo/pele e vem acompanhada de desejo ou ato de coçar, esfregar ou arranhar, como na descrição desta entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "Coceira ocasional nos braços, em repouso, com vontade de arranhar. “Coceira” sustenta a entrada geral; coceira nos braços com desejo de arranhar corresponde a PELE > Prurido. “Quieta no sofá” é circunstância e não estabelece causa nem estado emocional. Sem termo técnico, diagnóstico ou conselho.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: and PELE (no printed subgroup) are the actual source placements; FEBRE is not evidence of fever and PELE is not evidence of skin disease.",
+              "clinicalMeaning": "Subjectively reported itch with location and urge/act of scratching or rubbing; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "O feminino gramatical (“quieta”) identifica quem fala, não a localização: a coceira é dita nos braços, não no aparelho genital. Repouso no sofá não descreve Ansiedade nem Parestesias."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "Both source paths for generic/cutaneous Prurido are accepted with full credit. The third Prurido context (APARELHO GENITAL FEMININO) is not supported: no vulvar/vaginal location is stated. No additional source-supported coherent path or partial-credit subgroup identified."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B003-01",
+              "B003-02",
+              "B003-03",
+              "B003-04",
+              "B003-05"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-05",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-003.json",
+          "reportSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+          "reviewId": "interrogatorio-batch-003",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+            "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+            "exactModelVersion": "claude-fable-5-2",
+            "runId": "unknown",
+            "role": "independent model reviewer; not a clinician and not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to the batch-001/002 review conversations; the batch-002 report and markdown were read only as the output contract.",
+            "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+            "researchSkill": {
+              "used": false,
+              "note": "No research skill loaded. Primary sources were opened directly with the session web-fetch tool, which returns the page content through a summarizing model; quotes are as returned by that tool."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-prurido-story-05",
+            "stableId": "ic-elementos-gerais-febre-prurido-story-05",
+            "contextId": "ic-elementos-gerais-febre-prurido",
+            "sourceArrayIndex": 14,
+            "sourceOrdinal": 15,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+            "textSha256": "05f4f6f7b1955ea32acb7575d6380db28bff1373b6fa02518879906349b55720",
+            "storyObjectSha256": "03ac3f5663b2851d15b03e08360bf37e12955f193fe718459fd936de36d210f0",
+            "rawStorySha256": "aad158603a1c3218a7532d3835af54755772e07e18fd6334b7f919c983eb0967",
+            "rawStoryByteLength": 3164,
+            "acceptedTermIds": [
+              "prurido"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-prurido",
+              "ic-pele-sem-subgrupo-prurido"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "coceira",
+                "sourceExactLine": "Prurido: coceira",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "Tenho uma coceira que vai e volta nas pernas",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A fala usa a palavra “coceira”, que é a descrição integral desta entrada na apostila; a rubrica FEBRE apenas localiza a entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              },
+              {
+                "contextId": "ic-pele-sem-subgrupo-prurido",
+                "termId": "prurido",
+                "term": "Prurido",
+                "group": "PELE",
+                "subgroup": null,
+                "sourceHierarchy": {
+                  "group": "PELE",
+                  "subgroup": null,
+                  "term": "Prurido"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 6,
+                  "locator": "PELE > Prurido"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+                "sourceExactLine": "Prurido: Coceira; sensação desagradável na pele que evoca o desejo de coçar.",
+                "sourceVerification": "PDF p.1 e p.6 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+                "evidenceQuote": "coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+                "referenceIds": [
+                  "mesh-pruritus",
+                  "decs-prurido"
+                ],
+                "rationale": "A coceira é referida na superfície do corpo/pele e vem acompanhada de desejo ou ato de coçar, esfregar ou arranhar, como na descrição desta entrada.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "Coceira intermitente nas pernas, com alívio momentâneo ao esfregar a pele. “Coceira” sustenta a entrada geral; a pele é nomeada e o alívio ao esfregar é compatível com a sensação que “evoca o desejo de coçar” de PELE > Prurido. Sem termo técnico, diagnóstico ou conselho; a intermitência não indica causa.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: and PELE (no printed subgroup) are the actual source placements; FEBRE is not evidence of fever and PELE is not evidence of skin disease.",
+              "clinicalMeaning": "Subjectively reported itch with location and urge/act of scratching or rubbing; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Pernas não tornam a fala uma queixa do aparelho vascular periférico: dor ao caminhar, varizes, edema, palidez, cianose ou alteração de temperatura não são descritos. Não há menção a vulva/vagina nem a sensações do tipo Parestesias."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "Both source paths for generic/cutaneous Prurido are accepted with full credit. The third Prurido context (APARELHO GENITAL FEMININO) is not supported: no vulvar/vaginal location is stated. No additional source-supported coherent path or partial-credit subgroup identified."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B003-01",
+              "B003-02",
+              "B003-03",
+              "B003-04",
+              "B003-05"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante."
+        }
+      ],
+      "repairHistory": []
+    }
+  ],
+  "answerPolicy": {
+    "mode": "all-source-supported-coherent-paths",
+    "instruction": "Leia a fala e identifique os termos e caminhos da apostila compatíveis com o que foi dito. Pode haver mais de uma resposta plenamente aceita. Os grupos localizam entradas do roteiro; não identificam a causa ou o órgão doente.",
+    "sourceHierarchyMeaning": "group/subgroup e sourceHierarchy preservam exclusivamente a posição impressa. FEBRE não comprova febre, ALTERAÇÕES DE PESO não comprova perda/ganho e o nome de um aparelho não comprova etiologia.",
+    "clinicalSubgroupScoring": "withheld-pending-qualified-review",
+    "fullCredit": "Todos os acceptedContextIds têm o mesmo crédito; contextId é só organização editorial e não desempata respostas.",
+    "partialCredit": "Somente alternativeContextIds com alternativePathEvidence explícita podem representar o mesmo conceito em outro contexto válido. Uma definição igualmente compatível com a fala pertence ao crédito integral; causa presumida, silêncio ou semelhança lexical não dão crédito parcial.",
+    "hintPolicy": "Não usar contextId, source.locator, acceptedPathEvidence ou número de respostas como pistas. Nenhuma alteração de interface faz parte desta reparação.",
+    "syntheticSourceMeaning": "source cita a definição da apostila, não um paciente real ou uma fala publicada.",
+    "eligibility": "O jogo identifica termos técnicos, funções, medidas, achados e marcos da história, inclusive fisiológicos; não exige sintoma anormal. Excluir somente entradas sem conceito identificável e reter definições/formato ainda não resolvidos."
+  },
+  "clinicalReferences": [
+    {
+      "id": "figo-2018",
+      "title": "FIGO 2018 — nomenclature and definitions",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666",
+      "locator": "§3.1; Figura 1 corrigida em 12-11-2018; Tabela 1",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "iasp-terminology",
+      "title": "IASP — terminology",
+      "url": "https://www.iasp-pain.org/resources/terminology/",
+      "locator": "Hypoesthesia, Dysesthesia e Paresthesia; definições e notas",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "mesh-dyspnea",
+      "title": "NLM MeSH D004417 — Dyspnea",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D004417",
+      "locator": "Scope Note; narrower concepts Orthopnea M000751458 e Trepopnea M000751459",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "mesh-photophobia",
+      "title": "NLM MeSH D020795 — Photophobia",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D020795",
+      "locator": "Scope Note",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "ics-frequency",
+      "title": "ICS — Urinary Frequency",
+      "url": "https://www.ics.org/committees/standardisation/terminologydiscussions/urinaryfrequency",
+      "locator": "Current definition e Controversy; discussão de terminologia, setembro de 2018 (página marcada Unpublished)",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "ics-nocturia-2019",
+      "title": "ICS 2019 — nocturia and nocturnal lower urinary tract function",
+      "url": "https://www.ics.org/folder/standardisation/current-ics-standardisations/d/ics-report-on-the-terminology-for-nocturia-and-nocturnal-lower-urinary-tract-function-published-15-january-2019/download",
+      "locator": "Tabela 1, p.501; §§3.1, 3.4, 4.2, pp.502–504; DOI 10.1002/nau.23917",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "nidcd-smell",
+      "title": "NIDCD — Smell Disorders",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "locator": "What are the smell disorders? Parosmia e Phantosmia",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "eau-priapism",
+      "title": "EAU — Priapism",
+      "url": "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/priapism",
+      "locator": "§10.1.2.a e Tabela 10.2; ischaemic e non-ischaemic priapism",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "niddk-constipation",
+      "title": "NIDDK — Symptoms & Causes of Constipation",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/constipation/symptoms-causes",
+      "locator": "What are the symptoms of constipation?",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "asha-voice",
+      "title": "ASHA — Voice Disorders",
+      "url": "https://www.asha.org/practice-portal/clinical-topics/voice-disorders/",
+      "locator": "Overview; Signs and Symptoms; aphonia e dysphonia",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "figo-2022-glossary",
+      "title": "FIGO 2022 — The FIGO ovulatory disorders classification system",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.14331",
+      "locator": "Glossary of terms used in this paper: Frequent menstruation, Infrequent menstruation, Menstrual cycle e Prolonged menstruation",
+      "accessed": "2026-11-14",
+      "verification": "Glossário primário consultado para confirmar diretamente limites <24 dias, >38 dias e duração >8 dias; não autoriza inferir transtorno ovulatório."
+    },
+    {
+      "id": "nichd-menarche",
+      "title": "NICHD — About Menstruation",
+      "url": "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo",
+      "locator": "What is menstruation?: menarche, first period",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "owh-cycle-puberty",
+      "title": "HHS Office on Women’s Health — Your menstrual cycle",
+      "url": "https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle",
+      "locator": "Abertura e What is the menstrual cycle?; When does a girl usually get her first period?: início de desenvolvimento mamário",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "rbem-coitarca",
+      "title": "Comportamento sexual de estudantes de um curso de medicina do Rio de Janeiro — pesquisa original",
+      "url": "https://www.scielo.br/j/rbem/a/TqGzqJzFwv3C9c3nMW5CpYK/?lang=pt",
+      "locator": "Métodos > Medidas: definição operacional de coitarca como primeira relação sexual; apenas terminologia, sem extrapolar resultados da amostra",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "who-menopause",
+      "title": "WHO — Menopause",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/menopause/",
+      "locator": "Understanding menopause: 12 meses consecutivos sem menstruação, sem outra causa evidente nem intervenção clínica",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "ms-climaterio",
+      "title": "Ministério da Saúde — Menopausa e climatério",
+      "url": "https://bvsms.saude.gov.br/menopausa-e-climaterio/",
+      "locator": "Abertura: distinção entre última menstruação e fase de transição reprodutiva",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nidcd-anosmia",
+      "title": "NIDCD — Smell Disorders: Anosmia",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "locator": "What are the smell disorders?: Anosmia, Hyposmia e Parosmia",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nhs-halitose",
+      "title": "NHS — Bad breath",
+      "url": "https://www.nhs.uk/symptoms/bad-breath/",
+      "locator": "Abertura: bad breath / halitosis; não usar lista de causas para diagnosticar as histórias",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "niddk-flatulence",
+      "title": "NIDDK — Symptoms & Causes of Gas in the Digestive Tract",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract/symptoms-causes",
+      "locator": "What are the symptoms of gas? > Passing gas: via anal, excesso percebido e incômodo; contagens não usadas como limiar patológico",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "ics-iuga-dysuria",
+      "title": "ICS/IUGA — Joint report on the terminology for obstetric pelvic floor disorders",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9834366/",
+      "locator": "Voiding symptoms > Dysuria, §1.2.2.7; somente definição descritiva, sem atribuir contexto obstétrico às histórias",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nhs-palpitations",
+      "title": "NHS — Heart palpitations",
+      "url": "https://www.nhs.uk/symptoms/heart-palpitations/",
+      "locator": "Abertura; What heart palpitations feel like: percepção, rapidez/irregularidade; não equivale a diagnóstico de arritmia",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nimh-anxiety-symptom",
+      "title": "NIMH — Anxiety Disorders: What is anxiety?",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+      "locator": "What is anxiety?: apreensão ocasional pode ocorrer na vida normal; não basta para transtorno de ansiedade",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "mesh-sweating",
+      "title": "NLM MeSH — Sweating (D013546)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013546",
+      "locator": "Scope Note: processo de secreção exócrina das glândulas sudoríparas.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-pruritus",
+      "title": "NLM MeSH — Pruritus (D011537)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011537",
+      "locator": "Scope Note: sensação de coceira que provoca vontade de esfregar ou arranhar a pele.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-fatigue",
+      "title": "NLM MeSH — Fatigue (D005221)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005221",
+      "locator": "Scope Note do descritor Fatigue.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-scotoma",
+      "title": "NLM MeSH — Scotoma (D012607)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D012607",
+      "locator": "Scope Note: defeito localizado do campo visual cercado por área de visão normal.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-blindness",
+      "title": "NLM MeSH — Blindness / Amaurosis (D001766)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D001766",
+      "locator": "Scope Note e Entry Terms: perda/ausência de percepção visual; Amaurosis listado como Entry Term.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-sneezing",
+      "title": "NLM MeSH — Sneezing (D012912)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D012912",
+      "locator": "Scope Note: expulsão involuntária, súbita e vigorosa de ar pelo nariz e boca.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-nasal-obstruction",
+      "title": "NLM MeSH — Nasal Obstruction (D015508)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D015508",
+      "locator": "Scope Note: impedimento à passagem de ar para dentro e fora do nariz.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-rhinorrhea",
+      "title": "NLM MeSH — Rhinorrhea (D000086722)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D000086722",
+      "locator": "Scope Note: excesso de secreção nasal.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-anosmia",
+      "title": "NLM MeSH — Anosmia / Hyposmia (D000086582)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D000086582",
+      "locator": "Scope Note de Anosmia; conceito relacionado Hyposmia.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-visual-acuity-next01",
+      "title": "NLM MeSH D014792 — Visual Acuity",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D014792",
+      "locator": "Scope Note: clareza, nitidez e capacidade de distinguir detalhes finos; o autorrelato não recebe pontuação de exame.",
+      "accessed": "2026-11-15",
+      "verification": "Registro primário consultado nesta continuação; usado para definição funcional."
+    },
+    {
+      "id": "moorfields-epiphora-next01",
+      "title": "Moorfields Eye Hospital NHS — Epiphora (watering eye)",
+      "url": "https://www.moorfields.nhs.uk/eye-conditions/epiphora-watering-eye",
+      "locator": "What is watering eye? / How tears work: excesso de lágrimas e transbordamento; causas e tratamentos não aplicados às histórias.",
+      "accessed": "2026-11-15",
+      "verification": "Fonte institucional consultada nesta continuação; descrição de lacrimejamento, sem inferir mecanismo."
+    },
+    {
+      "id": "haruna-xanthopsia-2020-next01",
+      "title": "Haruna et al., 2020 — Xanthopsia Due to Digoxin Toxicity as a Cause of Traffic Accidents: A Case Report",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7440749/",
+      "locator": "Abstract > Background: Xanthopsia (yellow vision); DOI 10.12659/AJCR.924025. Somente equivalência terminológica; história, medicamentos, eventos e causa do caso publicado não foram transpostos.",
+      "accessed": "2026-11-15",
+      "verification": "Relato primário consultado diretamente; usado apenas para confirmar o termo yellow vision, sem generalizar etiologia."
+    },
+    {
+      "id": "nidcd-hearing-function-next01",
+      "title": "NIDCD — What the Numbers Mean: An Epidemiological Perspective on Hearing",
+      "url": "https://www.nidcd.nih.gov/health/statistics/what-numbers-mean-epidemiological-perspective-hearing",
+      "locator": "Abertura: detecção de sons e interpretação de fala; Measuring Hearing Loss: distinguir autorrelato e avaliação auditiva. Nenhum limiar numérico aplicado às histórias.",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária institucional consultada diretamente; apoio para função auditiva e limites do autorrelato, sem atribuir etiologia."
+    }
+  ],
+  "generation": {
+    "model": "unknown",
+    "modelRequested": "gpt6luna",
+    "executionVersion": "unknown",
+    "promptVersion": "interrogatorio-next-01",
+    "date": "2026-11-15",
+    "metadataBasis": "Modelo solicitado pelo usuário; versão de execução indisponível.",
+    "authorship": "synthetic-patient-voice"
+  },
+  "review": {
+    "status": "model-reviewed",
+    "clinicalApproval": false,
+    "independentReport": "content/reviews/interrogatorio-batch-003.json",
+    "reportSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+    "findings": [
+      {
+        "id": "B003-01",
+        "severity": "non-blocking-terminology-caution",
+        "scope": "source-versus-general-definition",
+        "itemIds": [
+          "ic-elementos-gerais-febre-prurido-story-01",
+          "ic-elementos-gerais-febre-prurido-story-02",
+          "ic-elementos-gerais-febre-prurido-story-03",
+          "ic-elementos-gerais-febre-prurido-story-04",
+          "ic-elementos-gerais-febre-prurido-story-05"
+        ],
+        "issue": "MeSH/DeCS (D011537) descrevem Prurido como sensação de coceira intensa que leva a friccionar ou coçar a pele para obter alívio; a apostila diz apenas “coceira” (p.1) e “Coceira; sensação desagradável na pele que evoca o desejo de coçar” (p.6). A classificação aqui é descritiva e fonte-específica: não certifica intensidade, causa, dermatose, doença sistêmica nem febre.",
+        "resolution": "Accept source-based descriptive recognition. Intensity, cause and any underlying condition remain unestablished.",
+        "referenceIds": [
+          "mesh-pruritus",
+          "decs-prurido"
+        ],
+        "hold": false,
+        "requiredStoryChange": null
+      },
+      {
+        "id": "B003-02",
+        "severity": "non-blocking-source-context-caution",
+        "scope": "documentary-heading",
+        "itemIds": [
+          "ic-elementos-gerais-febre-prurido-story-01",
+          "ic-elementos-gerais-febre-prurido-story-02",
+          "ic-elementos-gerais-febre-prurido-story-03",
+          "ic-elementos-gerais-febre-prurido-story-04",
+          "ic-elementos-gerais-febre-prurido-story-05"
+        ],
+        "issue": "FEBRE: is the printed subgroup of the general Prurido entry and PELE the printed group of the cutaneous entry; neither is a clinical conclusion about fever or skin disease.",
+        "evidence": [
+          {
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+            },
+            "quote": "Prurido: coceira"
+          },
+          {
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 6,
+              "locator": "PELE > Prurido"
+            },
+            "quote": "Prurido: Coceira; sensação desagradável na pele que evoca o desejo de coçar."
+          }
+        ],
+        "resolution": "Keep both literal source mappings and distinguish them from a fever or dermatological diagnosis.",
+        "hold": false,
+        "requiredStoryChange": null
+      },
+      {
+        "id": "B003-03",
+        "severity": "non-blocking-answer-completeness-note",
+        "scope": "same-term-context-not-accepted",
+        "itemIds": [
+          "ic-elementos-gerais-febre-prurido-story-01",
+          "ic-elementos-gerais-febre-prurido-story-02",
+          "ic-elementos-gerais-febre-prurido-story-03",
+          "ic-elementos-gerais-febre-prurido-story-04",
+          "ic-elementos-gerais-febre-prurido-story-05"
+        ],
+        "issue": "The inventory has a third Prurido context (APARELHO GENITAL FEMININO: “coceira, geralmente na vulva ou na vagina.”) that the stories do not accept.",
+        "resolution": "Reviewer agrees with the omission: no utterance states a genital location, so that path is not equally supported. A teaching reviewer may still want to confirm that a student choosing APARELHO GENITAL FEMININO for non-genital itch should be scored as incorrect.",
+        "hold": false,
+        "requiredStoryChange": null
+      },
+      {
+        "id": "B003-04",
+        "severity": "non-blocking-editorial-note",
+        "scope": "difficulty-and-style",
+        "itemIds": [
+          "ic-elementos-gerais-febre-prurido-story-01",
+          "ic-elementos-gerais-febre-prurido-story-02",
+          "ic-elementos-gerais-febre-prurido-story-03",
+          "ic-elementos-gerais-febre-prurido-story-04",
+          "ic-elementos-gerais-febre-prurido-story-05"
+        ],
+        "issue": "All five utterances use the lay word “coceira”, which is also the literal source description, so the term stage is easy; the technical term Prurido itself never appears. All five are single sentences and share the same stock story-level rationale.",
+        "resolution": "Within the stated rules (lay speech, 1–2 paragraphs, technical term not given away). Recorded as an editorial observation only; no change required for the prototype.",
+        "hold": false,
+        "requiredStoryChange": null
+      },
+      {
+        "id": "B003-05",
+        "severity": "non-blocking-reference-metadata-note",
+        "scope": "batch-clinical-reference-locator",
+        "itemIds": [
+          "ic-elementos-gerais-febre-prurido-story-01",
+          "ic-elementos-gerais-febre-prurido-story-02",
+          "ic-elementos-gerais-febre-prurido-story-03",
+          "ic-elementos-gerais-febre-prurido-story-04",
+          "ic-elementos-gerais-febre-prurido-story-05"
+        ],
+        "issue": "The batch reference mesh-pruritus paraphrases the Scope Note as “sensação de coceira que provoca vontade de esfregar ou arranhar a pele”; the record opened in this review reads “An intense itching sensation that produces the urge to rub or scratch the skin to obtain relief.” The paraphrase drops “intense” and “to obtain relief”.",
+        "resolution": "Does not change the source-based mapping. Reviewer could not edit the batch; a future metadata repair may quote the Scope Note exactly.",
+        "referenceIds": [
+          "mesh-pruritus"
+        ],
+        "hold": false,
+        "requiredStoryChange": null
+      }
+    ],
+    "reviewerClinicalSources": [
+      {
+        "id": "mesh-pruritus",
+        "title": "NLM MeSH — Pruritus, D011537",
+        "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011537",
+        "institution": "U.S. National Library of Medicine / NIH",
+        "accessed": "2026-11-15",
+        "verification": "Opened in this review with the session web-fetch tool; heading, Unique ID, Scope Note and Entry Terms returned.",
+        "locator": "Scope Note; Unique ID; Entry Terms",
+        "exactQuote": "An intense itching sensation that produces the urge to rub or scratch the skin to obtain relief.",
+        "claim": "Prurido é a sensação de coceira que leva a esfregar ou coçar a pele; Itching é termo de entrada.",
+        "limitation": "O Scope Note fala em coceira intensa; a apostila não exige intensidade. Não sustenta causa nem diagnóstico.",
+        "externalDescriptorId": "D011537"
+      },
+      {
+        "id": "decs-prurido",
+        "title": "DeCS/MeSH (BIREME/OPAS/OMS) — Prurido, ID DeCS 11976",
+        "url": "https://decs.bvsalud.org/ths/resource/?id=11976&filter=ths_termall&q=prurido",
+        "institution": "BIREME / OPAS / OMS",
+        "accessed": "2026-11-15",
+        "verification": "Search page (https://decs.bvsalud.org/ths/?filter=ths_termall&q=prurido) and descriptor page opened in this review with the session web-fetch tool.",
+        "locator": "Descritor em português; Nota de escopo; Termo(s) alternativo(s)",
+        "exactQuote": "Sensação de coceira intensa que produz a necessidade de friccionar ou coçar a pele para obter alívio.",
+        "claim": "Em português, o descritor é Prurido e “Coceira” é termo alternativo: a palavra leiga das falas corresponde ao termo técnico.",
+        "limitation": "Equivalência terminológica; não certifica intensidade, causa ou doença nas cinco falas.",
+        "externalDescriptorId": "D011537",
+        "externalDecsId": "11976"
+      },
+      {
+        "id": "mesh-paresthesia",
+        "title": "NLM MeSH — Paresthesia, D010292",
+        "url": "https://meshb.nlm.nih.gov/record/ui?ui=D010292",
+        "institution": "U.S. National Library of Medicine / NIH",
+        "accessed": "2026-11-15",
+        "verification": "Opened in this review with the session web-fetch tool; heading, Unique ID, Scope Note and Entry Terms returned.",
+        "locator": "Scope Note; Entry Terms",
+        "exactQuote": "Subjective cutaneous sensations (e.g., cold, warmth, tingling, pressure, etc.) that are experienced spontaneously in the absence of stimulation.",
+        "claim": "Parestesia é descritor distinto de Prurido; coceira não figura entre os exemplos nem entre os termos de entrada.",
+        "limitation": "Usado apenas para descartar sobreposição com APARELHO NEUROLÓGICO > Parestesias; não é definição da apostila.",
+        "externalDescriptorId": "D010292"
+      }
+    ]
+  },
+  "release": {
+    "id": "interrogatorio-batch-003",
+    "prototype": true,
+    "clinicalApproval": false,
+    "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "sourceInventorySha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+    "reviewFile": "content/reviews/interrogatorio-batch-003.json",
+    "reviewSha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+    "notice": "Protótipo revisado por modelo; revisão docente/clínica pendente."
+  },
+  "coverage": {
+    "reviewedTotal": 5,
+    "actualTotal": 5,
+    "withheld": []
+  }
+}
