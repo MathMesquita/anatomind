@@ -7,18 +7,19 @@ import { adaptInterviewRelease, sameInterviewIds, validateInterviewDecision } fr
 const hash = (value) => createHash("sha256").update(value).digest("hex")
 const check = (condition, message) => { if (!condition) throw new Error(message) }
 
-/** Freeze only this independently reviewed five-question slice. No file writes. */
+/** Freeze only this independently reviewed slice of 1–20 consecutive stories. No file writes. */
 export function prepareInterviewBatch(baseBytes, batchBytes, reportBytes, { reviewFile } = {}) {
   const base = JSON.parse(baseBytes), batch = JSON.parse(batchBytes), report = JSON.parse(reportBytes)
   check(report.status === "completed-independent-review" && report.clinicalApproval === false, "Completed independent non-clinical review required")
   check(report.input?.sha256 === hash(batchBytes) && report.input.byteLength === batchBytes.length, "Source batch fingerprint differs")
   check(batch.baseSha256 === hash(baseBytes) && report.input.baseInventory?.sha256 === hash(baseBytes), "Source inventory fingerprint differs")
   const selection = report.input.selection
-  check(Number.isInteger(selection?.startIndexInclusive) && selection.startIndexInclusive >= 0 && selection.endIndexExclusive === selection.startIndexInclusive + 5, "Review must cover exactly five consecutive stories")
+  check(Number.isInteger(selection?.startIndexInclusive) && selection.startIndexInclusive >= 0 && Number.isInteger(selection.endIndexExclusive) && selection.endIndexExclusive > selection.startIndexInclusive && selection.endIndexExclusive - selection.startIndexInclusive <= 20, "Review must cover 1 to 20 consecutive stories")
+  const size = selection.endIndexExclusive - selection.startIndexInclusive
   const selected = batch.stories.slice(selection.startIndexInclusive, selection.endIndexExclusive)
   const ids = selected.map((story) => story.id)
-  check(ids.length === 5 && report.items?.length === 5 && sameInterviewIds(ids, selection.orderedStoryIds) && sameInterviewIds(ids, report.reviewedStoryIds) && sameInterviewIds(ids, report.items.map((item) => item.id)), "Five-story coverage differs")
-  check(report.counts?.stories === 5 && report.counts.read === 5 && report.counts.semanticallyReviewed === 5, "Incomplete five-story review counts")
+  check(ids.length === size && report.items?.length === size && sameInterviewIds(ids, selection.orderedStoryIds) && sameInterviewIds(ids, report.reviewedStoryIds) && sameInterviewIds(ids, report.items.map((item) => item.id)), "Story coverage differs")
+  check(report.counts?.stories === size && report.counts.read === size && report.counts.semanticallyReviewed === size, "Incomplete review counts")
   const contexts = new Map(base.contexts.map((context) => [context.id, context]))
   const decisions = new Map(report.items.map((item) => [item.id, item]))
   const stories = [], withheld = []
@@ -63,7 +64,7 @@ export function prepareInterviewBatch(baseBytes, batchBytes, reportBytes, { revi
     answerPolicy: base.answerPolicy, clinicalReferences: [...references.values()], generation: batch.generation,
     review: { status: "model-reviewed", clinicalApproval: false, independentReport: reviewFile, reportSha256: hash(reportBytes), findings: report.findings, reviewerClinicalSources: report.reviewerClinicalSources },
     release: { id: report.reviewId, prototype: true, clinicalApproval: false, sourceBatchSha256: hash(batchBytes), sourceInventorySha256: hash(baseBytes), reviewFile, reviewSha256: hash(reportBytes), notice: "Protótipo revisado por modelo; revisão docente/clínica pendente." },
-    coverage: { reviewedTotal: 5, actualTotal: stories.length, withheld },
+    coverage: { reviewedTotal: size, actualTotal: stories.length, withheld },
   }
   adaptInterviewRelease(result)
   return result
