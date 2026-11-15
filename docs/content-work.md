@@ -21,7 +21,7 @@ The saved draft contains 14 source groups and a larger researched disease catalo
 
 ### Symptom characteristics
 
-Generation reached 220 draft stories: 20 for each of 11 source groups. This does **not** mean 220 approved or playable questions. Independent semantic review is in progress. String-matching evidence and structural validation cannot decide whether a story actually documents a characteristic.
+Generation reached 220 draft stories: 20 for each of 11 source groups. This does **not** mean 220 approved or playable questions. The first independent semantic review read all 220 stories and 1,800 field decisions: 160 received model-reviewed status; 60 need revision, including 42 on hold. Corrections and their independent recheck are still required. The exact reviewed snapshot and all findings are preserved in `docs/reviews/caracteres-v1.json`. String-matching evidence and structural validation cannot decide whether a story actually documents a characteristic.
 
 - Resolve per-story review findings and verify every complete checklist, evidence span, and missing-data set. Keep zero/one/multiple omissions and explicit none.
 - Normalize display wording without losing the source checklist. Do not teach questionable source claims as medical facts.
