@@ -1,0 +1,46 @@
+# Content work ledger
+
+This ledger separates shipped behavior from unfinished educational production. Run `node tools/content-status.mjs` for counts recomputed from the files and `node tools/validate-content.mjs` for structural checks. Neither establishes medical accuracy or clinical approval.
+
+## Shipped prototype
+
+- Three offline subject libraries and the agreed study/feedback flows, with fixed bottom actions.
+- Persistent, actual-display-only question and alternative exposure history. Unseen eligible items are drawn first, then less-shown and less-recent items receive higher probability. Required answers and medical eligibility override novelty.
+- Frozen numbered-region release: 71 verified targets, 50 answer regions, five original image windows, 10 distinct regions per round. All target coordinates are checked against the independent audit and the original image fingerprints. Five source legend regions have no usable numbered target. Review is by model, not a teacher or clinician.
+- Disease-round sampling supports hidden variable 2–5 positives among 20 distinct choices, known overlapping memberships, and negative totals. The live Anamnese activities still use the explicitly labeled starter examples.
+
+## In progress, not playable content
+
+### Personal medical history
+
+The saved draft contains 14 source groups and a larger researched disease catalog. Some added or repaired records were checked by the same model that wrote the repair, which is not an independent second pass. Conditional memberships, unresolved cross-category associations, and curricular decisions must remain visible. Unresolved membership is not proof that a disease is a valid negative distractor.
+
+- Finish evidence-supported coverage, allowing honest shortfalls rather than duplicate diagnoses or variants invented to reach 20.
+- Independently recheck additions and repairs, including all applicable overlaps and safe negative pools.
+- Freeze an explicitly reviewed prototype release, then add an app adapter and full feedback provenance; do not import mutable drafts.
+
+### Symptom characteristics
+
+Generation reached 220 draft stories: 20 for each of 11 source groups. This does **not** mean 220 approved or playable questions. Independent semantic review is in progress. String-matching evidence and structural validation cannot decide whether a story actually documents a characteristic.
+
+- Resolve per-story review findings and verify every complete checklist, evidence span, and missing-data set. Keep zero/one/multiple omissions and explicit none.
+- Normalize display wording without losing the source checklist. Do not teach questionable source claims as medical facts.
+- Integrate group-specific checklists, bounded rounds, source-linked explanations, and provenance into the existing hidden-story/timer flow after freezing a reviewed release.
+
+### Complementary interrogation
+
+The source inventory preserves 204 term/group contexts and their original descriptions. The original target remains 10 patient stories per context (2,040), even when an editorial eligibility decision temporarily reduces the active target. The earlier independent report covered only the initial 80 stories; it does not automatically approve later revisions or additions.
+
+- Generate remaining contexts in traceable batches; preserve all source descriptions and explain every exclusion or hold.
+- Do not exclude a valid history milestone simply because it is normal rather than a symptom.
+- Independently review each new batch for natural patient speech, semantic correctness, coherent accepted paths, alternative-context partial credit, and source-supported ambiguity.
+- Integrate only the frozen reviewed set, with three four-choice stages, explicit no-subgroup, context explanations, and complete feedback debug.
+
+## Release checks still required
+
+1. Structural validation and exact source/provenance checks for the frozen set.
+2. Independent model review of the actual released text and answer mappings, with unresolved findings withheld.
+3. App integration and automated/browser tests for all new groups, checklists, accepted paths, distractors, scoring, progress, offline loading, and exposure history.
+4. Qualified clinical/editorial review and redistribution-rights verification before representing content as approved educational material.
+
+Flutter remains deferred. Existing native-app work is separate and is not included in these web/content commits.

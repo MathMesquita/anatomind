@@ -28,6 +28,12 @@ jobs:
 
       - run: npm ci
 
+      - run: npm test
+      - run: npm run lint
+
+      - name: Validate frozen prototype content
+        run: node tools/validate-content.mjs content/releases/regioes.v1.json
+
       # The plate corpus is committed, not generated here: building it needs the
       # 59 MB source PDF, which the repo does not carry.
       - name: Check the atlas corpus is present

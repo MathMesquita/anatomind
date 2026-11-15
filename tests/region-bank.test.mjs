@@ -1,10 +1,31 @@
 import { test } from "node:test"
 import assert from "node:assert/strict"
+import { readFileSync } from "node:fs"
+import { createHash } from "node:crypto"
 import { regionCoverage, regionQuestions, regionViews } from "../src/data/regions.ts"
 import { buildRegionRound } from "../src/lib/region-round.ts"
 import { emptyExposure } from "../src/lib/sampling.ts"
 
 const rng = (seed = 321) => () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296 }
+
+test("original region images and every released coordinate match the independent audit", () => {
+  const review = JSON.parse(readFileSync(new URL("../docs/reviews/regioes-v1.json", import.meta.url), "utf8"))
+  for (const asset of review.input.images.filter((asset) => asset.path.startsWith("public/"))) {
+    const bytes = readFileSync(new URL(`../${asset.path}`, import.meta.url))
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), asset.sha256, asset.path)
+  }
+  assert.equal(review.items.filter((item) => item.action !== "excluded").length, regionQuestions.length)
+  for (const question of regionQuestions) {
+    const item = review.items.find((item) => item.id === question.bankId)
+    assert.ok(item, question.bankId)
+    assert.notEqual(item.action, "excluded")
+    assert.equal(item.answerRegionId, question.regionId)
+    assert.equal(item.view, question.view)
+    assert.equal(item.number, question.number)
+    assert.deepEqual(item.newMarker, { x: question.x, y: question.y })
+    assert.deepEqual(item.numeralAnchorPixel, question.review.pixelEvidence.numeralAnchor)
+  }
+})
 
 test("the frozen region release contains 71 reviewed targets and 50 distinct answer regions", () => {
   assert.equal(regionQuestions.length, 71)

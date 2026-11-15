@@ -17,7 +17,10 @@ Check actual coverage rather than assuming targets have been met:
 
 ```sh
 node tools/validate-content.mjs
+node tools/content-status.mjs
 ```
+
+The status command recomputes counts from actual records, includes a SHA-256 checkpoint, and keeps the full original interrogation target visible even when contexts are withheld. Review counts are explicitly declared metadata, not independently established approval; self-reviewed repairs remain distinguishable. Generation, independent review, playable releases, and clinical approval are different milestones. Neither command promotes content into the app.
 
 The validator checks source locators, IDs, exact story evidence spans, missing-field agreement, coherent reference mappings, image-marker coordinates, duplicate text, and coverage shortfalls. It cannot verify clinical claims, source fidelity, naturalness, visual accuracy, or whether a cited page genuinely supports a claim. Its output always separates structural success from clinical approval.
 
