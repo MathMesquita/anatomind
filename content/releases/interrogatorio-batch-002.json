@@ -1,0 +1,1330 @@
+{
+  "schemaVersion": 1,
+  "topic": "interrogatorio",
+  "sourceDocuments": [
+    {
+      "id": "interrogatorio-complementar-2026",
+      "filename": "Interrogatorio complementar.pdf",
+      "pages": 12,
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de"
+    }
+  ],
+  "contexts": [
+    {
+      "id": "ic-elementos-gerais-febre-sudorese",
+      "term": "Sudorese",
+      "group": "ELEMENTOS GERAIS",
+      "subgroup": "FEBRE:",
+      "originalDescription": "suor excessivo",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "ELEMENTOS GERAIS",
+        "subgroup": "FEBRE:",
+        "term": "Sudorese"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos.",
+        "FEBRE e ALTERAÇÕES DE PESO são títulos efetivamente impressos; pertencimento documental não afirma febre, mudança de peso ou nexo causal."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-06",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-002.json",
+          "reportSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+          "reviewId": "interrogatorio-batch-002",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "GPT-6",
+            "executionIdentity": "unknown",
+            "exactModelVersion": "unknown",
+            "runId": "unknown",
+            "role": "independent model reviewer; not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Continuation of batch-001 review, not a newly spawned context.",
+            "researchSkill": {
+              "path": "/Users/math/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.2/skills/engineering/research/SKILL.md",
+              "readInFull": "Earlier in this conversation; reused as requested.",
+              "limitation": "No background-agent spawning tool exposed. Direct independent review; no second delegated reviewer claimed."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-sudorese-story-06",
+            "stableId": "ic-elementos-gerais-febre-sudorese-story-06",
+            "contextId": "ic-elementos-gerais-febre-sudorese",
+            "sourceArrayIndex": 5,
+            "sourceOrdinal": 6,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria.",
+            "textSha256": "c560fd2bac38b2b599d9a91696d6691f4f4abba0aafe14daf8eb1d710b9fe2f3",
+            "storyObjectSha256": "86ad7166810f074b518bf459d7245eb752a036f28d1ed587a0276675ce17687a",
+            "rawStorySha256": "8e6849ba7061d077c8ddf2e582a43ba7cf0b0c86cc0f2d5248094f8a962c42a4",
+            "rawStoryByteLength": 2250,
+            "acceptedTermIds": [
+              "sudorese"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-sudorese"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-sudorese",
+                "termId": "sudorese",
+                "term": "Sudorese",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Sudorese"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "suor excessivo",
+                "sourceExactLine": "Sudorese: suor excessivo",
+                "sourceVerification": "PDF p.1 read as text and visually in batch-001 in this conversation; identical source hash rechecked for batch-002.",
+                "evidenceQuote": "a camiseta está encharcada de suor, mais do que eu esperaria",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "A apostila usa Sudorese para suor excessivo; MeSH Sweating descreve secreção de suor sem exigir excesso. A classificação aqui é descritiva e fonte-específica; não certifica excesso patológico, hiperidrose primária, febre ou causa.",
+                "referenceIds": [
+                  "mesh-sweating",
+                  "mesh-hyperhidrosis"
+                ],
+                "rationale": "A camiseta está encharcada e a pessoa explicita que a quantidade supera sua expectativa após arrumar a mesa. Isso sustenta suor percebido como excessivo. A fala não quantifica esforço, calor ambiente ou causa.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "A camiseta está encharcada e a pessoa explicita que a quantidade supera sua expectativa após arrumar a mesa. Isso sustenta suor percebido como excessivo. A fala não quantifica esforço, calor ambiente ou causa.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: is the actual source placement, not evidence of fever.",
+              "clinicalMeaning": "Subjectively reported sweat and quantity/impact; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Sweating is not itself apprehension, environmental temperature sensitivity, or an anatomically distinct secretion."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-unchanged-base-inventory",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "No additional source-supported coherent path or partial-credit subgroup identified. Sudorese has a single context in the base inventory."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B002-01",
+              "B002-02"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-07",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-002.json",
+          "reportSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+          "reviewId": "interrogatorio-batch-002",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "GPT-6",
+            "executionIdentity": "unknown",
+            "exactModelVersion": "unknown",
+            "runId": "unknown",
+            "role": "independent model reviewer; not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Continuation of batch-001 review, not a newly spawned context.",
+            "researchSkill": {
+              "path": "/Users/math/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.2/skills/engineering/research/SKILL.md",
+              "readInFull": "Earlier in this conversation; reused as requested.",
+              "limitation": "No background-agent spawning tool exposed. Direct independent review; no second delegated reviewer claimed."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-sudorese-story-07",
+            "stableId": "ic-elementos-gerais-febre-sudorese-story-07",
+            "contextId": "ic-elementos-gerais-febre-sudorese",
+            "sourceArrayIndex": 6,
+            "sourceOrdinal": 7,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos.",
+            "textSha256": "f1daec1d140e110771ccc0146f874fb1ec8070e3c34126cffe75f5d9d4b41d73",
+            "storyObjectSha256": "6c6740898f375b0666a1717879266b4e40d3487ae9c27f0706a2a907137f1b2e",
+            "rawStorySha256": "46ab99c27462f07dbd22a81f0e338c7c7e133306b0b79734f54d60f9289c4ac4",
+            "rawStoryByteLength": 2220,
+            "acceptedTermIds": [
+              "sudorese"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-sudorese"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-sudorese",
+                "termId": "sudorese",
+                "term": "Sudorese",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Sudorese"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "suor excessivo",
+                "sourceExactLine": "Sudorese: suor excessivo",
+                "sourceVerification": "PDF p.1 read as text and visually in batch-001 in this conversation; identical source hash rechecked for batch-002.",
+                "evidenceQuote": "tenho notado suor em excesso no rosto",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "A apostila usa Sudorese para suor excessivo; MeSH Sweating descreve secreção de suor sem exigir excesso. A classificação aqui é descritiva e fonte-específica; não certifica excesso patológico, hiperidrose primária, febre ou causa.",
+                "referenceIds": [
+                  "mesh-sweating",
+                  "mesh-hyperhidrosis"
+                ],
+                "rationale": "“Suor em excesso no rosto” identifica manifestação, quantidade percebida e localização. “Até em momentos tranquilos” é contexto autorreferido; não confirma nem exclui ansiedade como condição clínica.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "“Suor em excesso no rosto” identifica manifestação, quantidade percebida e localização. “Até em momentos tranquilos” é contexto autorreferido; não confirma nem exclui ansiedade como condição clínica.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: is the actual source placement, not evidence of fever.",
+              "clinicalMeaning": "Subjectively reported sweat and quantity/impact; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Sweating is not itself apprehension, environmental temperature sensitivity, or an anatomically distinct secretion."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-unchanged-base-inventory",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "No additional source-supported coherent path or partial-credit subgroup identified. Sudorese has a single context in the base inventory."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B002-01",
+              "B002-02"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-08",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Saio do banho e, pouco depois, já estou com suor acumulado no peito.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-002.json",
+          "reportSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+          "reviewId": "interrogatorio-batch-002",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "GPT-6",
+            "executionIdentity": "unknown",
+            "exactModelVersion": "unknown",
+            "runId": "unknown",
+            "role": "independent model reviewer; not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Continuation of batch-001 review, not a newly spawned context.",
+            "researchSkill": {
+              "path": "/Users/math/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.2/skills/engineering/research/SKILL.md",
+              "readInFull": "Earlier in this conversation; reused as requested.",
+              "limitation": "No background-agent spawning tool exposed. Direct independent review; no second delegated reviewer claimed."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-sudorese-story-08",
+            "stableId": "ic-elementos-gerais-febre-sudorese-story-08",
+            "contextId": "ic-elementos-gerais-febre-sudorese",
+            "sourceArrayIndex": 7,
+            "sourceOrdinal": 8,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Saio do banho e, pouco depois, já estou com suor acumulado no peito.",
+            "textSha256": "fa6ae480fc63a8ff9368bb7276f6421bce3cb0d3af44854b912071c13c552d02",
+            "storyObjectSha256": "9df336a863abb9c19463378db471e04190051f1a01d800692ddbda8c24e86afa",
+            "rawStorySha256": "b50373bf392e5444f77644195cba9290cb8165210697ad60f1cba39f58689638",
+            "rawStoryByteLength": 2169,
+            "acceptedTermIds": [
+              "sudorese"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-sudorese"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-sudorese",
+                "termId": "sudorese",
+                "term": "Sudorese",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Sudorese"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "suor excessivo",
+                "sourceExactLine": "Sudorese: suor excessivo",
+                "sourceVerification": "PDF p.1 read as text and visually in batch-001 in this conversation; identical source hash rechecked for batch-002.",
+                "evidenceQuote": "já estou com suor acumulado no peito",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "A apostila usa Sudorese para suor excessivo; MeSH Sweating descreve secreção de suor sem exigir excesso. A classificação aqui é descritiva e fonte-específica; não certifica excesso patológico, hiperidrose primária, febre ou causa.",
+                "referenceIds": [
+                  "mesh-sweating",
+                  "mesh-hyperhidrosis"
+                ],
+                "rationale": "A pessoa identifica expressamente suor acumulado no peito pouco depois do banho. É evidência descritiva de sudorese, com acúmulo percebido compatível com o alvo da apostila. Não se afirma que tenha se enxugado, que a pele estivesse seca, que o banho fosse quente, que haja dor torácica ou saída de líquido pelo mamilo. O excesso patológico não está demonstrado.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "A pessoa identifica expressamente suor acumulado no peito pouco depois do banho. É evidência descritiva de sudorese, com acúmulo percebido compatível com o alvo da apostila. Não se afirma que tenha se enxugado, que a pele estivesse seca, que o banho fosse quente, que haja dor torácica ou saída de líquido pelo mamilo. O excesso patológico não está demonstrado.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: is the actual source placement, not evidence of fever.",
+              "clinicalMeaning": "Subjectively reported sweat and quantity/impact; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Explicit sweat on the chest is not chest pain/pressure/discomfort or fluid discharged through a nipple. Bath temperature, drying and skin dryness are not stated."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-unchanged-base-inventory",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "No additional source-supported coherent path or partial-credit subgroup identified. Sudorese has a single context in the base inventory."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B002-01",
+              "B002-02"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Saio do banho e, pouco depois, já estou com suor acumulado no peito.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Saio do banho e, pouco depois, já estou com suor acumulado no peito."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-09",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-002.json",
+          "reportSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+          "reviewId": "interrogatorio-batch-002",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "GPT-6",
+            "executionIdentity": "unknown",
+            "exactModelVersion": "unknown",
+            "runId": "unknown",
+            "role": "independent model reviewer; not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Continuation of batch-001 review, not a newly spawned context.",
+            "researchSkill": {
+              "path": "/Users/math/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.2/skills/engineering/research/SKILL.md",
+              "readInFull": "Earlier in this conversation; reused as requested.",
+              "limitation": "No background-agent spawning tool exposed. Direct independent review; no second delegated reviewer claimed."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-sudorese-story-09",
+            "stableId": "ic-elementos-gerais-febre-sudorese-story-09",
+            "contextId": "ic-elementos-gerais-febre-sudorese",
+            "sourceArrayIndex": 8,
+            "sourceOrdinal": 9,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo.",
+            "textSha256": "15c0e9a96a49c85349cb156b63ed51d6d78e526705ae55649167974629e226e1",
+            "storyObjectSha256": "c544e7aec55d9fd69890cf12da6a39f2fd3c1cb4f28f2518e58107c643d73726",
+            "rawStorySha256": "9ba961dcb74e9327c914686d33d9a5051cdf26dd2b71da86553ebbb4f9f33b2f",
+            "rawStoryByteLength": 2190,
+            "acceptedTermIds": [
+              "sudorese"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-sudorese"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-sudorese",
+                "termId": "sudorese",
+                "term": "Sudorese",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Sudorese"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "suor excessivo",
+                "sourceExactLine": "Sudorese: suor excessivo",
+                "sourceVerification": "PDF p.1 read as text and visually in batch-001 in this conversation; identical source hash rechecked for batch-002.",
+                "evidenceQuote": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo.",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "A apostila usa Sudorese para suor excessivo; MeSH Sweating descreve secreção de suor sem exigir excesso. A classificação aqui é descritiva e fonte-específica; não certifica excesso patológico, hiperidrose primária, febre ou causa.",
+                "referenceIds": [
+                  "mesh-sweating",
+                  "mesh-hyperhidrosis"
+                ],
+                "rationale": "Roupa úmida de suor durante reuniões, com pouca movimentação relatada, documenta a manifestação e seu efeito na roupa. Reunião não significa medo ou apreensão; pouca movimentação não prova temperatura amena nem causa do suor.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "Roupa úmida de suor durante reuniões, com pouca movimentação relatada, documenta a manifestação e seu efeito na roupa. Reunião não significa medo ou apreensão; pouca movimentação não prova temperatura amena nem causa do suor.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: is the actual source placement, not evidence of fever.",
+              "clinicalMeaning": "Subjectively reported sweat and quantity/impact; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Sweating is not itself apprehension, environmental temperature sensitivity, or an anatomically distinct secretion."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-unchanged-base-inventory",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "No additional source-supported coherent path or partial-credit subgroup identified. Sudorese has a single context in the base inventory."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B002-01",
+              "B002-02"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-10",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "model-reviewed",
+        "clinicalApproval": false,
+        "clinicalReview": "not-recorded",
+        "priorDraftState": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "independentReview": {
+          "report": "content/reviews/interrogatorio-batch-002.json",
+          "reportSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+          "reviewId": "interrogatorio-batch-002",
+          "reviewer": {
+            "modelFamilyDeclaredBySession": "GPT-6",
+            "executionIdentity": "unknown",
+            "exactModelVersion": "unknown",
+            "runId": "unknown",
+            "role": "independent model reviewer; not clinical approver",
+            "independence": "No authoring or editing of the reviewed stories. Continuation of batch-001 review, not a newly spawned context.",
+            "researchSkill": {
+              "path": "/Users/math/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.2/skills/engineering/research/SKILL.md",
+              "readInFull": "Earlier in this conversation; reused as requested.",
+              "limitation": "No background-agent spawning tool exposed. Direct independent review; no second delegated reviewer claimed."
+            }
+          },
+          "decision": {
+            "id": "ic-elementos-gerais-febre-sudorese-story-10",
+            "stableId": "ic-elementos-gerais-febre-sudorese-story-10",
+            "contextId": "ic-elementos-gerais-febre-sudorese",
+            "sourceArrayIndex": 9,
+            "sourceOrdinal": 10,
+            "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+            "reviewStatus": "completed",
+            "disposition": "model-reviewed",
+            "hold": false,
+            "holdReasons": [],
+            "prototypeEligible": true,
+            "clinicalApproval": false,
+            "releaseAuthorized": false,
+            "reviewedText": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas.",
+            "textSha256": "b7674776f69d9c6c3d2b4bd2661f4a537320a24efacdfb06d0d4fa4dd8009ba6",
+            "storyObjectSha256": "fea5854f641e1625ac2252009c1ffd5d88ecb941784b303af457ca1702e906d8",
+            "rawStorySha256": "a8916cc544133a4549b47efb1b645d6593f118dcbb5001a6cf2a73036d4087f0",
+            "rawStoryByteLength": 2202,
+            "acceptedTermIds": [
+              "sudorese"
+            ],
+            "acceptedContextIds": [
+              "ic-elementos-gerais-febre-sudorese"
+            ],
+            "alternativeContextIds": [],
+            "supportedAcceptedPaths": [
+              {
+                "contextId": "ic-elementos-gerais-febre-sudorese",
+                "termId": "sudorese",
+                "term": "Sudorese",
+                "group": "ELEMENTOS GERAIS",
+                "subgroup": "FEBRE:",
+                "sourceHierarchy": {
+                  "group": "ELEMENTOS GERAIS",
+                  "subgroup": "FEBRE:",
+                  "term": "Sudorese"
+                },
+                "source": {
+                  "documentId": "interrogatorio-complementar-2026",
+                  "page": 1,
+                  "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+                },
+                "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+                "sourceQuote": "suor excessivo",
+                "sourceExactLine": "Sudorese: suor excessivo",
+                "sourceVerification": "PDF p.1 read as text and visually in batch-001 in this conversation; identical source hash rechecked for batch-002.",
+                "evidenceQuote": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas.",
+                "verdict": "supported-for-source-based-term-matching",
+                "definitionBasis": "source-description-with-verified-terminology",
+                "terminologyCaution": "A apostila usa Sudorese para suor excessivo; MeSH Sweating descreve secreção de suor sem exigir excesso. A classificação aqui é descritiva e fonte-específica; não certifica excesso patológico, hiperidrose primária, febre ou causa.",
+                "referenceIds": [
+                  "mesh-sweating",
+                  "mesh-hyperhidrosis"
+                ],
+                "rationale": "A necessidade referida de trocar a blusa por uma marca molhada de suor nas costas documenta impacto e localização. Não se acrescentam frequência de troca, quantidade medida, calor ambiente ou etiologia.",
+                "fullCredit": true,
+                "clinicalEtiologyEstablished": false
+              }
+            ],
+            "supportedAlternativePaths": [],
+            "alternativePathEvidence": [],
+            "reasoning": "A necessidade referida de trocar a blusa por uma marca molhada de suor nas costas documenta impacto e localização. Não se acrescentam frequência de troca, quantidade medida, calor ambiente ou etiologia.",
+            "contextDistinctions": {
+              "printedPlacement": "ELEMENTOS GERAIS > FEBRE: is the actual source placement, not evidence of fever.",
+              "clinicalMeaning": "Subjectively reported sweat and quantity/impact; no etiological diagnosis.",
+              "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+              "otherPaths": "Sweating is not itself apprehension, environmental temperature sensitivity, or an anatomically distinct secretion."
+            },
+            "semanticChecklist": {
+              "termMeaning": "supported-by-patient-report",
+              "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+              "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+              "answerCompleteness": "checked-against-unchanged-base-inventory",
+              "rationale": "supported-with-separate-terminology-caution",
+              "patientVoice": "acceptable",
+              "observerCase": false,
+              "negativesVersusUnknown": "not-mentioned remains unknown"
+            },
+            "alternativeAssessment": {
+              "status": "independently-assessed",
+              "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+              "result": "No additional source-supported coherent path or partial-credit subgroup identified. Sudorese has a single context in the base inventory."
+            },
+            "candidatesForAdjudication": [],
+            "missingOrIncorrectEvidence": [],
+            "findingIds": [
+              "B002-01",
+              "B002-02"
+            ],
+            "blockingFindingIds": [],
+            "stageCandidate": "model-review-complete-no-item-blocker",
+            "provenance": {
+              "authorship": "synthetic-patient-voice",
+              "sourceRefersTo": "definition, not an actual patient or published utterance",
+              "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+              "reviewIndependence": "Reviewer did not author or edit these stories."
+            }
+          }
+        }
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas."
+        }
+      ],
+      "repairHistory": []
+    }
+  ],
+  "answerPolicy": {
+    "mode": "all-source-supported-coherent-paths",
+    "instruction": "Leia a fala e identifique os termos e caminhos da apostila compatíveis com o que foi dito. Pode haver mais de uma resposta plenamente aceita. Os grupos localizam entradas do roteiro; não identificam a causa ou o órgão doente.",
+    "sourceHierarchyMeaning": "group/subgroup e sourceHierarchy preservam exclusivamente a posição impressa. FEBRE não comprova febre, ALTERAÇÕES DE PESO não comprova perda/ganho e o nome de um aparelho não comprova etiologia.",
+    "clinicalSubgroupScoring": "withheld-pending-qualified-review",
+    "fullCredit": "Todos os acceptedContextIds têm o mesmo crédito; contextId é só organização editorial e não desempata respostas.",
+    "partialCredit": "Somente alternativeContextIds com alternativePathEvidence explícita podem representar o mesmo conceito em outro contexto válido. Uma definição igualmente compatível com a fala pertence ao crédito integral; causa presumida, silêncio ou semelhança lexical não dão crédito parcial.",
+    "hintPolicy": "Não usar contextId, source.locator, acceptedPathEvidence ou número de respostas como pistas. Nenhuma alteração de interface faz parte desta reparação.",
+    "syntheticSourceMeaning": "source cita a definição da apostila, não um paciente real ou uma fala publicada.",
+    "eligibility": "O jogo identifica termos técnicos, funções, medidas, achados e marcos da história, inclusive fisiológicos; não exige sintoma anormal. Excluir somente entradas sem conceito identificável e reter definições/formato ainda não resolvidos."
+  },
+  "clinicalReferences": [
+    {
+      "id": "figo-2018",
+      "title": "FIGO 2018 — nomenclature and definitions",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666",
+      "locator": "§3.1; Figura 1 corrigida em 12-11-2018; Tabela 1",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "iasp-terminology",
+      "title": "IASP — terminology",
+      "url": "https://www.iasp-pain.org/resources/terminology/",
+      "locator": "Hypoesthesia, Dysesthesia e Paresthesia; definições e notas",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "mesh-dyspnea",
+      "title": "NLM MeSH D004417 — Dyspnea",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D004417",
+      "locator": "Scope Note; narrower concepts Orthopnea M000751458 e Trepopnea M000751459",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "mesh-photophobia",
+      "title": "NLM MeSH D020795 — Photophobia",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D020795",
+      "locator": "Scope Note",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "ics-frequency",
+      "title": "ICS — Urinary Frequency",
+      "url": "https://www.ics.org/committees/standardisation/terminologydiscussions/urinaryfrequency",
+      "locator": "Current definition e Controversy; discussão de terminologia, setembro de 2018 (página marcada Unpublished)",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "ics-nocturia-2019",
+      "title": "ICS 2019 — nocturia and nocturnal lower urinary tract function",
+      "url": "https://www.ics.org/folder/standardisation/current-ics-standardisations/d/ics-report-on-the-terminology-for-nocturia-and-nocturnal-lower-urinary-tract-function-published-15-january-2019/download",
+      "locator": "Tabela 1, p.501; §§3.1, 3.4, 4.2, pp.502–504; DOI 10.1002/nau.23917",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "nidcd-smell",
+      "title": "NIDCD — Smell Disorders",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "locator": "What are the smell disorders? Parosmia e Phantosmia",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "eau-priapism",
+      "title": "EAU — Priapism",
+      "url": "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/priapism",
+      "locator": "§10.1.2.a e Tabela 10.2; ischaemic e non-ischaemic priapism",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "niddk-constipation",
+      "title": "NIDDK — Symptoms & Causes of Constipation",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/constipation/symptoms-causes",
+      "locator": "What are the symptoms of constipation?",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "asha-voice",
+      "title": "ASHA — Voice Disorders",
+      "url": "https://www.asha.org/practice-portal/clinical-topics/voice-disorders/",
+      "locator": "Overview; Signs and Symptoms; aphonia e dysphonia",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "figo-2022-glossary",
+      "title": "FIGO 2022 — The FIGO ovulatory disorders classification system",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.14331",
+      "locator": "Glossary of terms used in this paper: Frequent menstruation, Infrequent menstruation, Menstrual cycle e Prolonged menstruation",
+      "accessed": "2026-11-14",
+      "verification": "Glossário primário consultado para confirmar diretamente limites <24 dias, >38 dias e duração >8 dias; não autoriza inferir transtorno ovulatório."
+    },
+    {
+      "id": "nichd-menarche",
+      "title": "NICHD — About Menstruation",
+      "url": "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo",
+      "locator": "What is menstruation?: menarche, first period",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "owh-cycle-puberty",
+      "title": "HHS Office on Women’s Health — Your menstrual cycle",
+      "url": "https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle",
+      "locator": "Abertura e What is the menstrual cycle?; When does a girl usually get her first period?: início de desenvolvimento mamário",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "rbem-coitarca",
+      "title": "Comportamento sexual de estudantes de um curso de medicina do Rio de Janeiro — pesquisa original",
+      "url": "https://www.scielo.br/j/rbem/a/TqGzqJzFwv3C9c3nMW5CpYK/?lang=pt",
+      "locator": "Métodos > Medidas: definição operacional de coitarca como primeira relação sexual; apenas terminologia, sem extrapolar resultados da amostra",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "who-menopause",
+      "title": "WHO — Menopause",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/menopause/",
+      "locator": "Understanding menopause: 12 meses consecutivos sem menstruação, sem outra causa evidente nem intervenção clínica",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "ms-climaterio",
+      "title": "Ministério da Saúde — Menopausa e climatério",
+      "url": "https://bvsms.saude.gov.br/menopausa-e-climaterio/",
+      "locator": "Abertura: distinção entre última menstruação e fase de transição reprodutiva",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nidcd-anosmia",
+      "title": "NIDCD — Smell Disorders: Anosmia",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "locator": "What are the smell disorders?: Anosmia, Hyposmia e Parosmia",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nhs-halitose",
+      "title": "NHS — Bad breath",
+      "url": "https://www.nhs.uk/symptoms/bad-breath/",
+      "locator": "Abertura: bad breath / halitosis; não usar lista de causas para diagnosticar as histórias",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "niddk-flatulence",
+      "title": "NIDDK — Symptoms & Causes of Gas in the Digestive Tract",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract/symptoms-causes",
+      "locator": "What are the symptoms of gas? > Passing gas: via anal, excesso percebido e incômodo; contagens não usadas como limiar patológico",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "ics-iuga-dysuria",
+      "title": "ICS/IUGA — Joint report on the terminology for obstetric pelvic floor disorders",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9834366/",
+      "locator": "Voiding symptoms > Dysuria, §1.2.2.7; somente definição descritiva, sem atribuir contexto obstétrico às histórias",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nhs-palpitations",
+      "title": "NHS — Heart palpitations",
+      "url": "https://www.nhs.uk/symptoms/heart-palpitations/",
+      "locator": "Abertura; What heart palpitations feel like: percepção, rapidez/irregularidade; não equivale a diagnóstico de arritmia",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "nimh-anxiety-symptom",
+      "title": "NIMH — Anxiety Disorders: What is anxiety?",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+      "locator": "What is anxiety?: apreensão ocasional pode ocorrer na vida normal; não basta para transtorno de ansiedade",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária consultada diretamente nesta expansão; paráfrase e histórias continuam rascunhos sem revisão independente ou aprovação clínica."
+    },
+    {
+      "id": "mesh-sweating",
+      "title": "NLM MeSH — Sweating (D013546)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013546",
+      "locator": "Scope Note: processo de secreção exócrina das glândulas sudoríparas.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-pruritus",
+      "title": "NLM MeSH — Pruritus (D011537)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011537",
+      "locator": "Scope Note: sensação de coceira que provoca vontade de esfregar ou arranhar a pele.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-fatigue",
+      "title": "NLM MeSH — Fatigue (D005221)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005221",
+      "locator": "Scope Note do descritor Fatigue.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-scotoma",
+      "title": "NLM MeSH — Scotoma (D012607)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D012607",
+      "locator": "Scope Note: defeito localizado do campo visual cercado por área de visão normal.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-blindness",
+      "title": "NLM MeSH — Blindness / Amaurosis (D001766)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D001766",
+      "locator": "Scope Note e Entry Terms: perda/ausência de percepção visual; Amaurosis listado como Entry Term.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-sneezing",
+      "title": "NLM MeSH — Sneezing (D012912)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D012912",
+      "locator": "Scope Note: expulsão involuntária, súbita e vigorosa de ar pelo nariz e boca.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-nasal-obstruction",
+      "title": "NLM MeSH — Nasal Obstruction (D015508)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D015508",
+      "locator": "Scope Note: impedimento à passagem de ar para dentro e fora do nariz.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-rhinorrhea",
+      "title": "NLM MeSH — Rhinorrhea (D000086722)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D000086722",
+      "locator": "Scope Note: excesso de secreção nasal.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-anosmia",
+      "title": "NLM MeSH — Anosmia / Hyposmia (D000086582)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D000086582",
+      "locator": "Scope Note de Anosmia; conceito relacionado Hyposmia.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-visual-acuity-next01",
+      "title": "NLM MeSH D014792 — Visual Acuity",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D014792",
+      "locator": "Scope Note: clareza, nitidez e capacidade de distinguir detalhes finos; o autorrelato não recebe pontuação de exame.",
+      "accessed": "2026-11-15",
+      "verification": "Registro primário consultado nesta continuação; usado para definição funcional."
+    },
+    {
+      "id": "moorfields-epiphora-next01",
+      "title": "Moorfields Eye Hospital NHS — Epiphora (watering eye)",
+      "url": "https://www.moorfields.nhs.uk/eye-conditions/epiphora-watering-eye",
+      "locator": "What is watering eye? / How tears work: excesso de lágrimas e transbordamento; causas e tratamentos não aplicados às histórias.",
+      "accessed": "2026-11-15",
+      "verification": "Fonte institucional consultada nesta continuação; descrição de lacrimejamento, sem inferir mecanismo."
+    },
+    {
+      "id": "haruna-xanthopsia-2020-next01",
+      "title": "Haruna et al., 2020 — Xanthopsia Due to Digoxin Toxicity as a Cause of Traffic Accidents: A Case Report",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7440749/",
+      "locator": "Abstract > Background: Xanthopsia (yellow vision); DOI 10.12659/AJCR.924025. Somente equivalência terminológica; história, medicamentos, eventos e causa do caso publicado não foram transpostos.",
+      "accessed": "2026-11-15",
+      "verification": "Relato primário consultado diretamente; usado apenas para confirmar o termo yellow vision, sem generalizar etiologia."
+    },
+    {
+      "id": "nidcd-hearing-function-next01",
+      "title": "NIDCD — What the Numbers Mean: An Epidemiological Perspective on Hearing",
+      "url": "https://www.nidcd.nih.gov/health/statistics/what-numbers-mean-epidemiological-perspective-hearing",
+      "locator": "Abertura: detecção de sons e interpretação de fala; Measuring Hearing Loss: distinguir autorrelato e avaliação auditiva. Nenhum limiar numérico aplicado às histórias.",
+      "accessed": "2026-11-15",
+      "verification": "Fonte primária institucional consultada diretamente; apoio para função auditiva e limites do autorrelato, sem atribuir etiologia."
+    }
+  ],
+  "generation": {
+    "model": "unknown",
+    "modelRequested": "gpt6luna",
+    "executionVersion": "unknown",
+    "promptVersion": "interrogatorio-next-01",
+    "date": "2026-11-15",
+    "metadataBasis": "Modelo solicitado pelo usuário; versão de execução indisponível.",
+    "authorship": "synthetic-patient-voice"
+  },
+  "review": {
+    "status": "model-reviewed",
+    "clinicalApproval": false,
+    "independentReport": "content/reviews/interrogatorio-batch-002.json",
+    "reportSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+    "findings": [
+      {
+        "id": "B002-01",
+        "severity": "non-blocking-terminology-caution",
+        "scope": "source-versus-general-definition",
+        "itemIds": [
+          "ic-elementos-gerais-febre-sudorese-story-06",
+          "ic-elementos-gerais-febre-sudorese-story-07",
+          "ic-elementos-gerais-febre-sudorese-story-08",
+          "ic-elementos-gerais-febre-sudorese-story-09",
+          "ic-elementos-gerais-febre-sudorese-story-10"
+        ],
+        "issue": "A apostila usa Sudorese para suor excessivo; MeSH Sweating descreve secreção de suor sem exigir excesso. A classificação aqui é descritiva e fonte-específica; não certifica excesso patológico, hiperidrose primária, febre ou causa.",
+        "resolution": "Accept source-based descriptive recognition; keep pathological excess and causes unestablished. Story-08 supplies accumulation and timing, not measured excess or post-drying evidence.",
+        "referenceIds": [
+          "mesh-sweating",
+          "mesh-hyperhidrosis"
+        ],
+        "hold": false,
+        "requiredStoryChange": null
+      },
+      {
+        "id": "B002-02",
+        "severity": "non-blocking-source-context-caution",
+        "scope": "documentary-heading",
+        "itemIds": [
+          "ic-elementos-gerais-febre-sudorese-story-06",
+          "ic-elementos-gerais-febre-sudorese-story-07",
+          "ic-elementos-gerais-febre-sudorese-story-08",
+          "ic-elementos-gerais-febre-sudorese-story-09",
+          "ic-elementos-gerais-febre-sudorese-story-10"
+        ],
+        "issue": "FEBRE is the printed subgroup, not a clinical conclusion.",
+        "evidence": [
+          {
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+            },
+            "quote": "Sudorese: suor excessivo"
+          }
+        ],
+        "resolution": "Keep the literal source mapping and distinguish it from a fever diagnosis.",
+        "hold": false,
+        "requiredStoryChange": null
+      }
+    ],
+    "reviewerClinicalSources": [
+      {
+        "id": "mesh-sweating",
+        "title": "NLM MeSH — Sweating, D013546 (2026)",
+        "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013546",
+        "institution": "U.S. National Library of Medicine / NIH",
+        "accessed": "2026-11-15",
+        "verification": "Independently reopened with web tools for batch-002; descriptor and Scope Note checked.",
+        "locator": "Scope Note; Unique ID; Terms",
+        "exactQuote": "The process of exocrine secretion of the SWEAT GLANDS",
+        "claim": "Sweating é o processo de secreção das glândulas sudoríparas. A definição não exige excesso.",
+        "limitation": "Não sustenta, sozinha, a palavra excessivo da apostila nem diagnóstico.",
+        "externalDescriptorId": "D013546",
+        "externalTermId": "T039855"
+      },
+      {
+        "id": "mesh-hyperhidrosis",
+        "title": "NLM MeSH — Hyperhidrosis, D006945 (2026)",
+        "url": "https://meshb.nlm.nih.gov/record/ui?ui=D006945",
+        "institution": "U.S. National Library of Medicine / NIH",
+        "accessed": "2026-11-15",
+        "verification": "Independently reopened with web tools for batch-002; descriptor and Scope Note checked.",
+        "locator": "Scope Note",
+        "exactQuote": "Excessive sweating.",
+        "claim": "O descritor de excesso é hiperidrose; palmas são uma localização possível. A apostila usa Sudorese de modo mais estreito que o MeSH.",
+        "limitation": "Correspondência terminológica não certifica doença, subtipo primário ou causa nas cinco falas.",
+        "externalDescriptorId": "D006945"
+      }
+    ]
+  },
+  "release": {
+    "id": "interrogatorio-batch-002",
+    "prototype": true,
+    "clinicalApproval": false,
+    "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "sourceInventorySha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+    "reviewFile": "content/reviews/interrogatorio-batch-002.json",
+    "reviewSha256": "2f6d627a97f2c485ab2b7a3071191e2a3f2d3cf613336c2b2295b902e4ff99d7",
+    "notice": "Protótipo revisado por modelo; revisão docente/clínica pendente."
+  },
+  "coverage": {
+    "reviewedTotal": 5,
+    "actualTotal": 5,
+    "withheld": []
+  }
+}

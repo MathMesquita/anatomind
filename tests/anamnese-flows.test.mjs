@@ -8,11 +8,12 @@ import * as scoring from "../src/lib/anamnese.ts"
 import * as sampling from "../src/lib/sampling.ts"
 import { sampleDiseaseOptions } from "../src/lib/disease-round.ts"
 import { starterCharacteristicStories as starterStories } from "../src/data/characteristics.ts"
+import { starterInterviews, getInterviewCatalog } from "../src/data/interviews.ts"
 
 // Exercise the component's own handlers/effects with a deterministic hook host.
 // Layout primitives are opaque: fixed positioning remains StudyLayout's contract.
 const require = createRequire(import.meta.url)
-function mount({ storyBank = starterStories } = {}) {
+function mount({ storyBank = starterStories, interviewBank = starterInterviews } = {}) {
   let scope, cursor, tree, now = 0, dirty = false
   const scopes = new Map(), listeners = new Set(), timers = new Set(), completions = []
   const exposure = sampling.createExposureStore(null)
@@ -53,6 +54,10 @@ function mount({ storyBank = starterStories } = {}) {
       if (name === "react/jsx-runtime") return { jsx, jsxs: jsx }
       if (name === "@/lib/anamnese") return scoring
       if (name === "@/data/characteristics") return { characteristicStories: storyBank, characteristicCatalog: { stories: storyBank.length, groups: new Set(storyBank.map((story) => story.groupId)).size, reviewedPrototype: false } }
+      if (name === "@/data/interviews") {
+        const catalog = getInterviewCatalog(interviewBank)
+        return { interviewQuestions: interviewBank, interviewCatalog: catalog, interviewTerms: catalog.terms, interviewSubgroups: catalog.subgroups, interviewGroups: catalog.groups }
+      }
       if (name === "@/lib/disease-round") return { sampleDiseaseOptions: (positive, negative, scope) => sampleDiseaseOptions(positive, negative, scope, exposure.read()) }
       if (name === "@/lib/sampling") return {
         ...sampling,

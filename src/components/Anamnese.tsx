@@ -3,14 +3,14 @@ import { ChevronRight, Clock3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { StudyPage, StudyHeader, StudyFooter, QuestionDebug, FeedbackCard } from "@/components/StudyLayout"
 import { Progress } from "@/components/ui/progress"
-import { NONE, NO_SUBGROUP, scoreInterview, scoreSelections, type InterviewPath } from "@/lib/anamnese"
+import { NONE, NO_SUBGROUP, scoreInterview, scoreSelections } from "@/lib/anamnese"
 import { alternativeId, chooseOptions, chooseQuestions, newPresentationId, recordExposure, shuffle } from "@/lib/sampling"
 import { sampleDiseaseOptions } from "@/lib/disease-round"
 import { characteristicStories as stories, characteristicCatalog } from "@/data/characteristics"
+import { interviewQuestions as interviews, interviewCatalog, interviewTerms, interviewSubgroups as subgroups, interviewGroups as mainGroups } from "@/data/interviews"
 
 type Props = { onBack: () => void; debugEnabled: boolean; onComplete?: (activity: string, score: number) => void }
 type Mode = "library" | "antecedentes" | "caracteres" | "interrogatorio"
-type Interview = { story: string; term: string; subgroup: string; group: string; page: number; alternatives?: string[]; acceptedTerms?: string[]; paths?: InterviewPath[] }
 // Existing prototype references are declarations, not verified clinical provenance.
 const distractors = ["Glaucoma", "Miopia", "Catarata", "Infarto", "TOC", "Depressão", "Ansiedade", "Epilepsia", "Enxaqueca", "AVE", "Diabetes", "Artrose", "Artrite reumatoide", "Osteoporose", "Pedra na vesícula", "Nefrolitíase"]
 const groups = [
@@ -18,14 +18,6 @@ const groups = [
   { name: "Doenças oculares", answers: ["Glaucoma", "Miopia", "Catarata"], source: "Antecedentes Pessoais Patológicos, p. 1" },
 ]
 const eyeDistractors = ["Asma", "DPOC", "Bronquite", "Pneumonia", "Rinite", "TOC", "Depressão", "Ansiedade", "Epilepsia", "Enxaqueca", "AVE", "Diabetes", "Artrose", "Artrite reumatoide", "Osteoporose", "Nefrolitíase", "Pedra na vesícula"]
-const interviews: Interview[] = [
-  { story: "Vejo dois objetos onde existe apenas um.", term: "Diplopia", subgroup: "Aparelho ocular", group: "Órgãos dos sentidos", page: 1 },
-  { story: "Escuto um apito no ouvido mesmo quando está tudo silencioso.", term: "Zumbidos", subgroup: "Aparelho auditivo", group: "Órgãos dos sentidos", page: 2 },
-  { story: "Meu nariz escorre e tenho coriza.", term: "Rinorreia", subgroup: "Nariz e seios paranasais", group: "Órgãos dos sentidos", page: 2 },
-  { story: "Fico com falta de ar quando me deito e preciso me sentar para respirar melhor.", term: "Ortopneia", subgroup: NO_SUBGROUP, group: "Aparelho cardiovascular", page: 3 },
-]
-const subgroups = ["Aparelho ocular", "Aparelho auditivo", "Nariz e seios paranasais", "Distúrbios da consciência"]
-const mainGroups = ["Órgãos dos sentidos", "Aparelho cardiovascular", "Aparelho respiratório", "Aparelho digestório"]
 
 
 const activities = [
@@ -49,13 +41,13 @@ export default function Anamnese({ onBack, debugEnabled, onComplete }: Props) {
       <span className="w-7 shrink-0 text-xs text-primary">0{i + 1}</span>
       <span className="flex-1"><span className="block text-[17px] font-bold">{title}</span><span className="mt-1 block text-[13px] text-muted-foreground">{description}</span></span><ChevronRight className="size-5 text-primary" />
     </button>)}</div>
-    <p role="note" className="mt-6 text-xs leading-5 text-muted-foreground">Biblioteca: 2 grupos de doenças, {characteristicCatalog.stories} histórias em {characteristicCatalog.groups} {characteristicCatalog.groups === 1 ? "grupo" : "grupos"} de sintomas e 4 exemplos de interrogatório. {characteristicCatalog.reviewedPrototype ? "Caracteres com revisão por modelo; revisão docente/clínica pendente." : "Casos demonstrativos; revisão clínica e editorial não registrada."}</p>
+    <p role="note" className="mt-6 text-xs leading-5 text-muted-foreground">Biblioteca: 2 grupos de doenças, {characteristicCatalog.stories} histórias em {characteristicCatalog.groups} {characteristicCatalog.groups === 1 ? "grupo" : "grupos"} de sintomas e {interviewCatalog.stories} {interviewCatalog.reviewedPrototype ? "histórias revisadas" : "exemplos"} de interrogatório. {characteristicCatalog.reviewedPrototype ? "Caracteres com revisão por modelo; revisão docente/clínica pendente." : "Casos demonstrativos; revisão clínica e editorial não registrada."}</p>
   </StudyPage>
 }
 function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Props & { mode: Exclude<Mode, "library">; onRestart: () => void }) {
   const poolSize = mode === "antecedentes" ? groups.length : mode === "caracteres" ? stories.length : interviews.length
-  const questionId = (item: number) => mode === "caracteres" ? `anamnese:caracteres:${stories[item].id}` : `anamnese:${mode}:prototype-v1:${item}`
-  const [order] = useState(() => chooseQuestions(Array.from({ length: poolSize }, (_, i) => i), questionId, mode === "caracteres" ? Math.min(10, poolSize) : poolSize))
+  const questionId = (item: number) => mode === "caracteres" ? `anamnese:caracteres:${stories[item].id}` : mode === "interrogatorio" ? `anamnese:interrogatorio:${interviews[item].id}` : `anamnese:${mode}:prototype-v1:${item}`
+  const [order] = useState(() => chooseQuestions(Array.from({ length: poolSize }, (_, i) => i), questionId, mode === "antecedentes" ? poolSize : Math.min(10, poolSize)))
   const length = order.length
   const [presentationId] = useState(newPresentationId)
   const [index, setIndex] = useState(0)
@@ -97,7 +89,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
     const acceptedPaths = q.paths ?? [{ subgroup: q.subgroup, group: q.group }]
     const names = [...new Set([...acceptedPaths.map((p) => p.subgroup), ...(q.alternatives ?? []), ...subgroups])].filter((s) => s !== NO_SUBGROUP)
     return [
-      chooseOptions([q.term], [...(q.acceptedTerms ?? []), ...interviews.map((i) => i.term)], (text) => alternativeId("anamnese:interrogatorio:0", text), 4),
+      chooseOptions([q.term], [...(q.acceptedTerms ?? []), ...interviewTerms], (text) => alternativeId("anamnese:interrogatorio:0", text), 4),
       chooseOptions([q.subgroup, NO_SUBGROUP], names, (text) => alternativeId("anamnese:interrogatorio:1", text), 4),
       chooseOptions([q.group], [...acceptedPaths.map((p) => p.group), ...mainGroups], (text) => alternativeId("anamnese:interrogatorio:2", text), 4),
     ]
@@ -190,15 +182,15 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
   ] : []
   const debug = answered && debugEnabled && !finished ? <QuestionDebug key={index}>
     <p><strong>Questão:</strong> {mode} · exemplo {order[index] + 1} · posição {index + 1}/{length}</p>
-    {mode === "caracteres" && story.provenance !== undefined ? <p><strong>Referência da versão congelada:</strong> {story.sourceLabel}. Localizador, checklist, evidências e dados de revisão disponíveis abaixo. Revisão docente/clínica pendente.</p> : <p><strong>Referência declarada no protótipo:</strong> {mode === "antecedentes" ? group.source : mode === "caracteres" ? "Caracteres propedêuticos dos principais sintomas, p. 1" : `Interrogatório complementar, p. ${interview.page}`}. Documento original, edição, autoria, URL e conferência da página: não disponíveis neste componente.</p>}
+    {(mode === "caracteres" && story.provenance !== undefined) || (mode === "interrogatorio" && interview.provenance !== undefined) ? <p><strong>Referência da versão congelada:</strong> {mode === "caracteres" ? story.sourceLabel : interview.sourceLabel}. Localizador, evidências e dados de revisão disponíveis abaixo. Revisão docente/clínica pendente.</p> : <p><strong>Referência declarada no protótipo:</strong> {mode === "antecedentes" ? group.source : mode === "caracteres" ? "Caracteres propedêuticos dos principais sintomas, p. 1" : `Interrogatório complementar, p. ${interview.page}`}. Documento original, edição, autoria, URL e conferência da página: não disponíveis neste componente.</p>}
     <p><strong>Enunciado:</strong> {mode === "antecedentes" ? group.name : mode === "caracteres" ? story.text : interview.story}</p>
     {mode === "caracteres" && <><p><strong>Identificador e grupo:</strong> {story.id} · {story.groupLabel}</p>{story.provenance !== undefined && <details><summary>Fonte, evidências e revisão disponíveis</summary><p className="mt-2 text-xs">Rótulos em sourceLabel são transcrição arquivística da fonte e podem conter imprecisões; não são recomendações ou alternativas do jogo.</p><pre className="mt-2 whitespace-pre-wrap text-xs">{JSON.stringify(story.provenance, null, 2)}</pre></details>}</>}
     <p><strong>Respostas aceitas:</strong> {mode === "interrogatorio" ? terms.join(", ") : expected.join(", ")}</p>
-    {mode === "interrogatorio" && <><p><strong>Caminhos aceitos:</strong> {paths.map((p) => `${p.subgroup} → ${p.group}`).join("; ")}</p><p><strong>Subgrupos em outro contexto (+5):</strong> {interview.alternatives?.join(", ") || "Nenhum registrado neste exemplo."}</p></>}
+    {mode === "interrogatorio" && <><p><strong>Identificador:</strong> {interview.id}</p><p><strong>Caminhos aceitos:</strong> {paths.map((p) => `${p.subgroup} → ${p.group}`).join("; ")}</p><p><strong>Subgrupos em outro contexto (+5):</strong> {interview.alternatives?.join(", ") || "Nenhum registrado neste exemplo."}</p>{interview.provenance !== undefined && <details><summary>Fonte, evidências e revisão disponíveis</summary><pre className="mt-2 whitespace-pre-wrap text-xs">{JSON.stringify(interview.provenance, null, 2)}</pre></details>}</>}
     <p><strong>Sua resposta:</strong> {(mode === "interrogatorio" ? stageAnswers : selected).join(" → ") || "Em branco"} · {signed(delta)} pontos{timedOut ? " · tempo esgotado" : ""}.</p>
     <p><strong>Opções e ordem:</strong> {questionOptions.map((items) => items.join(" / ")).join(" → ")}</p>
     <p><strong>Critério:</strong> {mode === "interrogatorio" ? "+10 por etapa aceita; −5 por etapa incorreta; +5 somente para subgrupo alternativo registrado. O grupo considera os caminhos compatíveis com o subgrupo aceito." : "+10 por seleção correta; −5 por incorreta; 0 por omissão. Em branco = não respondida. Nenhum dado ausente é exclusivo."}</p>
-    <p><strong>Proveniência:</strong> {mode === "caracteres" && story.provenance !== undefined ? "História sintética de um protótipo revisado por modelo. Dados disponíveis preservados na inspeção acima; campos não informados permanecem desconhecidos. Isso não estabelece aprovação clínica ou diagnóstico." : "Exemplos demonstrativos já presentes no componente. Modelo, prompt, data de geração, responsável e revisão clínica/editorial: não registrados. A referência declarada não comprova validação do cenário."}</p>
+    <p><strong>Proveniência:</strong> {(mode === "caracteres" && story.provenance !== undefined) || (mode === "interrogatorio" && interview.provenance !== undefined) ? "História sintética de um protótipo revisado por modelo. Dados disponíveis preservados na inspeção acima; campos não informados permanecem desconhecidos. Isso não estabelece aprovação clínica ou diagnóstico." : "Exemplos demonstrativos já presentes no componente. Modelo, prompt, data de geração, responsável e revisão clínica/editorial: não registrados. A referência declarada não comprova validação do cenário."}</p>
   </QuestionDebug> : undefined
   const footer = finished ? <StudyFooter label="Jogar novamente" onClick={onRestart} secondary={<Button variant="outline" className="h-12 rounded-[10px]" onClick={onBack}>Biblioteca</Button>} />
     : answered ? <StudyFooter label={index + 1 === length ? "Concluir" : "Próxima questão"} onClick={next} debug={debug} />
@@ -218,7 +210,9 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
         {["Termo técnico", "Subgrupo", "Grupo"].map((label, i) => <FeedbackCard key={label} label={`${label} · ${signed(stageScores[i])}`} correct={stageScores[i] > 0} title={stageAnswers[i]}>
           {stageScores[i] === 5 ? <p>Sua escolha está registrada como associação possível em outro contexto, por isso recebe +5. Neste exemplo, o caminho esperado é {paths.map((p) => `${p.subgroup} → ${p.group}`).join(" ou ")}.</p> : stageScores[i] < 0 ? <p>Resposta aceita: {i === 0 ? terms.join(" ou ") : i === 1 ? [...new Set(paths.map((p) => p.subgroup))].join(" ou ") : (() => { const matching = paths.filter((p) => p.subgroup === stageAnswers[1]); return [...new Set((matching.length ? matching : paths).map((p) => p.group))].join(" ou ") })()}.</p> : <p>Resposta aceita neste roteiro.</p>}
         </FeedbackCard>)}
-        <p className="text-xs leading-5 text-muted-foreground">Classificação do roteiro demonstrativo; não estabelece diagnóstico. +10 por etapa aceita, −5 por incorreta; +5 para associação alternativa registrada.</p>
+        <blockquote className="rounded-xl bg-card p-4 text-[15px] leading-7">“{interview.story}”</blockquote>
+        {interview.contextExplanation && <p className="text-sm leading-6 text-muted-foreground">{interview.contextExplanation}</p>}
+        <p className="text-xs leading-5 text-muted-foreground">Classificação segundo a posição no PDF, não um diagnóstico. +10 por etapa aceita, −5 por incorreta; +5 para associação alternativa registrada.</p>
       </> : <>
         <FeedbackCard label="Selecionadas corretamente · +10 cada" title={selected.filter((s) => expected.includes(s)).join(", ") || "Nenhuma"} />
         <FeedbackCard label="Selecionadas incorretamente · −5 cada" correct={false} title={selected.filter((s) => !expected.includes(s)).join(", ") || "Nenhuma"} />
