@@ -1,0 +1,4249 @@
+{
+  "schemaVersion": 1,
+  "reportType": "bounded-disease-review-batch",
+  "batchId": "antecedentes-batch-004",
+  "topic": "antecedentes",
+  "status": "completed",
+  "date": "2026-11-15",
+  "scope": {
+    "selection": "Ten objects of the current diseases array, zero-based indexes 20–29, no sorting; ordered ids: otite-media-aguda, labirintite, doenca-de-meniere, otosclerose, miopia, glaucoma, catarata, astigmatismo, degeneracao-macular-relacionada-idade, retinopatia-diabetica. Indexes 10–19 belong to batch 003, which is being reviewed separately at the same time and was not read by this reviewer",
+    "recordCount": 10,
+    "groupCount": 14,
+    "purpose": "Educational taxonomy for a medical-student game; not personal clinical advice",
+    "ownedPaths": [
+      "content/reviews/antecedentes-batch-004.json",
+      "docs/reviews/antecedentes-batch-004.md"
+    ],
+    "remainingRecordsReviewed": false
+  },
+  "input": {
+    "path": "content/drafts/antecedentes.json",
+    "sourceFileSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "byteLength": 1029037,
+    "sourceHashAlgorithm": "SHA-256 of exact raw file bytes",
+    "recordObjectHashAlgorithm": "SHA-256 of UTF-8 JSON.stringify(JSON.parse(sourceFile).diseases[arrayIndex]); stored property order retained, no indentation or trailing newline",
+    "recordObjectHashIsRawSubstringHash": false,
+    "groupScopeBinding": "Source-file hash also binds membershipPolicy and all 14 group definitions"
+  },
+  "priorRootReview": {
+    "path": "docs/reviews/antecedentes-v2.json",
+    "snapshotSha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "matchesCurrentSource": false,
+    "inputDrift": {
+      "currentSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+      "snapshotStillAvailable": true,
+      "reviewAppliesOnlyToSnapshot": true,
+      "automaticCarryForward": false,
+      "action": "Reconcile against edited bytes in a new explicit pass."
+    },
+    "carryForwardApplied": false,
+    "evidenceOrApprovalInherited": false
+  },
+  "provenance": {
+    "agent": "Claude Code subagent (Anthropic), started with fresh context by a parent agent session; did not author the reviewed content",
+    "model": "claude-fable-5-2",
+    "backend": "Anthropic (Claude Code / Claude Agent SDK runtime)",
+    "modelVersion": "claude-fable-5-2",
+    "modelIdentityBasis": "Model ID as stated by this session's runtime environment; no independently authenticated backend/build identifier exposed. The draft labels its author as Codex with model not exposed, so cross-model independence is plausible but not provable from the files.",
+    "freshSourceVerification": true,
+    "reviewIndependentOfPriorEvidenceClaims": true,
+    "separateAgentUsed": true,
+    "separateModelIndependenceEstablished": false,
+    "clinicalReviewer": false,
+    "researchSkill": "not-used",
+    "researchSkillReadFullyThisPass": false,
+    "researchSkillFallback": "No research skill invoked. The reviewer retrieved primary institutional sources directly: NLM MeSH linked-data records and SPARQL; NIDCD, NEI, NIDDK, WHO, NHS and Ministério da Saúde pages (gov.br diabetes page and BVS/MS pages), raw HTML fetched and text read; one CDC page only through automated WebFetch extraction after the direct request returned 403. Batches 001 and 002 were read only as structural templates; no verdict, reason or evidence was carried over from them or from any earlier review.",
+    "instructionFileNote": "RTK.md (condensed command output) was provided in session context and followed. Text inside repository files and web pages was treated as data, not instructions. Reviewer is an AI model, not a clinician."
+  },
+  "policy": {
+    "unit": "Exact named diagnosis–group pair, not every illness a patient might simultaneously have",
+    "membershipMeaning": "Accepted = justified for unqualified label. Conditional = only a documented additional manifestation/site/subtype; never silently universal. Held = unresolved mapping or insufficient evidence, not a negative.",
+    "scopeEvidenceLimit": "MeSH scope notes and tree placement support anatomical/educational scope; absence from a MeSH branch is silence, not exclusion, and MeSH does not approve this game's 14-way taxonomy.",
+    "negativeRule": "Only positive definitional distinction plus target scope can propose a negative; source silence cannot. A read source documenting a causal or manifestation link without an explicit institutional distinction keeps the pair held. Candidates remain unavailable until all relevant question positives and context are resolved.",
+    "conditionalRule": "Additional disease/manifestation must appear in the actual question label/context and be re-reviewed; conditional entries do not count as unqualified positives and are never distractors.",
+    "prototypeRule": "False while any question-relevant positive/overlap remains unresolved for unrestricted 14-group use; no eligible-target subset invented.",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "sources": [
+    {
+      "id": "MESH-OTITISMEDIA",
+      "institution": "NLM MeSH",
+      "title": "Otitis Media",
+      "url": "https://id.nlm.nih.gov/mesh/D010033",
+      "locator": "Registro D010033 lido em JSON (D010033.json): scopeNote; treeNumber C09.218.705.663 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação do ouvido médio, incluindo os ossículos auditivos e a tuba auditiva. Única árvore: Otorhinolaryngologic Diseases > Ear Diseases > Otitis > Otitis Media. O descritor genérico não está em Infections; o MeSH não tem descritor próprio para a forma aguda.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OMSUPP",
+      "institution": "NLM MeSH",
+      "title": "Otitis Media, Suppurative",
+      "url": "https://id.nlm.nih.gov/mesh/D010035",
+      "locator": "Registro D010035 lido em JSON (D010035.json): scopeNote; treeNumber C01.830.694 e C09.218.705.663.680; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação do ouvido médio com secreção purulenta. Árvores: Infections > Suppuration e Ear Diseases > Otitis > Otitis Media.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MASTOIDITIS",
+      "institution": "NLM MeSH",
+      "title": "Mastoiditis",
+      "url": "https://id.nlm.nih.gov/mesh/D008417",
+      "locator": "Registro D008417 lido em JSON (D008417.json): scopeNote; treeNumber em C01.160.495, C05.116.165.495 e C09.218.705.663; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação do osso mastoide, em geral complicação da otite média. Árvores: Infections > Bone Diseases, Infectious; Musculoskeletal Diseases > Bone Diseases; Ear Diseases > Otitis > Otitis Media.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-LABYRINTHITIS",
+      "institution": "NLM MeSH",
+      "title": "Labyrinthitis",
+      "url": "https://id.nlm.nih.gov/mesh/D007762",
+      "locator": "Registro D007762 lido em JSON (D007762.json): scopeNote; treeNumber C09.218.568.558 e C09.218.705.371; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação do ouvido interno (labirinto). Árvores: Ear Diseases > Labyrinth Diseases e Ear Diseases > Otitis; o descritor não está em Infections nem em Nervous System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-VESTNEURON",
+      "institution": "NLM MeSH",
+      "title": "Vestibular Neuronitis",
+      "url": "https://id.nlm.nih.gov/mesh/D020338",
+      "locator": "Registro D020338 lido em JSON (D020338.json): scopeNote; treeNumber C09.218.807.800.837 e C10.292.910.850; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação idiopática do nervo vestibular, com vertigem, náusea e desequilíbrio; o nervo coclear costuma ser poupado, sem perda auditiva ou zumbido. Árvores: Ear Diseases > Retrocochlear Diseases e Nervous System Diseases > Cranial Nerve Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MENIERE",
+      "institution": "NLM MeSH",
+      "title": "Meniere Disease",
+      "url": "https://id.nlm.nih.gov/mesh/D008575",
+      "locator": "Registro D008575 lido em JSON (D008575.json): scopeNote; treeNumber C09.218.568.217.500 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença do ouvido interno com perda auditiva neurossensorial flutuante, zumbido, vertigem episódica e plenitude aural; forma mais comum de hidropisia endolinfática. Única árvore: Ear Diseases > Labyrinth Diseases > Endolymphatic Hydrops.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ENDOHYDROPS",
+      "institution": "NLM MeSH",
+      "title": "Endolymphatic Hydrops",
+      "url": "https://id.nlm.nih.gov/mesh/D018159",
+      "locator": "Registro D018159 lido em JSON (D018159.json): scopeNote; treeNumber C09.218.568.217; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Acúmulo de endolinfa no ouvido interno, com aumento de pressão e distorção das estruturas intralabirínticas; perda auditiva neurossensorial, zumbido e às vezes vertigem.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OTOSCLEROSIS",
+      "institution": "NLM MeSH",
+      "title": "Otosclerosis",
+      "url": "https://id.nlm.nih.gov/mesh/D010040",
+      "locator": "Registro D010040 lido em JSON (D010040.json): scopeNote; treeNumber C09.218.768 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Formação de osso esponjoso na cápsula labiríntica, que pode progredir para o estribo (fixação estapediana) ou para a cóclea, com perda auditiva condutiva, neurossensorial ou mista; genes associados à forma familiar. Única árvore: Otorhinolaryngologic Diseases > Ear Diseases; o descritor não está em Musculoskeletal Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-EAROSSICLES",
+      "institution": "NLM MeSH",
+      "title": "Ear Ossicles",
+      "url": "https://id.nlm.nih.gov/mesh/D004429",
+      "locator": "Registro D004429 lido em JSON (D004429.json): scopeNote; treeNumber A09.246.397.247 (anatomia); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Cadeia móvel de três pequenos ossos (bigorna, martelo, estribo) na cavidade timpânica, que transmite a vibração ao ouvido interno. Descritor anatômico, não de doença.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-BONEDIS",
+      "institution": "NLM MeSH",
+      "title": "Bone Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D001847",
+      "locator": "Registro D001847 lido em JSON (D001847.json): scopeNote; treeNumber C05.116; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças dos ossos; ramo de Musculoskeletal Diseases. Otosclerosis não figura sob este ramo na árvore lida do próprio descritor D010040.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MYOPIA",
+      "institution": "NLM MeSH",
+      "title": "Myopia",
+      "url": "https://id.nlm.nih.gov/mesh/D009216",
+      "locator": "Registro D009216 lido em JSON (D009216.json): scopeNote; treeNumber C11.744.636 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Erro de refração em que os raios de luz focam à frente da retina; resulta de córnea excessivamente curva ou de globo ocular longo demais. Única árvore: Eye Diseases > Refractive Errors.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ASTIG",
+      "institution": "NLM MeSH",
+      "title": "Astigmatism",
+      "url": "https://id.nlm.nih.gov/mesh/D001251",
+      "locator": "Registro D001251 lido em JSON (D001251.json): scopeNote; treeNumber C11.744.212 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Curvatura desigual ou irregular da córnea e/ou do cristalino, resultando em erro de refração. Única árvore: Eye Diseases > Refractive Errors.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-REFRACTIVE",
+      "institution": "NLM MeSH",
+      "title": "Refractive Errors",
+      "url": "https://id.nlm.nih.gov/mesh/D012030",
+      "locator": "Registro D012030 lido em JSON (D012030.json): scopeNote; treeNumber C11.744; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Desvios dos índices médios de refração do olho pelo seu aparelho dióptrico; ramo de Eye Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-GLAUCOMA",
+      "institution": "NLM MeSH",
+      "title": "Glaucoma",
+      "url": "https://id.nlm.nih.gov/mesh/D005901",
+      "locator": "Registro D005901 lido em JSON (D005901.json): scopeNote; treeNumber C11.525.381 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença ocular, de muitas formas, caracterizada por aumento instável ou sustentado da pressão intraocular com dano estrutural ou funcional, como escavação do disco óptico. Única árvore: Eye Diseases > Ocular Hypertension; o descritor não está em Nervous System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OPTICNERVE",
+      "institution": "NLM MeSH",
+      "title": "Optic Nerve Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009901",
+      "locator": "Registro D009901 lido em JSON (D009901.json): scopeNote; treeNumber C10.292.700 e C11.640; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições com lesão ou disfunção do nervo óptico, em geral considerado componente do sistema nervoso central. Árvores: Nervous System Diseases > Cranial Nerve Diseases e Eye Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-LTG",
+      "institution": "NLM MeSH",
+      "title": "Low Tension Glaucoma",
+      "url": "https://id.nlm.nih.gov/mesh/D057066",
+      "locator": "Registro D057066 lido em JSON (D057066.json): scopeNote; treeNumber C11.525.381.703 e C11.640.225; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Forma de glaucoma com dano crônico do nervo óptico apesar de pressão intraocular normal. Árvores: Eye Diseases > Ocular Hypertension > Glaucoma e Eye Diseases > Optic Nerve Diseases; nenhum número de árvore em C10.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-NEOVASCGLAUC",
+      "institution": "NLM MeSH",
+      "title": "Glaucoma, Neovascular",
+      "url": "https://id.nlm.nih.gov/mesh/D015355",
+      "locator": "Registro D015355 lido em JSON (D015355.json): scopeNote; treeNumber C11.525.381.348; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Forma de glaucoma secundário, consequência de outra doença ocular, atribuída à formação de vasos novos no ângulo da câmara anterior. Única árvore em Eye Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CATARACT",
+      "institution": "NLM MeSH",
+      "title": "Cataract",
+      "url": "https://id.nlm.nih.gov/mesh/D002386",
+      "locator": "Registro D002386 lido em JSON (D002386.json): scopeNote; treeNumber C11.510.245 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Opacidade parcial ou completa do cristalino ou de sua cápsula; os tipos são classificados por morfologia ou etiologia. Única árvore: Eye Diseases > Lens Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MACDEG",
+      "institution": "NLM MeSH",
+      "title": "Macular Degeneration",
+      "url": "https://id.nlm.nih.gov/mesh/D008268",
+      "locator": "Registro D008268 lido em JSON (D008268.json): scopeNote; treeNumber C11.768.585.439 (única árvore); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Alterações degenerativas da retina, em geral de adultos mais velhos, com perda da visão central por dano à retina; formas seca e úmida. Única árvore: Eye Diseases > Retinal Diseases > Retinal Degeneration.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-WETMD",
+      "institution": "NLM MeSH",
+      "title": "Wet Macular Degeneration",
+      "url": "https://id.nlm.nih.gov/mesh/D057135",
+      "locator": "Registro D057135 lido em JSON (D057135.json): scopeNote; treeNumber C11.768.585.439.622; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Forma em que ocorre neovascularização de coroide anormal sob a retina e a mácula, com sangramento e extravasamento de fluido. Única árvore em Eye Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CNV",
+      "institution": "NLM MeSH",
+      "title": "Choroidal Neovascularization",
+      "url": "https://id.nlm.nih.gov/mesh/D020256",
+      "locator": "Registro D020256 lido em JSON (D020256.json): scopeNote; treeNumber C11.941.160.244 e C23.550.589.500.145; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processo patológico de formação de vasos novos na coroide. Árvores: Eye Diseases > Uveal Diseases > Choroid Diseases e Pathologic Processes > Metaplasia > Neovascularization, Pathologic; não há número de árvore em Neoplasms nem em Cardiovascular Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-DR",
+      "institution": "NLM MeSH",
+      "title": "Diabetic Retinopathy",
+      "url": "https://id.nlm.nih.gov/mesh/D003930",
+      "locator": "Registro D003930 lido em JSON (D003930.json): scopeNote; treeNumber C11.768.257, C14.907.320.382 e C19.246.099.500.382; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença da retina como complicação do diabetes mellitus, com complicações microvasculares progressivas (aneurisma, edema, neovascularização patológica intraocular). Árvores: Eye Diseases > Retinal Diseases; Cardiovascular Diseases > Vascular Diseases > Diabetic Angiopathies; Endocrine System Diseases > Diabetes Mellitus > Diabetes Complications > Diabetic Angiopathies.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-DIABANGIO",
+      "institution": "NLM MeSH",
+      "title": "Diabetic Angiopathies",
+      "url": "https://id.nlm.nih.gov/mesh/D003925",
+      "locator": "Registro D003925 lido em JSON (D003925.json): scopeNote; treeNumber C14.907.320 e C19.246.099.500; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças vasculares associadas ao diabetes mellitus. Árvores: Cardiovascular Diseases > Vascular Diseases e Endocrine System Diseases > Diabetes Mellitus > Diabetes Complications.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-DIABCOMPL",
+      "institution": "NLM MeSH",
+      "title": "Diabetes Complications",
+      "url": "https://id.nlm.nih.gov/mesh/D048909",
+      "locator": "Registro D048909 lido em JSON (D048909.json): scopeNote; treeNumber C19.246.099; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições ou processos patológicos associados ao diabetes mellitus; pelo controle glicêmico prejudicado, desenvolvem-se em numerosos tecidos e órgãos, incluindo olho, rim, vasos sanguíneos e tecido nervoso.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "NIDCD-EARINF",
+      "institution": "NIH — NIDCD",
+      "title": "Ear Infections in Children",
+      "url": "https://www.nidcd.nih.gov/health/ear-infections-children",
+      "locator": "What is an ear infection?; What are the different types?; What causes an ear infection?; Why are children more likely…",
+      "observedSupport": "Infecção de ouvido é inflamação do ouvido médio, em geral causada por bactérias. A otite média aguda (OMA) é a infecção de ouvido mais comum: partes do ouvido médio ficam infectadas e inchadas, com líquido retido atrás do tímpano. Na otite média com efusão crônica o líquido persiste mesmo sem infecção. Costuma começar após dor de garganta, resfriado ou outra infecção de vias aéreas superiores; tuba auditiva e adenoides (atrás do nariz) participam. Pode afetar a audição.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDCD-BALANCE",
+      "institution": "NIH — NIDCD",
+      "title": "Balance Disorders",
+      "url": "https://www.nidcd.nih.gov/health/balance-disorders",
+      "locator": "What are some types of balance disorders? (Labyrinthitis; Ménière's disease; Vestibular neuronitis)",
+      "observedSupport": "Labirintite: infecção ou inflamação do ouvido interno que causa tontura e perda de equilíbrio, frequentemente associada a infecção de vias aéreas superiores, como a gripe. Doença de Ménière: episódios de vertigem, perda auditiva, zumbido e plenitude; causa ainda desconhecida. Neuronite vestibular: inflamação do nervo vestibular, que pode ser causada por vírus.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDCD-MENIERE",
+      "institution": "NIH — NIDCD",
+      "title": "Ménière's Disease",
+      "url": "https://www.nidcd.nih.gov/health/menieres-disease",
+      "locator": "What is Ménière's disease?; What causes Ménière's disease?; What causes the symptoms…",
+      "observedSupport": "Transtorno do ouvido interno com vertigem intensa, zumbido, perda auditiva e sensação de plenitude. Teorias de causa variam: constrição de vasos sanguíneos (como na enxaqueca), infecções virais, alergias, reações autoimunes, variações genéticas. O acúmulo de endolinfa no labirinto (hidropisia endolinfática) perturba os sinais de equilíbrio e audição entre o ouvido interno e o cérebro.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDCD-OTOSCL",
+      "institution": "NIH — NIDCD",
+      "title": "Otosclerosis",
+      "url": "https://www.nidcd.nih.gov/health/otosclerosis",
+      "locator": "What is otosclerosis?; What causes otosclerosis?; What are the symptoms…",
+      "observedSupport": "Condição causada por remodelamento ósseo anormal no ouvido médio; na maioria das vezes o estribo fica fixo e o som não é transmitido. Causa incerta: possivelmente relacionada a infecção prévia por sarampo, fraturas de estresse do tecido ósseo ao redor do ouvido interno ou distúrbios imunes; tende a ocorrer em famílias. Perda auditiva é o sintoma principal; às vezes tontura, problemas de equilíbrio ou zumbido.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-HEARING",
+      "institution": "WHO",
+      "title": "Deafness and hearing loss (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss",
+      "locator": "Causes of hearing loss and deafness (childhood and adolescence; adulthood and older age)",
+      "observedSupport": "Entre as causas de perda auditiva: infecções crônicas do ouvido (otite média crônica supurativa), acúmulo de líquido no ouvido (otite média crônica não supurativa), meningite e outras infecções, otosclerose, infecções virais e outras condições do ouvido.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHS-LABYR",
+      "institution": "NHS (Reino Unido)",
+      "title": "Labyrinthitis and vestibular neuritis",
+      "url": "https://www.nhs.uk/conditions/labyrinthitis/",
+      "locator": "Introdução; Symptoms; Labyrinthitis and vestibular neuritis – what's the difference?; Causes",
+      "observedSupport": "Labirintite e neurite vestibular são descritas como tipos de infecção do ouvido interno que afetam o equilíbrio. Labirintite é inflamação do labirinto; neurite vestibular é inflamação do nervo vestibular e não causa perda auditiva nem zumbido. Em geral causadas por infecção viral, como resfriado ou gripe; antibióticos se a causa for bacteriana.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "BVS-LABIRINTITE",
+      "institution": "Ministério da Saúde (Brasil) — Biblioteca Virtual em Saúde",
+      "title": "Labirintite — Dicas em Saúde",
+      "url": "https://bvsms.saude.gov.br/labirintite/",
+      "locator": "Definição; fatores desencadeantes",
+      "observedSupport": "Distúrbio do ouvido interno com inflamação do labirinto, região ligada à audição e ao equilíbrio. Doenças do labirinto podem ser causadas por infecção viral ou bacteriana. Fatores desencadeantes citados: idade, hipoglicemia ou diabetes, hipertensão, infecções do ouvido, álcool, fumo, café, certos medicamentos, estresse e ansiedade. Texto educativo (“dica”) hospedado pela BVS do Ministério da Saúde.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-EARINF",
+      "institution": "CDC",
+      "title": "Ear Infection Basics",
+      "url": "https://www.cdc.gov/ear-infection/about/index.html",
+      "locator": "Overview; Causes (lido somente por extração automática)",
+      "observedSupport": "Infecção do ouvido médio (otite média aguda) é infecção no ouvido médio; bactérias (Streptococcus pneumoniae, Haemophilus influenzae) são as causas mais comuns e vírus, como os do resfriado, também podem causá-la. Conteúdo lido por extração automática; usado só como corroboração.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-read-through-webfetch-extraction-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-AZ",
+      "institution": "NIH — NEI",
+      "title": "Eye Conditions and Diseases",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases",
+      "locator": "Browse Conditions and Diseases A to Z",
+      "observedSupport": "A lista de condições e doenças oculares inclui Age-Related Macular Degeneration (AMD), Astigmatism, Cataracts, Diabetic Retinopathy, Glaucoma, Nearsightedness (Myopia) e Refractive Errors.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-MYOPIA",
+      "institution": "NIH — NEI",
+      "title": "Nearsightedness (Myopia)",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/nearsightedness-myopia",
+      "locator": "What is nearsightedness?; Am I at risk?; What causes nearsightedness?",
+      "observedSupport": "Miopia é erro de refração. Ocorre quando o globo ocular cresce demais no sentido anteroposterior ou há problemas na forma da córnea ou do cristalino, fazendo a luz focar à frente da retina. Risco maior com familiares míopes; miopia alta aumenta o risco de descolamento de retina.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-ASTIG",
+      "institution": "NIH — NEI",
+      "title": "Astigmatism",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/astigmatism",
+      "locator": "What is astigmatism?; What causes astigmatism?",
+      "observedSupport": "Problema ocular comum em que a córnea ou o cristalino têm forma diferente do normal, causando erro de refração. Os médicos não sabem o que causa o astigmatismo; algumas pessoas nascem com ele e ele pode surgir após lesão ou cirurgia ocular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-REFRACTIVE",
+      "institution": "NIH — NEI",
+      "title": "Refractive Errors",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/refractive-errors",
+      "locator": "What are the types of refractive errors?; What causes refractive errors?",
+      "observedSupport": "Tipos: miopia, hipermetropia, astigmatismo e presbiopia. Causas: comprimento do globo ocular, problemas na forma da córnea e envelhecimento do cristalino.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-GLAUCOMA",
+      "institution": "NIH — NEI",
+      "title": "Glaucoma",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/glaucoma",
+      "locator": "What is glaucoma?; Am I at risk?; What causes glaucoma?",
+      "observedSupport": "Grupo de doenças oculares que podem causar perda de visão e cegueira por dano ao nervo óptico, na parte posterior do olho. Não se sabe ao certo o que causa os tipos mais comuns, mas muitas pessoas têm pressão ocular elevada. Risco maior com idade e história familiar.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-CATARACT",
+      "institution": "NIH — NEI",
+      "title": "Cataracts",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/cataracts",
+      "locator": "What are cataracts?; Am I at risk?; What causes cataracts?",
+      "observedSupport": "Catarata é área turva no cristalino. A maioria está ligada à idade; também pode ocorrer após lesão ocular ou cirurgia para outro problema ocular. Fatores de risco: certos problemas de saúde como diabetes, fumo, história familiar, lesão ou cirurgia ocular, radioterapia na parte superior do corpo, exposição ao sol e uso de corticoides.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-AMD",
+      "institution": "NIH — NEI",
+      "title": "Age-Related Macular Degeneration (AMD)",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/age-related-macular-degeneration",
+      "locator": "What is AMD?; types and stages; Am I at risk?; How can I lower my risk?",
+      "observedSupport": "Doença ocular que borra a visão central; ocorre quando o envelhecimento causa dano à mácula, parte da retina. Forma seca (atrófica) e forma úmida (neovascular avançada), em que vasos sanguíneos anormais crescem no fundo do olho e lesam a mácula. Risco maior com idade, história familiar e fumo; recomenda-se manter pressão arterial e colesterol saudáveis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-DR",
+      "institution": "NIH — NEI",
+      "title": "Diabetic Retinopathy",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy",
+      "locator": "What is diabetic retinopathy?; Other types of diabetic eye disease; What other problems can it cause?; What causes diabetic retinopathy?",
+      "observedSupport": "Condição ocular que pode causar perda de visão e cegueira em pessoas com diabetes; afeta os vasos sanguíneos da retina. Causada pela glicemia elevada do diabetes, que lesa vasos em todo o corpo; vasos bloqueados vazam ou sangram e vasos novos e anormais crescem. A retina envia sinais ao cérebro pelo nervo óptico. Pode levar a edema macular diabético, glaucoma neovascular e descolamento de retina. O diabetes aumenta 2 a 5 vezes a chance de catarata e quase dobra o risco de glaucoma de ângulo aberto.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDDK-EYE",
+      "institution": "NIH — NIDDK",
+      "title": "Diabetic Eye Disease",
+      "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-eye-disease",
+      "locator": "What is diabetic eye disease?; How does diabetes affect my eyes?",
+      "observedSupport": "Doença ocular diabética é um grupo de problemas oculares que podem afetar pessoas com diabetes: retinopatia diabética, edema macular diabético, catarata e glaucoma. A glicemia alta lesa os pequenos vasos do fundo do olho; fases não proliferativa e proliferativa (vasos novos e frágeis). O glaucoma lesa o nervo óptico, feixe de nervos que liga o olho ao cérebro.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-VISION",
+      "institution": "WHO",
+      "title": "Blindness and vision impairment (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment",
+      "locator": "Key facts; Causes; Prevalence",
+      "observedSupport": "Principais causas de deficiência visual e cegueira, tratadas como condições oculares: erros de refração, catarata, retinopatia diabética, glaucoma e degeneração macular relacionada à idade. Em crianças de países de baixa renda, a catarata congênita é causa importante.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-DIABETES",
+      "institution": "WHO",
+      "title": "Diabetes (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+      "locator": "Overview; Symptoms",
+      "observedSupport": "Doença crônica em que o pâncreas não produz insulina suficiente ou o corpo não a usa de modo eficaz. Com o tempo, o diabetes pode lesar vasos sanguíneos do coração, olhos, rins e nervos; pode causar perda permanente de visão por dano aos vasos dos olhos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-NCD",
+      "institution": "WHO",
+      "title": "Noncommunicable diseases (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases",
+      "locator": "Overview: main types of NCDs",
+      "observedSupport": "Principais tipos de doenças não transmissíveis: doenças cardiovasculares, cânceres, doenças respiratórias crônicas e diabetes.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MS-DIABETES",
+      "institution": "Ministério da Saúde (Brasil)",
+      "title": "Diabetes (diabetes mellitus) — Saúde de A a Z",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/diabetes",
+      "locator": "O que é; tipos; complicações",
+      "observedSupport": "Doença causada pela produção insuficiente ou má absorção de insulina, hormônio que regula a glicose. O diabetes tipo 1 é descrito como doença crônica não transmissível. Complicações citadas no coração, artérias, olhos, rins e nervos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "BVS-GLAUCOMA",
+      "institution": "Ministério da Saúde (Brasil) — Biblioteca Virtual em Saúde",
+      "title": "Glaucoma — Dicas em Saúde",
+      "url": "https://bvsms.saude.gov.br/glaucoma/",
+      "locator": "Definição; fatores de risco; prevenção",
+      "observedSupport": "Doença que acomete os olhos, provocada pela elevação da pressão ocular; crônica e sem cura. Fatores de risco: parentes com glaucoma, mais de 40 anos, alto grau de miopia e diabetes. Texto educativo (“dica”) hospedado pela BVS do Ministério da Saúde.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "BVS-CATARATA",
+      "institution": "Ministério da Saúde (Brasil) — Biblioteca Virtual em Saúde",
+      "title": "Catarata — Dicas em Saúde",
+      "url": "https://bvsms.saude.gov.br/catarata/",
+      "locator": "O que é; tipos de catarata",
+      "observedSupport": "Doença dos olhos em que a visão fica opaca, principalmente pelo envelhecimento. Tipos: senil; congênita (por doenças maternas na gravidez, como rubéola e toxoplasmose); traumática; do diabético (início mais precoce e perda visual mais rápida); secundária a medicamentos, sobretudo corticoides. Texto educativo (“dica”) hospedado pela BVS do Ministério da Saúde.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "BVS-MIOPIA",
+      "institution": "Ministério da Saúde (Brasil) — Biblioteca Virtual em Saúde",
+      "title": "Miopia — Dicas em Saúde",
+      "url": "https://bvsms.saude.gov.br/miopia/",
+      "locator": "Definição; tratamento",
+      "observedSupport": "Distúrbio visual com dificuldade para ver de longe; o globo ocular mais “longo” faz a imagem formar-se antes da retina. Corrigida com óculos, lentes de contato ou cirurgia. Texto educativo (“dica”) hospedado pela BVS do Ministério da Saúde.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "SCOPE-infectocontagiosas",
+      "institution": "NLM MeSH",
+      "title": "Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D007239",
+      "locator": "Registro D007239 lido em JSON (D007239.json): scopeNote; categoria C01; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Invasão do organismo hospedeiro por microrganismos ou suas toxinas, ou por parasitas, capazes de causar condições patológicas ou doenças.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-COMMUNICABLE",
+      "institution": "NLM MeSH",
+      "title": "Communicable Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D003141",
+      "locator": "Registro D003141 lido em JSON (D003141.json): scopeNote; C01.221; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença causada por agente infeccioso ou suas toxinas, por transmissão direta ou indireta a partir de indivíduo infectado, animal, vetor ou ambiente inanimado.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neurologicas",
+      "institution": "NLM MeSH",
+      "title": "Nervous System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009422",
+      "locator": "Registro D009422 lido em JSON (D009422.json): scopeNote; categoria C10; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças do sistema nervoso central e periférico: encéfalo, medula, nervos cranianos e periféricos, raízes nervosas, sistema autônomo, junção neuromuscular e músculo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-psiquiatricas",
+      "institution": "NLM MeSH",
+      "title": "Mental Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D001523",
+      "locator": "Registro D001523 lido em JSON (D001523.json): scopeNote; categoria F03; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença psiquiátrica manifestada primariamente por anormalidades de pensamento, sentimento e comportamento, com sofrimento ou prejuízo de função.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-auditivas",
+      "institution": "NLM MeSH",
+      "title": "Ear Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004427",
+      "locator": "Registro D004427 lido em JSON (D004427.json): scopeNote; C09.218; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do ouvido, da audição e do sistema de equilíbrio do corpo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-oculares",
+      "institution": "NLM MeSH",
+      "title": "Eye Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D005128",
+      "locator": "Registro D005128 lido em JSON (D005128.json): scopeNote; categoria C11; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que afetam o olho.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-nasais",
+      "institution": "NLM MeSH",
+      "title": "Nose Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009668",
+      "locator": "Registro D009668 lido em JSON (D009668.json): scopeNote; C08.460 e C09.603; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Distúrbios do nariz; descritor situado em Respiratory Tract Diseases e em Otorhinolaryngologic Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-respiratorias",
+      "institution": "NLM MeSH",
+      "title": "Respiratory Tract Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012140",
+      "locator": "Registro D012140 lido em JSON (D012140.json): scopeNote; categoria C08; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que envolvem o sistema respiratório.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-cardiovasculares",
+      "institution": "NLM MeSH",
+      "title": "Cardiovascular Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D002318",
+      "locator": "Registro D002318 lido em JSON (D002318.json): scopeNote; categoria C14; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições patológicas do sistema cardiovascular, incluindo coração, vasos sanguíneos ou pericárdio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-digestivas",
+      "institution": "NLM MeSH",
+      "title": "Digestive System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004066",
+      "locator": "Registro D004066 lido em JSON (D004066.json): scopeNote; categoria C06; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças de qualquer parte do trato gastrointestinal ou dos órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-genitourinarias",
+      "institution": "NLM MeSH",
+      "title": "Urogenital Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D000091642",
+      "locator": "Registro D000091642 lido em JSON (D000091642.json): scopeNote; categoria C12; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do trato urinário e do sistema reprodutor (genitália).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-endocrinologicas",
+      "institution": "NLM MeSH",
+      "title": "Endocrine System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004700",
+      "locator": "Registro D004700 lido em JSON (D004700.json): scopeNote; categoria C19; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos das glândulas endócrinas e doenças resultantes de nível anormal de hormônios disponíveis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-miostioarticulares",
+      "institution": "NLM MeSH",
+      "title": "Musculoskeletal Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009140",
+      "locator": "Registro D009140 lido em JSON (D009140.json): scopeNote; categoria C05; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças dos músculos e de seus ligamentos e demais tecido conjuntivo associados, e dos ossos e cartilagem, vistos em conjunto.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-hematologicas",
+      "institution": "NLM MeSH",
+      "title": "Hemic and Lymphatic Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D006425",
+      "locator": "Registro D006425 lido em JSON (D006425.json): scopeNote; categoria C15; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças hematológicas e do sistema linfático: elementos figurados e componentes químicos do sangue; linfa, linfonodos e linfócitos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neoplasicas",
+      "institution": "NLM MeSH",
+      "title": "Neoplasms",
+      "url": "https://id.nlm.nih.gov/mesh/D009369",
+      "locator": "Registro D009369 lido em JSON (D009369.json): scopeNote; categoria C04; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Crescimento novo e anormal de tecido; neoplasias malignas têm maior anaplasia e propriedades de invasão e metástase em comparação às benignas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    }
+  ],
+  "groupScopes": [
+    {
+      "groupId": "infectocontagiosas",
+      "scope": "Doenças por invasão de microrganismos ou parasitas, incluindo as transmissíveis; a política local adota critério etiológico e não exige contágio direto, o que depende de validação curricular.",
+      "sourceIds": [
+        "SCOPE-infectocontagiosas",
+        "SCOPE-COMMUNICABLE"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neurologicas",
+      "scope": "Sistema nervoso central e periférico, incluindo nervos cranianos; o nervo óptico e o nervo vestibular ficam na fronteira com os grupos ocular e auditivo, questão curricular.",
+      "sourceIds": [
+        "SCOPE-neurologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "psiquiatricas",
+      "scope": "Transtornos mentais definidos (pensamento, afeto e comportamento com sofrimento ou prejuízo); fator desencadeante emocional isolado não basta.",
+      "sourceIds": [
+        "SCOPE-psiquiatricas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "auditivas",
+      "scope": "Ouvido externo, médio e interno, audição e sistema de equilíbrio vestibular.",
+      "sourceIds": [
+        "SCOPE-auditivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "oculares",
+      "scope": "Doenças que afetam o olho, incluindo erros de refração, cristalino, retina e nervo óptico em seu ramo ocular.",
+      "sourceIds": [
+        "SCOPE-oculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "nasais",
+      "scope": "Distúrbios do nariz; proximidade anatômica ou infecção prévia de via aérea superior não basta.",
+      "sourceIds": [
+        "SCOPE-nasais"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "respiratorias",
+      "scope": "Doenças do sistema respiratório; antecedente de infecção respiratória não transfere a categoria.",
+      "sourceIds": [
+        "SCOPE-respiratorias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "cardiovasculares",
+      "scope": "Coração, vasos sanguíneos e pericárdio; o MeSH inclui angiopatias (doença de pequenos vasos) no ramo vascular, e o alcance curricular desse ramo é decisão docente.",
+      "sourceIds": [
+        "SCOPE-cardiovasculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "digestivas",
+      "scope": "Trato gastrointestinal e órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "sourceIds": [
+        "SCOPE-digestivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "genitourinarias",
+      "scope": "Trato urinário e sistema reprodutor.",
+      "sourceIds": [
+        "SCOPE-genitourinarias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "endocrinologicas",
+      "scope": "Glândulas endócrinas e doenças por nível hormonal anormal; o MeSH inclui as complicações do diabetes neste ramo; fator de risco endócrino isolado não basta.",
+      "sourceIds": [
+        "SCOPE-endocrinologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "miostioarticulares",
+      "scope": "Músculos, ligamentos, tecido conjuntivo associado, ossos, cartilagem e articulações; inferência anatômica (p. ex., osso do ouvido) exige validação curricular segundo a política local.",
+      "sourceIds": [
+        "SCOPE-miostioarticulares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "hematologicas",
+      "scope": "Sangue (elementos figurados e componentes químicos) e sistema linfático; sangramento local em órgão não é, por si, doença hematológica.",
+      "sourceIds": [
+        "SCOPE-hematologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neoplasicas",
+      "scope": "Crescimento tecidual novo e anormal, benigno ou maligno; causa, tratamento ou fator de risco não é tumor.",
+      "sourceIds": [
+        "SCOPE-neoplasicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    }
+  ],
+  "records": [
+    {
+      "arrayIndex": 20,
+      "diseaseId": "otite-media-aguda",
+      "diseaseName": "Otite média aguda",
+      "recordObjectSha256": "43f8f344b516661942fb0e6dcf3b112c9393ae738c78ce64af4b32e72c718405",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas",
+        "infectocontagiosas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "O NIDCD define a otite média aguda como a infecção de ouvido mais comum, com partes do ouvido médio infectadas, em geral por bactérias; o CDC (apenas corroboração) a descreve como infecção do ouvido médio por bactérias ou vírus. O descritor genérico Otitis Media do MeSH não está em Infections (silêncio, não exclusão); a forma supurativa está. Aceito pelo critério etiológico da política local, que não afirma contágio direto e depende de validação curricular.",
+          "sourceIds": [
+            "NIDCD-EARINF",
+            "CDC-EARINF",
+            "MESH-OTITISMEDIA",
+            "MESH-OMSUPP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção/inflamação do ouvido médio; o MeSH situa Otitis Media em Ear Diseases > Otitis, o NIDCD descreve efeito sobre a audição e a WHO lista as otites médias entre as causas de perda auditiva.",
+          "sourceIds": [
+            "MESH-OTITISMEDIA",
+            "NIDCD-EARINF",
+            "WHO-HEARING"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "O NIDCD descreve início frequente após resfriado e a participação da tuba auditiva e das adenoides, situadas atrás do nariz; é contexto causal e anatômico vizinho, não doença do nariz estabelecida para o rótulo. A ligação documentada impede negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF",
+            "CDC-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "O NIDCD descreve que a otite costuma começar após infecção de vias aéreas superiores, podendo a mesma bactéria alcançar o ouvido médio; antecedente causal não é identidade diagnóstica, mas a ligação documentada impede negativo. O MeSH situa Otitis Media apenas no ramo otorrinolaringológico.",
+          "sourceIds": [
+            "NIDCD-EARINF",
+            "MESH-OTITISMEDIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "A scope note do MeSH inclui os ossículos auditivos na inflamação do ouvido médio, e a mastoidite — em geral complicação da otite média — está situada em Bone Diseases; trata-se de estrutura vizinha e de complicação, não do rótulo. Não resolvido; não é negativo.",
+          "sourceIds": [
+            "MESH-OTITISMEDIA",
+            "MESH-MASTOIDITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-EARINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "O diagnóstico nomeia infecção/inflamação aguda do ouvido médio, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "NIDCD-EARINF",
+            "MESH-OTITISMEDIA",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "O diagnóstico nomeia infecção/inflamação aguda do ouvido médio, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "NIDCD-EARINF",
+              "MESH-OTITISMEDIA",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 11 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 21,
+      "diseaseId": "labirintite",
+      "diseaseName": "Labirintite",
+      "recordObjectSha256": "b7d56b76fad91c7eeb90ad01167f9fc7363c0fc2c580c858c33493e7118777d2",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas"
+      ],
+      "inputClaimedConditionalGroupIds": [
+        "infectocontagiosas"
+      ],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [
+          "infectocontagiosas"
+        ],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "conditional",
+          "reason": "Condicional declarado no rascunho, confirmado. O NIDCD define labirintite como “infecção ou inflamação” do ouvido interno; o NHS a descreve como infecção do ouvido interno, em geral viral e às vezes bacteriana; a BVS/MS cita causa viral ou bacteriana ao lado de desencadeantes não infecciosos; o MeSH a define apenas como inflamação e não a situa em Infections. A etiologia infecciosa não é implicada por todo uso do rótulo.",
+          "sourceIds": [
+            "NIDCD-BALANCE",
+            "NHS-LABYR",
+            "BVS-LABIRINTITE",
+            "MESH-LABYRINTHITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com labirintite de etiologia infecciosa documentada (viral ou bacteriana).",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "NHS e NIDCD distinguem a labirintite (labirinto) da neurite/neuronite vestibular (nervo vestibular), e o MeSH situa apenas esta última em Nervous System Diseases; a proximidade clínica entre as duas deixa a fronteira sem resolução para o rótulo. Não é negativo.",
+          "sourceIds": [
+            "NHS-LABYR",
+            "NIDCD-BALANCE",
+            "MESH-VESTNEURON",
+            "MESH-LABYRINTHITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "A BVS/MS cita estresse e ansiedade entre os fatores desencadeantes; fator desencadeante não é identidade diagnóstica, mas a ligação documentada impede negativo.",
+          "sourceIds": [
+            "BVS-LABIRINTITE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Inflamação do ouvido interno (labirinto), com tontura, perda de equilíbrio e possível perda auditiva; o MeSH situa Labyrinthitis em Ear Diseases > Labyrinth Diseases e em Ear Diseases > Otitis.",
+          "sourceIds": [
+            "MESH-LABYRINTHITIS",
+            "NIDCD-BALANCE",
+            "NHS-LABYR",
+            "BVS-LABIRINTITE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Associação com resfriado ou gripe é descrita (NIDCD, NHS); antecedente de via aérea superior não torna o rótulo doença do nariz, mas a ligação documentada impede negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE",
+            "NHS-LABYR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "O NIDCD descreve associação frequente com infecção de vias aéreas superiores, como a gripe, e o NHS cita resfriado e gripe como causa habitual; associação causal não é identidade diagnóstica, mas impede negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE",
+            "NHS-LABYR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "A BVS/MS cita hipertensão entre os fatores desencadeantes; fator de risco não transfere a categoria ao rótulo, mas a ligação documentada impede negativo.",
+          "sourceIds": [
+            "BVS-LABIRINTITE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "A BVS/MS cita hipoglicemia e diabetes entre os fatores desencadeantes; fator de risco não transfere a categoria ao rótulo, mas a ligação documentada impede negativo.",
+          "sourceIds": [
+            "BVS-LABIRINTITE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "O diagnóstico nomeia inflamação do ouvido interno, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-LABYRINTHITIS",
+            "NIDCD-BALANCE",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "O diagnóstico nomeia inflamação do ouvido interno, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-LABYRINTHITIS",
+              "NIDCD-BALANCE",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 11 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 22,
+      "diseaseId": "doenca-de-meniere",
+      "diseaseName": "Doença de Ménière",
+      "recordObjectSha256": "d8880047740b4c8be7dc86f466be3de44fb82e560ad2bc855e769e84cfeaf37a",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NIDCD cita infecções virais apenas como uma das teorias de causa, ao lado de outras, e descreve a causa como desconhecida; hipótese não confirma nem exclui o vínculo.",
+          "sourceIds": [
+            "NIDCD-MENIERE",
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Vertigem e perturbação dos sinais de equilíbrio e audição entre o ouvido interno e o cérebro são descritas pelo NIDCD; o MeSH situa a doença apenas em Ear Diseases > Labyrinth Diseases. Nenhuma fonte lida estabelece ou exclui classificação neurológica.",
+          "sourceIds": [
+            "NIDCD-MENIERE",
+            "MESH-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Doença do ouvido interno com vertigem episódica, zumbido, perda auditiva flutuante e plenitude aural; o MeSH a situa em Ear Diseases > Labyrinth Diseases > Endolymphatic Hydrops.",
+          "sourceIds": [
+            "MESH-MENIERE",
+            "MESH-ENDOHYDROPS",
+            "NIDCD-MENIERE",
+            "NIDCD-BALANCE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O NIDCD cita constrição de vasos sanguíneos, como a que ocorre na enxaqueca, como uma das teorias de causa; hipótese não confirma nem exclui o vínculo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-MENIERE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "O diagnóstico nomeia doença do ouvido interno por acúmulo de endolinfa (hidropisia endolinfática), não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-MENIERE",
+            "MESH-ENDOHYDROPS",
+            "NIDCD-MENIERE",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "O diagnóstico nomeia doença do ouvido interno por acúmulo de endolinfa (hidropisia endolinfática), não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-MENIERE",
+              "MESH-ENDOHYDROPS",
+              "NIDCD-MENIERE",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 23,
+      "diseaseId": "otosclerose",
+      "diseaseName": "Otosclerose",
+      "recordObjectSha256": "90a2418f8600210838b6a659b31518341fd48b2a411c50b11e2a0fb793c39fb0",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas",
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NIDCD cita infecção prévia por sarampo como uma das hipóteses de causa, ainda incerta; hipótese não confirma nem exclui o vínculo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Remodelamento ósseo anormal no ouvido médio que fixa o estribo e causa perda auditiva; o MeSH situa Otosclerosis em Ear Diseases (única árvore) e a WHO a lista entre as causas de perda auditiva.",
+          "sourceIds": [
+            "MESH-OTOSCLEROSIS",
+            "NIDCD-OTOSCL",
+            "WHO-HEARING"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Positivo irrestrito declarado no rascunho e não confirmado. A natureza óssea do processo está documentada (remodelamento ósseo anormal, NIDCD; formação de osso esponjoso na cápsula labiríntica, MeSH; os ossículos são ossos), mas a única árvore MeSH do descritor é Ear Diseases e nenhuma taxonomia institucional lida o situa entre as doenças ósseas ou musculoesqueléticas. O vínculo repousa em inferência anatômica, que a própria política local condiciona a validação curricular. Retido, não negativo: nunca usar como distrator.",
+          "sourceIds": [
+            "NIDCD-OTOSCL",
+            "MESH-OTOSCLEROSIS",
+            "MESH-EAROSSICLES",
+            "MESH-BONEDIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-OTOSCL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "A doença é descrita como remodelamento ósseo anormal e formação de osso esponjoso; nenhuma fonte lida a classifica como neoplasia, mas também não foi lida distinção institucional explícita entre essa neoformação óssea e crescimento tecidual novo. Retido por cautela.",
+          "sourceIds": [
+            "NIDCD-OTOSCL",
+            "MESH-OTOSCLEROSIS",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: otosclerose×miostioarticulares — positivo irrestrito declarado no rascunho e não confirmado em taxonomia institucional lida (o MeSH situa Otosclerosis só em Ear Diseases); retirar do conjunto de positivos irrestritos ou submeter a validação curricular antes de qualquer uso, sem jamais tratá-lo como negativo.",
+        "Pares retidos com ligação documentada a resolver: otosclerose×infectocontagiosas (hipótese de sarampo) e ×neoplasicas (neoformação óssea sem distinção explícita); demais retidos: neurologicas, psiquiatricas, oculares, nasais, respiratorias, cardiovasculares, digestivas, genitourinarias, endocrinologicas, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": false,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 vínculo(s) declarado(s) no rascunho não confirmado(s) nesta revisão (miostioarticulares), 0 sobreposição(ões) não incorporada(s) ao conteúdo (nenhuma) e 13 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 24,
+      "diseaseId": "miopia",
+      "diseaseName": "Miopia",
+      "recordObjectSha256": "6719fcc89fc2eb2eac2ab8f460eed376ea8880edb4fa09b5de1a8fe265f11767",
+      "inputClaimedPositiveGroupIds": [
+        "oculares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "oculares"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Erro de refração definido pela forma do olho — globo ocular alongado ou curvatura da córnea/cristalino (NEI, MeSH, BVS/MS) —, não por invasão de microrganismos. Inferência definicional sobre o rótulo; não exclui infecção ocular coexistente.",
+          "sourceIds": [
+            "NEI-MYOPIA",
+            "MESH-MYOPIA",
+            "BVS-MIOPIA",
+            "SCOPE-infectocontagiosas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Erro de refração definido pela forma do olho — globo ocular alongado ou curvatura da córnea/cristalino (NEI, MeSH, BVS/MS) —, não por invasão de microrganismos. Inferência definicional sobre o rótulo; não exclui infecção ocular coexistente.",
+            "sourceIds": [
+              "NEI-MYOPIA",
+              "MESH-MYOPIA",
+              "BVS-MIOPIA",
+              "SCOPE-infectocontagiosas"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "accepted",
+          "reason": "Erro de refração; o MeSH situa Myopia em Eye Diseases > Refractive Errors, o NEI a lista entre as condições oculares e a WHO cita os erros de refração entre as principais causas de deficiência visual.",
+          "sourceIds": [
+            "MESH-MYOPIA",
+            "MESH-REFRACTIVE",
+            "NEI-MYOPIA",
+            "NEI-REFRACTIVE",
+            "NEI-AZ",
+            "WHO-VISION",
+            "BVS-MIOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-MYOPIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Erro de refração por comprimento do globo ocular ou forma da córnea/cristalino, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "NEI-MYOPIA",
+            "MESH-MYOPIA",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Erro de refração por comprimento do globo ocular ou forma da córnea/cristalino, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "NEI-MYOPIA",
+              "MESH-MYOPIA",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 11 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 25,
+      "diseaseId": "glaucoma",
+      "diseaseName": "Glaucoma",
+      "recordObjectSha256": "6df7ef4906e8c43b774a916544e40e128ca342a48498f79b0eb6ca9061a2f829",
+      "inputClaimedPositiveGroupIds": [
+        "oculares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "oculares"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "Rótulo amplo (grupo de doenças, com formas secundárias); o NEI afirma que a causa dos tipos mais comuns não é conhecida. Nenhuma fonte lida estabelece ou exclui etiologia infecciosa.",
+          "sourceIds": [
+            "NEI-GLAUCOMA",
+            "MESH-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Questão deixada em aberto pelo rascunho e não resolvida aqui. O NEI define o glaucoma pelo dano ao nervo óptico; o MeSH situa Optic Nerve Diseases em Nervous System Diseases e em Eye Diseases, mas situa Glaucoma só em Eye Diseases e o glaucoma de pressão normal apenas no ramo ocular de Optic Nerve Diseases. A sobreposição documentada impede negativo; a inclusão no escopo neurológico é decisão curricular.",
+          "sourceIds": [
+            "NEI-GLAUCOMA",
+            "MESH-GLAUCOMA",
+            "MESH-OPTICNERVE",
+            "MESH-LTG",
+            "NIDDK-EYE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "accepted",
+          "reason": "Grupo de doenças oculares que lesam o nervo óptico, em geral com pressão intraocular elevada; o MeSH situa Glaucoma em Eye Diseases > Ocular Hypertension, o NEI o lista entre as doenças oculares, a BVS/MS o define como doença dos olhos e a WHO o cita entre as principais causas de deficiência visual.",
+          "sourceIds": [
+            "MESH-GLAUCOMA",
+            "NEI-GLAUCOMA",
+            "NEI-AZ",
+            "BVS-GLAUCOMA",
+            "WHO-VISION"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O NEI descreve o glaucoma neovascular, por vasos anormais da retinopatia diabética, e o MeSH o trata como forma secundária a outra doença ocular, situada em Eye Diseases. Forma secundária de mecanismo vascular documentada, sem classificação cardiovascular lida; não resolvido, não é negativo.",
+          "sourceIds": [
+            "NEI-DR",
+            "MESH-NEOVASCGLAUC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "O diabetes é fator de risco (BVS/MS; NEI: quase dobra o risco de glaucoma de ângulo aberto) e o NIDDK inclui o glaucoma entre as doenças oculares do diabetes; fator de risco não transfere a categoria ao rótulo, mas a ligação documentada impede negativo.",
+          "sourceIds": [
+            "BVS-GLAUCOMA",
+            "NEI-DR",
+            "NIDDK-EYE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-GLAUCOMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Rótulo amplo (grupo de doenças, com formas secundárias a outras doenças oculares); nenhuma fonte lida estabelece ou exclui relação com neoplasia e não foi lida distinção institucional explícita.",
+          "sourceIds": [
+            "NEI-GLAUCOMA",
+            "MESH-GLAUCOMA",
+            "MESH-NEOVASCGLAUC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 13 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 26,
+      "diseaseId": "catarata",
+      "diseaseName": "Catarata",
+      "recordObjectSha256": "7e20cb87b38728f734b31c395610a696c28c68b16f925aec3016343c8c18d9ee",
+      "inputClaimedPositiveGroupIds": [
+        "oculares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "oculares"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "A BVS/MS descreve a catarata congênita por doenças maternas na gravidez (rubéola, toxoplasmose) e a WHO cita a catarata congênita como causa relevante em crianças; causa infecciosa de um subtipo não torna infeccioso o rótulo genérico, mas impede negativo.",
+          "sourceIds": [
+            "BVS-CATARATA",
+            "WHO-VISION"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "accepted",
+          "reason": "Opacidade do cristalino; o MeSH situa Cataract em Eye Diseases > Lens Diseases, o NEI a lista entre as condições oculares, a BVS/MS a define como doença dos olhos e a WHO a cita entre as principais causas de deficiência visual.",
+          "sourceIds": [
+            "MESH-CATARACT",
+            "NEI-CATARACT",
+            "NEI-AZ",
+            "BVS-CATARATA",
+            "WHO-VISION"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição não declarada no rascunho. A BVS/MS lista a catarata “do diabético” como tipo; NEI e NIDDK descrevem o diabetes como fator que aumenta o risco e antecipa a catarata, e o NIDDK a inclui entre as doenças oculares do diabetes. O descritor Cataract do MeSH está apenas em Eye Diseases e nenhuma taxonomia lida situa essa forma entre as doenças endócrinas. Candidata a condicional (catarata diabética documentada) por decisão curricular; retido, nunca distrator.",
+          "sourceIds": [
+            "BVS-CATARATA",
+            "NEI-CATARACT",
+            "NEI-DR",
+            "NIDDK-EYE",
+            "MESH-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-CATARACT"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "O diagnóstico nomeia opacidade do cristalino (NEI, MeSH), não crescimento tecidual novo e anormal. O NEI cita radioterapia na parte superior do corpo como fator de risco, sem mencionar neoplasia; tratamento não é identidade. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "NEI-CATARACT",
+            "MESH-CATARACT",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "O diagnóstico nomeia opacidade do cristalino (NEI, MeSH), não crescimento tecidual novo e anormal. O NEI cita radioterapia na parte superior do corpo como fator de risco, sem mencionar neoplasia; tratamento não é identidade. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "NEI-CATARACT",
+              "MESH-CATARACT",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 27,
+      "diseaseId": "astigmatismo",
+      "diseaseName": "Astigmatismo",
+      "recordObjectSha256": "d677c2669b27b34b75a5e07d445edd3316008e2c54c853e95657b7f273302b7c",
+      "inputClaimedPositiveGroupIds": [
+        "oculares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "oculares"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "Definido pela curvatura desigual da córnea ou do cristalino, mas o NEI afirma que a causa não é conhecida e que pode surgir após lesão ou cirurgia ocular; como o escopo local é etiológico e a etiologia não está estabelecida nas fontes lidas, não há base para negativo.",
+          "sourceIds": [
+            "NEI-ASTIG",
+            "MESH-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "accepted",
+          "reason": "Erro de refração por curvatura desigual da córnea e/ou do cristalino; o MeSH situa Astigmatism em Eye Diseases > Refractive Errors, o NEI o lista entre as condições oculares e a WHO cita os erros de refração entre as principais causas de deficiência visual.",
+          "sourceIds": [
+            "MESH-ASTIG",
+            "MESH-REFRACTIVE",
+            "NEI-ASTIG",
+            "NEI-REFRACTIVE",
+            "NEI-AZ",
+            "WHO-VISION"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-ASTIG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Erro de refração por curvatura desigual ou irregular da córnea e/ou do cristalino, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "NEI-ASTIG",
+            "MESH-ASTIG",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Erro de refração por curvatura desigual ou irregular da córnea e/ou do cristalino, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "NEI-ASTIG",
+              "MESH-ASTIG",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 28,
+      "diseaseId": "degeneracao-macular-relacionada-idade",
+      "diseaseName": "Degeneração macular relacionada à idade",
+      "recordObjectSha256": "9ba58996cf2c70fe71afa656bca1f8fc4b3ca2c9c27dfd380c8fbc920c5f86c5",
+      "inputClaimedPositiveGroupIds": [
+        "oculares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "oculares"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "O próprio rótulo e o NEI definem a doença como dano à mácula causado pelo envelhecimento, e o MeSH a descreve como alteração degenerativa da retina, em geral de adultos mais velhos: etiologia definida como degenerativa e etária, não infecciosa. Inferência definicional sobre o rótulo; não exclui infecção coexistente.",
+          "sourceIds": [
+            "NEI-AMD",
+            "MESH-MACDEG",
+            "SCOPE-infectocontagiosas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "O próprio rótulo e o NEI definem a doença como dano à mácula causado pelo envelhecimento, e o MeSH a descreve como alteração degenerativa da retina, em geral de adultos mais velhos: etiologia definida como degenerativa e etária, não infecciosa. Inferência definicional sobre o rótulo; não exclui infecção coexistente.",
+            "sourceIds": [
+              "NEI-AMD",
+              "MESH-MACDEG",
+              "SCOPE-infectocontagiosas"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "accepted",
+          "reason": "Doença ocular por dano à mácula, parte da retina; o MeSH situa Macular Degeneration em Eye Diseases > Retinal Diseases, o NEI a lista entre as doenças oculares e a WHO a cita entre as principais causas de deficiência visual.",
+          "sourceIds": [
+            "MESH-MACDEG",
+            "NEI-AMD",
+            "NEI-AZ",
+            "WHO-VISION"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Na forma úmida (neovascular) crescem vasos sanguíneos anormais no fundo do olho (NEI; MeSH Wet Macular Degeneration), e o NEI recomenda manter pressão arterial e colesterol saudáveis para reduzir o risco; o MeSH não situa a doença em Cardiovascular Diseases. Sobreposição vascular documentada e não resolvida; não é negativo.",
+          "sourceIds": [
+            "NEI-AMD",
+            "MESH-WETMD",
+            "MESH-MACDEG"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-AMD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "A forma úmida envolve formação de vasos novos e anormais (neovascularização de coroide, que o MeSH classifica como processo patológico fora do ramo Neoplasms); posição em árvore não é exclusão e não foi lida distinção institucional explícita entre essa neoformação vascular e neoplasia. Retido por cautela.",
+          "sourceIds": [
+            "NEI-AMD",
+            "MESH-WETMD",
+            "MESH-CNV",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 29,
+      "diseaseId": "retinopatia-diabetica",
+      "diseaseName": "Retinopatia diabética",
+      "recordObjectSha256": "d2f3ce94fde966b885b7200d4d2e0f83671e4e7be25f23987bdeca3f3dcf92ca",
+      "inputClaimedPositiveGroupIds": [
+        "oculares",
+        "cardiovasculares",
+        "endocrinologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "oculares",
+          "cardiovasculares",
+          "endocrinologicas"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "digestivas",
+          "genitourinarias",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Complicação microvascular do diabetes causada por glicemia elevada (NEI, MeSH); a WHO lista o diabetes entre as doenças não transmissíveis e o Ministério da Saúde descreve o diabetes tipo 1 como doença crônica não transmissível. Distinção institucional explícita quanto à doença de base; não exclui infecção coexistente.",
+          "sourceIds": [
+            "NEI-DR",
+            "MESH-DR",
+            "WHO-NCD",
+            "MS-DIABETES",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Complicação microvascular do diabetes causada por glicemia elevada (NEI, MeSH); a WHO lista o diabetes entre as doenças não transmissíveis e o Ministério da Saúde descreve o diabetes tipo 1 como doença crônica não transmissível. Distinção institucional explícita quanto à doença de base; não exclui infecção coexistente.",
+            "sourceIds": [
+              "NEI-DR",
+              "MESH-DR",
+              "WHO-NCD",
+              "MS-DIABETES",
+              "SCOPE-COMMUNICABLE"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "A retina envia sinais ao cérebro pelo nervo óptico (NEI) e o diabetes também lesa nervos (WHO; a neuropatia é outra complicação); o MeSH situa Diabetic Retinopathy em Eye, Cardiovascular e Endocrine System Diseases, não em Nervous System Diseases. Nenhuma fonte lida estabelece ou exclui classificação neurológica do rótulo.",
+          "sourceIds": [
+            "NEI-DR",
+            "WHO-DIABETES",
+            "MESH-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "accepted",
+          "reason": "Doença da retina; o MeSH situa Diabetic Retinopathy em Eye Diseases > Retinal Diseases, o NEI a lista entre as condições oculares, o NIDDK a inclui na doença ocular diabética e a WHO a cita entre as principais causas de deficiência visual.",
+          "sourceIds": [
+            "MESH-DR",
+            "NEI-DR",
+            "NEI-AZ",
+            "NIDDK-EYE",
+            "WHO-VISION"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "accepted",
+          "reason": "O MeSH situa explicitamente Diabetic Retinopathy em Cardiovascular Diseases > Vascular Diseases > Diabetic Angiopathies; NEI, NIDDK e WHO descrevem a doença como lesão dos vasos sanguíneos da retina. O vínculo é de classificação vascular (microangiopatia), não de risco cardíaco; a adequação ao uso curricular de “cardiovasculares” fica para o docente.",
+          "sourceIds": [
+            "MESH-DR",
+            "MESH-DIABANGIO",
+            "NEI-DR",
+            "NIDDK-EYE",
+            "WHO-DIABETES"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "O diabetes também lesa os rins (WHO, Ministério da Saúde), mas a doença renal do diabetes é outra complicação, não o rótulo; nenhuma fonte lida estabelece ou exclui o vínculo.",
+          "sourceIds": [
+            "WHO-DIABETES",
+            "MS-DIABETES"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "accepted",
+          "reason": "Complicação do diabetes mellitus; o MeSH situa Diabetic Retinopathy em Endocrine System Diseases > Diabetes Mellitus > Diabetes Complications > Diabetic Angiopathies, e NEI, NIDDK, WHO e Ministério da Saúde descrevem o dano ocular como causado pelo diabetes. O rótulo já nomeia a complicação diagnosticada, não uma inferência a partir de todo diabetes.",
+          "sourceIds": [
+            "MESH-DR",
+            "MESH-DIABCOMPL",
+            "MESH-DIABANGIO",
+            "NEI-DR",
+            "NIDDK-EYE",
+            "WHO-DIABETES",
+            "MS-DIABETES"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Vasos retinianos que vazam ou sangram são descritos (NEI); sangramento ocular local não é doença hematológica estabelecida, e nenhuma fonte lida resolve o par.",
+          "sourceIds": [
+            "NEI-DR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "A forma proliferativa envolve crescimento de vasos novos e anormais (neovascularização patológica, na scope note do MeSH); não foi lida distinção institucional explícita entre essa neoformação vascular e neoplasia. Retido por cautela.",
+          "sourceIds": [
+            "NEI-DR",
+            "NIDDK-EYE",
+            "MESH-DR",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 10 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    }
+  ],
+  "counts": {
+    "diseasesReviewed": 10,
+    "groupsInspected": 14,
+    "diseaseGroupPairsInspected": 140,
+    "declaredPositiveMembershipsVerified": 13,
+    "declaredConditionalMembershipsVerified": 1,
+    "acceptedMemberships": 13,
+    "conditionalMemberships": 1,
+    "heldPairs": 117,
+    "safeNegativeCandidates": 9,
+    "availableSafeNegatives": 0,
+    "modelReviewed": 9,
+    "needsRevision": 1,
+    "prototypeEligible": 0,
+    "clinicalApprovals": 0
+  },
+  "clinicalApproval": false,
+  "curricularApproval": false,
+  "accessLimitations": [
+    {
+      "url": "https://www.cdc.gov/ear-infection/about/index.html",
+      "result": "403 em requisição direta; conteúdo lido somente por extração automática (WebFetch), sem leitura do HTML bruto; usado apenas como corroboração de otite-media-aguda×infectocontagiosas, nunca como base única de um par"
+    },
+    {
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/g/glaucoma",
+      "result": "404 (página inexistente); usada em seu lugar a página da BVS/MS https://bvsms.saude.gov.br/glaucoma/"
+    },
+    {
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/catarata",
+      "result": "404 (página inexistente); usada em seu lugar a página da BVS/MS https://bvsms.saude.gov.br/catarata/"
+    },
+    {
+      "url": "https://bvsms.saude.gov.br/retinopatia-diabetica/",
+      "result": "404; nenhuma página do Ministério da Saúde específica de retinopatia diabética foi lida (usada a página geral de diabetes do gov.br)"
+    },
+    {
+      "url": "https://bvsms.saude.gov.br/otite-media/",
+      "result": "404; nenhuma página do Ministério da Saúde foi lida para otite média aguda"
+    },
+    {
+      "url": "https://bvsms.saude.gov.br/degeneracao-macular-relacionada-a-idade-dmri/",
+      "result": "404; nenhuma página do Ministério da Saúde foi lida para degeneração macular relacionada à idade"
+    },
+    {
+      "url": "https://bvsms.saude.gov.br/astigmatismo/",
+      "result": "404; nenhuma página do Ministério da Saúde foi lida para astigmatismo"
+    },
+    {
+      "url": "https://medlineplus.gov/ency/article/001054.htm",
+      "result": "abriu (200), mas a página traz aviso de licença A.D.A.M. que restringe extração automatizada; não usada como evidência (labirintite coberta por NIDCD, NHS e BVS/MS)"
+    },
+    {
+      "url": "https://icd.who.int/browse/2025-01/mms/en",
+      "result": "não consultada nesta passagem; ICD-11, DeCS e Orphanet não foram usados como evidência. Páginas do Ministério da Saúde para doença de Ménière e otosclerose não foram procuradas"
+    }
+  ],
+  "completion": {
+    "boundedReviewComplete": true,
+    "sourceDraftEdited": false,
+    "applicationEdited": false,
+    "rootReviewEdited": false,
+    "otherDiseaseRecordsReviewed": false,
+    "clinicalApprovalGranted": false,
+    "remainingWork": "Resolve held pairs and the unconfirmed declared positive (otosclerose×miostioarticulares) in a separately authorized content change; no extension to the 214 records outside indexes 20–29 (other batches, including batch 003 for indexes 10–19, are reviewed separately and were not read in this pass)."
+  }
+}
