@@ -22,6 +22,7 @@ test("complete draft batches validate without changing the reviewed base", () =>
   assert.equal(result.addedStories, 10)
   assert.equal(result.clinicalApproval, false)
   assert.equal(result.appIntegration, false)
+  assert.equal(result.complete, true)
   assert.deepEqual(bytes, before)
 })
 
@@ -40,4 +41,16 @@ test("fabricated source evidence, missing paths, unknown references, and approva
   batch.stories[3].review.clinicalApproval = true
   const errors = validateInterviewBatches(bytes, [batch]).errors
   for (const phrase of ["source quote", "every path", "unknown reference", "draft-only gate"]) assert.ok(errors.some((message) => message.includes(phrase)), phrase)
+})
+
+test("partial checkpoints report incomplete coverage without relaxing evidence checks", () => {
+  const { bytes, batch } = fixture()
+  batch.stories = batch.stories.slice(0, 5)
+  const result = validateInterviewBatches(bytes, [batch], undefined, { allowPartial: true })
+  assert.equal(result.structuralPass, true)
+  assert.equal(result.complete, false)
+  assert.equal(result.addedStories, 5)
+  assert.ok(result.warnings.some((message) => message.includes("incomplete context")))
+  batch.stories[0].acceptedPathEvidence[0].quote = "Fabricated quote"
+  assert.equal(validateInterviewBatches(bytes, [batch], undefined, { allowPartial: true }).structuralPass, false)
 })

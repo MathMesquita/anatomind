@@ -1,0 +1,3280 @@
+{
+  "schemaVersion": 1,
+  "topic": "interrogatorio",
+  "baseSha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+  "assignedContextIds": [
+    "ic-elementos-gerais-febre-sudorese",
+    "ic-elementos-gerais-febre-prurido",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-acuidade-visual",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-escotomas",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-turvacao-visual",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-xantopsia",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-amaurose",
+    "ic-orgaos-dos-sentidos-aparelho-auditivo-otorragia",
+    "ic-orgaos-dos-sentidos-aparelho-auditivo-acuidade-auditiva",
+    "ic-orgaos-dos-sentidos-aparelho-auditivo-secrecao",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-dor",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-esternutos",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-obstrucao-nasal",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinorreia",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-secrecoes",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiposmia"
+  ],
+  "generation": {
+    "model": "unknown",
+    "modelRequested": "gpt6luna",
+    "executionVersion": "unknown",
+    "promptVersion": "interrogatorio-next-01",
+    "date": "2026-11-15",
+    "metadataBasis": "Modelo solicitado pelo usuário; versão de execução indisponível.",
+    "authorship": "synthetic-patient-voice"
+  },
+  "review": {
+    "status": "draft",
+    "clinicalReview": "not-recorded",
+    "independentReview": "not-recorded",
+    "clinicalApproval": false,
+    "editorialApproval": false
+  },
+  "productionCheckpoint": {
+    "status": "partial",
+    "targetStories": 200,
+    "actualStories": 50,
+    "completedContextIds": [
+      "ic-elementos-gerais-febre-sudorese",
+      "ic-elementos-gerais-febre-prurido",
+      "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+    ],
+    "pendingContextIds": [
+      "ic-orgaos-dos-sentidos-aparelho-ocular-acuidade-visual",
+      "ic-orgaos-dos-sentidos-aparelho-ocular-escotomas",
+      "ic-orgaos-dos-sentidos-aparelho-ocular-turvacao-visual",
+      "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+      "ic-orgaos-dos-sentidos-aparelho-ocular-xantopsia",
+      "ic-orgaos-dos-sentidos-aparelho-ocular-amaurose",
+      "ic-orgaos-dos-sentidos-aparelho-auditivo-otorragia",
+      "ic-orgaos-dos-sentidos-aparelho-auditivo-acuidade-auditiva",
+      "ic-orgaos-dos-sentidos-aparelho-auditivo-secrecao",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-dor",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-esternutos",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-obstrucao-nasal",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinorreia",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-secrecoes",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiposmia"
+    ],
+    "independentReview": "pending",
+    "clinicalApproval": false
+  },
+  "stories": [
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-01",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Ultimamente acordo com a camiseta molhada de suor, mesmo quando deixo o ventilador ligado.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Ultimamente acordo com a camiseta molhada de suor, mesmo quando deixo o ventilador ligado.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Ultimamente acordo com a camiseta molhada de suor, mesmo quando deixo o ventilador ligado."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-02",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Enquanto conversava no trabalho, percebi que o suor escorria pela testa e molhava a gola da camisa.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Enquanto conversava no trabalho, percebi que o suor escorria pela testa e molhava a gola da camisa.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Enquanto conversava no trabalho, percebi que o suor escorria pela testa e molhava a gola da camisa."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-03",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Tenho suado bastante nas mãos; o papel que seguro fica úmido depois de alguns minutos.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Tenho suado bastante nas mãos; o papel que seguro fica úmido depois de alguns minutos.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho suado bastante nas mãos; o papel que seguro fica úmido depois de alguns minutos."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-04",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "À noite, o travesseiro fica úmido de suor e preciso virar o lado para continuar dormindo.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "À noite, o travesseiro fica úmido de suor e preciso virar o lado para continuar dormindo.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "À noite, o travesseiro fica úmido de suor e preciso virar o lado para continuar dormindo."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-05",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Mesmo sentado lendo, sinto o suor se juntar na nuca e escorrer pelas costas.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Mesmo sentado lendo, sinto o suor se juntar na nuca e escorrer pelas costas.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Mesmo sentado lendo, sinto o suor se juntar na nuca e escorrer pelas costas."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-06",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Quando termino de arrumar a mesa, a camiseta está encharcada de suor, mais do que eu esperaria."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-07",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Nos últimos dias, tenho notado suor em excesso no rosto, até em momentos tranquilos."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-08",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Saio do banho e, pouco depois, já estou com suor acumulado no peito.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Saio do banho e, pouco depois, já estou com suor acumulado no peito.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Saio do banho e, pouco depois, já estou com suor acumulado no peito."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-09",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Minha roupa fica úmida de suor durante reuniões em que quase não me mexo."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-sudorese-story-10",
+      "contextId": "ic-elementos-gerais-febre-sudorese",
+      "text": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-sudorese"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve sudorese com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-sudorese",
+          "quote": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Sudorese"
+          },
+          "sourceQuote": "suor excessivo",
+          "rationale": "O relato documenta sudorese conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-sweating"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho precisado trocar a blusa porque o suor deixa uma marca molhada nas costas."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-01",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Sinto uma coceira espalhada pelos braços e pelas pernas, e acabo me coçando sem perceber."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-02",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De noite, uma coceira pelo corpo me faz parar de ler para ficar esfregando a pele."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-03",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde ontem, estou com coceira no tronco; não vejo nada diferente, só a vontade de coçar."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-04",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Às vezes a coceira aparece nos braços quando estou quieta no sofá e me dá vontade de arranhar."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-05",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho uma coceira que vai e volta nas pernas, e esfregar a pele alivia por um instante."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-06",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Quando visto a roupa de dormir, começo a sentir coceira nos ombros e fico passando a mão no local.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Quando visto a roupa de dormir, começo a sentir coceira nos ombros e fico passando a mão no local.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Quando visto a roupa de dormir, começo a sentir coceira nos ombros e fico passando a mão no local."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Quando visto a roupa de dormir, começo a sentir coceira nos ombros e fico passando a mão no local.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Quando visto a roupa de dormir, começo a sentir coceira nos ombros e fico passando a mão no local."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-07",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Uma coceira incômoda toma a pele das costas; peço para alguém coçar porque não alcanço.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Uma coceira incômoda toma a pele das costas; peço para alguém coçar porque não alcanço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Uma coceira incômoda toma a pele das costas; peço para alguém coçar porque não alcanço."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Uma coceira incômoda toma a pele das costas; peço para alguém coçar porque não alcanço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Uma coceira incômoda toma a pele das costas; peço para alguém coçar porque não alcanço."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-08",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Durante o expediente, sinto coceira nos braços e preciso me controlar para não ficar coçando.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Durante o expediente, sinto coceira nos braços e preciso me controlar para não ficar coçando.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Durante o expediente, sinto coceira nos braços e preciso me controlar para não ficar coçando."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Durante o expediente, sinto coceira nos braços e preciso me controlar para não ficar coçando.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Durante o expediente, sinto coceira nos braços e preciso me controlar para não ficar coçando."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-09",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Depois de deitar, percebo coceira em várias partes da pele e demoro a parar de me mexer.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Depois de deitar, percebo coceira em várias partes da pele e demoro a parar de me mexer.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Depois de deitar, percebo coceira em várias partes da pele e demoro a parar de me mexer."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Depois de deitar, percebo coceira em várias partes da pele e demoro a parar de me mexer.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Depois de deitar, percebo coceira em várias partes da pele e demoro a parar de me mexer."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-febre-prurido-story-10",
+      "contextId": "ic-elementos-gerais-febre-prurido",
+      "text": "Minha pele fica com uma coceira insistente em diferentes lugares, sem eu saber o motivo.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-febre-prurido",
+        "ic-pele-sem-subgrupo-prurido"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-febre-prurido",
+          "quote": "Minha pele fica com uma coceira insistente em diferentes lugares, sem eu saber o motivo.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > FEBRE: > Prurido"
+          },
+          "sourceQuote": "coceira",
+          "rationale": "O relato documenta prurido conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Minha pele fica com uma coceira insistente em diferentes lugares, sem eu saber o motivo."
+        },
+        {
+          "contextId": "ic-pele-sem-subgrupo-prurido",
+          "quote": "Minha pele fica com uma coceira insistente em diferentes lugares, sem eu saber o motivo.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 6,
+            "locator": "PELE > Prurido"
+          },
+          "sourceQuote": "Coceira; sensação desagradável na pele que  evoca o desejo de coçar.",
+          "rationale": "O trecho descreve prurido na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [
+            "mesh-pruritus"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Minha pele fica com uma coceira insistente em diferentes lugares, sem eu saber o motivo."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-06",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Passei a tarde quieta para descansar, mas o cansaço e a sensação de esgotamento continuaram iguais.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Passei a tarde quieta para descansar, mas o cansaço e a sensação de esgotamento continuaram iguais.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Passei a tarde quieta para descansar, mas o cansaço e a sensação de esgotamento continuaram iguais."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-07",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Não é só depois de esforço: acordo cansado e sigo assim mesmo quando tiro um tempo para repousar.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Não é só depois de esforço: acordo cansado e sigo assim mesmo quando tiro um tempo para repousar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Não é só depois de esforço: acordo cansado e sigo assim mesmo quando tiro um tempo para repousar."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-08",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Nos últimos tempos, sinto um desgaste físico e mental persistente; dormir um pouco mais não tem ajudado muito.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Nos últimos tempos, sinto um desgaste físico e mental persistente; dormir um pouco mais não tem ajudado muito.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Nos últimos tempos, sinto um desgaste físico e mental persistente; dormir um pouco mais não tem ajudado muito."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-09",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Leio a mesma página várias vezes porque me sinto mentalmente esgotado, mesmo após uma noite de sono.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Leio a mesma página várias vezes porque me sinto mentalmente esgotado, mesmo após uma noite de sono.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Leio a mesma página várias vezes porque me sinto mentalmente esgotado, mesmo após uma noite de sono."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-10",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "text": "Já faz um tempo que o cansaço me acompanha; descansar no domingo não basta para me sentir renovado.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "quote": "Já faz um tempo que o cansaço me acompanha; descansar no domingo não basta para me sentir renovado.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [
+            "mesh-fatigue"
+          ],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Já faz um tempo que o cansaço me acompanha; descansar no domingo não basta para me sentir renovado."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-01",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido fraca no corpo todo há vários dias, mesmo nos dias em que quase não faço esforço."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-02",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Falta força até para tarefas comuns, e essa sensação continua quando passo um dia descansando."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-03",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Desde a semana passada, parece que estou sem energia e com fraqueza geral, sem ter feito nada pesado."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-04",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Não é uma dor; é uma falta de força espalhada pelo corpo que permanece mesmo em repouso."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-05",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho dificuldade para começar as coisas porque me sinto sem energia e fraca, embora não tenha feito esforço."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "text": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "quote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "quote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço."
+        },
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "quote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-06",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Hoje acordei com uma quantidade maior de secreção seca nos cílios do que costumo notar.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Hoje acordei com uma quantidade maior de secreção seca nos cílios do que costumo notar.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Hoje acordei com uma quantidade maior de secreção seca nos cílios do que costumo notar."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-07",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Tenho visto um líquido esbranquiçado no canto do olho, principalmente ao acordar, mas é pouca coisa.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Tenho visto um líquido esbranquiçado no canto do olho, principalmente ao acordar, mas é pouca coisa.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Tenho visto um líquido esbranquiçado no canto do olho, principalmente ao acordar, mas é pouca coisa."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-08",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Depois de passar algumas horas fora, encontrei secreção transparente acumulada no canto dos olhos.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Depois de passar algumas horas fora, encontrei secreção transparente acumulada no canto dos olhos.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Depois de passar algumas horas fora, encontrei secreção transparente acumulada no canto dos olhos."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-09",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Nos últimos dias, preciso limpar uma secreção amarelada que volta a aparecer no olho direito.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Nos últimos dias, preciso limpar uma secreção amarelada que volta a aparecer no olho direito.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Nos últimos dias, preciso limpar uma secreção amarelada que volta a aparecer no olho direito."
+        }
+      ],
+      "repairHistory": []
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-10",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "text": "Notei uma secreção aquosa saindo do canto do olho esquerdo; a quantidade é pequena, mas se repete.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "quote": "Notei uma secreção aquosa saindo do canto do olho esquerdo; a quantidade é pequena, mas se repete.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceQuote": "anotar aspecto e quantidade",
+          "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+          "referenceIds": [],
+          "definitionBasis": "source-description-with-verified-terminology",
+          "focusQuote": "Notei uma secreção aquosa saindo do canto do olho esquerdo; a quantidade é pequena, mas se repete."
+        }
+      ],
+      "repairHistory": []
+    }
+  ],
+  "clinicalReferences": [
+    {
+      "id": "mesh-sweating",
+      "title": "NLM MeSH — Sweating (D013546)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013546",
+      "locator": "Scope Note: processo de secreção exócrina das glândulas sudoríparas.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-pruritus",
+      "title": "NLM MeSH — Pruritus (D011537)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D011537",
+      "locator": "Scope Note: sensação de coceira que provoca vontade de esfregar ou arranhar a pele.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-fatigue",
+      "title": "NLM MeSH — Fatigue (D005221)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005221",
+      "locator": "Scope Note do descritor Fatigue.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-scotoma",
+      "title": "NLM MeSH — Scotoma (D012607)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D012607",
+      "locator": "Scope Note: defeito localizado do campo visual cercado por área de visão normal.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-blindness",
+      "title": "NLM MeSH — Blindness / Amaurosis (D001766)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D001766",
+      "locator": "Scope Note e Entry Terms: perda/ausência de percepção visual; Amaurosis listado como Entry Term.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-sneezing",
+      "title": "NLM MeSH — Sneezing (D012912)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D012912",
+      "locator": "Scope Note: expulsão involuntária, súbita e vigorosa de ar pelo nariz e boca.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-nasal-obstruction",
+      "title": "NLM MeSH — Nasal Obstruction (D015508)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D015508",
+      "locator": "Scope Note: impedimento à passagem de ar para dentro e fora do nariz.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-rhinorrhea",
+      "title": "NLM MeSH — Rhinorrhea (D000086722)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D000086722",
+      "locator": "Scope Note: excesso de secreção nasal.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    },
+    {
+      "id": "mesh-anosmia",
+      "title": "NLM MeSH — Anosmia / Hyposmia (D000086582)",
+      "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D000086582",
+      "locator": "Scope Note de Anosmia; conceito relacionado Hyposmia.",
+      "accessed": "2026-11-15",
+      "verification": "Registro MeSH consultado diretamente; apoio terminológico descritivo, sem inferência de causa."
+    }
+  ]
+}

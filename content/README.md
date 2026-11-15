@@ -26,6 +26,8 @@ Archived review decisions stay visible after a draft changes, but the status rep
 
 Additional interrogation drafts may be generated separately in `batches/` while the base bank is under review. Check multiple batches together with `node tools/validate-interview-batches.mjs content/batches/<batch>.json ...`. This read-only check rejects stale bases, overlapping assignments, incomplete ten-story sets, duplicate IDs, unsupported source quotations, and missing path evidence. It neither merges drafts nor changes the app.
 
+Use `--partial` only to inspect interrupted generation checkpoints. This keeps all evidence checks, reports `complete: false` and missing sets explicitly, and never enables app integration. A successful partial structural check must not be presented as a finished batch or reviewed content.
+
 The validator checks source locators, IDs, exact story evidence spans, missing-field agreement, coherent reference mappings, image-marker coordinates, duplicate text, and coverage shortfalls. It cannot verify clinical claims, source fidelity, naturalness, visual accuracy, or whether a cited page genuinely supports a claim. Its output always separates structural success from clinical approval.
 
 ## Review and integration

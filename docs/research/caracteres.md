@@ -106,3 +106,19 @@ Foram executados:
 O gerador não grava arquivos. Para atualizar o banco, ele emite patches com `--patch-header` e `--patch-group=<id>`; aplique-os com `apply_patch`. Os grupos são os 11 IDs do JSON. Depois, rode `--check` e o validador. Sem opções, mostra apenas a cobertura calculada. A montagem não chama APIs nem tenta novamente uma geração indisponível.
 
 Faltam **0 histórias para a meta de elaboração**. Permanecem **220 histórias sem revisão independente e clínica**, além da validação didática da política de compostos/gabarito e da futura adaptação do consumidor. Nenhuma história conta para uma meta de publicação aprovada enquanto essas etapas não forem cumpridas.
+
+## Checkpoint de correções pós-revisão independente
+
+Checkpoint de trabalho: 2026-11-15, 11:25 America/Sao_Paulo. O rascunho-base confirmado antes das alterações tinha SHA-256 `f3d5e9066e6cd9e4f517f4e6479a1f4f6a2bdb76bd078d6b97b3191b7e9d7da7`. A entrada independente v1 permanece somente leitura: `docs/reviews/caracteres-v1.json` SHA-256 `8289f1d93693256233b613c3f0092b2b4d220ec5e036fe0f7821bbd366a3fb9e`; Markdown SHA-256 `8c2a4227586886560bb80ff5fd99889cb22e75c4bb7aeec74a9f757b2a9a8271`.
+
+O gerador agora contém um conjunto explícito de 60 substituições editoriais vinculado a esses hashes, preserva proveniência do modelo como `unknown` e registra cada ID, hash do texto original e achados aplicáveis. As substituições permanecem `draft-awaiting-independent-rereview`; aprovação clínica e liberação continuam falsas. Os rótulos de febre são neutros para exibição e a redação original está somente em `sourceLabel`, marcada para arquivo, não para conteúdo didático. Os primeiros grupos já aplicados ao JSON neste checkpoint são dor, tosse, expectoração, dispneia e cianose; ainda falta aplicar os demais grupos, revisar a consistência e rodar o validador estrutural atualizado.
+
+Não editar nem regenerar os 160 textos/gabaritos que passaram na revisão. Antes de concluir, comparar seus campos `text` e `answer` com o snapshot base hashado acima; se houver diferença, parar e reparar somente o conjunto das 60 histórias em revisão.
+
+### Consolidação local após interrupção dos agentes
+
+Em 2026-11-15, as substituições das 60 histórias já estavam aplicadas em todos os grupos. O texto acima é o checkpoint parcial anterior, não a cobertura final da aplicação. A comparação com o snapshot versionado confirmou que texto, gabarito, fonte, evidências e conjuntos de campos das 160 histórias anteriormente aceitas permaneceram inalterados. Isso não substitui a revisão das 60 correções.
+
+O gerador foi ajustado para preservar a proveniência editorial já existente nas histórias não alteradas, sem reatribuir autoria, e para apontar divergências por ID em vez de imprimir o banco inteiro. `--check` e o validador estrutural atualizado passaram. O estado calculado é: 220 histórias, 218 rascunhos com gabarito e duas histórias com resposta explicitamente desconhecida (`expectoracao-12` e `perda-de-peso-19`), ambas retidas sem correção automática. São 80 conjuntos vazios, 96 com uma lacuna e 42 com várias; essas contagens excluem as duas retidas.
+
+O metadado de revisão passou a distinguir a revisão v1 concluída da revisão pendente da versão corrigida. A tentativa antiga indisponível permanece no histórico, não como suposto estado de toda a revisão atual. Aprovação clínica, editorial e liberação para o app continuam ausentes.

@@ -35,7 +35,7 @@ test("a changed draft cannot inherit the review of an older snapshot", () => {
   const stale = summarizeReview(Buffer.from("edited snapshot"), report)
   assert.equal(stale.matchesCurrentSnapshot, false)
   assert.equal(stale.modelReviewedInMatchingSnapshot, 0)
-  assert.equal(stale.recordedStoryDecisions, 2, "historical review stays visible")
+  assert.equal(stale.recordedItemDecisions, 2, "historical review stays visible")
   assert.equal(stale.clinicalApproval, false)
 })
 
@@ -44,4 +44,14 @@ test("missing review fingerprints and held records fail closed", () => {
   assert.equal(summarizeReview(bytes, { stories: [{ disposition: "model-reviewed" }] }).modelReviewedInMatchingSnapshot, 0)
   const report = { input: { sha256: createHash("sha256").update(bytes).digest("hex") }, stories: [{ disposition: "model-reviewed", hold: true }] }
   assert.equal(summarizeReview(bytes, report).modelReviewedInMatchingSnapshot, 0)
+})
+
+test("partial reviewer checkpoints retain their real item count and incomplete status", () => {
+  const bytes = Buffer.from("snapshot")
+  const report = { status: "partial-independent-review", snapshot: { sha256: createHash("sha256").update(bytes).digest("hex") }, items: [{ disposition: "model-reviewed", hold: false }] }
+  const result = summarizeReview(bytes, report)
+  assert.equal(result.recordedItemDecisions, 1)
+  assert.equal(result.reportStatus, "partial-independent-review")
+  assert.equal(result.matchesCurrentSnapshot, true)
+  assert.equal(result.clinicalApproval, false)
 })

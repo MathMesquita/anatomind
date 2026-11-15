@@ -7,10 +7,11 @@ import { validateContent } from "./validate-content.mjs"
 const normalize = (text) => typeof text === "string" ? text.replace(/\s+/g, " ").trim() : ""
 
 /** Read-only: validate additions against one frozen base, without changing that review's input. */
-export function validateInterviewBatches(baseBytes, batches, sourceRegistry) {
+export function validateInterviewBatches(baseBytes, batches, sourceRegistry, { allowPartial = false } = {}) {
   const base = JSON.parse(baseBytes)
   const sha256 = createHash("sha256").update(baseBytes).digest("hex")
-  const errors = [], assigned = new Set(), additions = []
+  const errors = [], partialWarnings = [], assigned = new Set(), additions = []
+  let complete = true
   const contexts = new Map(base.contexts.map((context) => [context.id, context]))
   const existingIds = new Set(base.stories.map((story) => story.id))
   const refs = new Map((base.clinicalReferences ?? []).map((reference) => [reference.id, reference]))
@@ -24,13 +25,19 @@ export function validateInterviewBatches(baseBytes, batches, sourceRegistry) {
     const contextIds = Array.isArray(batch.assignedContextIds) ? batch.assignedContextIds : []
     const stories = Array.isArray(batch.stories) ? batch.stories : []
     check(contextIds.length > 0, `${label}: no assigned contexts`)
+    if (batch.productionCheckpoint?.targetStories !== undefined) check(batch.productionCheckpoint.targetStories === contextIds.length * 10, `${label}: target count disagrees with assigned contexts`)
     for (const id of contextIds) {
       const context = contexts.get(id)
       check(!assigned.has(id), `${label}: context ${id} assigned more than once`)
       assigned.add(id)
       check(context?.storyEligibility?.status === "eligible-draft", `${label}: context ${id} is not eligible`)
       check(!base.stories.some((story) => story.contextId === id), `${label}: context ${id} already has stories`)
-      check(stories.filter((story) => story.contextId === id).length === 10, `${label}: context ${id} needs exactly 10 stories`)
+      const count = stories.filter((story) => story.contextId === id).length
+      if (count !== 10) {
+        complete = false
+        if (allowPartial && count < 10) partialWarnings.push(`${label}: incomplete context ${id}: ${count}/10 stories`)
+        else errors.push(`${label}: context ${id} needs exactly 10 stories`)
+      }
     }
     for (const reference of batch.clinicalReferences ?? []) {
       if (refs.has(reference.id)) check(JSON.stringify(refs.get(reference.id)) === JSON.stringify(reference), `${label}: conflicting reference ${reference.id}`)
@@ -60,14 +67,14 @@ export function validateInterviewBatches(baseBytes, batches, sourceRegistry) {
   }
   const validation = validateContent({ ...base, stories: [...base.stories, ...additions], clinicalReferences: [...refs.values()] }, { sourceRegistry })
   errors.push(...validation.errors)
-  return { baseSha256: sha256, baseStories: base.stories.length, addedStories: additions.length, totalStories: base.stories.length + additions.length, assignedContexts: assigned.size, errors, warnings: validation.warnings, structuralPass: errors.length === 0, clinicalApproval: false, appIntegration: false }
+  return { baseSha256: sha256, baseStories: base.stories.length, addedStories: additions.length, totalStories: base.stories.length + additions.length, assignedContexts: assigned.size, complete, partialCheck: allowPartial, errors, warnings: [...partialWarnings, ...validation.warnings], structuralPass: errors.length === 0, clinicalApproval: false, appIntegration: false }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
-  const files = process.argv.slice(2)
+  const files = process.argv.slice(2).filter((arg) => arg !== "--partial")
   if (!files.length) { console.error("Pass one or more draft batch JSON paths."); process.exitCode = 1 }
   else {
-    const result = validateInterviewBatches(readFileSync("content/drafts/interrogatorio.json"), files.map((file) => JSON.parse(readFileSync(file, "utf8"))), JSON.parse(readFileSync("content/sources.json", "utf8")))
+    const result = validateInterviewBatches(readFileSync("content/drafts/interrogatorio.json"), files.map((file) => JSON.parse(readFileSync(file, "utf8"))), JSON.parse(readFileSync("content/sources.json", "utf8")), { allowPartial: process.argv.includes("--partial") })
     console.log(JSON.stringify(result, null, 2))
     if (!result.structuralPass) process.exitCode = 1
   }

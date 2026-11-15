@@ -6,19 +6,20 @@ import { pathToFileURL } from "node:url"
 /** A review of an older snapshot must never silently approve edited content. */
 export function summarizeReview(bytes, report) {
   const currentSha256 = createHash("sha256").update(bytes).digest("hex")
-  const reviewedSha256 = report.draftSha256 ?? report.input?.sha256 ?? null
+  const reviewedSha256 = report.draftSha256 ?? report.input?.sha256 ?? report.snapshot?.sha256 ?? null
   const matchesCurrentSnapshot = reviewedSha256 === currentSha256
-  const stories = Array.isArray(report.stories) ? report.stories : []
+  const records = [report.stories, report.items, report.diseases].find(Array.isArray) ?? []
   return {
     reviewedSha256,
     matchesCurrentSnapshot,
-    recordedStoryDecisions: stories.length,
-    recordedDispositions: stories.reduce((counts, story) => {
-      const disposition = story.disposition ?? "not-recorded"
+    reportStatus: report.status ?? report.reviewer?.status ?? "not-recorded",
+    recordedItemDecisions: records.length,
+    recordedDispositions: records.reduce((counts, item) => {
+      const disposition = item.disposition ?? "not-recorded"
       counts[disposition] = (counts[disposition] ?? 0) + 1
       return counts
     }, {}),
-    modelReviewedInMatchingSnapshot: matchesCurrentSnapshot ? stories.filter((story) => story.disposition === "model-reviewed" && !story.hold).length : 0,
+    modelReviewedInMatchingSnapshot: matchesCurrentSnapshot ? records.filter((item) => item.disposition === "model-reviewed" && !item.hold).length : 0,
     clinicalApproval: false,
     note: "Snapshot matching and model review are not clinical or publication approval.",
   }

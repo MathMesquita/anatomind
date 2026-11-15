@@ -1,0 +1,3174 @@
+{
+  "schemaVersion": 1,
+  "topic": "interrogatorio",
+  "baseSha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+  "assignedContextIds": [
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+    "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dor",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dispneia",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-tosse",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-expectoracao",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-hemoptise",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-hemoptoicos",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-chiado-no-peito",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-cianose",
+    "ic-aparelho-cardiovascular-sem-subgrupo-dor",
+    "ic-aparelho-cardiovascular-sem-subgrupo-dispneia",
+    "ic-aparelho-cardiovascular-sem-subgrupo-flexopneia",
+    "ic-aparelho-cardiovascular-sem-subgrupo-dispneia-paroxistica-noturna",
+    "ic-aparelho-cardiovascular-sem-subgrupo-platipneia",
+    "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+    "ic-aparelho-cardiovascular-sem-subgrupo-edema"
+  ],
+  "generation": {
+    "model": "gpt6luna",
+    "modelVersion": "unknown",
+    "promptVersion": "interrogatorio-next-02",
+    "date": "2026-11-15",
+    "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+    "authorship": "synthetic-patient-voice",
+    "definitionSourceOnly": true
+  },
+  "review": {
+    "status": "draft",
+    "clinicalReview": "not-performed",
+    "clinicalApproval": false,
+    "editorialApproval": false,
+    "independentReview": "not-performed"
+  },
+  "productionCheckpoint": {
+    "status": "partial",
+    "targetStories": 200,
+    "actualStories": 50,
+    "completedContextIds": [
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia"
+    ],
+    "pendingContextIds": [
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dor",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dispneia",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-tosse",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-expectoracao",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-hemoptise",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-hemoptoicos",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-chiado-no-peito",
+      "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-cianose",
+      "ic-aparelho-cardiovascular-sem-subgrupo-dor",
+      "ic-aparelho-cardiovascular-sem-subgrupo-dispneia",
+      "ic-aparelho-cardiovascular-sem-subgrupo-flexopneia",
+      "ic-aparelho-cardiovascular-sem-subgrupo-dispneia-paroxistica-noturna",
+      "ic-aparelho-cardiovascular-sem-subgrupo-platipneia",
+      "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+      "ic-aparelho-cardiovascular-sem-subgrupo-edema"
+    ],
+    "independentReview": "pending",
+    "clinicalApproval": false
+  },
+  "stories": [
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-01",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "Na padaria, o cheiro do pão recém-assado me parece muito mais forte do que para as outras pessoas; sinto de longe, antes de entrar.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "Na padaria, o cheiro do pão recém-assado me parece muito mais forte do que para as outras pessoas; sinto de longe, antes de entrar.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-02",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "Quando abro o armário onde guardo o café, o aroma vem tão intenso que fecho a porta logo em seguida; minha irmã quase não nota.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "Quando abro o armário onde guardo o café, o aroma vem tão intenso que fecho a porta logo em seguida; minha irmã quase não nota.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-03",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "No ônibus, percebo o perfume de alguém várias fileiras antes e acho o cheiro muito forte, embora a pessoa ao meu lado mal perceba.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "No ônibus, percebo o perfume de alguém várias fileiras antes e acho o cheiro muito forte, embora a pessoa ao meu lado mal perceba.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-04",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "O cheiro do sabonete no banho fica forte demais para mim; uso bem pouco porque continuo sentindo o aroma mesmo depois de enxaguar.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "O cheiro do sabonete no banho fica forte demais para mim; uso bem pouco porque continuo sentindo o aroma mesmo depois de enxaguar.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-05",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "Quando minha vizinha cozinha alho, sinto o cheiro assim que ela começa, mesmo com a janela fechada; ela diz que só percebe depois.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "Quando minha vizinha cozinha alho, sinto o cheiro assim que ela começa, mesmo com a janela fechada; ela diz que só percebe depois.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-06",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "Abri um pote de canela e o cheiro veio tão marcado que precisei afastá-lo; não parecia outro cheiro, só muito mais intenso.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "Abri um pote de canela e o cheiro veio tão marcado que precisei afastá-lo; não parecia outro cheiro, só muito mais intenso.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-07",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "No mercado, consigo identificar o cheiro das laranjas do corredor de entrada e acho bem forte; meu marido só sente quando chega perto.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "No mercado, consigo identificar o cheiro das laranjas do corredor de entrada e acho bem forte; meu marido só sente quando chega perto.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-08",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "O amaciante que sempre usamos está com o mesmo cheiro de sempre, mas agora me parece muito intenso até com a roupa guardada no quarto.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "O amaciante que sempre usamos está com o mesmo cheiro de sempre, mas agora me parece muito intenso até com a roupa guardada no quarto.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-09",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "Quando corto limão, sinto o aroma de longe e ele fica muito marcante para mim; ninguém mais na cozinha reclama do cheiro.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "Quando corto limão, sinto o aroma de longe e ele fica muito marcante para mim; ninguém mais na cozinha reclama do cheiro.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia-story-10",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+      "text": "O cheiro da terra molhada depois da chuva chega muito forte para mim, mesmo quando ainda estou dentro de casa.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+          "quote": "O cheiro da terra molhada depois da chuva chega muito forte para mim, mesmo quando ainda estou dentro de casa.",
+          "sourceQuote": "Exacerbação do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Hiperosmia"
+          },
+          "rationale": "A fala mantém o odor reconhecível e relata intensidade ou percepção aumentada, sem distorção.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-01",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "O café que eu preparo todo dia começou a ter um cheiro queimado, embora o pó e a bebida sejam os mesmos de sempre.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "O café que eu preparo todo dia começou a ter um cheiro queimado, embora o pó e a bebida sejam os mesmos de sempre.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-02",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "Quando descasco uma banana madura, sinto um cheiro estranho, quase de produto de limpeza; antes, o mesmo aroma era doce.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "Quando descasco uma banana madura, sinto um cheiro estranho, quase de produto de limpeza; antes, o mesmo aroma era doce.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-03",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "O sabonete de lavanda agora me lembra cheiro de metal, apesar de minha companheira dizer que continua igual.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "O sabonete de lavanda agora me lembra cheiro de metal, apesar de minha companheira dizer que continua igual.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-04",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "Na hora do almoço, o arroz recém-feito me parece com cheiro de fumaça; não há nada queimando na cozinha.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "Na hora do almoço, o arroz recém-feito me parece com cheiro de fumaça; não há nada queimando na cozinha.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-05",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "O perfume que ganhei da minha mãe antes era floral, mas hoje sinto nele um cheiro azedo, mesmo usando o mesmo frasco.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "O perfume que ganhei da minha mãe antes era floral, mas hoje sinto nele um cheiro azedo, mesmo usando o mesmo frasco.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-06",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "Ao abrir a laranja, em vez do cheiro cítrico habitual sinto algo parecido com borracha; acontece com essa fruta de verdade na minha mão.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "Ao abrir a laranja, em vez do cheiro cítrico habitual sinto algo parecido com borracha; acontece com essa fruta de verdade na minha mão.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-07",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "O pão saindo do forno me parece com cheiro de plástico, embora outras pessoas sintam cheiro de pão.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "O pão saindo do forno me parece com cheiro de plástico, embora outras pessoas sintam cheiro de pão.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-08",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "Quando passo o creme que sempre usei, o cheiro parece de peixe para mim; não é que esteja mais forte, está diferente.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "Quando passo o creme que sempre usei, o cheiro parece de peixe para mim; não é que esteja mais forte, está diferente.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-09",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "A água sanitária que uso para limpar ficou com um cheiro adocicado para mim; minha família reconhece o odor habitual do produto.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "A água sanitária que uso para limpar ficou com um cheiro adocicado para mim; minha família reconhece o odor habitual do produto.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia-story-10",
+      "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+      "text": "O cheiro da cebola cortada, que costumava ser bem característico, agora me lembra terra úmida, sem ter mudado o alimento.",
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+          "quote": "O cheiro da cebola cortada, que costumava ser bem característico, agora me lembra terra úmida, sem ter mudado o alimento.",
+          "sourceQuote": "Distorção ou alteração qualitativa do olfato.",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Parosmia"
+          },
+          "rationale": "A fala relata mudança qualitativa na percepção de um odor real e familiar, sem atribuir causa.",
+          "referenceIds": [
+            "nidcd-smell"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-01",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Na reunião eu tentava responder, mas não saía som nenhum; só conseguia mexer a boca e fazer gestos.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Na reunião eu tentava responder, mas não saía som nenhum; só conseguia mexer a boca e fazer gestos.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Na reunião eu tentava responder, mas não saía som nenhum; só conseguia mexer a boca e fazer gestos.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-02",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Consigo falar baixinho, mas minha voz some no meio das frases e preciso parar para tentar completar o que queria dizer.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Consigo falar baixinho, mas minha voz some no meio das frases e preciso parar para tentar completar o que queria dizer.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Consigo falar baixinho, mas minha voz some no meio das frases e preciso parar para tentar completar o que queria dizer.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-03",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Desde ontem, quando tento chamar meu filho de outro cômodo, sai apenas um sopro sem voz; para conversar preciso escrever no celular.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Desde ontem, quando tento chamar meu filho de outro cômodo, sai apenas um sopro sem voz; para conversar preciso escrever no celular.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Desde ontem, quando tento chamar meu filho de outro cômodo, sai apenas um sopro sem voz; para conversar preciso escrever no celular.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-04",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Na chamada de vídeo minha voz falhava tanto que várias palavras saíam sem som, embora eu conseguisse terminar algumas frases.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Na chamada de vídeo minha voz falhava tanto que várias palavras saíam sem som, embora eu conseguisse terminar algumas frases.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Na chamada de vídeo minha voz falhava tanto que várias palavras saíam sem som, embora eu conseguisse terminar algumas frases.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-05",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Fui cantar junto no carro e não consegui emitir voz nenhuma; eu acompanhava a música só mexendo os lábios.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Fui cantar junto no carro e não consegui emitir voz nenhuma; eu acompanhava a música só mexendo os lábios.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Fui cantar junto no carro e não consegui emitir voz nenhuma; eu acompanhava a música só mexendo os lábios.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-06",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Quando começo uma frase, a voz aparece por poucos segundos e depois desaparece; continuo falando, mas quase nada é ouvido.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Quando começo uma frase, a voz aparece por poucos segundos e depois desaparece; continuo falando, mas quase nada é ouvido.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Quando começo uma frase, a voz aparece por poucos segundos e depois desaparece; continuo falando, mas quase nada é ouvido.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-07",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Na hora de pedir meu café, tentei falar e não saiu voz; a atendente não me ouviu, então mostrei o pedido escrito.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Na hora de pedir meu café, tentei falar e não saiu voz; a atendente não me ouviu, então mostrei o pedido escrito.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Na hora de pedir meu café, tentei falar e não saiu voz; a atendente não me ouviu, então mostrei o pedido escrito.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-08",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Minha voz está falhando: algumas palavras saem, outras ficam só no movimento da boca, principalmente quando converso por mais tempo.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Minha voz está falhando: algumas palavras saem, outras ficam só no movimento da boca, principalmente quando converso por mais tempo.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Minha voz está falhando: algumas palavras saem, outras ficam só no movimento da boca, principalmente quando converso por mais tempo.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-09",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "No ensaio, eu sabia a letra, mas não conseguia soltar nenhum som de voz; precisei avisar o grupo por mensagem.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "No ensaio, eu sabia a letra, mas não conseguia soltar nenhum som de voz; precisei avisar o grupo por mensagem.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "No ensaio, eu sabia a letra, mas não conseguia soltar nenhum som de voz; precisei avisar o grupo por mensagem.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia-story-10",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+      "text": "Consigo falar no começo, mas a voz desaparece antes de terminar a frase; não é só falar baixo, às vezes não sai som.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+          "quote": "Consigo falar no começo, mas a voz desaparece antes de terminar a frase; não é só falar baixo, às vezes não sai som.",
+          "sourceQuote": "perda total ou parcial da voz",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Afonia"
+          },
+          "rationale": "A fala descreve perda total ou parcial da emissão vocal; isso também documenta alteração da voz no sentido amplo da entrada Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Consigo falar no começo, mas a voz desaparece antes de terminar a frase; não é só falar baixo, às vezes não sai som.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-01",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Quando atendo o telefone, minha voz sai bem mais rouca e áspera do que costuma ser, e até meus amigos perguntam se estou falando diferente.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Quando atendo o telefone, minha voz sai bem mais rouca e áspera do que costuma ser, e até meus amigos perguntam se estou falando diferente.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-02",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Na aula, percebi que precisava aumentar muito o volume para a turma me ouvir; em casa, minha voz costuma sair normal.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Na aula, percebi que precisava aumentar muito o volume para a turma me ouvir; em casa, minha voz costuma sair normal.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-03",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Minha voz ficou mais aguda do que de costume, principalmente quando converso com alguém; não estou tentando mudar o jeito de falar.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Minha voz ficou mais aguda do que de costume, principalmente quando converso com alguém; não estou tentando mudar o jeito de falar.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-04",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Ao ler uma notícia em voz alta, meu som fica soproso e fraco, como se escapasse ar junto com as palavras.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Ao ler uma notícia em voz alta, meu som fica soproso e fraco, como se escapasse ar junto com as palavras.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-05",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Meu pai disse que estou falando com a voz muito grave; eu também noto que o tom mudou, embora continue conseguindo conversar.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Meu pai disse que estou falando com a voz muito grave; eu também noto que o tom mudou, embora continue conseguindo conversar.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-06",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Quando falo por alguns minutos, minha voz começa a tremer e o volume sobe e desce sem eu querer.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Quando falo por alguns minutos, minha voz começa a tremer e o volume sobe e desce sem eu querer.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-07",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Nas mensagens de áudio minha voz parece abafada e diferente; consigo falar todas as palavras, mas o som não sai como antes.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Nas mensagens de áudio minha voz parece abafada e diferente; consigo falar todas as palavras, mas o som não sai como antes.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-08",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "No trabalho, as pessoas dizem que minha voz está mais baixa e eu preciso repetir as frases; consigo emitir som, só mudou o volume.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "No trabalho, as pessoas dizem que minha voz está mais baixa e eu preciso repetir as frases; consigo emitir som, só mudou o volume.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-09",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Minha voz fica falhando e com um tom áspero quando explico algo, mas não chega a desaparecer completamente.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Minha voz fica falhando e com um tom áspero quando explico algo, mas não chega a desaparecer completamente.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia-story-10",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+      "text": "Ao conversar, percebo que minha voz está mais fina e fraca do que era; não estou sussurrando, mas o som mudou.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Ao conversar, percebo que minha voz está mais fina e fraca do que era; não estou sussurrando, mas o som mudou.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A fala explicita alteração do tom, volume ou qualidade vocal, sem exigir perda total da voz.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-01",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Minha fala parece sair pelo nariz; minha irmã comentou isso quando conversávamos na cozinha, e eu também percebo o som anasalado.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Minha fala parece sair pelo nariz; minha irmã comentou isso quando conversávamos na cozinha, e eu também percebo o som anasalado.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Minha fala parece sair pelo nariz; minha irmã comentou isso quando conversávamos na cozinha, e eu também percebo o som anasalado.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Minha fala parece sair pelo nariz; minha irmã comentou isso quando conversávamos na cozinha, e eu também percebo o som anasalado.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-02",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Quando digo palavras comuns, parece que o som fica preso no nariz e minha voz ganha uma ressonância nasal que antes não notava.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Quando digo palavras comuns, parece que o som fica preso no nariz e minha voz ganha uma ressonância nasal que antes não notava.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Quando digo palavras comuns, parece que o som fica preso no nariz e minha voz ganha uma ressonância nasal que antes não notava.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Quando digo palavras comuns, parece que o som fica preso no nariz e minha voz ganha uma ressonância nasal que antes não notava.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-03",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Na gravação que fiz para a escola, minha voz ficou com um som nasal bem marcado; não é o volume, é o jeito como o som ressoa.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Na gravação que fiz para a escola, minha voz ficou com um som nasal bem marcado; não é o volume, é o jeito como o som ressoa.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Na gravação que fiz para a escola, minha voz ficou com um som nasal bem marcado; não é o volume, é o jeito como o som ressoa.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Na gravação que fiz para a escola, minha voz ficou com um som nasal bem marcado; não é o volume, é o jeito como o som ressoa.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-04",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Minha mãe diz que estou falando anasalado, e eu noto o mesmo quando leio uma mensagem em voz alta.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Minha mãe diz que estou falando anasalado, e eu noto o mesmo quando leio uma mensagem em voz alta.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Minha mãe diz que estou falando anasalado, e eu noto o mesmo quando leio uma mensagem em voz alta.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Minha mãe diz que estou falando anasalado, e eu noto o mesmo quando leio uma mensagem em voz alta.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-05",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Mesmo conversando normalmente, a voz parece ter ressonância pelo nariz; a mudança aparece nas frases, não só em uma palavra.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Mesmo conversando normalmente, a voz parece ter ressonância pelo nariz; a mudança aparece nas frases, não só em uma palavra.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Mesmo conversando normalmente, a voz parece ter ressonância pelo nariz; a mudança aparece nas frases, não só em uma palavra.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Mesmo conversando normalmente, a voz parece ter ressonância pelo nariz; a mudança aparece nas frases, não só em uma palavra.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-06",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Ao contar uma história, meu som fica anasalado e diferente do jeito habitual; consigo falar, mas a ressonância chama atenção.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Ao contar uma história, meu som fica anasalado e diferente do jeito habitual; consigo falar, mas a ressonância chama atenção.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Ao contar uma história, meu som fica anasalado e diferente do jeito habitual; consigo falar, mas a ressonância chama atenção.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Ao contar uma história, meu som fica anasalado e diferente do jeito habitual; consigo falar, mas a ressonância chama atenção.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-07",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Ouvi meu áudio e a fala parecia toda nasal, como se o som saísse pelo nariz; não é uma voz mais baixa, é outra ressonância.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Ouvi meu áudio e a fala parecia toda nasal, como se o som saísse pelo nariz; não é uma voz mais baixa, é outra ressonância.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Ouvi meu áudio e a fala parecia toda nasal, como se o som saísse pelo nariz; não é uma voz mais baixa, é outra ressonância.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Ouvi meu áudio e a fala parecia toda nasal, como se o som saísse pelo nariz; não é uma voz mais baixa, é outra ressonância.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-08",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Na conversa com minha colega, ela perguntou por que estou falando tão anasalado; desde então também presto atenção nesse som.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Na conversa com minha colega, ela perguntou por que estou falando tão anasalado; desde então também presto atenção nesse som.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Na conversa com minha colega, ela perguntou por que estou falando tão anasalado; desde então também presto atenção nesse som.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Na conversa com minha colega, ela perguntou por que estou falando tão anasalado; desde então também presto atenção nesse som.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-09",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Quando leio em voz alta, percebo uma ressonância nasal nas palavras, e meu companheiro confirmou que minha fala soa assim.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Quando leio em voz alta, percebo uma ressonância nasal nas palavras, e meu companheiro confirmou que minha fala soa assim.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Quando leio em voz alta, percebo uma ressonância nasal nas palavras, e meu companheiro confirmou que minha fala soa assim.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Quando leio em voz alta, percebo uma ressonância nasal nas palavras, e meu companheiro confirmou que minha fala soa assim.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia-story-10",
+      "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+      "text": "Minha fala ficou com um som nasal persistente, inclusive quando converso sem estar lendo; não é apenas impressão em uma palavra.",
+      "acceptedContextIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia"
+      ],
+      "alternativeContextIds": [],
+      "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 2,
+        "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+      },
+      "generation": {
+        "model": "gpt6luna",
+        "modelVersion": "unknown",
+        "promptVersion": "interrogatorio-next-02",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado: gpt6luna; versão exata do backend desconhecida.",
+        "authorship": "synthetic-patient-voice",
+        "definitionSourceOnly": true
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-performed",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      },
+      "alternativePathEvidence": [],
+      "alternativeAssessment": {
+        "status": "checked",
+        "reason": "Não há caminho de crédito parcial neste caso; caminhos igualmente sustentados foram incluídos como respostas integrais com evidência própria."
+      },
+      "acceptedPathEvidence": [
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+          "quote": "Minha fala ficou com um som nasal persistente, inclusive quando converso sem estar lendo; não é apenas impressão em uma palavra.",
+          "sourceQuote": "voz com ressonância nasal, voz anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Rinolalia"
+          },
+          "rationale": "A fala relata ressonância nasal/fala anasalada, compatível com as duas entradas de Rinolalia; há também alteração de qualidade vocal segundo a descrição ampla de Disfonia.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+          "quote": "Minha fala ficou com um som nasal persistente, inclusive quando converso sem estar lendo; não é apenas impressão em uma palavra.",
+          "sourceQuote": "Fala anasalada",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinolalia"
+          },
+          "rationale": "A mesma fala documenta fala anasalada, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        },
+        {
+          "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+          "quote": "Minha fala ficou com um som nasal persistente, inclusive quando converso sem estar lendo; não é apenas impressão em uma palavra.",
+          "sourceQuote": "qualquer alteração da voz, como tom, volume  ou qualidade",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 2,
+            "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Disfonia"
+          },
+          "rationale": "A mesma fala documenta alteração da qualidade vocal, conforme a definição impressa, sem causa presumida.",
+          "referenceIds": [
+            "asha-voice"
+          ],
+          "definitionBasis": "originalDescription"
+        }
+      ]
+    }
+  ],
+  "clinicalReferences": [
+    {
+      "id": "nidcd-smell",
+      "title": "NIDCD — Smell Disorders",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "locator": "What are the smell disorders? Parosmia e Phantosmia",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    },
+    {
+      "id": "asha-voice",
+      "title": "ASHA — Voice Disorders",
+      "url": "https://www.asha.org/practice-portal/clinical-topics/voice-disorders/",
+      "locator": "Overview; Signs and Symptoms; aphonia e dysphonia",
+      "accessed": "2026-11-14",
+      "verification": "Página primária consultada nesta reparação; paráfrase didática não substitui revisão clínica."
+    }
+  ]
+}

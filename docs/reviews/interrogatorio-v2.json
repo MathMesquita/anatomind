@@ -1,0 +1,2470 @@
+{
+  "schemaVersion": 1,
+  "status": "partial-independent-review",
+  "input": {
+    "draftSha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+    "draftBytes": 1602010,
+    "capturedAt": "2026-11-15T06:31:43.798Z",
+    "v1JsonSha256": "fa3e495e9401902f8d2b752bd664157dd633a00c1525cf2a5527e897ef593dc5",
+    "v1MdSha256": "4b56024cca0c43508c6645494e4a3772df22470f5eaaf297256723cff5bd384b"
+  },
+  "requestedModel": "gpt-6-astra (user: gpt6astra)",
+  "executionIdentity": "unknown; not independently verifiable",
+  "clinicalApproval": false,
+  "counts": {
+    "total": 340,
+    "readAndSemanticallyReviewed": 60,
+    "pending": 280,
+    "olderReviewed": 60,
+    "newReviewed": 0
+  },
+  "reviewedStoryIds": [
+    "ic-elementos-gerais-febre-calafrios-story-01",
+    "ic-elementos-gerais-febre-calafrios-story-02",
+    "ic-elementos-gerais-febre-calafrios-story-03",
+    "ic-elementos-gerais-febre-calafrios-story-04",
+    "ic-elementos-gerais-febre-calafrios-story-05",
+    "ic-elementos-gerais-febre-calafrios-story-06",
+    "ic-elementos-gerais-febre-calafrios-story-07",
+    "ic-elementos-gerais-febre-calafrios-story-08",
+    "ic-elementos-gerais-febre-calafrios-story-09",
+    "ic-elementos-gerais-febre-calafrios-story-10",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-01",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-02",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-03",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-04",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-06",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-07",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-08",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-09",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-01",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-02",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-03",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-05",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-06",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-10",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-01",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-02",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-03",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-04",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-05",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-06",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-07",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-08",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-09",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-10",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-01",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-03",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-04",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-05",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-07",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-08",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-09",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-10",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-01",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-02",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-03",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-04",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-05",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-06",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-07",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-08",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-10"
+  ],
+  "items": [
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-01",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-02",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-03",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-04",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-05",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-06",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-07",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-08",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-09",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-elementos-gerais-febre-calafrios-story-10",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-01",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-02",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-03",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-04",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-06",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-07",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-08",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-09",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-01",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-02",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-03",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-05",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-06",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-10",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-01",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-02",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-03",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-04",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-05",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-06",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-07",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-08",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-09",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-10",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-01",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-03",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-04",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-05",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-07",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-08",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-09",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-10",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-01",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-02",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-03",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-04",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-05",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-06",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-07",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-08",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-10",
+      "disposition": "model-reviewed",
+      "reviewStatus": "completed-provisional",
+      "hold": false,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-pele-sem-subgrupo-prurido-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-disfagia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-odinofagia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-eructacao-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-nausea-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-nocturia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-menarca-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-coitarca-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-telarca-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-halitose-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-digestorio-sem-subgrupo-flatulencia-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-urinario-sem-subgrupo-alguria-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-01",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-02",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-03",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-04",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-05",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-06",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-07",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-08",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-09",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao-story-10",
+      "disposition": null,
+      "reviewStatus": "pending",
+      "hold": true,
+      "clinicalApproval": false
+    }
+  ],
+  "notes": [
+    "Checkpoint: 60 stories read with their rationales and accepted paths; no item-level blockers found in these 60 yet. Full cross-context and safety audit still pending.",
+    "Original PDF 12 pages read as extracted text. All 204 source context descriptions inspected. No clinical approval or release authorization.",
+    "Final task must separately account for 240 older and 100 new stories; untouched symptom-v1 is out of scope."
+  ]
+}

@@ -1,5 +1,7 @@
 import { readFileSync } from "node:fs"
+import { createHash } from "node:crypto"
 import assert from "node:assert/strict"
+import { isDeepStrictEqual } from "node:util"
 import { validateContent } from "../../tools/validate-content.mjs"
 
 const path = new URL("./caracteres.json", import.meta.url)
@@ -394,6 +396,117 @@ function parseNarrative(marked, group) {
   return { text, q }
 }
 
+// Editorial follow-up to the independently completed caracteres-v1 review.
+// These are deliberately separate from original generation provenance.
+const editorialOverrides = {
+  "dor-08": `Durante a consulta, descreve dor [[1|no tornozelo direito]], [[2|sem se espalhar para outro local]], [[~5|mais fraca hoje do que ontem, sem escala ou nota de intensidade]], [[6|desde a manhã de ontem]]. [[7|Hoje está menos intensa do que ontem]]. [[8|Começou após uma torção; apoiar o pé piora]]. [[9|Retirar o apoio alivia]]. [[10|Há inchaço no mesmo local, sem outras manifestações relatadas]].`,
+  "tosse-05": `Descreve [[9|tosse seca]], [[4|moderada]], [[2|sem horário predominante]], [[3|a cada duas horas]]. [[6|O ar frio desencadeia os acessos; o ambiente aquecido os alivia e a volta ao frio os intensifica]]. [[8|Deitar não altera a tosse]]. [[7|Nega outros sintomas junto]]. [[~10|O padrão se manteve semelhante de um dia para outro; o início e a duração total não foram informados]].`,
+  "tosse-13": `Apresenta [[9|tosse produtiva]], [[4|leve]], [[2|concentrada no fim da manhã]], [[3|três ou quatro vezes ao dia]]. [[7|Nega chiado e falta de ar]]. [[8|Sentar ou deitar não muda a tosse]]. [[5|Não identifica gatilho nem fator de melhora ou piora]]. [[~10|Há dias sem tosse alternados com dias de padrão semelhante; início e duração total não foram informados]].`,
+  "tosse-17": `Relata tosse [[1|iniciada há sete semanas]], [[5|progressivamente menos intensa]], [[4|leve]], [[3|duas vezes por dia]], [[2|sem horário predominante]]. [[6|Não percebe fator desencadeante nem situação que alivie ou agrave]]. [[8|Deitar não interfere]]. [[7|Nega manifestações acompanhantes]]. [[~10|A tosse não é ininterrupta: ocorre duas vezes ao dia; não foi perguntado quanto duram os intervalos sem tosse]].`,
+  "tosse-18": `A paciente descreve tosse [[9|com secreção]], [[4|de intensidade alta]], [[2|mais comum ao acordar]]. [[1|Começou há nove dias e continua]]. [[~3|A frequência aumentou nesta semana, mas não foi informada a frequência atual em acessos por dia ou intervalo]]. [[5|Entrar em local com fumaça desencadeia os acessos; sair alivia e permanecer no local os intensifica]]. [[8|Deitada ou sentada, a tosse é igual]]. [[7|Refere chiado nas crises]]. [[10|As noites têm sido livres da queixa]].`,
+  "tosse-19": `Conta que [[1|começou a tossir há dois meses e a queixa continua sem mudança]]. [[9|A tosse é seca]], [[4|moderada]], [[3|em um acesso a cada manhã]], [[2|logo após despertar]]. [[6|Levantar-se da cama não muda a tosse: ela ocorre da mesma forma antes e depois da mudança de posição]]. [[7|Nega sintomas junto]]. [[10|O restante do dia é livre de tosse]].`,
+  "expectoracao-01": `Há duas semanas, elimina [[1|cerca de 10 ml de muco ao longo do dia]], [[2|principalmente pela manhã]]. O material é [[3|muco amarelado]], [[7|espesso e pegajoso]], [[6|sem odor percebido]]. [[4|Nega episódios de eliminação súbita e abundante]]. [[5|Nega sangue no muco]]. [[8|A quantidade se mantém parecida; houve um dia com quase nenhuma expectoração na semana passada]].`,
+  "expectoracao-06": `O paciente registra [[1|30 ml de secreção em um dia]]. É [[3|muco esverdeado]], [[7|denso e pegajoso]], [[6|de cheiro forte]]. [[5|Viu pequenos traços de sangue misturados ao muco]]. [[4|Nega eliminação súbita e abundante]]. [[8|O volume foi semelhante nos últimos quatro dias]]. [[2|O horário da eliminação não foi perguntado]].`,
+  "expectoracao-12": `A pessoa relata expectoração [[2|no fim da tarde]], de [[3|material mucoso transparente]], [[7|ralo, que escorre facilmente e pouco aderente]]. [[5|Há filetes de sangue no catarro]]. [[6|Não percebe odor]]. [[8|O volume tem sido semelhante todos os dias]]. [[?1|Perguntada sobre o volume em ml, não soube estimá-lo]]. Não houve pergunta específica sobre episódios súbitos e abundantes.`,
+  "expectoracao-15": `O relato se concentra em [[3|muco esbranquiçado]], [[7|gelatinoso e pegajoso]], eliminado [[2|depois de levantar pela manhã]]. [[6|Não percebe cheiro]]. [[5|Nega sangue]]. [[4|Nega expulsão súbita e abundante]]. [[~1|Há uma semana o volume era maior; a quantidade atual em ml por intervalo não foi informada]]. [[8|Agora os dias são semelhantes entre si]].`,
+  "dispneia-04": `Descreve falta de ar de [[1|início súbito ontem]], [[6|forte]], [[2|mesmo sentada, sem esforço]]. Cada episódio dura [[4|dez minutos]]. Há [[7|aperto no peito junto]]. [[3|Deitar de costas agrava e sentar reduz a sensação]]. [[5|As crises de hoje duram menos do que as anteriores]].`,
+  "dispneia-08": `Refere falta de ar de [[1|começo gradual há um mês]], [[2|ao carregar uma sacola pesada]]. [[6|É leve]]. [[3|Deitar não interfere]]. [[7|Nega tosse ou outros sintomas durante a queixa]]. [[5|O esforço necessário para provocá-la tem sido o mesmo]]. [[8|Aumentar a carga piora e deixar a sacola no chão alivia]]. [[9|Fica inteiramente bem nos dias sem carregar peso]]. [[4|A duração de cada episódio de falta de ar não foi informada]].`,
+  "dispneia-10": `Sente falta de ar [[6|moderada]], [[4|por cerca de quinze minutos]], [[2|mesmo em repouso]]. [[1|O primeiro episódio começou repentinamente na semana passada]]. Nota [[7|palpitações junto]]. [[3|Alternar entre deitar e sentar não modifica a sensação]]. [[~8|Abrir a janela parece aliviar; não foi descrito o que piora uma crise já iniciada]]. [[9|Há manhãs sem falta de ar alternadas com tardes sintomáticas]].`,
+  "dispneia-13": `A dificuldade para respirar [[1|se instalou gradualmente há quatro semanas]]. [[2|Surge ao fazer faxina, mas não em repouso]]. [[6|É moderada]]. Cada episódio dura [[4|cerca de seis minutos]]. [[7|Nega outras manifestações junto]]. [[3|Deitar de lado ou de costas não melhora nem piora a sensação, conforme observado nessas posições]]. [[5|Nos últimos dias passou a aparecer com tarefas menores]]. [[9|Nos dias sem faxina fica sem falta de ar]].`,
+  "dispneia-14": `Refere falta de ar de [[1|início súbito há uma semana]], [[6|leve]], [[2|somente ao caminhar depressa]]. Cada episódio dura [[4|um minuto]]. [[8|Acelerar o passo intensifica a sensação; diminuir o ritmo a alivia]]. [[3|Deitar não muda a sensação]]. [[5|As crises têm sido semelhantes desde a primeira]]. [[7|Sente tosse seca durante os episódios]].`,
+  "dispneia-18": `Relata falta de ar de [[1|início repentino ontem]], [[2|ao pentear o cabelo]], [[6|moderada]], por [[4|cinco minutos]]. [[7|Nega tosse, dor ou chiado durante a crise]]. [[3|Ficar deitada não muda a sensação]]. [[5|Hoje as crises parecem menos fortes]]. [[8|Parar a atividade traz alívio; não foi descrito outro fator de piora]]. [[9|Há intervalos de várias horas sem sintoma]].`,
+  "dispneia-19": `Descreve falta de ar que [[1|se desenvolveu lentamente há cinco meses]], [[2|ao caminhar no plano]], [[6|intensa]]. [[3|Deitar agrava e sentar melhora]]. [[7|Refere tosse junto]]. [[5|Passou a ocorrer com percursos mais curtos]]. [[9|Os episódios são parecidos e separados por períodos de respiração habitual]]. [[4|A duração de cada episódio não foi informada; o tempo desde o início do quadro é de cinco meses]].`,
+  "cianose-01": `Há quatro dias, a família notou [[3|coloração arroxeada nos lábios]] [[2|durante episódios de frio intenso]], com [[4|duração aproximada de dez minutos]]. [[5|Não percebeu alteração nos dedos nem falta de ar]]. [[~6|Ao entrar em local aquecido, a cor volta gradualmente ao habitual; não foi informado se algo intensifica a coloração depois que ela aparece]]. [[7|Os episódios ocorreram em duas manhãs e não apareceram nos demais dias]].`,
+  "cianose-02": `[[1|Desde ontem]], percebe [[3|tom azulado nas pontas dos dedos]] [[2|após permanecer alguns minutos ao ar livre no inverno]]. [[4|A alteração some em poucos minutos depois que entra em casa]]. [[~6|Entrar em casa coincide com o retorno da cor habitual; não foi informado se algo intensifica a alteração já iniciada]]. [[7|Isso ocorreu três vezes hoje, sempre após exposição ao frio]].`,
+  "cianose-04": `[[1|Desde esta manhã]], a família relata [[3|tom azul nos lábios e na língua]], [[4|persistente há duas horas]]. [[2|A alteração apareceu durante um episódio de engasgo]]. [[5|Houve dificuldade para respirar junto]]. [[6|Não perceberam melhora nem piora com mudança de posição]]. [[7|A cor permanece alterada desde o início deste episódio, sem intervalo de retorno ao habitual]].`,
+  "cianose-11": `A família descreve [[1|início há quatro horas]] de [[3|tom azulado na língua e nos lábios]]. [[2|Não reconhece exposição, ação ou evento que tenha antecedido a mudança; a cor surgiu ao mesmo tempo que a dificuldade respiratória súbita]]. [[4|A coloração persiste desde então]]. [[5|Há cansaço para respirar junto]]. [[6|Não observaram melhora ou piora ao sentar ou deitar]]. [[7|Não houve intervalo de cor habitual desde o começo]].`,
+  "cianose-14": `A paciente informa [[1|alteração de cor iniciada hoje cedo]], [[3|na mão esquerda]], [[4|mantida há quarenta minutos]]. [[5|Sente dor nessa mão]]. [[2|Não percebe fator desencadeante]]. [[6|Não percebe fatores de melhora ou piora]]. [[7|É o primeiro episódio, sem retorno à cor habitual até agora]]. A cor não foi especificada, portanto o relato não confirma coloração azulada ou arroxeada.`,
+  "cianose-18": `Um familiar notou [[1|hoje pela primeira vez]] [[3|tom azul nas gengivas e na língua]], [[4|persistente desde a manhã]]. [[2|Não foi reconhecida exposição ou ação antecedente; a mudança de cor ocorreu ao mesmo tempo que um episódio de falta de ar]]. [[5|A dificuldade para respirar continuou junto da mudança de cor]]. [[6|Não observaram fator de melhora nem de piora]]. [[7|Não houve período de cor habitual desde o começo]].`,
+  "sincope-03": `[[1|O primeiro desmaio ocorreu há quatro meses]], [[4|após ficar de pé numa fila quente]]. [[3|Antes, sentiu náusea e a visão escureceu]]. [[2,7|O episódio mais recente foi ontem à tarde e a perda da consciência durou vinte segundos]]. [[~5|A testemunha viu palidez e suor; não foi perguntado à pessoa sobre palpitações antes da perda; foram negadas perdas de urina ou fezes e movimentos convulsivos]]. [[6|Recuperou-se orientado, com cansaço]]. [[8|Os episódios estão menos frequentes]]. [[9|São parecidos, com semanas sem queixa]].`,
+  "sincope-09": `Relata [[1|primeiro desmaio há um ano]], [[4|durante permanência prolongada em ambiente quente]]. [[3|Náusea e sensação de calor precederam a perda]]. [[2|Os desmaios ocorrem à tarde e duram vinte a trinta segundos]]. [[~5|Houve palidez e suor; não foi perguntado à pessoa sobre palpitações antes da perda; não houve perda urinária ou fecal nem abalos convulsivos]]. [[6|Acorda orientado, mas cansado]]. [[8|A frequência se manteve igual]]. [[9|Passa semanas bem e os episódios se parecem]]. A data do episódio mais recente não foi informada.`,
+  "sincope-10": `Relata mal-estar com sensação de quase desmaiar [[1|desde há cinco semanas]]. [[4|Começa quando se levanta depressa]]. [[2,7|O episódio mais recente foi há três dias, de manhã, durou vinte segundos e não houve inconsciência]]. [[3|A visão escurece antes]]. [[~5|A pessoa percebe suor; não foi perguntado sobre palpitações, perdas urinária ou fecal, movimentos convulsivos ou palidez, e ninguém observou esses sinais durante a crise]]. [[6|Depois fica normal]]. [[8|Está ocorrendo menos vezes]]. [[9|Nos intervalos não há queixa]].`,
+  "sincope-11": `[[1|Os desmaios começaram há seis meses]]. [[2,7|O mais recente ocorreu ontem à tarde, com perda da consciência por meio minuto]]. [[4|Aconteceu após longo tempo de pé]]. [[~5|A testemunha viu palidez; a pessoa negou suor e palpitações antes da perda; não houve perdas de fezes ou urina nem movimentos convulsivos]]. [[6|Recuperou-se sem confusão]]. [[8|Nos últimos meses os episódios ficaram mais frequentes]]. [[9|Continuam semelhantes, com dias inteiros livres]].`,
+  "sincope-12": `Relata sensação de desfalecimento [[1|iniciada há dois anos]], [[4|ao se levantar rapidamente]]. [[3|O aviso é visão turva]]. [[2,7|O último episódio ocorreu hoje ao levantar e durou quarenta segundos, sem perda da consciência]]. [[5|Nega suor, palpitações, perdas urinária e fecal, movimentos convulsivos e palidez observada]]. [[6|Depois fica bem]]. [[8|As características dos episódios são semelhantes ao longo do tempo]]. [[9|Não há sintomas nos intervalos]].`,
+  "sincope-13": `[[1|Desmaiou pela primeira vez há três meses]]. [[4|O episódio veio após emoção intensa]]. [[3|Sentiu náusea antes de apagar]]. [[2,7|O último desmaio foi há um mês, à noite, e durou cerca de vinte segundos]]. [[~5|Houve suor e palidez; não foi perguntado à pessoa sobre palpitações antes da perda; não houve perda de urina ou fezes nem movimentos convulsivos]]. [[6|Recuperou a orientação imediatamente, com fraqueza]]. [[8|As ocorrências diminuíram]]. A entrevista não detalhou intervalos sem desmaio.`,
+  "sincope-15": `[[1|O primeiro desmaio aconteceu há sete meses]], [[4|após longo tempo em pé]]. [[3|A visão escurece e sente náusea antes]]. [[2,7|O último ocorreu há quatro dias, de manhã, e durou quinze segundos de inconsciência]]. [[~5|A irmã viu palidez; não foi perguntado à pessoa sobre palpitações antes da perda; não houve suor, perda de fezes ou urina nem movimentos convulsivos]]. [[6|Ao acordar estava orientado e sem sintomas]]. [[8|Os episódios se tornaram mais raros]]. [[9|São parecidos e separados por semanas de bem-estar]].`,
+  "sincope-17": `[[1|Há nove meses começaram desmaios]] [[4|após ficar em locais muito quentes]]. [[3|Percebe sensação de calor antes]]. [[2,7|O último foi ontem no fim da tarde, com vinte e cinco segundos de inconsciência]]. [[~5|Houve sudorese e palidez; não foi perguntado à pessoa sobre palpitações antes da perda; não houve incontinência de urina ou fezes nem movimentos convulsivos]]. [[6|Após recuperar-se ficou cansado, sem confusão]]. [[8|As crises estão mais frequentes]]. [[9|O padrão é semelhante, com intervalos livres]].`,
+  "sincope-19": `O paciente relata [[1|primeiro desmaio há dez meses]], [[4|após longa espera em pé]]. [[3|Não houve sintoma de aviso]]. [[2,7|O mais recente foi há três semanas à tarde e durou dez segundos]]. [[~5|A testemunha observou palidez; não foi perguntado à pessoa sobre palpitações antes da perda; não houve suor, perda urinária ou fecal nem movimentos convulsivos]]. [[8|Os episódios têm a mesma duração desde o início]]. [[9|Passa semanas sem desmaiar]]. A recuperação após o episódio não foi descrita.`,
+  "vertigem-tontura-01": `A tontura [[1|começou há três semanas]] e ocorre [[2|quase todos os dias]] [[7|ao virar a cabeça para a direita]]. [[~3|Ficar imóvel alivia; não foi informado se algum movimento piora a tontura depois que ela começa]]. [[5|Descreve o ambiente girando]]. [[4|Nega turvação visual, zumbido ou náusea]]. [[6|Os episódios ficaram menos intensos desde a semana passada]]. [[8|Entre eles se sente bem, embora o movimento ainda provoque novos episódios]].`,
+  "vertigem-tontura-12": `A paciente relata [[1|tontura desde há seis dias]], [[5|como sensação de o quarto rodar]], [[2|ao menos cinco vezes ao dia]]. [[7|Mudar rapidamente a posição da cabeça inicia as crises]]. [[3|Inclinar a cabeça piora e mantê-la imóvel melhora]]. [[4|Há náusea, sem zumbido]]. [[6|Os episódios atuais ficaram mais curtos do que os anteriores]].`,
+  "ictericia-02": `[[1,2|Há duas semanas]], percebeu a pele [[~5|amarelada, mais evidente no tronco do que nos braços; não foi atribuída uma graduação como leve, moderada ou intensa]]. [[4|Notou fezes claras e urina escura]]. [[6|O quadro começou alguns dias após iniciar um medicamento prescrito; essa sequência temporal não confirma causa, e não identifica outro fator]]. [[7|Tem enjoo e coceira, sem febre]]. [[3|A intensidade parece estável]]. A pergunta sobre períodos sem amarelamento não foi feita.`,
+  "ictericia-06": `Descreve amarelamento [[1|há dez dias]], [[5|intenso nos olhos e moderado na pele do rosto]]. [[3|Ficou mais evidente nos últimos três dias]]. [[4|As fezes estão claras e a urina escura]]. [[6|Perguntada sobre novo medicamento ou contato com pessoa doente antes do início, nega ambos]]. [[9|O tom permanece visível ao longo de todo o dia]]. [[7|Refere enjoo e cansaço]]. Não foi perguntado se algo melhora ou piora a coloração.`,
+  "ictericia-07": `Informa [[1|primeiro episódio de olhos amarelados há um ano]]. [[2|O episódio atual dura três dias]]. [[5|O amarelo é discreto nos olhos, sem mudança percebida na pele]]. [[4|As fezes estão castanhas e a urina tem cor habitual]]. [[6|Não identifica circunstância de início]]. [[7|Nega outros sintomas durante a mudança de cor]]. [[8|Não percebe fatores que melhorem ou piorem]]. [[9|Passou meses com a cor habitual entre os episódios; a alteração reapareceu há três dias]].`,
+  "ictericia-15": `Descreve pele amarela [[1|há quatro semanas]], [[~5|mais intensa no rosto do que nos braços, sem graduação atual em cada local]]. [[4|As fezes clarearam e a urina escureceu]]. [[3|O amarelo aumentou nas primeiras duas semanas e depois se estabilizou]]. [[7|Há prurido junto]]. [[6|Não foi perguntado sobre circunstâncias que antecederam o início]]. [[8|Não percebe medidas que aliviem ou agravem]]. [[9|Não existe intervalo de cor habitual]].`,
+  "ictericia-20": `A família notou [[1,2|há duas semanas]] [[5|amarelo discreto nos olhos, sem mudança visível na pele]]. [[4|A urina tem cor habitual e as fezes estão castanhas]]. [[3|A aparência se manteve igual até a consulta]]. [[6|Não foi percebida situação que antecedesse o início]]. A entrevista não abordou manifestações associadas. [[8|Não observam fatores que melhorem ou piorem a coloração]]. [[9|O tom permanece ao longo de todos os dias]].`,
+  "febre-01": `A temperatura elevada [[1|começou na noite de segunda-feira]], [[2|chegou a 38,4 °C]] e [[3|durou cerca de dois dias]]. [[4|As medidas variaram entre manhã e noite]]. [[5|Desde ontem não voltou a medir acima do habitual]]. [[6|Não identificou exposição ou evento que antecedesse o início]]. [[~7|Não tentou medida para reduzir a temperatura; não há relato sobre outras circunstâncias que a aliviem]]. [[8|Junto da elevação, teve calafrios e dor no corpo]].`,
+  "febre-02": `A febre [[1|começou há quatro dias]], com máxima registrada de [[2|39 °C]]. [[3|Mantém-se até hoje, sem cessar]]. [[4|As medidas ficam mais altas no fim da tarde e mais baixas pela manhã]]. [[5|A elevação ainda não terminou]]. [[6|Não associa o início a fator específico]]. [[7|Tomou um medicamento por conta própria e depois observou queda temporária da temperatura; isso descreve a sequência, sem recomendação de uso]]. [[8|Relata cefaleia, sem calafrios]].`,
+  "febre-03": `A febre [[1|começou na segunda-feira de manhã]], com temperatura máxima de [[2|38,6 °C]]. [[3|Durou três dias]]. [[4|As medidas foram mais altas à tarde e menores pela manhã]]. [[5|Desde quinta-feira não houve nova elevação medida]]. [[6|O início ocorreu após contato com familiar febril; a sequência não estabelece causa]]. [[7|Relata queda da temperatura após antitérmico previamente orientado, sem que isso seja uma recomendação nesta vinheta]]. [[8|Teve calafrios e dor no corpo junto]].`,
+  "febre-04": `Relata febre [[1|desde ontem à noite]], com máxima de [[2|39,1 °C]]. [[3|Persiste há cerca de um dia]]. [[4|A temperatura oscila, mas não voltou ao valor habitual entre as medidas]]. [[5|Ainda não cessou]]. [[7|O antitérmico usado foi seguido de queda temporária da temperatura]]. [[8|Há cefaleia e suor]]. [[6|A entrevista não perguntou sobre exposição ou evento antes do início]].`,
+  "febre-05": `A febre [[1|começou há cinco dias]] e [[3|permanece até hoje, sem ter terminado]]. [[~2|Os picos são mais altos no fim da tarde; não há graduação ou valor atual informado para comparar a intensidade]]. [[6|Não percebe exposição ou evento associado ao começo]]. [[7|Não observou fator que reduza a temperatura]]. [[8|Sente calafrios, sem outros sintomas junto]].`,
+  "febre-06": `A elevação da temperatura [[1|começou no sábado]], [[2|chegou a 38,3 °C]] e durou [[3|dois dias]]. [[4|Houve dois picos por dia, com medidas habituais nos intervalos]]. [[5|A última medida elevada foi no domingo à noite; as medidas seguintes ficaram habituais]]. [[6|Não identifica evento desencadeante]]. [[8|Teve dor no corpo durante os picos]]. Não foi perguntado sobre fatores que reduziram a temperatura.`,
+  "febre-07": `A febre [[1|começou há uma semana]], com pico de [[2|38,9 °C]], e [[3|continua presente hoje]]. [[4|Nos primeiros dias os picos ocorreram pela manhã; agora se concentram à noite]]. [[5|Ainda não terminou]]. [[6|Não há exposição inicial reconhecida]]. [[~7|O antitérmico foi seguido de alívio por algumas horas, mas não foi esclarecido se a temperatura medida caiu ou se melhorou apenas o desconforto]]. [[8|Há cansaço e calafrios]].`,
+  "febre-08": `A febre [[1|apareceu ontem pela manhã]], com máxima medida de [[2|38,2 °C]]. [[3|Persistiu ao longo de um dia, com temperatura ainda elevada hoje cedo]]. [[5|A elevação continua presente]]. [[6|Não percebe evento associado ao início]]. [[7|Relata queda da temperatura após antitérmico e retorno da elevação horas depois; a sequência temporal não prova causalidade]]. [[8|Há cefaleia junto]].`,
+  "febre-09": `A febre [[1|começou há três dias]], chegando a [[2|39,4 °C]], e [[3|permanece até a consulta, sem cessar]]. [[4|As medidas variam pouco entre manhã e noite]]. [[5|Ainda está presente]]. [[6|O início ocorreu após convívio com pessoa febril, sem nexo causal estabelecido]]. [[7|Não percebeu queda após a medida que tentou]]. [[8|Nega outros sintomas durante a elevação]].`,
+  "febre-10": `A febre [[1|começou na terça-feira]], com máxima de [[2|38,7 °C]], e durou [[3|quatro dias]]. [[4|Subia à noite e voltava ao habitual pela manhã]]. [[5|Desde sábado as medidas permanecem habituais]]. [[8|Houve suor e calafrios junto]]. Não foi perguntado sobre exposição ou evento antes do início. Não foi perguntado sobre fatores que reduziram a temperatura.`,
+  "febre-11": `Refere febre [[1|desde há dois dias, ainda mantida hoje]]. [[~2|Os picos estão ficando mais baixos; não foi informada a intensidade atual em graus ou por uma escala]]. [[3|O quadro continua até a consulta]]. [[4|A magnitude dos picos diminuiu ao longo desses dois dias]]. [[5|Ainda não terminou]]. [[6|Não observa fator desencadeante]]. [[7|A temperatura diminuiu temporariamente após um antitérmico]]. [[8|Há dor no corpo e falta de apetite]].`,
+  "febre-12": `A elevação [[1|começou na madrugada de ontem]], com registro de [[2|38,5 °C]], e [[3|dura cerca de 24 horas]]. [[5|Ainda está presente]]. [[4|O pico noturno foi seguido de valores menores pela manhã, ainda elevados]]. [[6|Não identifica exposição ou acontecimento associado]]. [[7|Não percebeu fator que alivie]]. [[8|Sente calafrios e cansaço]].`,
+  "febre-13": `Descreve febre [[1|iniciada há seis dias]], com máxima de [[2|39 °C]], que [[3|esteve presente por quatro dias]]. [[4|Os picos diminuíram ao longo desses dias]]. [[5|Há dois dias as medidas estão habituais, sem retorno da elevação]]. [[6|Não reconhece evento de início]]. [[8|Durante o quadro teve cefaleia]]. [[7|O efeito de medidas de alívio não foi informado]].`,
+  "febre-14": `A febre [[1|começou hoje cedo]], com medida máxima de [[2|38,8 °C]], e [[3|dura doze horas]]. [[5|Ainda não cessou]]. [[4|A temperatura subiu pela manhã e permaneceu próxima do pico à tarde]]. [[6|O início coincidiu com convívio domiciliar com pessoa febril; essa coincidência não estabelece causa]]. [[7|Relata queda temporária da temperatura após antitérmico]]. [[8|Nega manifestações concomitantes]].`,
+  "febre-15": `Relata febre [[1|desde quinta-feira]], com máxima de [[2|38,4 °C]], por [[3|três dias]]. [[5|As medidas estão habituais desde domingo]]. [[4|Havia um pico no fim da tarde e valores habituais pela manhã]]. [[7|Não percebeu fator de alívio durante os picos]]. [[8|Houve calafrios e suor]]. [[6|Não foi perguntado sobre exposição ou evento antes do início]].`,
+  "febre-16": `O quadro febril [[1|começou há quatro dias]] e [[3|continua até a consulta]]. [[5|Ainda não terminou]]. [[4|Os picos se repetem à noite, com temperatura habitual entre eles]]. [[6|Não identifica evento associado ao início]]. [[7|Refere queda temporária da temperatura após medicamento antitérmico]]. [[8|Há dor no corpo]].`,
+  "febre-17": `A febre [[1|começou na noite de sexta-feira]], com máxima de [[2|39,2 °C]], e persistiu por [[3|dois dias]]. [[4|Os picos do segundo dia foram menores]]. [[5|Desde a manhã de segunda-feira as medidas permanecem habituais]]. [[6|Não percebe fator inicial relacionado]]. [[7|Observou redução temporária da temperatura após antitérmico]]. [[8|Teve náusea durante os picos]].`,
+  "febre-18": `Relata febre [[1|iniciada há oito dias]], com pico de [[2|38,1 °C]], e [[3|ainda presente hoje]]. [[5|Não cessou]]. [[4|As medidas ficam elevadas de manhã e à tarde, sem grande oscilação]]. [[6|Não reconhece situação desencadeante]]. [[7|Não percebe fator de melhora]]. Manifestações concomitantes não foram abordadas na entrevista.`,
+  "febre-19": `Refere febre [[1|que apareceu ontem à tarde]], chegando a [[2|38,9 °C]], e que [[3|permanece até agora na consulta]]. [[5|Ainda está presente]]. [[4|O pico maior foi à noite e as medidas de hoje são menores]]. [[7|A queda temporária coincidiu com uso de antitérmico, sem confirmação de que ele causou a mudança]]. [[8|Há calafrios, sem dor no corpo]]. Não foi perguntado sobre exposição ou evento antes do início.`,
+  "febre-20": `A febre [[1|começou há dez dias]], com máxima registrada de [[2|39,3 °C]], e [[3|durou cinco dias]]. [[4|Os picos ocorriam à tarde, com medidas habituais nos intervalos]]. [[5|Há cinco dias não mede nova elevação]]. [[6|Não percebeu exposição ou evento inicial]]. [[7|Não observou medida que a aliviasse]]. [[8|Relata cansaço e suor durante o período febril]].`,
+  "perda-de-peso-19": `A pessoa relata [[2|em três meses]] roupas progressivamente mais largas. [[?1|Refere emagrecimento, mas não sabe estimar quantos quilos perdeu; não há pesagem de comparação]]. [[3|Há falta de apetite; ingesta, gasto de atividade e absorção não foram abordados]]. [[4|Não foram relatados outros sintomas]]. [[5|A mudança se concentrou no primeiro mês, sem diferença percebida depois]].`,
+}
+
+const reviewJsonPath = new URL("../../docs/reviews/caracteres-v1.json", import.meta.url)
+const reviewMarkdownPath = new URL("../../docs/reviews/caracteres-v1.md", import.meta.url)
+const reviewJsonBytes = readFileSync(reviewJsonPath)
+const reviewMarkdownBytes = readFileSync(reviewMarkdownPath)
+const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex")
+assert.equal(sha256(reviewJsonBytes), "8289f1d93693256233b613c3f0092b2b4d220ec5e036fe0f7821bbd366a3fb9e", "Independent review JSON changed; refusing regeneration")
+assert.equal(sha256(reviewMarkdownBytes), "8c2a4227586886560bb80ff5fd99889cb22e75c4bb7aeec74a9f757b2a9a8271", "Independent review Markdown changed; refusing regeneration")
+const independentReview = JSON.parse(reviewJsonBytes.toString("utf8"))
+const flaggedIds = independentReview.stories.filter((story) => story.disposition === "needs-revision").map((story) => story.id).sort()
+assert.deepEqual(Object.keys(editorialOverrides).sort(), flaggedIds, "Every needs-revision story must have exactly one guarded editorial replacement")
+const feverGroup = bank.groups.find((group) => group.id === "febre")
+const feverTrigger = feverGroup.fields.find((field) => field.id === "fatores-desencadeantes")
+const feverRelief = feverGroup.fields.find((field) => field.id === "fator-melhora")
+feverTrigger.sourceLabel = "Fatores desencadeantes: ex.: desidratação, o corpo não consegue suar, causa febre"
+feverTrigger.label = "Circunstâncias associadas ao início"
+feverTrigger.notes = "Transcrição original arquivística em sourceLabel; não usar como conteúdo didático sem revisão clínica."
+feverRelief.sourceLabel = "Fator de melhora: medicamentos, banho frio…"
+feverRelief.label = "Fatores de melhora percebidos"
+feverRelief.notes = "Transcrição original arquivística em sourceLabel; não usar como conteúdo didático sem revisão clínica."
+
+const findingIdsByStory = new Map()
+for (const finding of independentReview.findings) {
+  if (!finding.storyId) continue
+  findingIdsByStory.set(finding.storyId, [...(findingIdsByStory.get(finding.storyId) ?? []), finding.id])
+}
+for (const shared of independentReview.sharedFindings) {
+  for (const id of shared.appliesToStoryIds) findingIdsByStory.set(id, [...(findingIdsByStory.get(id) ?? []), shared.id])
+}
+bank.editorialChangeLog = {
+  status: "draft-awaiting-independent-rereview",
+  originalDraftSha256: independentReview.draftSha256,
+  inputReview: {
+    id: independentReview.reviewId,
+    jsonSha256: sha256(reviewJsonBytes),
+    markdownSha256: sha256(reviewMarkdownBytes),
+  },
+  changedStories: flaggedIds.map((id) => ({
+    id,
+    originalTextSha256: independentReview.stories.find((story) => story.id === id).textSha256,
+    findingIds: findingIdsByStory.get(id) ?? [],
+    status: "draft-needs-independent-rereview",
+  })),
+  clinicalApproval: false,
+  releaseApproved: false,
+}
+
 const detailByField = {
   "desencadeantes-agravantes": "Exige gatilho e agravante, ou negativas explícitas para ambos.",
   "inicio-duracao-evolucao": "Exige início, duração e curso posterior.",
@@ -421,6 +534,25 @@ for (const [groupId, narratives] of Object.entries(additions)) {
   })
 }
 
+for (const [id, marked] of Object.entries(editorialOverrides)) {
+  const item = cases.find((story) => story.id === id)
+  assert(item, `Missing generator seed for ${id}`)
+  const edited = parseNarrative(marked, groups.get(item.groupId))
+  const sourceHash = sha256(Buffer.from(original.get(id).text, "utf8"))
+  const correctedHash = sha256(Buffer.from(edited.text, "utf8"))
+  const reviewedHash = independentReview.stories.find((story) => story.id === id).textSha256
+  assert(sourceHash === reviewedHash || sourceHash === correctedHash, `${id}: refusing to replace narrative drift outside this editorial patch`)
+  item.text = edited.text
+  item.q = edited.q
+}
+for (const item of cases) {
+  if (!editorialOverrides[item.id]) continue
+  const originalHash = sha256(Buffer.from(original.get(item.id).text, "utf8"))
+  const expectedOriginalHash = independentReview.stories.find((story) => story.id === item.id).textSha256
+  const correctedHash = sha256(Buffer.from(item.text, "utf8"))
+  assert(originalHash === expectedOriginalHash || originalHash === correctedHash, `${item.id}: source narrative differs from both the reviewed snapshot and the saved editorial replacement`)
+}
+
 bank.evidencePolicy = {
   id: "missing-context-v2", status: "needs-educational-review",
   rule: "Todas as perguntas do checklist devem ser abordadas. Negativas explícitas e ausência de relação percebida são informação presente. omitted é omissão real; partial tem menção, mas falta elemento obrigatório. missingContextFieldIds reúne omitted e partial. addressed-unknown registra pergunta abordada com resposta desconhecida: não é negativa nem pergunta automaticamente omitida e impede gabarito automático até revisão.",
@@ -436,7 +568,13 @@ bank.generation.batches = [
 bank.generation.scope = "Root model/prompt identify the preserved initial batch; see batches and each story for new generation and editorial revisions."
 bank.review = {
   ...bank.review, status: "draft", clinicalReview: "not-recorded",
-  secondPass: { status: "unavailable", modelRequested: "gpt-6.1-sol", modelVersion: "unknown", date: "2026-11-14", reason: "Uma tentativa de cliente separado falhou ao iniciar: Operation not permitted. Não houve consulta de quota, inferência de revisão, nem novas tentativas.", findings: [], disposition: "pending-independent-review" },
+  secondPass: {
+    status: "pending-independent-rereview",
+    priorCompletedReview: { id: independentReview.reviewId, report: "docs/reviews/caracteres-v1.json", draftSha256: independentReview.draftSha256, storiesRead: 220, modelReviewed: 160, needsRevision: 60 },
+    currentRevisionApproved: false,
+    previousUnavailableAttempt: bank.review.secondPass.previousUnavailableAttempt ?? bank.review.secondPass,
+    reason: "A revisão v1 foi concluída sobre o snapshot anterior. As 60 correções editoriais ainda aguardam nova revisão independente; a revisão histórica não aprova bytes alterados.",
+  },
 }
 bank.stories = cases.map(({ groupId, id, text, q, isNew }) => {
   const group = groups.get(groupId)
@@ -465,7 +603,19 @@ bank.stories = cases.map(({ groupId, id, text, q, isNew }) => {
     clinicalReferenceIds: clinicalReferences.filter((ref) => ref.groups.includes(groupId)).map((ref) => ref.id),
     generation: isNew ? { ...newGeneration } : { ...(previous?.generation ?? { model: "gpt-6-luna", promptVersion: "content-bank-v1" }), modelVersion: previous?.generation?.modelVersion ?? "unknown" },
     ...(!isNew ? { editorialRevision: { ...newGeneration, reason: "Auditoria de evidência, sem substituir a proveniência da história original." } } : {}),
-    review: { status: unknownFieldIds.length ? "needs-revision" : "draft", clinicalReview: "not-recorded", independentReview: "pending", policyReview: "needs-educational-review", findings: unknownFieldIds.length ? ["Resposta desconhecida: sem gabarito automático até revisão."] : [] },
+    review: editorialOverrides[id]
+      ? { status: "needs-revision", clinicalReview: "not-recorded", independentReview: "pending", policyReview: "needs-educational-review", findings: ["Correção editorial em rascunho; aguarda nova revisão independente e revisão clínica."] }
+      : { status: unknownFieldIds.length ? "needs-revision" : "draft", clinicalReview: "not-recorded", independentReview: "pending", policyReview: "needs-educational-review", findings: unknownFieldIds.length ? ["Resposta desconhecida: sem gabarito automático até revisão."] : [] },
+    ...(editorialOverrides[id] ? { editorialRevision: {
+      status: "draft-awaiting-independent-rereview",
+      sourceReviewId: independentReview.reviewId,
+      originalTextSha256: independentReview.stories.find((story) => story.id === id).textSha256,
+      findingIds: findingIdsByStory.get(id) ?? [],
+      model: "unknown",
+      modelVersion: "unknown",
+      clinicalApproval: false,
+      releaseApproved: false,
+    } } : (!isNew ? { editorialRevision: previous?.editorialRevision ?? { ...newGeneration, reason: "Auditoria de evidência, sem substituir a proveniência da história original." } } : {})),
   }
 })
 bank.coverage = {
@@ -524,7 +674,8 @@ audit()
 // Emit small, reviewable apply_patch payloads; this script never writes files.
 // Apply --patch-header once, then --patch-group=<id> for each PDF group.
 const patchGroup = process.argv.find((arg) => arg.startsWith("--patch-group="))?.split("=")[1]
-if (process.argv.includes("--patch-header") || patchGroup) {
+const patchStory = process.argv.find((arg) => arg.startsWith("--patch-story="))?.split("=")[1]
+if (process.argv.includes("--patch-header") || patchGroup || patchStory) {
   const existing = JSON.parse(readFileSync(path, "utf8"))
   const hunks = []
   const replace = (before, after) => {
@@ -534,10 +685,16 @@ if (process.argv.includes("--patch-header") || patchGroup) {
   const body = (story) => JSON.stringify(story, null, 2).split("\n").map((line) => `    ${line}`).join("\n")
   if (process.argv.includes("--patch-header")) {
     for (const key of ["generation", "review", "coverage", "groups"]) replace(`${property(key, existing[key])},`, `${property(key, bank[key])},`)
-    const newKeys = ["evidencePolicy", "clinicalReferences", "integration"]
+    const newKeys = ["evidencePolicy", "clinicalReferences", "integration", "editorialChangeLog"]
     const absent = newKeys.filter((key) => !(key in existing))
     for (const key of newKeys.filter((key) => key in existing)) replace(`${property(key, existing[key])},`, `${property(key, bank[key])},`)
     if (absent.length) replace('  "stories": [', `${absent.map((key) => `${property(key, bank[key])},`).join("\n")}\n  "stories": [`)
+  } else if (patchStory) {
+    const old = existing.stories.find((story) => story.id === patchStory)
+    const next = bank.stories.find((story) => story.id === patchStory)
+    assert(old && next, `Unknown story: ${patchStory}`)
+    const suffix = old.id === existing.stories.at(-1).id ? "" : ","
+    replace(body(old) + suffix, body(next) + suffix)
   } else {
     assert(groups.has(patchGroup), `Unknown group: ${patchGroup}`)
     const nextStories = bank.stories.filter((s) => s.groupId === patchGroup)
@@ -558,7 +715,10 @@ if (process.argv.includes("--patch-header") || patchGroup) {
 } else {
   const existing = JSON.parse(readFileSync(path, "utf8"))
   if (process.argv.includes("--check")) {
-    assert.deepEqual({ ...existing, stories: [...existing.stories].sort((a, b) => a.id.localeCompare(b.id)) }, { ...bank, stories: [...bank.stories].sort((a, b) => a.id.localeCompare(b.id)) }, "Apply --patch-header and --patch-group payloads; bank is stale")
+    const differences = Object.keys(bank).filter((key) => key !== "stories" && !isDeepStrictEqual(existing[key], bank[key]))
+    for (const story of bank.stories) if (!isDeepStrictEqual(existing.stories.find((item) => item.id === story.id), story)) differences.push(story.id)
+    assert.equal(existing.stories.length, bank.stories.length, "Story count differs from guarded generator")
+    assert(differences.length === 0, `Bank is stale; apply guarded patches for: ${differences.slice(0, 25).join(", ")}${differences.length > 25 ? ` (+${differences.length - 25} more)` : ""}`)
   }
   console.log(JSON.stringify({ coverage: bank.coverage, structuralPass: true, clinicalApproval: false }, null, 2))
 }

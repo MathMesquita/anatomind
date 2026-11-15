@@ -24,6 +24,7 @@ The 2026-11-15 saved draft contains 224 disease records, 328 recorded positive m
 Generation reached 220 draft stories: 20 for each of 11 source groups. This does **not** mean 220 approved or playable questions. The first independent semantic review read all 220 stories and 1,800 field decisions: 160 received model-reviewed status; 60 need revision, including 42 on hold. Corrections and their independent recheck are still required. The exact reviewed snapshot and all findings are preserved in `docs/reviews/caracteres-v1.json`. String-matching evidence and structural validation cannot decide whether a story actually documents a characteristic.
 
 - Resolve per-story review findings and verify every complete checklist, evidence span, and missing-data set. Keep zero/one/multiple omissions and explicit none.
+- All 60 editorial replacements are now saved and reproduce through the guarded generator; the 160 previously passed stories' text, keys, sources, and evidence remain unchanged. The corrected snapshot still needs independent review. Two explicitly unknown-information stories remain held without an automatic answer.
 - Normalize display wording without losing the source checklist. Do not teach questionable source claims as medical facts.
 - Integrate group-specific checklists, bounded rounds, source-linked explanations, and provenance into the existing hidden-story/timer flow after freezing a reviewed release.
 
@@ -35,6 +36,10 @@ The source inventory preserves 204 term/group contexts and their original descri
 - Do not exclude a valid history milestone simply because it is normal rather than a symptom.
 - Independently review each new batch for natural patient speech, semantic correctness, coherent accepted paths, alternative-context partial credit, and source-supported ambiguity.
 - Integrate only the frozen reviewed set, with three four-choice stages, explicit no-subgroup, context explanations, and complete feedback debug.
+
+Two interrupted generation batches preserve 100 additional draft stories in ten more context sets, outside the 340-story base snapshot. Each batch reached 50 of its planned 200 stories; 300 slots remain in their combined 40 assigned contexts. Their read-only partial validation passes after metadata/source-locator repairs, but they are neither complete batches nor independently reviewed. Do not merge them into the base under review or describe 440 as a reviewed/playable bank. The v2 interrogation review checkpoint covers only 60 of the base's 340 stories; 280 are still unread in that pass.
+
+The latest workers reported a usage reset at 4:25 PM on 2026-11-15. Interrupted author/reviewer checkpoints remain saved; quota failure is not content approval. Resume the existing tasks after availability returns, rather than discard partial work or restart generation blindly.
 
 ## Release checks still required
 

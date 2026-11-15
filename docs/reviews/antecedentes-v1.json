@@ -1,0 +1,2530 @@
+{
+  "schemaVersion": 1,
+  "topic": "antecedentes",
+  "reportType": "author-audit-and-expansion-checkpoint-not-independent-review",
+  "date": "2026-11-15",
+  "revisionId": "antecedentes-author-draft-expansion-2026-11-15",
+  "status": "draft",
+  "checkpointStatus": "author-checkpoint-finalized; bounded-followups-completed; independent-clinical-curricular-review-pending",
+  "author": {
+    "agent": "Codex",
+    "model": "not-exposed",
+    "modelVersion": "unknown",
+    "modelIdentityBasis": "Exact runtime model/build not exposed; no requested model label used as proof of identity.",
+    "promptVersion": "antecedentes-author-audit-expansion-v2",
+    "date": "2026-11-15",
+    "revisionId": "antecedentes-author-draft-expansion-2026-11-15",
+    "scope": "provenance-audit; evidence-backed membership repair and limited expansion; inherited rows not all re-researched",
+    "previousInputSha256": "937d14de16da985deff7e94649995d073a107d3cd723c93a8c96ad028ad9e2af"
+  },
+  "review": {
+    "status": "draft",
+    "independentReviewOfCurrentRevision": "not-performed",
+    "clinicalReview": "not-performed",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "scope": {
+    "ownedFiles": [
+      "content/drafts/antecedentes.json",
+      "docs/research/antecedentes.md",
+      "docs/reviews/antecedentes-v1.json",
+      "docs/reviews/antecedentes-v1.md"
+    ],
+    "appEdits": false,
+    "releaseEdits": false
+  },
+  "input": {
+    "sha256": "937d14de16da985deff7e94649995d073a107d3cd723c93a8c96ad028ad9e2af",
+    "diseases": 206,
+    "memberships": 290,
+    "researchNoteReported": {
+      "diseases": 82,
+      "memberships": 86
+    },
+    "reviewReportsPresent": false
+  },
+  "provenanceAudit": {
+    "date": "2026-11-15",
+    "inputSha256": "937d14de16da985deff7e94649995d073a107d3cd723c93a8c96ad028ad9e2af",
+    "inputDiseaseCount": 206,
+    "inputMembershipCount": 290,
+    "historicalResearchNoteCounts": {
+      "diseases": 82,
+      "memberships": 86,
+      "validation": "historical-reported-counts; original 82/86 artifact not available as frozen input"
+    },
+    "claimedModelReviewedDiseaseCount": 206,
+    "sameGenerationAndReviewModelLabelCount": 206,
+    "claimedOriginalInputOnlyReviewCount": 81,
+    "claimedPendingSecondPassCount": 125,
+    "referencedReviewReportsPresentAtStart": false,
+    "evidenceOfSameAuthor": "Same model labels alone do not prove author/session identity; saved scope explicitly says repairs/additions not independently rechecked.",
+    "authenticatedPriorIndependentReviewCount": 0,
+    "priorReviewClaimsPreserved": "bank.claimedReview; groups[].claimedReview; diseases[].claimedReview; original generation metadata retained in generationHistory; original membership verification claims in claimedVerification",
+    "finding": "Do not extend a possible independent review of a prior input to the current edited artifact. No independent review of this revision is claimed.",
+    "backgroundResearchAgent": {
+      "requestedBySkill": true,
+      "available": false,
+      "performed": false,
+      "fallback": "Research performed by editing agent; no independent reviewer or background agent fabricated."
+    },
+    "rtkInstructions": {
+      "requested": "@RTK.md",
+      "resolved": false,
+      "note": "RTK.md not found in workspace, ancestors or searched agent/Codex skill locations; no instructions invented."
+    }
+  },
+  "claimedReview": {
+    "status": "model-reviewed",
+    "model": "gpt6.1-sol",
+    "modelVersion": "unknown",
+    "modelIdentityBasis": "Review label explicitly requested in task; runtime build identity is not independently exposed.",
+    "date": "2026-11-14",
+    "report": "docs/reviews/antecedentes-v1.json",
+    "inputSha256": "0cc53dfb256457dc890c24969063e4053382c66bdc8ad8a7069a4f826ef75de2",
+    "independentOfOriginalGenerator": true,
+    "independentOfRepairsAndAdditions": false,
+    "strongerThanOriginalModel": "not-independently-verifiable",
+    "clinicalReview": "not-performed",
+    "clinicalApproval": false,
+    "releaseDisposition": "withheld-pending-clinical-curricular-and-independent-repair-review"
+  },
+  "coverage": {
+    "targetDistinctDiseasesPerGroup": 20,
+    "targetOptionsPerRound": 20,
+    "targetValidPositivesPerRound": {
+      "minimum": 2,
+      "maximum": 5
+    },
+    "groupCount": 14,
+    "diseaseCount": 224,
+    "membershipCount": 328,
+    "totalGroupSlotsShortOfTarget": 0,
+    "groupCounts": {
+      "infectocontagiosas": 28,
+      "neurologicas": 25,
+      "psiquiatricas": 20,
+      "auditivas": 20,
+      "oculares": 20,
+      "nasais": 20,
+      "respiratorias": 33,
+      "cardiovasculares": 23,
+      "digestivas": 21,
+      "genitourinarias": 21,
+      "endocrinologicas": 21,
+      "miostioarticulares": 21,
+      "hematologicas": 20,
+      "neoplasicas": 35
+    },
+    "conditionalMembershipCount": 57,
+    "unresolvedMembershipQuestionCount": 2,
+    "groupsMeetingSourceVerifiedTarget": 0,
+    "clinicallyApprovedDiseaseCount": 0,
+    "clinicallyApprovedMembershipCount": 0,
+    "releaseTargetGroupSlotsRemaining": 280,
+    "countingBasis": "IDs diagnósticos únicos: doenças, transtornos, malformações e condições diagnosticáveis admitidas pelo escopo salvo (inclui erros refrativos e defeitos estruturais). Não é contagem de etiologias mutuamente exclusivas. Subtipos não são desdobrados para preencher meta.",
+    "groupsMeetingSourceReferencedTarget": 14,
+    "sourceVerifiedTargetStatus": "not-asserted-for-whole-bank; 286 inherited positive memberships not rechecked; all 42 positives checked by this author now have relevant official page text read, with official terminology attribution and anatomical synthesis identified",
+    "currentPassSourceSupportedPositiveMembershipCount": 42,
+    "inheritedPositiveMembershipCountNotRechecked": 286,
+    "independentlyReviewedCurrentDiseaseCount": 0,
+    "independentlyReviewedCurrentMembershipCount": 0,
+    "currentPassFullPrimaryPageSupportedPositiveMembershipCount": 42
+  },
+  "groupCoverage": [
+    {
+      "groupId": "infectocontagiosas",
+      "label": "Doenças infectocontagiosas",
+      "input": 24,
+      "current": 28,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "neurologicas",
+      "label": "Doenças neurológicas",
+      "input": 24,
+      "current": 25,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "psiquiatricas",
+      "label": "Doenças psiquiátricas",
+      "input": 20,
+      "current": 20,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "auditivas",
+      "label": "Doenças auditivas",
+      "input": 16,
+      "current": 20,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "oculares",
+      "label": "Doenças oculares",
+      "input": 20,
+      "current": 20,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "nasais",
+      "label": "Doenças do nariz",
+      "input": 6,
+      "current": 20,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "respiratorias",
+      "label": "Doenças respiratórias",
+      "input": 22,
+      "current": 33,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "cardiovasculares",
+      "label": "Doenças cardiovasculares",
+      "input": 22,
+      "current": 23,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "digestivas",
+      "label": "Doenças do aparelho digestivo",
+      "input": 21,
+      "current": 21,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "genitourinarias",
+      "label": "Doenças genito-urinárias",
+      "input": 21,
+      "current": 21,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "endocrinologicas",
+      "label": "Doenças endocrinológicas",
+      "input": 20,
+      "current": 21,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "miostioarticulares",
+      "label": "Doenças musculoesqueléticas (mio-osteoarticulares)",
+      "input": 21,
+      "current": 21,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "hematologicas",
+      "label": "Doenças hematológicas",
+      "input": 20,
+      "current": 20,
+      "target": 20,
+      "remaining": 0
+    },
+    {
+      "groupId": "neoplasicas",
+      "label": "Doenças neoplásicas",
+      "input": 33,
+      "current": 35,
+      "target": 20,
+      "remaining": 0
+    }
+  ],
+  "changes": [
+    {
+      "type": "added-positive-membership",
+      "diseaseId": "retinopatia-diabetica",
+      "groupId": "cardiovasculares",
+      "evidenceKeys": [
+        "retinopatia"
+      ]
+    },
+    {
+      "type": "added-positive-membership",
+      "diseaseId": "retinopatia-diabetica",
+      "groupId": "endocrinologicas",
+      "evidenceKeys": [
+        "retinopatia"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "conjuntivite",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "conjuntivite"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "neuronite-vestibular",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "vestibular"
+      ]
+    },
+    {
+      "type": "rechecked-conditional-membership",
+      "diseaseId": "labirintite",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "vestibular"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "miocardite",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "coracao"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "pericardite",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "coracao"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "ulcera-peptica",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "ulcera"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "uveite",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "uveite"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "linfoma",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "uveite"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "sarcoidose-pulmonar",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "uveite"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "artrite-reativa",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "uveite"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "colite-ulcerativa",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "uveite"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "esclerose-multipla",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "uveite"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "otite-media-efusao",
+      "groupIds": [
+        "auditivas"
+      ],
+      "evidenceKeys": [
+        "efusao",
+        "efusaoNICE"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "perfuracao-timpanica",
+      "groupIds": [
+        "auditivas"
+      ],
+      "evidenceKeys": [
+        "timpano"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "disfuncao-tuba-auditiva",
+      "groupIds": [
+        "auditivas"
+      ],
+      "evidenceKeys": [
+        "tuba"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "perda-auditiva-neurossensorial-subita-idiopatica",
+      "groupIds": [
+        "auditivas"
+      ],
+      "evidenceKeys": [
+        "surdez"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "desvio-septo-nasal",
+      "groupIds": [
+        "nasais",
+        "respiratorias"
+      ],
+      "evidenceKeys": [
+        "desvio"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "perfuracao-septo-nasal",
+      "groupIds": [
+        "nasais",
+        "respiratorias"
+      ],
+      "evidenceKeys": [
+        "perfuracaoSeptal"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "atresia-coanas",
+      "groupIds": [
+        "nasais",
+        "respiratorias"
+      ],
+      "evidenceKeys": [
+        "atresia"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "estenose-piriforme-nasal-congenita",
+      "groupIds": [
+        "nasais",
+        "respiratorias"
+      ],
+      "evidenceKeys": [
+        "piriforme"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "hipertrofia-conchas-inferiores",
+      "groupIds": [
+        "nasais",
+        "respiratorias"
+      ],
+      "evidenceKeys": [
+        "conchas"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "vestibulite-nasal-bacteriana",
+      "groupIds": [
+        "nasais",
+        "infectocontagiosas"
+      ],
+      "evidenceKeys": [
+        "vestibulite"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "abscesso-septo-nasal",
+      "groupIds": [
+        "nasais",
+        "respiratorias",
+        "infectocontagiosas"
+      ],
+      "evidenceKeys": [
+        "abscesso"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "rinofima",
+      "groupIds": [
+        "nasais"
+      ],
+      "evidenceKeys": [
+        "rinofima"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "papiloma-invertido-nasal",
+      "groupIds": [
+        "nasais",
+        "respiratorias",
+        "neoplasicas"
+      ],
+      "evidenceKeys": [
+        "papiloma"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "angiofibroma-nasofaringeo-juvenil",
+      "groupIds": [
+        "nasais",
+        "respiratorias",
+        "neoplasicas"
+      ],
+      "evidenceKeys": [
+        "angiofibroma"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "cisto-dermoide-nasal",
+      "groupIds": [
+        "nasais"
+      ],
+      "evidenceKeys": [
+        "dermoide",
+        "dermoideOrpha"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "encefalocele-intranasal",
+      "groupIds": [
+        "nasais",
+        "respiratorias",
+        "neurologicas"
+      ],
+      "evidenceKeys": [
+        "encefalocele"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "rinoscleroma",
+      "groupIds": [
+        "nasais",
+        "respiratorias",
+        "infectocontagiosas"
+      ],
+      "evidenceKeys": [
+        "rinoscleroma"
+      ]
+    },
+    {
+      "type": "added-diagnosis",
+      "diseaseId": "rinosporidiose-nasal",
+      "groupIds": [
+        "nasais",
+        "respiratorias",
+        "infectocontagiosas"
+      ],
+      "evidenceKeys": [
+        "rinosporidiose"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "rinofima",
+      "groupId": "respiratorias",
+      "evidenceKeys": [
+        "rinofima"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "angiofibroma-nasofaringeo-juvenil",
+      "groupId": "auditivas",
+      "evidenceKeys": [
+        "angiofibroma"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "angiofibroma-nasofaringeo-juvenil",
+      "groupId": "neurologicas",
+      "evidenceKeys": [
+        "angiofibroma"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "angiofibroma-nasofaringeo-juvenil",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "angiofibroma"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "cisto-dermoide-nasal",
+      "groupId": "neurologicas",
+      "evidenceKeys": [
+        "dermoideOrpha"
+      ]
+    },
+    {
+      "type": "added-conditional-membership",
+      "diseaseId": "cisto-dermoide-nasal",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "dermoideOrpha"
+      ]
+    },
+    {
+      "type": "rechecked-existing-positive-membership",
+      "diseaseId": "otite-media-aguda",
+      "groupId": "auditivas",
+      "evidenceKeys": [
+        "efusaoNIDCD"
+      ]
+    },
+    {
+      "type": "rechecked-existing-positive-membership",
+      "diseaseId": "otite-media-aguda",
+      "groupId": "infectocontagiosas",
+      "evidenceKeys": [
+        "efusaoNIDCD"
+      ]
+    },
+    {
+      "type": "rechecked-existing-positive-membership",
+      "diseaseId": "glaucoma",
+      "groupId": "oculares",
+      "evidenceKeys": [
+        "glaucomaNEI",
+        "glaucomaMeSH"
+      ],
+      "followUpId": "antecedentes-bounded-source-followups-final-2026-11-15"
+    },
+    {
+      "type": "rechecked-existing-positive-membership",
+      "diseaseId": "osteoporose",
+      "groupId": "miostioarticulares",
+      "evidenceKeys": [
+        "osteoporoseMeSH",
+        "osteoporoseNIAMS"
+      ],
+      "followUpId": "antecedentes-bounded-source-followups-final-2026-11-15"
+    },
+    {
+      "type": "resolved-question-to-conditional-membership",
+      "diseaseId": "infeccao-hiv",
+      "groupId": "neurologicas",
+      "evidenceKeys": [
+        "hivCNSGuideline"
+      ],
+      "followUpId": "antecedentes-bounded-source-followups-final-2026-11-15"
+    }
+  ],
+  "findings": [
+    {
+      "id": "provenance-current-artifact",
+      "status": "metadata-repaired-not-independently-reviewed",
+      "detail": "All 206 inherited records claimed model-reviewed. 81 claimed original-input-only review; 125 explicitly pending. Original claims are preserved verbatim separately, not disproven or relabeled as independently verified."
+    },
+    {
+      "id": "retinopathy-cross-memberships",
+      "status": "draft-source-supported",
+      "detail": "Added cardiovascular and endocrine memberships to established diabetic retinopathy from explicit MeSH C14/C19 trees. Curricular approval remains false."
+    },
+    {
+      "id": "conditional-distractor-risk",
+      "status": "draft-mitigated-in-content-policy-only",
+      "detail": "Added/rechecked conditionals for conjunctivitis, uveitis, heart inflammation, H. pylori ulcer, vestibular disease and organ-specific manifestations. No negative pair validated; no app behavior changed."
+    },
+    {
+      "id": "source-versus-diagnosis",
+      "status": "draft-source-supported",
+      "detail": "Hemodialysis is treatment, excluded from diagnoses. Symptoms/organs/families remain in sourceTermInventory. Added structural/congenital diagnostic conditions explicitly typed; no invented aliases counted as extra diseases."
+    }
+  ],
+  "references": {
+    "retinopatia": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D003930",
+      "title": "Diabetic Retinopathy — NLM MeSH 2026",
+      "locator": "Scope Note; Tree Numbers C11.768.257 (ocular), C14.907.320.382 (cardiovascular) e C19.246.099.500.382 (endócrino); MeSH Tree Structures.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "perfuracaoSeptal": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D061270",
+      "title": "Nasal Septal Perforation — NLM MeSH 2026",
+      "locator": "Scope Note; C08.460.595 e C09.603.588: defeito do septo nasal; classificação respiratória/nasal.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "atresia": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D002754",
+      "title": "Choanal Atresia — NLM MeSH 2026",
+      "locator": "Scope Note; C08.460.171, C08.695.271 e C09.603.171: malformação congênita da abertura posterior nasal.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "rinoscleroma": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D012226",
+      "title": "Rhinoscleroma — NLM MeSH 2026",
+      "locator": "Scope Note; árvores C01 (infecção), C08.460.850 (nariz/respiratório) e C09.603.850 (nariz).",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "rinosporidiose": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D012227",
+      "title": "Rhinosporidiosis — NLM MeSH 2026",
+      "locator": "Scope Note; C01.610.600.700: infecção granulomatosa de mucosas, especialmente nariz; agente R. seeberi, Mesomycetozoea.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "desvio": {
+      "url": "https://www.uhsussex.nhs.uk/resources/septoplasty-and-septorhinoplasty/",
+      "title": "Septoplasty and septorhinoplasty — University Hospitals Sussex NHS",
+      "locator": "What is septal surgery?; Why do I need septal surgery?: septo desviado pode obstruir passagem nasal; diagnóstico distinguido da septoplastia.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "conchas": {
+      "url": "https://www.nice.org.uk/guidance/htg343/resources/radiofrequency-tissue-reduction-for-turbinate-hypertrophy-pdf-1809592054510021",
+      "title": "Radiofrequency tissue reduction for turbinate hypertrophy — NICE HTG343",
+      "locator": "2 Indications and current treatments, 2.1: aumento das conchas inferiores estreita passagem nasal e pode obstruí-la.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "official-primary-indexed-excerpt-read",
+      "accessNote": "Definição da seção 2.1 lida no resultado indexado oficial; acesso direto ao PDF e capítulos respondeu 403; leitura integral pendente."
+    },
+    "vestibulite": {
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/573365",
+      "title": "Nasal vestibulitis — NCBI MedGen, definição atribuída ao NCI",
+      "locator": "Definition; Term Hierarchy: inflamação do revestimento anterior nasal, geralmente por infecção bacteriana; entidade não neoplásica.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-official-NIH-terminology-page-read",
+      "accessNote": "Definição NCI reproduzida e explicitamente atribuída no MedGen/NIH; código NCI original não recuperado nesta passagem."
+    },
+    "abscesso": {
+      "url": "https://www.entuk.org/_userfiles/pages/files/guidelines/global%20ent%20guidelines/septal_abscess.pdf",
+      "title": "Nasal Septal Abscess — ENT UK, Catherine Irungu",
+      "locator": "Página 1, Background information: coleção de pus entre septo e mucopericôndrio/mucoperiósteo; hematoma e infecção não são sinônimos.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "primary-PDF-page-text-read",
+      "accessNote": "Página 1 extraída pela navegação; não se afirma nova extração local nem validação visual integral."
+    },
+    "rinofima": {
+      "url": "https://nwknowledgenow.nhs.uk/content/rhinophyma/",
+      "title": "Rhinophyma (Thickened skin on the nose) — Norfolk and Suffolk NHS ICB",
+      "locator": "Not Routinely Funded: doença cutânea progressiva do nariz; obstrução de via aérea apenas em casos graves.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "papiloma": {
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/79106",
+      "title": "Nasal cavity inverting papilloma — NCBI MedGen, definição atribuída ao NCI",
+      "locator": "Definition; Term Hierarchy: neoplasia benigna da mucosa respiratória ciliada nasal; não equivale a carcinoma.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-official-NIH-terminology-page-read",
+      "accessNote": "Definição NCI reproduzida e atribuída no MedGen/NIH; código NCI original não recuperado nesta passagem."
+    },
+    "angiofibroma": {
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/juvenile-nasopharyngeal-angiofibroma",
+      "title": "Juvenile nasopharyngeal angiofibroma — NCI Dictionary of Cancer Terms",
+      "locator": "Definição: tumor benigno vascular/fibroso no fundo do nariz; extensão orbital/cerebral e perda auditiva não universais.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "dermoide": {
+      "url": "https://www.gosh.nhs.uk/conditions-and-treatments/conditions-we-treat/intracranial-dermoid-cysts/",
+      "title": "Intracranial dermoid cysts — Great Ormond Street Hospital NHS",
+      "locator": "Introdução: distingue cistos dermoides intracranianos dos cistos dermoides nasais que afetam apenas a pele da ponte nasal.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "dermoideOrpha": {
+      "url": "https://www.orpha.net/en/disease/detail/141103?mode=name&name=Nasal+dermoid+cyst",
+      "title": "Nasal dermoid cyst — Orphanet ORPHA:141103",
+      "locator": "Disease definition: malformação otorrinolaringológica, geralmente superficial; extensão intracraniana e infecção não são universais.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "official-primary-indexed-definition-read",
+      "accessNote": "Definição oficial lida no resultado indexado; página direta respondeu 403; leitura integral pendente."
+    },
+    "piriforme": {
+      "url": "https://www.orpha.net/en/disease/detail/162516",
+      "title": "Isolated congenital nasal pyriform aperture stenosis — Orphanet ORPHA:162516",
+      "locator": "Disease definition: estreitamento da abertura piriforme por crescimento do processo nasal da maxila; malformação com obstrução nasal.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "official-primary-indexed-definition-read",
+      "accessNote": "Definição oficial lida no resultado indexado; acesso direto respondeu 403; leitura integral pendente."
+    },
+    "heterotopia": {
+      "url": "https://www.orpha.net/en/disease/detail/141112?mode=name&name=Nasal+glioma",
+      "title": "Nasal glial heterotopia — Orphanet ORPHA:141112",
+      "locator": "Disease definition: anomalia do desenvolvimento como massa nasal; não comunica com SNC. Escopo intranasal explicitado no diagnóstico proposto.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "official-primary-indexed-definition-read",
+      "accessNote": "Definição oficial lida no resultado indexado; página direta respondeu 403; leitura integral pendente. Não inferir glioblastoma pelo sinônimo nasal glioma."
+    },
+    "encefalocele": {
+      "url": "https://www.orpha.net/en/disease/detail/141118",
+      "title": "Nasal encephalocele — Orphanet ORPHA:141118",
+      "locator": "Disease definition: herniação de conteúdo intracraniano com comunicação subaracnoidea; pode ser massa intranasal. Escopo intranasal qualificado nesta proposta.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "official-primary-indexed-definition-read",
+      "accessNote": "Definição oficial lida no resultado indexado; página direta respondeu 403; leitura integral pendente."
+    },
+    "efusao": {
+      "url": "https://www.nhs.uk/conditions/glue-ear/",
+      "title": "Glue ear — NHS",
+      "locator": "Introdução e Symptoms: líquido no ouvido médio, possível perda auditiva temporária; não sinônimo de otite média aguda.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "efusaoNICE": {
+      "url": "https://www.nice.org.uk/guidance/ng233/chapter/Recommendations",
+      "title": "Otitis media with effusion in under 12s — NICE NG233",
+      "locator": "Terms used in this guideline — Otitis media with effusion: efusão sem sinais de inflamação/infecção aguda.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "official-primary-indexed-excerpt-read",
+      "accessNote": "Definição oficial lida no resultado indexado; página direta respondeu 403; texto integral pendente."
+    },
+    "timpano": {
+      "url": "https://www.nhs.uk/conditions/perforated-eardrum/",
+      "title": "Perforated eardrum — NHS",
+      "locator": "Introdução e Symptoms: orifício/ruptura timpânica; pode seguir infecção, lesão ou ruído intenso; lesão estrutural diagnosticável.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "tuba": {
+      "url": "https://www.chelwest.nhs.uk/your-visit/patient-leaflets/ent-audiology/eustachian-tube-dysfunction",
+      "title": "Eustachian tube dysfunction — Chelsea and Westminster Hospital NHS",
+      "locator": "What is eustachian tube dysfunction?; What are the symptoms?: falha prolongada na equalização da pressão do ouvido médio; audição abafada.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "surdez": {
+      "url": "https://www.nidcd.nih.gov/health/sudden-deafness",
+      "title": "Sudden Deafness — NIDCD",
+      "locator": "What is sudden deafness?; What causes sudden deafness?; How is sudden deafness diagnosed?: perda neurossensorial rápida, frequentemente sem causa identificável; distinta de obstrução condutiva.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "conjuntivite": {
+      "url": "https://www.cdc.gov/conjunctivitis/about/index.html",
+      "title": "About Pink Eye — CDC",
+      "locator": "Key points; Causes; Prevention: causas virais, bacterianas e alérgicas; somente etiologias infecciosas permitem esse vínculo.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "coracao": {
+      "url": "https://www.nhlbi.nih.gov/health/heart-inflammation/causes",
+      "title": "Heart Inflammation — Causes and Risk Factors — NHLBI",
+      "locator": "What causes heart inflammation? — Infections e demais causas: vírus podem causar miocardite/pericardite; inflamação não é sempre infecção.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "ulcera": {
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/symptoms-causes",
+      "title": "Symptoms & Causes of Peptic Ulcers — NIDDK",
+      "locator": "What causes peptic ulcers?; H. pylori: H. pylori e AINEs são causas diferentes; infecção não presumida em toda úlcera.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "vestibular": {
+      "url": "https://www.nhs.uk/conditions/labyrinthitis/",
+      "title": "Labyrinthitis and vestibular neuritis — NHS",
+      "locator": "Introdução; what's the difference?; Treatment from a GP: labirinto versus nervo vestibular; infecção viral é causa usual, não prova de etiologia de cada caso.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "uveite": {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/uveitis",
+      "title": "Uveitis — National Eye Institute",
+      "locator": "What is uveitis?; What causes uveitis?: inflamação ocular pode ter causa infecciosa ou imune; lista associa esclerose múltipla, sarcoidose, retocolite, artrite reativa e linfoma sem torná-las universais.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "dialise": {
+      "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+      "title": "Hemodialysis — NIDDK",
+      "locator": "Introdução antes de What happens during hemodialysis?: procedimento de filtragem sanguínea para insuficiência renal; é tratamento, não doença.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "conchasNHS": {
+      "url": "https://www.stgeorges.nhs.uk/wp-content/uploads/2024/02/DC22.016.1.4_NHS_Consent_Form_Inferior_Turbinate_Surgery_11.pdf",
+      "title": "Inferior turbinate surgery — NHS England GIRFT / St George's NHS",
+      "locator": "Página 2/6, Details of Inferior turbinate surgery, primeiro parágrafo: conchas inferiores podem aumentar permanentemente e bloquear passagem nasal. Usado somente para definição/anatomia, não instrução cirúrgica.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "primary-PDF-page-text-read"
+    },
+    "efusaoNIDCD": {
+      "url": "https://www.nidcd.nih.gov/health/ear-infections-children",
+      "title": "Ear Infections in Children — NIDCD",
+      "locator": "What are the symptoms of an ear infection?: AOM infectada; OME após infecção resolvida; efusão crônica pode persistir sem infecção.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "encefaloceleGARD": {
+      "url": "https://rarediseases.info.nih.gov/diseases/6333/isolated-encephalocele",
+      "title": "Isolated encephalocele — GARD/NIH",
+      "locator": "Summary; Categories: defeito do tubo neural com herniação de encéfalo/meninges, possíveis localizações nasais; categoria Neurological diseases. Não especifica forma intranasal desta proposta.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "piriformeNationwide": {
+      "url": "https://www.nationwidechildrens.org/conditions/nasal-congestion",
+      "title": "Nasal Congestion — Nationwide Children's Hospital",
+      "locator": "What Is Nasal Congestion?; What Are Some Causes of Nasal Congestion?: passagens nasais são via respiratória; lista estenose da abertura piriforme como estreitamento congênito do nariz.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read",
+      "accessNote": "Fonte institucional clínica alternativa lida; não afirma leitura integral da página Orphanet nem causa hormonal em todo caso."
+    },
+    "encefaloceleMedGenHPO": {
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/1875426",
+      "title": "Nasoethmoidal encephalocele — NCBI MedGen / HPO HP:0025764",
+      "locator": "Definition; Term Hierarchy: herniação para espaço pré-nasal e cavidade nasal; hierarquia de anomalias do sistema nervoso.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-official-NIH-terminology-page-read",
+      "accessNote": "Definição HPO reproduzida e atribuída em página oficial NIH; link HPO original não recuperado. Sustenta existência da forma intranasal nasoetmoidal, sem afirmar que toda encefalocele nasal seja intranasal. Associação respiratória é síntese anatômica do editor."
+    },
+    "dermoideHopkins": {
+      "url": "https://www.hopkinsmedicine.org/news/articles/2019/06/collaboration-conquers-a-rare-intracranial-cyst",
+      "title": "Collaboration Conquers a Rare Intracranial Cyst — Johns Hopkins Medicine",
+      "locator": "Texto inicial e explicação do neurocirurgião Alan Cohen: cisto nasal do desenvolvimento pode, em certos casos, formar trajeto até base do crânio; comunicação externa abre possibilidade de infecção.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-institutional-firsthand-report-read",
+      "accessNote": "Relato institucional de primeira mão com explicação dos cirurgiões que trataram o caso; usado apenas para possibilidade de extensão/infecção, sem generalizar incidência, prevalência ou conduta do caso."
+    },
+    "hivCNSGuideline": {
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv/virologic-failure",
+      "title": "Virologic Failure — NIH Adult and Adolescent ARV Guidelines",
+      "locator": "Isolated Central Nervous System Virologic Failure and Neurologic Symptoms; Cerebrospinal Fluid Viral Escape: distingue escape sintomático no SNC de escape assintomático; sintomas exigem avaliação de outras causas.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read",
+      "accessNote": "Referência utilizada somente para identidade/classificação da complicação; nenhuma recomendação de terapia ou teste é incorporada ao banco."
+    },
+    "glaucomaNEI": {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/glaucoma",
+      "title": "Glaucoma — National Eye Institute",
+      "locator": "What is glaucoma?: grupo de doenças oculares que lesam o nervo óptico; a definição não decide seu enquadramento curricular neurológico.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "glaucomaMeSH": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005901",
+      "title": "Glaucoma — NLM MeSH 2026",
+      "locator": "Tree Number C11.525.381; Eye Diseases: o descritor consultado está na árvore ocular, sem isso constituir exclusão neurológica médica.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "osteoporoseMeSH": {
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D010024",
+      "title": "Osteoporosis — NLM MeSH 2026",
+      "locator": "Tree Numbers C05.116.198.579 e C18.452.104.579; Bone Diseases e Nutritional and Metabolic Diseases > Bone Diseases, Metabolic. Não é árvore C19/endócrina neste descritor.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    },
+    "osteoporoseNIAMS": {
+      "url": "https://www.niams.nih.gov/health-topics/osteoporosis",
+      "title": "Osteoporosis — NIAMS",
+      "locator": "Overview; What causes osteoporosis? — Changes to hormones e demais fatores: doença óssea, com fatores hormonais e não hormonais; não comprova endocrinopatia específica em toda osteoporose.",
+      "accessedAt": "2026-11-15",
+      "verification": "source-checked-by-editing-agent",
+      "accessMode": "full-primary-page-text-read"
+    }
+  },
+  "remaining": {
+    "catalogGroupSlotsBelow20": 0,
+    "inheritedPositiveMembershipsNotRecheckedInThisPass": 286,
+    "currentPositiveMembershipsWithOnlyIndexedOfficialSupport": 0,
+    "fullPageReadReferenceKeys": [],
+    "unresolvedClassificationQuestions": [
+      {
+        "diseaseId": "glaucoma",
+        "groupId": "neurologicas",
+        "question": "Verificar classificação da neuropatia óptica glaucomatosa no escopo neurológico curricular, além da classificação ocular estabelecida.",
+        "evidence": [
+          {
+            "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases",
+            "title": "Eye Conditions and Diseases — National Eye Institute",
+            "locator": "Browse Conditions and Diseases A to Z; entrada individual identificada no vínculo.",
+            "accessedAt": "2026-11-14",
+            "verification": "inherited-verification-claim-not-reperformed",
+            "claimedVerification": "primary-source-content-read",
+            "provenanceStatus": "copied-from-saved-input-not-independently-authenticated"
+          },
+          {
+            "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/glaucoma",
+            "title": "Glaucoma — National Eye Institute",
+            "locator": "What is glaucoma?: grupo de doenças oculares que lesam o nervo óptico; a definição não decide seu enquadramento curricular neurológico.",
+            "accessedAt": "2026-11-15",
+            "verification": "source-checked-by-editing-agent",
+            "accessMode": "full-primary-page-text-read"
+          },
+          {
+            "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005901",
+            "title": "Glaucoma — NLM MeSH 2026",
+            "locator": "Tree Number C11.525.381; Eye Diseases: o descritor consultado está na árvore ocular, sem isso constituir exclusão neurológica médica.",
+            "accessedAt": "2026-11-15",
+            "verification": "source-checked-by-editing-agent",
+            "accessMode": "full-primary-page-text-read"
+          }
+        ],
+        "status": "clinical-sources-checked-curricular-scope-unresolved",
+        "previousState": {
+          "groupId": "neurologicas",
+          "question": "Verificar classificação da neuropatia óptica glaucomatosa no escopo neurológico curricular, além da classificação ocular estabelecida.",
+          "evidence": [
+            {
+              "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases",
+              "title": "Eye Conditions and Diseases — National Eye Institute",
+              "locator": "Browse Conditions and Diseases A to Z; entrada individual identificada no vínculo.",
+              "accessedAt": "2026-11-14",
+              "verification": "inherited-verification-claim-not-reperformed",
+              "claimedVerification": "primary-source-content-read",
+              "provenanceStatus": "copied-from-saved-input-not-independently-authenticated"
+            }
+          ],
+          "status": "not-established-for-unqualified-label"
+        },
+        "followUpId": "antecedentes-bounded-source-followups-final-2026-11-15",
+        "followUpFinding": "NEI confirma lesão do nervo óptico e MeSH classifica o descritor genérico como ocular. Isso não define o limite do cabeçalho curricular neurológico nem prova exclusão médica; manter questão curricular aberta.",
+        "usableAsVerifiedDistractor": false,
+        "independentReview": false
+      },
+      {
+        "diseaseId": "osteoporose",
+        "groupId": "endocrinologicas",
+        "question": "Definir inclusão de doença óssea metabólica no cabeçalho endócrino; não inferir causa hormonal em toda osteoporose.",
+        "evidence": [
+          {
+            "url": "https://www.niams.nih.gov/health-topics/osteoporosis",
+            "title": "Osteoporosis — NIAMS",
+            "locator": "Overview of Osteoporosis: redução da massa/densidade e resistência óssea.",
+            "accessedAt": "2026-11-14",
+            "verification": "inherited-verification-claim-not-reperformed",
+            "claimedVerification": "primary-source-content-read",
+            "provenanceStatus": "copied-from-saved-input-not-independently-authenticated"
+          },
+          {
+            "url": "https://meshb.nlm.nih.gov/record/ui?ui=D010024",
+            "title": "Osteoporosis — NLM MeSH 2026",
+            "locator": "Tree Numbers C05.116.198.579 e C18.452.104.579; Bone Diseases e Nutritional and Metabolic Diseases > Bone Diseases, Metabolic. Não é árvore C19/endócrina neste descritor.",
+            "accessedAt": "2026-11-15",
+            "verification": "source-checked-by-editing-agent",
+            "accessMode": "full-primary-page-text-read"
+          },
+          {
+            "url": "https://www.niams.nih.gov/health-topics/osteoporosis",
+            "title": "Osteoporosis — NIAMS",
+            "locator": "Overview; What causes osteoporosis? — Changes to hormones e demais fatores: doença óssea, com fatores hormonais e não hormonais; não comprova endocrinopatia específica em toda osteoporose.",
+            "accessedAt": "2026-11-15",
+            "verification": "source-checked-by-editing-agent",
+            "accessMode": "full-primary-page-text-read"
+          }
+        ],
+        "status": "clinical-sources-checked-curricular-scope-unresolved",
+        "previousState": {
+          "groupId": "endocrinologicas",
+          "question": "Definir inclusão de doença óssea metabólica no cabeçalho endócrino; não inferir causa hormonal em toda osteoporose.",
+          "evidence": [
+            {
+              "url": "https://www.niams.nih.gov/health-topics/osteoporosis",
+              "title": "Osteoporosis — NIAMS",
+              "locator": "Overview of Osteoporosis: redução da massa/densidade e resistência óssea.",
+              "accessedAt": "2026-11-14",
+              "verification": "inherited-verification-claim-not-reperformed",
+              "claimedVerification": "primary-source-content-read",
+              "provenanceStatus": "copied-from-saved-input-not-independently-authenticated"
+            }
+          ],
+          "status": "not-established-for-unqualified-label"
+        },
+        "followUpId": "antecedentes-bounded-source-followups-final-2026-11-15",
+        "followUpFinding": "MeSH classifica osteoporose nas árvores musculoesquelética e metabólica C05/C18; fatores hormonais não tornam todo diagnóstico uma endocrinopatia específica. Inclusão ampla de doença óssea metabólica em endocrinológicas depende de regra curricular ainda não aprovada.",
+        "usableAsVerifiedDistractor": false,
+        "independentReview": false
+      }
+    ],
+    "independentReviewOfCurrentDiagnoses": 224,
+    "independentReviewOfCurrentMemberships": 328,
+    "clinicalCurricularApproval": "not-performed",
+    "negativeMembershipValidation": "not-performed; absent membership never validates distractor",
+    "currentPositiveMembershipsWithOnlyIndexedOfficialSupportDetails": [],
+    "inheritedPositiveMembershipKeysNotRechecked": [
+      {
+        "diseaseId": "tuberculose-pulmonar",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "tuberculose-pulmonar",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "meningite-bacteriana",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "meningite-bacteriana",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "hepatite-b",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "hepatite-b",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "hepatite-c",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "hepatite-c",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "infeccao-hiv",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "sifilis",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "clamidia-urogenital",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "clamidia-urogenital",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "acidente-vascular-encefalico",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "acidente-vascular-encefalico",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "enxaqueca",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "epilepsia",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "doenca-de-alzheimer",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "doenca-de-parkinson",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "esclerose-multipla",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "transtorno-depressivo-maior",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "toc",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-de-ansiedade-generalizada",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-do-panico",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "ansiedade-social",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-bipolar",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-de-estresse-pos-traumatico",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "labirintite",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "doenca-de-meniere",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "otosclerose",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "otosclerose",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "miopia",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "catarata",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "astigmatismo",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "degeneracao-macular-relacionada-idade",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "retinopatia-diabetica",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "conjuntivite",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "rinossinusite",
+        "groupId": "nasais"
+      },
+      {
+        "diseaseId": "rinossinusite",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "rinite-alergica",
+        "groupId": "nasais"
+      },
+      {
+        "diseaseId": "rinite-alergica",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "pneumonia",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "pneumonia",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "dpoc",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "asma",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "bronquite-cronica",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "fibrose-pulmonar-idiopatica",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "sarcoidose-pulmonar",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "bronquiectasia",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "hipertensao-arterial",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "dislipidemia",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "infarto-agudo-miocardio",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "insuficiencia-cardiaca",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "arritmia-cardiaca",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "doenca-arterial-coronariana",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "doenca-do-refluxo-gastroesofagico",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "ulcera-peptica",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "colelitiase",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "pancreatite-cronica",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "doenca-de-crohn",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "diverticulite",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "doenca-renal-cronica",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cistite-recorrente",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cistite-recorrente",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "nefrolitiase",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "pielonefrite",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "pielonefrite",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "doenca-renal-policistica",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "diabetes-tipo-1",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "diabetes-tipo-2",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "hipotireoidismo",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "hipertireoidismo",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "tireoidite-de-hashimoto",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "doenca-de-graves",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "artrite-reumatoide",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "osteoartrite",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "gota",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "artrite-psoriatica",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "espondilite-anquilosante",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "leucemia",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "leucemia",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "linfoma",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "linfoma",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "anemia-ferropriva",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "doenca-falciforme",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "hemofilia",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "cancer-de-mama",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-pulmao",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-pulmao",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "cancer-colorretal",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-colorretal",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "cancer-de-prostata",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-prostata",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cancer-do-colo-do-utero",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-do-colo-do-utero",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cancer-de-pancreas",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-pancreas",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "cancer-de-tireoide",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-tireoide",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "esquizofrenia",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-personalidade-borderline",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "fobia-especifica",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "agorafobia",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-desregulacao-disruptiva-humor",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-uso-alcool",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "anorexia-nervosa",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "bulimia-nervosa",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-compulsao-alimentar",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-alimentar-restritivo-evitativo",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "tdah",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "tdah",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "transtorno-espectro-autista",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "transtorno-espectro-autista",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "sindrome-guillain-barre",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "esclerose-lateral-amiotrofica",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "doenca-huntington",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "miastenia-gravis",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "miastenia-gravis",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "cefaleia-tensional",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "cefaleia-salvas",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "vertigem-posicional-paroxistica-benigna",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "fistula-perilinfatica",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "sindrome-mal-desembarque",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "neuronite-vestibular",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "neuronite-vestibular",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "sindrome-usher",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "sindrome-usher",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "schwannoma-vestibular",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "schwannoma-vestibular",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "schwannoma-vestibular",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "neuropatia-auditiva",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "neuropatia-auditiva",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "presbiacusia",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "perda-auditiva-induzida-ruido",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "colesteatoma",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "otite-externa-infecciosa",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "otite-externa-infecciosa",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "rinite-nao-alergica",
+        "groupId": "nasais"
+      },
+      {
+        "diseaseId": "rinite-nao-alergica",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "polipose-nasal",
+        "groupId": "nasais"
+      },
+      {
+        "diseaseId": "polipose-nasal",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "cancer-nasal-paranasal",
+        "groupId": "nasais"
+      },
+      {
+        "diseaseId": "cancer-nasal-paranasal",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "cancer-nasal-paranasal",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-bexiga",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-bexiga",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "carcinoma-celulas-renais",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "carcinoma-celulas-renais",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cancer-de-testiculo",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-de-testiculo",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "carcinoma-epitelial-ovario",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "carcinoma-epitelial-ovario",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cancer-endometrio",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-endometrio",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "cancer-gastrico",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-gastrico",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "cancer-esofago",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-esofago",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "cancer-primario-figado",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "cancer-primario-figado",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "osteossarcoma",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "osteossarcoma",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "retinoblastoma",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "retinoblastoma",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "melanoma-intraocular",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "melanoma-intraocular",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "mesotelioma-pleural",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "mesotelioma-pleural",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "carcinoma-adrenocortical",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "carcinoma-adrenocortical",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "carcinoma-paratireoide",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "carcinoma-paratireoide",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "feocromocitoma",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "feocromocitoma",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "glioblastoma",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "glioblastoma",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "mieloma-multiplo",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "mieloma-multiplo",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "neoplasias-mielodisplasicas",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "neoplasias-mielodisplasicas",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "policitemia-vera",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "policitemia-vera",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "trombocitemia-essencial",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "trombocitemia-essencial",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "mielofibrose-primaria",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "mielofibrose-primaria",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "hipermetropia",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "ambliopia",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "blefarite",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "olho-seco",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "oclusao-veia-central-retina",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "oclusao-veia-central-retina",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "descolamento-retina",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "retinite-pigmentosa",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "retinopatia-prematuridade",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "doenca-stargardt",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "uveite",
+        "groupId": "oculares"
+      },
+      {
+        "diseaseId": "hepatite-a",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "hepatite-a",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "influenza",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "influenza",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "covid-19",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "covid-19",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "coqueluche",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "coqueluche",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "herpes-genital",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "herpes-genital",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "infeccao-hpv-genital",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "infeccao-hpv-genital",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "gonorreia-urogenital",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "gonorreia-urogenital",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "hanseniase",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "hanseniase",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "fibrose-cistica",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "fibrose-cistica",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "trombose-venosa-profunda",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "trombose-venosa-profunda",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "embolia-pulmonar",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "embolia-pulmonar",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "embolia-pulmonar",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "hipertensao-pulmonar",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "hipertensao-pulmonar",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "cardiomiopatia",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "valvopatia-cardiaca",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "doenca-arterial-periferica",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "aneurisma-aorta",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "miocardite",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "pericardite",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "endocardite-infecciosa",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "endocardite-infecciosa",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "comunicacao-interatrial",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "comunicacao-interventricular",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "tetralogia-fallot",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "sindrome-tunel-carpo",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "sindrome-tunel-carpo",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "fibromialgia",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "displasia-fibrosa-ossea",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "osteogenese-imperfeita",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "osteonecrose",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "osteopetrose",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "doenca-paget-ossea",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "estenose-espinal",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "estenose-espinal",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "artrite-idiopatica-juvenil",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "artrite-reativa",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "polimialgia-reumatica",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "anemia-aplastica",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "anemia-deficiencia-b12",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "anemia-inflamatoria",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "trombocitopenia-imune",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "talassemia",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "purpura-trombocitopenica-trombotica",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "purpura-trombocitopenica-trombotica",
+        "groupId": "cardiovasculares"
+      },
+      {
+        "diseaseId": "doenca-von-willebrand",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "hemocromatose",
+        "groupId": "hematologicas"
+      },
+      {
+        "diseaseId": "hemocromatose",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "doenca-addison",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "acromegalia",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "sindrome-cushing",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "hiperparatireoidismo-primario",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "hipoparatireoidismo",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "hiperaldosteronismo-primario",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "prolactinoma",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "prolactinoma",
+        "groupId": "neoplasicas"
+      },
+      {
+        "diseaseId": "prolactinoma",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "diabetes-insipidus-central",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "diabetes-insipidus-central",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "diabetes-insipidus-central",
+        "groupId": "neurologicas"
+      },
+      {
+        "diseaseId": "neoplasia-endocrina-multipla-tipo1",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "sindrome-ovarios-policisticos",
+        "groupId": "endocrinologicas"
+      },
+      {
+        "diseaseId": "sindrome-ovarios-policisticos",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "doenca-celiaca",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "apendicite",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "cirrose-hepatica",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "colite-ulcerativa",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "sindrome-intestino-irritavel",
+        "groupId": "digestivas"
+      },
+      {
+        "diseaseId": "hiperplasia-prostatica-benigna",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "prostatite-bacteriana",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "prostatite-bacteriana",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "endometriose",
+        "groupId": "genitourinarias"
+      },
+      {
+        "diseaseId": "transtorno-ansiedade-separacao",
+        "groupId": "psiquiatricas"
+      },
+      {
+        "diseaseId": "mastoidite",
+        "groupId": "auditivas"
+      },
+      {
+        "diseaseId": "mastoidite",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "mastoidite",
+        "groupId": "miostioarticulares"
+      },
+      {
+        "diseaseId": "resfriado-comum",
+        "groupId": "infectocontagiosas"
+      },
+      {
+        "diseaseId": "resfriado-comum",
+        "groupId": "respiratorias"
+      },
+      {
+        "diseaseId": "resfriado-comum",
+        "groupId": "nasais"
+      }
+    ],
+    "originalReferenceAccessLimitations": [
+      "conchas",
+      "efusaoNICE",
+      "dermoideOrpha",
+      "piriforme",
+      "encefalocele"
+    ],
+    "originalOrphanetFullPageReadsStillUnavailable": [
+      "dermoideOrpha",
+      "piriforme",
+      "encefalocele"
+    ],
+    "boundedFollowUpTasks": 0,
+    "sourceVerificationCaveat": "Zero indexed-only positives refers only to the 42 memberships checked by this editing author; 286 inherited verification claims remain unrechecked. Original Orphanet pages are unread, and alternative source attribution/synthesis limitations remain explicit."
+  },
+  "validation": {
+    "status": "passed-structural-and-internal-consistency-checks",
+    "command": "node tools/validate-content.mjs content/drafts/antecedentes.json",
+    "errors": [],
+    "warnings": [],
+    "structuralPass": true,
+    "additionalIntegrityAssertions": 3656,
+    "additionalIntegrityAssertionScope": "Unique IDs, 14-group state partitions, bidirectional memberships, conditional flags, preserved prior provenance, coverage, semantic references and zero generated rounds.",
+    "clinicalValidation": false,
+    "independentReview": false,
+    "previousStructuralCheck": {
+      "status": "passed-structural-and-internal-consistency-checks",
+      "command": "node tools/validate-content.mjs content/drafts/antecedentes.json",
+      "errors": [],
+      "warnings": [],
+      "structuralPass": true,
+      "additionalIntegrityAssertions": 1434,
+      "additionalIntegrityAssertionScope": "Unique IDs, 14-group state partitions, bidirectional memberships, conditional flags, preserved prior provenance, coverage, semantic references and zero generated rounds.",
+      "clinicalValidation": false,
+      "independentReview": false
+    },
+    "finalRun": {
+      "date": "2026-11-15",
+      "projectValidator": {
+        "file": "content/drafts/antecedentes.json",
+        "topic": "antecedentes",
+        "counts": {
+          "groups": 14,
+          "diseases": 224,
+          "memberships": 328
+        },
+        "errors": [],
+        "warnings": [],
+        "structuralPass": true,
+        "clinicalApproval": false
+      },
+      "integrity": {
+        "integrityPass": true,
+        "assertions": 3656,
+        "counts": {
+          "groups": 14,
+          "diagnoses": 224,
+          "positive": 328,
+          "conditional": 57,
+          "openCurricularQuestions": 2
+        },
+        "sourceVerification": {
+          "authorCheckedPositive": 42,
+          "relevantPageTextRead": 42,
+          "indexedOnlyCheckedPositive": 0,
+          "inheritedNotRechecked": 286
+        },
+        "groupCoverage": {
+          "infectocontagiosas": 28,
+          "neurologicas": 25,
+          "psiquiatricas": 20,
+          "auditivas": 20,
+          "oculares": 20,
+          "nasais": 20,
+          "respiratorias": 33,
+          "cardiovasculares": 23,
+          "digestivas": 21,
+          "genitourinarias": 21,
+          "endocrinologicas": 21,
+          "miostioarticulares": 21,
+          "hematologicas": 20,
+          "neoplasicas": 35
+        },
+        "bankSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc"
+      },
+      "checkpointPreservation": {
+        "diagnosisIdsLabelsAndPositiveMembershipsUnchanged": true,
+        "priorClaimedReviewObjectsPreserved": true
+      },
+      "clinicalValidation": false,
+      "independentReview": false
+    }
+  },
+  "limitations": [
+    "Counts describe catalog diagnoses, including congenital and structural conditions, not 224 mutually exclusive etiologies.",
+    "286 inherited positive memberships not rechecked in this pass; four previous positives rechecked, not independently reviewed.",
+    "Original Orphanet pages and some earlier NICE pages remain inaccessible; listed claims now have official alternative text read. MedGen reproductions and first-hand hospital reporting are identified; anatomy-to-curriculum mappings are author synthesis.",
+    "Original curricular PDF metadata and extracted term inventory were inherited, not re-extracted in this pass.",
+    "No background agent tool available; research skill fallback was author research. No independent-review claim.",
+    "RTK.md was not found; no replacement instructions invented."
+  ],
+  "alternativePrimaryEvidence": [
+    {
+      "originalReferenceKey": "conchas",
+      "alternativeReferenceKey": "conchasNHS",
+      "effect": "Both turbinate memberships now supported by relevant text read from official NHS primary PDF."
+    },
+    {
+      "originalReferenceKey": "efusaoNICE",
+      "alternativeReferenceKey": "efusaoNIDCD",
+      "effect": "Additional official text distinguishes active AOM from persisting noninfectious effusion."
+    },
+    {
+      "originalReferenceKey": "encefalocele",
+      "alternativeReferenceKey": "encefaloceleGARD",
+      "effect": "Supports neurological classification only; nasal/intranasal specifics still rely on indexed Orphanet definition."
+    }
+  ],
+  "checkpointHistory": [
+    {
+      "phase": "first-durable-save",
+      "diagnoses": 224,
+      "positiveMemberships": 328,
+      "conditionalMemberships": 56,
+      "structuralValidation": "pending-at-save",
+      "currentPassSourceSupportedMemberships": 38,
+      "relevantPageTextSupported": 31,
+      "indexedOnly": 7
+    },
+    {
+      "phase": "post-checkpoint-source-follow-up",
+      "diagnoses": 224,
+      "positiveMemberships": 328,
+      "conditionalMemberships": 56,
+      "structuralValidation": "passed",
+      "currentPassSourceSupportedMemberships": 40,
+      "relevantPageTextSupported": 36,
+      "indexedOnly": 4
+    },
+    {
+      "phase": "bounded-follow-up-finalized",
+      "diagnoses": 224,
+      "positiveMemberships": 328,
+      "conditionalMemberships": 57,
+      "unresolvedCurricularQuestions": 2,
+      "structuralValidation": "passed; zero errors/warnings; 3656 integrity assertions",
+      "currentPassSourceSupportedMemberships": 42,
+      "relevantPageTextSupported": 42,
+      "indexedOnly": 0,
+      "inheritedPositiveMembershipsNotRechecked": 286,
+      "independentReview": false
+    }
+  ],
+  "boundedFollowUp": {
+    "id": "antecedentes-bounded-source-followups-final-2026-11-15",
+    "date": "2026-11-15",
+    "status": "completed-as-author-source-follow-up; two curricular questions explicitly unresolved",
+    "preservedDiagnoses": 224,
+    "preservedPositiveMemberships": 328,
+    "independentReview": false,
+    "sourceOutcomes": [
+      {
+        "referenceKey": "piriforme",
+        "originalUrl": "https://www.orpha.net/en/disease/detail/162516",
+        "originalFullPageRead": false,
+        "originalAccessResult": "403 Forbidden on renewed attempt",
+        "alternativeReferenceKeys": [
+          "piriformeNationwide"
+        ],
+        "status": "bounded-follow-up-complete-with-official-clinical-alternative",
+        "supportedGroupIds": [
+          "nasais",
+          "respiratorias"
+        ],
+        "limitation": "CHOP alternative also returned 403; Nationwide defines the congenital nasal narrowing and respiratory pathway. Isolated qualifier does not imply associated syndromes."
+      },
+      {
+        "referenceKey": "encefalocele",
+        "originalUrl": "https://www.orpha.net/en/disease/detail/141118",
+        "originalFullPageRead": false,
+        "originalAccessResult": "403 Forbidden on renewed attempt",
+        "alternativeReferenceKeys": [
+          "encefaloceleMedGenHPO",
+          "encefaloceleGARD"
+        ],
+        "status": "bounded-follow-up-complete-with-official-NIH-terminology-alternative",
+        "supportedGroupIds": [
+          "nasais",
+          "respiratorias",
+          "neurologicas"
+        ],
+        "limitation": "MedGen reproduces and attributes HPO definition of nasoethmoidal subtype. HPO source link unavailable; respiratory mapping is author anatomical synthesis, not an HPO category."
+      },
+      {
+        "referenceKey": "dermoideOrpha",
+        "originalUrl": "https://www.orpha.net/en/disease/detail/141103?mode=name&name=Nasal+dermoid+cyst",
+        "originalFullPageRead": false,
+        "originalAccessResult": "403 Forbidden on renewed attempt",
+        "alternativeReferenceKeys": [
+          "dermoide",
+          "dermoideHopkins"
+        ],
+        "status": "bounded-follow-up-complete-with-official-firsthand-clinical-alternative",
+        "supportedGroupIds": [
+          "nasais"
+        ],
+        "supportedConditionalGroupIds": [
+          "neurologicas",
+          "infectocontagiosas"
+        ],
+        "limitation": "Hopkins firsthand clinical report supports possible extension/infection only; no prevalence or individual-case treatment is generalized."
+      }
+    ],
+    "classificationOutcomes": [
+      {
+        "diseaseId": "infeccao-hiv",
+        "groupId": "neurologicas",
+        "status": "resolved-to-conditional",
+        "evidenceKeys": [
+          "hivCNSGuideline"
+        ],
+        "positiveMembershipAdded": false,
+        "conditionalMembershipAdded": true,
+        "negativeMembershipValidated": false
+      },
+      {
+        "diseaseId": "glaucoma",
+        "groupId": "neurologicas",
+        "status": "unresolved-curricular-scope-after-primary-source-check",
+        "evidenceKeys": [
+          "glaucomaNEI",
+          "glaucomaMeSH"
+        ],
+        "positiveMembershipAdded": false,
+        "negativeMembershipValidated": false
+      },
+      {
+        "diseaseId": "osteoporose",
+        "groupId": "endocrinologicas",
+        "status": "unresolved-curricular-scope-after-primary-source-check",
+        "evidenceKeys": [
+          "osteoporoseMeSH",
+          "osteoporoseNIAMS"
+        ],
+        "positiveMembershipAdded": false,
+        "negativeMembershipValidated": false
+      }
+    ]
+  },
+  "auditedArtifact": {
+    "path": "content/drafts/antecedentes.json",
+    "sha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "auditType": "author-source-and-structural-audit; not-independent-review"
+  },
+  "resumeInput": {
+    "sha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "diagnoses": 224,
+    "positiveMemberships": 328,
+    "conditionalMemberships": 56,
+    "unresolvedQuestions": 3
+  }
+}
