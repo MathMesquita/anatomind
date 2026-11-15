@@ -1,7 +1,7 @@
 import { test } from "node:test"
 import assert from "node:assert/strict"
 import { createHash } from "node:crypto"
-import { readFileSync, readdirSync } from "node:fs"
+import { existsSync, readFileSync, readdirSync } from "node:fs"
 import { prepareInterviewBatch } from "../tools/prepare-interview-batch.mjs"
 import { prepareInterviewRelease, buildInterviewReleasePatch, checkFrozenInterviewRelease } from "../tools/prepare-interview-release.mjs"
 import { adaptInterviewRelease } from "../src/lib/interview-bank.ts"
@@ -150,7 +150,13 @@ test("frozen interview releases equal the reviewed selections recomputed from so
   assert.ok(reports.length >= 2)
   for (const name of reports) {
     const reviewFile = `content/reviews/${name}`, reportBytes = read(reviewFile), report = JSON.parse(reportBytes)
-    const batch = prepareInterviewBatch(read("content/drafts/interrogatorio.json"), read(report.input.path), reportBytes, { reviewFile })
+    let batch
+    try { batch = prepareInterviewBatch(read("content/drafts/interrogatorio.json"), read(report.input.path), reportBytes, { reviewFile }) } catch (error) {
+      // A fully held review stays on record but must never have a release.
+      assert.match(error.message, /^No prototype-eligible stories/, name)
+      assert.equal(existsSync(new URL(`../content/releases/${report.reviewId}.json`, import.meta.url)), false, name)
+      continue
+    }
     assert.deepEqual(JSON.parse(read(`content/releases/${report.reviewId}.json`)), batch, name)
   }
 })

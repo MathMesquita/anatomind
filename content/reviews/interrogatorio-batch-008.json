@@ -1,0 +1,2281 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "interrogatorio-batch-008",
+  "status": "completed-independent-review",
+  "completedAt": "2026-11-15T21:42:39.935Z",
+  "clinicalApproval": false,
+  "releaseAuthorized": false,
+  "reviewer": {
+    "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+    "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+    "exactModelVersion": "claude-fable-5-2",
+    "runId": "unknown",
+    "role": "independent model reviewer; not a clinician and not clinical approver",
+    "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to earlier review conversations. The batch-003 report and markdown were read as the output contract and the batch-005 report as the model for held items; their generator scripts were adapted for structure and hashing only. The session context was compacted more than once during the run; the review continued from the reviewer's own notes, and the generator re-reads the stories, the inventory lines and the sibling-batch precedent from the files and checks every quoted string literally.",
+    "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+    "researchSkill": {
+      "used": false,
+      "note": "No research skill loaded. The MeSH and DeCS pages were opened directly with the session web-fetch tool, which returns page content through a summarizing model."
+    }
+  },
+  "input": {
+    "path": "content/batches/interrogatorio-next-01.json",
+    "sha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "byteLength": 693124,
+    "capturedAt": "2026-11-15T21:42:39.922Z",
+    "selection": {
+      "jsonPointer": "/stories",
+      "startIndexInclusive": 35,
+      "endIndexExclusive": 40,
+      "orderedStoryIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ]
+    },
+    "totalStoriesInBatch": 200,
+    "baseInventory": {
+      "path": "content/drafts/interrogatorio.json",
+      "sha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+      "byteLength": 1602010,
+      "contextCount": 204,
+      "declaredBaseSha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+      "declaredHashMatches": true,
+      "scope": "Context definitions and answer policy; no base stories reviewed."
+    },
+    "sourcePdf": {
+      "path": "/Users/math/Downloads/Interrogatorio complementar.pdf",
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+      "byteLength": 87652,
+      "documentMetadata": {
+        "id": "interrogatorio-complementar-2026",
+        "filename": "Interrogatorio complementar.pdf",
+        "pages": 12,
+        "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de"
+      },
+      "declaredHashMatches": true,
+      "inspection": "Text of p.1, p.3, p.4, p.7 and p.8 extracted in this run (macOS PDFKit); the Fadiga line, the four Astenia lines and the Paresias line read. No visual page inspection. No whole-PDF inspection claimed."
+    },
+    "priorReview": {
+      "path": "content/reviews/interrogatorio-batch-003.json",
+      "sha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+      "use": "Output contract only; no retro-edit and no inherited story disposition."
+    },
+    "originalBatchMetadata": {
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado pelo usuário; versão de execução indisponível.",
+        "authorship": "synthetic-patient-voice"
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      }
+    }
+  },
+  "scope": {
+    "storiesReviewed": 5,
+    "sourceArrayIndices": [
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "outputPaths": [
+      "content/reviews/interrogatorio-batch-008.json",
+      "docs/reviews/interrogatorio-batch-008.md"
+    ],
+    "outOfScopeStories": 195,
+    "storiesModified": false,
+    "appImported": false,
+    "committed": false,
+    "pushed": false,
+    "prototypeMeaning": "Eligible for a future source-based educational prototype after integrity checks; not clinical approval or app-import authorization in this review. Held stories are not eligible; all five stories of this review are held."
+  },
+  "counts": {
+    "stories": 5,
+    "read": 5,
+    "semanticallyReviewed": 5,
+    "modelReviewed": 0,
+    "needsRevision": 5,
+    "hold": 5,
+    "prototypeEligible": 0,
+    "clinicalApproved": 0,
+    "acceptedPaths": 10,
+    "distinctAcceptedContexts": 3,
+    "distinctAcceptedTerms": 1,
+    "partialCreditPaths": 0,
+    "blockingFindings": 3,
+    "nonBlockingFindings": 4,
+    "pendingWithinScope": 5
+  },
+  "reviewedStoryIds": [
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+  ],
+  "modelReviewedStoryIds": [],
+  "heldStoryIds": [
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+  ],
+  "prototypeEligibleStoryIds": [],
+  "answerPolicy": {
+    "mode": "all-source-supported-coherent-paths",
+    "sourceHierarchyMeaning": "Printed group/subgroup locates the entry; ALTERAÇÕES DE PESO (PERDA OU GANHO) does not establish weight change, and the name of an apparatus does not establish cause.",
+    "fullCredit": "All equally supported coherent paths receive full credit; contextId is editorial organization only.",
+    "scoringRule": {
+      "fullCredit": "+10 per accepted stage in a supported coherent path.",
+      "partialCredit": "+5 only for a valid subgroup in another context, explicitly mapped and evidenced for the same concept.",
+      "incorrect": "−5 per incorrect answered stage.",
+      "coherence": "Do not combine fields from different accepted paths.",
+      "thisBatch": "Each story records three full-credit paths for the term Astenia (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO); APARELHO CARDIOVASCULAR; APARELHO ENDOCRINOLÓGICO). The reviewer confirms the first two in all five stories and does not confirm the endocrine path in any (listed for adjudication). counts.acceptedPaths counts the 10 confirmed paths, not the 15 recorded ones. No partial-credit paths. All five stories are held.",
+      "clinicalSubgroupScoring": "not approved; documentary classification only"
+    },
+    "negatives": "Silence is unknown, not clinical exclusion.",
+    "hintPolicy": "Do not expose organizer IDs, source locators, evidence or accepted-answer count as hints."
+  },
+  "termInventory": [
+    {
+      "termId": "astenia",
+      "term": "Astenia",
+      "namespace": "review-derived-normalized-term-slug",
+      "derivation": "Lowercase source label. Base contexts have no separate termId; this is an explicit review identifier, not an existing app ID or a new source context.",
+      "sourceContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "sameTermContextNotAccepted": [
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-astenia"
+      ],
+      "acceptedContextsNotConfirmedByReviewer": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "overlappingTermContextsUnderAdjudication": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "externalDescriptorId": "D001247",
+      "externalDecsId": "1255",
+      "clinicalScope": "Lack or loss of strength and energy (weakness). The source describes it, depending on the section, as persistent and not explained by effort alone (p.1), as a sensation of weakness or lack of energy (p.3), as generalized weakness with extreme physical tiredness without proportional effort (p.7) and as tiredness and weakness secondary to conditions such as severe anaemia (p.8)."
+    }
+  ],
+  "contextInventory": [
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "term": "Astenia",
+      "group": "ELEMENTOS GERAIS",
+      "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+      "originalDescription": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "ELEMENTOS GERAIS",
+        "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+        "term": "Astenia"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos.",
+        "FEBRE e ALTERAÇÕES DE PESO são títulos efetivamente impressos; pertencimento documental não afirma febre, mudança de peso ou nexo causal."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    },
+    {
+      "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+      "term": "Astenia",
+      "group": "APARELHO CARDIOVASCULAR",
+      "subgroup": null,
+      "originalDescription": "sensação de fraqueza ou falta de energia",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 3,
+        "locator": "APARELHO CARDIOVASCULAR > Astenia"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "APARELHO CARDIOVASCULAR",
+        "subgroup": null,
+        "term": "Astenia"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    },
+    {
+      "id": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+      "term": "Astenia",
+      "group": "APARELHO ENDOCRINOLÓGICO",
+      "subgroup": null,
+      "originalDescription": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 7,
+        "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "APARELHO ENDOCRINOLÓGICO",
+        "subgroup": null,
+        "term": "Astenia"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    }
+  ],
+  "inventoryAssessment": {
+    "contextCount": 204,
+    "inventoryPath": "content/drafts/interrogatorio.json",
+    "inventorySha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+    "method": "Lexical search over all 204 contexts (term and original description) in this run for weakness/strength/energy/tiredness/exhaustion/sleep/mood/slowness wording; every matching definition read in full and compared with each of the five utterances. The Astenia and Fadiga stories of interrogatorio-next-01 and interrogatorio-next-02 were listed to see how equivalent wording is mapped elsewhere (precedent only; not reviewed). Repeated 204-ID list omitted.",
+    "sameTermContexts": [
+      "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+      "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+      "ic-aparelho-hemolinfopoietico-sem-subgrupo-astenia"
+    ],
+    "candidateContexts": [
+      {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "originalDescription": "Falta persistente de força ou energia, não explicada apenas por esforço."
+      },
+      {
+        "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 3,
+          "locator": "APARELHO CARDIOVASCULAR > Astenia"
+        },
+        "originalDescription": "sensação de fraqueza ou falta de energia"
+      },
+      {
+        "id": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+        },
+        "originalDescription": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional."
+      },
+      {
+        "id": "ic-aparelho-hemolinfopoietico-sem-subgrupo-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 8,
+          "locator": "APARELHO HEMOLINFOPOIÉTICO > Astenia"
+        },
+        "originalDescription": "Cansaço e fraqueza secundários a quadros  como anemias severas."
+      },
+      {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "term": "Fadiga",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "originalDescription": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso."
+      },
+      {
+        "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-paresias",
+        "term": "Paresias",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 4,
+          "locator": "APARELHO NEUROLÓGICO > DISTÚRBIOS DA MOTRICIDADE VOLUNTÁRIA E DA SENSIBILIDADE: > Paresias"
+        },
+        "originalDescription": "Fraqueza ou diminuição da força muscular  em uma ou mais partes do corpo."
+      },
+      {
+        "id": "ic-aparelho-neurologico-sem-subgrupo-lipotimia",
+        "term": "Lipotímia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 4,
+          "locator": "APARELHO NEUROLÓGICO > Lipotímia"
+        },
+        "originalDescription": "Sensação iminente de desmaio, com fraqueza  muscular e turvação visual, mas sem perda total da consciência."
+      },
+      {
+        "id": "ic-aparelho-endocrinologico-sem-subgrupo-apatia",
+        "term": "Apatia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO ENDOCRINOLÓGICO > Apatia"
+        },
+        "originalDescription": "Alterações neuropsíquicas (irritabilidade  no hipertireoidismo; apatia/lentidão no hipotireoidismo)."
+      },
+      {
+        "id": "ic-aparelho-endocrinologico-sem-subgrupo-insonia-sonolencia",
+        "term": "Insônia / sonolência",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO ENDOCRINOLÓGICO > Insônia / sonolência"
+        },
+        "originalDescription": "Distúrbios do padrão de sono  associados a desbalanços metabólicos."
+      },
+      {
+        "id": "ic-aparelho-psiquico-sem-subgrupo-tristeza",
+        "term": "Tristeza",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 5,
+          "locator": "APARELHO PSÍQUICO > Tristeza"
+        },
+        "originalDescription": "Sentimento de desânimo, melancolia ou baixa  autoestima, que pode ser isolado ou parte de uma síndrome depressiva."
+      }
+    ],
+    "decisions": [
+      {
+        "candidate": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia",
+        "result": "supported-in-all-five",
+        "reason": "Source: “Falta persistente de força ou energia, não explicada apenas por esforço.” Every utterance states weakness or little strength that lasts. The effort clause is explicit at indices 36, 37, 38 and 39; at index 35 it is replaced by a statement about a quiet night (see B008-03). Persistence is vague at index 38."
+      },
+      {
+        "candidate": "APARELHO CARDIOVASCULAR > Astenia",
+        "result": "supported-in-all-five",
+        "reason": "Source: “sensação de fraqueza ou falta de energia”, a disjunction with no further condition. Every utterance states weakness or little strength literally."
+      },
+      {
+        "candidate": "APARELHO ENDOCRINOLÓGICO > Astenia",
+        "storyIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+        ],
+        "result": "accepted-by-stories-not-confirmed-candidate-for-adjudication",
+        "reason": "Source: “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.” No utterance states extreme physical tiredness. Generalized weakness is explicit at indices 35, 36, 39 and implied at 37, 38. The sibling batch accepts this context only when intensity is stated."
+      },
+      {
+        "candidate": "APARELHO HEMOLINFOPOIÉTICO > Astenia",
+        "result": "not-supported-by-these-utterances",
+        "reason": "Source: “Cansaço e fraqueza secundários a quadros como anemias severas.” No utterance states an underlying condition; the stories correctly do not accept it."
+      },
+      {
+        "candidate": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga",
+        "storyIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06"
+        ],
+        "result": "candidate-for-adjudication-at-index-35-only",
+        "reason": "Source: “sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.” Index 35 carries the rest marker without the Fadiga nucleus (weak candidate). Index 37 shares only “pouca energia”. Indices 36, 38 and 39 have no Fadiga wording."
+      },
+      {
+        "candidate": "APARELHO NEUROLÓGICO > DISTÚRBIOS DA MOTRICIDADE VOLUNTÁRIA E DA SENSIBILIDADE: > Paresias",
+        "result": "not-equally-supported",
+        "reason": "Source: “Fraqueza ou diminuição da força muscular em uma ou mais partes do corpo.” Indices 35, 36, 39 state whole-body/general weakness. Indices 37, 38 name no body part and describe the person as a whole (with energy and effort wording); exclusion is by reading, not by explicit statement (B008-06)."
+      },
+      {
+        "candidate": "APARELHO NEUROLÓGICO > Lipotímia",
+        "result": "not-supported-by-these-utterances",
+        "reason": "Source describes an imminent feeling of fainting with muscle weakness and blurred vision; no utterance mentions faintness or vision."
+      },
+      {
+        "candidate": "APARELHO ENDOCRINOLÓGICO > Apatia / Insônia / sonolência; APARELHO PSÍQUICO > Tristeza",
+        "result": "not-supported-by-these-utterances",
+        "reason": "No indifference or slowness, no sleep disturbance (index 35 reports a quiet night), no discouragement or low mood is stated; the complaints are about strength and energy."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "B008-01",
+      "severity": "blocking-incorrect-student-facing-rationale",
+      "scope": "story-rationale-copied-from-another-term",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ],
+      "issue": "In all five stories the story-level rationale is “A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.”. The utterances describe weakness and are keyed to Astenia; none mentions skin or itching. src/lib/interview-bank.ts (adaptInterviewRelease) prepends story.rationale to contextExplanation, which src/components/Anamnese.tsx renders after the answer, so a released story would explain an Astenia answer to the student with a sentence about Prurido. The evidence rationales for the cardiovascular and endocrine paths (“O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.”) carry the same leftover (“na pele/corpo”). tools/prepare-interview-batch.mjs does not check rationale content, so only this review can stop it.",
+      "evidence": [
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "jsonPointer": "/stories/35/rationale",
+          "quote": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa."
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "jsonPointer": "/stories/35/acceptedPathEvidence/1/rationale",
+          "quote": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia."
+        },
+        {
+          "path": "src/lib/interview-bank.ts",
+          "note": "adaptInterviewRelease: rationale = story.rationale; contextExplanation = `${rationale}Grupo e subgrupo indicam a posição impressa no PDF…`"
+        },
+        {
+          "path": "src/components/Anamnese.tsx",
+          "note": "renders interview.contextExplanation in the answer feedback"
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "note": "Same rationale on non-Prurido stories outside this review's scope, at array indices 30, 31, 32, 33, 34 (counted, not reviewed)."
+        }
+      ],
+      "resolution": "Held. The reviewer may not edit stories; the record must be repaired and re-reviewed. This finding is independent of how well each sentence matches Astenia.",
+      "hold": true,
+      "requiredStoryChange": "Not rewritten by the reviewer. Replace story.rationale with a sentence about this utterance and Astenia (what states lack of strength, persistence and independence from effort), and replace the “na pele/corpo” evidence rationales with one that names the words meeting each context's description. The repaired record needs a new independent review; the utterance text itself does not need to change for this finding."
+    },
+    {
+      "id": "B008-02",
+      "severity": "blocking-accepted-path-not-confirmed",
+      "scope": "endocrine-astenia-path",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ],
+      "issue": "All five stories accept APARELHO ENDOCRINOLÓGICO > Astenia, whose source line (p.7) is “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.” No utterance states extreme physical tiredness or any intensity. Generalized weakness is explicit at indices 35, 36 and 39 (“corpo todo fraco”, “fraqueza geral”, “fraqueza no corpo todo”) and only implied at indices 37 and 38 (“pouca força”, “fisicamente fraco”). Whether the two parts of the endocrine line are cumulative or alternative is a source-interpretation question the reviewer cannot settle. The sibling batch decides it the strict way: its cardiovascular Astenia stories accept the endocrine context only when intensity is stated (“fraqueza enorme”, “extremamente fraco”, “extremamente sem força”, “fraqueza muito intensa”) and leave it out for utterances such as “uma falta de força geral, mesmo nos dias tranquilos”, which are equivalent to the ones reviewed here.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "quote": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional."
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-02",
+          "text": "Estou com uma fraqueza enorme no corpo inteiro há vários dias. Passar uma colher de uma mão para outra já parece me esgotar, sem ter feito nada pesado.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-05",
+          "text": "O corpo inteiro parece extremamente fraco já no começo do dia. Não fiz esforço nenhum e ainda assim tarefas mínimas me deixam fisicamente exausta.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-08",
+          "text": "Há vários dias estou com o corpo todo extremamente sem força. Segurar uma caneca leve parece um esforço enorme, embora eu não tenha feito exercício.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-10",
+          "text": "Estou com uma fraqueza muito intensa no corpo todo há dias. Até pequenas tarefas me deixam exausto, bem mais do que o pouco esforço que fiz.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-01",
+          "text": "Há dias me sinto sem força no corpo todo, mesmo sem ter feito esforço. Até tirar uma camiseta exige uma energia que parece faltar.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-04",
+          "text": "Desde a semana passada sinto uma falta de força geral, mesmo nos dias tranquilos. Eu quero fazer as coisas, mas parece que falta energia no corpo.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-07",
+          "text": "Não é um braço que perdeu força: é uma moleza no corpo inteiro que venho sentindo há dias. Acontece mesmo quando passo o dia sem esforço.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        }
+      ],
+      "resolution": "Held. A release must list every accepted path as reviewer-supported; the reviewer confirms the ELEMENTOS GERAIS and cardiovascular paths and cannot confirm this one. This affects the group stage only: the term answer (Astenia) is the same in every accepted path.",
+      "hold": true,
+      "requiredStoryChange": "Not rewritten by the reviewer. Either (a) remove ic-aparelho-endocrinologico-sem-subgrupo-astenia from acceptedContextIds and acceptedPathEvidence, as interrogatorio-next-02 does when intensity is not stated; or (b) obtain a teaching decision that generalized weakness without proportional effort is enough for the endocrine entry and record evidence that says so; or (c) revise the utterance to state extreme physical tiredness. Any of these needs a new independent review."
+    },
+    {
+      "id": "B008-03",
+      "severity": "blocking-answer-clarity-doubt",
+      "scope": "astenia-versus-fadiga-marker",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06"
+      ],
+      "issue": "Index 35 qualifies whole-body weakness only with “inclusive depois de uma noite tranquila”. In the source, the two neighbouring entries of the same subgroup are told apart by one marker each: Astenia is “não explicada apenas por esforço”; Fadiga “não melhora significativamente com o repouso”. The utterance uses the rest/sleep marker and is silent about effort. Fadiga's own nucleus (cansaço, esgotamento, falta de energia) is absent, so the reviewer does not consider Fadiga equally supported; but the sentence does not match Astenia cleanly either.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "quote": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "quote": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso."
+        }
+      ],
+      "resolution": "Held as doubtful under the instruction to hold whatever is not clearly and only the keyed term. Best fit remains Astenia.",
+      "referenceIds": [
+        "mesh-asthenia",
+        "mesh-fatigue"
+      ],
+      "hold": true,
+      "requiredStoryChange": "Not rewritten by the reviewer. Either revise the utterance so that its qualifier is about effort (the marker the source prints for Astenia) rather than about rest/sleep, or obtain a teaching decision that weakness which persists after rest is Astenia only. A revised utterance needs a new independent review."
+    },
+    {
+      "id": "B008-04",
+      "severity": "non-blocking-terminology-caution",
+      "scope": "source-versus-general-definition",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ],
+      "issue": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico. Além disso, as evidências originais declaram definitionBasis “source-description-with-verified-terminology” com referenceIds vazio, e o lote não tem referência de Astenia entre suas clinicalReferences (há mesh-fatigue, não um registro de Asthenia): a “terminologia verificada” não está documentada no registro das histórias.",
+      "resolution": "Accept source-based descriptive recognition for the two confirmed paths. definitionBasis is preserved as recorded (same class, literal-source); the caveat is kept in terminologyCaution and the reviewer's own sources are listed in reviewerClinicalSources. A repair could add an Astenia reference to the batch.",
+      "referenceIds": [
+        "mesh-asthenia",
+        "decs-astenia",
+        "mesh-fatigue",
+        "mesh-paresis"
+      ],
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B008-05",
+      "severity": "non-blocking-source-context-caution",
+      "scope": "documentary-heading",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ],
+      "issue": "ALTERAÇÕES DE PESO (PERDA OU GANHO) is the printed subgroup under which the source lists Astenia (and Fadiga). It is a documentary placement, not a clinical conclusion: no utterance mentions body weight (“carregar peso” at index 36 is an example of effort). APARELHO CARDIOVASCULAR likewise only locates an entry.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "quote": "1.2 ALTERAÇÕES DE PESO (PERDA OU GANHO)"
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "quote": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço."
+        }
+      ],
+      "resolution": "Keep the literal source mapping and distinguish it from a statement about weight or cardiac cause.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B008-06",
+      "severity": "non-blocking-answer-completeness-note",
+      "scope": "neighbouring-terms-judged-not-equally-supported",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ],
+      "issue": "Boundaries the reviewer checked and judged not to change the answer, recorded for a teaching reviewer. (a) APARELHO HEMOLINFOPOIÉTICO > Astenia (“Cansaço e fraqueza secundários a quadros como anemias severas.”) is not accepted by the stories; the reviewer agrees, since no underlying condition is stated, but it is the same term in a fourth place and a student may choose it. (b) Paresias (“Fraqueza ou diminuição da força muscular em uma ou mais partes do corpo.”): indices 35, 36 and 39 say “corpo todo”/“geral”; indices 37 and 38 give no location at all, so the exclusion rests on the absence of a named body part plus the energy/effort wording, not on an explicit statement. (c) Index 37 says “pouca energia”, wording the source shares with Fadiga (“falta de energia”); it also states two Astenia-only elements (lack of strength; independence from prior activity) and none of the Fadiga-only ones. (d) Index 38 states persistence only vaguely (“tenho me sentido … por um período”).",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 8,
+            "locator": "APARELHO HEMOLINFOPOIÉTICO > Astenia"
+          },
+          "quote": "Astenia: Cansaço e fraqueza secundários a quadros como anemias severas."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 4,
+            "locator": "APARELHO NEUROLÓGICO > DISTÚRBIOS DA MOTRICIDADE VOLUNTÁRIA E DA SENSIBILIDADE: > Paresias"
+          },
+          "quote": "Paresias: Fraqueza ou diminuição da força muscular em uma ou mais partes do corpo."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "quote": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso."
+        }
+      ],
+      "resolution": "No hold on these grounds. If the stories are revised for B008-01/02, adding an explicit whole-body statement to indices 37 and 38 (as the sibling batch does with “não só numa perna”) would make the Paresias exclusion explicit.",
+      "referenceIds": [
+        "mesh-paresis",
+        "mesh-fatigue"
+      ],
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B008-07",
+      "severity": "non-blocking-editorial-note",
+      "scope": "evidence-granularity-and-style",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10"
+      ],
+      "issue": "In all five stories every evidence quote and focusQuote is the entire utterance, for all three paths, so the recorded evidence does not show which words meet each description (this is how the unconfirmed endocrine path went unnoticed). All five are single sentences built on the same frame (weakness + persistence + no effort). Index 39 is close to the source wording (“sensação persistente de fraqueza … sem relação clara com esforço”) and sounds less like spontaneous speech, though it does not name the term.",
+      "resolution": "Within the stated format rules (lay speech, 1–2 paragraphs, term not given away). A repair could narrow focusQuote per path.",
+      "hold": false,
+      "requiredStoryChange": null
+    }
+  ],
+  "items": [
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "sourceArrayIndex": 35,
+      "sourceOrdinal": 36,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Student-facing story rationale is wrong: it describes itching/Prurido on an Astenia utterance (B008-01).",
+        "Accepted path APARELHO ENDOCRINOLÓGICO > Astenia not confirmed: “cansaço físico extremo” is not stated in the utterance (B008-02).",
+        "Sentence-level doubt: the only qualifier, “inclusive depois de uma noite tranquila”, is the no-improvement-with-rest marker that the source prints for Fadiga, and the effort clause printed for Astenia is absent (B008-03)."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+      "textSha256": "7114adeca7ecaa71f32e1350bf5395ad5b8c59aa49ed39eeb44691a76ce55073",
+      "storyObjectSha256": "cb509042add1c208523a9f6b006b06611badca15ddbcb4a029158fd7c66e2543",
+      "rawStorySha256": "9a801b4febdbda07b1c131922d9fa2a62de73b62cc554ef682f0a2ff2d1d79e8",
+      "rawStoryByteLength": 4316,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 105067,
+        "byteOffsetEndExclusive": 109383
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "text": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "quote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+            },
+            "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+            "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila."
+          },
+          {
+            "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "quote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 3,
+              "locator": "APARELHO CARDIOVASCULAR > Astenia"
+            },
+            "sourceQuote": "sensação de fraqueza ou falta de energia",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila."
+          },
+          {
+            "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "quote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 7,
+              "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+            },
+            "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "De uns tempos para cá, sinto o corpo todo fraco, inclusive depois de uma noite tranquila."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "astenia"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "De uns tempos para cá, sinto o corpo todo fraco",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A fala relata, em palavras leigas, falta de força (fraqueza) que se mantém no tempo e que a pessoa não liga a esforço. A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada; não há relato de peso.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "sourceHierarchy": {
+            "group": "APARELHO CARDIOVASCULAR",
+            "subgroup": null,
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "sinto o corpo todo fraco",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A descrição-fonte é uma disjunção (“fraqueza ou falta de energia”); a fala afirma fraqueza/pouca força literalmente. O nome do aparelho apenas localiza a entrada; nenhuma causa cardíaca é afirmada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Leitura da frase: o núcleo é de Astenia. “Sinto o corpo todo fraco” é fraqueza generalizada, o que satisfaz por inteiro a linha cardiovascular (“sensação de fraqueza ou falta de energia”) e a parte “falta … de força” da linha de ELEMENTOS GERAIS; “de uns tempos para cá” dá a persistência. A dúvida está no único qualificador da frase, “inclusive depois de uma noite tranquila”. A apostila separa os dois termos vizinhos por um marcador cada: Astenia é “não explicada apenas por esforço”; Fadiga é a que “não melhora significativamente com o repouso”. A fala não diz nada sobre esforço e usa justamente o marcador de repouso/sono, que a fonte imprime só para Fadiga. Fadiga não fica plenamente sustentada (não há cansaço, esgotamento nem falta de energia), então não considero os dois termos igualmente apoiados; mas um aluno que raciocine pelo marcador distintivo chega a Fadiga, e a frase não lhe dá o marcador de Astenia para desfazer a dúvida. Pela regra de reter o que for duvidoso, a frase fica retida também por esse motivo (B008-03). Além disso, o registro tem dois defeitos que impedem a liberação independentemente da frase: a justificativa mostrada ao aluno fala de coceira/Prurido (B008-01) e o caminho endocrinológico aceito não pôde ser confirmado (B008-02). Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of this Astenia entry; the heading is not evidence of weight change. APARELHO CARDIOVASCULAR and APARELHO ENDOCRINOLÓGICO locate the other accepted entries and establish no organ or cause.",
+        "clinicalMeaning": "Subjectively reported lack of strength/weakness (with or without low energy), lasting over time and not attributed to exertion; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Fadiga (ELEMENTOS GERAIS): candidata fraca, ver acima. Astenia endocrinológica: aceita pela história, não confirmada (ver B008-02) — “corpo todo fraco” corresponde a “Fraqueza … generalizada”, mas “cansaço físico extremo” não é dito. Astenia hemolinfopoiética: não sustentada, a fala não menciona quadro de base. Paresias pede fraqueza “em uma ou mais partes do corpo”; “o corpo todo” afasta a leitura segmentar. Insônia / sonolência não é sustentada: a noite foi tranquila. Lipotímia (sensação de desmaio) não é descrita."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report-with-unresolved-fadiga-marker-doubt",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "two-of-three-accepted-paths-confirmed-endocrine-path-not-confirmed",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "incorrect-story-rationale-describes-prurido-not-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "Two of the three recorded full-credit paths are confirmed (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia; APARELHO CARDIOVASCULAR > Astenia). The third recorded path (APARELHO ENDOCRINOLÓGICO > Astenia) is not confirmed and is listed for adjudication. APARELHO HEMOLINFOPOIÉTICO > Astenia is correctly not accepted (no underlying condition stated). No partial-credit subgroup identified; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO ENDOCRINOLÓGICO",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "sourceExactLine": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.",
+          "storyQuote": "sinto o corpo todo fraco",
+          "strength": "moderate",
+          "assessment": "“corpo todo fraco” matches “Fraqueza … generalizada”. Neither “cansaço físico extremo” nor “sem esforço proporcional” is stated; the utterance only says the weakness is present after a quiet night.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether APARELHO ENDOCRINOLÓGICO > Astenia receives full credit for this utterance although “cansaço físico extremo” is not stated (then keep it, with evidence that says which words carry it), or whether it must be removed from acceptedContextIds, as interrogatorio-next-02 does for utterances without stated intensity. The reviewer did not confirm this accepted path."
+        },
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "term": "Fadiga",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "sourceExactLine": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.",
+          "storyQuote": "inclusive depois de uma noite tranquila",
+          "strength": "weak",
+          "assessment": "The clause states that the complaint is present even after rest/sleep, which is the distinguishing marker of the Fadiga description. The Fadiga nucleus (cansaço, esgotamento, falta de energia) is not stated: the symptom word is “fraco”. Not equally supported, but not cleanly excluded either.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether Fadiga is an acceptable answer for this utterance; if not, the utterance should be revised so that its qualifier is the effort clause printed for Astenia rather than a statement about rest/sleep."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "incorrect-story-rationale",
+          "detail": "story.rationale is “A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.”. It describes itching and names Prurido; the utterance is about weakness and is keyed to Astenia. The app shows this text to the student after answering (contextExplanation built in src/lib/interview-bank.ts, rendered in src/components/Anamnese.tsx).",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "type": "incorrect-path-evidence-rationale",
+          "detail": "acceptedPathEvidence.rationale for these contexts is “O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.”. “na pele/corpo” is left over from a skin-symptom template and says nothing about what in the utterance meets each description.",
+          "contextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        },
+        {
+          "type": "accepted-path-not-confirmed",
+          "detail": "The evidence for APARELHO ENDOCRINOLÓGICO > Astenia quotes the whole utterance against “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.”; the utterance states no extreme physical tiredness. See candidatesForAdjudication.",
+          "contextIds": [
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-03",
+        "B008-04",
+        "B008-05",
+        "B008-06",
+        "B008-07"
+      ],
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-03"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "sourceArrayIndex": 36,
+      "sourceOrdinal": 37,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Student-facing story rationale is wrong: it describes itching/Prurido on an Astenia utterance (B008-01).",
+        "Accepted path APARELHO ENDOCRINOLÓGICO > Astenia not confirmed: “cansaço físico extremo” is not stated in the utterance (B008-02)."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+      "textSha256": "901e5e306245276e487b1091678f32f74a78dbc7fa5b1b6ee9e0d936f7bc20bd",
+      "storyObjectSha256": "43bd0c0d4177caa0367056d7458a8eb9ab55f830261ba9e8f0dd66eb94b0fec4",
+      "rawStorySha256": "7a7f6d1b397d20eef5df4b1a5795e1e753f8493ccc8caf8f7337deae02d36863",
+      "rawStoryByteLength": 4330,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 109389,
+        "byteOffsetEndExclusive": 113719
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "text": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "quote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+            },
+            "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+            "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora."
+          },
+          {
+            "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "quote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 3,
+              "locator": "APARELHO CARDIOVASCULAR > Astenia"
+            },
+            "sourceQuote": "sensação de fraqueza ou falta de energia",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora."
+          },
+          {
+            "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "quote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 7,
+              "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+            },
+            "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "astenia"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral que não vai embora",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A fala relata, em palavras leigas, falta de força (fraqueza) que se mantém no tempo e que a pessoa não liga a esforço. A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada; não há relato de peso.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "sourceHierarchy": {
+            "group": "APARELHO CARDIOVASCULAR",
+            "subgroup": null,
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "fico com uma fraqueza geral",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A descrição-fonte é uma disjunção (“fraqueza ou falta de energia”); a fala afirma fraqueza/pouca força literalmente. O nome do aparelho apenas localiza a entrada; nenhuma causa cardíaca é afirmada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Leitura da frase: corresponde a Astenia sem ambiguidade com Fadiga. “Fraqueza geral” é falta de força generalizada; “que não vai embora” é persistência; “mesmo sem carregar peso nem caminhar muito” é a cláusula “não explicada apenas por esforço”. São os três elementos da linha de ELEMENTOS GERAIS, e a linha cardiovascular (“sensação de fraqueza…”) fica satisfeita pela primeira parte. Nada na frase pertence só a Fadiga: não há cansaço, esgotamento, falta de energia nem afirmação sobre repouso. A frase, sozinha, eu aprovaria. O item fica retido por defeitos do registro, não da frase: a justificativa mostrada ao aluno depois da resposta fala de coceira/Prurido (B008-01), e o caminho endocrinológico aceito não pôde ser confirmado, porque “cansaço físico extremo” não é dito (B008-02). Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of this Astenia entry; the heading is not evidence of weight change. APARELHO CARDIOVASCULAR and APARELHO ENDOCRINOLÓGICO locate the other accepted entries and establish no organ or cause.",
+        "clinicalMeaning": "Subjectively reported lack of strength/weakness (with or without low energy), lasting over time and not attributed to exertion; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Fadiga: não sustentada (sem cansaço/esgotamento/energia e sem menção a repouso). Astenia endocrinológica: aceita pela história, não confirmada (B008-02) — “fraqueza geral” e a ausência de esforço correspondem a “Fraqueza … generalizada … sem esforço proporcional”, mas a intensidade “extrema” não é dita. Astenia hemolinfopoiética: não sustentada, sem quadro de base. Paresias pede fraqueza em parte(s) do corpo; “fraqueza geral” afasta essa leitura. “Carregar peso” é exemplo de esforço, não relato de peso corporal."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "two-of-three-accepted-paths-confirmed-endocrine-path-not-confirmed",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "incorrect-story-rationale-describes-prurido-not-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "Two of the three recorded full-credit paths are confirmed (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia; APARELHO CARDIOVASCULAR > Astenia). The third recorded path (APARELHO ENDOCRINOLÓGICO > Astenia) is not confirmed and is listed for adjudication. APARELHO HEMOLINFOPOIÉTICO > Astenia is correctly not accepted (no underlying condition stated). No partial-credit subgroup identified; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO ENDOCRINOLÓGICO",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "sourceExactLine": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.",
+          "storyQuote": "Mesmo sem carregar peso nem caminhar muito, fico com uma fraqueza geral",
+          "strength": "moderate",
+          "assessment": "“fraqueza geral” matches “Fraqueza … generalizada” and the absence of effort matches “sem esforço proporcional”. “cansaço físico extremo” is not stated: no tiredness and no intensity wording.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether APARELHO ENDOCRINOLÓGICO > Astenia receives full credit for this utterance although “cansaço físico extremo” is not stated (then keep it, with evidence that says which words carry it), or whether it must be removed from acceptedContextIds, as interrogatorio-next-02 does for utterances without stated intensity. The reviewer did not confirm this accepted path."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "incorrect-story-rationale",
+          "detail": "story.rationale is “A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.”. It describes itching and names Prurido; the utterance is about weakness and is keyed to Astenia. The app shows this text to the student after answering (contextExplanation built in src/lib/interview-bank.ts, rendered in src/components/Anamnese.tsx).",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "type": "incorrect-path-evidence-rationale",
+          "detail": "acceptedPathEvidence.rationale for these contexts is “O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.”. “na pele/corpo” is left over from a skin-symptom template and says nothing about what in the utterance meets each description.",
+          "contextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        },
+        {
+          "type": "accepted-path-not-confirmed",
+          "detail": "The evidence for APARELHO ENDOCRINOLÓGICO > Astenia quotes the whole utterance against “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.”; the utterance states no extreme physical tiredness. See candidatesForAdjudication.",
+          "contextIds": [
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-04",
+        "B008-05",
+        "B008-06",
+        "B008-07"
+      ],
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "sourceArrayIndex": 37,
+      "sourceOrdinal": 38,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Student-facing story rationale is wrong: it describes itching/Prurido on an Astenia utterance (B008-01).",
+        "Accepted path APARELHO ENDOCRINOLÓGICO > Astenia not confirmed: the utterance states neither generalized weakness nor extreme physical tiredness (B008-02)."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+      "textSha256": "ded14c7025e43bb414b364dcd0fa014c042e0960b082479ef48daca44c196554",
+      "storyObjectSha256": "b593d719c795134040f3f8b6fb71a1ec347e658aacbf6ec2d6cba864d6167c84",
+      "rawStorySha256": "b81ec1c7dac8581fc5c5b061fc50faab1ccb898c49b8c03657281bd925dacbb4",
+      "rawStoryByteLength": 4372,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 113725,
+        "byteOffsetEndExclusive": 118097
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "text": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "quote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+            },
+            "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+            "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes."
+          },
+          {
+            "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "quote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 3,
+              "locator": "APARELHO CARDIOVASCULAR > Astenia"
+            },
+            "sourceQuote": "sensação de fraqueza ou falta de energia",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes."
+          },
+          {
+            "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "quote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 7,
+              "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+            },
+            "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "astenia"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Estou com pouca força e pouca energia quase todos os dias; não parece depender do que fiz antes",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A fala relata, em palavras leigas, falta de força (fraqueza) que se mantém no tempo e que a pessoa não liga a esforço. A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada; não há relato de peso.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "sourceHierarchy": {
+            "group": "APARELHO CARDIOVASCULAR",
+            "subgroup": null,
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Estou com pouca força e pouca energia",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A descrição-fonte é uma disjunção (“fraqueza ou falta de energia”); a fala afirma fraqueza/pouca força literalmente. O nome do aparelho apenas localiza a entrada; nenhuma causa cardíaca é afirmada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Leitura da frase: corresponde a Astenia. “Pouca força e pouca energia” reproduz “falta … de força ou energia”; “quase todos os dias” é persistência; “não parece depender do que fiz antes” é a cláusula “não explicada apenas por esforço”. É o único dos cinco itens que toca a zona comum com Fadiga, porque “pouca energia” corresponde a “falta de energia”, expressão que a apostila usa nos dois termos. Considero que Fadiga não fica igualmente sustentada: a fala traz dois elementos que a fonte imprime só para Astenia (falta de força; independência do esforço) e nenhum dos que imprime só para Fadiga (cansaço/esgotamento; ausência de melhora com o repouso). A frase, sozinha, eu aprovaria, com essa ressalva registrada (B008-06). O item fica retido por defeitos do registro: a justificativa mostrada ao aluno fala de coceira/Prurido (B008-01), e o caminho endocrinológico aceito não pôde ser confirmado — aqui o apoio é o mais fraco dos cinco, pois a fala não diz que a fraqueza é generalizada nem intensa (B008-02). Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of this Astenia entry; the heading is not evidence of weight change. APARELHO CARDIOVASCULAR and APARELHO ENDOCRINOLÓGICO locate the other accepted entries and establish no organ or cause.",
+        "clinicalMeaning": "Subjectively reported lack of strength/weakness (with or without low energy), lasting over time and not attributed to exertion; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Fadiga: compartilha apenas “pouca energia”; sem cansaço, esgotamento ou menção a repouso, não é igualmente sustentada (B008-06). Astenia endocrinológica: aceita pela história, não confirmada (B008-02). Astenia hemolinfopoiética: não sustentada, sem quadro de base. Paresias: “pouca força” sem parte do corpo indicada, acompanhada de pouca energia e de frequência diária, não descreve fraqueza muscular segmentar; a frase não tem, porém, um “corpo todo” explícito (B008-06). Apatia e Tristeza não são descritas: a queixa é de força/energia, não de interesse ou ânimo."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "two-of-three-accepted-paths-confirmed-endocrine-path-not-confirmed",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "incorrect-story-rationale-describes-prurido-not-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "Two of the three recorded full-credit paths are confirmed (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia; APARELHO CARDIOVASCULAR > Astenia). The third recorded path (APARELHO ENDOCRINOLÓGICO > Astenia) is not confirmed and is listed for adjudication. APARELHO HEMOLINFOPOIÉTICO > Astenia is correctly not accepted (no underlying condition stated). No partial-credit subgroup identified; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO ENDOCRINOLÓGICO",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "sourceExactLine": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.",
+          "storyQuote": "não parece depender do que fiz antes",
+          "strength": "weak",
+          "assessment": "Only the effort clause (“sem esforço proporcional”) is met. “Fraqueza orgânica generalizada” is at most implied by “pouca força”, and “cansaço físico extremo” is not stated.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether APARELHO ENDOCRINOLÓGICO > Astenia receives full credit for this utterance although “cansaço físico extremo” is not stated (then keep it, with evidence that says which words carry it), or whether it must be removed from acceptedContextIds, as interrogatorio-next-02 does for utterances without stated intensity. The reviewer did not confirm this accepted path."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "incorrect-story-rationale",
+          "detail": "story.rationale is “A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.”. It describes itching and names Prurido; the utterance is about weakness and is keyed to Astenia. The app shows this text to the student after answering (contextExplanation built in src/lib/interview-bank.ts, rendered in src/components/Anamnese.tsx).",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "type": "incorrect-path-evidence-rationale",
+          "detail": "acceptedPathEvidence.rationale for these contexts is “O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.”. “na pele/corpo” is left over from a skin-symptom template and says nothing about what in the utterance meets each description.",
+          "contextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        },
+        {
+          "type": "accepted-path-not-confirmed",
+          "detail": "The evidence for APARELHO ENDOCRINOLÓGICO > Astenia quotes the whole utterance against “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.”; the utterance states no extreme physical tiredness. See candidatesForAdjudication.",
+          "contextIds": [
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-04",
+        "B008-05",
+        "B008-06",
+        "B008-07"
+      ],
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "sourceArrayIndex": 38,
+      "sourceOrdinal": 39,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Student-facing story rationale is wrong: it describes itching/Prurido on an Astenia utterance (B008-01).",
+        "Accepted path APARELHO ENDOCRINOLÓGICO > Astenia not confirmed: the utterance states neither generalized weakness nor extreme physical tiredness (B008-02)."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+      "textSha256": "2d9e11b0cd10ac5816e893347ebd5715beadfc44645169143bcac4ea4724f39d",
+      "storyObjectSha256": "836ec87d1905c15152fc92922b6bba4d5a5fe69313c49ad5b5aa2d1dc4527e7c",
+      "rawStorySha256": "76ecc6b78b51e8d99b8c33f4fd0eb7a559dc34ea1412d2c7eae16c930e1803b1",
+      "rawStoryByteLength": 4253,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 118103,
+        "byteOffsetEndExclusive": 122356
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "text": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "quote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+            },
+            "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+            "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve."
+          },
+          {
+            "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "quote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 3,
+              "locator": "APARELHO CARDIOVASCULAR > Astenia"
+            },
+            "sourceQuote": "sensação de fraqueza ou falta de energia",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve."
+          },
+          {
+            "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "quote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 7,
+              "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+            },
+            "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "astenia"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Tenho me sentido fisicamente fraco por um período, até quando a rotina é leve",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A fala relata, em palavras leigas, falta de força (fraqueza) que se mantém no tempo e que a pessoa não liga a esforço. A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada; não há relato de peso.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "sourceHierarchy": {
+            "group": "APARELHO CARDIOVASCULAR",
+            "subgroup": null,
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Tenho me sentido fisicamente fraco",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A descrição-fonte é uma disjunção (“fraqueza ou falta de energia”); a fala afirma fraqueza/pouca força literalmente. O nome do aparelho apenas localiza a entrada; nenhuma causa cardíaca é afirmada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Leitura da frase: corresponde a Astenia. “Fisicamente fraco” é falta de força/fraqueza e “até quando a rotina é leve” é a cláusula “não explicada apenas por esforço”. Nada pertence só a Fadiga: não há cansaço, esgotamento, falta de energia nem menção a repouso. O elemento mais frágil é a persistência: “tenho me sentido … por um período” indica que a queixa vem durando, mas de modo vago; aceito como suficiente para reconhecimento do termo e registro a ressalva (B008-06). A frase, sozinha, eu aprovaria. O item fica retido por defeitos do registro: a justificativa mostrada ao aluno fala de coceira/Prurido (B008-01), e o caminho endocrinológico aceito não pôde ser confirmado, pois a fala não diz que a fraqueza é generalizada nem intensa (B008-02). Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of this Astenia entry; the heading is not evidence of weight change. APARELHO CARDIOVASCULAR and APARELHO ENDOCRINOLÓGICO locate the other accepted entries and establish no organ or cause.",
+        "clinicalMeaning": "Subjectively reported lack of strength/weakness (with or without low energy), lasting over time and not attributed to exertion; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Fadiga: não sustentada (sem cansaço/esgotamento/energia e sem menção a repouso). Astenia endocrinológica: aceita pela história, não confirmada (B008-02). Astenia hemolinfopoiética: não sustentada, sem quadro de base. Paresias: nenhuma parte do corpo é indicada e “fisicamente fraco” descreve a pessoa como um todo; não há “corpo todo” explícito (B008-06). “Rotina leve” é circunstância, não causa."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "two-of-three-accepted-paths-confirmed-endocrine-path-not-confirmed",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "incorrect-story-rationale-describes-prurido-not-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "Two of the three recorded full-credit paths are confirmed (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia; APARELHO CARDIOVASCULAR > Astenia). The third recorded path (APARELHO ENDOCRINOLÓGICO > Astenia) is not confirmed and is listed for adjudication. APARELHO HEMOLINFOPOIÉTICO > Astenia is correctly not accepted (no underlying condition stated). No partial-credit subgroup identified; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO ENDOCRINOLÓGICO",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "sourceExactLine": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.",
+          "storyQuote": "fisicamente fraco por um período, até quando a rotina é leve",
+          "strength": "weak",
+          "assessment": "The effort clause is met (“até quando a rotina é leve”). “Fraqueza orgânica generalizada” is only implied by “fisicamente fraco”; “cansaço físico extremo” is not stated.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether APARELHO ENDOCRINOLÓGICO > Astenia receives full credit for this utterance although “cansaço físico extremo” is not stated (then keep it, with evidence that says which words carry it), or whether it must be removed from acceptedContextIds, as interrogatorio-next-02 does for utterances without stated intensity. The reviewer did not confirm this accepted path."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "incorrect-story-rationale",
+          "detail": "story.rationale is “A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.”. It describes itching and names Prurido; the utterance is about weakness and is keyed to Astenia. The app shows this text to the student after answering (contextExplanation built in src/lib/interview-bank.ts, rendered in src/components/Anamnese.tsx).",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "type": "incorrect-path-evidence-rationale",
+          "detail": "acceptedPathEvidence.rationale for these contexts is “O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.”. “na pele/corpo” is left over from a skin-symptom template and says nothing about what in the utterance meets each description.",
+          "contextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        },
+        {
+          "type": "accepted-path-not-confirmed",
+          "detail": "The evidence for APARELHO ENDOCRINOLÓGICO > Astenia quotes the whole utterance against “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.”; the utterance states no extreme physical tiredness. See candidatesForAdjudication.",
+          "contextIds": [
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-04",
+        "B008-05",
+        "B008-06",
+        "B008-07"
+      ],
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+      "sourceArrayIndex": 39,
+      "sourceOrdinal": 40,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Student-facing story rationale is wrong: it describes itching/Prurido on an Astenia utterance (B008-01).",
+        "Accepted path APARELHO ENDOCRINOLÓGICO > Astenia not confirmed: “cansaço físico extremo” is not stated in the utterance (B008-02)."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+      "textSha256": "3fe03195d0dfdd3395b763c67dc93c194fe660c8f8882491cec34679371c447f",
+      "storyObjectSha256": "b3313e29064817b4deed0f40d651f7da0e470c3460e731841c2752435815a346",
+      "rawStorySha256": "8be9fabf80f839a9eb74c639de3e7d0d7984bacee34c0138a5b8f1f7589e6f6d",
+      "rawStoryByteLength": 4386,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 122362,
+        "byteOffsetEndExclusive": 126748
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "text": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "quote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+            },
+            "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+            "rationale": "O relato documenta astenia conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço."
+          },
+          {
+            "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "quote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 3,
+              "locator": "APARELHO CARDIOVASCULAR > Astenia"
+            },
+            "sourceQuote": "sensação de fraqueza ou falta de energia",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço."
+          },
+          {
+            "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "quote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 7,
+              "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+            },
+            "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+            "rationale": "O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "astenia"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Uma sensação persistente de fraqueza no corpo todo me acompanha, sem relação clara com esforço",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A fala relata, em palavras leigas, falta de força (fraqueza) que se mantém no tempo e que a pessoa não liga a esforço. A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada; não há relato de peso.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "termId": "astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "sourceHierarchy": {
+            "group": "APARELHO CARDIOVASCULAR",
+            "subgroup": null,
+            "term": "Astenia"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "sourceVerification": "PDF p.1, p.3, p.4, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). O inventário guarda “cansaço físico  extremo” com dois espaços; a extração devolve um. Sem inspeção visual das páginas.",
+          "evidenceQuote": "Uma sensação persistente de fraqueza no corpo todo",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D001247) descreve Asthenia como “Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.”; o DeCS (ID 1255) traz “Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.”. Isso sustenta o termo de forma descritiva e mostra que fraqueza/falta de força é o núcleo de Astenia. Os registros não contêm a persistência nem a cláusula “não explicada apenas por esforço” que a apostila (p.1) imprime, nem a intensidade “extrema” da entrada endocrinológica (p.7). MeSH mantém Fatigue (D005221) como descritor separado e Paresis (D010291) como fraqueza muscular, com termos de entrada por segmento (hemiparesia, monoparesia). A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-asthenia",
+            "decs-astenia"
+          ],
+          "rationale": "A descrição-fonte é uma disjunção (“fraqueza ou falta de energia”); a fala afirma fraqueza/pouca força literalmente. O nome do aparelho apenas localiza a entrada; nenhuma causa cardíaca é afirmada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Leitura da frase: é a mais direta das cinco, quase uma paráfrase da linha de ELEMENTOS GERAIS. “Sensação persistente de fraqueza” = “falta persistente de força”; “sem relação clara com esforço” = “não explicada apenas por esforço”; “sensação … de fraqueza” repete a linha cardiovascular. Nada pertence só a Fadiga. A frase, sozinha, eu aprovaria; observo apenas que ela é pouco coloquial (“persistente”, “sem relação clara com esforço” ecoam a redação da apostila), sem chegar a nomear o termo (B008-07). O item fica retido por defeitos do registro: a justificativa mostrada ao aluno fala de coceira/Prurido (B008-01), e o caminho endocrinológico aceito não pôde ser confirmado, porque “cansaço físico extremo” não é dito (B008-02). Forma: uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of this Astenia entry; the heading is not evidence of weight change. APARELHO CARDIOVASCULAR and APARELHO ENDOCRINOLÓGICO locate the other accepted entries and establish no organ or cause.",
+        "clinicalMeaning": "Subjectively reported lack of strength/weakness (with or without low energy), lasting over time and not attributed to exertion; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Fadiga: não sustentada (sem cansaço/esgotamento/energia e sem menção a repouso). Astenia endocrinológica: aceita pela história, não confirmada (B008-02) — “fraqueza no corpo todo” e “sem relação clara com esforço” correspondem a “Fraqueza … generalizada … sem esforço proporcional”, mas a intensidade “extrema” não é dita. Astenia hemolinfopoiética: não sustentada, sem quadro de base. Paresias: “no corpo todo” afasta a leitura segmentar."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "two-of-three-accepted-paths-confirmed-endocrine-path-not-confirmed",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "incorrect-story-rationale-describes-prurido-not-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "Two of the three recorded full-credit paths are confirmed (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia; APARELHO CARDIOVASCULAR > Astenia). The third recorded path (APARELHO ENDOCRINOLÓGICO > Astenia) is not confirmed and is listed for adjudication. APARELHO HEMOLINFOPOIÉTICO > Astenia is correctly not accepted (no underlying condition stated). No partial-credit subgroup identified; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO ENDOCRINOLÓGICO",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "sourceExactLine": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.",
+          "storyQuote": "fraqueza no corpo todo me acompanha, sem relação clara com esforço",
+          "strength": "moderate",
+          "assessment": "“fraqueza no corpo todo” matches “Fraqueza … generalizada” and “sem relação clara com esforço” matches “sem esforço proporcional”. “cansaço físico extremo” is not stated: no tiredness and no intensity wording.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether APARELHO ENDOCRINOLÓGICO > Astenia receives full credit for this utterance although “cansaço físico extremo” is not stated (then keep it, with evidence that says which words carry it), or whether it must be removed from acceptedContextIds, as interrogatorio-next-02 does for utterances without stated intensity. The reviewer did not confirm this accepted path."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "incorrect-story-rationale",
+          "detail": "story.rationale is “A fala descreve coceira na pele, compatível com Prurido geral e com a descrição cutânea; localização/relato não determina causa.”. It describes itching and names Prurido; the utterance is about weakness and is keyed to Astenia. The app shows this text to the student after answering (contextExplanation built in src/lib/interview-bank.ts, rendered in src/components/Anamnese.tsx).",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "type": "incorrect-path-evidence-rationale",
+          "detail": "acceptedPathEvidence.rationale for these contexts is “O trecho descreve astenia na pele/corpo; isso também corresponde à descrição específica deste contexto, sem inferir etiologia.”. “na pele/corpo” is left over from a skin-symptom template and says nothing about what in the utterance meets each description.",
+          "contextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        },
+        {
+          "type": "accepted-path-not-confirmed",
+          "detail": "The evidence for APARELHO ENDOCRINOLÓGICO > Astenia quotes the whole utterance against “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.”; the utterance states no extreme physical tiredness. See candidatesForAdjudication.",
+          "contextIds": [
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-04",
+        "B008-05",
+        "B008-06",
+        "B008-07"
+      ],
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    }
+  ],
+  "reviewerClinicalSources": [
+    {
+      "id": "mesh-asthenia",
+      "title": "NLM MeSH — Asthenia, D001247",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001247",
+      "institution": "U.S. National Library of Medicine / NIH",
+      "accessed": "2026-11-15",
+      "verification": "Record page opened in this review with the session web-fetch tool (heading, unique ID and Scope Note returned; no entry terms listed). Content came through the tool's summarizing model; not cross-checked against another copy in this run.",
+      "locator": "Scope Note; Unique ID",
+      "exactQuote": "Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.",
+      "claim": "Astenia é sinal/sintoma cujo núcleo é debilidade, falta ou perda de força e energia; é descritor próprio.",
+      "limitation": "Não contém a persistência, a relação com o esforço nem a intensidade que as linhas da apostila acrescentam; não diz como classificar uma fala isolada nem sustenta causa.",
+      "externalDescriptorId": "D001247"
+    },
+    {
+      "id": "decs-astenia",
+      "title": "DeCS/MeSH (BIREME/OPAS/OMS) — Astenia, ID DeCS 1255",
+      "url": "https://decs.bvsalud.org/ths/resource/?id=1255&filter=ths_termall&q=astenia",
+      "institution": "BIREME / OPAS / OMS",
+      "accessed": "2026-11-15",
+      "verification": "Search page (https://decs.bvsalud.org/ths/?filter=ths_termall&q=astenia) and descriptor page opened in this review with the session web-fetch tool (content returned through its summarizing model).",
+      "locator": "Descritor em português; Nota de escopo",
+      "exactQuote": "Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.",
+      "claim": "Em português o descritor é Astenia (D001247), com o mesmo sentido do MeSH.",
+      "limitation": "Equivalência terminológica; não decide o gabarito de uma fala e não é a definição da apostila.",
+      "externalDescriptorId": "D001247",
+      "externalDecsId": "1255"
+    },
+    {
+      "id": "mesh-fatigue",
+      "title": "NLM MeSH — Fatigue, D005221",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005221",
+      "institution": "U.S. National Library of Medicine / NIH",
+      "accessed": "2026-11-15",
+      "verification": "Record page opened in this review with the session web-fetch tool (Scope Note, entry term Lassitude, Asthenia listed under See Also only). Content came through the tool's summarizing model.",
+      "locator": "Scope Note; Entry Term; See Also",
+      "exactQuote": "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.",
+      "claim": "Fatigue é descritor separado de Asthenia e descreve cansaço após esforço, não falta de força.",
+      "limitation": "Não contém a ausência de melhora com repouso que a apostila usa para Fadiga; não resolve a dúvida do índice 35, que nasce dos marcadores da própria apostila.",
+      "externalDescriptorId": "D005221"
+    },
+    {
+      "id": "mesh-paresis",
+      "title": "NLM MeSH — Paresis, D010291",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D010291",
+      "institution": "U.S. National Library of Medicine / NIH",
+      "accessed": "2026-11-15",
+      "verification": "Record page opened in this review with the session web-fetch tool (opening of the Scope Note and entry terms such as Hemiparesis and Monoparesis returned). Content came through the tool's summarizing model; only the opening sentence is quoted.",
+      "locator": "Scope Note (opening sentence); Entry Terms",
+      "exactQuote": "A general term referring to a mild to moderate degree of muscular weakness.",
+      "claim": "Paresia é fraqueza muscular (motora); os termos de entrada são por segmento corporal, coerente com “em uma ou mais partes do corpo” na apostila.",
+      "limitation": "Não exclui por si só fraqueza muscular difusa; a distinção usada nesta revisão vem da redação da apostila.",
+      "externalDescriptorId": "D010291"
+    }
+  ],
+  "hashMethods": {
+    "sourceBatch": "SHA-256 of exact file bytes.",
+    "text": "SHA-256 of UTF-8 story.text; no normalization.",
+    "storyObject": "SHA-256 of UTF-8 JSON.stringify(parsed story), retaining key order; same method as earlier interrogatório review reports.",
+    "rawStory": "SHA-256 of exact UTF-8 source slice from opening { through closing }; zero-based byte offsets, end-exclusive.",
+    "storage": "Full original story object stored once in reviewedStoryObject. Source byte offsets, raw hash and whole-file hash preserve raw-byte binding without a duplicate base64 representation. Original generation/evidence/review metadata are retained."
+  },
+  "releaseBuilderContract": {
+    "verifyBeforeUse": [
+      "Exact source batch SHA-256 and byte length; exact base inventory SHA-256 and declared baseSha256.",
+      "Exactly indices 35..39 and ordered stable IDs.",
+      "Each original raw source slice matches rawStorySha256 and rawStoryByteLength, and parses identically to reviewedStoryObject.",
+      "Each full object matches storyObjectSha256; its text matches textSha256.",
+      "Every evidenceQuote is an exact substring of reviewedText; every listed path resolves to actual source term/group/subgroup/source.",
+      "supportedAcceptedPaths.definitionBasis equals the matching original acceptedPathEvidence.definitionBasis; terminology caution is a separate field.",
+      "Only items with disposition=model-reviewed, hold=false, prototypeEligible=true may be frozen; items with disposition=needs-revision and hold=true must be withheld. This report has no eligible item: nothing may be frozen from it. clinicalApproval=false."
+    ],
+    "onMismatch": "Stop release for the affected item; text equality alone cannot approve changed story metadata or evidence.",
+    "adapterScope": "No implementation or app integration performed. tools/prepare-interview-batch.mjs was run read-only against this report (no --patch, no file written); with all five items withheld it stops at “No prototype-eligible stories in this batch”, which is the expected outcome."
+  },
+  "integrityChecks": {
+    "validationStatus": "passed",
+    "validatedAt": "2026-11-15T21:42:39.935Z",
+    "validationScope": "Exactly indices 35..39; batch/base/PDF hashes, raw slices, full objects, text hashes, literal story quotes (confirmed paths and adjudication candidates), literal source quotes, source mappings, definitionBasis equality, literal presence of the reported rationale defects, dispositions/counts. “passed” refers to these integrity checks, not to the story dispositions.",
+    "baseHashMatchesBatchDeclaration": true,
+    "reviewedScopeExactlyFive": true
+  },
+  "unresolved": [
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-06",
+      "sourceArrayIndex": 35,
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02",
+        "B008-03"
+      ],
+      "question": "After the rationale is repaired: should APARELHO ENDOCRINOLÓGICO > Astenia stay as a full-credit path, and is Fadiga acceptable for weakness that persists after a quiet night, or should the utterance be revised?",
+      "candidateContextIds": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-07",
+      "sourceArrayIndex": 36,
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "question": "After the rationale is repaired: should APARELHO ENDOCRINOLÓGICO > Astenia stay as a full-credit path for this utterance, which states no extreme physical tiredness?",
+      "candidateContextIds": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-08",
+      "sourceArrayIndex": 37,
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "question": "After the rationale is repaired: should APARELHO ENDOCRINOLÓGICO > Astenia stay as a full-credit path for this utterance, which states no extreme physical tiredness?",
+      "candidateContextIds": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-09",
+      "sourceArrayIndex": 38,
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "question": "After the rationale is repaired: should APARELHO ENDOCRINOLÓGICO > Astenia stay as a full-credit path for this utterance, which states no extreme physical tiredness?",
+      "candidateContextIds": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia-story-10",
+      "sourceArrayIndex": 39,
+      "blockingFindingIds": [
+        "B008-01",
+        "B008-02"
+      ],
+      "question": "After the rationale is repaired: should APARELHO ENDOCRINOLÓGICO > Astenia stay as a full-credit path for this utterance, which states no extreme physical tiredness?",
+      "candidateContextIds": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": null,
+      "scope": "source-interpretation",
+      "question": "Are the two parts of the endocrine Astenia description (“Fraqueza orgânica generalizada” and “cansaço físico extremo sem esforço proporcional”) cumulative? interrogatorio-next-02 treats stated intensity as required; interrogatorio-next-01 does not. This needs one decision by the teaching owner, applied to both batches."
+    },
+    {
+      "itemId": null,
+      "scope": "out-of-scope-observation",
+      "question": "The same Prurido rationale is present on the Astenia stories at array indices 30, 31, 32, 33, 34 of the same batch, which this review did not cover. Whoever reviews or has reviewed them should check it."
+    }
+  ],
+  "limitations": [
+    "Model review by a non-clinician, not clinical approval.",
+    "Source PDF checked as extracted text only (p.1, p.3, p.4, p.7, p.8); no visual page inspection in this run.",
+    "The MeSH and DeCS pages were read through a web-fetch tool that returns page content via a summarizing model; the quoted scope notes were not cross-checked against a second copy in this run.",
+    "Whether a weakness complaint without a named body part can be read as Paresias (indices 37, 38), and whether rest-refractory weakness can be read as Fadiga (index 35), are the reviewer's readings of the source wording, not teaching decisions.",
+    "Stories at indices 30..34 (Astenia 01–05) and all other stories are out of scope; they and the sibling-batch stories were read only as context/precedent.",
+    "Review files were written in the main checkout at /Users/math/pessoal/anatomind as instructed.",
+    "No app execution tested: the path from story.rationale to the student feedback was read in the source code (src/lib/interview-bank.ts, src/components/Anamnese.tsx), not observed in a running app. The release builder was only run in its default read-only reporting mode."
+  ]
+}
