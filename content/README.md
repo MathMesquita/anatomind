@@ -1,6 +1,8 @@
 # Educational content banks
 
-`drafts/` contains researched material and generated fictional examples. It is outside `public/` and is **not loaded by the web app**. The current deployed prototype continues to use its small demonstration bank until reviewed content is explicitly integrated.
+`drafts/` contains researched material and generated fictional examples. It is outside `public/` and is **not loaded by the web app**. Anamnese continues to use its small demonstration bank until reviewed content is explicitly integrated.
+
+`releases/regioes.v1.json` is an explicit, frozen **prototype** release imported by the app: 71 independently model-reviewed numbered targets, 50 answer regions, and all 55 source legend labels. Per-target pixel evidence, source exclusions, model provenance, and missing teacher/clinical approval are retained in feedback debug. Five labels have no reliable illustrated target. Model review is not clinical approval; this release must not be represented as clinically approved educational material. See `docs/reviews/regioes-v1.md` and `docs/research/regioes.md` for the audit.
 
 ## Production tracks
 

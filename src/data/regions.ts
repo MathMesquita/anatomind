@@ -1,3 +1,5 @@
+import bank from "../../content/releases/regioes.v1.json" with { type: "json" }
+
 export type RegionView = "anterior" | "posterior" | "lateral" | "face" | "occipital"
 
 export const regionViews = {
@@ -10,6 +12,8 @@ export const regionViews = {
 
 export interface RegionQuestion {
   id: string
+  bankId: string
+  regionId: string
   view: RegionView
   number: number
   answer: string
@@ -17,19 +21,45 @@ export interface RegionQuestion {
   x: number
   y: number
   options: string[]
+  sourceLabel: string
+  source: (typeof bank.questions)[number]["source"]
+  review: (typeof bank.questions)[number]["review"]
 }
 
-export const regionQuestions: RegionQuestion[] = [
-  { id: "superficie-anterior-25", view: "anterior", number: 25, answer: "Região umbilical", x: 52, y: 38, options: ["Região umbilical", "Região epigástrica", "Região inguinal", "Região esternal"] },
-  { id: "superficie-lateral-24", view: "lateral", number: 24, answer: "Região lateral (flanco)", x: 43, y: 40, options: ["Região lateral (flanco)", "Região umbilical", "Região inguinal", "Região lombar"] },
-  { id: "superficie-posterior-31", view: "posterior", number: 31, answer: "Região infraescapular", x: 41, y: 33, options: ["Região infraescapular", "Região escapular", "Região lombar", "Região sacral"] },
-  { id: "superficie-face-6", view: "face", number: 6, answer: "Região nasal", x: 50, y: 55, options: ["Região nasal", "Região bucal", "Região frontal", "Região mentual"] },
-  { id: "superficie-occipital-3", view: "occipital", number: 3, answer: "Região occipital", x: 56, y: 47, options: ["Região occipital", "Região parietal", "Região temporal", "Região frontal"] },
-]
+const regionsById = new Map(bank.regions.map((region) => [region.id, region]))
+function displayLabel(id: string): string {
+  const region = regionsById.get(id)
+  if (!region) throw new Error(`Região desconhecida no banco revisado: ${id}`)
+  const label = region.label
+  if (/^(Dorso|Palma|Planta|Epigástrio|Hipocôndrio)/.test(label)) return label
+  return `Região ${label[0].toLocaleLowerCase("pt-BR")}${label.slice(1)}`
+}
+
+// Explicit frozen prototype release, never the mutable generation drafts.
+export const regionQuestions: RegionQuestion[] = bank.questions.filter((item) => item.review.status === "model-reviewed").map((item) => {
+  if (!(item.view in regionViews)) throw new Error(`Vista desconhecida: ${item.view}`)
+  return {
+    id: `superficie-${item.view}-${item.number}`, bankId: item.id, regionId: item.answerRegionId,
+    view: item.view as RegionView, number: item.number, answer: displayLabel(item.answerRegionId),
+    x: item.marker.x, y: item.marker.y, options: item.optionRegionIds.map(displayLabel),
+    sourceLabel: regionsById.get(item.answerRegionId)!.label, source: item.source, review: item.review,
+  }
+})
+
+export const regionCoverage = {
+  questions: regionQuestions.length,
+  answerRegions: new Set(regionQuestions.map((q) => q.regionId)).size,
+  legendRegions: bank.regions.length,
+  unavailableRegions: bank.regions.filter((region) => !regionQuestions.some((question) => question.regionId === region.id)),
+  excludedTargets: bank.coverage.pendingQuestionTargets,
+  sourceDefects: bank.coverage.sourceDefects,
+  generation: bank.generation,
+  release: bank.release,
+}
 
 export const regionSource = {
   document: "DIVISÃO DA SUPERFÍCIE CORPORAL - 3ºSEMESTRE.pdf",
   page: 1,
   provenance: "Imagens originais extraídas sem alteração. Janelas de exibição separam as cinco vistas. O ponto é uma sobreposição, posicionada junto ao número impresso.",
-  review: "Os cinco números e pontos foram conferidos visualmente nos recortes e na legenda em 14/11/2026 (gpt-6-luna; docs/research/regioes.md). Revisão docente não registrada. A atividade ainda não cobre todas as 55 regiões / 75 ocorrências visíveis.",
+  review: "71 alvos e 55 rótulos conferidos em revisão independente em 14/11/2026 (gpt-6.1-sol). O banco cobre 50 regiões; alvos contraditórios ou ilegíveis foram excluídos. Cinco regiões da legenda permanecem sem alvo utilizável. Protótipo com revisão por modelo; revisão docente/clínica não registrada.",
 }

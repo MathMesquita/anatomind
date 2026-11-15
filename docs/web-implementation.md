@@ -40,3 +40,11 @@ Run `npm run dev` for the local web preview. No deployment is part of this check
 ## Subsequent updates
 
 The prototype was uploaded in commit `1aebc72`, and its GitHub Pages deployment succeeded. [Exposure-aware randomness](randomness.md) now tracks displayed questions and alternatives separately from scores. Content generation and independent review are underway under `content/`, `docs/research/`, and `docs/reviews/`; those draft banks are not automatically loaded by the application.
+
+### Expanded numbered-region release — 2026-11-15
+
+The five-question starter bank above has been replaced by a frozen, independently model-reviewed prototype release: 71 targets across the same five original image windows, covering 50 of 55 legend regions. Ten distinct regions are sampled per round, balancing unseen regions before their alternative views. Five legend regions remain unavailable as correct targets because their numerals are missing or unreadable; contradictory source markings are excluded, not guessed. All targets retain individual pixel evidence and review provenance in feedback debug. Teacher/clinical approval remains unrecorded.
+
+The expanded implementation passes 36 tests, lint, and the production build. Tests verify every target's source-coordinate mapping, all 71 targets' reachability over 500 seeded rounds, unseen-region/view preference, and disease sampling with hidden variable positive counts and overlap protection. A 390 × 844 production-preview browser round completed ten distinct regions for 100 points, with four options each and fixed feedback footers at 844 px, without horizontal overflow. After stopping the preview server, the installed expanded PWA reloaded, preserved its 150-point cumulative progress, and displayed a new lateral target (36) with its original image loaded from cache. This is an origin-unavailable check, not physical-device airplane-mode testing.
+
+Content generation is not yet full game integration: symptom characteristics has 220 draft stories across 11 groups awaiting independent review; disease and interrogation banks are still expanding. Their counts and review status must be checked in the content files rather than inferred from generation targets. The playable Anamnese starter counts above remain unchanged.

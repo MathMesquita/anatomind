@@ -6,6 +6,7 @@ import vm from "node:vm"
 import ts from "typescript"
 import * as scoring from "../src/lib/anamnese.ts"
 import * as sampling from "../src/lib/sampling.ts"
+import { sampleDiseaseOptions } from "../src/lib/disease-round.ts"
 
 // Exercise the component's own handlers/effects with a deterministic hook host.
 // Layout primitives are opaque: fixed positioning remains StudyLayout's contract.
@@ -50,6 +51,7 @@ function mount() {
       if (name === "react") return hooks
       if (name === "react/jsx-runtime") return { jsx, jsxs: jsx }
       if (name === "@/lib/anamnese") return scoring
+      if (name === "@/lib/disease-round") return { sampleDiseaseOptions: (positive, negative, scope) => sampleDiseaseOptions(positive, negative, scope, exposure.read()) }
       if (name === "@/lib/sampling") return {
         ...sampling,
         recordExposure: exposure.record,

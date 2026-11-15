@@ -5,6 +5,7 @@ import { StudyPage, StudyHeader, StudyFooter, QuestionDebug, FeedbackCard } from
 import { Progress } from "@/components/ui/progress"
 import { NONE, NO_SUBGROUP, scoreInterview, scoreSelections, type InterviewPath } from "@/lib/anamnese"
 import { alternativeId, chooseOptions, chooseQuestions, newPresentationId, recordExposure, shuffle } from "@/lib/sampling"
+import { sampleDiseaseOptions } from "@/lib/disease-round"
 
 type Props = { onBack: () => void; debugEnabled: boolean; onComplete?: (activity: string, score: number) => void }
 type Mode = "library" | "antecedentes" | "caracteres" | "interrogatorio"
@@ -90,7 +91,11 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
   const terms = [interview.term, ...(interview.acceptedTerms ?? [])]
   const questionOptions = useMemo(() => {
     const item = order[index]
-    if (mode === "antecedentes") return [shuffle([...groups[item].answers, ...(item === 0 ? distractors : eyeDistractors)])]
+    if (mode === "antecedentes") {
+      const round = sampleDiseaseOptions(groups[item].answers, item === 0 ? distractors : eyeDistractors, "anamnese:antecedentes:0")
+      if (!round) throw new Error("Banco de doenças sem opções revisadas suficientes para uma rodada.")
+      return [round.options]
+    }
     // Every checklist field must stay available; novelty cannot hide a missing-data answer.
     if (mode === "caracteres") return [shuffle([...characteristics, NONE])]
     const q = interviews[item]
@@ -103,7 +108,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
     ]
   }, [mode, order, index])
   const options = questionOptions[stage]
-  const expected = mode === "antecedentes" ? group.answers : mode === "caracteres" ? story.missing.length ? story.missing : [NONE] : []
+  const expected = mode === "antecedentes" ? options.filter((option) => group.answers.includes(option)) : mode === "caracteres" ? story.missing.length ? story.missing : [NONE] : []
 
   useEffect(() => {
     if (!finished) recordExposure([`anamnese:${mode}:prototype-v1:${order[index]}`], [], `${presentationId}:${index}:question`)
@@ -123,7 +128,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
   const grade = (timeout = false) => {
     if (answeredRef.current) return
     setTimedOut(timeout)
-    record(scoreSelections(picksRef.current, mode === "antecedentes" ? group.answers : story.missing))
+    record(scoreSelections(picksRef.current, mode === "antecedentes" ? expected : story.missing))
   }
 
   useEffect(() => {

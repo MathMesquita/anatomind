@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { FeedbackCard, QuestionDebug, StudyFooter, StudyHeader, StudyPage } from "@/components/StudyLayout"
 import { RegionDiagram } from "@/components/RegionDiagram"
-import { regionQuestions, regionSource, regionViews, type RegionQuestion } from "@/data/regions"
-import { alternativeId, chooseOptions, chooseQuestions, getExposure, newPresentationId, recordExposure } from "@/lib/sampling"
+import { regionCoverage, regionQuestions, regionSource, regionViews, type RegionQuestion } from "@/data/regions"
+import { alternativeId, chooseOptions, getExposure, newPresentationId, recordExposure } from "@/lib/sampling"
+import { buildRegionRound } from "@/lib/region-round"
 
 type Props = { onBack: () => void; debugEnabled: boolean; onComplete?: (activity: string, score: number) => void }
 const headView = (view: RegionQuestion["view"]) => view === "face" || view === "occipital"
-const createRound = () => chooseQuestions(regionQuestions, (q) => `propedeutica:question:${q.id}`)
+const createRound = () => buildRegionRound(regionQuestions)
 
 export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props) {
   const [phase, setPhase] = useState<"library" | "round" | "results">("library")
@@ -35,7 +36,7 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
   }
   useEffect(() => {
     if (phase !== "round") return
-    recordExposure([`propedeutica:question:${question.id}`], options.map((text) => alternativeId("propedeutica", text)), `${roundId}:${question.id}`)
+    recordExposure([`propedeutica:region:${question.regionId}`, `propedeutica:question:${question.id}`], options.map((text) => alternativeId("propedeutica", text)), `${roundId}:${question.id}`)
   }, [phase, question, roundId, options])
   const choose = (value: string) => {
     if (selected.current) return
@@ -55,8 +56,11 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
   const debug = settled && debugEnabled ? <QuestionDebug key={question.id}>
     <div><h3 className="font-semibold">Questão e resposta</h3><p>{question.id} · número {question.number} · {question.answer}</p><p>Sua escolha: {picked}</p></div>
     <div><h3 className="font-semibold">Fonte</h3><p>{regionSource.document} · página {regionSource.page}</p><p>{regionViews[question.view].title}</p></div>
+    <div><h3 className="font-semibold">Registro da fonte</h3><p>{question.bankId} · {question.source.locator}</p><p>Rótulo original: {question.sourceLabel}</p></div>
     <div><h3 className="font-semibold">Preparação da imagem</h3><p>{regionSource.provenance}</p><p>Ponto na vista: {question.x}%, {question.y}%.</p></div>
     <div><h3 className="font-semibold">Revisão</h3><p>{regionSource.review}</p></div>
+    <div><h3 className="font-semibold">Checagem deste alvo</h3><p>{question.review.model} · {question.review.date} · confiança: {question.review.confidence}</p><p>{question.review.visualCheck}</p><details className="mt-2"><summary>Evidência em pixels da imagem original</summary><pre className="mt-2 whitespace-pre-wrap text-xs">{JSON.stringify(question.review.pixelEvidence, null, 2)}</pre></details></div>
+    <div><h3 className="font-semibold">Cobertura e proveniência</h3><p>{regionCoverage.questions} alvos · {regionCoverage.answerRegions}/{regionCoverage.legendRegions} regiões. Geração: {regionCoverage.generation.model} · {regionCoverage.generation.promptVersion}. Versão congelada: {regionCoverage.release.id}.</p><p>Sem alvo utilizável: {regionCoverage.unavailableRegions.map((region) => `${region.number} — ${region.label}`).join("; ")}.</p><details className="mt-2"><summary>Exclusões e problemas da fonte</summary><pre className="mt-2 whitespace-pre-wrap text-xs">{JSON.stringify({ exclusions: regionCoverage.excludedTargets, sourceDefects: regionCoverage.sourceDefects }, null, 2)}</pre></details></div>
     <div><h3 className="font-semibold">Sorteio e exposição</h3><p>Questões inéditas primeiro; depois, prioridade ponderada por menor frequência e maior tempo desde a última exibição. Posições das respostas embaralhadas.</p><p>Exibições deste alvo neste aparelho: {getExposure().questions[`propedeutica:question:${question.id}`]?.count ?? 0}.</p><p>{options.map((text) => `${text}: ${getExposure().alternatives[alternativeId("propedeutica", text)]?.count ?? 0}`).join("; ")}</p></div>
   </QuestionDebug> : undefined
 
@@ -65,8 +69,8 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
     <p className="mb-2 text-xs font-bold uppercase tracking-[.08em] text-primary">Propedêutica médica</p>
     <h1 className="text-[30px] font-bold leading-9 tracking-tight">Observe e reconheça.</h1>
     <p className="mt-3 text-[15px] leading-6 text-muted-foreground">Pratique a identificação de regiões usando as ilustrações numeradas da aula.</p>
-    <button type="button" onClick={start} className="mt-8 flex min-h-24 w-full items-center gap-4 border-y py-5 text-left hover:bg-secondary/30"><span className="flex-1"><span className="block text-lg font-semibold">Regiões da superfície corporal</span><span className="mt-1 block text-sm text-muted-foreground">Cinco vistas · quatro opções por questão</span></span><ChevronRight className="size-5 text-primary" /></button>
-    <p className="mt-6 text-xs leading-5 text-muted-foreground">Banco inicial: 5 questões de demonstração. Fonte: Divisão da superfície corporal.</p>
+    <button type="button" onClick={start} className="mt-8 flex min-h-24 w-full items-center gap-4 border-y py-5 text-left hover:bg-secondary/30"><span className="flex-1"><span className="block text-lg font-semibold">Regiões da superfície corporal</span><span className="mt-1 block text-sm text-muted-foreground">Cinco vistas · 10 questões por rodada</span></span><ChevronRight className="size-5 text-primary" /></button>
+    <p className="mt-6 text-xs leading-5 text-muted-foreground">{regionCoverage.questions} alvos conferidos por modelo · {regionCoverage.answerRegions} de {regionCoverage.legendRegions} regiões da legenda. Alvos ausentes ou ilegíveis ficam de fora. Fonte: Divisão da superfície corporal. Revisão docente pendente.</p>
   </StudyPage>
 
   if (phase === "results") return <StudyPage footer={<StudyFooter label="Jogar novamente" onClick={start} secondary={<Button variant="outline" className="h-12 rounded-[10px]" onClick={() => setPhase("library")}>Biblioteca</Button>} />}>
