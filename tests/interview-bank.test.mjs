@@ -106,6 +106,15 @@ test("known literal-source terminology aliases interoperate while retaining quot
   assert.throws(() => adaptInterviewRelease(bank), /not supported/)
 })
 
+test("the second batch label for a literal source description is accepted with the same quote checks", () => {
+  const bank = fixture(), story = bank.stories[0]
+  story.acceptedPathEvidence[0].definitionBasis = "originalDescription"
+  story.review.independentReview.decision.supportedAcceptedPaths[0].definitionBasis = "originalDescription"
+  assert.equal(adaptInterviewRelease(bank).length, 1)
+  story.acceptedPathEvidence[0].sourceQuote = "invented"
+  assert.throws(() => adaptInterviewRelease(bank), /evidence/)
+})
+
 test("starter demonstrations stay exact; the active bank is the frozen reviewed releases", () => {
   assert.deepEqual(starterInterviews.map(({ term, story, page }) => [term, story, page]), [
     ["Diplopia", "Vejo dois objetos onde existe apenas um.", 1],

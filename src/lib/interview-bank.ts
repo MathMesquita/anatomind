@@ -59,8 +59,10 @@ const normalized = (text: string) => text.replace(/\s+/g, " ").trim()
 const contains = (text: string, quote: string) => nonempty(quote) && normalized(text).includes(normalized(quote))
 // Explicit aliases used by independently reviewed supplemental batches; all still
 // require literal PDF evidence and references resolving in clinicalReferences.
+// "originalDescription" is the label the second generation batch (interrogatorio-next-02) uses for the same thing:
+// the source quote comes from the term's own original description.
 const definitionClass = (basis: string) => {
-  if (["source-description", "source-description-with-verified-terminology", "source-description-with-institutional-terminology-caution"].includes(basis)) return "literal-source"
+  if (["source-description", "source-description-with-verified-terminology", "source-description-with-institutional-terminology-caution", "originalDescription"].includes(basis)) return "literal-source"
   if (basis === "source-with-separate-evidence-checked-teaching-definition") return "separate-teaching-definition"
   return undefined
 }
