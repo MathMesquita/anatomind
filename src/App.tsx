@@ -9,7 +9,7 @@ import { RoundScreen } from "@/components/RoundScreen"
 import { SubjectsScreen, type Subject } from "@/components/SubjectsScreen"
 import { Button } from "@/components/ui/button"
 import { buildDecks, loadPlates, type Deck, type Plate } from "@/lib/atlas"
-import { buildRound, scoreFor, type Answer, type Mode, type Question } from "@/lib/round"
+import { buildRound, refreshQuestionOptions, scoreFor, type Answer, type Mode, type Question } from "@/lib/round"
 
 type Stage = "home" | "round" | "results"
 
@@ -139,7 +139,9 @@ export default function App() {
       setStage("results")
       return
     }
-    setRound((current) => (current ? { ...current, index: current.index + 1 } : current))
+    const nextIndex = round.index + 1
+    const nextQuestion = refreshQuestionOptions(round.questions[nextIndex], round.deck)
+    setRound((current) => (current ? { ...current, index: nextIndex, questions: current.questions.map((question, i) => i === nextIndex ? nextQuestion : question) } : current))
   }
 
   if (!subject) {
@@ -184,6 +186,7 @@ export default function App() {
           streak={round.streak}
           mode={mode}
           debugEnabled={debugEnabled}
+          presentationId={`${round.id}:${round.index}`}
           onAnswer={answer}
           onNext={next}
           onQuit={() => setStage("home")}

@@ -7,6 +7,7 @@ import ts from "typescript"
 // Keep the existing anatomy modes covered while sharing the new study layout.
 function mount(mode) {
   const values = [], answers = []
+  const effects = []
   let cursor = 0, tree, advances = 0
   const jsx = (type, props) => ({ type, props: props ?? {} })
   const module = { exports: {} }
@@ -24,16 +25,21 @@ function mount(mode) {
           return [values[i], (value) => { values[i] = value }]
         },
         useRef(initial) { return values[cursor++] ??= { current: initial } },
+        useEffect(fn, deps) {
+          const i = cursor++, previous = values[i]
+          if (!previous || deps.some((dep, j) => !Object.is(dep, previous[j]))) { values[i] = deps; effects.push(fn) }
+        },
       }
+      if (name === "@/lib/sampling") return { recordExposure() {}, alternativeId: (scope, text) => `${scope}:${text}` }
       return new Proxy({}, { get: (_, key) => key })
     },
   })
   const props = {
-    mode, index: 0, total: 2, score: 0, streak: 0, debugEnabled: true,
+    mode, index: 0, total: 2, score: 0, streak: 0, debugEnabled: true, presentationId: "round-1:0",
     question: { plate: { id: "plate-1", page: 1 }, marker: { term: "Tíbia", slug: "tibia", x: .5, y: .5 }, options: ["Tíbia", "Fêmur", "Rádio", "Ulna"] },
     onAnswer: (...args) => answers.push(args), onNext: () => { advances++ }, onQuit() {},
   }
-  function render() { cursor = 0; tree = module.exports.RoundScreen(props) }
+  function render() { cursor = 0; tree = module.exports.RoundScreen(props); while (effects.length) effects.shift()() }
   function nodes() {
     const found = []
     function visit(node) {

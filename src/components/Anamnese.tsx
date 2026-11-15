@@ -1,20 +1,15 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { ChevronRight, Clock3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { StudyPage, StudyHeader, StudyFooter, QuestionDebug, FeedbackCard } from "@/components/StudyLayout"
 import { Progress } from "@/components/ui/progress"
 import { NONE, NO_SUBGROUP, scoreInterview, scoreSelections, type InterviewPath } from "@/lib/anamnese"
+import { alternativeId, chooseOptions, chooseQuestions, newPresentationId, recordExposure, shuffle } from "@/lib/sampling"
 
 type Props = { onBack: () => void; debugEnabled: boolean; onComplete?: (activity: string, score: number) => void }
 type Mode = "library" | "antecedentes" | "caracteres" | "interrogatorio"
 type Story = { text: string; missing: string[]; context: string }
 type Interview = { story: string; term: string; subgroup: string; group: string; page: number; alternatives?: string[]; acceptedTerms?: string[]; paths?: InterviewPath[] }
-const shuffle = <T,>(items: T[]): T[] => {
-  const result = [...items]
-  for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]] }
-  return result
-}
-
 // Existing prototype references are declarations, not verified clinical provenance.
 const distractors = ["Glaucoma", "Miopia", "Catarata", "Infarto", "TOC", "Depressão", "Ansiedade", "Epilepsia", "Enxaqueca", "AVE", "Diabetes", "Artrose", "Artrite reumatoide", "Osteoporose", "Pedra na vesícula", "Nefrolitíase"]
 const groups = [
@@ -64,7 +59,9 @@ export default function Anamnese({ onBack, debugEnabled, onComplete }: Props) {
 }
 function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Props & { mode: Exclude<Mode, "library">; onRestart: () => void }) {
   const length = mode === "antecedentes" ? groups.length : mode === "caracteres" ? stories.length : interviews.length
-  const [order] = useState(() => shuffle(Array.from({ length }, (_, i) => i)))
+  const questionId = (item: number) => `anamnese:${mode}:prototype-v1:${item}`
+  const [order] = useState(() => chooseQuestions(Array.from({ length }, (_, i) => i), questionId))
+  const [presentationId] = useState(newPresentationId)
   const [index, setIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [selected, setSelected] = useState<string[]>([])
@@ -91,20 +88,31 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
   const interview = interviews[mode === "interrogatorio" ? order[index] : 0]
   const paths = interview.paths ?? [{ subgroup: interview.subgroup, group: interview.group }]
   const terms = [interview.term, ...(interview.acceptedTerms ?? [])]
-  const [roundOptions] = useState(() => order.map((item) => {
+  const questionOptions = useMemo(() => {
+    const item = order[index]
     if (mode === "antecedentes") return [shuffle([...groups[item].answers, ...(item === 0 ? distractors : eyeDistractors)])]
+    // Every checklist field must stay available; novelty cannot hide a missing-data answer.
     if (mode === "caracteres") return [shuffle([...characteristics, NONE])]
     const q = interviews[item]
     const acceptedPaths = q.paths ?? [{ subgroup: q.subgroup, group: q.group }]
-    const names = [...new Set([...acceptedPaths.map((p) => p.subgroup), ...(q.alternatives ?? []), ...subgroups])].filter((s) => s !== NO_SUBGROUP).slice(0, 3)
+    const names = [...new Set([...acceptedPaths.map((p) => p.subgroup), ...(q.alternatives ?? []), ...subgroups])].filter((s) => s !== NO_SUBGROUP)
     return [
-      shuffle([...new Set([q.term, ...(q.acceptedTerms ?? []), ...interviews.map((i) => i.term)])].slice(0, 4)),
-      shuffle([...names, NO_SUBGROUP]),
-      shuffle([...new Set([q.group, ...acceptedPaths.map((p) => p.group), ...mainGroups])].slice(0, 4)),
+      chooseOptions([q.term], [...(q.acceptedTerms ?? []), ...interviews.map((i) => i.term)], (text) => alternativeId("anamnese:interrogatorio:0", text), 4),
+      chooseOptions([q.subgroup, NO_SUBGROUP], names, (text) => alternativeId("anamnese:interrogatorio:1", text), 4),
+      chooseOptions([q.group], [...acceptedPaths.map((p) => p.group), ...mainGroups], (text) => alternativeId("anamnese:interrogatorio:2", text), 4),
     ]
-  }))
-  const options = roundOptions[index][stage]
+  }, [mode, order, index])
+  const options = questionOptions[stage]
   const expected = mode === "antecedentes" ? group.answers : mode === "caracteres" ? story.missing.length ? story.missing : [NONE] : []
+
+  useEffect(() => {
+    if (!finished) recordExposure([`anamnese:${mode}:prototype-v1:${order[index]}`], [], `${presentationId}:${index}:question`)
+  }, [mode, order, index, finished, presentationId])
+  useEffect(() => {
+    if (!finished && !answered && !(mode === "caracteres" && !read)) {
+      recordExposure([], options.map((text) => alternativeId(`anamnese:${mode}:${stage}`, text)), `${presentationId}:${index}:options:${stage}`)
+    }
+  }, [mode, index, stage, options, read, answered, finished, presentationId])
 
   const record = (points: number) => {
     answeredRef.current = true
@@ -187,7 +195,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
     <p><strong>Respostas aceitas:</strong> {mode === "interrogatorio" ? terms.join(", ") : expected.join(", ")}</p>
     {mode === "interrogatorio" && <><p><strong>Caminhos aceitos:</strong> {paths.map((p) => `${p.subgroup} → ${p.group}`).join("; ")}</p><p><strong>Subgrupos em outro contexto (+5):</strong> {interview.alternatives?.join(", ") || "Nenhum registrado neste exemplo."}</p></>}
     <p><strong>Sua resposta:</strong> {(mode === "interrogatorio" ? stageAnswers : selected).join(" → ") || "Em branco"} · {signed(delta)} pontos{timedOut ? " · tempo esgotado" : ""}.</p>
-    <p><strong>Opções e ordem:</strong> {roundOptions[index].map((items) => items.join(" / ")).join(" → ")}</p>
+    <p><strong>Opções e ordem:</strong> {questionOptions.map((items) => items.join(" / ")).join(" → ")}</p>
     <p><strong>Critério:</strong> {mode === "interrogatorio" ? "+10 por etapa aceita; −5 por etapa incorreta; +5 somente para subgrupo alternativo registrado. O grupo considera os caminhos compatíveis com o subgrupo aceito." : "+10 por seleção correta; −5 por incorreta; 0 por omissão. Em branco = não respondida. Nenhum dado ausente é exclusivo."}</p>
     <p><strong>Proveniência:</strong> exemplos demonstrativos já presentes no componente. Modelo, prompt, data de geração, responsável e revisão clínica/editorial: não registrados. A referência declarada não comprova validação do cenário.</p>
   </QuestionDebug> : undefined

@@ -31,5 +31,5 @@ export const regionSource = {
   document: "DIVISÃO DA SUPERFÍCIE CORPORAL - 3ºSEMESTRE.pdf",
   page: 1,
   provenance: "Imagens originais extraídas sem alteração. Janelas de exibição separam as cinco vistas. O ponto é uma sobreposição, posicionada junto ao número impresso.",
-  review: "Associações conferidas com a legenda fornecida; revisão docente e proveniência editorial adicional não registradas.",
+  review: "Os cinco números e pontos foram conferidos visualmente nos recortes e na legenda em 14/11/2026 (gpt-6-luna; docs/research/regioes.md). Revisão docente não registrada. A atividade ainda não cobre todas as 55 regiões / 75 ocorrências visíveis.",
 }

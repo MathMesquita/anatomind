@@ -1,6 +1,7 @@
 /** Turning the atlas corpus into a playable round. */
 
 import type { Deck, Marker, Plate } from "@/lib/atlas"
+import { alternativeId, chooseOptions, chooseQuestions, shuffle } from "./sampling.ts"
 
 export type Mode = "choice" | "flashcard"
 
@@ -20,15 +21,6 @@ export interface Answer {
 export const ROUND_LENGTH = 10
 const OPTION_COUNT = 4
 
-function shuffle<T>(items: T[]): T[] {
-  const out = [...items]
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[out[i], out[j]] = [out[j], out[i]]
-  }
-  return out
-}
-
 /**
  * Wrong answers are drawn from the same plate first, then the same system.
  *
@@ -41,7 +33,8 @@ function pickOptions(plate: Plate, marker: Marker, deck: Deck): string[] {
   const options: string[] = []
 
   const drawFrom = (candidates: Marker[]) => {
-    for (const candidate of shuffle(candidates)) {
+    const eligible = candidates.filter((candidate) => !taken.has(candidate.slug))
+    for (const candidate of chooseOptions([], eligible, (item) => alternativeId("anatomia", item.term), OPTION_COUNT - 1 - options.length)) {
       if (options.length >= OPTION_COUNT - 1) return
       if (taken.has(candidate.slug)) continue
       taken.add(candidate.slug)
@@ -56,21 +49,20 @@ function pickOptions(plate: Plate, marker: Marker, deck: Deck): string[] {
   return shuffle([marker.term, ...options])
 }
 
-export function buildRound(deck: Deck, length = ROUND_LENGTH): Question[] {
-  const pool = shuffle(
-    deck.plates.flatMap((plate) => plate.markers.map((marker) => ({ plate, marker }))),
-  )
+/** Re-evaluate distractor exposure when the next question actually opens. */
+export const refreshQuestionOptions = (question: Question, deck: Deck): Question => ({ ...question, options: pickOptions(question.plate, question.marker, deck) })
 
-  const seen = new Set<string>()
-  const questions: Question[] = []
-  for (const { plate, marker } of pool) {
-    if (questions.length >= length) break
-    // The same structure twice in one round reads as a bug, not as revision.
-    if (seen.has(marker.slug)) continue
-    seen.add(marker.slug)
-    questions.push({ plate, marker, options: pickOptions(plate, marker, deck) })
+export function buildRound(deck: Deck, length = ROUND_LENGTH): Question[] {
+  const byConcept = new Map<string, { plate: Plate; marker: Marker }[]>()
+  for (const plate of deck.plates) for (const marker of plate.markers) {
+    const entries = byConcept.get(marker.slug) ?? []
+    entries.push({ plate, marker }); byConcept.set(marker.slug, entries)
   }
-  return questions
+  // Prefer unstudied structures, then unstudied photographs of that structure.
+  return chooseQuestions([...byConcept.entries()], ([slug]) => `anatomia:concept:${slug}`, length).map(([, entries]) => {
+    const { plate, marker } = chooseQuestions(entries, ({ plate, marker }) => `anatomia:question:${plate.id}:${marker.slug}`, 1)[0]
+    return { plate, marker, options: pickOptions(plate, marker, deck) }
+  })
 }
 
 /** Ten a hit, plus a growing bonus for an unbroken run. */

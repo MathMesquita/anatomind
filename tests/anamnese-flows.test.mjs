@@ -5,6 +5,7 @@ import { createRequire } from "node:module"
 import vm from "node:vm"
 import ts from "typescript"
 import * as scoring from "../src/lib/anamnese.ts"
+import * as sampling from "../src/lib/sampling.ts"
 
 // Exercise the component's own handlers/effects with a deterministic hook host.
 // Layout primitives are opaque: fixed positioning remains StudyLayout's contract.
@@ -12,6 +13,7 @@ const require = createRequire(import.meta.url)
 function mount() {
   let scope, cursor, tree, now = 0, dirty = false
   const scopes = new Map(), listeners = new Set(), timers = new Set(), completions = []
+  const exposure = sampling.createExposureStore(null)
   const document = { hidden: false, addEventListener: (_, fn) => listeners.add(fn), removeEventListener: (_, fn) => listeners.delete(fn) }
   const hooks = {
     useState(initial) {
@@ -22,6 +24,11 @@ function mount() {
     useRef(initial) {
       const slot = cursor++
       return scope.values[slot] ??= { current: initial }
+    },
+    useMemo(fn, deps) {
+      const slot = cursor++, previous = scope.values[slot]
+      if (!previous || deps.some((dep, i) => !Object.is(dep, previous.deps[i]))) scope.values[slot] = { deps, value: fn() }
+      return scope.values[slot].value
     },
     useEffect(fn, deps) {
       const slot = cursor++, previous = scope.effects[slot]
@@ -43,6 +50,12 @@ function mount() {
       if (name === "react") return hooks
       if (name === "react/jsx-runtime") return { jsx, jsxs: jsx }
       if (name === "@/lib/anamnese") return scoring
+      if (name === "@/lib/sampling") return {
+        ...sampling,
+        recordExposure: exposure.record,
+        chooseQuestions: (items, id, limit = items.length) => sampling.prioritize(items, id, exposure.read(), "questions").slice(0, limit),
+        chooseOptions: (required, candidates, id, limit) => sampling.chooseOptions(required, candidates, id, limit, exposure.read()),
+      }
       if (name === "lucide-react") return { ChevronRight: "icon", Clock3: "icon" }
       if (name.endsWith("/button")) return { Button: "button" }
       if (name.endsWith("/progress")) return { Progress: "progress" }
@@ -90,7 +103,7 @@ function mount() {
   const click = (node) => { assert.ok(node, "click target exists"); assert.ok(!node.props.disabled, "click target enabled"); node.props.onClick(); render() }
   render()
   return {
-    find, text, completions, click,
+    find, text, completions, click, exposure: exposure.read,
     start(title) { click(find("button").find((node) => text(node).includes(title))) },
     footer() { return find("StudyFooter")[0] },
     choices() { return find("button").filter((node) => "aria-pressed" in node.props) },
@@ -119,6 +132,20 @@ test("disease rounds have 20 choices, grade once, finish once, and restart clean
   app.click(app.footer())
   assert.equal(app.choices().length, 20)
   assert.equal(app.find("QuestionDebug").length, 0)
+})
+
+test("abandoned story rounds prioritize unshown stories and do not count hidden checklists", () => {
+  const app = mount()
+  app.start("Caracteres dos sintomas")
+  const first = app.find("p").map(app.text).find((value) => value.startsWith("Paciente relata"))
+  assert.equal(Object.keys(app.exposure().questions).length, 1)
+  assert.equal(Object.keys(app.exposure().alternatives).length, 0)
+  app.back()
+  app.start("Caracteres dos sintomas")
+  const second = app.find("p").map(app.text).find((value) => value.startsWith("Paciente relata"))
+  assert.notEqual(second, first)
+  app.click(app.footer())
+  assert.equal(Object.keys(app.exposure().alternatives).length, 11)
 })
 
 test("disease positive choices award 70 points across both starter groups", () => {

@@ -36,3 +36,7 @@ Use [the content-generation guide](educational-content-generation.md) for expans
 ## Handoff
 
 Run `npm run dev` for the local web preview. No deployment is part of this checkpoint. Existing Flutter files and unrelated work remain untouched.
+
+## Subsequent updates
+
+The prototype was uploaded in commit `1aebc72`, and its GitHub Pages deployment succeeded. [Exposure-aware randomness](randomness.md) now tracks displayed questions and alternatives separately from scores. Content generation and independent review are underway under `content/`, `docs/research/`, and `docs/reviews/`; those draft banks are not automatically loaded by the application.

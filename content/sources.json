@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-11-14",
+  "documents": [
+    {
+      "filename": "Antecedentes Pessoais Patologicos.pdf",
+      "pages": 1,
+      "sha256": "c97afb274b2898d7cd3bc274412b3da39f0c27a51a59200c7dc5e4e6738608b9"
+    },
+    {
+      "filename": "CARACTERES PROPEDÊUTICOS DOS PRINCIPAIS SINTOMAS.pdf",
+      "pages": 3,
+      "sha256": "ec6d0dab868f2eb171bc099306015f48d8dd74b976ec5f441576ce0383e6ebb7"
+    },
+    {
+      "filename": "Interrogatorio complementar.pdf",
+      "pages": 12,
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de"
+    },
+    {
+      "filename": "DIVISÃO DA SUPERFÍCIE CORPORAL - 3ºSEMESTRE.pdf",
+      "pages": 1,
+      "sha256": "396c30be10845c13c2dbed37981ef7e9e6c4e0786ec734c3b503bc87927bbd49"
+    }
+  ],
+  "notes": [
+    "Fingerprints identify the exact user-supplied PDFs used for this content-production pass; PDFs are not committed.",
+    "A matching fingerprint identifies a source version, not its clinical authority or redistribution license.",
+    "Draft banks use their own document IDs and must retain source filename, page, and locator."
+  ]
+}

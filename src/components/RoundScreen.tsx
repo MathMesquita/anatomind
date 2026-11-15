@@ -1,10 +1,11 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Check, Eye, Flame, X } from "lucide-react"
 import { PlateView } from "@/components/PlateView"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { FeedbackCard, QuestionDebug, StudyFooter, StudyHeader, StudyPage } from "@/components/StudyLayout"
 import type { Mode, Question } from "@/lib/round"
+import { alternativeId, recordExposure } from "@/lib/sampling"
 
 interface RoundScreenProps {
   question: Question
@@ -14,6 +15,7 @@ interface RoundScreenProps {
   streak: number
   mode: Mode
   debugEnabled?: boolean
+  presentationId: string
   onAnswer: (correct: boolean, picked?: string) => void
   onNext: () => void
   onQuit: () => void
@@ -27,6 +29,12 @@ export function RoundScreen(props: RoundScreenProps) {
   const advanced = useRef(false)
   const answer = question.marker.term
   const settled = picked !== null || revealed
+  useEffect(() => {
+    recordExposure([`anatomia:concept:${question.marker.slug}`, `anatomia:question:${question.plate.id}:${question.marker.slug}`], [], `${props.presentationId}:question`)
+  }, [props.presentationId, question])
+  useEffect(() => {
+    if (mode === "choice" || revealed) recordExposure([], (mode === "choice" ? question.options : [answer]).map((term) => alternativeId("anatomia", term)), `${props.presentationId}:${mode}:alternatives`)
+  }, [props.presentationId, question, mode, revealed, answer])
   const choose = (option: string) => {
     if (submitted.current) return
     submitted.current = true

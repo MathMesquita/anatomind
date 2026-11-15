@@ -29,10 +29,11 @@ export function QuestionDebug({ children }: { children: ReactNode }) {
     <Dialog.Trigger asChild><Button type="button" variant="outline" size="icon" className="size-12 shrink-0 rounded-[10px] border-[#B9C9BA] text-primary" aria-label="Inspecionar contexto da questão"><Bug className="size-[22px]" /></Button></Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay className="fixed inset-0 z-50 bg-black/40" />
-      <Dialog.Content className="fixed inset-x-4 top-1/2 z-50 mx-auto max-h-[85dvh] max-w-xl -translate-y-1/2 overflow-y-auto rounded-2xl bg-background p-6 shadow-xl focus:outline-none">
-        <div className="mb-2 flex items-start justify-between gap-4"><Dialog.Title className="text-xl font-semibold">Contexto da questão</Dialog.Title><Dialog.Close asChild><Button type="button" variant="ghost" size="icon" aria-label="Fechar contexto"><X className="size-5" /></Button></Dialog.Close></div>
-        <Dialog.Description className="mb-5 text-sm leading-6 text-muted-foreground">Fontes, respostas aceitas e informações de revisão.</Dialog.Description>
-        <div className="space-y-4 text-sm leading-6">{children}</div>
+      <Dialog.Content className="fixed inset-x-4 top-1/2 z-50 mx-auto flex max-h-[85dvh] max-w-xl -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-background p-6 shadow-xl focus:outline-none">
+        <div className="mb-2 flex shrink-0 items-start justify-between gap-4"><Dialog.Title className="text-xl font-semibold">Contexto da questão</Dialog.Title><Dialog.Close asChild><Button type="button" variant="ghost" size="icon" aria-label="Fechar contexto"><X className="size-5" /></Button></Dialog.Close></div>
+        <Dialog.Description className="mb-5 shrink-0 text-sm leading-6 text-muted-foreground">Fontes, respostas aceitas e informações de revisão.</Dialog.Description>
+        <div className="min-h-0 min-w-0 overflow-y-auto space-y-4 pr-2 text-sm leading-6 [overflow-wrap:anywhere]">{children}</div>
+        <Dialog.Close asChild><Button type="button" className="mt-5 h-12 shrink-0 rounded-[10px]">Voltar ao feedback</Button></Dialog.Close>
       </Dialog.Content>
     </Dialog.Portal>
   </Dialog.Root>
