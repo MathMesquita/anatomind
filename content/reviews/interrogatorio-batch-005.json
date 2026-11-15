@@ -1,0 +1,1865 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "interrogatorio-batch-005",
+  "status": "completed-independent-review",
+  "completedAt": "2026-11-15T21:25:43.852Z",
+  "clinicalApproval": false,
+  "releaseAuthorized": false,
+  "reviewer": {
+    "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+    "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+    "exactModelVersion": "claude-fable-5-2",
+    "runId": "unknown",
+    "role": "independent model reviewer; not a clinician and not clinical approver",
+    "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to earlier review conversations; the batch-003 report and markdown were read only as the output contract. The session context was compacted once during the run; the review continued from the reviewer's own notes and re-read the inputs before writing.",
+    "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+    "researchSkill": {
+      "used": false,
+      "note": "No research skill loaded. Primary sources were opened directly: the MeSH and DeCS pages with the session web-fetch tool (content returned through a summarizing model), and the two MeSH scope notes additionally as NLM linked-data JSON (id.nlm.nih.gov) fetched with curl, which returned them verbatim."
+    }
+  },
+  "input": {
+    "path": "content/batches/interrogatorio-next-01.json",
+    "sha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "byteLength": 693124,
+    "capturedAt": "2026-11-15T21:25:43.749Z",
+    "selection": {
+      "jsonPointer": "/stories",
+      "startIndexInclusive": 20,
+      "endIndexExclusive": 25,
+      "orderedStoryIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+      ]
+    },
+    "totalStoriesInBatch": 200,
+    "baseInventory": {
+      "path": "content/drafts/interrogatorio.json",
+      "sha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+      "byteLength": 1602010,
+      "contextCount": 204,
+      "declaredBaseSha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+      "declaredHashMatches": true,
+      "scope": "Context definitions and answer policy; no base stories reviewed."
+    },
+    "sourcePdf": {
+      "path": "/Users/math/Downloads/Interrogatorio complementar.pdf",
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+      "byteLength": 87652,
+      "documentMetadata": {
+        "id": "interrogatorio-complementar-2026",
+        "filename": "Interrogatorio complementar.pdf",
+        "pages": 12,
+        "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de"
+      },
+      "declaredHashMatches": true,
+      "inspection": "Text of p.1, p.3, p.7 and p.8 extracted in this run (macOS PDFKit) and the Fadiga line and the four Astenia lines read. No visual page inspection: page rendering tools were unavailable. No whole-PDF inspection claimed."
+    },
+    "priorReview": {
+      "path": "content/reviews/interrogatorio-batch-003.json",
+      "sha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+      "use": "Output contract only; no retro-edit and no inherited story disposition."
+    },
+    "originalBatchMetadata": {
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado pelo usuário; versão de execução indisponível.",
+        "authorship": "synthetic-patient-voice"
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      }
+    }
+  },
+  "scope": {
+    "storiesReviewed": 5,
+    "sourceArrayIndices": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "outputPaths": [
+      "content/reviews/interrogatorio-batch-005.json",
+      "docs/reviews/interrogatorio-batch-005.md"
+    ],
+    "outOfScopeStories": 195,
+    "storiesModified": false,
+    "appImported": false,
+    "committed": false,
+    "pushed": false,
+    "prototypeMeaning": "Eligible for a future source-based educational prototype after integrity checks; not clinical approval or app-import authorization in this review. Held stories are not eligible."
+  },
+  "counts": {
+    "stories": 5,
+    "read": 5,
+    "semanticallyReviewed": 5,
+    "modelReviewed": 1,
+    "needsRevision": 4,
+    "hold": 4,
+    "prototypeEligible": 1,
+    "clinicalApproved": 0,
+    "acceptedPaths": 5,
+    "distinctAcceptedContexts": 1,
+    "distinctAcceptedTerms": 1,
+    "partialCreditPaths": 0,
+    "blockingFindings": 3,
+    "nonBlockingFindings": 5,
+    "pendingWithinScope": 4
+  },
+  "reviewedStoryIds": [
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+  ],
+  "modelReviewedStoryIds": [
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02"
+  ],
+  "heldStoryIds": [
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+  ],
+  "prototypeEligibleStoryIds": [
+    "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02"
+  ],
+  "answerPolicy": {
+    "mode": "all-source-supported-coherent-paths",
+    "sourceHierarchyMeaning": "Printed group/subgroup locates the entry; ALTERAÇÕES DE PESO (PERDA OU GANHO) does not establish weight change or cause.",
+    "fullCredit": "All equally supported coherent paths receive full credit; contextId is editorial organization only.",
+    "scoringRule": {
+      "fullCredit": "+10 per accepted stage in a supported coherent path.",
+      "partialCredit": "+5 only for a valid subgroup in another context, explicitly mapped and evidenced for the same concept.",
+      "incorrect": "−5 per incorrect answered stage.",
+      "coherence": "Do not combine fields from different accepted paths.",
+      "thisBatch": "Each story records one full-credit path (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga). The reviewer confirms it as the only supported path for index 21. For indices 20, 22, 23 and 24 an Astenia path may be equally supported and is listed for adjudication; those stories are held. No partial-credit paths.",
+      "clinicalSubgroupScoring": "not approved; documentary classification only"
+    },
+    "negatives": "Silence is unknown, not clinical exclusion.",
+    "hintPolicy": "Do not expose organizer IDs, source locators, evidence or accepted-answer count as hints."
+  },
+  "termInventory": [
+    {
+      "termId": "fadiga",
+      "term": "Fadiga",
+      "namespace": "review-derived-normalized-term-slug",
+      "derivation": "Lowercase source label. Base contexts have no separate termId; this is an explicit review identifier, not an existing app ID or a new source context.",
+      "sourceContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "sameTermContextNotAccepted": [],
+      "overlappingTermContextsUnderAdjudication": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia"
+      ],
+      "externalDescriptorId": "D005221",
+      "externalDecsId": "5325",
+      "clinicalScope": "Tiredness/exhaustion/lack of energy; the source describes it as persistent and not significantly improved by rest. The source's Astenia entries share the “falta de energia” wording."
+    }
+  ],
+  "contextInventory": [
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "term": "Fadiga",
+      "group": "ELEMENTOS GERAIS",
+      "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+      "originalDescription": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "ELEMENTOS GERAIS",
+        "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+        "term": "Fadiga"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos.",
+        "FEBRE e ALTERAÇÕES DE PESO são títulos efetivamente impressos; pertencimento documental não afirma febre, mudança de peso ou nexo causal."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    }
+  ],
+  "inventoryAssessment": {
+    "contextCount": 204,
+    "inventoryPath": "content/drafts/interrogatorio.json",
+    "inventorySha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+    "method": "All 204 contexts (group, subgroup, term, original description) listed and read in this run; lexical search for tiredness/energy/exhaustion/rest/weakness/strength/sleep/mood wording; overlapping definitions reread in full and compared with each of the five utterances. Fadiga and Astenia stories of interrogatorio-next-01 and interrogatorio-next-02 were listed to see how the same wording is mapped elsewhere (precedent only; not reviewed). Repeated 204-ID list omitted.",
+    "sameTermContexts": [
+      "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+    ],
+    "candidateContexts": [
+      {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "term": "Fadiga",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "originalDescription": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso."
+      },
+      {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+        },
+        "originalDescription": "Falta persistente de força ou energia, não explicada apenas por esforço."
+      },
+      {
+        "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 3,
+          "locator": "APARELHO CARDIOVASCULAR > Astenia"
+        },
+        "originalDescription": "sensação de fraqueza ou falta de energia"
+      },
+      {
+        "id": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+        },
+        "originalDescription": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional."
+      },
+      {
+        "id": "ic-aparelho-hemolinfopoietico-sem-subgrupo-astenia",
+        "term": "Astenia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 8,
+          "locator": "APARELHO HEMOLINFOPOIÉTICO > Astenia"
+        },
+        "originalDescription": "Cansaço e fraqueza secundários a quadros  como anemias severas."
+      },
+      {
+        "id": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-paresias",
+        "term": "Paresias",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 4,
+          "locator": "APARELHO NEUROLÓGICO > DISTÚRBIOS DA MOTRICIDADE VOLUNTÁRIA E DA SENSIBILIDADE: > Paresias"
+        },
+        "originalDescription": "Fraqueza ou diminuição da força muscular  em uma ou mais partes do corpo."
+      },
+      {
+        "id": "ic-aparelho-endocrinologico-sem-subgrupo-insonia-sonolencia",
+        "term": "Insônia / sonolência",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO ENDOCRINOLÓGICO > Insônia / sonolência"
+        },
+        "originalDescription": "Distúrbios do padrão de sono  associados a desbalanços metabólicos."
+      },
+      {
+        "id": "ic-aparelho-endocrinologico-sem-subgrupo-apatia",
+        "term": "Apatia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO ENDOCRINOLÓGICO > Apatia"
+        },
+        "originalDescription": "Alterações neuropsíquicas (irritabilidade  no hipertireoidismo; apatia/lentidão no hipotireoidismo)."
+      },
+      {
+        "id": "ic-aparelho-psiquico-sem-subgrupo-tristeza",
+        "term": "Tristeza",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 5,
+          "locator": "APARELHO PSÍQUICO > Tristeza"
+        },
+        "originalDescription": "Sentimento de desânimo, melancolia ou baixa  autoestima, que pode ser isolado ou parte de uma síndrome depressiva."
+      },
+      {
+        "id": "ic-aparelho-neurologico-disturbios-da-consciencia-obnubilacao",
+        "term": "Obnubilação",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 4,
+          "locator": "APARELHO NEUROLÓGICO > DISTÚRBIOS DA CONSCIÊNCIA: > Obnubilação"
+        },
+        "originalDescription": "Estado de confusão mental e lentidão  do pensamento, onde o nível de lucidez e a percepção do ambiente estão reduzidos."
+      },
+      {
+        "id": "ic-aparelho-neurologico-sem-subgrupo-cefaleia",
+        "term": "Cefaléia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 4,
+          "locator": "APARELHO NEUROLÓGICO > Cefaléia"
+        },
+        "originalDescription": "dor de cabeça"
+      },
+      {
+        "id": "ic-aparelho-cardiovascular-sem-subgrupo-dispneia",
+        "term": "Dispneia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 3,
+          "locator": "APARELHO CARDIOVASCULAR > Dispneia"
+        },
+        "originalDescription": "sensação de diﬁculdade ou desconforto  para respirar"
+      },
+      {
+        "id": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dispneia",
+        "term": "Dispneia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 3,
+          "locator": "APARELHO RESPIRATÓRIO (LARINGE/FARINGE) > Dispneia"
+        },
+        "originalDescription": "sensação subjetiva de diﬁculdade ou desconforto para respirar"
+      },
+      {
+        "id": "ic-aparelho-mio-osteo-articular-sem-subgrupo-limitacoes-funcionais",
+        "term": "Limitações funcionais",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 7,
+          "locator": "APARELHO MIO-ÓSTEO-ARTICULAR > Limitações funcionais"
+        },
+        "originalDescription": "Restrição total ou parcial da amplitude de movimento ou da capacidade de realizar atividades cotidianas."
+      }
+    ],
+    "decisions": [
+      {
+        "candidate": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga",
+        "result": "supported-in-all-five",
+        "reason": "Each utterance states tiredness, exhaustion or lack of energy together with a statement that sleep or rest does not relieve it. Fadiga has a single context in the inventory, so there is no same-term context to add."
+      },
+      {
+        "candidate": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia",
+        "storyIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04"
+        ],
+        "result": "candidate-for-adjudication",
+        "reason": "Source: “Falta persistente de força ou energia, não explicada apenas por esforço.” Indices 20 and 24 state persistent lack of energy literally, despite sleep (strong). Index 23 states it colloquially (“não recupero o pique”, moderate). Index 22 meets the effort clause and implies the rest (moderate). Index 21 states neither strength nor energy: not supported."
+      },
+      {
+        "candidate": "APARELHO CARDIOVASCULAR > Astenia",
+        "storyIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04"
+        ],
+        "result": "candidate-for-adjudication",
+        "reason": "Source: “sensação de fraqueza ou falta de energia”, a disjunction. “sem energia” (indices 20, 24) meets one branch literally; “não recupero o pique” (index 23) meets it colloquially. Indices 21 and 22 use neither weakness nor energy wording."
+      },
+      {
+        "candidate": "APARELHO ENDOCRINOLÓGICO > Astenia",
+        "storyIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03"
+        ],
+        "result": "candidate-for-adjudication",
+        "reason": "Source: “Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.” Index 22 (“Até tarefas simples me deixam esgotado”) paraphrases the second part; generalized weakness is not stated. For the other four utterances neither weakness, extreme intensity nor effort disproportion is stated: not supported."
+      },
+      {
+        "candidate": "APARELHO HEMOLINFOPOIÉTICO > Astenia",
+        "result": "not-supported-by-these-utterances",
+        "reason": "Source: “Cansaço e fraqueza secundários a quadros como anemias severas.” No utterance states weakness or an underlying condition; tiredness alone does not meet the description."
+      },
+      {
+        "candidate": "APARELHO NEUROLÓGICO > Paresias; APARELHO MIO-ÓSTEO-ARTICULAR > Limitações funcionais",
+        "result": "not-supported-by-these-utterances",
+        "reason": "No loss of muscle strength in a body part and no stated inability or restriction in performing activities; index 22 says simple tasks exhaust the speaker, not that they cannot be done."
+      },
+      {
+        "candidate": "APARELHO ENDOCRINOLÓGICO > Insônia / sonolência; APARELHO NEUROLÓGICO > TRANSTORNOS DE MEMÓRIA E DO SONO entries",
+        "result": "not-supported-by-these-utterances",
+        "reason": "Sleep appears only as rest that does not help (indices 20 and 24: sleeping longer, sleeping well). No difficulty sleeping, daytime sleepiness, snoring or breathing pauses is stated."
+      },
+      {
+        "candidate": "APARELHO PSÍQUICO > Tristeza / Alterações de humor / Ansiedade; APARELHO ENDOCRINOLÓGICO > Apatia",
+        "result": "not-supported-by-these-utterances",
+        "reason": "No discouragement, melancholy, low self-esteem, mood swing, apprehension or indifference/slowness is stated. “Não recupero o pique” (index 23) is about energy after rest, not mood."
+      },
+      {
+        "candidate": "APARELHO NEUROLÓGICO > Cefaléia / Obnubilação",
+        "storyIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04"
+        ],
+        "result": "not-supported-by-this-utterance",
+        "reason": "“Minha cabeça parece cansada” reports mental tiredness, not headache and not confusion with slowed thinking and reduced lucidity."
+      },
+      {
+        "candidate": "Dispneia (APARELHO RESPIRATÓRIO; APARELHO CARDIOVASCULAR)",
+        "result": "not-supported-by-these-utterances",
+        "reason": "Lay “cansaço” can mean breathlessness in Brazilian usage, but no utterance mentions breathing, air or exertion-related shortness of breath; in each one the tiredness is tied to sleep, rest or lack of energy."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "B005-01",
+      "severity": "blocking-answer-completeness",
+      "scope": "fadiga-versus-astenia-source-overlap",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+      ],
+      "issue": "The source descriptions overlap on “falta de energia”: Fadiga (p.1) is “sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso”; Astenia in the same subgroup (p.1) is “Falta persistente de força ou energia, não explicada apenas por esforço”; cardiovascular Astenia (p.3) is “sensação de fraqueza ou falta de energia”. Indices 20 and 24 state persistent lack of energy literally (“continuo sem energia”, “sem energia por vários dias seguidos”) and accept only Fadiga.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "quote": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "quote": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "quote": "Astenia: sensação de fraqueza ou falta de energia"
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-03",
+          "text": "Acordo sem energia há semanas e continuo esgotada mesmo depois de descansar durante a tarde. É no corpo todo, não só numa perna.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-06",
+          "text": "Tenho me sentido fisicamente esgotado todos os dias, sem força para as coisas comuns. Nem ficar deitado um bom tempo muda muito essa falta de energia.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-09",
+          "text": "A falta de energia vem me acompanhando há semanas. Fico esgotada fisicamente mesmo num dia parado e descansar não traz uma melhora que eu perceba.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        }
+      ],
+      "resolution": "Held. Under the stated policy (all source-supported coherent paths; an equally compatible definition belongs to full credit) the reviewer cannot confirm Fadiga as the only supported path, and the sibling batch accepts both terms for equivalent wording.",
+      "referenceIds": [
+        "mesh-fatigue",
+        "mesh-asthenia",
+        "decs-astenia"
+      ],
+      "hold": true,
+      "requiredStoryChange": "Not rewritten by the reviewer. Either (a) adjudicate the candidate Astenia path(s) and, if accepted, add them to acceptedContextIds with their own literal evidence, as interrogatorio-next-02 does; or (b) revise the utterance so that its support rests on wording the source prints only for Fadiga and no Astenia description is met. The revised or re-mapped story needs a new independent review."
+    },
+    {
+      "id": "B005-02",
+      "severity": "blocking-answer-completeness",
+      "scope": "effort-disproportion-marker",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03"
+      ],
+      "issue": "Index 22 opens with “Até tarefas simples me deixam esgotado”. Disproportion between effort and exhaustion is printed in the source for Astenia (endocrine, p.7: “cansaço físico extremo sem esforço proporcional”; general, p.1: “não explicada apenas por esforço”) and not for Fadiga, whose distinguishing marker is lack of improvement with rest, also present in the utterance. The utterance therefore carries one marker of each term. Whether the endocrine entry also requires “Fraqueza orgânica generalizada” (not stated) is a source-interpretation question the reviewer cannot settle. Persistence is not stated.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "quote": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "quote": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço."
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-10",
+          "text": "Estou com uma fraqueza muito intensa no corpo todo há dias. Até pequenas tarefas me deixam exausto, bem mais do que o pouco esforço que fiz.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        }
+      ],
+      "resolution": "Held as doubtful. Fadiga remains the reviewer's best fit, but Astenia cannot be excluded as an equally defensible answer without a teaching decision.",
+      "hold": true,
+      "requiredStoryChange": "Not rewritten by the reviewer. Either (a) adjudicate the candidate Astenia path(s) and, if accepted, add them to acceptedContextIds with their own literal evidence, as interrogatorio-next-02 does; or (b) revise the utterance so that its support rests on wording the source prints only for Fadiga and no Astenia description is met. The revised or re-mapped story needs a new independent review."
+    },
+    {
+      "id": "B005-03",
+      "severity": "blocking-answer-completeness",
+      "scope": "colloquial-energy-wording",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04"
+      ],
+      "issue": "Index 23 ends with “mesmo descansando, não recupero o pique”. “Pique” is colloquial Brazilian Portuguese for energy/drive, so the clause states a lack of energy that persists despite rest, reaching ELEMENTOS GERAIS > Astenia and the “falta de energia” branch of cardiovascular Astenia. The first clause (mental tiredness all the time) is specific to Fadiga, which makes Fadiga the better fit; the Astenia support is weaker than in indices 20 and 24.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "quote": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço."
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "quote": "Astenia: sensação de fraqueza ou falta de energia"
+        }
+      ],
+      "resolution": "Held as doubtful rather than passed with a caution: the utterance has the same structure (one Fadiga-only element plus rest-refractory lack of energy) as the sibling-batch utterance that accepts both terms.",
+      "hold": true,
+      "requiredStoryChange": "Not rewritten by the reviewer. Either (a) adjudicate the candidate Astenia path(s) and, if accepted, add them to acceptedContextIds with their own literal evidence, as interrogatorio-next-02 does; or (b) revise the utterance so that its support rests on wording the source prints only for Fadiga and no Astenia description is met. The revised or re-mapped story needs a new independent review."
+    },
+    {
+      "id": "B005-04",
+      "severity": "non-blocking-terminology-caution",
+      "scope": "source-versus-general-definition",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+      ],
+      "issue": "MeSH (D005221) descreve Fatigue como “state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli”, isto é, cansaço após esforço. A apostila (p.1) define Fadiga como sensação persistente que “não melhora significativamente com o repouso”: o registro MeSH sustenta o termo e o componente “físico ou mental”, mas não a persistência nem a ausência de melhora com repouso. MeSH/DeCS mantêm Astenia (D001247: “lack or loss of strength and energy”) como descritor separado. A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+      "resolution": "Accept source-based descriptive recognition for the Fadiga path. The batch reference mesh-fatigue supports the term descriptively only; definitionBasis is preserved as recorded and the caveat is kept in terminologyCaution. External terminology does not resolve the Fadiga/Astenia overlap, which is internal to the source descriptions.",
+      "referenceIds": [
+        "mesh-fatigue",
+        "decs-fadiga",
+        "mesh-asthenia",
+        "decs-astenia"
+      ],
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B005-05",
+      "severity": "non-blocking-source-context-caution",
+      "scope": "documentary-heading",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+      ],
+      "issue": "ALTERAÇÕES DE PESO (PERDA OU GANHO) is the printed subgroup under which the source lists Fadiga (and Astenia). It is a documentary placement, not a clinical conclusion: no utterance mentions weight change.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "quote": "1.2 ALTERAÇÕES DE PESO (PERDA OU GANHO)"
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "quote": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso."
+        }
+      ],
+      "resolution": "Keep the literal source mapping and distinguish it from a statement about weight.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B005-06",
+      "severity": "non-blocking-cross-batch-consistency-note",
+      "scope": "mapping-policy-across-batches",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+      ],
+      "issue": "Mapping policy differs between batches for equivalent wording: in interrogatorio-next-02 the cardiovascular Astenia stories 03, 06 and 09 (lack of energy or exhaustion that does not improve with rest) accept Fadiga together with Astenia, while the Fadiga stories of interrogatorio-next-01 accept Fadiga alone. The Astenia stories of interrogatorio-next-01 that say “sem energia” accept no Fadiga path either.",
+      "evidence": [
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-03",
+          "text": "Acordo sem energia há semanas e continuo esgotada mesmo depois de descansar durante a tarde. É no corpo todo, não só numa perna.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-06",
+          "text": "Tenho me sentido fisicamente esgotado todos os dias, sem força para as coisas comuns. Nem ficar deitado um bom tempo muda muito essa falta de energia.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-02.json",
+          "id": "ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-09",
+          "text": "A falta de energia vem me acompanhando há semanas. Fico esgotada fisicamente mesmo num dia parado e descansar não traz uma melhora que eu perceba.",
+          "acceptedContextIds": [
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        }
+      ],
+      "resolution": "Recorded as context for the held items; those other stories are outside this review's scope and were not reviewed or modified. A single inventory-level decision on the Fadiga/Astenia boundary would resolve the held items consistently.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B005-07",
+      "severity": "non-blocking-answer-completeness-note",
+      "scope": "passing-item-residual-overlap",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02"
+      ],
+      "issue": "Index 21 passes on “cansaço que não passa” after a weekend of rest. The word “cansaço” also appears in the endocrine (“cansaço físico extremo sem esforço proporcional”) and hemolymphopoietic (“Cansaço e fraqueza secundários a quadros como anemias severas”) Astenia descriptions.",
+      "resolution": "Reviewer judges those paths not equally supported: the utterance states no weakness, no extreme intensity, no effort disproportion and no underlying condition, while it states all three distinguishing elements of Fadiga. A teaching reviewer may still want to confirm that Astenia should score as incorrect here.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B005-08",
+      "severity": "non-blocking-editorial-note",
+      "scope": "evidence-granularity-and-style",
+      "itemIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05"
+      ],
+      "issue": "In all five stories the evidence quote and focusQuote are the entire utterance, so the recorded evidence does not isolate which words carry the Fadiga-specific support; all five are single sentences and share one stock rationale. The technical term never appears.",
+      "resolution": "Within the stated format rules (lay speech, 1–2 paragraphs, term not given away). A future repair could narrow focusQuote to the decisive words; no change required for the passing item.",
+      "hold": false,
+      "requiredStoryChange": null
+    }
+  ],
+  "items": [
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "sourceArrayIndex": 20,
+      "sourceOrdinal": 21,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Answer completeness unresolved: “continuo sem energia” for “semanas” despite sleeping longer literally satisfies ELEMENTOS GERAIS > Astenia and the “falta de energia” branch of APARELHO CARDIOVASCULAR > Astenia; the story accepts only Fadiga.",
+        "In-repo precedent conflicts with the Fadiga-only mapping: interrogatorio-next-02 story ic-aparelho-cardiovascular-sem-subgrupo-astenia-story-03 accepts Fadiga and Astenia for near-identical wording."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia.",
+      "textSha256": "53a1b359b3dc9007066871e77c446d571eaf64ac69b27c412237daceb1e756c5",
+      "storyObjectSha256": "85d10a6abe76d93e357c31a2a58b7e3bac65e20abb44a68dc0b69ccaf26c8dd1",
+      "rawStorySha256": "6a70c30ab563a9f216208ef289b76d4bf09cd778ac676a1a19f093689931e5a9",
+      "rawStoryByteLength": 2554,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 57522,
+        "byteOffsetEndExclusive": 60076
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "text": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "quote": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+            },
+            "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+            "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [
+              "mesh-fatigue"
+            ],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "fadiga"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "termId": "fadiga",
+          "term": "Fadiga",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Fadiga"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "sourceExactLine": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.",
+          "sourceVerification": "PDF p.1, p.3, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). A extração devolve “significativamente”; o inventário guarda a ligadura tipográfica “ﬁ”. Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia para o dia",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D005221) descreve Fatigue como “state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli”, isto é, cansaço após esforço. A apostila (p.1) define Fadiga como sensação persistente que “não melhora significativamente com o repouso”: o registro MeSH sustenta o termo e o componente “físico ou mental”, mas não a persistência nem a ausência de melhora com repouso. MeSH/DeCS mantêm Astenia (D001247: “lack or loss of strength and energy”) como descritor separado. A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-fatigue",
+            "decs-fadiga"
+          ],
+          "rationale": "A fala reúne, em palavras leigas, elementos da descrição-fonte de Fadiga (cansaço, esgotamento ou falta de energia que persiste e não cede ao descanso/sono). A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "O caminho Fadiga está sustentado: cansaço ao acordar há semanas (persistência) e falta de energia que continua mesmo depois de dormir mais (sem melhora com o repouso). O bloqueio é de completude da resposta. A fala diz literalmente “continuo sem energia” há “semanas”, apesar do sono; isso satisfaz por inteiro a descrição de ELEMENTOS GERAIS > Astenia (“Falta persistente de força ou energia, não explicada apenas por esforço.”) e o ramo “falta de energia” de APARELHO CARDIOVASCULAR > Astenia (“sensação de fraqueza ou falta de energia”). A história aceita só Fadiga e não registra por que Astenia ficaria de fora. No lote irmão interrogatorio-next-02, uma fala quase idêntica (“Acordo sem energia há semanas e continuo esgotada mesmo depois de descansar durante a tarde…”) aceita Fadiga e Astenia. Não consigo afirmar que Fadiga seja o único caminho sustentado; o item fica retido para adjudicação ou revisão. Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of Fadiga; the heading is not evidence of weight change.",
+        "clinicalMeaning": "Subjectively reported tiredness/exhaustion/lack of energy with a statement about rest or sleep; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Astenia (ELEMENTOS GERAIS e APARELHO CARDIOVASCULAR): candidatas, ver acima. Astenia do aparelho endocrinológico e do hemolinfopoiético pedem fraqueza generalizada/cansaço extremo ou fraqueza secundária a outro quadro, que a fala não diz. Insônia / sonolência não é sustentada: a pessoa relata que dorme, até mais; não descreve dificuldade para dormir nem sono durante o dia. Tristeza, Apatia e Dispneia não são descritas."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "accepted-path-supported-but-rationale-does-not-address-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "The recorded Fadiga path is supported, but the reviewer could not confirm it is the only source-supported coherent path: see candidatesForAdjudication. This is a possible missing full-credit path (different term), not a partial-credit subgroup; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "storyQuote": "Faz semanas que acordo cansada; mesmo depois de dormir até mais tarde, continuo sem energia",
+          "strength": "strong",
+          "assessment": "“sem energia” = falta de energia; “Faz semanas … continuo” = persistente; the lack of energy remains after extra sleep, so it is not presented as explained by exertion. Every element of the source description is met.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "storyQuote": "continuo sem energia para o dia",
+          "strength": "strong",
+          "assessment": "The source description is a disjunction (“fraqueza ou falta de energia”); the utterance states lack of energy literally.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "candidate-paths-not-addressed",
+          "detail": "The story records no acceptedPathEvidence, alternativePathEvidence or exclusion rationale for the Astenia context(s) listed in candidatesForAdjudication; its story-level rationale (“A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.”) does not address them.",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B005-01",
+        "B005-04",
+        "B005-05",
+        "B005-06",
+        "B005-08"
+      ],
+      "blockingFindingIds": [
+        "B005-01"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "sourceArrayIndex": 21,
+      "sourceOrdinal": 22,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "holdReasons": [],
+      "prototypeEligible": true,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa.",
+      "textSha256": "f8ab8b03fc18b1658da271ba3d54fc1f749cac7d77e1aa4fa97e1c209a021070",
+      "storyObjectSha256": "160d2b4a97c00330a3354d8860e2e306fa35e885d8813f7e3501e4ee29a7840a",
+      "rawStorySha256": "3cae7896fad179857f004d5804bff579acd0c80d9555e6c8706b904cc55c6bc4",
+      "rawStoryByteLength": 2539,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 60082,
+        "byteOffsetEndExclusive": 62621
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-02",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "text": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "quote": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+            },
+            "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+            "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [
+              "mesh-fatigue"
+            ],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "fadiga"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "termId": "fadiga",
+          "term": "Fadiga",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Fadiga"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "sourceExactLine": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.",
+          "sourceVerification": "PDF p.1, p.3, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). A extração devolve “significativamente”; o inventário guarda a ligadura tipográfica “ﬁ”. Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "Depois do fim de semana descansando, achei que melhoraria, mas sigo com um cansaço que não passa",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D005221) descreve Fatigue como “state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli”, isto é, cansaço após esforço. A apostila (p.1) define Fadiga como sensação persistente que “não melhora significativamente com o repouso”: o registro MeSH sustenta o termo e o componente “físico ou mental”, mas não a persistência nem a ausência de melhora com repouso. MeSH/DeCS mantêm Astenia (D001247: “lack or loss of strength and energy”) como descritor separado. A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-fatigue",
+            "decs-fadiga"
+          ],
+          "rationale": "A fala reúne, em palavras leigas, elementos da descrição-fonte de Fadiga (cansaço, esgotamento ou falta de energia que persiste e não cede ao descanso/sono). A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "A fala nomeia cansaço, diz que ele “não passa” (persistência) e que continuou depois de um fim de semana de descanso em que a pessoa esperava melhorar (sem melhora com o repouso). São os três elementos que distinguem a descrição-fonte de Fadiga. A fala não menciona força, fraqueza nem energia, de modo que nenhuma descrição de Astenia é satisfeita: as entradas de ELEMENTOS GERAIS e do APARELHO CARDIOVASCULAR pedem falta de força/fraqueza ou de energia; a do APARELHO ENDOCRINOLÓGICO pede fraqueza generalizada e cansaço físico “extremo” sem esforço proporcional; a do HEMOLINFOPOIÉTICO pede cansaço e fraqueza secundários a outro quadro. Linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho; causa não afirmada.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of Fadiga; the heading is not evidence of weight change.",
+        "clinicalMeaning": "Subjectively reported tiredness/exhaustion/lack of energy with a statement about rest or sleep; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "As descrições de Astenia do aparelho endocrinológico e do hemolinfopoiético também usam a palavra “cansaço”, mas exigem fraqueza, intensidade extrema ou causa de base que a fala não traz (ver achado B005-07). “Cansaço” aqui não vem com dificuldade para respirar (Dispneia), sono alterado (Insônia / sonolência) nem desânimo/melancolia (Tristeza)."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+        "rationale": "supported-with-separate-terminology-caution",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "One full-credit path (ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga). Fadiga has a single context in the inventory. The four Astenia contexts were compared and are not supported by this utterance; no additional source-supported coherent path or partial-credit subgroup identified."
+      },
+      "candidatesForAdjudication": [],
+      "missingOrIncorrectEvidence": [],
+      "findingIds": [
+        "B005-04",
+        "B005-05",
+        "B005-07",
+        "B005-08"
+      ],
+      "blockingFindingIds": [],
+      "stageCandidate": "model-review-complete-no-item-blocker",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "sourceArrayIndex": 22,
+      "sourceOrdinal": 23,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Answer completeness unresolved: “Até tarefas simples me deixam esgotado” paraphrases the effort-disproportion marker that the source prints for Astenia (APARELHO ENDOCRINOLÓGICO: “cansaço físico extremo sem esforço proporcional”; ELEMENTOS GERAIS: “não explicada apenas por esforço”), not for Fadiga.",
+        "Open source-interpretation question: whether “Fraqueza orgânica generalizada” and “cansaço físico extremo sem esforço proporcional” are cumulative or alternative in the endocrine Astenia entry.",
+        "Persistence, part of the Fadiga source description, is not stated in the utterance."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação.",
+      "textSha256": "8ab5118236668f9b57917c90c5c7dd12de5e9eb8db96a79029d29f3d2fdb2d25",
+      "storyObjectSha256": "055346a258dab1ebd5d9e2732d0ad5c6d74b974238cde5e1e465b047452ed581",
+      "rawStorySha256": "b98ba549aa4d41bb8c2307929e6722e21bfc50f13d0a8e577c3dc8723113d12c",
+      "rawStoryByteLength": 2524,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 62627,
+        "byteOffsetEndExclusive": 65151
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "text": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "quote": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+            },
+            "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+            "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [
+              "mesh-fatigue"
+            ],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "fadiga"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "termId": "fadiga",
+          "term": "Fadiga",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Fadiga"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "sourceExactLine": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.",
+          "sourceVerification": "PDF p.1, p.3, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). A extração devolve “significativamente”; o inventário guarda a ligadura tipográfica “ﬁ”. Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "Até tarefas simples me deixam esgotado, e uma pausa no sofá quase não muda essa sensação",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D005221) descreve Fatigue como “state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli”, isto é, cansaço após esforço. A apostila (p.1) define Fadiga como sensação persistente que “não melhora significativamente com o repouso”: o registro MeSH sustenta o termo e o componente “físico ou mental”, mas não a persistência nem a ausência de melhora com repouso. MeSH/DeCS mantêm Astenia (D001247: “lack or loss of strength and energy”) como descritor separado. A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-fatigue",
+            "decs-fadiga"
+          ],
+          "rationale": "A fala reúne, em palavras leigas, elementos da descrição-fonte de Fadiga (cansaço, esgotamento ou falta de energia que persiste e não cede ao descanso/sono). A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "O caminho Fadiga está sustentado: “esgotado” corresponde a “esgotamento” e “uma pausa no sofá quase não muda essa sensação” corresponde a “não melhora significativamente com o repouso”. O bloqueio é de completude. A primeira oração (“Até tarefas simples me deixam esgotado”) descreve esgotamento desproporcional ao esforço, que é justamente o marcador que a apostila usa para Astenia e não para Fadiga: APARELHO ENDOCRINOLÓGICO > Astenia traz “cansaço físico extremo sem esforço proporcional” e ELEMENTOS GERAIS > Astenia traz “não explicada apenas por esforço”. Assim, a fala contém um marcador de cada termo. A entrada endocrinológica também diz “Fraqueza orgânica generalizada”, que a fala não menciona; não sei se, para a disciplina, as duas partes dessa descrição são cumulativas ou alternativas, e disso depende a resposta. No lote irmão, “Até pequenas tarefas me deixam exausto, bem mais do que o pouco esforço que fiz” é usada como evidência de Astenia endocrinológica (lá acompanhada de fraqueza intensa). Além disso, a persistência exigida pela definição de Fadiga não é dita: a fala não informa há quanto tempo isso ocorre. Considero Fadiga o melhor ajuste, mas não consigo excluir Astenia como caminho igualmente defensável; fica retido. Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of Fadiga; the heading is not evidence of weight change.",
+        "clinicalMeaning": "Subjectively reported tiredness/exhaustion/lack of energy with a statement about rest or sleep; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Astenia (APARELHO ENDOCRINOLÓGICO e ELEMENTOS GERAIS): candidatas, ver acima. Astenia cardiovascular (“fraqueza ou falta de energia”) e hemolinfopoiética não têm palavra correspondente na fala. Limitações funcionais não é sustentada: a pessoa não diz que deixa de conseguir fazer as tarefas, e sim que fica esgotada com elas. Paresias exigiria perda de força em parte do corpo; Dispneia, dificuldade para respirar: nada disso é dito."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "accepted-path-supported-but-rationale-does-not-address-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "The recorded Fadiga path is supported, but the reviewer could not confirm it is the only source-supported coherent path: see candidatesForAdjudication. This is a possible missing full-credit path (different term), not a partial-credit subgroup; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO ENDOCRINOLÓGICO",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 7,
+            "locator": "APARELHO ENDOCRINOLÓGICO > Astenia"
+          },
+          "sourceQuote": "Fraqueza orgânica generalizada, cansaço físico  extremo sem esforço proporcional.",
+          "sourceExactLine": "Astenia: Fraqueza orgânica generalizada, cansaço físico extremo sem esforço proporcional.",
+          "storyQuote": "Até tarefas simples me deixam esgotado",
+          "strength": "moderate",
+          "assessment": "Exhaustion triggered by simple tasks closely paraphrases “cansaço físico extremo sem esforço proporcional”. “Fraqueza orgânica generalizada” is not stated, and the utterance does not say the exhaustion is physical. Equal support depends on whether the two parts of the source line are cumulative.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        },
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "storyQuote": "Até tarefas simples me deixam esgotado",
+          "strength": "moderate",
+          "assessment": "“não explicada apenas por esforço” is met (simple tasks). “Falta … de força ou energia” is only implied by “esgotado”, and persistence is not stated.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "candidate-paths-not-addressed",
+          "detail": "The story records no acceptedPathEvidence, alternativePathEvidence or exclusion rationale for the Astenia context(s) listed in candidatesForAdjudication; its story-level rationale (“A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.”) does not address them.",
+          "contextIds": [
+            "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B005-02",
+        "B005-04",
+        "B005-05",
+        "B005-06",
+        "B005-08"
+      ],
+      "blockingFindingIds": [
+        "B005-02"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "sourceArrayIndex": 23,
+      "sourceOrdinal": 24,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Answer completeness doubtful: “não recupero o pique” is colloquial for not regaining energy, which reaches ELEMENTOS GERAIS > Astenia and the “falta de energia” branch of APARELHO CARDIOVASCULAR > Astenia; the story accepts only Fadiga.",
+        "Same structure as the sibling-batch utterance that accepts both Fadiga and Astenia; the reviewer cannot confirm that Fadiga is the only source-supported path."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique.",
+      "textSha256": "50b73db0392bd466ca12d43887a6874c41a27023478021d1a944df387a1632bd",
+      "storyObjectSha256": "42d75fdee11995f1babf44a7abf6324748962a58311d96b0716a398f5ff097af",
+      "rawStorySha256": "3a26d3dfb63e82d2089363c09dd4c847237455d1b539c70bc4c59fc5d1be3d03",
+      "rawStoryByteLength": 2566,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 65157,
+        "byteOffsetEndExclusive": 67723
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "text": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "quote": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+            },
+            "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+            "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [
+              "mesh-fatigue"
+            ],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "fadiga"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "termId": "fadiga",
+          "term": "Fadiga",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Fadiga"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "sourceExactLine": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.",
+          "sourceVerification": "PDF p.1, p.3, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). A extração devolve “significativamente”; o inventário guarda a ligadura tipográfica “ﬁ”. Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "Minha cabeça parece cansada o tempo todo; termino o expediente e, mesmo descansando, não recupero o pique",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D005221) descreve Fatigue como “state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli”, isto é, cansaço após esforço. A apostila (p.1) define Fadiga como sensação persistente que “não melhora significativamente com o repouso”: o registro MeSH sustenta o termo e o componente “físico ou mental”, mas não a persistência nem a ausência de melhora com repouso. MeSH/DeCS mantêm Astenia (D001247: “lack or loss of strength and energy”) como descritor separado. A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-fatigue",
+            "decs-fadiga"
+          ],
+          "rationale": "A fala reúne, em palavras leigas, elementos da descrição-fonte de Fadiga (cansaço, esgotamento ou falta de energia que persiste e não cede ao descanso/sono). A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "O caminho Fadiga está sustentado, e é o melhor ajuste: “Minha cabeça parece cansada o tempo todo” é cansaço mental persistente (só a descrição de Fadiga fala em esgotamento “físico ou mental”) e “mesmo descansando, não recupero o pique” é ausência de melhora com o repouso. A dúvida que me impede de liberar está na segunda oração. “Pique”, no uso coloquial brasileiro, é disposição/energia; “não recupero o pique” é, portanto, uma forma leiga de dizer que a energia não volta. Isso alcança ELEMENTOS GERAIS > Astenia (“Falta persistente de força ou energia, não explicada apenas por esforço.”: a falta persiste mesmo com descanso) e o ramo “falta de energia” de APARELHO CARDIOVASCULAR > Astenia. A estrutura é a mesma da fala do lote irmão que aceita Fadiga e Astenia (um elemento exclusivo de Fadiga somado a falta de energia que não cede ao descanso). O apoio a Astenia é mais fraco que nos índices 20 e 24, porque depende de ler “pique” como energia e porque a oração inicial é exclusiva de Fadiga; ainda assim, não consigo afirmar que um aluno que escolha Astenia esteja errado. Retido para adjudicação. Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of Fadiga; the heading is not evidence of weight change.",
+        "clinicalMeaning": "Subjectively reported tiredness/exhaustion/lack of energy with a statement about rest or sleep; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Astenia (ELEMENTOS GERAIS e APARELHO CARDIOVASCULAR): candidatas, ver acima. “Cabeça cansada” não é dor de cabeça (Cefaléia) nem confusão mental com lentidão do pensamento e lucidez reduzida (Obnubilação). Não há desânimo/melancolia (Tristeza), apatia/lentidão (Apatia) nem alteração do sono. “Termino o expediente” é circunstância, não causa afirmada."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "accepted-path-supported-but-rationale-does-not-address-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "The recorded Fadiga path is supported, but the reviewer could not confirm it is the only source-supported coherent path: see candidatesForAdjudication. This is a possible missing full-credit path (different term), not a partial-credit subgroup; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "storyQuote": "mesmo descansando, não recupero o pique",
+          "strength": "moderate",
+          "assessment": "If “pique” is read as energia/disposição, the clause states a lack of energy that persists despite rest, i.e. not explained only by exertion. Weaker than indices 20 and 24: the word “energia” is not used and the first clause (mental tiredness) is specific to Fadiga.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "storyQuote": "não recupero o pique",
+          "strength": "moderate",
+          "assessment": "Under the same reading, the “falta de energia” branch of the disjunctive source description is met.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "candidate-paths-not-addressed",
+          "detail": "The story records no acceptedPathEvidence, alternativePathEvidence or exclusion rationale for the Astenia context(s) listed in candidatesForAdjudication; its story-level rationale (“A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.”) does not address them.",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B005-03",
+        "B005-04",
+        "B005-05",
+        "B005-06",
+        "B005-08"
+      ],
+      "blockingFindingIds": [
+        "B005-03"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+      "stableId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+      "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+      "sourceArrayIndex": 24,
+      "sourceOrdinal": 25,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Answer completeness unresolved: the only symptom wording is “sem energia”, persistent for days and present even after good sleep; this is the literal content of ELEMENTOS GERAIS > Astenia and of the “falta de energia” branch of APARELHO CARDIOVASCULAR > Astenia.",
+        "In-repo precedent conflicts with the Fadiga-only mapping (interrogatorio-next-02 cardiovascular Astenia stories 03, 06 and 09 accept Fadiga and Astenia together)."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem.",
+      "textSha256": "30985e5ef5d92c2c35217aee23864901dea3c426d63c1f2d1747078f5bf3129e",
+      "storyObjectSha256": "0d7dde674661ea3bd5b33b76d9f8ff2b558759567da97d544541fcfa33ae24d5",
+      "rawStorySha256": "94c3646d9f8236a484fc800165db1ac14b6d84d81631aebc32a6e62879d4a78c",
+      "rawStoryByteLength": 2527,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 67729,
+        "byteOffsetEndExclusive": 70256
+      },
+      "reviewedStoryObject": {
+        "id": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+        "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "text": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem.",
+        "acceptedContextIds": [
+          "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+            "quote": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+            },
+            "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+            "rationale": "O relato documenta fadiga conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [
+              "mesh-fatigue"
+            ],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "fadiga"
+      ],
+      "acceptedContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+          "termId": "fadiga",
+          "term": "Fadiga",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "sourceHierarchy": {
+            "group": "ELEMENTOS GERAIS",
+            "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+            "term": "Fadiga"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Fadiga"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora signiﬁcativamente com o repouso.",
+          "sourceExactLine": "Fadiga: sensação persistente de cansaço, esgotamento físico ou mental e falta de energia, que não melhora significativamente com o repouso.",
+          "sourceVerification": "PDF p.1, p.3, p.7 e p.8 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). A extração devolve “significativamente”; o inventário guarda a ligadura tipográfica “ﬁ”. Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "MeSH (D005221) descreve Fatigue como “state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli”, isto é, cansaço após esforço. A apostila (p.1) define Fadiga como sensação persistente que “não melhora significativamente com o repouso”: o registro MeSH sustenta o termo e o componente “físico ou mental”, mas não a persistência nem a ausência de melhora com repouso. MeSH/DeCS mantêm Astenia (D001247: “lack or loss of strength and energy”) como descritor separado. A classificação aqui é descritiva e fonte-específica: não certifica causa, gravidade, duração clínica nem diagnóstico.",
+          "referenceIds": [
+            "mesh-fatigue",
+            "decs-fadiga"
+          ],
+          "rationale": "A fala reúne, em palavras leigas, elementos da descrição-fonte de Fadiga (cansaço, esgotamento ou falta de energia que persiste e não cede ao descanso/sono). A rubrica ALTERAÇÕES DE PESO apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "O caminho Fadiga está sustentado por “sem energia” (falta de energia), “por vários dias seguidos” (persistência) e “inclusive nas manhãs em que durmo bem” (não melhora com o repouso do sono). Mas é o item mais ambíguo dos cinco: a única palavra de sintoma é “sem energia”; não há cansaço nem esgotamento. Falta de energia persistente é, palavra por palavra, a descrição de ELEMENTOS GERAIS > Astenia (“Falta persistente de força ou energia, não explicada apenas por esforço.”) e o ramo “falta de energia” de APARELHO CARDIOVASCULAR > Astenia. O único traço que aponta para Fadiga é o sono bom sem melhora, e ele também é compatível com “não explicada apenas por esforço”. A história aceita só Fadiga; o lote irmão aceita Fadiga e Astenia para falas equivalentes. Retido para adjudicação ou revisão. Forma: linguagem leiga, uma frase, sem termo técnico, diagnóstico ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) is the actual source placement of Fadiga; the heading is not evidence of weight change.",
+        "clinicalMeaning": "Subjectively reported tiredness/exhaustion/lack of energy with a statement about rest or sleep; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Astenia (ELEMENTOS GERAIS e APARELHO CARDIOVASCULAR): candidatas, ver acima. As entradas de Astenia endocrinológica e hemolinfopoiética pedem fraqueza/cansaço extremo ou causa de base, não ditos. “Nas manhãs em que durmo bem” sugere que há noites piores, mas a fala não descreve dificuldade para dormir nem sonolência; Insônia / sonolência não é sustentada. Tristeza e Apatia não são descritas."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "accepted-path-supported-but-rationale-does-not-address-astenia",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "The recorded Fadiga path is supported, but the reviewer could not confirm it is the only source-supported coherent path: see candidatesForAdjudication. This is a possible missing full-credit path (different term), not a partial-credit subgroup; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+          "term": "Astenia",
+          "group": "ELEMENTOS GERAIS",
+          "subgroup": "ALTERAÇÕES DE PESO (PERDA OU GANHO)",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ELEMENTOS GERAIS > ALTERAÇÕES DE PESO (PERDA OU GANHO) > Astenia"
+          },
+          "sourceQuote": "Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "sourceExactLine": "Astenia: Falta persistente de força ou energia, não explicada apenas por esforço.",
+          "storyQuote": "Tenho me sentido sem energia por vários dias seguidos, inclusive nas manhãs em que durmo bem",
+          "strength": "strong",
+          "assessment": "“sem energia” = falta de energia; “por vários dias seguidos” = persistente; present even on waking after good sleep, so not presented as explained by exertion. Every element of the source description is met.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        },
+        {
+          "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+          "term": "Astenia",
+          "group": "APARELHO CARDIOVASCULAR",
+          "subgroup": null,
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 3,
+            "locator": "APARELHO CARDIOVASCULAR > Astenia"
+          },
+          "sourceQuote": "sensação de fraqueza ou falta de energia",
+          "sourceExactLine": "Astenia: sensação de fraqueza ou falta de energia",
+          "storyQuote": "Tenho me sentido sem energia",
+          "strength": "strong",
+          "assessment": "The utterance states lack of energy literally, which is one branch of the disjunctive source description.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "candidate-paths-not-addressed",
+          "detail": "The story records no acceptedPathEvidence, alternativePathEvidence or exclusion rationale for the Astenia context(s) listed in candidatesForAdjudication; its story-level rationale (“A fala descreve fadiga com palavras cotidianas; não afirma causa nem diagnóstico.”) does not address them.",
+          "contextIds": [
+            "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+            "ic-aparelho-cardiovascular-sem-subgrupo-astenia"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B005-01",
+        "B005-04",
+        "B005-05",
+        "B005-06",
+        "B005-08"
+      ],
+      "blockingFindingIds": [
+        "B005-01"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    }
+  ],
+  "reviewerClinicalSources": [
+    {
+      "id": "mesh-fatigue",
+      "title": "NLM MeSH — Fatigue, D005221",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D005221",
+      "institution": "U.S. National Library of Medicine / NIH",
+      "accessed": "2026-11-15",
+      "verification": "Record page opened in this review with the session web-fetch tool (heading, tree number C23.888.369, entry term Lassitude and the first part of the Scope Note returned). The complete Scope Note was then read verbatim from the NLM linked-data record https://id.nlm.nih.gov/mesh/D005221.json and its preferred concept https://id.nlm.nih.gov/mesh/M0008254.json, fetched with curl.",
+      "locator": "Scope Note; Unique ID; Tree Number; Entry Term",
+      "exactQuote": "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.",
+      "claim": "Fatigue é descritor de sinais e sintomas que cobre cansaço mental ou físico com capacidade reduzida; Lassitude é termo de entrada.",
+      "limitation": "Descreve cansaço após esforço; não contém a persistência nem a ausência de melhora com repouso que a apostila usa para Fadiga. Não sustenta causa nem diagnóstico e não delimita Fadiga em relação a Astenia.",
+      "externalDescriptorId": "D005221"
+    },
+    {
+      "id": "mesh-asthenia",
+      "title": "NLM MeSH — Asthenia, D001247",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D001247",
+      "institution": "U.S. National Library of Medicine / NIH",
+      "accessed": "2026-11-15",
+      "verification": "Record page opened in this review with the session web-fetch tool (heading, tree number C23.888.089, Scope Note; no entry terms). Scope Note confirmed verbatim from https://id.nlm.nih.gov/mesh/D001247.json and its preferred concept https://id.nlm.nih.gov/mesh/M0001883.json, fetched with curl.",
+      "locator": "Scope Note; Unique ID; Tree Number",
+      "exactQuote": "Clinical sign or symptom manifested as debility, or lack or loss of strength and energy.",
+      "claim": "Astenia é descritor separado de Fadiga e inclui falta ou perda de energia, não só de força: “sem energia” é compatível com Astenia também fora da apostila.",
+      "limitation": "Não diz como classificar uma fala isolada; a sobreposição com Fadiga nas descrições da apostila não é resolvida por este registro.",
+      "externalDescriptorId": "D001247"
+    },
+    {
+      "id": "decs-fadiga",
+      "title": "DeCS/MeSH (BIREME/OPAS/OMS) — Fadiga, ID DeCS 5325",
+      "url": "https://decs.bvsalud.org/ths/resource/?id=5325&filter=ths_termall&q=fadiga",
+      "institution": "BIREME / OPAS / OMS",
+      "accessed": "2026-11-15",
+      "verification": "Search page (https://decs.bvsalud.org/ths/?filter=ths_termall&q=fadiga) and descriptor page opened in this review with the session web-fetch tool. The tool returned the Portuguese scope note truncated and was unclear about which language block it came from; the fragment is reproduced as returned.",
+      "locator": "Descritor em português; Nota de escopo (fragment); Código hierárquico C23.888.369",
+      "exactQuote": "Estado de esgotamento, seguido a um período de esforço mental ou físico, caracterizado por uma queda na capacidade",
+      "claim": "Em português o descritor é Fadiga (D005221), com sentido equivalente ao do MeSH; a busca também lista Fadiga Mental e Fadiga Muscular como descritores próprios.",
+      "limitation": "Citação incompleta (truncada pela ferramenta). Equivalência terminológica apenas; não certifica as falas nem resolve a fronteira com Astenia.",
+      "externalDescriptorId": "D005221",
+      "externalDecsId": "5325"
+    },
+    {
+      "id": "decs-astenia",
+      "title": "DeCS/MeSH (BIREME/OPAS/OMS) — Astenia, ID DeCS 1255",
+      "url": "https://decs.bvsalud.org/ths/resource/?id=1255&filter=ths_termall&q=astenia",
+      "institution": "BIREME / OPAS / OMS",
+      "accessed": "2026-11-15",
+      "verification": "Search page (https://decs.bvsalud.org/ths/?filter=ths_termall&q=astenia) and descriptor page opened in this review with the session web-fetch tool.",
+      "locator": "Descritor em português; Nota de escopo; Código hierárquico C23.888.089",
+      "exactQuote": "Sinal ou sintoma clínico manifestado como debilidade, falta ou perda de força e energia.",
+      "claim": "Em português, Astenia abrange falta ou perda de força e energia; é descritor distinto de Fadiga.",
+      "limitation": "Equivalência terminológica; não decide o gabarito de uma fala e não é a definição da apostila.",
+      "externalDescriptorId": "D001247",
+      "externalDecsId": "1255"
+    }
+  ],
+  "hashMethods": {
+    "sourceBatch": "SHA-256 of exact file bytes.",
+    "text": "SHA-256 of UTF-8 story.text; no normalization.",
+    "storyObject": "SHA-256 of UTF-8 JSON.stringify(parsed story), retaining key order; same method as earlier interrogatório review reports.",
+    "rawStory": "SHA-256 of exact UTF-8 source slice from opening { through closing }; zero-based byte offsets, end-exclusive.",
+    "storage": "Full original story object stored once in reviewedStoryObject. Source byte offsets, raw hash and whole-file hash preserve raw-byte binding without a duplicate base64 representation. Original generation/evidence/review/repair metadata are retained."
+  },
+  "releaseBuilderContract": {
+    "verifyBeforeUse": [
+      "Exact source batch SHA-256 and byte length; exact base inventory SHA-256 and declared baseSha256.",
+      "Exactly indices 20..24 and ordered stable IDs.",
+      "Each original raw source slice matches rawStorySha256 and rawStoryByteLength, and parses identically to reviewedStoryObject.",
+      "Each full object matches storyObjectSha256; its text matches textSha256.",
+      "Every evidenceQuote is an exact substring of reviewedText; every path resolves to actual source term/group/subgroup/source.",
+      "supportedAcceptedPaths.definitionBasis equals the matching original acceptedPathEvidence.definitionBasis; terminology caution is a separate field.",
+      "Only items with disposition=model-reviewed, hold=false, prototypeEligible=true may be frozen; items with disposition=needs-revision and hold=true must be withheld. clinicalApproval=false."
+    ],
+    "onMismatch": "Stop release for the affected item; text equality alone cannot approve changed story metadata or evidence.",
+    "adapterScope": "No implementation or app integration performed. tools/prepare-interview-batch.mjs was run read-only against this report (no --patch, no file written)."
+  },
+  "integrityChecks": {
+    "validationStatus": "passed",
+    "validatedAt": "2026-11-15T21:25:43.852Z",
+    "validationScope": "Exactly indices 20..24; batch/base/PDF hashes, raw slices, full objects, text hashes, literal story quotes (accepted paths and adjudication candidates), literal source quotes, source mappings, definitionBasis equality, dispositions/counts. “passed” refers to these integrity checks, not to the story dispositions.",
+    "baseHashMatchesBatchDeclaration": true,
+    "reviewedScopeExactlyFive": true
+  },
+  "unresolved": [
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-01",
+      "sourceArrayIndex": 20,
+      "blockingFindingIds": [
+        "B005-01"
+      ],
+      "question": "Is Astenia (ELEMENTOS GERAIS; APARELHO CARDIOVASCULAR) a full-credit answer for this utterance, or should the utterance be revised to support Fadiga only?",
+      "candidateContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-03",
+      "sourceArrayIndex": 22,
+      "blockingFindingIds": [
+        "B005-02"
+      ],
+      "question": "Is Astenia (APARELHO ENDOCRINOLÓGICO; ELEMENTOS GERAIS) a full-credit answer for this utterance, or should the utterance be revised to support Fadiga only?",
+      "candidateContextIds": [
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-04",
+      "sourceArrayIndex": 23,
+      "blockingFindingIds": [
+        "B005-03"
+      ],
+      "question": "Is Astenia (ELEMENTOS GERAIS; APARELHO CARDIOVASCULAR) a full-credit answer for this utterance, or should the utterance be revised to support Fadiga only?",
+      "candidateContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga-story-05",
+      "sourceArrayIndex": 24,
+      "blockingFindingIds": [
+        "B005-01"
+      ],
+      "question": "Is Astenia (ELEMENTOS GERAIS; APARELHO CARDIOVASCULAR) a full-credit answer for this utterance, or should the utterance be revised to support Fadiga only?",
+      "candidateContextIds": [
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia"
+      ]
+    },
+    {
+      "itemId": null,
+      "scope": "source-interpretation",
+      "question": "Where does the course draw the line between Fadiga and Astenia when the patient only says “sem energia”, and are the two parts of the endocrine Astenia description cumulative? This needs a decision by the teaching owner; external terminology (MeSH/DeCS) keeps the two descriptors separate but does not settle it."
+    }
+  ],
+  "limitations": [
+    "Model review by a non-clinician, not clinical approval.",
+    "Source PDF checked as extracted text only (p.1, p.3, p.7, p.8); no visual page inspection in this run.",
+    "The MeSH and DeCS pages were read through a web-fetch tool that returns page content via a summarizing model; the DeCS Fadiga scope note came back truncated. The two MeSH scope notes were additionally read verbatim from NLM linked-data JSON.",
+    "The reading of “pique” as energy/drive (index 23) is the reviewer's knowledge of colloquial Brazilian Portuguese; no dictionary was opened in this run.",
+    "Stories at indices 25..29 (Fadiga 06–10) and all Astenia stories are out of scope; sibling-batch stories were read only as mapping precedent.",
+    "Review files were written in the main checkout at /Users/math/pessoal/anatomind as instructed.",
+    "No app execution tested; the release builder was only run in its default read-only reporting mode."
+  ]
+}
