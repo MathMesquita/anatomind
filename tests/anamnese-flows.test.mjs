@@ -7,11 +7,12 @@ import ts from "typescript"
 import * as scoring from "../src/lib/anamnese.ts"
 import * as sampling from "../src/lib/sampling.ts"
 import { sampleDiseaseOptions } from "../src/lib/disease-round.ts"
+import { starterCharacteristicStories as starterStories } from "../src/data/characteristics.ts"
 
 // Exercise the component's own handlers/effects with a deterministic hook host.
 // Layout primitives are opaque: fixed positioning remains StudyLayout's contract.
 const require = createRequire(import.meta.url)
-function mount() {
+function mount({ storyBank = starterStories } = {}) {
   let scope, cursor, tree, now = 0, dirty = false
   const scopes = new Map(), listeners = new Set(), timers = new Set(), completions = []
   const exposure = sampling.createExposureStore(null)
@@ -51,6 +52,7 @@ function mount() {
       if (name === "react") return hooks
       if (name === "react/jsx-runtime") return { jsx, jsxs: jsx }
       if (name === "@/lib/anamnese") return scoring
+      if (name === "@/data/characteristics") return { characteristicStories: storyBank, characteristicCatalog: { stories: storyBank.length, groups: new Set(storyBank.map((story) => story.groupId)).size, reviewedPrototype: false } }
       if (name === "@/lib/disease-round") return { sampleDiseaseOptions: (positive, negative, scope) => sampleDiseaseOptions(positive, negative, scope, exposure.read()) }
       if (name === "@/lib/sampling") return {
         ...sampling,
@@ -290,4 +292,32 @@ test("second-pass pain review covers all ten fields and pins exact omission sets
     app.click(app.footer())
   }
   assert.equal(reviewed.size, 3)
+})
+
+test("symptom rounds use each group's own full checklist and stop at ten stories", () => {
+  const storyBank = Array.from({ length: 15 }, (_, index) => ({
+    id: `fixture-${index}`, groupId: index % 2 ? "group-a" : "group-b", groupLabel: `Grupo ${index % 2 ? "A" : "B"}`,
+    text: `História de teste ${index}.`, fields: index % 2 ? ["Campo A", "Campo B"] : ["Campo C", "Campo D", "Campo E"],
+    fieldKeys: { "Campo A": "a", "Campo B": "b", "Campo C": "c", "Campo D": "d", "Campo E": "e" },
+    missing: [], context: "Todos os campos deste exemplo estão presentes.", provenance: { fixture: true }, sourceLabel: "Fonte de teste, página 2",
+  }))
+  const app = mount({ storyBank })
+  app.start("Caracteres dos sintomas")
+  const seen = new Set()
+  for (let index = 0; index < 10; index++) {
+    const text = app.find("p").map(app.text).find((value) => value.startsWith("História de teste"))
+    const story = storyBank.find((story) => story.text === text)
+    assert.ok(story)
+    assert.ok(!seen.has(story.id)); seen.add(story.id)
+    app.click(app.footer())
+    assert.equal(app.choices().length, story.fields.length + 1)
+    for (const field of story.fields) assert.ok(app.choices().some((choice) => app.text(choice).endsWith(field)))
+    app.click(app.choices().find((choice) => app.text(choice).endsWith(scoring.NONE)))
+    app.click(app.footer())
+    assert.ok(app.find("p").some((paragraph) => /Referência da versão congelada:\s*Fonte de teste/.test(app.text(paragraph))))
+    app.click(app.footer())
+  }
+  assert.equal(seen.size, 10)
+  assert.deepEqual(app.completions, [["caracteres", 100]])
+  assert.equal(Object.keys(app.exposure().questions).length, 10, "queued unshown stories must stay unseen")
 })

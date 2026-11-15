@@ -2,6 +2,14 @@
 
 The web PWA implements the approved study flows from [Paper](https://app.paper.design/file/01M7D824B4FVRW3KMPJ2JFP15J/p-2-0). Flutter expansion is deferred. This checkpoint distinguishes working behavior from remaining content production.
 
+## Current content release — 2026-11-15
+
+The five-region starter has already been replaced by 71 verified targets across five original views (50 distinct answer regions). Symptom characteristics now imports an explicit frozen release of 192 model-reviewed stories across all 11 source groups; 28 unresolved stories are excluded. Each story uses its own full group checklist, stable exposure identity, source page, exact evidence and independent-review provenance. Rounds are bounded to 10 stories, not the entire bank. Disease and interrogation starters remain until their reviewed releases are connected. This is a prototype, not clinically approved material.
+
+Following the user's incremental-release request, further content is independently reviewed in batches of five and each completed batch is committed/pushed after verification. Historical counts below describe earlier checkpoints rather than current coverage.
+
+The symptom release passes 59 automated tests, lint, frozen-input checks and a production PWA build. At 390 × 844, a fever story showed its eight-field checklist plus exclusive none, correctly scored its partially documented improvement field, restored the story in feedback and kept the bottom action visible without horizontal overflow. After stopping the production-preview server, the installed app reloaded, preserved existing region progress and opened an unvisited icterícia story from the 192-story bank. This is an origin-unavailable check, not a physical-device airplane-mode test.
+
 ## Implemented
 
 - Three peer disciplines with activity libraries and separate device-local progress.

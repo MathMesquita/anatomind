@@ -6,10 +6,10 @@ import { Progress } from "@/components/ui/progress"
 import { NONE, NO_SUBGROUP, scoreInterview, scoreSelections, type InterviewPath } from "@/lib/anamnese"
 import { alternativeId, chooseOptions, chooseQuestions, newPresentationId, recordExposure, shuffle } from "@/lib/sampling"
 import { sampleDiseaseOptions } from "@/lib/disease-round"
+import { characteristicStories as stories, characteristicCatalog } from "@/data/characteristics"
 
 type Props = { onBack: () => void; debugEnabled: boolean; onComplete?: (activity: string, score: number) => void }
 type Mode = "library" | "antecedentes" | "caracteres" | "interrogatorio"
-type Story = { text: string; missing: string[]; context: string }
 type Interview = { story: string; term: string; subgroup: string; group: string; page: number; alternatives?: string[]; acceptedTerms?: string[]; paths?: InterviewPath[] }
 // Existing prototype references are declarations, not verified clinical provenance.
 const distractors = ["Glaucoma", "Miopia", "Catarata", "Infarto", "TOC", "Depressão", "Ansiedade", "Epilepsia", "Enxaqueca", "AVE", "Diabetes", "Artrose", "Artrite reumatoide", "Osteoporose", "Pedra na vesícula", "Nefrolitíase"]
@@ -18,12 +18,6 @@ const groups = [
   { name: "Doenças oculares", answers: ["Glaucoma", "Miopia", "Catarata"], source: "Antecedentes Pessoais Patológicos, p. 1" },
 ]
 const eyeDistractors = ["Asma", "DPOC", "Bronquite", "Pneumonia", "Rinite", "TOC", "Depressão", "Ansiedade", "Epilepsia", "Enxaqueca", "AVE", "Diabetes", "Artrose", "Artrite reumatoide", "Osteoporose", "Nefrolitíase", "Pedra na vesícula"]
-const characteristics = ["Localização", "Irradiação", "Qualidade/caráter", "Intensidade", "Duração", "Evolução", "Relação com funções orgânicas", "Fatores desencadeantes/agravantes", "Fatores atenuantes", "Manifestações concomitantes"]
-const stories: Story[] = [
-  { text: "Paciente relata dor lombar em aperto, intensidade 6/10, iniciada há três dias e que aumentou desde então. Nega relação com urinar ou evacuar.\n\nA dor piora ao caminhar e melhora com repouso. Nega febre ou outros sintomas associados.", missing: ["Irradiação"], context: "A história não informa se a dor se espalha. Negações explicitamente documentadas são informações presentes." },
-  { text: "Paciente relata dor abdominal em cólica, 5/10, há dois dias, sem irradiação e estável desde o início. Informa que não percebe relação com refeições, urina ou evacuação.\n\nA dor piora com movimento e melhora com repouso. Nega outros sintomas associados.", missing: [], context: "O registro aborda todos os campos deste roteiro, incluindo a ausência de irradiação e de sintomas associados." },
-  { text: "Paciente relata dor lombar em aperto há dois dias, que vem aumentando desde o início. Não percebe relação com refeições, urina ou evacuação.\n\nA dor piora ao caminhar e melhora com repouso. Nega outros sintomas associados.", missing: ["Irradiação", "Intensidade"], context: "O registro não informa a intensidade nem se a dor se espalha." },
-]
 const interviews: Interview[] = [
   { story: "Vejo dois objetos onde existe apenas um.", term: "Diplopia", subgroup: "Aparelho ocular", group: "Órgãos dos sentidos", page: 1 },
   { story: "Escuto um apito no ouvido mesmo quando está tudo silencioso.", term: "Zumbidos", subgroup: "Aparelho auditivo", group: "Órgãos dos sentidos", page: 2 },
@@ -55,13 +49,14 @@ export default function Anamnese({ onBack, debugEnabled, onComplete }: Props) {
       <span className="w-7 shrink-0 text-xs text-primary">0{i + 1}</span>
       <span className="flex-1"><span className="block text-[17px] font-bold">{title}</span><span className="mt-1 block text-[13px] text-muted-foreground">{description}</span></span><ChevronRight className="size-5 text-primary" />
     </button>)}</div>
-    <p role="note" className="mt-6 text-xs leading-5 text-muted-foreground">Biblioteca inicial: 2 grupos de doenças, 3 histórias de dor e 4 exemplos de interrogatório. Casos demonstrativos; revisão clínica e editorial não registrada.</p>
+    <p role="note" className="mt-6 text-xs leading-5 text-muted-foreground">Biblioteca: 2 grupos de doenças, {characteristicCatalog.stories} histórias em {characteristicCatalog.groups} {characteristicCatalog.groups === 1 ? "grupo" : "grupos"} de sintomas e 4 exemplos de interrogatório. {characteristicCatalog.reviewedPrototype ? "Caracteres com revisão por modelo; revisão docente/clínica pendente." : "Casos demonstrativos; revisão clínica e editorial não registrada."}</p>
   </StudyPage>
 }
 function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Props & { mode: Exclude<Mode, "library">; onRestart: () => void }) {
-  const length = mode === "antecedentes" ? groups.length : mode === "caracteres" ? stories.length : interviews.length
-  const questionId = (item: number) => `anamnese:${mode}:prototype-v1:${item}`
-  const [order] = useState(() => chooseQuestions(Array.from({ length }, (_, i) => i), questionId))
+  const poolSize = mode === "antecedentes" ? groups.length : mode === "caracteres" ? stories.length : interviews.length
+  const questionId = (item: number) => mode === "caracteres" ? `anamnese:caracteres:${stories[item].id}` : `anamnese:${mode}:prototype-v1:${item}`
+  const [order] = useState(() => chooseQuestions(Array.from({ length: poolSize }, (_, i) => i), questionId, mode === "caracteres" ? Math.min(10, poolSize) : poolSize))
+  const length = order.length
   const [presentationId] = useState(newPresentationId)
   const [index, setIndex] = useState(0)
   const [score, setScore] = useState(0)
@@ -97,7 +92,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
       return [round.options]
     }
     // Every checklist field must stay available; novelty cannot hide a missing-data answer.
-    if (mode === "caracteres") return [shuffle([...characteristics, NONE])]
+    if (mode === "caracteres") return [shuffle([...stories[item].fields, NONE])]
     const q = interviews[item]
     const acceptedPaths = q.paths ?? [{ subgroup: q.subgroup, group: q.group }]
     const names = [...new Set([...acceptedPaths.map((p) => p.subgroup), ...(q.alternatives ?? []), ...subgroups])].filter((s) => s !== NO_SUBGROUP)
@@ -111,11 +106,11 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
   const expected = mode === "antecedentes" ? options.filter((option) => group.answers.includes(option)) : mode === "caracteres" ? story.missing.length ? story.missing : [NONE] : []
 
   useEffect(() => {
-    if (!finished) recordExposure([`anamnese:${mode}:prototype-v1:${order[index]}`], [], `${presentationId}:${index}:question`)
+    if (!finished) recordExposure([questionId(order[index])], [], `${presentationId}:${index}:question`)
   }, [mode, order, index, finished, presentationId])
   useEffect(() => {
     if (!finished && !answered && !(mode === "caracteres" && !read)) {
-      recordExposure([], options.map((text) => alternativeId(`anamnese:${mode}:${stage}`, text)), `${presentationId}:${index}:options:${stage}`)
+      recordExposure([], options.map((text) => alternativeId(mode === "caracteres" && !story.id.startsWith("prototype-v1:") ? `anamnese:caracteres:${story.groupId}` : `anamnese:${mode}:${stage}`, mode === "caracteres" ? story.fieldKeys[text] ?? text : text)), `${presentationId}:${index}:options:${stage}`)
     }
   }, [mode, index, stage, options, read, answered, finished, presentationId])
 
@@ -195,14 +190,15 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
   ] : []
   const debug = answered && debugEnabled && !finished ? <QuestionDebug key={index}>
     <p><strong>Questão:</strong> {mode} · exemplo {order[index] + 1} · posição {index + 1}/{length}</p>
-    <p><strong>Referência declarada no protótipo:</strong> {mode === "antecedentes" ? group.source : mode === "caracteres" ? "Caracteres propedêuticos dos principais sintomas, p. 1" : `Interrogatório complementar, p. ${interview.page}`}. Documento original, edição, autoria, URL e conferência da página: não disponíveis neste componente.</p>
+    {mode === "caracteres" && story.provenance !== undefined ? <p><strong>Referência da versão congelada:</strong> {story.sourceLabel}. Localizador, checklist, evidências e dados de revisão disponíveis abaixo. Revisão docente/clínica pendente.</p> : <p><strong>Referência declarada no protótipo:</strong> {mode === "antecedentes" ? group.source : mode === "caracteres" ? "Caracteres propedêuticos dos principais sintomas, p. 1" : `Interrogatório complementar, p. ${interview.page}`}. Documento original, edição, autoria, URL e conferência da página: não disponíveis neste componente.</p>}
     <p><strong>Enunciado:</strong> {mode === "antecedentes" ? group.name : mode === "caracteres" ? story.text : interview.story}</p>
+    {mode === "caracteres" && <><p><strong>Identificador e grupo:</strong> {story.id} · {story.groupLabel}</p>{story.provenance !== undefined && <details><summary>Fonte, evidências e revisão disponíveis</summary><p className="mt-2 text-xs">Rótulos em sourceLabel são transcrição arquivística da fonte e podem conter imprecisões; não são recomendações ou alternativas do jogo.</p><pre className="mt-2 whitespace-pre-wrap text-xs">{JSON.stringify(story.provenance, null, 2)}</pre></details>}</>}
     <p><strong>Respostas aceitas:</strong> {mode === "interrogatorio" ? terms.join(", ") : expected.join(", ")}</p>
     {mode === "interrogatorio" && <><p><strong>Caminhos aceitos:</strong> {paths.map((p) => `${p.subgroup} → ${p.group}`).join("; ")}</p><p><strong>Subgrupos em outro contexto (+5):</strong> {interview.alternatives?.join(", ") || "Nenhum registrado neste exemplo."}</p></>}
     <p><strong>Sua resposta:</strong> {(mode === "interrogatorio" ? stageAnswers : selected).join(" → ") || "Em branco"} · {signed(delta)} pontos{timedOut ? " · tempo esgotado" : ""}.</p>
     <p><strong>Opções e ordem:</strong> {questionOptions.map((items) => items.join(" / ")).join(" → ")}</p>
     <p><strong>Critério:</strong> {mode === "interrogatorio" ? "+10 por etapa aceita; −5 por etapa incorreta; +5 somente para subgrupo alternativo registrado. O grupo considera os caminhos compatíveis com o subgrupo aceito." : "+10 por seleção correta; −5 por incorreta; 0 por omissão. Em branco = não respondida. Nenhum dado ausente é exclusivo."}</p>
-    <p><strong>Proveniência:</strong> exemplos demonstrativos já presentes no componente. Modelo, prompt, data de geração, responsável e revisão clínica/editorial: não registrados. A referência declarada não comprova validação do cenário.</p>
+    <p><strong>Proveniência:</strong> {mode === "caracteres" && story.provenance !== undefined ? "História sintética de um protótipo revisado por modelo. Dados disponíveis preservados na inspeção acima; campos não informados permanecem desconhecidos. Isso não estabelece aprovação clínica ou diagnóstico." : "Exemplos demonstrativos já presentes no componente. Modelo, prompt, data de geração, responsável e revisão clínica/editorial: não registrados. A referência declarada não comprova validação do cenário."}</p>
   </QuestionDebug> : undefined
   const footer = finished ? <StudyFooter label="Jogar novamente" onClick={onRestart} secondary={<Button variant="outline" className="h-12 rounded-[10px]" onClick={onBack}>Biblioteca</Button>} />
     : answered ? <StudyFooter label={index + 1 === length ? "Concluir" : "Próxima questão"} onClick={next} debug={debug} />
@@ -214,7 +210,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
     <StudyHeader onBack={onBack} label={`Anamnese / ${finished ? "Resultado" : mode === "antecedentes" ? "Antecedentes" : mode === "caracteres" ? "Caracteres" : "Interrogatório"}`} trailing={`${score} pts`} />
     <Progress value={finished ? 100 : ((index + (answered ? 1 : 0)) / length) * 100} className="mb-3 h-1" />
     <p className="mb-4 text-xs font-bold uppercase tracking-[.08em] text-primary">{finished ? "Rodada concluída" : `${index + 1} / ${length}${answered ? " · Feedback" : ""}`}</p>
-    {finished ? <><h1 className="text-3xl font-bold tracking-tight">Rodada concluída</h1><p className="mt-3 text-lg">{score} pontos</p><p className="mt-2 text-sm text-muted-foreground">Você percorreu todos os exemplos desta atividade.</p></>
+    {finished ? <><h1 className="text-3xl font-bold tracking-tight">Rodada concluída</h1><p className="mt-3 text-lg">{score} pontos</p><p className="mt-2 text-sm text-muted-foreground">Você concluiu esta rodada de estudo.</p></>
     : answered ? <div className="space-y-3">
       <h1 className="text-[28px] font-bold tracking-tight">{mode !== "interrogatorio" && !selected.length ? "Não respondida" : `${signed(delta)} pontos`}</h1>
       <p className="text-[15px] leading-6 text-muted-foreground">{timedOut ? "Tempo esgotado. Consideramos a seleção feita até o limite." : mode === "interrogatorio" ? "Veja como o contexto orienta a classificação." : "Confira sua seleção e o que ficou faltando."}</p>
@@ -230,6 +226,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
         {mode === "caracteres" && <><p className="text-sm leading-6 text-muted-foreground">{story.context}</p><h2 className="pt-2 font-semibold">Releia a história</h2><p className="whitespace-pre-line rounded-xl bg-card p-4 text-[15px] leading-7">{story.text}</p></>}
       </>}
     </div> : <>
+      {mode === "caracteres" && <p className="mb-2 text-xs font-bold uppercase tracking-[.08em] text-primary">{story.groupLabel}</p>}
       <h1 className="text-[29px] leading-tight font-bold tracking-tight">{mode === "antecedentes" ? group.name : mode === "caracteres" ? read ? "O que ficou faltando?" : "Leia a história clínica" : stage === 0 ? "Qual é o termo técnico?" : stage === 1 ? "Qual é o subgrupo?" : "Qual é o grupo principal?"}</h1>
       <p className="mt-3 text-[15px] leading-6 text-muted-foreground">{mode === "antecedentes" ? "Selecione as doenças associadas a este grupo. +10 por acerto, −5 por erro; omissões valem 0." : mode === "caracteres" ? read ? "Selecione todos os dados ausentes. +10 por acerto, −5 por erro; omissões valem 0." : "Observe os detalhes. Ao terminar, a história será ocultada e você terá 20 segundos de tempo ativo para responder." : `Etapa ${stage + 1} de 3. Escolha uma opção e continue. O feedback aparece ao final das três etapas.`}</p>
       {mode === "interrogatorio" && <blockquote className="my-5 rounded-xl bg-card p-4 text-[17px] leading-7">“{interview.story}”</blockquote>}

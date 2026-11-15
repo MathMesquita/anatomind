@@ -2,6 +2,16 @@
 
 This ledger separates shipped behavior from unfinished educational production. Run `node tools/content-status.mjs` for counts recomputed from the files and `node tools/validate-content.mjs` for structural checks. Neither establishes medical accuracy or clinical approval.
 
+## Current release work — 2026-11-15
+
+- The symptom v2 independent review is complete: 192 of 220 stories pass for a model-reviewed prototype; 28 remain held. The passing subset is frozen in `content/releases/caracteres.v1.json` and connected to the web game across all 11 groups, with each group's full checklist, a 10-question round and feedback provenance. Clinical approval remains unrecorded.
+- Interrogation v2 reviewed all 340 base stories: 321 pass and 19 need revision. Two separate generation batches have now completed another 400 drafts across 40 contexts. They pass structural checks but require independent review before integration. Combined authored coverage is 740 stories across 74 contexts; 1,180 stories remain for the 192 currently eligible contexts (1,300 against the original 204-context inventory).
+- The 224-disease review is incomplete and bound to a prior snapshot. Current draft changes must be reconciled; safe negative distractors require positive evidence-supported review, not inference from missing membership.
+- User-authorized incremental workflow: publish already-reviewed subsets first, then independently review **five questions per batch**, test/freeze passing items, and commit/push each completed batch immediately. Retain held records and all provenance. Do not wait for the full bank before releasing passing content.
+- Flutter and unrelated native changes remain outside these web/content releases.
+
+The sections below preserve the earlier production checkpoint; counts and review state above supersede historical statements about pending reviews and 50-story partial batches.
+
 ## Shipped prototype
 
 - Three offline subject libraries and the agreed study/feedback flows, with fixed bottom actions.

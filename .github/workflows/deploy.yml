@@ -32,7 +32,9 @@ jobs:
       - run: npm run lint
 
       - name: Validate frozen prototype content
-        run: node tools/validate-content.mjs content/releases/regioes.v1.json
+        run: |
+          node tools/validate-content.mjs content/releases/regioes.v1.json content/releases/caracteres.v1.json
+          node tools/prepare-characteristic-release.mjs --check
 
       # The plate corpus is committed, not generated here: building it needs the
       # 59 MB source PDF, which the repo does not carry.

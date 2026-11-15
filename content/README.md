@@ -1,6 +1,10 @@
 # Educational content banks
 
-`drafts/` contains researched material and generated fictional examples. It is outside `public/` and is **not loaded by the web app**. Anamnese continues to use its small demonstration bank until reviewed content is explicitly integrated.
+`drafts/` contains researched material and generated fictional examples. It is outside `public/` and is **not loaded by the web app**. Only explicit frozen releases are integrated; diseases and interrogation still use starter examples until their reviewed adapters are enabled.
+
+`releases/caracteres.v1.json` contains 192 independently model-reviewed prototype stories across all 11 symptom groups. The 28 unresolved stories remain outside the game. Group-specific checklists, exact omission/partial-information answers, source pages, evidence and generation/review provenance are preserved. `node tools/prepare-characteristic-release.mjs --check` verifies the frozen subset against the exact reviewed snapshot. Rounds draw 10 stories with persistent exposure-aware sampling; zero/one/multiple missing fields and exclusive none remain supported. Teacher/clinical approval is not recorded.
+
+Subsequent reviews are performed in batches of **five questions**, with each completed batch committed and pushed independently. Passing items can enter an explicit reviewed release without waiting for the entire production target. Held items are recorded but never automatically promoted; source/checklist/path changes require re-review. Structural tests and production build must pass before each push.
 
 `releases/regioes.v1.json` is an explicit, frozen **prototype** release imported by the app: 71 independently model-reviewed numbered targets, 50 answer regions, and all 55 source legend labels. Per-target pixel evidence, source exclusions, model provenance, and missing teacher/clinical approval are retained in feedback debug. Five labels have no reliable illustrated target. Model review is not clinical approval; this release must not be represented as clinically approved educational material. See `docs/reviews/regioes-v1.md` and `docs/research/regioes.md` for the audit.
 
