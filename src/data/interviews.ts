@@ -4,6 +4,7 @@ import release from "../../content/releases/interrogatorio.v1.json" with { type:
 import batch001 from "../../content/releases/interrogatorio-batch-001.json" with { type: "json" }
 import batch002 from "../../content/releases/interrogatorio-batch-002.json" with { type: "json" }
 import batch003 from "../../content/releases/interrogatorio-batch-003.json" with { type: "json" }
+import batch004 from "../../content/releases/interrogatorio-batch-004.json" with { type: "json" }
 
 // Exact existing demonstrations. No draft or unreviewed source-description imports.
 export const starterInterviews: InterviewQuestion[] = [
@@ -14,7 +15,7 @@ export const starterInterviews: InterviewQuestion[] = [
 ].map((item, index) => ({ ...item, id: `prototype-v1:${index}`, paths: [{ subgroup: item.subgroup, group: item.group }] }))
 
 // Frozen, independently model-reviewed releases only. Add one line per new reviewed batch.
-export const interviewReleases = [release, batch001, batch002, batch003] as unknown as InterviewRelease[]
+export const interviewReleases = [release, batch001, batch002, batch003, batch004] as unknown as InterviewRelease[]
 export const interviewQuestions = interviewReleases.flatMap(adaptInterviewRelease)
 const fallbackSubgroups = ["Aparelho ocular", "Aparelho auditivo", "Nariz e seios paranasais", "Distúrbios da consciência"]
 const fallbackGroups = ["Órgãos dos sentidos", "Aparelho cardiovascular", "Aparelho respiratório", "Aparelho digestório"]
