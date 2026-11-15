@@ -1,0 +1,1303 @@
+{
+  "reviewer": {
+    "model": "gpt-6-astra",
+    "date": "2026-11-14"
+  },
+  "input": {
+    "path": "content/drafts/interrogatorio.json",
+    "sha256": "5b8019b75d67cad8433447c488aee956d967394b975630120051fca6afbb5e33",
+    "contexts": 204,
+    "stories": 80,
+    "capturedAtUtc": "2026-11-14T20:20:26Z",
+    "sourceMtime": "2026-11-14T17:20:23-03:00",
+    "snapshotPath": "/private/tmp/interrogatorio-review.Dw0E3q/interrogatorio.json",
+    "snapshotMethod": "Copied the two inputs to a private temporary directory before content inspection; timestamp recorded immediately after both copies. SHA-256 identifies the actual bytes read. Pair was not filesystem-atomically locked; all 80 story texts and rationales were subsequently matched to the copied generation arrays without executing the generator.",
+    "generationCode": {
+      "path": "content/drafts/interrogatorio-generation.mjs",
+      "sha256": "5a662af0c3ad649d5f970acc88f634b90d425eb0096fa2a3921cdd5523c4ed6e",
+      "sourceMtime": "2026-11-14T17:20:09-03:00",
+      "snapshotPath": "/private/tmp/interrogatorio-review.Dw0E3q/interrogatorio-generation.mjs"
+    },
+    "originalSource": {
+      "path": "/Users/math/Downloads/Interrogatorio complementar.pdf",
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+      "pages": 12,
+      "verifiedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "method": "Independent PDFKit extraction plus fresh per-page rendering and visual inspection of all 12 pages directly from the original PDF. Existing auxiliary extraction was not treated as authority."
+    }
+  },
+  "summary": {
+    "postSnapshotObservation": {
+      "observedAtUtc": "2026-11-14T20:27:52.833Z",
+      "draftExists": true,
+      "generationCodeExists": false,
+      "draftSha256": "9253e016fff80646aed77d1482c55ead05e2e4ec6025306d8875001f76cd8a84",
+      "scope": "Checksum/presence check only. The live draft changed and the original generator path disappeared during this review. Their later contents were not reviewed; findings apply only to the frozen input hashes."
+    },
+    "assessment": "Needs revision before game use. All 80 snapshot stories were read individually for meaning, patient voice, disambiguation, paths, rationale and provenance; all 204 contexts were checked against the original 12-page hierarchy and source locators. This is an independent model content review, not qualified clinical or educational approval.",
+    "scope": {
+      "reviewedContexts": 204,
+      "reviewedStories": 80,
+      "reviewedPages": 12,
+      "majorSourceGroups": 15,
+      "sourceSubgroups": 12,
+      "contextsByPage": [
+        {
+          "page": 1,
+          "contexts": 17
+        },
+        {
+          "page": 2,
+          "contexts": 21
+        },
+        {
+          "page": 3,
+          "contexts": 20
+        },
+        {
+          "page": 4,
+          "contexts": 16
+        },
+        {
+          "page": 5,
+          "contexts": 13
+        },
+        {
+          "page": 6,
+          "contexts": 15
+        },
+        {
+          "page": 7,
+          "contexts": 18
+        },
+        {
+          "page": 8,
+          "contexts": 18
+        },
+        {
+          "page": 9,
+          "contexts": 20
+        },
+        {
+          "page": 10,
+          "contexts": 18
+        },
+        {
+          "page": 11,
+          "contexts": 18
+        },
+        {
+          "page": 12,
+          "contexts": 10
+        }
+      ],
+      "allStoryPagesMatchDefinitionPages": true,
+      "sourceHierarchyFinding": "The numbered FEBRE and ALTERAÇÕES DE PESO subgroups are genuinely in the PDF. Female MAMAS is a subgroup; male Mamas is an entry. No wholesale hierarchy collapse or missing colon-labelled leaf was identified. Varizes contains a separate next-group heading; source taxonomy is not necessarily clinical taxonomy.",
+      "clinicalVerificationLimit": "Targeted primary/authoritative checks resolved the listed terminology questions. Reading every source context is not independent clinical validation of every threshold, association or diagnostic assertion in the handout.",
+      "laterInputVersions": "Excluded, including new IDs and modifications to the same IDs after the captured hash."
+    },
+    "coverage": {
+      "targetStoriesPerContext": 10,
+      "declaredTotalTarget": 2040,
+      "contextsWithStories": 8,
+      "contextsAtDeclaredTarget": 8,
+      "contextsWithoutStories": 196,
+      "storyShortfallAgainstDeclaredTarget": 1960,
+      "originalDescriptionsPresent": 204,
+      "approvedForGameUse": 0,
+      "clinicalApprovalRecorded": false,
+      "denominatorCaveat": "204 is the source-entry count; the clinical story-eligible denominator needs editorial adjudication."
+    },
+    "structuralChecks": {
+      "uniqueContextIds": 204,
+      "uniqueStoryIds": 80,
+      "uniqueStoryTexts": 80,
+      "uniqueRationales": 8,
+      "storiesWithExactlyOneAcceptedPath": 80,
+      "storiesWithAlternativePaths": 0,
+      "generatorTextAndRationaleMatches": 80,
+      "scriptExecuted": false,
+      "repositoryValidatorExecuted": false,
+      "reason": "Only immutable snapshot checks were used; the live bank and other topics are being edited concurrently."
+    },
+    "storyBatches": [
+      {
+        "contextId": "ic-elementos-gerais-febre-calafrios",
+        "term": "Calafrios",
+        "page": 1,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 convey chills. Their FEBRE membership is the handout's structure, not documented fever. Several copied rationales add absent details."
+      },
+      {
+        "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia",
+        "term": "Fotofobia",
+        "page": 1,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 reviewed; 05 and 10 need clearer abnormal intolerance. No additional definite symptom-meaning defect in the other eight."
+      },
+      {
+        "contextId": "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia",
+        "term": "Trepopneia",
+        "page": 3,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 reviewed; 04,07,08,09 omit the opposite-side contrast. Six others sufficiently support the positional feature. Generic dyspnea paths still need an explicit scoring policy."
+      },
+      {
+        "contextId": "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia",
+        "term": "Ortopneia",
+        "page": 3,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 convey recumbent breathlessness with relief/upright positioning or elevation. No heart-failure diagnosis is established. Answer specificity and group interpretation remain unresolved."
+      },
+      {
+        "contextId": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias",
+        "term": "Parestesias",
+        "page": 4,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 reviewed; 02/06 need sensory-loss disambiguation; 04/09 need a documented terminology convention or clarification. The other six convey abnormal tingling/prickling without an invented cause."
+      },
+      {
+        "contextId": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao",
+        "term": "Regurgitação",
+        "page": 9,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 broadly support return to the mouth; 09 needs wording clarification. No reflux diagnosis is asserted."
+      },
+      {
+        "contextId": "ic-aparelho-urinario-sem-subgrupo-polaciuria",
+        "term": "Polaciúria",
+        "page": 10,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 broadly concern frequent small voids; 08 needs natural, frequency-specific wording. Seven rationales overstate daily-volume information; no infection is asserted."
+      },
+      {
+        "contextId": "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente",
+        "term": "Sangramento frequente",
+        "page": 12,
+        "reviewedSuffixes": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ],
+        "assessment": "All 10 match the handout's relative wording, but none establishes a clinical frequent-cycle threshold; withhold that clinical classification."
+      }
+    ],
+    "findingsBySeverity": {
+      "high": 8,
+      "medium": 11,
+      "low": 1
+    },
+    "positiveFindings": [
+      "Repeated technical terms in different group contexts retain distinct stable IDs and are not duplicate-ID defects.",
+      "Null subgroup values are explicit and correctly retained for unnumbered source branches.",
+      "No definite invented etiologic diagnosis was found in the 80 fictional utterances; left/right side and everyday settings are synthetic examples, not claims about source patients.",
+      "Draft and zero-approved flags are truthful; cited story pages support definitions rather than original patient narratives.",
+      "The generation script stores eight authored arrays, not an automated suffix or demographic-padding loop; semantic repetitiveness remains a separate issue."
+    ],
+    "blockers": [
+      "Resolve source transcription and clinical/taxonomy findings, plus ambiguous and weakly evidenced story answers.",
+      "Record defensible answer-path and partial-credit rules rather than unconditional singleton paths.",
+      "Resolve semantic near-duplicates and per-story rationale evidence.",
+      "Supply or explicitly mark unknown unavailable provenance; this review cannot verify generator execution model or relative cost.",
+      "Complete and separately review any intended release scope, including all post-snapshot changes.",
+      "Qualified clinical/editorial approval is absent and is not supplied by this model review."
+    ],
+    "environmentNotes": [
+      "Read docs/educational-content-generation.md, content/README.md and the complete explicitly requested PDF skill.",
+      "RTK.md was not found in the workspace, checked ancestors, or searched agent/config/pessoal trees; no instructions from it could be applied. This did not prevent the authorized read-only review.",
+      "No subagents, git mutations, draft edits or app-code edits were performed. Temporary snapshot/render files are outside the repository; only the two authorized review deliverables are repository writes."
+    ],
+    "references": [
+      {
+        "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666",
+        "locator": "FIGO 2018 revisions, §3.1, corrected Figure 1 and Table 1",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://www.iasp-pain.org/resources/terminology/",
+        "locator": "Hypoesthesia, Paresthesia and Dysesthesia definitions and notes",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D004417",
+        "locator": "MeSH 2026 D004417; narrower concepts Orthopnea and Trepopnea",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://meshb.nlm.nih.gov/record/ui?ui=D020795",
+        "locator": "MeSH 2026 D020795, Scope Note",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://www.ics.org/committees/standardisation/terminologydiscussions/urinaryfrequency",
+        "locator": "Current definition and Controversy; ICS terminology discussion, September 2018",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://www.ics.org/folder/standardisation/current-ics-standardisations/d/ics-report-on-the-terminology-for-nocturia-and-nocturnal-lower-urinary-tract-function-published-15-january-2019/download",
+        "locator": "ICS 2019 terminology report, Table 1; §3.1 Nocturia; §4.2 Nocturnal polyuria",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+        "locator": "What are the smell disorders? Parosmia and Phantosmia",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/priapism",
+        "locator": "§10.1.3 acute ischaemic emergency; §10.3.2.a non-ischaemic history; §10.3.3.d",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/constipation/symptoms-causes",
+        "locator": "What are the symptoms of constipation?",
+        "accessed": "2026-11-14"
+      },
+      {
+        "url": "https://www.asha.org/practice-portal/clinical-topics/voice-disorders/",
+        "locator": "Signs and Symptoms; dysphonia and aphonia",
+        "accessed": "2026-11-14"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-vascular-periferico-sem-subgrupo-varizes"
+      ],
+      "issue": "R01 — A subsequent heading remains inside the source description; the proposed correction cannot match.",
+      "evidence": [
+        {
+          "source": "PDF p.4, end of group 5 / start of group 6",
+          "observation": "The Varizes definition ends at 'geralmente nas pernas.' The next blue numbered heading is a separate group."
+        },
+        {
+          "source": "snapshot context.originalDescription",
+          "quote": "geralmente nas pernas. 6. APARELHO NEUROLÓGICO"
+        },
+        {
+          "source": "generation snapshot lines 144–158",
+          "observation": "corrections uses PELE|Varizes, but this record belongs to APARELHO VASCULAR PERIFÉRICO."
+        }
+      ],
+      "requiredChange": "Apply the correction to the vascular context, remove only the appended heading, and record the actual transcription change. Preserve the existing context ID. Recheck the output, not just the correction table."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-elementos-gerais-febre-calafrios",
+        "ic-elementos-gerais-febre-sudorese",
+        "ic-elementos-gerais-febre-prurido",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-elementos-gerais-febre-calafrios-story-01",
+        "ic-elementos-gerais-febre-calafrios-story-02",
+        "ic-elementos-gerais-febre-calafrios-story-03",
+        "ic-elementos-gerais-febre-calafrios-story-04",
+        "ic-elementos-gerais-febre-calafrios-story-05",
+        "ic-elementos-gerais-febre-calafrios-story-06",
+        "ic-elementos-gerais-febre-calafrios-story-07",
+        "ic-elementos-gerais-febre-calafrios-story-08",
+        "ic-elementos-gerais-febre-calafrios-story-09",
+        "ic-elementos-gerais-febre-calafrios-story-10"
+      ],
+      "issue": "R02 — Source heading membership is being presented without separating it from clinical meaning.",
+      "evidence": [
+        {
+          "source": "PDF p.1, visually verified numbered blue headings 1.1 and 1.2",
+          "observation": "FEBRE really is above Calafrios/Sudorese/Prurido; ALTERAÇÕES DE PESO really is above Fadiga/Astenia. This is faithful source taxonomy, not a parser-created hierarchy."
+        },
+        {
+          "source": "all 10 Calafrios stories",
+          "observation": "Cold/shivering is described; none documents measured fever or a fever history. The accepted path nevertheless requires FEBRE."
+        }
+      ],
+      "requiredChange": "Retain the original hierarchy as sourceHierarchy. State when an exercise asks for placement in this particular handout. Do not infer fever, weight change, or a causal association from those headings. Establish a separate reviewed clinical mapping, or withhold clinical subgroup scoring until adjudicated; do not silently rewrite the PDF or its stable IDs."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-acuidade-visual",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-acuidade-auditiva",
+        "ic-aparelho-digestorio-sem-subgrupo-dentes",
+        "ic-pele-sem-subgrupo-pelos",
+        "ic-pele-sem-subgrupo-unhas",
+        "ic-pele-sem-subgrupo-cabelos-faneros",
+        "ic-aparelho-digestorio-sem-subgrupo-habito-intestinal-normal",
+        "ic-aparelho-genital-masculino-sem-subgrupo-mamas",
+        "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual",
+        "ic-aparelho-genital-feminino-sem-subgrupo-menarca",
+        "ic-aparelho-genital-feminino-sem-subgrupo-coitarca",
+        "ic-aparelho-genital-feminino-sem-subgrupo-telarca",
+        "ic-aparelho-genital-feminino-mamas-presenca-e-aspecto",
+        "ic-aparelho-endocrinologico-sem-subgrupo-hipersensibilidade",
+        "ic-aparelho-endocrinologico-sem-subgrupo-calor",
+        "ic-aparelho-endocrinologico-sem-subgrupo-frio"
+      ],
+      "issue": "R03 — The inventory mixes symptoms, anatomy, history milestones and interview prompts.",
+      "evidence": [
+        {
+          "source": "PDF pp.1–2,6–12",
+          "observation": "These labels are real source entries. Male Mamas on p.11 is an entry; female MAMAS on p.12 is numbered subgroup 15.2. Calor/Frio on p.7 are ordinary entries, not blue subgroup headings. Acuidade visual asks whether function is preserved; Dentes and Presença e aspecto ask for assessment."
+        }
+      ],
+      "requiredChange": "Type these records before generating ten symptom stories for each. Preserve genuine source entries and null subgroup values, but do not manufacture a disorder from a normal finding, body part or milestone. Record whether an item tests an interview domain or an abnormal symptom. Recalculate the clinically eligible target only after that editorial decision."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-01",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-02",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-03",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-04",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-05",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-06",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-07",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-08",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-09",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-10"
+      ],
+      "issue": "R04 — All menstrual-frequency stories reproduce a relative change without establishing the technical classification.",
+      "evidence": [
+        {
+          "source": "PDF p.12 and stories 01–10",
+          "observation": "Every story says only that intervals are shorter than the person's previous pattern; no cycle length, adult reproductive context, or clear distinction from intermenstrual bleeding is supplied."
+        },
+        {
+          "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666",
+          "locator": "FIGO 2018 revisions, §3.1, corrected Figure 1 and Table 1",
+          "accessed": "2026-11-14",
+          "observation": "The corrected FIGO frequency category uses frequent cycles <24 days. Merely changing from 32 to 28 days would not establish this category; this is a reviewer counterexample, not a fact added to a patient story."
+        }
+      ],
+      "requiredChange": "Either explicitly label the task as recalling the handout's loose wording, or revise the synthetic cases with age-appropriate cycle timing and identifiable menstrual starts supported by the cited standard. Do not infer pathological frequency from an unspecified relative reduction. Preserve source text separately and flag its imprecision."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-encurtado",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-normal"
+      ],
+      "issue": "R05 — The PDF itself confuses menstrual duration with amount.",
+      "evidence": [
+        {
+          "source": "PDF p.12, faithfully retained in originalDescription",
+          "observation": "Fluxo prolongado is glossed as maior and Fluxo encurtado as menor, without distinguishing duration from quantity; Sangramento normal refers only to unchanged flow."
+        },
+        {
+          "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666",
+          "locator": "FIGO 2018 revisions, §3.1, corrected Figure 1 and Table 1",
+          "accessed": "2026-11-14",
+          "observation": "FIGO separates duration from volume; prolonged bleeding exceeds eight days. Unchanged volume alone cannot classify every menstrual parameter as normal."
+        }
+      ],
+      "requiredChange": "Flag the source inconsistency. Use separately reviewed definitions for duration, volume and frequency; do not generate amount-only examples as proof of prolonged/shortened duration or score an unchanged volume as globally normal. Keep original wording auditable."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-04",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-09"
+      ],
+      "issue": "R06 — Several sensory cases do not uniquely support paresthesia.",
+      "evidence": [
+        {
+          "source": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+          "quote": "como se eu sentisse menos a pele",
+          "observation": "This describes reduced sensation, not a clear positive abnormal sensation."
+        },
+        {
+          "source": "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+          "quote": "sensação de dormência",
+          "observation": "The lay word alone is ambiguous between altered sensation and sensory loss."
+        },
+        {
+          "source": "Parestesias stories 04 and 09",
+          "observation": "Burning is compatible with the handout, but its unpleasant/painful character and the classification convention are unspecified."
+        },
+        {
+          "url": "https://www.iasp-pain.org/resources/terminology/",
+          "locator": "Hypoesthesia, Paresthesia and Dysesthesia definitions and notes",
+          "accessed": "2026-11-14",
+          "observation": "Hypoesthesia denotes reduced sensitivity; IASP distinguishes unpleasant dysesthesia from preferentially non-unpleasant paresthesia, while acknowledging broad usage and overlap."
+        }
+      ],
+      "requiredChange": "Rewrite 02/06 to make the intended sensory phenomenon clear or withhold them; do not accept Anestesias unless total loss is actually described. For 04/09 document the broader source convention or clarify the experience. If the intended clinical concept is absent from the current inventory, flag that gap instead of forcing a wrong existing ID. Do not declare all burning sensations invalid paresthesia."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09"
+      ],
+      "issue": "R07 — Four trepopnea stories lack the positional contrast needed for a unique subtype.",
+      "evidence": [
+        {
+          "source": "Trepopneia stories 04,07,08,09",
+          "observation": "Each reports difficulty on one named side without saying that the other side is tolerated; story 08 says a position change is needed but does not state the result."
+        },
+        {
+          "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D004417",
+          "locator": "MeSH 2026 D004417; narrower concepts Orthopnea and Trepopnea",
+          "accessed": "2026-11-14",
+          "observation": "Trepopnea is dyspnea confined to one lateral decubitus position."
+        }
+      ],
+      "requiredChange": "State relief or absence of breathlessness on the opposite side in these fictional cases, or accept the supported generic dyspnea paths and withhold exclusive subtype scoring. Do not infer a heart or lung diagnosis."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-01",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-02",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-03",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-05",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-06",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-10",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-01",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-02",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-03",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-04",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-05",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-06",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-07",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-08",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-09",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-10",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dispneia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-dispneia"
+      ],
+      "issue": "R08 — The generator cannot express coherent alternative answer paths or contextual partial-credit evidence.",
+      "evidence": [
+        {
+          "source": "generation snapshot lines 173–186",
+          "observation": "Every story gets acceptedContextIds:[context.id] and alternativeContextIds:[] unconditionally. No per-story adjudication or contextual alternative explanation exists."
+        },
+        {
+          "source": "PDF p.3",
+          "observation": "Respiratory and cardiovascular Dispneia both describe breathing difficulty/discomfort. All 20 positional stories satisfy that broad symptom description without establishing an organ-specific cause."
+        },
+        {
+          "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D004417",
+          "locator": "MeSH 2026 D004417; narrower concepts Orthopnea and Trepopnea",
+          "accessed": "2026-11-14",
+          "observation": "Orthopnea and trepopnea are narrower dyspnea concepts."
+        }
+      ],
+      "requiredChange": "Adjudicate each story: for broad symptom matching, record both existing Dispneia context IDs when evidence does not distinguish them, alongside the supported specific term. If the exercise instead requests the most specific source-listed term, make that instruction and scoring rule explicit. Do not create a nonexistent respiratory Ortopneia context, confuse source placement with disease origin, or award alternative subgroup credit without evidence."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10"
+      ],
+      "issue": "R09 — Two light-sensitivity stories could describe ordinary light adaptation.",
+      "evidence": [
+        {
+          "source": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+          "quote": "quando saio de um lugar fechado para um local claro"
+        },
+        {
+          "source": "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10",
+          "quote": "até me acostumar"
+        },
+        {
+          "url": "https://meshb.nlm.nih.gov/record/ui?ui=D020795",
+          "locator": "MeSH 2026 D020795, Scope Note",
+          "accessed": "2026-11-14",
+          "observation": "The MeSH definition specifies abnormal light sensitivity."
+        }
+      ],
+      "requiredChange": "Clarify unusually strong discomfort, intolerance to ordinary light, or another supported abnormal feature. Do not add an etiologic diagnosis. The other eight stories have no additional definite symptom-meaning defect identified in this pass, subject to the shared diversity/provenance findings."
+    },
+    {
+      "severity": "low",
+      "itemIds": [
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09"
+      ],
+      "issue": "R10 — The phrase 'sem força' can mean inability rather than effortless return.",
+      "evidence": [
+        {
+          "source": "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09",
+          "quote": "sem força para expulsá-la"
+        },
+        {
+          "source": "PDF p.9",
+          "observation": "The defining feature is return without vomiting effort."
+        }
+      ],
+      "requiredChange": "Use unambiguous patient language such as return without making an effort. Preserve the other supported symptom details; do not infer reflux disease. Stories 01–08 and 10 are broadly compatible with the intended symptom."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08"
+      ],
+      "issue": "R11 — 'Micções curtas' is both technical patient speech and an ambiguous duration cue.",
+      "evidence": [
+        {
+          "source": "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08",
+          "quote": "várias micções curtas"
+        },
+        {
+          "url": "https://www.ics.org/committees/standardisation/terminologydiscussions/urinaryfrequency",
+          "locator": "Current definition and Controversy; ICS terminology discussion, September 2018",
+          "accessed": "2026-11-14",
+          "observation": "Frequency concerns how often voiding occurs, not how long a void lasts. Small individual voids also do not prove a normal 24-hour total."
+        }
+      ],
+      "requiredChange": "Describe more frequent bathroom trips than usual and a small amount each time in natural speech. Do not turn short duration into the defining feature or invent a urinary infection."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-elementos-gerais-febre-calafrios-story-02",
+        "ic-elementos-gerais-febre-calafrios-story-03",
+        "ic-elementos-gerais-febre-calafrios-story-05",
+        "ic-elementos-gerais-febre-calafrios-story-06",
+        "ic-elementos-gerais-febre-calafrios-story-07",
+        "ic-elementos-gerais-febre-calafrios-story-08",
+        "ic-elementos-gerais-febre-calafrios-story-10",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-01",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-02",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-03",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-05",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-07",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-09"
+      ],
+      "issue": "R12 — Shared rationales assert details not documented by the individual story.",
+      "evidence": [
+        {
+          "source": "Calafrios shared rationale",
+          "quote": "frio súbito acompanhado de tremores, inclusive apesar de estar agasalhada",
+          "observation": "For example, story 07 contains neither sudden onset nor clothing/blankets. Other listed stories omit one or both details."
+        },
+        {
+          "source": "Polaciúria shared rationale",
+          "quote": "distingue frequência de aumento do volume total",
+          "observation": "Only 04,06,10 explicitly comment on the total amount. The listed seven give small voids without measuring or denying increased daily output."
+        },
+        {
+          "source": "generation snapshot line 183",
+          "observation": "rationale is copied from batch.rationale."
+        }
+      ],
+      "requiredChange": "Write or verify evidence-linked rationales per story. Explain frequency versus total output without claiming a missing negative. Do not change coherent stories merely to force them to match the template."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-elementos-gerais-febre-calafrios-story-01",
+        "ic-elementos-gerais-febre-calafrios-story-02",
+        "ic-elementos-gerais-febre-calafrios-story-03",
+        "ic-elementos-gerais-febre-calafrios-story-04",
+        "ic-elementos-gerais-febre-calafrios-story-05",
+        "ic-elementos-gerais-febre-calafrios-story-06",
+        "ic-elementos-gerais-febre-calafrios-story-07",
+        "ic-elementos-gerais-febre-calafrios-story-08",
+        "ic-elementos-gerais-febre-calafrios-story-09",
+        "ic-elementos-gerais-febre-calafrios-story-10",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-06",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-07",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-08",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-09",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-01",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-02",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-03",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-05",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-06",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-10",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-01",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-02",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-03",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-04",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-05",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-06",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-07",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-08",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-09",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-10",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-01",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-03",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-04",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-05",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-07",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-08",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-09",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-10",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-01",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-02",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-03",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-04",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-05",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-06",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-07",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-08",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-10",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-01",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-02",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-03",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-04",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-05",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-06",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-07",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-09",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-10",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-01",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-02",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-03",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-04",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-05",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-06",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-07",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-08",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-09",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-10"
+      ],
+      "issue": "R13 — Lexical variation is being counted as ten distinct vignettes per context.",
+      "evidence": [
+        {
+          "source": "generation snapshot selected array, lines 13–142",
+          "observation": "Eight manually listed batches of ten sentences; no automatic suffix-padding loop was found. Most variation is synonyms, word order, body side, blanket/light setting or repeated timing phrases."
+        },
+        {
+          "source": "snapshot checks",
+          "observation": "80 unique full texts and 8 unique rationales. The ten menstrual-frequency sentences provide no materially distinct circumstances; urinary stories 01/05/09 repeatedly describe many small voids."
+        }
+      ],
+      "requiredChange": "Keep useful short utterances, but diversify meaningful circumstances, chronology, functional impact and patient phrasing within the supported symptom. Review semantic near-duplicates before claiming ten distinct vignettes. Avoid adding unrelated symptoms or diagnoses to manufacture variety."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-elementos-gerais-febre-calafrios-story-01",
+        "ic-elementos-gerais-febre-calafrios-story-02",
+        "ic-elementos-gerais-febre-calafrios-story-03",
+        "ic-elementos-gerais-febre-calafrios-story-04",
+        "ic-elementos-gerais-febre-calafrios-story-05",
+        "ic-elementos-gerais-febre-calafrios-story-06",
+        "ic-elementos-gerais-febre-calafrios-story-07",
+        "ic-elementos-gerais-febre-calafrios-story-08",
+        "ic-elementos-gerais-febre-calafrios-story-09",
+        "ic-elementos-gerais-febre-calafrios-story-10",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-06",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-07",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-08",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-09",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-01",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-02",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-03",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-05",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-06",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-10",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-01",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-02",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-03",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-04",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-05",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-06",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-07",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-08",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-09",
+        "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-10",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-01",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-03",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-04",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-05",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-07",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-08",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-09",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-10",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-01",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-02",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-03",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-04",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-05",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-06",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-07",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-08",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09",
+        "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-10",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-01",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-02",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-03",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-04",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-05",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-06",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-07",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-09",
+        "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-10",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-01",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-02",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-03",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-04",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-05",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-06",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-07",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-08",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-09",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-10"
+      ],
+      "issue": "R14 — Provenance is declared but not independently reproducible from the provided generator.",
+      "evidence": [
+        {
+          "source": "bank generation and every story.generation",
+          "observation": "model=gpt-6-luna and promptVersion=content-bank-v1 are present, with bank date 2026-11-14. They are declared labels, not verified execution metadata."
+        },
+        {
+          "source": "generation snapshot lines 4–11,173–197",
+          "observation": "The script serializes hard-coded text, reads a temporary inventory path, and contains no model call, prompt body or model-version/run evidence. Its claim of checking every description is weakened by R01."
+        },
+        {
+          "source": "all 80 story source fields",
+          "observation": "The pages match the definitions: 1,1,3,3,4,9,10,12 by batch. These are definition sources, not published patient narratives."
+        }
+      ],
+      "requiredChange": "Retain the declared generator label, mark unavailable model version/run/prompt details as unknown, and link the actual generation prompt or immutable prompt version if available. Explicitly distinguish synthetic story authorship from the PDF definition source; record input hashes and the applied extraction corrections. Do not claim verified model routing, relative cost, or clinical approval based on these strings."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-cacosmia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia"
+      ],
+      "issue": "R15 — Cacosmia's source wording overlaps modern phantosmia terminology.",
+      "evidence": [
+        {
+          "source": "PDF p.2",
+          "observation": "The draft correctly repairs the extraction of 'um odor', but the handout defines cacosmia as a foul odor absent from the environment."
+        },
+        {
+          "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+          "locator": "What are the smell disorders? Parosmia and Phantosmia",
+          "accessed": "2026-11-14",
+          "observation": "NIDCD distinguishes distortion of an actual odor (parosmia) from odor perception without a stimulus (phantosmia)."
+        }
+      ],
+      "requiredChange": "Preserve the source label and flag its usage. Do not teach 'absent odor' as uniquely identifying cacosmia against modern terminology; add a reviewed terminology note or withhold exclusive discrimination. No phantosmia ID is present in this snapshot, so do not fabricate an acceptedContextId."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-urinario-sem-subgrupo-nocturia",
+        "ic-aparelho-urinario-sem-subgrupo-nicturia"
+      ],
+      "issue": "R16 — A source-specific spelling distinction is being used for two different urinary concepts.",
+      "evidence": [
+        {
+          "source": "PDF p.10",
+          "observation": "Noctúria is waking to urinate; Nictúria is glossed as greater nocturnal urine production."
+        },
+        {
+          "url": "https://www.ics.org/folder/standardisation/current-ics-standardisations/d/ics-report-on-the-terminology-for-nocturia-and-nocturnal-lower-urinary-tract-function-published-15-january-2019/download",
+          "locator": "ICS 2019 terminology report, Table 1; §3.1 Nocturia; §4.2 Nocturnal polyuria",
+          "accessed": "2026-11-14",
+          "observation": "The ICS standard distinguishes waking/voiding during the main sleep period from nocturnal polyuria. It does not establish the handout's Portuguese spelling contrast as a universal clinical rule."
+        }
+      ],
+      "requiredChange": "Keep the transcription but flag the nomenclature for Portuguese clinical adjudication. Label increased nocturnal production explicitly as nocturnal polyuria in reviewed teaching, and do not score the spelling contrast as universally diagnostic. Volume claims need volume evidence."
+    },
+    {
+      "severity": "high",
+      "itemIds": [
+        "ic-aparelho-genital-masculino-sem-subgrupo-priapismo"
+      ],
+      "issue": "R17 — The source definition risks requiring pain for all priapism.",
+      "evidence": [
+        {
+          "source": "PDF p.11",
+          "quote": "é uma emergência, dolorosa e prolongada",
+          "observation": "The source merges emergency advice and a universal-sounding pain description."
+        },
+        {
+          "url": "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/priapism",
+          "locator": "§10.1.3 acute ischaemic emergency; §10.3.2.a non-ischaemic history; §10.3.3.d",
+          "accessed": "2026-11-14",
+          "observation": "EAU distinguishes acute ischaemic emergency from non-ischaemic presentations that may lack pain."
+        }
+      ],
+      "requiredChange": "Preserve urgent assessment messaging for a persistent erection while removing pain as a necessary identifying feature. Separate the symptom definition from subtype-specific emergency information. Withhold universal pain-based distractor rules pending clinical review."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-aparelho-digestorio-sem-subgrupo-habito-intestinal-normal",
+        "ic-aparelho-digestorio-sem-subgrupo-obstipacao-intestinal"
+      ],
+      "issue": "R18 — The handout's bowel-frequency parenthesis is not a reliable normality rule.",
+      "evidence": [
+        {
+          "source": "PDF p.9",
+          "quote": "3x no banheiro em até 3 dias",
+          "observation": "The wording is ambiguous and cannot establish normal bowel function by itself."
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/constipation/symptoms-causes",
+          "locator": "What are the symptoms of constipation?",
+          "accessed": "2026-11-14",
+          "observation": "NIDDK describes constipation using stool consistency, difficulty, incomplete evacuation and frequency, rather than a single normal count."
+        }
+      ],
+      "requiredChange": "Retain the original text with an explicit warning; use a reviewed bowel-history definition and avoid a single count-only scoring key. Do not infer normality from this parenthesis."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao",
+        "ic-aparelho-endocrinologico-sem-subgrupo-rouquidao"
+      ],
+      "issue": "R19 — The handout's partial-loss wording blurs voice categories.",
+      "evidence": [
+        {
+          "source": "PDF p.2",
+          "observation": "Afonia includes partial loss; Disfonia is any voice alteration; Rouquidão is itself a type of voice alteration."
+        },
+        {
+          "url": "https://www.asha.org/practice-portal/clinical-topics/voice-disorders/",
+          "locator": "Signs and Symptoms; dysphonia and aphonia",
+          "accessed": "2026-11-14",
+          "observation": "ASHA describes aphonia as loss of voice and dysphonia through altered voice characteristics."
+        }
+      ],
+      "requiredChange": "Adjudicate overlapping and more specific labels before creating exclusive choices. Preserve the source wording; do not mark a broader coherent dysphonia answer wrong without an explicit most-specific-term rule."
+    },
+    {
+      "severity": "medium",
+      "itemIds": [
+        "ic-elementos-gerais-febre-sudorese",
+        "ic-elementos-gerais-febre-prurido",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-fadiga",
+        "ic-elementos-gerais-alteracoes-de-peso-perda-ou-ganho-astenia",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-dor-ocular",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-acuidade-visual",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-escotomas",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-diplopia",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-turvacao-visual",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-xantopsia",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-amaurose",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-otalgia",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-otorragia",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-acuidade-auditiva",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-zumbidos",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-secrecao",
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-vertigem",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-dor",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-esternutos",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-obstrucao-nasal",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinorreia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-secrecoes",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-epistaxe",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinolalia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-cacosmia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-anosmia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiposmia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-hiperosmia",
+        "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-parosmia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-afonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-disfonia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rouquidao",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-rinolalia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dor",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-dispneia",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-tosse",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-expectoracao",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-hemoptise",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-hemoptoicos",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-chiado-no-peito",
+        "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-cianose",
+        "ic-aparelho-cardiovascular-sem-subgrupo-dor",
+        "ic-aparelho-cardiovascular-sem-subgrupo-palpitacao",
+        "ic-aparelho-cardiovascular-sem-subgrupo-dispneia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-flexopneia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-dispneia-paroxistica-noturna",
+        "ic-aparelho-cardiovascular-sem-subgrupo-platipneia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-astenia",
+        "ic-aparelho-cardiovascular-sem-subgrupo-edema",
+        "ic-aparelho-cardiovascular-sem-subgrupo-cianose",
+        "ic-aparelho-cardiovascular-sem-subgrupo-tosse",
+        "ic-aparelho-cardiovascular-sem-subgrupo-expectoracao",
+        "ic-aparelho-vascular-periferico-sem-subgrupo-claudicacao-intermitente",
+        "ic-aparelho-vascular-periferico-sem-subgrupo-palidez",
+        "ic-aparelho-vascular-periferico-sem-subgrupo-cianose",
+        "ic-aparelho-vascular-periferico-sem-subgrupo-edema",
+        "ic-aparelho-vascular-periferico-sem-subgrupo-alteracao-de-temperatura",
+        "ic-aparelho-vascular-periferico-sem-subgrupo-varizes",
+        "ic-aparelho-neurologico-sem-subgrupo-cefaleia",
+        "ic-aparelho-neurologico-sem-subgrupo-tontura",
+        "ic-aparelho-neurologico-sem-subgrupo-vertigem",
+        "ic-aparelho-neurologico-sem-subgrupo-lipotimia",
+        "ic-aparelho-neurologico-sem-subgrupo-sincope",
+        "ic-aparelho-neurologico-disturbios-da-consciencia-obnubilacao",
+        "ic-aparelho-neurologico-disturbios-da-consciencia-coma",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-paresias",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-paralisias",
+        "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-anestesias",
+        "ic-aparelho-neurologico-movimentos-involuntarios-convulsoes",
+        "ic-aparelho-neurologico-disturbios-das-funcoes-cerebrais-superiores-disartria",
+        "ic-aparelho-neurologico-disturbios-das-funcoes-cerebrais-superiores-disritmolalia",
+        "ic-aparelho-neurologico-disturbios-das-funcoes-cerebrais-superiores-dislexia",
+        "ic-aparelho-neurologico-disturbios-das-funcoes-cerebrais-superiores-disgrafia",
+        "ic-aparelho-neurologico-disturbios-das-funcoes-cerebrais-superiores-afasias",
+        "ic-aparelho-neurologico-transtornos-de-memoria-e-do-sono-ronco",
+        "ic-aparelho-neurologico-transtornos-de-memoria-e-do-sono-apneia",
+        "ic-aparelho-psiquico-sem-subgrupo-alteracoes-de-humor",
+        "ic-aparelho-psiquico-sem-subgrupo-labilidade-emocional",
+        "ic-aparelho-psiquico-sem-subgrupo-tristeza",
+        "ic-aparelho-psiquico-sem-subgrupo-euforia",
+        "ic-aparelho-psiquico-sem-subgrupo-ansiedade",
+        "ic-pele-sem-subgrupo-dor",
+        "ic-pele-sem-subgrupo-prurido",
+        "ic-pele-sem-subgrupo-edema",
+        "ic-pele-sem-subgrupo-nodulos",
+        "ic-pele-sem-subgrupo-nevos",
+        "ic-pele-sem-subgrupo-lesoes",
+        "ic-pele-sem-subgrupo-pelos",
+        "ic-pele-sem-subgrupo-unhas",
+        "ic-pele-sem-subgrupo-cabelos-faneros",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-dor-ossos-musculos-articulacoes-coluna-vertebral",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-rigidez",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-crepitacao",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-nodulos",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-sinais-flogisticos",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-deformidades",
+        "ic-aparelho-mio-osteo-articular-sem-subgrupo-limitacoes-funcionais",
+        "ic-aparelho-endocrinologico-sem-subgrupo-rouquidao",
+        "ic-aparelho-endocrinologico-sem-subgrupo-dor",
+        "ic-aparelho-endocrinologico-sem-subgrupo-hipersensibilidade",
+        "ic-aparelho-endocrinologico-sem-subgrupo-calor",
+        "ic-aparelho-endocrinologico-sem-subgrupo-frio",
+        "ic-aparelho-endocrinologico-sem-subgrupo-tremor",
+        "ic-aparelho-endocrinologico-sem-subgrupo-irritabilidade",
+        "ic-aparelho-endocrinologico-sem-subgrupo-insonia-sonolencia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-palpitacoes",
+        "ic-aparelho-endocrinologico-sem-subgrupo-apatia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-astenia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-exoftalmia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-perda-de-peso",
+        "ic-aparelho-endocrinologico-sem-subgrupo-poliuria",
+        "ic-aparelho-endocrinologico-sem-subgrupo-polidipsia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-polifagia",
+        "ic-aparelho-endocrinologico-sem-subgrupo-hirsutismo",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-astenia",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-linfonodomegalias",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-hemorragias",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-petequias",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-equimoses",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-hematoma",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-hematuria",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-gengivorragia",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-enterorragia",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-dor",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-ictericia",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-palidez",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-nodulos",
+        "ic-aparelho-hemolinfopoietico-sem-subgrupo-edema",
+        "ic-aparelho-digestorio-sem-subgrupo-dentes",
+        "ic-aparelho-digestorio-sem-subgrupo-disfagia",
+        "ic-aparelho-digestorio-sem-subgrupo-odinofagia",
+        "ic-aparelho-digestorio-sem-subgrupo-sialorreia",
+        "ic-aparelho-digestorio-sem-subgrupo-sialoquiese",
+        "ic-aparelho-digestorio-sem-subgrupo-dor-abdominal",
+        "ic-aparelho-digestorio-sem-subgrupo-pirose",
+        "ic-aparelho-digestorio-sem-subgrupo-eructacao",
+        "ic-aparelho-digestorio-sem-subgrupo-halitose",
+        "ic-aparelho-digestorio-sem-subgrupo-nausea",
+        "ic-aparelho-digestorio-sem-subgrupo-vomito",
+        "ic-aparelho-digestorio-sem-subgrupo-habito-intestinal-normal",
+        "ic-aparelho-digestorio-sem-subgrupo-diarreia",
+        "ic-aparelho-digestorio-sem-subgrupo-flatulencia",
+        "ic-aparelho-digestorio-sem-subgrupo-obstipacao-intestinal",
+        "ic-aparelho-digestorio-sem-subgrupo-hematemese",
+        "ic-aparelho-digestorio-sem-subgrupo-melena",
+        "ic-aparelho-digestorio-sem-subgrupo-enterorragia",
+        "ic-aparelho-digestorio-sem-subgrupo-hematoquezia",
+        "ic-aparelho-digestorio-sem-subgrupo-proctorragia",
+        "ic-aparelho-digestorio-sem-subgrupo-ictericia",
+        "ic-aparelho-digestorio-sem-subgrupo-incontinencia-fecal",
+        "ic-aparelho-digestorio-sem-subgrupo-acolia-fecal",
+        "ic-aparelho-urinario-sem-subgrupo-dor-abdominal-lombar",
+        "ic-aparelho-urinario-sem-subgrupo-cor-e-odor-da-urina",
+        "ic-aparelho-urinario-sem-subgrupo-urina-turva",
+        "ic-aparelho-urinario-sem-subgrupo-hematuria",
+        "ic-aparelho-urinario-sem-subgrupo-coluria",
+        "ic-aparelho-urinario-sem-subgrupo-poliuria",
+        "ic-aparelho-urinario-sem-subgrupo-oliguria",
+        "ic-aparelho-urinario-sem-subgrupo-anuria",
+        "ic-aparelho-urinario-sem-subgrupo-dissuria",
+        "ic-aparelho-urinario-sem-subgrupo-alguria",
+        "ic-aparelho-urinario-sem-subgrupo-nocturia",
+        "ic-aparelho-urinario-sem-subgrupo-nicturia",
+        "ic-aparelho-urinario-sem-subgrupo-incontinencia-urinaria",
+        "ic-aparelho-urinario-sem-subgrupo-edema",
+        "ic-aparelho-genital-masculino-sem-subgrupo-alteracoes-do-jato-urinario",
+        "ic-aparelho-genital-masculino-sem-subgrupo-dor",
+        "ic-aparelho-genital-masculino-sem-subgrupo-secrecao-uretral",
+        "ic-aparelho-genital-masculino-sem-subgrupo-priapismo",
+        "ic-aparelho-genital-masculino-sem-subgrupo-disfuncao-eretil",
+        "ic-aparelho-genital-masculino-sem-subgrupo-ejaculacao-precoce",
+        "ic-aparelho-genital-masculino-sem-subgrupo-diminuicao-da-libido",
+        "ic-aparelho-genital-masculino-sem-subgrupo-mamas",
+        "ic-aparelho-genital-masculino-sem-subgrupo-ginecomastia",
+        "ic-aparelho-genital-feminino-sem-subgrupo-ciclo-menstrual",
+        "ic-aparelho-genital-feminino-sem-subgrupo-menarca",
+        "ic-aparelho-genital-feminino-sem-subgrupo-coitarca",
+        "ic-aparelho-genital-feminino-sem-subgrupo-telarca",
+        "ic-aparelho-genital-feminino-sem-subgrupo-menopausa",
+        "ic-aparelho-genital-feminino-sem-subgrupo-climaterio",
+        "ic-aparelho-genital-feminino-sem-subgrupo-leucorreia",
+        "ic-aparelho-genital-feminino-sem-subgrupo-prurido",
+        "ic-aparelho-genital-feminino-sem-subgrupo-disfuncoes-sexuais",
+        "ic-aparelho-genital-feminino-sem-subgrupo-dispareunia",
+        "ic-aparelho-genital-feminino-sem-subgrupo-diminuicao-da-libido",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-normal",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-infrequente",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-prolongado",
+        "ic-aparelho-genital-feminino-disturbios-menstruais-fluxo-encurtado",
+        "ic-aparelho-genital-feminino-mamas-presenca-e-aspecto",
+        "ic-aparelho-genital-feminino-mamas-dor",
+        "ic-aparelho-genital-feminino-mamas-secrecao",
+        "ic-aparelho-genital-feminino-mamas-nodulo",
+        "ic-aparelho-genital-feminino-mamas-alteracoes-da-pele"
+      ],
+      "issue": "R20 — This is an incomplete snapshot, not a complete reviewed release.",
+      "evidence": [
+        {
+          "source": "snapshot counts",
+          "observation": "204 contexts, 80 stories, 8 contexts with 10 stories, 196 contexts with none; declared target 2040, shortfall 1960. All 204 originalDescription fields exist but are not independently reviewed playable story items."
+        },
+        {
+          "source": "bank review and coverage",
+          "observation": "status=draft; clinicalReview=not-recorded; approvedStories=0. These conservative flags are appropriate."
+        }
+      ],
+      "requiredChange": "Keep the bank withheld. Generate and independently review the remaining eligible contexts after taxonomy adjudication; review all later additions under a new hash. Do not treat this review or an originalDescription field as approval or as ten-story coverage."
+    }
+  ],
+  "reviewedStoryIds": [
+    "ic-elementos-gerais-febre-calafrios-story-01",
+    "ic-elementos-gerais-febre-calafrios-story-02",
+    "ic-elementos-gerais-febre-calafrios-story-03",
+    "ic-elementos-gerais-febre-calafrios-story-04",
+    "ic-elementos-gerais-febre-calafrios-story-05",
+    "ic-elementos-gerais-febre-calafrios-story-06",
+    "ic-elementos-gerais-febre-calafrios-story-07",
+    "ic-elementos-gerais-febre-calafrios-story-08",
+    "ic-elementos-gerais-febre-calafrios-story-09",
+    "ic-elementos-gerais-febre-calafrios-story-10",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-01",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-02",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-03",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-04",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-05",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-06",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-07",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-08",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-09",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-fotofobia-story-10",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-01",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-02",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-03",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-04",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-05",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-06",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-07",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-08",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-09",
+    "ic-aparelho-respiratorio-laringe-faringe-sem-subgrupo-trepopneia-story-10",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-01",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-02",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-03",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-04",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-05",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-06",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-07",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-08",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-09",
+    "ic-aparelho-cardiovascular-sem-subgrupo-ortopneia-story-10",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-01",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-02",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-03",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-04",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-05",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-06",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-07",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-08",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-09",
+    "ic-aparelho-neurologico-disturbios-da-motricidade-voluntaria-e-da-sensibilidade-parestesias-story-10",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-01",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-02",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-03",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-04",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-05",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-06",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-07",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-08",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-09",
+    "ic-aparelho-digestorio-sem-subgrupo-regurgitacao-story-10",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-01",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-02",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-03",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-04",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-05",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-06",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-07",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-08",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-09",
+    "ic-aparelho-urinario-sem-subgrupo-polaciuria-story-10",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-01",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-02",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-03",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-04",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-05",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-06",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-07",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-08",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-09",
+    "ic-aparelho-genital-feminino-disturbios-menstruais-sangramento-frequente-story-10"
+  ],
+  "disposition": "needs-revision",
+  "clinicalApproval": false
+}
