@@ -1,0 +1,1599 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "interrogatorio-batch-009",
+  "status": "completed-independent-review",
+  "completedAt": "2026-11-15T21:39:51.978Z",
+  "clinicalApproval": false,
+  "releaseAuthorized": false,
+  "reviewer": {
+    "modelFamilyDeclaredBySession": "Claude (Anthropic)",
+    "executionIdentity": "Claude Code subagent started with fresh context by a parent agent session",
+    "exactModelVersion": "claude-fable-5-2",
+    "runId": "unknown",
+    "role": "independent model reviewer; not a clinician and not clinical approver",
+    "independence": "No authoring or editing of the reviewed stories. Fresh context: no access to the generation conversation or to earlier review conversations; the batch-003 and batch-005 reports/markdown and the batch-003 generator script were read only as the output contract (structure and hashing), not for verdicts.",
+    "identityBasis": "Model name and ID as stated by the session environment to the reviewer; not independently verifiable from inside the run.",
+    "researchSkill": {
+      "used": false,
+      "note": "No research skill loaded. The two external sources were downloaded with curl in this run and read verbatim from the saved responses (NLM linked-data JSON; Moorfields page HTML)."
+    }
+  },
+  "input": {
+    "path": "content/batches/interrogatorio-next-01.json",
+    "sha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+    "byteLength": 693124,
+    "capturedAt": "2026-11-15T21:39:51.908Z",
+    "selection": {
+      "jsonPointer": "/stories",
+      "startIndexInclusive": 40,
+      "endIndexExclusive": 45,
+      "orderedStoryIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ]
+    },
+    "totalStoriesInBatch": 200,
+    "baseInventory": {
+      "path": "content/drafts/interrogatorio.json",
+      "sha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+      "byteLength": 1602010,
+      "contextCount": 204,
+      "declaredBaseSha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+      "declaredHashMatches": true,
+      "scope": "Context definitions and answer policy; no base stories reviewed."
+    },
+    "sourcePdf": {
+      "path": "/Users/math/Downloads/Interrogatorio complementar.pdf",
+      "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+      "byteLength": 87652,
+      "documentMetadata": {
+        "id": "interrogatorio-complementar-2026",
+        "filename": "Interrogatorio complementar.pdf",
+        "pages": 12,
+        "sha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de"
+      },
+      "declaredHashMatches": true,
+      "inspection": "Text of p.1, p.2, p.11 and p.12 extracted in this run (macOS PDFKit) and the Secreção, Epífora, Xantopsia, auditory Secreção, Rinorreia, nasal Secreções, Secreção uretral and breast Secreção lines read. No visual page inspection: page rendering tools were unavailable. No whole-PDF inspection claimed."
+    },
+    "priorReview": {
+      "path": "content/reviews/interrogatorio-batch-003.json",
+      "sha256": "46fa9d399b6e0df4c1b5418055829109640749ef4565340c97a6a99a2bc879ce",
+      "use": "Output contract only; no retro-edit and no inherited story disposition."
+    },
+    "originalBatchMetadata": {
+      "generation": {
+        "model": "unknown",
+        "modelRequested": "gpt6luna",
+        "executionVersion": "unknown",
+        "promptVersion": "interrogatorio-next-01",
+        "date": "2026-11-15",
+        "metadataBasis": "Modelo solicitado pelo usuário; versão de execução indisponível.",
+        "authorship": "synthetic-patient-voice"
+      },
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded",
+        "independentReview": "not-recorded",
+        "clinicalApproval": false,
+        "editorialApproval": false
+      }
+    }
+  },
+  "scope": {
+    "storiesReviewed": 5,
+    "sourceArrayIndices": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "outputPaths": [
+      "content/reviews/interrogatorio-batch-009.json",
+      "docs/reviews/interrogatorio-batch-009.md"
+    ],
+    "outOfScopeStories": 195,
+    "storiesModified": false,
+    "appImported": false,
+    "committed": false,
+    "pushed": false,
+    "prototypeMeaning": "Eligible for a future source-based educational prototype after integrity checks; not clinical approval or app-import authorization in this review. Held stories are not eligible."
+  },
+  "counts": {
+    "stories": 5,
+    "read": 5,
+    "semanticallyReviewed": 5,
+    "modelReviewed": 3,
+    "needsRevision": 2,
+    "hold": 2,
+    "prototypeEligible": 3,
+    "clinicalApproved": 0,
+    "acceptedPaths": 5,
+    "distinctAcceptedContexts": 1,
+    "distinctAcceptedTerms": 1,
+    "partialCreditPaths": 0,
+    "blockingFindings": 2,
+    "nonBlockingFindings": 6,
+    "pendingWithinScope": 2
+  },
+  "reviewedStoryIds": [
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+  ],
+  "modelReviewedStoryIds": [
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04"
+  ],
+  "heldStoryIds": [
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+  ],
+  "prototypeEligibleStoryIds": [
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+    "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04"
+  ],
+  "answerPolicy": {
+    "mode": "all-source-supported-coherent-paths",
+    "sourceHierarchyMeaning": "Printed group/subgroup locates the entry; APARELHO OCULAR does not establish eye disease or cause.",
+    "fullCredit": "All equally supported coherent paths receive full credit; contextId is editorial organization only.",
+    "scoringRule": {
+      "fullCredit": "+10 per accepted stage in a supported coherent path.",
+      "partialCredit": "+5 only for a valid subgroup in another context, explicitly mapped and evidenced for the same concept.",
+      "incorrect": "−5 per incorrect answered stage.",
+      "coherence": "Do not combine fields from different accepted paths.",
+      "thisBatch": "One recorded full-credit path per story (ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção). Zero evidenced alternative subgroups; no partial-credit paths. For the two held stories the reviewer could not confirm that this is the only full-credit path (Epífora).",
+      "clinicalSubgroupScoring": "not approved; documentary classification only"
+    },
+    "negatives": "Silence is unknown, not clinical exclusion.",
+    "hintPolicy": "Do not expose organizer IDs, source locators, evidence or accepted-answer count as hints."
+  },
+  "termInventory": [
+    {
+      "termId": "secrecao",
+      "term": "Secreção",
+      "namespace": "review-derived-normalized-term-slug",
+      "derivation": "Lowercase unaccented source label. Base contexts have no separate termId; this is an explicit review identifier, not an existing app ID or a new source context. The label is shared by three source contexts; only the ocular one is in scope.",
+      "sourceContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "sameTermContextNotAccepted": [
+        "ic-orgaos-dos-sentidos-aparelho-auditivo-secrecao",
+        "ic-aparelho-genital-feminino-mamas-secrecao"
+      ],
+      "overlappingTermContextsUnderAdjudication": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-epifora"
+      ],
+      "externalDescriptorId": null,
+      "externalDecsId": null,
+      "clinicalScope": "Material or fluid noticed at the eye; the source gives no definition, only the instruction to note appearance and amount. No external descriptor for eye discharge was opened in this review; MeSH Tears (D013666) was read only for the tears/secretion boundary."
+    }
+  ],
+  "contextInventory": [
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "term": "Secreção",
+      "group": "ÓRGÃOS DOS SENTIDOS",
+      "subgroup": "APARELHO OCULAR:",
+      "originalDescription": "anotar aspecto e quantidade",
+      "source": {
+        "documentId": "interrogatorio-complementar-2026",
+        "page": 1,
+        "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+      },
+      "notes": [
+        "A extração auxiliar agrupou quebras de linha e espaços para formar a descrição; grafia e conteúdo foram preservados."
+      ],
+      "sourceHierarchy": {
+        "group": "ÓRGÃOS DOS SENTIDOS",
+        "subgroup": "APARELHO OCULAR:",
+        "term": "Secreção"
+      },
+      "entryType": "symptom-or-sign",
+      "storyEligibility": {
+        "status": "eligible-draft",
+        "targetStories": 10,
+        "reason": "Entrada descreve manifestação ou achado; elegibilidade editorial provisória não certifica a definição nem aprova histórias."
+      },
+      "sourceCautions": [
+        "A hierarquia localiza a entrada na apostila; não comprova etiologia. Associações e exemplos de doenças no original não são critérios diagnósticos."
+      ],
+      "review": {
+        "status": "draft",
+        "clinicalReview": "not-recorded"
+      }
+    }
+  ],
+  "inventoryAssessment": {
+    "contextCount": 204,
+    "inventoryPath": "content/drafts/interrogatorio.json",
+    "inventorySha256": "77c6ceda3a83c7d917e21cff13ad725e0bdf716c6737d30ba685756107b4349e",
+    "method": "All 204 contexts (group, subgroup, term, original description) listed and read in this run; lexical search for discharge/tear/eye/liquid/colour wording (secreção, lágrima, lacrimejamento, olho, líquido, corrimento, amarelada, esbranquiçada, catarro, muco, coriza); overlapping definitions reread in full and compared with each of the five utterances. The Epífora, ocular Secreção, auditory Secreção and Rinorreia stories of this batch were listed to see how the same wording is mapped (precedent only; not reviewed). Repeated 204-ID list omitted.",
+    "sameTermContexts": [
+      "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "ic-orgaos-dos-sentidos-aparelho-auditivo-secrecao",
+      "ic-aparelho-genital-feminino-mamas-secrecao"
+    ],
+    "candidateContexts": [
+      {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "term": "Secreção",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+        },
+        "originalDescription": "anotar aspecto e quantidade"
+      },
+      {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+        "term": "Epífora",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora"
+        },
+        "originalDescription": "lacrimejamento, excesso de lágrimas mais que o normal"
+      },
+      {
+        "id": "ic-orgaos-dos-sentidos-aparelho-auditivo-secrecao",
+        "term": "Secreção",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 2,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO AUDITIVO > Secreção"
+        },
+        "originalDescription": "descrever cor, aspecto, quantidade e odor"
+      },
+      {
+        "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-secrecoes",
+        "term": "Secreções",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 2,
+          "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Secreções"
+        },
+        "originalDescription": "descrever a secreção, caso presente, incluir aspecto e quantidade"
+      },
+      {
+        "id": "ic-orgaos-dos-sentidos-nariz-e-seios-paranasais-rinorreia",
+        "term": "Rinorreia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 2,
+          "locator": "ÓRGÃOS DOS SENTIDOS > NARIZ E SEIOS PARANASAIS: > Rinorreia"
+        },
+        "originalDescription": "Coriza, nariz escorrendo"
+      },
+      {
+        "id": "ic-aparelho-genital-feminino-mamas-secrecao",
+        "term": "Secreção",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 12,
+          "locator": "APARELHO GENITAL FEMININO > MAMAS > Secreção"
+        },
+        "originalDescription": "saída de líquido pelo mamilo."
+      },
+      {
+        "id": "ic-aparelho-genital-masculino-sem-subgrupo-secrecao-uretral",
+        "term": "Secreção uretral",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 11,
+          "locator": "APARELHO GENITAL MASCULINO > Secreção uretral"
+        },
+        "originalDescription": "saída de líquido ou secreção pelo canal da urina."
+      },
+      {
+        "id": "ic-aparelho-genital-feminino-sem-subgrupo-leucorreia",
+        "term": "Leucorreia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 11,
+          "locator": "APARELHO GENITAL FEMININO > Leucorreia"
+        },
+        "originalDescription": "corrimento vaginal; pergunte sobre cor,  cheiro e quantidade."
+      },
+      {
+        "id": "ic-aparelho-hemolinfopoietico-sem-subgrupo-ictericia",
+        "term": "Icterícia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 8,
+          "locator": "APARELHO HEMOLINFOPOIÉTICO > Icterícia"
+        },
+        "originalDescription": "coloração amarelada da pele, dos olhos ou das mucosas."
+      },
+      {
+        "id": "ic-aparelho-digestorio-sem-subgrupo-ictericia",
+        "term": "Icterícia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 9,
+          "locator": "APARELHO DIGESTÓRIO > Icterícia"
+        },
+        "originalDescription": "coloração amarelada da pele ou dos olhos  ."
+      },
+      {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-xantopsia",
+        "term": "Xantopsia",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Xantopsia"
+        },
+        "originalDescription": "Enxergar as coisas com uma tonalidade amarelada."
+      }
+    ],
+    "decisions": [
+      {
+        "candidate": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção",
+        "result": "supportable-in-all-five",
+        "reason": "Every utterance names the eye and reports material or fluid there with appearance and/or amount, which is what the source line asks the interviewer to note. For indices 41 and 44 the path is supportable but not shown to be the only one."
+      },
+      {
+        "candidate": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora",
+        "storyIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+        ],
+        "result": "candidate-for-adjudication",
+        "reason": "Source: “lacrimejamento, excesso de lágrimas mais que o normal”. Index 41 describes transparent liquid at the corner of the eye without calling it a discharge (strong on “lacrimejamento”; excess not stated). Index 44 describes a little clear “secreção” leaving the corner of the eyes without running down the face (moderate). The batch's own Epífora stories describe tears with the same adjectives and accept both terms."
+      },
+      {
+        "candidate": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora",
+        "storyIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04"
+        ],
+        "result": "not-supported-by-these-utterances",
+        "reason": "Indices 40, 42 and 43 describe whitish matter washed off in the morning, yellowish matter stuck to the lashes, and thick matter wiped with a tissue. None is tears or a watering eye, and no excess of tears is stated."
+      },
+      {
+        "candidate": "APARELHO AUDITIVO > Secreção; NARIZ E SEIOS PARANASAIS > Secreções and Rinorreia; MAMAS > Secreção; APARELHO GENITAL MASCULINO > Secreção uretral; APARELHO GENITAL FEMININO > Leucorreia",
+        "result": "not-supported-by-these-utterances",
+        "reason": "Each of these entries concerns another site (ear, nose, nipple, urethra, vagina). All five utterances place the material at the eye, the eyes, the corner of the eye or the lashes; none mentions another site. Tears draining to the nose are not described."
+      },
+      {
+        "candidate": "APARELHO HEMOLINFOPOIÉTICO > Icterícia; APARELHO DIGESTÓRIO > Icterícia; APARELHO OCULAR: > Xantopsia",
+        "storyIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03"
+        ],
+        "result": "not-supported-by-this-utterance",
+        "reason": "“Amarelada” qualifies the discharge stuck to the lashes. The utterance does not say the eye, the skin or a mucosa is yellow, nor that things are seen with a yellow tint."
+      },
+      {
+        "candidate": "APARELHO OCULAR: > Dor ocular, Turvação visual, Fotofobia; APARELHO DIGESTÓRIO > Acolia fecal; Palidez entries",
+        "result": "not-supported-by-these-utterances",
+        "reason": "No pain, blurred vision or light sensitivity is stated. “Esbranquiçada” (index 40) qualifies the eye discharge, not stools, skin or mucosae."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "B009-01",
+      "severity": "blocking-answer-completeness",
+      "scope": "secrecao-ocular-versus-epifora-source-overlap",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02"
+      ],
+      "issue": "Index 41 describes “um líquido transparente no canto do olho direito” for some days, in a small amount, and never uses the word “secreção”. In the source the same subgroup lists Epífora (p.1: “lacrimejamento, excesso de lágrimas mais que o normal”), and the Secreção line (p.1: “anotar aspecto e quantidade”) defines nothing that would separate a discharge from tears. Transparent liquid at the eye is the lay description of tears; this batch itself uses that wording in its Epífora stories (indices 80–89: “Elas são transparentes”, “É um líquido claro”, “água transparente”), which accept Epífora and ocular Secreção together. The story accepts only Secreção.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "quote": "Secreção: anotar aspecto e quantidade"
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora"
+          },
+          "quote": "Epífora: lacrimejamento, excesso de lágrimas mais que o normal"
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 80,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-01",
+          "text": "Meu olho direito fica cheio de lágrimas enquanto estou conversando normalmente. Elas são transparentes e chegam a escorrer pela bochecha, sem eu estar chorando.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 82,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-03",
+          "text": "No meio do almoço, as lágrimas começam a cair sozinhas do olho esquerdo. É um líquido claro, em quantidade que chega ao queixo.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 83,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-04",
+          "text": "Fico em casa quieta e meus olhos continuam soltando lágrimas além do normal. A água transparente escorre e preciso secar o rosto.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        }
+      ],
+      "resolution": "Held. Under the stated policy (all source-supported coherent paths receive full credit) the reviewer cannot confirm that Secreção is the only supported path: the “lacrimejamento” wording of Epífora is reached, while “excesso” is not stated (“só uma pequena quantidade”). The reviewer does not decide between adding Epífora and rewriting; that is a teaching-owner decision.",
+      "referenceIds": [
+        "mesh-tears",
+        "moorfields-epiphora"
+      ],
+      "hold": true,
+      "requiredStoryChange": "Either add APARELHO OCULAR > Epífora as an accepted full-credit path with its own literal evidence, or rewrite the utterance so that what appears in the eye is clearly not tears (for example material that is thick, coloured, sticky or dried, as in indices 40, 42 and 43) and re-review it."
+    },
+    {
+      "id": "B009-02",
+      "severity": "blocking-answer-completeness",
+      "scope": "secrecao-ocular-versus-epifora-source-overlap",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ],
+      "issue": "Index 44 says “sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto”. The keyed answer rests mainly on the literal word “secreção”; the content described is clear fluid leaving the corner of the eyes, which this batch describes as tears in its Epífora stories (“água clarinha”, “gotas claras”, “São claras, sem nada grosso misturado”). The utterance negates only overflow onto the face, which the source description of Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) does not require. “Um pouco” and “às vezes” argue against excess.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "quote": "Secreção: anotar aspecto e quantidade"
+        },
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora"
+          },
+          "quote": "Epífora: lacrimejamento, excesso de lágrimas mais que o normal"
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 81,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-02",
+          "text": "Tenho de enxugar os dois olhos várias vezes quando leio. Sai tanta água clarinha que o lenço fica molhado, mesmo sem emoção ou choro.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 84,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-05",
+          "text": "Mesmo sem estar triste, meu olho enche de lágrima e transborda. São várias gotas claras ao longo da manhã.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 87,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-08",
+          "text": "O olho esquerdo anda sempre com lágrimas na borda, e de tempos em tempos elas caem na bochecha. São claras, sem nada grosso misturado.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        }
+      ],
+      "resolution": "Held as doubtful rather than passed with a caution: Epífora is less supported than at index 41, but the reviewer could not affirm that the utterance clearly and only matches Secreção. Not decided by the reviewer.",
+      "referenceIds": [
+        "mesh-tears",
+        "moorfields-epiphora"
+      ],
+      "hold": true,
+      "requiredStoryChange": "Either record an explicit teaching decision that clear, non-overflowing fluid called “secreção” scores Secreção only (and Epífora as incorrect), or add Epífora as an accepted path, or rewrite the aspect so the material is clearly not tears, and re-review it."
+    },
+    {
+      "id": "B009-03",
+      "severity": "non-blocking-terminology-caution",
+      "scope": "source-versus-general-definition",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ],
+      "issue": "A linha da apostila para APARELHO OCULAR > Secreção (“anotar aspecto e quantidade”, p.1) é uma instrução de registro, não uma definição: não diz o que conta como secreção ocular. O MeSH (D013666, Tears) descreve a lágrima como “The fluid secreted by the lacrimal glands”, isto é, a lágrima é ela própria uma secreção, e a apostila lista Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) como entrada separada no mesmo subgrupo. A classificação aqui é descritiva e fonte-específica: não certifica causa, infecção, conjuntivite nem qualquer doença ocular.",
+      "resolution": "Accept source-based descriptive recognition for the passing items. Cause, infection and any underlying eye condition remain unestablished.",
+      "referenceIds": [
+        "mesh-tears"
+      ],
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B009-04",
+      "severity": "non-blocking-source-context-caution",
+      "scope": "documentary-heading",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ],
+      "issue": "APARELHO OCULAR: is the printed subgroup (under ÓRGÃOS DOS SENTIDOS, numbered 2.1 in the PDF) where the source lists Secreção. It is a documentary placement, not a clinical conclusion about eye disease.",
+      "evidence": [
+        {
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "quote": "Secreção: anotar aspecto e quantidade"
+        }
+      ],
+      "resolution": "Keep the literal source mapping and distinguish it from an ophthalmological diagnosis.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B009-05",
+      "severity": "non-blocking-cross-batch-consistency-note",
+      "scope": "in-batch-mapping-asymmetry",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ],
+      "issue": "The batch maps the tears/discharge boundary in one direction only: all ten Epífora stories (indices 80–89) accept ocular Secreção as a second full-credit path because they state aspect and quantity of tears, while ocular Secreção stories that describe clear or watery fluid accept Secreção alone. Besides indices 41 and 44, the out-of-scope stories at index 47 (“secreção transparente”) and index 49 (“secreção aquosa”) have the same pattern.",
+      "evidence": [
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 80,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora-story-01",
+          "text": "Meu olho direito fica cheio de lágrimas enquanto estou conversando normalmente. Elas são transparentes e chegam a escorrer pela bochecha, sem eu estar chorando.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 47,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-08",
+          "text": "Depois de passar algumas horas fora, encontrei secreção transparente acumulada no canto dos olhos.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        },
+        {
+          "path": "content/batches/interrogatorio-next-01.json",
+          "sourceArrayIndex": 49,
+          "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-10",
+          "text": "Notei uma secreção aquosa saindo do canto do olho esquerdo; a quantidade é pequena, mas se repete.",
+          "acceptedContextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+          ]
+        }
+      ],
+      "resolution": "Recorded as context for the held items. Indices 45–49 and 80–89 are outside this review's scope and were not reviewed or modified. A single inventory-level decision on when clear fluid at the eye is Secreção, Epífora or both would resolve the held items consistently.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B009-06",
+      "severity": "non-blocking-editorial-note",
+      "scope": "term-label-in-utterance",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ],
+      "issue": "Indices 40, 42, 43 and 44 contain the word “secreção”, which is both an everyday Portuguese word and the printed label of the keyed term, so the term stage is answered by the utterance itself. The subgroup stage still discriminates: Secreção is also a label under APARELHO AUDITIVO and MAMAS, and the eye is named in every utterance. Index 41 is the only one that avoids the word.",
+      "resolution": "The reviewer found no rule in the repository that forbids a lay word that coincides with the term label, so this is not treated as a blocker. A teaching owner may prefer wording that does not repeat the label; no change required for the passing items.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B009-07",
+      "severity": "non-blocking-answer-completeness-note",
+      "scope": "paths-compared-and-not-accepted",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04"
+      ],
+      "issue": "For the passing items (indices 40, 42, 43) the reviewer compared the other discharge entries of the inventory (auditory Secreção, nasal Secreções, Rinorreia, breast Secreção, Secreção uretral, Leucorreia), Epífora, and for the yellowish discharge of index 42 also Icterícia and Xantopsia.",
+      "resolution": "None is equally supported: every utterance names the eye, the material is whitish, yellowish and stuck to the lashes, or thick (not tears), and “amarelada” qualifies the discharge, not the eye, the skin or vision. A teaching reviewer may still want to confirm that Epífora scores as incorrect for these three.",
+      "hold": false,
+      "requiredStoryChange": null
+    },
+    {
+      "id": "B009-08",
+      "severity": "non-blocking-editorial-note",
+      "scope": "evidence-granularity-and-style",
+      "itemIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05"
+      ],
+      "issue": "In all five stories the recorded evidence quote and focusQuote are the entire utterance and the same stock story-level rationale is used, so the evidence does not isolate which words carry the support. The evidence entries declare definitionBasis “source-description-with-verified-terminology” with an empty referenceIds list. Index 42 states aspect but no quantity; index 43 uses a comparative with no referent (“mais espessa”) and does not say which eye.",
+      "resolution": "Within the stated format rules (lay speech, one sentence, no diagnosis or advice). The source line is an instruction to the interviewer, so a missing quantity is unknown information, not a mismatch. A future metadata repair could narrow focusQuote and attach a terminology reference; no change required for the passing items.",
+      "hold": false,
+      "requiredStoryChange": null
+    }
+  ],
+  "items": [
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+      "stableId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "sourceArrayIndex": 40,
+      "sourceOrdinal": 41,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "holdReasons": [],
+      "prototypeEligible": true,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto.",
+      "textSha256": "02a9463c6e3237e5ff9e9d467e1f381646ec7aa6f4c4f6d08eee67003d71fb72",
+      "storyObjectSha256": "bf2e7a38916ca39b7b47c64158b7093703532623e320d7ad16132bbbc350a8d4",
+      "rawStorySha256": "ffa4d2ade48ea3e522b8af008d023031880a4def41f5cb8ba2549284fe35db9e",
+      "rawStoryByteLength": 2377,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 126754,
+        "byteOffsetEndExclusive": 129131
+      },
+      "reviewedStoryObject": {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-01",
+        "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "text": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto.",
+        "acceptedContextIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+            "quote": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+            },
+            "sourceQuote": "anotar aspecto e quantidade",
+            "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "De manhã encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade, que sai ao lavar o rosto."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "secrecao"
+      ],
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "termId": "secrecao",
+          "term": "Secreção",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "sourceHierarchy": {
+            "group": "ÓRGÃOS DOS SENTIDOS",
+            "subgroup": "APARELHO OCULAR:",
+            "term": "Secreção"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "anotar aspecto e quantidade",
+          "sourceExactLine": "Secreção: anotar aspecto e quantidade",
+          "sourceVerification": "PDF p.1, p.2, p.11 e p.12 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "encontro uma secreção esbranquiçada no canto dos dois olhos, pouca quantidade",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "A linha da apostila para APARELHO OCULAR > Secreção (“anotar aspecto e quantidade”, p.1) é uma instrução de registro, não uma definição: não diz o que conta como secreção ocular. O MeSH (D013666, Tears) descreve a lágrima como “The fluid secreted by the lacrimal glands”, isto é, a lágrima é ela própria uma secreção, e a apostila lista Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) como entrada separada no mesmo subgrupo. A classificação aqui é descritiva e fonte-específica: não certifica causa, infecção, conjuntivite nem qualquer doença ocular.",
+          "referenceIds": [
+            "mesh-tears"
+          ],
+          "rationale": "A fala descreve, em palavras leigas, material ou líquido que aparece no olho, com o aspecto e/ou a quantidade que a entrada-fonte manda anotar. A rubrica APARELHO OCULAR apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "A fala relata material esbranquiçado no canto dos dois olhos, pela manhã, em pouca quantidade, que sai ao lavar o rosto. Traz exatamente o que a entrada da apostila manda registrar em APARELHO OCULAR > Secreção: aspecto (esbranquiçada) e quantidade (pouca). O olho é nomeado, o que localiza a queixa no aparelho ocular. Material esbranquiçado que se acumula no canto do olho e é removido com a lavagem não é descrito como lágrima nem como olho lacrimejando: Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) não tem apoio no texto. Linguagem leiga, uma frase, sem diagnóstico, causa ou conselho. A palavra “secreção” é ao mesmo tempo palavra comum e rótulo do termo (achado B009-06).",
+      "contextDistinctions": {
+        "printedPlacement": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: is the actual source placement; it locates the entry and is not evidence of eye disease.",
+        "clinicalMeaning": "Patient-reported material or fluid at the eye, with its appearance and/or amount; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Epífora: não sustentada (nada líquido, nada escorrendo, nenhum excesso de lágrimas). Secreção do APARELHO AUDITIVO, Secreções do nariz, Secreção das MAMAS, Secreção uretral e Leucorreia exigem outro local; a fala diz “olhos”. “Esbranquiçada” qualifica a secreção, não as fezes (Acolia fecal) nem pele ou mucosas (Palidez). Dor ocular, Turvação visual e Fotofobia não são mencionadas e permanecem desconhecidas."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+        "rationale": "supported-with-separate-terminology-caution",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "One full-credit path (ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção). The other Secreção contexts (APARELHO AUDITIVO, MAMAS), the other discharge entries and Epífora were compared and are not supported by this utterance; no additional source-supported coherent path or partial-credit subgroup identified."
+      },
+      "candidatesForAdjudication": [],
+      "missingOrIncorrectEvidence": [],
+      "findingIds": [
+        "B009-03",
+        "B009-04",
+        "B009-06",
+        "B009-07",
+        "B009-08"
+      ],
+      "blockingFindingIds": [],
+      "stageCandidate": "model-review-complete-no-item-blocker",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+      "stableId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "sourceArrayIndex": 41,
+      "sourceOrdinal": 42,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Answer completeness unresolved: the utterance never says “secreção”; it describes “um líquido transparente no canto do olho direito”, the lay description of tears, which reaches the “lacrimejamento” wording of APARELHO OCULAR > Epífora. The story accepts only Secreção and records no reason for leaving Epífora out.",
+        "In-batch precedent: the Epífora stories of this same batch (indices 80–89) describe tears with the same adjectives (“Elas são transparentes”, “É um líquido claro”, “água transparente”) and accept Epífora together with ocular Secreção; the double mapping is not applied in the reverse direction here.",
+        "Excess is not stated (“só uma pequena quantidade”), so the reviewer cannot affirm that Epífora is equally supported either; the doubt is recorded for adjudication instead of being resolved by the reviewer."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade.",
+      "textSha256": "c5a574d3294a0cd894e8d39cce24fbec737118c73c7d6bdae2366d0b7b0340ce",
+      "storyObjectSha256": "af24dfdf8cef15b11eec743250d1da1e1a06f5a3998ecb3c67bad542357ef6e0",
+      "rawStorySha256": "b1d563994e0afdff40c989650dff88035a49624a783395de7ebd551ab9246a8b",
+      "rawStoryByteLength": 2347,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 129137,
+        "byteOffsetEndExclusive": 131484
+      },
+      "reviewedStoryObject": {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+        "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "text": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade.",
+        "acceptedContextIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+            "quote": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+            },
+            "sourceQuote": "anotar aspecto e quantidade",
+            "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Há alguns dias aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "secrecao"
+      ],
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "termId": "secrecao",
+          "term": "Secreção",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "sourceHierarchy": {
+            "group": "ÓRGÃOS DOS SENTIDOS",
+            "subgroup": "APARELHO OCULAR:",
+            "term": "Secreção"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "anotar aspecto e quantidade",
+          "sourceExactLine": "Secreção: anotar aspecto e quantidade",
+          "sourceVerification": "PDF p.1, p.2, p.11 e p.12 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "aparece um líquido transparente no canto do olho direito; noto só uma pequena quantidade",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "A linha da apostila para APARELHO OCULAR > Secreção (“anotar aspecto e quantidade”, p.1) é uma instrução de registro, não uma definição: não diz o que conta como secreção ocular. O MeSH (D013666, Tears) descreve a lágrima como “The fluid secreted by the lacrimal glands”, isto é, a lágrima é ela própria uma secreção, e a apostila lista Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) como entrada separada no mesmo subgrupo. A classificação aqui é descritiva e fonte-específica: não certifica causa, infecção, conjuntivite nem qualquer doença ocular.",
+          "referenceIds": [
+            "mesh-tears"
+          ],
+          "rationale": "A fala descreve, em palavras leigas, material ou líquido que aparece no olho, com o aspecto e/ou a quantidade que a entrada-fonte manda anotar. A rubrica APARELHO OCULAR apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "A fala relata, há alguns dias, um líquido transparente no canto do olho direito, em pequena quantidade. O caminho registrado é sustentável como descrição: há aspecto (transparente) e quantidade (pequena) de um líquido que aparece no olho, que é o que a entrada Secreção manda anotar. O bloqueio é de completude da resposta. A fala não usa a palavra secreção nem descreve material espesso, colorido ou grudado: descreve líquido transparente no olho, que é a descrição leiga de lágrima. Este mesmo lote usa essas palavras nas histórias de Epífora (“Elas são transparentes”, “É um líquido claro”, “água transparente”) e ali aceita Epífora e Secreção ocular juntas. A descrição-fonte de Epífora começa por “lacrimejamento”; um líquido transparente que passou a aparecer no olho há alguns dias é lido naturalmente como olho lacrimejando. O que a fala não afirma é o “excesso de lágrimas mais que o normal”: diz “só uma pequena quantidade”. Não consigo afirmar que Secreção seja o único caminho sustentado, nem que Epífora seja igualmente sustentada; a história não registra por que Epífora ficaria de fora. Item retido para adjudicação ou reescrita. Linguagem leiga, uma frase, sem diagnóstico, causa ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: is the actual source placement; it locates the entry and is not evidence of eye disease.",
+        "clinicalMeaning": "Patient-reported material or fluid at the eye, with its appearance and/or amount; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Epífora: candidata, ver acima. Secreção auditiva, Secreções nasais, Rinorreia, Secreção das MAMAS, Secreção uretral e Leucorreia exigem outro local; a fala diz “olho direito”. Dor ocular, Turvação visual e Fotofobia não são mencionadas."
+      },
+      "semanticChecklist": {
+        "termMeaning": "recorded-path-supported-but-not-shown-to-be-the-only-one",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "supported-with-separate-terminology-caution",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "The recorded Secreção path is supportable, but the reviewer could not confirm it is the only source-supported coherent path: see candidatesForAdjudication. This is a possible missing full-credit path (different term, same subgroup), not a partial-credit subgroup; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+          "term": "Epífora",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora"
+          },
+          "sourceQuote": "lacrimejamento, excesso de lágrimas mais que o normal",
+          "sourceExactLine": "Epífora: lacrimejamento, excesso de lágrimas mais que o normal",
+          "storyQuote": "aparece um líquido transparente no canto do olho direito",
+          "strength": "strong",
+          "assessment": "A transparent liquid that has been appearing at the corner of the eye for some days is, in lay speech, a watering eye (“lacrimejamento”); nothing in the utterance describes thick, coloured or crusted material. The second half of the source line (“excesso de lágrimas mais que o normal”) is not stated: the utterance says “só uma pequena quantidade”. Whether the source requires excess for Epífora, or lists it as a gloss of “lacrimejamento”, is a source-interpretation question.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "candidate-paths-not-addressed",
+          "detail": "The story records no acceptedPathEvidence, alternativePathEvidence or exclusion rationale for the Epífora context listed in candidatesForAdjudication; its story-level rationale (“A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.”) does not address it.",
+          "contextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B009-01",
+        "B009-03",
+        "B009-04",
+        "B009-05",
+        "B009-08"
+      ],
+      "blockingFindingIds": [
+        "B009-01"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+      "stableId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "sourceArrayIndex": 42,
+      "sourceOrdinal": 43,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "holdReasons": [],
+      "prototypeEligible": true,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la.",
+      "textSha256": "cb6e8975df391f03cc6965b4921d67caad8d42741686c5411af0d48977e50d9a",
+      "storyObjectSha256": "4e96e73c39712a89ab6240f06b89f880b383661e59321881b3d236f7e498d67f",
+      "rawStorySha256": "a45ef422626679f94bbc3d1dcc2ec9af14ace504aed7ab8a5bf649ade07d9cde",
+      "rawStoryByteLength": 2332,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 131490,
+        "byteOffsetEndExclusive": 133822
+      },
+      "reviewedStoryObject": {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-03",
+        "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "text": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la.",
+        "acceptedContextIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+            "quote": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+            },
+            "sourceQuote": "anotar aspecto e quantidade",
+            "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Quando acordo, vejo uma secreção amarelada grudada nos cílios do olho esquerdo e preciso limpá-la."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "secrecao"
+      ],
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "termId": "secrecao",
+          "term": "Secreção",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "sourceHierarchy": {
+            "group": "ÓRGÃOS DOS SENTIDOS",
+            "subgroup": "APARELHO OCULAR:",
+            "term": "Secreção"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "anotar aspecto e quantidade",
+          "sourceExactLine": "Secreção: anotar aspecto e quantidade",
+          "sourceVerification": "PDF p.1, p.2, p.11 e p.12 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "vejo uma secreção amarelada grudada nos cílios do olho esquerdo",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "A linha da apostila para APARELHO OCULAR > Secreção (“anotar aspecto e quantidade”, p.1) é uma instrução de registro, não uma definição: não diz o que conta como secreção ocular. O MeSH (D013666, Tears) descreve a lágrima como “The fluid secreted by the lacrimal glands”, isto é, a lágrima é ela própria uma secreção, e a apostila lista Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) como entrada separada no mesmo subgrupo. A classificação aqui é descritiva e fonte-específica: não certifica causa, infecção, conjuntivite nem qualquer doença ocular.",
+          "referenceIds": [
+            "mesh-tears"
+          ],
+          "rationale": "A fala descreve, em palavras leigas, material ou líquido que aparece no olho, com o aspecto e/ou a quantidade que a entrada-fonte manda anotar. A rubrica APARELHO OCULAR apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Ao acordar, secreção amarelada grudada nos cílios do olho esquerdo, que precisa ser limpa. O aspecto está dito (amarelada; grudada, isto é, aderida aos cílios); a quantidade não é dita. A linha da apostila (“anotar aspecto e quantidade”) é instrução para quem entrevista, não requisito para que a fala corresponda ao termo: a quantidade fica como informação a perguntar, desconhecida. Material amarelado e aderido aos cílios não é lágrima escorrendo; Epífora não tem apoio. “Amarelada” qualifica a secreção, não a pele, o olho ou a visão. Linguagem leiga, uma frase, sem diagnóstico (não fala em infecção, conjuntivite ou pus), causa ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: is the actual source placement; it locates the entry and is not evidence of eye disease.",
+        "clinicalMeaning": "Patient-reported material or fluid at the eye, with its appearance and/or amount; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Icterícia (“coloração amarelada da pele, dos olhos ou das mucosas”) não é sustentada: o amarelo é da secreção presa aos cílios, não do olho. Xantopsia (“Enxergar as coisas com uma tonalidade amarelada”) não é sustentada: nada é dito sobre a visão. Epífora: sem líquido, lágrimas ou escorrimento. Secreções de ouvido, nariz, mamas, uretra e Leucorreia exigem outro local. Dor ocular não é mencionada."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+        "rationale": "supported-with-separate-terminology-caution",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "One full-credit path (ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção). The other Secreção contexts (APARELHO AUDITIVO, MAMAS), the other discharge entries and Epífora were compared and are not supported by this utterance; no additional source-supported coherent path or partial-credit subgroup identified."
+      },
+      "candidatesForAdjudication": [],
+      "missingOrIncorrectEvidence": [],
+      "findingIds": [
+        "B009-03",
+        "B009-04",
+        "B009-06",
+        "B009-07",
+        "B009-08"
+      ],
+      "blockingFindingIds": [],
+      "stageCandidate": "model-review-complete-no-item-blocker",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+      "stableId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "sourceArrayIndex": 43,
+      "sourceOrdinal": 44,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "model-reviewed",
+      "hold": false,
+      "holdReasons": [],
+      "prototypeEligible": true,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço.",
+      "textSha256": "a211661a7a37c2cbf793df590693bd33427a08e97c23ccbb0186fe402fede7ba",
+      "storyObjectSha256": "ef3f2a4c6b6f7fb48734e96b13159aa9091203769d218adefabc040427c19e01",
+      "rawStorySha256": "95a33127a1135bd68008b6673d08db8398dc99968071428b281870ebf3806e77",
+      "rawStoryByteLength": 2353,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 133828,
+        "byteOffsetEndExclusive": 136181
+      },
+      "reviewedStoryObject": {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-04",
+        "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "text": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço.",
+        "acceptedContextIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+            "quote": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+            },
+            "sourceQuote": "anotar aspecto e quantidade",
+            "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Percebi uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "secrecao"
+      ],
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "termId": "secrecao",
+          "term": "Secreção",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "sourceHierarchy": {
+            "group": "ÓRGÃOS DOS SENTIDOS",
+            "subgroup": "APARELHO OCULAR:",
+            "term": "Secreção"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "anotar aspecto e quantidade",
+          "sourceExactLine": "Secreção: anotar aspecto e quantidade",
+          "sourceVerification": "PDF p.1, p.2, p.11 e p.12 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "uma secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "A linha da apostila para APARELHO OCULAR > Secreção (“anotar aspecto e quantidade”, p.1) é uma instrução de registro, não uma definição: não diz o que conta como secreção ocular. O MeSH (D013666, Tears) descreve a lágrima como “The fluid secreted by the lacrimal glands”, isto é, a lágrima é ela própria uma secreção, e a apostila lista Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) como entrada separada no mesmo subgrupo. A classificação aqui é descritiva e fonte-específica: não certifica causa, infecção, conjuntivite nem qualquer doença ocular.",
+          "referenceIds": [
+            "mesh-tears"
+          ],
+          "rationale": "A fala descreve, em palavras leigas, material ou líquido que aparece no olho, com o aspecto e/ou a quantidade que a entrada-fonte manda anotar. A rubrica APARELHO OCULAR apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Secreção mais espessa no olho ao longo do dia, em quantidade suficiente para limpar com lenço. Aspecto (espessa) e quantidade (o bastante para precisar de lenço) estão ditos e o olho é nomeado. Material espesso é o oposto do líquido aquoso do lacrimejamento, e a fala não fala em lágrimas nem em olho molhado: Epífora não tem apoio. Duas observações editoriais, não bloqueantes: “mais espessa” é comparativo sem termo de comparação (mais espessa que o quê?) e “no olho” não diz qual olho nem se são os dois; nada disso muda o termo. Linguagem leiga, uma frase, sem diagnóstico, causa ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: is the actual source placement; it locates the entry and is not evidence of eye disease.",
+        "clinicalMeaning": "Patient-reported material or fluid at the eye, with its appearance and/or amount; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Epífora: não sustentada (material espesso, sem lágrimas). Usar lenço aparece também nas histórias de Epífora deste lote, mas lá o que se enxuga é água clara; aqui é material espesso. Secreções de ouvido, nariz, mamas, uretra e Leucorreia exigem outro local. Dor ocular e Turvação visual não são mencionadas."
+      },
+      "semanticChecklist": {
+        "termMeaning": "supported-by-patient-report",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "checked-against-base-inventory-read-in-this-run",
+        "rationale": "supported-with-separate-terminology-caution",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "One full-credit path (ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção). The other Secreção contexts (APARELHO AUDITIVO, MAMAS), the other discharge entries and Epífora were compared and are not supported by this utterance; no additional source-supported coherent path or partial-credit subgroup identified."
+      },
+      "candidatesForAdjudication": [],
+      "missingOrIncorrectEvidence": [],
+      "findingIds": [
+        "B009-03",
+        "B009-04",
+        "B009-06",
+        "B009-07",
+        "B009-08"
+      ],
+      "blockingFindingIds": [],
+      "stageCandidate": "model-review-complete-no-item-blocker",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    },
+    {
+      "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05",
+      "stableId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05",
+      "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+      "sourceArrayIndex": 44,
+      "sourceOrdinal": 45,
+      "sourceBatchSha256": "10ae95951658f2f226dcf8590ddc08b527de383a776bdd0f49ed945ff18552a0",
+      "reviewStatus": "completed",
+      "disposition": "needs-revision",
+      "hold": true,
+      "holdReasons": [
+        "Answer completeness doubtful: apart from the word “secreção” itself, the described content is clear fluid coming out of the corner of the eyes, which this batch describes as tears in its Epífora stories (“água clarinha”, “gotas claras”, “São claras, sem nada grosso misturado”).",
+        "The only negative in the utterance (“sem chegar a escorrer pelo rosto”) rules out overflow onto the face, which the source description of Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) does not require; watering without overflow is not excluded.",
+        "Support for Epífora is weaker than at index 41 (“um pouco”, “às vezes” argue against excess), so this is held as doubtful rather than as a demonstrated second path; the reviewer could not confirm that the utterance matches only Secreção."
+      ],
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "releaseAuthorized": false,
+      "reviewedText": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto.",
+      "textSha256": "f1ea9d4ce58a9c769449207f65ede1c95bbc5c0ae93613499dbd877d3eaa3dc9",
+      "storyObjectSha256": "4e3e44175c1e514aefd9ef002987426ff054cc294e4f2eecb36814d87b834903",
+      "rawStorySha256": "38781827c1fab5ac789065723eb92c758654d35a0a1ec59bbddfcf7236b053cf",
+      "rawStoryByteLength": 2314,
+      "originalStoryBinding": {
+        "encoding": "UTF-8",
+        "storage": "Exact raw bytes are the specified slice of input.path, authenticated by sourceBatchSha256 and rawStorySha256. Complete parsed contents are embedded once in reviewedStoryObject.",
+        "byteOffsetStart": 136187,
+        "byteOffsetEndExclusive": 138501
+      },
+      "reviewedStoryObject": {
+        "id": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05",
+        "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+        "text": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto.",
+        "acceptedContextIds": [
+          "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+        ],
+        "alternativeContextIds": [],
+        "rationale": "A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.",
+        "source": {
+          "documentId": "interrogatorio-complementar-2026",
+          "page": 1,
+          "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+        },
+        "generation": {
+          "model": "unknown",
+          "modelRequested": "gpt6luna",
+          "executionVersion": "unknown",
+          "promptVersion": "interrogatorio-next-01",
+          "date": "2026-11-15",
+          "authorship": "synthetic-patient-voice",
+          "definitionSourceOnly": true
+        },
+        "review": {
+          "status": "draft",
+          "clinicalReview": "not-recorded",
+          "independentReview": "not-recorded",
+          "clinicalApproval": false
+        },
+        "alternativePathEvidence": [],
+        "alternativeAssessment": {
+          "status": "checked",
+          "reason": "Nenhum caminho alternativo de crédito parcial identificado nas definições-fonte correspondentes; caminhos aceitos têm evidência integral individual."
+        },
+        "acceptedPathEvidence": [
+          {
+            "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+            "quote": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto.",
+            "source": {
+              "documentId": "interrogatorio-complementar-2026",
+              "page": 1,
+              "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+            },
+            "sourceQuote": "anotar aspecto e quantidade",
+            "rationale": "O relato documenta secreção conforme a descrição-fonte, sem indicar causa.",
+            "referenceIds": [],
+            "definitionBasis": "source-description-with-verified-terminology",
+            "focusQuote": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto."
+          }
+        ],
+        "repairHistory": []
+      },
+      "acceptedTermIds": [
+        "secrecao"
+      ],
+      "acceptedContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao"
+      ],
+      "alternativeContextIds": [],
+      "supportedAcceptedPaths": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao",
+          "termId": "secrecao",
+          "term": "Secreção",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "sourceHierarchy": {
+            "group": "ÓRGÃOS DOS SENTIDOS",
+            "subgroup": "APARELHO OCULAR:",
+            "term": "Secreção"
+          },
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Secreção"
+          },
+          "sourceDocumentSha256": "3932d4dc44eceb780153787c6be19325cb255a66431afc3f9bfe4a4598c819de",
+          "sourceQuote": "anotar aspecto e quantidade",
+          "sourceExactLine": "Secreção: anotar aspecto e quantidade",
+          "sourceVerification": "PDF p.1, p.2, p.11 e p.12 lidos como texto nesta execução (extração PDFKit; hash do PDF igual ao declarado no inventário). Sem inspeção visual das páginas: renderização indisponível neste ambiente.",
+          "evidenceQuote": "sai um pouco de secreção clara do canto dos olhos",
+          "verdict": "supported-for-source-based-term-matching",
+          "definitionBasis": "source-description-with-verified-terminology",
+          "terminologyCaution": "A linha da apostila para APARELHO OCULAR > Secreção (“anotar aspecto e quantidade”, p.1) é uma instrução de registro, não uma definição: não diz o que conta como secreção ocular. O MeSH (D013666, Tears) descreve a lágrima como “The fluid secreted by the lacrimal glands”, isto é, a lágrima é ela própria uma secreção, e a apostila lista Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) como entrada separada no mesmo subgrupo. A classificação aqui é descritiva e fonte-específica: não certifica causa, infecção, conjuntivite nem qualquer doença ocular.",
+          "referenceIds": [
+            "mesh-tears"
+          ],
+          "rationale": "A fala descreve, em palavras leigas, material ou líquido que aparece no olho, com o aspecto e/ou a quantidade que a entrada-fonte manda anotar. A rubrica APARELHO OCULAR apenas localiza a entrada.",
+          "fullCredit": true,
+          "clinicalEtiologyEstablished": false
+        }
+      ],
+      "supportedAlternativePaths": [],
+      "alternativePathEvidence": [],
+      "reasoning": "Às vezes sai um pouco de secreção clara do canto dos olhos, sem escorrer pelo rosto. O caminho registrado tem apoio: a fala usa a palavra “secreção”, dá aspecto (clara) e quantidade (um pouco) e nomeia os olhos. A dúvida é de completude da resposta. O que identifica o termo aqui é quase só a própria palavra “secreção”; o conteúdo descrito, líquido claro que “sai” do canto dos olhos, é o que este lote descreve como lágrima nas histórias de Epífora (“água clarinha”, “gotas claras”, “São claras, sem nada grosso misturado”), que aceitam Epífora e Secreção ocular juntas. A única negativa da fala é “sem chegar a escorrer pelo rosto”; a descrição-fonte de Epífora (“lacrimejamento, excesso de lágrimas mais que o normal”) não exige que a lágrima escorra pelo rosto, de modo que essa negativa não afasta lacrimejamento. “Um pouco” e “às vezes” pesam contra “excesso … mais que o normal”, e por isso o apoio a Epífora é mais fraco que no índice 41. Ainda assim não consigo afirmar que a fala corresponda clara e somente a Secreção; a história não registra por que Epífora ficaria de fora. Item retido como duvidoso. Linguagem leiga, uma frase, sem diagnóstico, causa ou conselho.",
+      "contextDistinctions": {
+        "printedPlacement": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: is the actual source placement; it locates the entry and is not evidence of eye disease.",
+        "clinicalMeaning": "Patient-reported material or fluid at the eye, with its appearance and/or amount; no etiological diagnosis.",
+        "unmentionedInformation": "Unmentioned clinical facts remain unknown, not absent.",
+        "otherPaths": "Epífora: candidata, ver acima. Secreção auditiva, Secreções nasais, Rinorreia, Secreção das MAMAS, Secreção uretral e Leucorreia exigem outro local; a fala diz “olhos”. Dor ocular, Turvação visual e Fotofobia não são mencionadas."
+      },
+      "semanticChecklist": {
+        "termMeaning": "recorded-path-supported-but-not-shown-to-be-the-only-one",
+        "sourceGroupSubgroup": "coherent-as-printed-placement-only",
+        "acceptedPathsEvidence": "literal-story-quote-and-source-context-checked",
+        "answerCompleteness": "unresolved-candidate-paths-listed-for-adjudication",
+        "rationale": "supported-with-separate-terminology-caution",
+        "patientVoice": "acceptable",
+        "observerCase": false,
+        "negativesVersusUnknown": "not-mentioned remains unknown"
+      },
+      "alternativeAssessment": {
+        "status": "independently-assessed",
+        "rule": "+5 only for an evidenced valid subgroup in another context for the same concept; equally supported complete paths receive full credit.",
+        "result": "The recorded Secreção path is supportable, but the reviewer could not confirm it is the only source-supported coherent path: see candidatesForAdjudication. This is a possible missing full-credit path (different term, same subgroup), not a partial-credit subgroup; no +5 alternative is proposed."
+      },
+      "candidatesForAdjudication": [
+        {
+          "contextId": "ic-orgaos-dos-sentidos-aparelho-ocular-epifora",
+          "term": "Epífora",
+          "group": "ÓRGÃOS DOS SENTIDOS",
+          "subgroup": "APARELHO OCULAR:",
+          "source": {
+            "documentId": "interrogatorio-complementar-2026",
+            "page": 1,
+            "locator": "ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR: > Epífora"
+          },
+          "sourceQuote": "lacrimejamento, excesso de lágrimas mais que o normal",
+          "sourceExactLine": "Epífora: lacrimejamento, excesso de lágrimas mais que o normal",
+          "storyQuote": "sai um pouco de secreção clara do canto dos olhos, sem chegar a escorrer pelo rosto",
+          "strength": "moderate",
+          "assessment": "Clear fluid that comes out of the corner of the eyes is compatible with tearing (“lacrimejamento”), and tears are themselves a secretion. Against: the utterance calls it “secreção”, says “um pouco” and “às vezes”, and states no excess. The negated overflow onto the face is not part of the source description of Epífora.",
+          "requestedDecision": "Content owner/teaching reviewer must decide whether this source path receives full credit for this utterance (then add it to acceptedContextIds with its own evidence) or whether the utterance must be revised so that this path is no longer supported."
+        }
+      ],
+      "missingOrIncorrectEvidence": [
+        {
+          "type": "candidate-paths-not-addressed",
+          "detail": "The story records no acceptedPathEvidence, alternativePathEvidence or exclusion rationale for the Epífora context listed in candidatesForAdjudication; its story-level rationale (“A fala descreve secreção com palavras cotidianas; não afirma causa nem diagnóstico.”) does not address it.",
+          "contextIds": [
+            "ic-orgaos-dos-sentidos-aparelho-ocular-epifora"
+          ]
+        }
+      ],
+      "findingIds": [
+        "B009-02",
+        "B009-03",
+        "B009-04",
+        "B009-05",
+        "B009-06",
+        "B009-08"
+      ],
+      "blockingFindingIds": [
+        "B009-02"
+      ],
+      "stageCandidate": "held-for-adjudication-or-revision",
+      "provenance": {
+        "authorship": "synthetic-patient-voice",
+        "sourceRefersTo": "definition, not an actual patient or published utterance",
+        "originalMetadata": "Complete generation/review/evidence/repairHistory preserved in reviewedStoryObject.",
+        "reviewIndependence": "Reviewer did not author or edit these stories."
+      }
+    }
+  ],
+  "reviewerClinicalSources": [
+    {
+      "id": "mesh-tears",
+      "title": "NLM MeSH — Tears, D013666",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D013666",
+      "institution": "U.S. National Library of Medicine / NIH",
+      "accessed": "2026-11-15",
+      "verification": "Read verbatim in this review from the NLM linked-data JSON (https://id.nlm.nih.gov/mesh/D013666.json and preferred concept https://id.nlm.nih.gov/mesh/M0021092.json), downloaded with curl.",
+      "locator": "Preferred concept scope note; descriptor annotation",
+      "exactQuote": "The fluid secreted by the lacrimal glands. This fluid moistens the CONJUNCTIVA and CORNEA.",
+      "claim": "A lágrima é o líquido secretado pelas glândulas lacrimais, ou seja, é ela própria uma secreção ocular. A anotação do descritor manda indexar epífora em doenças do aparelho lacrimal.",
+      "limitation": "Não define “secreção ocular” no sentido da apostila nem diz onde termina secreção e começa lacrimejamento; usado só para mostrar que “líquido claro/transparente no olho” não exclui lágrima. Não sustenta causa nem diagnóstico.",
+      "externalDescriptorId": "D013666"
+    },
+    {
+      "id": "moorfields-epiphora",
+      "title": "Moorfields Eye Hospital NHS Foundation Trust — Epiphora (watering eye)",
+      "url": "https://www.moorfields.nhs.uk/eye-conditions/epiphora-watering-eye",
+      "institution": "Moorfields Eye Hospital NHS Foundation Trust",
+      "accessed": "2026-11-15",
+      "verification": "Page HTML downloaded with curl in this review and read from the saved file. Same page as the batch reference moorfields-epiphora-next01; opened independently.",
+      "locator": "Opening section (What is watering eye?)",
+      "exactQuote": "The medical name is epiphora.",
+      "claim": "Epífora é o nome médico do olho lacrimejante (produção de lágrimas sem motivo aparente; as lágrimas em excesso podem transbordar). A página também menciona que um saco lacrimal infectado pode produzir líquido pegajoso, isto é, distingue lágrima aquosa de material pegajoso.",
+      "limitation": "Página para pacientes, em inglês; apenas uma frase curta citada literalmente, o restante é paráfrase do revisor. Não é definição da apostila e não fixa um limiar de quantidade. Causas e tratamentos não se aplicam às falas."
+    }
+  ],
+  "hashMethods": {
+    "sourceBatch": "SHA-256 of exact file bytes.",
+    "text": "SHA-256 of UTF-8 story.text; no normalization.",
+    "storyObject": "SHA-256 of UTF-8 JSON.stringify(parsed story), retaining key order; same method as earlier interrogatório batch reviews.",
+    "rawStory": "SHA-256 of exact UTF-8 source slice from opening { through closing }; zero-based byte offsets, end-exclusive.",
+    "storage": "Full original story object stored once in reviewedStoryObject. Source byte offsets, raw hash and whole-file hash preserve raw-byte binding without a duplicate base64 representation. Original generation/evidence/review/repair metadata are retained."
+  },
+  "releaseBuilderContract": {
+    "verifyBeforeUse": [
+      "Exact source batch SHA-256 and byte length; exact base inventory SHA-256 and declared baseSha256.",
+      "Exactly indices 40..44 and ordered stable IDs.",
+      "Each original raw source slice matches rawStorySha256 and rawStoryByteLength, and parses identically to reviewedStoryObject.",
+      "Each full object matches storyObjectSha256; its text matches textSha256.",
+      "Every evidenceQuote is an exact substring of reviewedText; every path resolves to actual source term/group/subgroup/source.",
+      "supportedAcceptedPaths.definitionBasis equals the matching original acceptedPathEvidence.definitionBasis; terminology caution is a separate field.",
+      "Only items with disposition=model-reviewed, hold=false, prototypeEligible=true may be frozen; items with disposition=needs-revision and hold=true must be withheld. clinicalApproval=false."
+    ],
+    "onMismatch": "Stop release for the affected item; text equality alone cannot approve changed story metadata or evidence.",
+    "adapterScope": "No implementation or app integration performed. tools/prepare-interview-batch.mjs was run read-only against this report (no --patch, no file written); no release file was created."
+  },
+  "integrityChecks": {
+    "validationStatus": "passed",
+    "validatedAt": "2026-11-15T21:39:51.978Z",
+    "validationScope": "Exactly indices 40..44; batch/base/PDF hashes, raw slices, full objects, text hashes, literal story quotes (accepted paths and adjudication candidates), literal precedent quotes, literal source quotes, source mappings, definitionBasis equality, dispositions/counts. “passed” refers to these integrity checks, not to the story dispositions.",
+    "baseHashMatchesBatchDeclaration": true,
+    "reviewedScopeExactlyFive": true
+  },
+  "unresolved": [
+    {
+      "itemId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-02",
+      "sourceArrayIndex": 41,
+      "blockingFindingIds": [
+        "B009-01"
+      ],
+      "question": "Is Epífora (ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR:) a full-credit answer for this utterance, or should the utterance be revised so that it supports Secreção only?",
+      "candidateContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-epifora"
+      ]
+    },
+    {
+      "itemId": "ic-orgaos-dos-sentidos-aparelho-ocular-secrecao-story-05",
+      "sourceArrayIndex": 44,
+      "blockingFindingIds": [
+        "B009-02"
+      ],
+      "question": "Is Epífora (ÓRGÃOS DOS SENTIDOS > APARELHO OCULAR:) a full-credit answer for this utterance, or should the utterance be revised so that it supports Secreção only?",
+      "candidateContextIds": [
+        "ic-orgaos-dos-sentidos-aparelho-ocular-epifora"
+      ]
+    },
+    {
+      "itemId": null,
+      "scope": "source-interpretation",
+      "question": "Where does the course draw the line between ocular Secreção and Epífora when the patient reports clear or transparent fluid at the eye, and does Epífora require stated excess or is “excesso de lágrimas mais que o normal” a gloss of “lacrimejamento”? The source line for Secreção is only an instruction (“anotar aspecto e quantidade”). This needs a decision by the teaching owner; the external sources read here do not settle it."
+    }
+  ],
+  "limitations": [
+    "Model review by a non-clinician, not clinical approval.",
+    "Source PDF checked as extracted text only (p.1, p.2, p.11, p.12); no visual page inspection in this run. The Icterícia lines (p.8, p.9) were read from the inventory, not from the PDF.",
+    "External sources: the MeSH Tears record was read verbatim from NLM linked-data JSON; the Moorfields page was read from downloaded HTML. No Portuguese-language terminology source (DeCS) and no descriptor for eye discharge were opened.",
+    "The reading of “líquido transparente” / “secreção clara” at the eye as the lay description of tears rests on the reviewer's knowledge of Brazilian Portuguese and on the wording of this batch's own Epífora stories; it is a doubt recorded for adjudication, not a clinical finding.",
+    "Stories at indices 45..49 (ocular Secreção 06–10) and 80..89 (Epífora) are out of scope; they were read only as mapping precedent and were not reviewed or modified.",
+    "Review files were written in the main checkout at /Users/math/pessoal/anatomind as instructed.",
+    "No app execution tested; the release builder was only run in its default read-only reporting mode."
+  ]
+}
