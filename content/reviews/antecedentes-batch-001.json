@@ -1,0 +1,2193 @@
+{
+  "schemaVersion": 1,
+  "reportType": "bounded-disease-review-batch",
+  "batchId": "antecedentes-batch-001",
+  "topic": "antecedentes",
+  "status": "completed",
+  "date": "2026-11-15",
+  "scope": {
+    "selection": "First five objects of the current diseases array, zero-based indexes 0–4, no sorting",
+    "recordCount": 5,
+    "groupCount": 14,
+    "purpose": "Educational taxonomy for a medical-student game; not personal clinical advice",
+    "ownedPaths": [
+      "content/reviews/antecedentes-batch-001.json",
+      "docs/reviews/antecedentes-batch-001.md"
+    ],
+    "remainingRecordsReviewed": false
+  },
+  "input": {
+    "path": "content/drafts/antecedentes.json",
+    "sourceFileSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "byteLength": 1029037,
+    "sourceHashAlgorithm": "SHA-256 of exact raw file bytes",
+    "recordObjectHashAlgorithm": "SHA-256 of UTF-8 JSON.stringify(JSON.parse(sourceFile).diseases[arrayIndex]); stored property order retained, no indentation or trailing newline",
+    "recordObjectHashIsRawSubstringHash": false,
+    "groupScopeBinding": "Source-file hash also binds membershipPolicy and all 14 group definitions"
+  },
+  "priorRootReview": {
+    "path": "docs/reviews/antecedentes-v2.json",
+    "snapshotSha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "matchesCurrentSource": false,
+    "inputDrift": {
+      "currentSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+      "snapshotStillAvailable": true,
+      "reviewAppliesOnlyToSnapshot": true,
+      "automaticCarryForward": false,
+      "action": "Reconcile against edited bytes in a new explicit pass."
+    },
+    "carryForwardApplied": false,
+    "evidenceOrApprovalInherited": false
+  },
+  "provenance": {
+    "agent": "Codex",
+    "model": "unknown",
+    "backend": "unknown",
+    "modelVersion": "unknown",
+    "modelIdentityBasis": "No independently authenticated backend/build identifier exposed; no requested or inherited model label used as proof.",
+    "freshSourceVerification": true,
+    "reviewIndependentOfPriorEvidenceClaims": true,
+    "separateAgentUsed": false,
+    "separateModelIndependenceEstablished": false,
+    "clinicalReviewer": false,
+    "researchSkill": "/Users/math/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.2/skills/engineering/research/SKILL.md",
+    "researchSkillReadFullyThisPass": true,
+    "researchSkillFallback": "No background-agent tool available; main agent performed fresh primary-source checks and wrote the bounded Markdown report.",
+    "instructionFileNote": "RTK.md referenced by user was not found in cwd, searched repository/agent roots or checked ancestor locations; no instructions invented."
+  },
+  "policy": {
+    "unit": "Exact named diagnosis–group pair, not every illness a patient might simultaneously have",
+    "membershipMeaning": "Accepted = justified for unqualified label. Conditional = only a documented additional manifestation/site; never silently universal. Held = unresolved mapping or insufficient evidence, not a negative.",
+    "scopeEvidenceLimit": "MedlinePlus topic lists support anatomical/educational scope, not exhaustive exclusion or official approval of this game's 14-way taxonomy.",
+    "negativeRule": "Only positive definitional distinction plus target scope can propose a negative; source silence cannot. Candidates remain unavailable until all relevant question positives and context are resolved.",
+    "conditionalRule": "Additional disease/manifestation must appear in the actual question label/context and be re-reviewed; conditional entries do not count as unqualified positives.",
+    "prototypeRule": "False while any question-relevant positive/overlap remains unresolved for unrestricted 14-group use; no eligible-target subset invented.",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "sources": [
+    {
+      "id": "CDC-TB",
+      "institution": "CDC",
+      "title": "Clinical Overview of Tuberculosis Disease",
+      "url": "https://www.cdc.gov/tb/hcp/clinical-overview/tuberculosis-disease.html",
+      "locator": "At a glance; Types: Pulmonary, Extrapulmonary, Miliary, TB meningitis",
+      "observedSupport": "Infecção por M. tuberculosis; forma pulmonar atinge pulmões. Formas extrapulmonares podem coexistir e atingir cérebro, rins, ossos e articulações.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-MEN",
+      "institution": "CDC",
+      "title": "About Bacterial Meningitis",
+      "url": "https://www.cdc.gov/meningitis/about/bacterial-meningitis.html",
+      "locator": "What it is; Complications; How it spreads",
+      "observedSupport": "Inflamação infecciosa bacteriana das meninges encefálicas/medulares; agentes e transmissão variam; pode haver sepse.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-HBV",
+      "institution": "CDC",
+      "title": "Hepatitis B Basics",
+      "url": "https://www.cdc.gov/hepatitis-b/about/index.html",
+      "locator": "Key points; About Hepatitis B; Chronic hepatitis B",
+      "observedSupport": "Infecção hepática por HBV, transmissível; doença crônica pode evoluir para câncer hepático.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-HCV",
+      "institution": "CDC",
+      "title": "Hepatitis C Basics",
+      "url": "https://www.cdc.gov/hepatitis-c/about/index.html",
+      "locator": "About Hepatitis C; Chronic hepatitis C; Signs and symptoms; How it spreads",
+      "observedSupport": "Infecção hepática por HCV transmitida por sangue; câncer é possível evolução. Artralgia, depressão e icterícia são mencionadas sem estabelecer diagnósticos de outros sistemas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-HIV",
+      "institution": "CDC",
+      "title": "About HIV",
+      "url": "https://www.cdc.gov/hiv/about/index.html",
+      "locator": "Overview; Symptoms; How it spreads",
+      "observedSupport": "Vírus ataca sistema imune; infecção pode progredir para AIDS, mas não equivale automaticamente a AIDS.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDDK-DIG",
+      "institution": "NIDDK",
+      "title": "Appendix 1: ICD & SEER Codes",
+      "url": "https://www.niddk.nih.gov/about-niddk/strategic-plans-reports/burden-of-digestive-diseases-in-united-states/icd-seer-codes",
+      "locator": "Table 1, DIGESTIVE DISEASE, rows Hepatitis B and Hepatitis C",
+      "observedSupport": "Lista institucional inclui explicitamente as hepatites B e C entre doenças digestivas; tabela histórica, sem uso como recomendação de codificação atual.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIH-CNS",
+      "institution": "NIH Clinicalinfo",
+      "title": "Virologic Failure",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv/virologic-failure",
+      "locator": "Isolated Central Nervous System Virologic Failure and Neurologic Symptoms; Cerebrospinal Fluid Viral Escape",
+      "observedSupport": "Distingue escape no SNC com sintomas neurológicos de detecção assintomática de RNA no líquor; outras causas exigem avaliação.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-MEN",
+      "institution": "WHO",
+      "title": "Meningitis",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/meningitis",
+      "locator": "Transmission; Signs and symptoms; Complications and sequelae",
+      "observedSupport": "Sequelas possíveis incluem perda auditiva, dificuldade visual e fraqueza de membros. Colonização nasal/faríngea e transmissão respiratória não definem o sítio meníngeo como doença nasal/pulmonar.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-HBV",
+      "institution": "WHO (documento hospedado por NLM)",
+      "title": "Guidelines for chronic hepatitis B, chapter 20",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK615007/?report=reader",
+      "locator": "20.3 Extrahepatic manifestations",
+      "observedSupport": "Hepatite B crônica pode acompanhar poliarterite nodosa, artrite não reumatoide, linfoma não Hodgkin, vasculite crioglobulinêmica e glomerulonefrite.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "AASLD-IDSA-HCV",
+      "institution": "AASLD / IDSA",
+      "title": "When and in Whom to Initiate HCV Therapy",
+      "url": "https://www.hcvguidelines.org/guidance/when-and-in-whom-to-initiate-hcv-therapy/",
+      "locator": "Clinical Benefit of Cure; Persons With Extrahepatic Manifestations: Cryoglobulinemia; Diabetes; Fatigue",
+      "observedSupport": "Crioglobulinemia associada ao HCV pode envolver rim, nervos e vasos; é distúrbio de imunocomplexos/linfoproliferativo. Relação com diabetes é complexa; artralgia não especifica artrite.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIH-RENAL",
+      "institution": "NIH HIVinfo",
+      "title": "HIV and Kidney Disease",
+      "url": "https://hivinfo.nih.gov/understanding-hiv/fact-sheets/hiv-and-kidney-disease",
+      "locator": "Key Points; What are the kidneys; Are people with HIV at risk",
+      "observedSupport": "HIV pode causar lesão renal; fatores concomitantes e medicamentos também influenciam. Atribuição renal não decorre apenas da transmissão sexual.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIH-HEART",
+      "institution": "NIH HIVinfo",
+      "title": "HIV and Heart Disease",
+      "url": "https://hivinfo.nih.gov/understanding-hiv/fact-sheets/hiv-and-heart-disease",
+      "locator": "Key Points; Are people with HIV at risk for heart disease",
+      "observedSupport": "HIV e alguns medicamentos podem elevar risco cardiovascular; risco não é diagnóstico de cardiopatia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NCI-HIV",
+      "institution": "NCI",
+      "title": "HIV Infection and Cancer Risk",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hiv-fact-sheet",
+      "locator": "Does HIV infection increase the risk of cancer; Why",
+      "observedSupport": "Risco aumentado de várias neoplasias não torna a infecção pelo HIV uma neoplasia; cânceres associados são diagnósticos próprios.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NCI-NEO",
+      "institution": "NCI",
+      "title": "neoplasm",
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/neoplasm",
+      "locator": "Definition",
+      "observedSupport": "Neoplasia é crescimento tecidual anormal por proliferação/sobrevida celular; pode ser benigna ou maligna.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NLM-HEM",
+      "institution": "NLM MeSH",
+      "title": "Hemic and Lymphatic Diseases",
+      "url": "https://meshb.nlm.nih.gov/record/ui?ui=D006425",
+      "locator": "Scope Note; MeSH tree",
+      "observedSupport": "Abrange componentes do sangue e sistema linfático, incluindo linfócitos. Limite entre imunodeficiência e categoria hematológica local requer decisão curricular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "SCOPE-infectocontagiosas",
+      "institution": "NLM MedlinePlus",
+      "title": "infections",
+      "url": "https://medlineplus.gov/infections.html",
+      "locator": "HIV; Hepatitis B/C; Meningitis; Tuberculosis",
+      "observedSupport": "Infecções; não exige transmissão direta uniforme.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neurologicas",
+      "institution": "NLM MedlinePlus",
+      "title": "brainandnerves",
+      "url": "https://medlineplus.gov/brainandnerves.html",
+      "locator": "Spinal Cord: Meningitis; Nerves",
+      "observedSupport": "Encéfalo, medula, nervos e meninges.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-psiquiatricas",
+      "institution": "NLM MedlinePlus",
+      "title": "mentalhealthandbehavior",
+      "url": "https://medlineplus.gov/mentalhealthandbehavior.html",
+      "locator": "Mental Disorders; Depression; Delirium",
+      "observedSupport": "Transtornos mentais definidos; sintomas isolados não bastam.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-auditivas",
+      "institution": "NLM MedlinePlus",
+      "title": "earnoseandthroat",
+      "url": "https://medlineplus.gov/earnoseandthroat.html",
+      "locator": "The Ear: Balance Problems; Hearing Disorders",
+      "observedSupport": "Ouvido, audição e equilíbrio vestibular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-oculares",
+      "institution": "NLM MedlinePlus",
+      "title": "eyesandvision",
+      "url": "https://medlineplus.gov/eyesandvision.html",
+      "locator": "Eye; Refractive Errors; Vision Impairment",
+      "observedSupport": "Doenças oculares, visão e refração; origem do déficit visual deve ser esclarecida.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-nasais",
+      "institution": "NLM MedlinePlus",
+      "title": "earnoseandthroat",
+      "url": "https://medlineplus.gov/earnoseandthroat.html",
+      "locator": "The Nose: Nose Injuries and Disorders; Sinusitis",
+      "observedSupport": "Nariz e seios paranasais.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-respiratorias",
+      "institution": "NLM MedlinePlus",
+      "title": "lungsandbreathing",
+      "url": "https://medlineplus.gov/lungsandbreathing.html",
+      "locator": "Sinusitis; Pleural Disorders; Tuberculosis",
+      "observedSupport": "Vias respiratórias, pulmões e pleura; sobreposição nasal possível.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-cardiovasculares",
+      "institution": "NLM MedlinePlus",
+      "title": "bloodheartandcirculation",
+      "url": "https://medlineplus.gov/bloodheartandcirculation.html",
+      "locator": "The Arteries; Heart; Veins; Vasculitis",
+      "observedSupport": "Coração e vasos, incluindo vasculites; exceções curriculares não generalizadas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-genitourinarias",
+      "institution": "NLM MedlinePlus",
+      "title": "kidneysandurinarysystem",
+      "url": "https://medlineplus.gov/kidneysandurinarysystem.html",
+      "locator": "The Kidneys; The Bladder; reproductive sources below",
+      "observedSupport": "Rins, vias urinárias e órgãos reprodutivos; via sexual não determina sítio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-endocrinologicas",
+      "institution": "NLM MedlinePlus",
+      "title": "endocrinesystem",
+      "url": "https://medlineplus.gov/endocrinesystem.html",
+      "locator": "Adrenal Glands; Pancreas; Pituitary; Thyroid",
+      "observedSupport": "Glândulas, função hormonal e diabetes; risco isolado não basta.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-miostioarticulares",
+      "institution": "NLM MedlinePlus",
+      "title": "bonesjointsandmuscles",
+      "url": "https://medlineplus.gov/bonesjointsandmuscles.html",
+      "locator": "Select One: Bones; Joints; Muscles; Spine",
+      "observedSupport": "Ossos, articulações e músculos; fronteira neuromuscular é curricular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-FEMALE",
+      "institution": "NLM MedlinePlus",
+      "title": "femalereproductivesystem",
+      "url": "https://medlineplus.gov/femalereproductivesystem.html",
+      "locator": "Select One: cervix, ovary, uterus, vagina",
+      "observedSupport": "Órgãos reprodutivos incluídos no escopo geniturinário por síntese curricular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-MALE",
+      "institution": "NLM MedlinePlus",
+      "title": "malereproductivesystem",
+      "url": "https://medlineplus.gov/malereproductivesystem.html",
+      "locator": "Select One: penis, prostate, testicle",
+      "observedSupport": "Órgãos reprodutivos incluídos no escopo geniturinário por síntese curricular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-topic-list-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    }
+  ],
+  "groupScopes": [
+    {
+      "groupId": "infectocontagiosas",
+      "scope": "Infecções; não exige transmissão direta uniforme.",
+      "sourceIds": [
+        "SCOPE-infectocontagiosas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neurologicas",
+      "scope": "Encéfalo, medula, nervos e meninges.",
+      "sourceIds": [
+        "SCOPE-neurologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "psiquiatricas",
+      "scope": "Transtornos mentais definidos; sintomas isolados não bastam.",
+      "sourceIds": [
+        "SCOPE-psiquiatricas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "auditivas",
+      "scope": "Ouvido, audição e equilíbrio vestibular.",
+      "sourceIds": [
+        "SCOPE-auditivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "oculares",
+      "scope": "Doenças oculares, visão e refração; origem do déficit visual deve ser esclarecida.",
+      "sourceIds": [
+        "SCOPE-oculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "nasais",
+      "scope": "Nariz e seios paranasais.",
+      "sourceIds": [
+        "SCOPE-nasais"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "respiratorias",
+      "scope": "Vias respiratórias, pulmões e pleura; sobreposição nasal possível.",
+      "sourceIds": [
+        "SCOPE-respiratorias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "cardiovasculares",
+      "scope": "Coração e vasos, incluindo vasculites; exceções curriculares não generalizadas.",
+      "sourceIds": [
+        "SCOPE-cardiovasculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "digestivas",
+      "scope": "Aparelho digestivo, incluindo fígado.",
+      "sourceIds": [
+        "NIDDK-DIG"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "genitourinarias",
+      "scope": "Rins, vias urinárias e órgãos reprodutivos; via sexual não determina sítio.",
+      "sourceIds": [
+        "SCOPE-genitourinarias",
+        "SCOPE-FEMALE",
+        "SCOPE-MALE"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "endocrinologicas",
+      "scope": "Glândulas, função hormonal e diabetes; risco isolado não basta.",
+      "sourceIds": [
+        "SCOPE-endocrinologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "miostioarticulares",
+      "scope": "Ossos, articulações e músculos; fronteira neuromuscular é curricular.",
+      "sourceIds": [
+        "SCOPE-miostioarticulares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "hematologicas",
+      "scope": "Sangue, hematopoiese e componente linfático; extensão a HIV não resolvida.",
+      "sourceIds": [
+        "NLM-HEM"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neoplasicas",
+      "scope": "Neoplasias benignas e malignas; agente oncogênico/risco não é tumor.",
+      "sourceIds": [
+        "NCI-NEO"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    }
+  ],
+  "records": [
+    {
+      "arrayIndex": 0,
+      "diseaseId": "tuberculose-pulmonar",
+      "diseaseName": "Tuberculose pulmonar",
+      "recordObjectSha256": "8d469ba9a807bd9e0d05298d7925c7c664e0cd685fdbac2cb95013164c9831df",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas",
+        "respiratorias"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "respiratorias"
+        ],
+        "conditional": [
+          "neurologicas",
+          "genitourinarias",
+          "miostioarticulares"
+        ],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "cardiovasculares",
+          "digestivas",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Etiologia micobacteriana confirmada.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Somente com tuberculose meníngea/SNC concomitante documentada; pulmão não implica SNC.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com tuberculose meníngea/SNC concomitante documentada; pulmão não implica SNC.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Não foi estabelecido diagnóstico psiquiátrico nem exclusão de sobreposição.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Sítio pulmonar não resolve acometimento otológico; negativo não demonstrado.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Sítio pulmonar não resolve acometimento ocular; negativo não demonstrado.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Sítio pulmonar não resolve acometimento nasal; negativo não demonstrado.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "accepted",
+          "reason": "O qualificativo pulmonar estabelece o órgão acometido.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Doença pulmonar não exclui acometimento cardiovascular; par sem demonstração.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Extensão digestiva não investigada suficientemente para excluir.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "NIDDK-DIG"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "conditional",
+          "reason": "Somente com tuberculose renal/geniturinária concomitante documentada.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias",
+            "SCOPE-FEMALE",
+            "SCOPE-MALE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com tuberculose renal/geniturinária concomitante documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "A fonte geral não resolve doença endócrina associada ou sua exclusão.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "conditional",
+          "reason": "Somente com tuberculose óssea/articular concomitante documentada.",
+          "sourceIds": [
+            "CDC-TB"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com tuberculose óssea/articular concomitante documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Disseminação e envolvimento linfático impedem exclusão pela localização pulmonar.",
+          "sourceIds": [
+            "CDC-TB",
+            "NLM-HEM"
+          ],
+          "scopeSourceIds": [
+            "NLM-HEM"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção pulmonar bacteriana, não proliferação neoplásica. Inferência definicional; não exclui câncer coexistente.",
+          "sourceIds": [
+            "CDC-TB",
+            "NCI-NEO"
+          ],
+          "scopeSourceIds": [
+            "NCI-NEO"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção pulmonar bacteriana, não proliferação neoplásica. Inferência definicional; não exclui câncer coexistente.",
+            "sourceIds": [
+              "CDC-TB",
+              "NCI-NEO"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Registrar as sobreposições condicionais identificadas neste lote e resolver pares retidos antes de disponibilidade global.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: existem pares retidos e novas qualificações não incorporadas ao conteúdo."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 1,
+      "diseaseId": "meningite-bacteriana",
+      "diseaseName": "Meningite bacteriana",
+      "recordObjectSha256": "d4cf5d4cfea6466d87970689f94b71dfa3ba61b230586fcaa3b92c8716ba7310",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas",
+        "neurologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "neurologicas"
+        ],
+        "conditional": [
+          "auditivas"
+        ],
+        "held": [
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Etiologia bacteriana estabelece infecção; transmissibilidade varia.",
+          "sourceIds": [
+            "CDC-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "accepted",
+          "reason": "Inflamação meníngea atinge revestimentos do encéfalo e medula.",
+          "sourceIds": [
+            "CDC-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Confusão e alterações comportamentais não resolvem diagnóstico psiquiátrico.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "conditional",
+          "reason": "Somente com perda auditiva/sequela auditiva documentada após meningite.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com perda auditiva/sequela auditiva documentada após meningite.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Dificuldade visual é possível; falta distinguir lesão ocular de origem neurológica.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Colonização nasal do agente não classifica meningite como doença nasal; exclusão não estabelecida.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Transmissão respiratória não é sítio pulmonar; outras infecções do agente exigem avaliação.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Sepse e repercussão circulatória tornam inadequada exclusão genérica.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Náuseas/vômitos não definem doença digestiva; par permanece sem exclusão demonstrada.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "NIDDK-DIG"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Porta de entrada/colonização não estabelece nem exclui doença geniturinária.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias",
+            "SCOPE-FEMALE",
+            "SCOPE-MALE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Complicações endócrinas não foram resolvidas nas fontes lidas.",
+          "sourceIds": [
+            "CDC-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Fraqueza de membros pode ter origem neurológica; escopo neuromuscular permanece aberto.",
+          "sourceIds": [
+            "WHO-MEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Sepse associada não equivale automaticamente a doença hematológica; exclusão não demonstrada.",
+          "sourceIds": [
+            "CDC-MEN",
+            "NLM-HEM"
+          ],
+          "scopeSourceIds": [
+            "NLM-HEM"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Inflamação meníngea de etiologia bacteriana é entidade infecciosa, distinta de neoplasia. Inferência sobre o diagnóstico, não ausência de câncer no paciente.",
+          "sourceIds": [
+            "CDC-MEN",
+            "NCI-NEO"
+          ],
+          "scopeSourceIds": [
+            "NCI-NEO"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Inflamação meníngea de etiologia bacteriana é entidade infecciosa, distinta de neoplasia. Inferência sobre o diagnóstico, não ausência de câncer no paciente.",
+            "sourceIds": [
+              "CDC-MEN",
+              "NCI-NEO"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Registrar as sobreposições condicionais identificadas neste lote e resolver pares retidos antes de disponibilidade global.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: existem pares retidos e novas qualificações não incorporadas ao conteúdo."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 2,
+      "diseaseId": "hepatite-b",
+      "diseaseName": "Hepatite B",
+      "recordObjectSha256": "22382abfdd19ccdd298ecb0cccaae3332db106d40053dae951b60993167a001f",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas",
+        "digestivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "digestivas"
+        ],
+        "conditional": [
+          "cardiovasculares",
+          "genitourinarias",
+          "miostioarticulares",
+          "hematologicas"
+        ],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "endocrinologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção por HBV transmissível.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Manifestações neurológicas extra-hepáticas precisam de caracterização própria.",
+          "sourceIds": [
+            "WHO-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Não há resolução suficiente do par psiquiátrico; não disponibilizar negativo.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Par auditivo não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Infecção hepática não oferece exclusão ocular suficiente.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Par nasal não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Par respiratório não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "conditional",
+          "reason": "Somente com poliarterite nodosa/vasculite atribuída ao HBV documentada.",
+          "sourceIds": [
+            "WHO-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com poliarterite nodosa/vasculite atribuída ao HBV documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "accepted",
+          "reason": "Hepatite B consta explicitamente na lista digestiva institucional.",
+          "sourceIds": [
+            "CDC-HBV",
+            "NIDDK-DIG"
+          ],
+          "scopeSourceIds": [
+            "NIDDK-DIG"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "conditional",
+          "reason": "Somente com glomerulonefrite/nefropatia associada ao HBV documentada.",
+          "sourceIds": [
+            "WHO-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias",
+            "SCOPE-FEMALE",
+            "SCOPE-MALE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com glomerulonefrite/nefropatia associada ao HBV documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Doença hepática não resolve associação endócrina; não usar como negativo.",
+          "sourceIds": [
+            "CDC-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "conditional",
+          "reason": "Somente com artrite não reumatoide associada ao HBV documentada.",
+          "sourceIds": [
+            "WHO-HBV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com artrite não reumatoide associada ao HBV documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "conditional",
+          "reason": "Somente com manifestação hematolinfática documentada, como linfoma associado; não inferir do sangue como via de transmissão.",
+          "sourceIds": [
+            "WHO-HBV",
+            "NLM-HEM"
+          ],
+          "scopeSourceIds": [
+            "NLM-HEM"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com manifestação hematolinfática documentada, como linfoma associado; não inferir do sangue como via de transmissão.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Risco de câncer e linfoma associado exigem diagnóstico tumoral separado; nenhum negativo liberado.",
+          "sourceIds": [
+            "CDC-HBV",
+            "WHO-HBV",
+            "NCI-NEO"
+          ],
+          "scopeSourceIds": [
+            "NCI-NEO"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Registrar as sobreposições condicionais identificadas neste lote e resolver pares retidos antes de disponibilidade global.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: existem pares retidos e novas qualificações não incorporadas ao conteúdo."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 3,
+      "diseaseId": "hepatite-c",
+      "diseaseName": "Hepatite C",
+      "recordObjectSha256": "d7660a39242eb7dc8ef7ea802d264b374ba6680896e445c6dba17f9768270c0a",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas",
+        "digestivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "digestivas"
+        ],
+        "conditional": [
+          "neurologicas",
+          "cardiovasculares",
+          "genitourinarias",
+          "hematologicas"
+        ],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção por HCV transmissível por sangue.",
+          "sourceIds": [
+            "CDC-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Somente com neuropatia/vasculite do SNC associada à crioglobulinemia documentada.",
+          "sourceIds": [
+            "AASLD-IDSA-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com neuropatia/vasculite do SNC associada à crioglobulinemia documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Sintoma depressivo não basta para transtorno; exclusão permanece aberta.",
+          "sourceIds": [
+            "CDC-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Par auditivo não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Icterícia não define doença ocular; exclusão não demonstrada.",
+          "sourceIds": [
+            "CDC-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Par nasal não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Par respiratório não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "conditional",
+          "reason": "Somente com vasculite crioglobulinêmica documentada; mapeamento vascular do revisor.",
+          "sourceIds": [
+            "AASLD-IDSA-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com vasculite crioglobulinêmica documentada; mapeamento vascular do revisor.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "accepted",
+          "reason": "Hepatite C consta explicitamente na lista digestiva institucional.",
+          "sourceIds": [
+            "CDC-HCV",
+            "NIDDK-DIG"
+          ],
+          "scopeSourceIds": [
+            "NIDDK-DIG"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "conditional",
+          "reason": "Somente com glomerulonefrite associada ao HCV documentada.",
+          "sourceIds": [
+            "AASLD-IDSA-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias",
+            "SCOPE-FEMALE",
+            "SCOPE-MALE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com glomerulonefrite associada ao HCV documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Associação com diabetes não estabelece endocrinopatia universal.",
+          "sourceIds": [
+            "AASLD-IDSA-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Artralgia não confirma doença articular definida.",
+          "sourceIds": [
+            "AASLD-IDSA-HCV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "conditional",
+          "reason": "Somente com síndrome crioglobulinêmica/manifestação linfoproliferativa documentada.",
+          "sourceIds": [
+            "AASLD-IDSA-HCV",
+            "NLM-HEM"
+          ],
+          "scopeSourceIds": [
+            "NLM-HEM"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com síndrome crioglobulinêmica/manifestação linfoproliferativa documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Câncer hepático/linfoma requer diagnóstico adicional; risco não é tumor nem negativo seguro.",
+          "sourceIds": [
+            "CDC-HCV",
+            "AASLD-IDSA-HCV",
+            "NCI-NEO"
+          ],
+          "scopeSourceIds": [
+            "NCI-NEO"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Registrar as sobreposições condicionais identificadas neste lote e resolver pares retidos antes de disponibilidade global.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: existem pares retidos e novas qualificações não incorporadas ao conteúdo."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 4,
+      "diseaseId": "infeccao-hiv",
+      "diseaseName": "Infecção pelo HIV",
+      "recordObjectSha256": "29d198485b0185f17053e49a0dc54f7fac5113919ee5911a77a9e2cf8269fed8",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas"
+      ],
+      "inputClaimedConditionalGroupIds": [
+        "neurologicas"
+      ],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas"
+        ],
+        "conditional": [
+          "neurologicas",
+          "genitourinarias"
+        ],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção viral transmissível; HIV não equivale a AIDS.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Somente com complicação neurológica atribuída ao HIV documentada; RNA liquórico isolado não basta.",
+          "sourceIds": [
+            "NIH-CNS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com complicação neurológica atribuída ao HIV documentada; RNA liquórico isolado não basta.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Sorologia não define transtorno mental; par psiquiátrico sem exclusão demonstrada.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Complicações otológicas não foram caracterizadas; par indisponível.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "A imunodeficiência exige avaliação de doenças oculares próprias; exclusão não demonstrada.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Par nasal não resolvido por fonte específica.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Sintomas gripais não definem doença respiratória; exclusão não demonstrada.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Maior risco cardiovascular não autoriza vínculo universal nem distrator negativo.",
+          "sourceIds": [
+            "NIH-HEART"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Coinfecção por hepatite é distinta do rótulo HIV; par digestivo não resolvido integralmente.",
+          "sourceIds": [
+            "WHO-HBV"
+          ],
+          "scopeSourceIds": [
+            "NIDDK-DIG"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "conditional",
+          "reason": "Somente com doença renal atribuída ao HIV documentada; distinguir toxicidade medicamentosa e outras causas.",
+          "sourceIds": [
+            "NIH-RENAL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias",
+            "SCOPE-FEMALE",
+            "SCOPE-MALE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com doença renal atribuída ao HIV documentada; distinguir toxicidade medicamentosa e outras causas.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Par endócrino não resolvido; não transferir efeitos de tratamento ao diagnóstico.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Par musculoesquelético/neuromuscular não resolvido.",
+          "sourceIds": [
+            "CDC-HIV"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Escopo que inclui linfócitos pode sobrepor imunodeficiência. Decisão curricular hematológica pendente.",
+          "sourceIds": [
+            "CDC-HIV",
+            "NLM-HEM"
+          ],
+          "scopeSourceIds": [
+            "NLM-HEM"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Risco de câncer associado não classifica HIV como tumor; nenhum negativo liberado.",
+          "sourceIds": [
+            "NCI-HIV",
+            "NCI-NEO"
+          ],
+          "scopeSourceIds": [
+            "NCI-NEO"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Registrar as sobreposições condicionais identificadas neste lote e resolver pares retidos antes de disponibilidade global.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: existem pares retidos e novas qualificações não incorporadas ao conteúdo."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    }
+  ],
+  "counts": {
+    "diseasesReviewed": 5,
+    "groupsInspected": 14,
+    "diseaseGroupPairsInspected": 70,
+    "declaredPositiveMembershipsVerified": 9,
+    "declaredConditionalMembershipsVerified": 1,
+    "acceptedMemberships": 9,
+    "conditionalMemberships": 14,
+    "heldPairs": 45,
+    "safeNegativeCandidates": 2,
+    "availableSafeNegatives": 0,
+    "modelReviewed": 0,
+    "needsRevision": 5,
+    "prototypeEligible": 0,
+    "clinicalApprovals": 0
+  },
+  "clinicalApproval": false,
+  "curricularApproval": false,
+  "accessLimitations": [
+    {
+      "url": "https://www.ninds.nih.gov/health-information/disorders/neurological-complications-hiv",
+      "result": "403; not used as evidence; NIH Clinicalinfo guideline read instead"
+    },
+    {
+      "url": "https://www.nhlbi.nih.gov/health/blood-disorders",
+      "result": "inaccessible; not used as evidence; NLM MeSH scope read instead"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK615007/",
+      "result": "browser challenge; chapter content successfully read through report=reader URL listed in sources"
+    }
+  ],
+  "completion": {
+    "boundedReviewComplete": true,
+    "sourceDraftEdited": false,
+    "applicationEdited": false,
+    "rootReviewEdited": false,
+    "otherDiseaseRecordsReviewed": false,
+    "clinicalApprovalGranted": false,
+    "remainingWork": "Resolve held pairs and incorporate reviewed qualifications in a separately authorized content change; no extension to remaining 219 records."
+  }
+}
