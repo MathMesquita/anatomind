@@ -1,0 +1,4821 @@
+{
+  "schemaVersion": 1,
+  "topic": "regioes",
+  "sourceDocuments": [
+    {
+      "id": "divisao-superficie-corporal-3semestre",
+      "filename": "DIVISÃO DA SUPERFÍCIE CORPORAL - 3ºSEMESTRE.pdf",
+      "pages": 1
+    }
+  ],
+  "generation": {
+    "model": "gpt-6-luna",
+    "promptVersion": "content-bank-v1",
+    "date": "2026-11-14"
+  },
+  "review": {
+    "status": "model-reviewed",
+    "model": "gpt6.1-sol",
+    "date": "2026-11-14",
+    "clinicalReview": "not-recorded",
+    "scope": "55 legend labels; all 71 input questions; 3 newly localized questions; pixel anchors independently inspected. Source errors and unresolved targets excluded.",
+    "confidence": {
+      "high": 67,
+      "moderate": 4
+    },
+    "reviewFile": "docs/reviews/regioes-v1.json"
+  },
+  "coverage": {
+    "regions": {
+      "count": 55,
+      "target": 55
+    },
+    "questions": {
+      "count": 71,
+      "verifiedSafePool": 71
+    },
+    "answerRegions": {
+      "count": 50,
+      "target": 55
+    },
+    "localizedByView": {
+      "face": 11,
+      "occipital": 6,
+      "lateral": 18,
+      "anterior": 21,
+      "posterior": 15
+    },
+    "pendingQuestionTargets": [
+      {
+        "view": "lateral",
+        "numbers": [
+          39,
+          41
+        ],
+        "reasonCode": "source-numbering-error",
+        "status": "excluded",
+        "reason": "39 em (58, 58) px e 41 em (67, 27) px estão impressos na cabeça; contradizem os itens braquial posterior e cubital posterior da legenda. Não gerar questão nem substituir por um número presumido."
+      },
+      {
+        "view": "lateral",
+        "numbers": [
+          26
+        ],
+        "reasonCode": "illegible-compressed-number",
+        "status": "excluded",
+        "reason": "Numeral candidato na estreita cunha inguinal, aproximadamente (82, 251) px, comprimido pelas linhas e pelo 27 vizinho. Os traços de 26 não se separam com confiança suficiente na imagem original; questão excluída. A região 26 continua respondível na vista anterior."
+      },
+      {
+        "view": "anterior",
+        "numbers": [
+          15
+        ],
+        "reasonCode": "illegible-compressed-number",
+        "status": "excluded",
+        "reason": "Os possíveis 15 em torno de (323, 103) e (352, 103) px cruzam as linhas cervical oblíqua e vertical. Não há separação individual segura dos traços na resolução original. 14 central é legível e foi incluído; 15 permanece apenas no inventário e nas opções."
+      }
+    ],
+    "pendingCount": 4,
+    "excludedTargetCount": 4,
+    "sourceDefects": [
+      {
+        "view": "lateral",
+        "number": 27,
+        "sourcePixel": {
+          "x": 70,
+          "y": 174
+        },
+        "reasonCode": "contradictory-duplicate-numeral",
+        "status": "excluded-occurrence",
+        "reason": "27 impresso no abdome superior contradiz a legenda púbica/hipogástrica. A questão lateral-27 usa somente o 27 inferior em (100, 251) px."
+      },
+      {
+        "view": "posterior",
+        "numbers": [
+          16,
+          17
+        ],
+        "reasonCode": "prior-inventory-phantom-targets",
+        "status": "removed-from-inventory",
+        "reason": "Nenhum 16/17 é legível no corpo posterior; 33 e 34 são os números efetivamente impressos na cintura escapular. Itens antigos integralmente preservados no registro de revisão."
+      }
+    ],
+    "unlocalizedRegions": [
+      {
+        "number": 15,
+        "regionId": "regiao-15",
+        "label": "Esternocleidomastóidea",
+        "reason": "Numeral anterior comprimido; sem alvo individual seguro."
+      },
+      {
+        "number": 28,
+        "regionId": "regiao-28",
+        "label": "Vertebral",
+        "reason": "Presente na legenda, sem numeral identificável nas cinco vistas; não inventar alvo."
+      },
+      {
+        "number": 29,
+        "regionId": "regiao-29",
+        "label": "Sacral",
+        "reason": "Presente na legenda, sem numeral identificável nas cinco vistas; não inventar alvo."
+      },
+      {
+        "number": 35,
+        "regionId": "regiao-35",
+        "label": "Anal",
+        "reason": "Presente na legenda, sem numeral identificável nas cinco vistas; não inventar alvo."
+      },
+      {
+        "number": 55,
+        "regionId": "regiao-55",
+        "label": "Planta do pé",
+        "reason": "Presente na legenda, sem numeral identificável nas cinco vistas; não inventar alvo."
+      }
+    ],
+    "questionTarget": "One question per safe independently localized number/view association. All 71 questions are eligible for downstream randomized selection; missing or contradictory source targets are ineligible.",
+    "localizationMethod": "Fresh rendering of original PDF; independent visual review of original JPEGs, 3x/6x/10x inspections and 71 per-question contact windows. Anchors measured in original-image pixels, then converted to existing crop percentages.",
+    "coordinateFormula": "x=100*(pixelX-left)/cropWidth; y=100*(pixelY-top)/cropHeight; up to 4 decimal places. Anchor tolerance is visual measurement uncertainty, not accuracy added by rounding.",
+    "inventoryCorrection": {
+      "previousClaimedDenominator": 75,
+      "previousDenominatorVerified": false,
+      "removedPhantomPairs": [
+        {
+          "view": "posterior",
+          "number": 16
+        },
+        {
+          "view": "posterior",
+          "number": 17
+        }
+      ],
+      "newlyConfirmedPairs": [
+        {
+          "view": "anterior",
+          "number": 16
+        },
+        {
+          "view": "lateral",
+          "number": 36
+        }
+      ],
+      "confirmedReadablePairs": 73,
+      "excludedReadablePairs": 2,
+      "unresolvedCandidatePairs": 2,
+      "note": "Do not use 75 as a verified denominator. There are 73 independently readable pairs, of which 71 are usable; two further number candidates remain unresolved."
+    },
+    "confirmedReadableNumberViewAssociations": {
+      "count": 73,
+      "byView": {
+        "face": 11,
+        "occipital": 6,
+        "lateral": 20,
+        "anterior": 21,
+        "posterior": 15
+      },
+      "definition": "Independently readable distinct number/view pairs; includes lateral 39/41 rejected for source contradiction. Does not count ambiguous anterior 15 or lateral 26 as confirmed."
+    },
+    "unresolvedNumberViewCandidates": {
+      "count": 2,
+      "items": [
+        {
+          "view": "anterior",
+          "candidateNumber": 15
+        },
+        {
+          "view": "lateral",
+          "candidateNumber": 26
+        }
+      ],
+      "note": "Candidate identity/anchor is unresolved at original JPEG resolution; excluded rather than counted as visible verified targets."
+    },
+    "inventoryByView": {
+      "face": {
+        "confirmedReadableNumbers": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "eligibleQuestionNumbers": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "excludedReadableNumbers": [],
+        "unresolvedNumberCandidates": []
+      },
+      "occipital": {
+        "confirmedReadableNumbers": [
+          2,
+          3,
+          4,
+          5,
+          16,
+          17
+        ],
+        "eligibleQuestionNumbers": [
+          2,
+          3,
+          4,
+          5,
+          16,
+          17
+        ],
+        "excludedReadableNumbers": [],
+        "unresolvedNumberCandidates": []
+      },
+      "lateral": {
+        "confirmedReadableNumbers": [
+          18,
+          19,
+          20,
+          22,
+          24,
+          25,
+          27,
+          34,
+          36,
+          39,
+          41,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "eligibleQuestionNumbers": [
+          18,
+          19,
+          20,
+          22,
+          24,
+          25,
+          27,
+          34,
+          36,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "excludedReadableNumbers": [
+          39,
+          41
+        ],
+        "unresolvedNumberCandidates": [
+          26
+        ]
+      },
+      "anterior": {
+        "confirmedReadableNumbers": [
+          14,
+          16,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          36,
+          37,
+          38,
+          40,
+          42,
+          45,
+          47,
+          49,
+          51,
+          54
+        ],
+        "eligibleQuestionNumbers": [
+          14,
+          16,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          36,
+          37,
+          38,
+          40,
+          42,
+          45,
+          47,
+          49,
+          51,
+          54
+        ],
+        "excludedReadableNumbers": [],
+        "unresolvedNumberCandidates": [
+          15
+        ]
+      },
+      "posterior": {
+        "confirmedReadableNumbers": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          37,
+          39,
+          41,
+          43,
+          44,
+          46,
+          48,
+          50,
+          52,
+          53
+        ],
+        "eligibleQuestionNumbers": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          37,
+          39,
+          41,
+          43,
+          44,
+          46,
+          48,
+          50,
+          52,
+          53
+        ],
+        "excludedReadableNumbers": [],
+        "unresolvedNumberCandidates": []
+      }
+    }
+  },
+  "regions": [
+    {
+      "id": "regiao-01",
+      "number": 1,
+      "label": "Frontal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, I. Regiões da cabeça, item 1"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 1 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-02",
+      "number": 2,
+      "label": "Parietal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, I. Regiões da cabeça, item 2"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 2 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-03",
+      "number": 3,
+      "label": "Occipital",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, I. Regiões da cabeça, item 3"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 3 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-04",
+      "number": 4,
+      "label": "Temporal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, I. Regiões da cabeça, item 4"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 4 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-05",
+      "number": 5,
+      "label": "Infratemporal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, I. Regiões da cabeça, item 5"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 5 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-06",
+      "number": 6,
+      "label": "Nasal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 6"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 6 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-07",
+      "number": 7,
+      "label": "Bucal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 7"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 7 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-08",
+      "number": 8,
+      "label": "Mentual",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 8"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 8 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-09",
+      "number": 9,
+      "label": "Orbital",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 9"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 9 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-10",
+      "number": 10,
+      "label": "Infraorbital",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 10"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 10 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-11",
+      "number": 11,
+      "label": "Da bochecha",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 11"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 11 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-12",
+      "number": 12,
+      "label": "Zigomática",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 12"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 12 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-13",
+      "number": 13,
+      "label": "Parotideomassetérica",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, II. Regiões da face, item 13"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 13 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-14",
+      "number": 14,
+      "label": "Cervical anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, III. Regiões cervicais, item 14"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 14 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-15",
+      "number": 15,
+      "label": "Esternocleidomastóidea",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, III. Regiões cervicais, item 15"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 15 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-16",
+      "number": 16,
+      "label": "Cervical lateral",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, III. Regiões cervicais, item 16"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 16 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-17",
+      "number": 17,
+      "label": "Cervical posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, III. Regiões cervicais, item 17"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 17 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-18",
+      "number": 18,
+      "label": "Infraclavicular",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IV. Regiões torácicas, item 18"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 18 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-19",
+      "number": 19,
+      "label": "Mamária",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IV. Regiões torácicas, item 19"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 19 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-20",
+      "number": 20,
+      "label": "Axilar",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IV. Regiões torácicas, item 20"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 20 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-21",
+      "number": 21,
+      "label": "Esternal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IV. Regiões torácicas, item 21"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 21 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-22",
+      "number": 22,
+      "label": "Hipocôndrio",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, V. Regiões do abdome, item 22"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 22 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-23",
+      "number": 23,
+      "label": "Epigástrio",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, V. Regiões do abdome, item 23"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 23 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-24",
+      "number": 24,
+      "label": "Lateral (flanco)",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, V. Regiões do abdome, item 24"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 24 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-25",
+      "number": 25,
+      "label": "Umbilical",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, V. Regiões do abdome, item 25"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 25 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-26",
+      "number": 26,
+      "label": "Inguinal (fossa ilíaca)",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, V. Regiões do abdome, item 26"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 26 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-27",
+      "number": 27,
+      "label": "Púbica ou hipogástrica",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, V. Regiões do abdome, item 27"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 27 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-28",
+      "number": 28,
+      "label": "Vertebral",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 28"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 28 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-29",
+      "number": 29,
+      "label": "Sacral",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 29"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 29 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-30",
+      "number": 30,
+      "label": "Escapular",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 30"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 30 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-31",
+      "number": 31,
+      "label": "Infraescapular",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 31"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 31 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-32",
+      "number": 32,
+      "label": "Lombar",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 32"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 32 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-33",
+      "number": 33,
+      "label": "Supraescapular",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 33"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 33 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-34",
+      "number": 34,
+      "label": "Interescapulovertebral",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VI. Regiões dorsais, item 34"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 34 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-35",
+      "number": 35,
+      "label": "Anal",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VII. Região perineal, item 35"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 35 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-36",
+      "number": 36,
+      "label": "Urogenital",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VII. Região perineal, item 36"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 36 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-37",
+      "number": 37,
+      "label": "Deltóidea",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 37"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 37 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-38",
+      "number": 38,
+      "label": "Braquial anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 38"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 38 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-39",
+      "number": 39,
+      "label": "Braquial posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 39"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 39 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-40",
+      "number": 40,
+      "label": "Cubital anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 40"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 40 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-41",
+      "number": 41,
+      "label": "Cubital posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 41"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 41 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-42",
+      "number": 42,
+      "label": "Antebraquial anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 42"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 42 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-43",
+      "number": 43,
+      "label": "Antebraquial posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 43"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 43 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-44",
+      "number": 44,
+      "label": "Dorso da mão",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 44"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 44 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-45",
+      "number": 45,
+      "label": "Palma da mão",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, VIII. Regiões do membro superior, item 45"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 45 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-46",
+      "number": 46,
+      "label": "Glútea",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 46"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 46 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-47",
+      "number": 47,
+      "label": "Femoral anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 47"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 47 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-48",
+      "number": 48,
+      "label": "Femoral posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 48"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 48 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-49",
+      "number": 49,
+      "label": "Genicular anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 49"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 49 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-50",
+      "number": 50,
+      "label": "Genicular posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 50"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 50 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-51",
+      "number": 51,
+      "label": "Crural anterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 51"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 51 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-52",
+      "number": 52,
+      "label": "Crural posterior",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 52"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 52 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-53",
+      "number": 53,
+      "label": "Calcânea",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 53"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 53 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-54",
+      "number": 54,
+      "label": "Dorso do pé",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 54"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 54 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    },
+    {
+      "id": "regiao-55",
+      "number": 55,
+      "label": "Planta do pé",
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Legenda, IX. Regiões do membro inferior, item 55"
+      },
+      "notes": [],
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Rótulo 55 cotejado individualmente com source-0.jpg e com a legenda da página 1; grafia preservada sem atualização terminológica."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "superficie-face-01",
+      "view": "face",
+      "number": 1,
+      "answerRegionId": "regiao-01",
+      "marker": {
+        "x": 49,
+        "y": 24
+      },
+      "optionRegionIds": [
+        "regiao-01",
+        "regiao-02",
+        "regiao-03",
+        "regiao-04"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 1; legenda, item 1"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 1 conferido em head-surface.jpg, (197, 109) px; pin (192.08, 98.16) px, convertido para o recorte existente. Coordenada anterior já adjacente ao numeral medido; mantida após inspeção independente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 197,
+            "y": 109
+          },
+          "marker": {
+            "x": 192.08,
+            "y": 98.16
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-01"
+      }
+    },
+    {
+      "id": "superficie-face-02",
+      "view": "face",
+      "number": 2,
+      "answerRegionId": "regiao-02",
+      "marker": {
+        "x": 51,
+        "y": 4
+      },
+      "optionRegionIds": [
+        "regiao-03",
+        "regiao-02",
+        "regiao-01",
+        "regiao-04"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 2; legenda, item 2"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 2 conferido em head-surface.jpg, (186, 17) px; pin (199.92, 16.36) px, convertido para o recorte existente. Coordenada anterior já adjacente ao numeral medido; mantida após inspeção independente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 186,
+            "y": 17
+          },
+          "marker": {
+            "x": 199.92,
+            "y": 16.36
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-02"
+      }
+    },
+    {
+      "id": "superficie-face-04",
+      "view": "face",
+      "number": 4,
+      "answerRegionId": "regiao-04",
+      "marker": {
+        "x": 91.3265,
+        "y": 30.8068
+      },
+      "optionRegionIds": [
+        "regiao-05",
+        "regiao-03",
+        "regiao-04",
+        "regiao-06"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 4; legenda, item 4"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 4 conferido em head-surface.jpg, (345, 126) px; pin (358, 126) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 345,
+            "y": 126
+          },
+          "marker": {
+            "x": 358,
+            "y": 126
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-04"
+      }
+    },
+    {
+      "id": "superficie-face-06",
+      "view": "face",
+      "number": 6,
+      "answerRegionId": "regiao-06",
+      "marker": {
+        "x": 50,
+        "y": 55
+      },
+      "optionRegionIds": [
+        "regiao-07",
+        "regiao-05",
+        "regiao-08",
+        "regiao-06"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura da face, vista anterior; numeral 6; legenda II, item 6"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 6 conferido em head-surface.jpg, (183, 225) px; pin (196, 224.95) px, convertido para o recorte existente. Pin inicial conferido junto ao numeral; posição preservada conforme solicitado.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 183,
+            "y": 225
+          },
+          "marker": {
+            "x": 196,
+            "y": 224.95
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-06"
+      }
+    },
+    {
+      "id": "superficie-face-07",
+      "view": "face",
+      "number": 7,
+      "answerRegionId": "regiao-07",
+      "marker": {
+        "x": 49.4898,
+        "y": 70.6601
+      },
+      "optionRegionIds": [
+        "regiao-07",
+        "regiao-08",
+        "regiao-06",
+        "regiao-09"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 7; legenda, item 7"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 7 conferido em head-surface.jpg, (181, 289) px; pin (194, 289) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 181,
+            "y": 289
+          },
+          "marker": {
+            "x": 194,
+            "y": 289
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-07"
+      }
+    },
+    {
+      "id": "superficie-face-08",
+      "view": "face",
+      "number": 8,
+      "answerRegionId": "regiao-08",
+      "marker": {
+        "x": 48.2143,
+        "y": 91.4425
+      },
+      "optionRegionIds": [
+        "regiao-09",
+        "regiao-08",
+        "regiao-07",
+        "regiao-10"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 8; legenda, item 8"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 8 conferido em head-surface.jpg, (176, 374) px; pin (189, 374) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 176,
+            "y": 374
+          },
+          "marker": {
+            "x": 189,
+            "y": 374
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-08"
+      }
+    },
+    {
+      "id": "superficie-face-09",
+      "view": "face",
+      "number": 9,
+      "answerRegionId": "regiao-09",
+      "marker": {
+        "x": 69.898,
+        "y": 54.7677
+      },
+      "optionRegionIds": [
+        "regiao-10",
+        "regiao-08",
+        "regiao-09",
+        "regiao-11"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 9; legenda, item 9"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 9 conferido em head-surface.jpg, (261, 224) px; pin (274, 224) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 261,
+            "y": 224
+          },
+          "marker": {
+            "x": 274,
+            "y": 224
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-09"
+      }
+    },
+    {
+      "id": "superficie-face-10",
+      "view": "face",
+      "number": 10,
+      "answerRegionId": "regiao-10",
+      "marker": {
+        "x": 70.1531,
+        "y": 61.1247
+      },
+      "optionRegionIds": [
+        "regiao-11",
+        "regiao-09",
+        "regiao-12",
+        "regiao-10"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 10; legenda, item 10"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 10 conferido em head-surface.jpg, (259, 250) px; pin (275, 250) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 259,
+            "y": 250
+          },
+          "marker": {
+            "x": 275,
+            "y": 250
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-10"
+      }
+    },
+    {
+      "id": "superficie-face-11",
+      "view": "face",
+      "number": 11,
+      "answerRegionId": "regiao-11",
+      "marker": {
+        "x": 69.6429,
+        "y": 71.3936
+      },
+      "optionRegionIds": [
+        "regiao-11",
+        "regiao-12",
+        "regiao-10",
+        "regiao-13"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 11; legenda, item 11"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 11 conferido em head-surface.jpg, (257, 292) px; pin (273, 292) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 257,
+            "y": 292
+          },
+          "marker": {
+            "x": 273,
+            "y": 292
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-11"
+      }
+    },
+    {
+      "id": "superficie-face-12",
+      "view": "face",
+      "number": 12,
+      "answerRegionId": "regiao-12",
+      "marker": {
+        "x": 85.4592,
+        "y": 49.8778
+      },
+      "optionRegionIds": [
+        "regiao-13",
+        "regiao-12",
+        "regiao-11",
+        "regiao-14"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 12; legenda, item 12"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 12 conferido em head-surface.jpg, (319, 204) px; pin (335, 204) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 319,
+            "y": 204
+          },
+          "marker": {
+            "x": 335,
+            "y": 204
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-12"
+      }
+    },
+    {
+      "id": "superficie-face-13",
+      "view": "face",
+      "number": 13,
+      "answerRegionId": "regiao-13",
+      "marker": {
+        "x": 82.1429,
+        "y": 70.6601
+      },
+      "optionRegionIds": [
+        "regiao-14",
+        "regiao-12",
+        "regiao-13",
+        "regiao-15"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior da cabeça, numeral 13; legenda, item 13"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 13 conferido em head-surface.jpg, (306, 289) px; pin (322, 289) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 306,
+            "y": 289
+          },
+          "marker": {
+            "x": 322,
+            "y": 289
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 392,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-face-13"
+      }
+    },
+    {
+      "id": "superficie-occipital-02",
+      "view": "occipital",
+      "number": 2,
+      "answerRegionId": "regiao-02",
+      "marker": {
+        "x": 74.5636,
+        "y": 14.6699
+      },
+      "optionRegionIds": [
+        "regiao-03",
+        "regiao-01",
+        "regiao-04",
+        "regiao-02"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior da cabeça, numeral 2; legenda, item 2"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 2 conferido em head-surface.jpg, (678, 60) px; pin (691, 60) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 678,
+            "y": 60
+          },
+          "marker": {
+            "x": 691,
+            "y": 60
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 392,
+            "top": 0,
+            "width": 401,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-occipital-02"
+      }
+    },
+    {
+      "id": "superficie-occipital-03",
+      "view": "occipital",
+      "number": 3,
+      "answerRegionId": "regiao-03",
+      "marker": {
+        "x": 56,
+        "y": 47
+      },
+      "optionRegionIds": [
+        "regiao-03",
+        "regiao-04",
+        "regiao-02",
+        "regiao-05"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura da cabeça, vista posterior; numeral 3; legenda I, item 3"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 3 conferido em head-surface.jpg, (604, 190) px; pin (616.56, 192.23) px, convertido para o recorte existente. Pin inicial conferido junto ao numeral; posição preservada conforme solicitado.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 604,
+            "y": 190
+          },
+          "marker": {
+            "x": 616.56,
+            "y": 192.23
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 392,
+            "top": 0,
+            "width": 401,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-occipital-03"
+      }
+    },
+    {
+      "id": "superficie-occipital-04",
+      "view": "occipital",
+      "number": 4,
+      "answerRegionId": "regiao-04",
+      "marker": {
+        "x": 92.7681,
+        "y": 36.9193
+      },
+      "optionRegionIds": [
+        "regiao-05",
+        "regiao-04",
+        "regiao-03",
+        "regiao-06"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior da cabeça, numeral 4; legenda, item 4"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 4 conferido em head-surface.jpg, (751, 151) px; pin (764, 151) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 751,
+            "y": 151
+          },
+          "marker": {
+            "x": 764,
+            "y": 151
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 392,
+            "top": 0,
+            "width": 401,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-occipital-04"
+      }
+    },
+    {
+      "id": "superficie-occipital-05",
+      "view": "occipital",
+      "number": 5,
+      "answerRegionId": "regiao-05",
+      "marker": {
+        "x": 80.2993,
+        "y": 70.9046
+      },
+      "optionRegionIds": [
+        "regiao-06",
+        "regiao-04",
+        "regiao-05",
+        "regiao-07"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior da cabeça, numeral 5; legenda, item 5"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 5 conferido em head-surface.jpg, (727, 290) px; pin (714, 290) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 727,
+            "y": 290
+          },
+          "marker": {
+            "x": 714,
+            "y": 290
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 392,
+            "top": 0,
+            "width": 401,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-occipital-05"
+      }
+    },
+    {
+      "id": "superficie-occipital-16",
+      "view": "occipital",
+      "number": 16,
+      "answerRegionId": "regiao-16",
+      "marker": {
+        "x": 67.0823,
+        "y": 90.9535
+      },
+      "optionRegionIds": [
+        "regiao-17",
+        "regiao-15",
+        "regiao-18",
+        "regiao-16"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior da cabeça, numeral 16; legenda, item 16"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 16 conferido em head-surface.jpg, (645, 372) px; pin (661, 372) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 645,
+            "y": 372
+          },
+          "marker": {
+            "x": 661,
+            "y": 372
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 392,
+            "top": 0,
+            "width": 401,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-occipital-16"
+      }
+    },
+    {
+      "id": "superficie-occipital-17",
+      "view": "occipital",
+      "number": 17,
+      "answerRegionId": "regiao-17",
+      "marker": {
+        "x": 51,
+        "y": 92
+      },
+      "optionRegionIds": [
+        "regiao-17",
+        "regiao-18",
+        "regiao-16",
+        "regiao-19"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior da cabeça, numeral 17; legenda, item 17"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 17 conferido em head-surface.jpg, (582, 376) px; pin (596.51, 376.28) px, convertido para o recorte existente. Coordenada anterior já adjacente ao numeral medido; mantida após inspeção independente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 582,
+            "y": 376
+          },
+          "marker": {
+            "x": 596.51,
+            "y": 376.28
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "head-surface.jpg",
+            "left": 392,
+            "top": 0,
+            "width": 401,
+            "height": 409
+          }
+        },
+        "reviewItemId": "superficie-occipital-17"
+      }
+    },
+    {
+      "id": "superficie-lateral-34",
+      "view": "lateral",
+      "number": 34,
+      "answerRegionId": "regiao-34",
+      "marker": {
+        "x": 15,
+        "y": 21.3382
+      },
+      "optionRegionIds": [
+        "regiao-35",
+        "regiao-34",
+        "regiao-33",
+        "regiao-36"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 34; legenda, item 34"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 34 conferido em body-surface.jpg, (21, 134) px; pin (21, 118) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 21,
+            "y": 134
+          },
+          "marker": {
+            "x": 21,
+            "y": 118
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-34"
+      }
+    },
+    {
+      "id": "superficie-lateral-20",
+      "view": "lateral",
+      "number": 20,
+      "answerRegionId": "regiao-20",
+      "marker": {
+        "x": 31.4286,
+        "y": 28.7523
+      },
+      "optionRegionIds": [
+        "regiao-21",
+        "regiao-19",
+        "regiao-20",
+        "regiao-22"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 20; legenda, item 20"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 20 conferido em body-surface.jpg, (44, 143) px; pin (44, 159) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 44,
+            "y": 143
+          },
+          "marker": {
+            "x": 44,
+            "y": 159
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-20"
+      }
+    },
+    {
+      "id": "superficie-lateral-18",
+      "view": "lateral",
+      "number": 18,
+      "answerRegionId": "regiao-18",
+      "marker": {
+        "x": 62.8571,
+        "y": 22.0615
+      },
+      "optionRegionIds": [
+        "regiao-19",
+        "regiao-17",
+        "regiao-20",
+        "regiao-18"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 18; legenda, item 18"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 18 conferido em body-surface.jpg, (71, 122) px; pin (88, 122) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 71,
+            "y": 122
+          },
+          "marker": {
+            "x": 88,
+            "y": 122
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-18"
+      }
+    },
+    {
+      "id": "superficie-lateral-19",
+      "view": "lateral",
+      "number": 19,
+      "answerRegionId": "regiao-19",
+      "marker": {
+        "x": 67.1429,
+        "y": 26.2206
+      },
+      "optionRegionIds": [
+        "regiao-19",
+        "regiao-20",
+        "regiao-18",
+        "regiao-21"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 19; legenda, item 19"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 19 conferido em body-surface.jpg, (77, 145) px; pin (94, 145) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 77,
+            "y": 145
+          },
+          "marker": {
+            "x": 94,
+            "y": 145
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-19"
+      }
+    },
+    {
+      "id": "superficie-lateral-27",
+      "view": "lateral",
+      "number": 27,
+      "answerRegionId": "regiao-27",
+      "marker": {
+        "x": 83.5714,
+        "y": 45.3888
+      },
+      "optionRegionIds": [
+        "regiao-28",
+        "regiao-27",
+        "regiao-26",
+        "regiao-29"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 27; legenda, item 27"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "moderate",
+        "visualCheck": "Numeral 27 conferido em body-surface.jpg, (100, 251) px; pin (117, 251) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente. Usado exclusivamente o 27 inferior pélvico, aproximadamente (100, 251) px. O 27 superior em (70, 174) px contradiz a legenda púbica/hipogástrica e está sinalizado como defeito da fonte; não foi reinterpretado como outro número.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 100,
+            "y": 251
+          },
+          "marker": {
+            "x": 117,
+            "y": 251
+          },
+          "anchorTolerancePixels": 3,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-27"
+      }
+    },
+    {
+      "id": "superficie-lateral-22",
+      "view": "lateral",
+      "number": 22,
+      "answerRegionId": "regiao-22",
+      "marker": {
+        "x": 84.2857,
+        "y": 33.2731
+      },
+      "optionRegionIds": [
+        "regiao-23",
+        "regiao-21",
+        "regiao-22",
+        "regiao-24"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 22; legenda, item 22"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 22 conferido em body-surface.jpg, (101, 184) px; pin (118, 184) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 101,
+            "y": 184
+          },
+          "marker": {
+            "x": 118,
+            "y": 184
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-22"
+      }
+    },
+    {
+      "id": "superficie-lateral-24",
+      "view": "lateral",
+      "number": 24,
+      "answerRegionId": "regiao-24",
+      "marker": {
+        "x": 43,
+        "y": 40
+      },
+      "optionRegionIds": [
+        "regiao-25",
+        "regiao-23",
+        "regiao-26",
+        "regiao-24"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 24; legenda, item 24"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 24 conferido em body-surface.jpg, (56, 221) px; pin (60.2, 221.2) px, convertido para o recorte existente. Pin inicial conferido junto ao numeral; posição preservada conforme solicitado.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 56,
+            "y": 221
+          },
+          "marker": {
+            "x": 60.2,
+            "y": 221.2
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-24"
+      }
+    },
+    {
+      "id": "superficie-lateral-25",
+      "view": "lateral",
+      "number": 25,
+      "answerRegionId": "regiao-25",
+      "marker": {
+        "x": 78.5714,
+        "y": 38.3363
+      },
+      "optionRegionIds": [
+        "regiao-25",
+        "regiao-26",
+        "regiao-24",
+        "regiao-27"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 25; legenda, item 25"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 25 conferido em body-surface.jpg, (93, 212) px; pin (110, 212) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 93,
+            "y": 212
+          },
+          "marker": {
+            "x": 110,
+            "y": 212
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-25"
+      }
+    },
+    {
+      "id": "superficie-lateral-46",
+      "view": "lateral",
+      "number": 46,
+      "answerRegionId": "regiao-46",
+      "marker": {
+        "x": 45.7143,
+        "y": 50.0904
+      },
+      "optionRegionIds": [
+        "regiao-47",
+        "regiao-46",
+        "regiao-45",
+        "regiao-48"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 46; legenda, item 46"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 46 conferido em body-surface.jpg, (47, 277) px; pin (64, 277) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 47,
+            "y": 277
+          },
+          "marker": {
+            "x": 64,
+            "y": 277
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-46"
+      }
+    },
+    {
+      "id": "superficie-lateral-47",
+      "view": "lateral",
+      "number": 47,
+      "answerRegionId": "regiao-47",
+      "marker": {
+        "x": 70.7143,
+        "y": 60.217
+      },
+      "optionRegionIds": [
+        "regiao-48",
+        "regiao-46",
+        "regiao-47",
+        "regiao-49"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 47; legenda, item 47"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 47 conferido em body-surface.jpg, (82, 333) px; pin (99, 333) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 82,
+            "y": 333
+          },
+          "marker": {
+            "x": 99,
+            "y": 333
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-47"
+      }
+    },
+    {
+      "id": "superficie-lateral-48",
+      "view": "lateral",
+      "number": 48,
+      "answerRegionId": "regiao-48",
+      "marker": {
+        "x": 26.4286,
+        "y": 63.1103
+      },
+      "optionRegionIds": [
+        "regiao-49",
+        "regiao-47",
+        "regiao-50",
+        "regiao-48"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 48; legenda, item 48"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 48 conferido em body-surface.jpg, (54, 349) px; pin (37, 349) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 54,
+            "y": 349
+          },
+          "marker": {
+            "x": 37,
+            "y": 349
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-48"
+      }
+    },
+    {
+      "id": "superficie-lateral-50",
+      "view": "lateral",
+      "number": 50,
+      "answerRegionId": "regiao-50",
+      "marker": {
+        "x": 32.8571,
+        "y": 72.1519
+      },
+      "optionRegionIds": [
+        "regiao-50",
+        "regiao-51",
+        "regiao-49",
+        "regiao-52"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 50; legenda, item 50"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 50 conferido em body-surface.jpg, (63, 399) px; pin (46, 399) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 63,
+            "y": 399
+          },
+          "marker": {
+            "x": 46,
+            "y": 399
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-50"
+      }
+    },
+    {
+      "id": "superficie-lateral-49",
+      "view": "lateral",
+      "number": 49,
+      "answerRegionId": "regiao-49",
+      "marker": {
+        "x": 79.2857,
+        "y": 72.1519
+      },
+      "optionRegionIds": [
+        "regiao-50",
+        "regiao-49",
+        "regiao-48",
+        "regiao-51"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 49; legenda, item 49"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 49 conferido em body-surface.jpg, (94, 399) px; pin (111, 399) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 94,
+            "y": 399
+          },
+          "marker": {
+            "x": 111,
+            "y": 399
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-49"
+      }
+    },
+    {
+      "id": "superficie-lateral-52",
+      "view": "lateral",
+      "number": 52,
+      "answerRegionId": "regiao-52",
+      "marker": {
+        "x": 27.8571,
+        "y": 80.1085
+      },
+      "optionRegionIds": [
+        "regiao-53",
+        "regiao-51",
+        "regiao-52",
+        "regiao-54"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 52; legenda, item 52"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 52 conferido em body-surface.jpg, (56, 443) px; pin (39, 443) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 56,
+            "y": 443
+          },
+          "marker": {
+            "x": 39,
+            "y": 443
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-52"
+      }
+    },
+    {
+      "id": "superficie-lateral-51",
+      "view": "lateral",
+      "number": 51,
+      "answerRegionId": "regiao-51",
+      "marker": {
+        "x": 67.1429,
+        "y": 80.1085
+      },
+      "optionRegionIds": [
+        "regiao-52",
+        "regiao-50",
+        "regiao-53",
+        "regiao-51"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 51; legenda, item 51"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 51 conferido em body-surface.jpg, (77, 443) px; pin (94, 443) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 77,
+            "y": 443
+          },
+          "marker": {
+            "x": 94,
+            "y": 443
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-51"
+      }
+    },
+    {
+      "id": "superficie-lateral-53",
+      "view": "lateral",
+      "number": 53,
+      "answerRegionId": "regiao-53",
+      "marker": {
+        "x": 27.8571,
+        "y": 96.2025
+      },
+      "optionRegionIds": [
+        "regiao-53",
+        "regiao-54",
+        "regiao-52",
+        "regiao-55"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 53; legenda, item 53"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 53 conferido em body-surface.jpg, (56, 532) px; pin (39, 532) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 56,
+            "y": 532
+          },
+          "marker": {
+            "x": 39,
+            "y": 532
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-53"
+      }
+    },
+    {
+      "id": "superficie-lateral-54",
+      "view": "lateral",
+      "number": 54,
+      "answerRegionId": "regiao-54",
+      "marker": {
+        "x": 74.2857,
+        "y": 96.3834
+      },
+      "optionRegionIds": [
+        "regiao-55",
+        "regiao-54",
+        "regiao-53",
+        "regiao-52"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura lateral do corpo, numeral 54; legenda, item 54"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 54 conferido em body-surface.jpg, (87, 533) px; pin (104, 533) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 87,
+            "y": 533
+          },
+          "marker": {
+            "x": 104,
+            "y": 533
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-54"
+      }
+    },
+    {
+      "id": "superficie-lateral-36",
+      "view": "lateral",
+      "number": 36,
+      "answerRegionId": "regiao-36",
+      "optionRegionIds": [
+        "regiao-35",
+        "regiao-27",
+        "regiao-36",
+        "regiao-26"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "body-surface.jpg, vista lateral, numeral 36 em (109, 289) px; legenda, item 36"
+      },
+      "generation": {
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "promptVersion": "regioes-independent-pixel-audit-v1"
+      },
+      "marker": {
+        "x": 90,
+        "y": 52.2604
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "moderate",
+        "visualCheck": "Numeral 36 conferido em body-surface.jpg, (109, 289) px; pin (126, 289) px, convertido para o recorte existente. Associação legível encontrada na auditoria independente; incluída com âncora em pixels originais. Numeral 36 presente no desenho genital lateral em (109, 289) px, omitido no inventário anterior; os dois algarismos são reconhecíveis em ampliação, com confiança moderada.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 109,
+            "y": 289
+          },
+          "marker": {
+            "x": 126,
+            "y": 289
+          },
+          "anchorTolerancePixels": 3,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 0,
+            "top": 0,
+            "width": 140,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-lateral-36"
+      }
+    },
+    {
+      "id": "superficie-anterior-37",
+      "view": "anterior",
+      "number": 37,
+      "answerRegionId": "regiao-37",
+      "marker": {
+        "x": 70.2564,
+        "y": 20.2532
+      },
+      "optionRegionIds": [
+        "regiao-38",
+        "regiao-36",
+        "regiao-39",
+        "regiao-37"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 37; legenda, item 37"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 37 conferido em body-surface.jpg, (397, 112) px; pin (414, 112) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 397,
+            "y": 112
+          },
+          "marker": {
+            "x": 414,
+            "y": 112
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-37"
+      }
+    },
+    {
+      "id": "superficie-anterior-18",
+      "view": "anterior",
+      "number": 18,
+      "answerRegionId": "regiao-18",
+      "marker": {
+        "x": 62.3077,
+        "y": 22.4231
+      },
+      "optionRegionIds": [
+        "regiao-18",
+        "regiao-19",
+        "regiao-17",
+        "regiao-20"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 18; legenda, item 18"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 18 conferido em body-surface.jpg, (366, 124) px; pin (383, 124) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 366,
+            "y": 124
+          },
+          "marker": {
+            "x": 383,
+            "y": 124
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-18"
+      }
+    },
+    {
+      "id": "superficie-anterior-21",
+      "view": "anterior",
+      "number": 21,
+      "answerRegionId": "regiao-21",
+      "marker": {
+        "x": 50.5128,
+        "y": 24.774
+      },
+      "optionRegionIds": [
+        "regiao-22",
+        "regiao-21",
+        "regiao-20",
+        "regiao-23"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 21; legenda, item 21"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 21 conferido em body-surface.jpg, (337, 124) px; pin (337, 137) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 337,
+            "y": 124
+          },
+          "marker": {
+            "x": 337,
+            "y": 137
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-21"
+      }
+    },
+    {
+      "id": "superficie-anterior-19",
+      "view": "anterior",
+      "number": 19,
+      "answerRegionId": "regiao-19",
+      "marker": {
+        "x": 60.2564,
+        "y": 27.4864
+      },
+      "optionRegionIds": [
+        "regiao-20",
+        "regiao-18",
+        "regiao-19",
+        "regiao-21"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 19; legenda, item 19"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 19 conferido em body-surface.jpg, (358, 152) px; pin (375, 152) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 358,
+            "y": 152
+          },
+          "marker": {
+            "x": 375,
+            "y": 152
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-19"
+      }
+    },
+    {
+      "id": "superficie-anterior-38",
+      "view": "anterior",
+      "number": 38,
+      "answerRegionId": "regiao-38",
+      "marker": {
+        "x": 72.8205,
+        "y": 28.5714
+      },
+      "optionRegionIds": [
+        "regiao-39",
+        "regiao-37",
+        "regiao-40",
+        "regiao-38"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 38; legenda, item 38"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 38 conferido em body-surface.jpg, (407, 158) px; pin (424, 158) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 407,
+            "y": 158
+          },
+          "marker": {
+            "x": 424,
+            "y": 158
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-38"
+      }
+    },
+    {
+      "id": "superficie-anterior-40",
+      "view": "anterior",
+      "number": 40,
+      "answerRegionId": "regiao-40",
+      "marker": {
+        "x": 77.4359,
+        "y": 34.5389
+      },
+      "optionRegionIds": [
+        "regiao-40",
+        "regiao-41",
+        "regiao-39",
+        "regiao-42"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 40; legenda, item 40"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 40 conferido em body-surface.jpg, (425, 191) px; pin (442, 191) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 425,
+            "y": 191
+          },
+          "marker": {
+            "x": 442,
+            "y": 191
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-40"
+      }
+    },
+    {
+      "id": "superficie-anterior-42",
+      "view": "anterior",
+      "number": 42,
+      "answerRegionId": "regiao-42",
+      "marker": {
+        "x": 84.359,
+        "y": 41.0488
+      },
+      "optionRegionIds": [
+        "regiao-43",
+        "regiao-42",
+        "regiao-41",
+        "regiao-44"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 42; legenda, item 42"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 42 conferido em body-surface.jpg, (452, 227) px; pin (469, 227) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 452,
+            "y": 227
+          },
+          "marker": {
+            "x": 469,
+            "y": 227
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-42"
+      }
+    },
+    {
+      "id": "superficie-anterior-45",
+      "view": "anterior",
+      "number": 45,
+      "answerRegionId": "regiao-45",
+      "marker": {
+        "x": 94.6154,
+        "y": 48.1013
+      },
+      "optionRegionIds": [
+        "regiao-46",
+        "regiao-44",
+        "regiao-45",
+        "regiao-47"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 45; legenda, item 45"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 45 conferido em body-surface.jpg, (492, 266) px; pin (509, 266) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 492,
+            "y": 266
+          },
+          "marker": {
+            "x": 509,
+            "y": 266
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-45"
+      }
+    },
+    {
+      "id": "superficie-anterior-22",
+      "view": "anterior",
+      "number": 22,
+      "answerRegionId": "regiao-22",
+      "marker": {
+        "x": 62.3077,
+        "y": 34.5389
+      },
+      "optionRegionIds": [
+        "regiao-23",
+        "regiao-21",
+        "regiao-24",
+        "regiao-22"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 22; legenda, item 22"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 22 conferido em body-surface.jpg, (366, 191) px; pin (383, 191) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 366,
+            "y": 191
+          },
+          "marker": {
+            "x": 383,
+            "y": 191
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-22"
+      }
+    },
+    {
+      "id": "superficie-anterior-23",
+      "view": "anterior",
+      "number": 23,
+      "answerRegionId": "regiao-23",
+      "marker": {
+        "x": 50.5128,
+        "y": 32.1881
+      },
+      "optionRegionIds": [
+        "regiao-23",
+        "regiao-24",
+        "regiao-22",
+        "regiao-25"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 23; legenda, item 23"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 23 conferido em body-surface.jpg, (337, 192) px; pin (337, 178) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 337,
+            "y": 192
+          },
+          "marker": {
+            "x": 337,
+            "y": 178
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-23"
+      }
+    },
+    {
+      "id": "superficie-anterior-24",
+      "view": "anterior",
+      "number": 24,
+      "answerRegionId": "regiao-24",
+      "marker": {
+        "x": 62.3077,
+        "y": 39.2405
+      },
+      "optionRegionIds": [
+        "regiao-25",
+        "regiao-24",
+        "regiao-23",
+        "regiao-26"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 24; legenda, item 24"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 24 conferido em body-surface.jpg, (366, 217) px; pin (383, 217) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 366,
+            "y": 217
+          },
+          "marker": {
+            "x": 383,
+            "y": 217
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-24"
+      }
+    },
+    {
+      "id": "superficie-anterior-25",
+      "view": "anterior",
+      "number": 25,
+      "answerRegionId": "regiao-25",
+      "marker": {
+        "x": 52,
+        "y": 38
+      },
+      "optionRegionIds": [
+        "regiao-26",
+        "regiao-24",
+        "regiao-25",
+        "regiao-27"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 25; legenda, item 25"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 25 conferido em body-surface.jpg, (336, 213) px; pin (342.8, 210.14) px, convertido para o recorte existente. Pin inicial conferido junto ao numeral; posição preservada conforme solicitado.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 336,
+            "y": 213
+          },
+          "marker": {
+            "x": 342.8,
+            "y": 210.14
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-25"
+      }
+    },
+    {
+      "id": "superficie-anterior-26",
+      "view": "anterior",
+      "number": 26,
+      "answerRegionId": "regiao-26",
+      "marker": {
+        "x": 60.2564,
+        "y": 44.123
+      },
+      "optionRegionIds": [
+        "regiao-27",
+        "regiao-25",
+        "regiao-28",
+        "regiao-26"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 26; legenda, item 26"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 26 conferido em body-surface.jpg, (358, 244) px; pin (375, 244) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 358,
+            "y": 244
+          },
+          "marker": {
+            "x": 375,
+            "y": 244
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-26"
+      }
+    },
+    {
+      "id": "superficie-anterior-27",
+      "view": "anterior",
+      "number": 27,
+      "answerRegionId": "regiao-27",
+      "marker": {
+        "x": 50.5128,
+        "y": 46.6546
+      },
+      "optionRegionIds": [
+        "regiao-27",
+        "regiao-28",
+        "regiao-26",
+        "regiao-29"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 27; legenda, item 27"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 27 conferido em body-surface.jpg, (337, 244) px; pin (337, 258) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 337,
+            "y": 244
+          },
+          "marker": {
+            "x": 337,
+            "y": 258
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-27"
+      }
+    },
+    {
+      "id": "superficie-anterior-36",
+      "view": "anterior",
+      "number": 36,
+      "answerRegionId": "regiao-36",
+      "marker": {
+        "x": 54.8718,
+        "y": 50.9946
+      },
+      "optionRegionIds": [
+        "regiao-37",
+        "regiao-36",
+        "regiao-35",
+        "regiao-38"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 36; legenda, item 36"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 36 conferido em body-surface.jpg, (337, 282) px; pin (354, 282) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 337,
+            "y": 282
+          },
+          "marker": {
+            "x": 354,
+            "y": 282
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-36"
+      }
+    },
+    {
+      "id": "superficie-anterior-47",
+      "view": "anterior",
+      "number": 47,
+      "answerRegionId": "regiao-47",
+      "marker": {
+        "x": 62.3077,
+        "y": 58.047
+      },
+      "optionRegionIds": [
+        "regiao-48",
+        "regiao-46",
+        "regiao-47",
+        "regiao-49"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 47; legenda, item 47"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 47 conferido em body-surface.jpg, (366, 321) px; pin (383, 321) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 366,
+            "y": 321
+          },
+          "marker": {
+            "x": 383,
+            "y": 321
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-47"
+      }
+    },
+    {
+      "id": "superficie-anterior-49",
+      "view": "anterior",
+      "number": 49,
+      "answerRegionId": "regiao-49",
+      "marker": {
+        "x": 62.0513,
+        "y": 70.1627
+      },
+      "optionRegionIds": [
+        "regiao-50",
+        "regiao-48",
+        "regiao-51",
+        "regiao-49"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 49; legenda, item 49"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 49 conferido em body-surface.jpg, (365, 388) px; pin (382, 388) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 365,
+            "y": 388
+          },
+          "marker": {
+            "x": 382,
+            "y": 388
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-49"
+      }
+    },
+    {
+      "id": "superficie-anterior-51",
+      "view": "anterior",
+      "number": 51,
+      "answerRegionId": "regiao-51",
+      "marker": {
+        "x": 62.5641,
+        "y": 80.2893
+      },
+      "optionRegionIds": [
+        "regiao-51",
+        "regiao-52",
+        "regiao-50",
+        "regiao-53"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 51; legenda, item 51"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 51 conferido em body-surface.jpg, (367, 444) px; pin (384, 444) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 367,
+            "y": 444
+          },
+          "marker": {
+            "x": 384,
+            "y": 444
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-51"
+      }
+    },
+    {
+      "id": "superficie-anterior-54",
+      "view": "anterior",
+      "number": 54,
+      "answerRegionId": "regiao-54",
+      "marker": {
+        "x": 61.0256,
+        "y": 93.8517
+      },
+      "optionRegionIds": [
+        "regiao-55",
+        "regiao-54",
+        "regiao-53",
+        "regiao-52"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura anterior do corpo, numeral 54; legenda, item 54"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 54 conferido em body-surface.jpg, (361, 519) px; pin (378, 519) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 361,
+            "y": 519
+          },
+          "marker": {
+            "x": 378,
+            "y": 519
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-54"
+      }
+    },
+    {
+      "id": "superficie-anterior-14",
+      "view": "anterior",
+      "number": 14,
+      "answerRegionId": "regiao-14",
+      "optionRegionIds": [
+        "regiao-15",
+        "regiao-16",
+        "regiao-14",
+        "regiao-17"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "body-surface.jpg, vista anterior, numeral 14 em (337, 103) px; legenda, item 14"
+      },
+      "generation": {
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "promptVersion": "regioes-independent-pixel-audit-v1"
+      },
+      "marker": {
+        "x": 50.5128,
+        "y": 16.2749
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "moderate",
+        "visualCheck": "Numeral 14 conferido em body-surface.jpg, (337, 103) px; pin (337, 90) px, convertido para o recorte existente. Associação legível encontrada na auditoria independente; incluída com âncora em pixels originais. 14 central individualmente legível em (337, 103) px; pin colocado acima, no espaço entre os traçados cervicais. A leitura de 14 não resolve os dois 15 laterais comprimidos.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 337,
+            "y": 103
+          },
+          "marker": {
+            "x": 337,
+            "y": 90
+          },
+          "anchorTolerancePixels": 3,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-14"
+      }
+    },
+    {
+      "id": "superficie-anterior-16",
+      "view": "anterior",
+      "number": 16,
+      "answerRegionId": "regiao-16",
+      "optionRegionIds": [
+        "regiao-17",
+        "regiao-15",
+        "regiao-14",
+        "regiao-16"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "body-surface.jpg, vista anterior, numeral 16 em (353, 84) px; legenda, item 16"
+      },
+      "generation": {
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "promptVersion": "regioes-independent-pixel-audit-v1"
+      },
+      "marker": {
+        "x": 58.7179,
+        "y": 14.4665
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "moderate",
+        "visualCheck": "Numeral 16 conferido em body-surface.jpg, (353, 84) px; pin (369, 80) px, convertido para o recorte existente. Associação legível encontrada na auditoria independente; incluída com âncora em pixels originais. 16 individualmente reconhecível junto ao limite cervical direito em (353, 84) px; omitido no inventário anterior. Resolução pequena: confiança moderada, sem extrapolar a localização para a nuca posterior.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 353,
+            "y": 84
+          },
+          "marker": {
+            "x": 369,
+            "y": 80
+          },
+          "anchorTolerancePixels": 3,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 140,
+            "top": 0,
+            "width": 390,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-anterior-16"
+      }
+    },
+    {
+      "id": "superficie-posterior-37",
+      "view": "posterior",
+      "number": 37,
+      "answerRegionId": "regiao-37",
+      "marker": {
+        "x": 72.987,
+        "y": 21.519
+      },
+      "optionRegionIds": [
+        "regiao-37",
+        "regiao-38",
+        "regiao-36",
+        "regiao-39"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 37; legenda, item 37"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 37 conferido em body-surface.jpg, (824, 119) px; pin (841, 119) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 824,
+            "y": 119
+          },
+          "marker": {
+            "x": 841,
+            "y": 119
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-37"
+      }
+    },
+    {
+      "id": "superficie-posterior-33",
+      "view": "posterior",
+      "number": 33,
+      "answerRegionId": "regiao-33",
+      "marker": {
+        "x": 58.961,
+        "y": 17.179
+      },
+      "optionRegionIds": [
+        "regiao-34",
+        "regiao-33",
+        "regiao-32",
+        "regiao-35"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 33; legenda, item 33"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 33 conferido em body-surface.jpg, (770, 95) px; pin (787, 95) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 770,
+            "y": 95
+          },
+          "marker": {
+            "x": 787,
+            "y": 95
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-33"
+      }
+    },
+    {
+      "id": "superficie-posterior-34",
+      "view": "posterior",
+      "number": 34,
+      "answerRegionId": "regiao-34",
+      "marker": {
+        "x": 54.2857,
+        "y": 24.2315
+      },
+      "optionRegionIds": [
+        "regiao-35",
+        "regiao-33",
+        "regiao-34",
+        "regiao-36"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 34; legenda, item 34"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 34 conferido em body-surface.jpg, (769, 120) px; pin (769, 134) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 769,
+            "y": 120
+          },
+          "marker": {
+            "x": 769,
+            "y": 134
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-34"
+      }
+    },
+    {
+      "id": "superficie-posterior-30",
+      "view": "posterior",
+      "number": 30,
+      "answerRegionId": "regiao-30",
+      "marker": {
+        "x": 59.7403,
+        "y": 24.0506
+      },
+      "optionRegionIds": [
+        "regiao-31",
+        "regiao-29",
+        "regiao-32",
+        "regiao-30"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 30; legenda, item 30"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 30 conferido em body-surface.jpg, (790, 119) px; pin (790, 133) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 790,
+            "y": 119
+          },
+          "marker": {
+            "x": 790,
+            "y": 133
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-30"
+      }
+    },
+    {
+      "id": "superficie-posterior-39",
+      "view": "posterior",
+      "number": 39,
+      "answerRegionId": "regiao-39",
+      "marker": {
+        "x": 74.5455,
+        "y": 29.8373
+      },
+      "optionRegionIds": [
+        "regiao-39",
+        "regiao-40",
+        "regiao-38",
+        "regiao-41"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 39; legenda, item 39"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 39 conferido em body-surface.jpg, (830, 165) px; pin (847, 165) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 830,
+            "y": 165
+          },
+          "marker": {
+            "x": 847,
+            "y": 165
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-39"
+      }
+    },
+    {
+      "id": "superficie-posterior-41",
+      "view": "posterior",
+      "number": 41,
+      "answerRegionId": "regiao-41",
+      "marker": {
+        "x": 78.4416,
+        "y": 35.2622
+      },
+      "optionRegionIds": [
+        "regiao-42",
+        "regiao-41",
+        "regiao-40",
+        "regiao-43"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 41; legenda, item 41"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 41 conferido em body-surface.jpg, (845, 195) px; pin (862, 195) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 845,
+            "y": 195
+          },
+          "marker": {
+            "x": 862,
+            "y": 195
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-41"
+      }
+    },
+    {
+      "id": "superficie-posterior-43",
+      "view": "posterior",
+      "number": 43,
+      "answerRegionId": "regiao-43",
+      "marker": {
+        "x": 85.7143,
+        "y": 40.6872
+      },
+      "optionRegionIds": [
+        "regiao-44",
+        "regiao-42",
+        "regiao-43",
+        "regiao-45"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 43; legenda, item 43"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 43 conferido em body-surface.jpg, (873, 225) px; pin (890, 225) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 873,
+            "y": 225
+          },
+          "marker": {
+            "x": 890,
+            "y": 225
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-43"
+      }
+    },
+    {
+      "id": "superficie-posterior-44",
+      "view": "posterior",
+      "number": 44,
+      "answerRegionId": "regiao-44",
+      "marker": {
+        "x": 96.8831,
+        "y": 48.1013
+      },
+      "optionRegionIds": [
+        "regiao-45",
+        "regiao-43",
+        "regiao-46",
+        "regiao-44"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 44; legenda, item 44"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 44 conferido em body-surface.jpg, (916, 266) px; pin (933, 266) px, convertido para o recorte existente. Posição anterior afastada do numeral impresso; reposicionada a partir do pixel do algarismo, com deslocamento adjacente.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 916,
+            "y": 266
+          },
+          "marker": {
+            "x": 933,
+            "y": 266
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-44"
+      }
+    },
+    {
+      "id": "superficie-posterior-31",
+      "view": "posterior",
+      "number": 31,
+      "answerRegionId": "regiao-31",
+      "marker": {
+        "x": 41,
+        "y": 33
+      },
+      "optionRegionIds": [
+        "regiao-31",
+        "regiao-32",
+        "regiao-30",
+        "regiao-33"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 31; legenda, item 31"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 31 conferido em body-surface.jpg, (731, 180) px; pin (717.85, 182.49) px, convertido para o recorte existente. Pin inicial conferido junto ao numeral; posição preservada conforme solicitado.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 731,
+            "y": 180
+          },
+          "marker": {
+            "x": 717.85,
+            "y": 182.49
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-31"
+      }
+    },
+    {
+      "id": "superficie-posterior-32",
+      "view": "posterior",
+      "number": 32,
+      "answerRegionId": "regiao-32",
+      "marker": {
+        "x": 61.8182,
+        "y": 40.3255
+      },
+      "optionRegionIds": [
+        "regiao-33",
+        "regiao-32",
+        "regiao-31",
+        "regiao-34"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 32; legenda, item 32"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 32 conferido em body-surface.jpg, (781, 223) px; pin (798, 223) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 781,
+            "y": 223
+          },
+          "marker": {
+            "x": 798,
+            "y": 223
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-32"
+      }
+    },
+    {
+      "id": "superficie-posterior-46",
+      "view": "posterior",
+      "number": 46,
+      "answerRegionId": "regiao-46",
+      "marker": {
+        "x": 62.5974,
+        "y": 48.4629
+      },
+      "optionRegionIds": [
+        "regiao-47",
+        "regiao-45",
+        "regiao-46",
+        "regiao-48"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 46; legenda, item 46"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 46 conferido em body-surface.jpg, (784, 268) px; pin (801, 268) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 784,
+            "y": 268
+          },
+          "marker": {
+            "x": 801,
+            "y": 268
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-46"
+      }
+    },
+    {
+      "id": "superficie-posterior-48",
+      "view": "posterior",
+      "number": 48,
+      "answerRegionId": "regiao-48",
+      "marker": {
+        "x": 62.5974,
+        "y": 60.217
+      },
+      "optionRegionIds": [
+        "regiao-49",
+        "regiao-47",
+        "regiao-50",
+        "regiao-48"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 48; legenda, item 48"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 48 conferido em body-surface.jpg, (784, 333) px; pin (801, 333) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 784,
+            "y": 333
+          },
+          "marker": {
+            "x": 801,
+            "y": 333
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-48"
+      }
+    },
+    {
+      "id": "superficie-posterior-50",
+      "view": "posterior",
+      "number": 50,
+      "answerRegionId": "regiao-50",
+      "marker": {
+        "x": 62.0779,
+        "y": 70.3436
+      },
+      "optionRegionIds": [
+        "regiao-50",
+        "regiao-51",
+        "regiao-49",
+        "regiao-52"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 50; legenda, item 50"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 50 conferido em body-surface.jpg, (782, 389) px; pin (799, 389) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 782,
+            "y": 389
+          },
+          "marker": {
+            "x": 799,
+            "y": 389
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-50"
+      }
+    },
+    {
+      "id": "superficie-posterior-52",
+      "view": "posterior",
+      "number": 52,
+      "answerRegionId": "regiao-52",
+      "marker": {
+        "x": 63.3766,
+        "y": 79.3852
+      },
+      "optionRegionIds": [
+        "regiao-53",
+        "regiao-52",
+        "regiao-51",
+        "regiao-54"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 52; legenda, item 52"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 52 conferido em body-surface.jpg, (787, 439) px; pin (804, 439) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 787,
+            "y": 439
+          },
+          "marker": {
+            "x": 804,
+            "y": 439
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-52"
+      }
+    },
+    {
+      "id": "superficie-posterior-53",
+      "view": "posterior",
+      "number": 53,
+      "answerRegionId": "regiao-53",
+      "marker": {
+        "x": 61.039,
+        "y": 97.4684
+      },
+      "optionRegionIds": [
+        "regiao-54",
+        "regiao-52",
+        "regiao-53",
+        "regiao-55"
+      ],
+      "source": {
+        "documentId": "divisao-superficie-corporal-3semestre",
+        "page": 1,
+        "locator": "Figura posterior do corpo, numeral 53; legenda, item 53"
+      },
+      "review": {
+        "status": "model-reviewed",
+        "model": "gpt6.1-sol",
+        "date": "2026-11-14",
+        "confidence": "high",
+        "visualCheck": "Numeral 53 conferido em body-surface.jpg, (778, 539) px; pin (795, 539) px, convertido para o recorte existente. Reancorado no numeral medido para dar afastamento legível ao pin; a alteração não implica mudança da região da legenda.",
+        "pixelEvidence": {
+          "coordinateSystem": "original-image-top-left",
+          "numeralAnchor": {
+            "x": 778,
+            "y": 539
+          },
+          "marker": {
+            "x": 795,
+            "y": 539
+          },
+          "anchorTolerancePixels": 2,
+          "crop": {
+            "image": "body-surface.jpg",
+            "left": 560,
+            "top": 0,
+            "width": 385,
+            "height": 553
+          }
+        },
+        "reviewItemId": "superficie-posterior-53"
+      }
+    }
+  ],
+  "revision": {
+    "model": "gpt6.1-sol",
+    "date": "2026-11-14",
+    "promptVersion": "regioes-independent-pixel-audit-v1",
+    "priorModel": "gpt-6-luna",
+    "inputSha256": "08c011987a330b792f27b7239cb3fbe353650ad43ca52b7443b853402167fb75"
+  },
+  "sampling": {
+    "eligibleQuestionPool": "questions",
+    "eligibleQuestionCount": 71,
+    "eligibleAnswerRegionCount": 50,
+    "questionOrder": "randomize-at-runtime",
+    "optionOrder": "randomize-at-runtime",
+    "optionCount": 4,
+    "legendOptionUniverse": 55,
+    "excludedTargetsEligible": false,
+    "integrationStatus": "not-integrated-by-this-review",
+    "note": "Declarative integration contract. Static option positions vary across the bank, but only a runtime consumer can randomize each presentation. The current application still imports five starter questions from src/data/regions.ts."
+  }
+}
