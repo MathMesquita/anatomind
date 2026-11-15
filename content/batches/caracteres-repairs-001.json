@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "topic": "caracteres",
+  "batchId": "caracteres-repairs-001",
+  "baseDraftPath": "content/drafts/caracteres.json",
+  "baseDraftSha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda",
+  "reviewSource": "docs/reviews/caracteres-v2.json",
+  "reviewId": "caracteres-v2",
+  "previousRecordHashMethod": "SHA-256 of UTF-8 JSON.stringify(parsed source story record)",
+  "assignedStoryIds": ["cianose-01", "ictericia-02", "dor-08", "tosse-05", "tosse-13"],
+  "sourceDocuments": [
+    { "id": "caracteres-propedeuticos-principais-sintomas", "filename": "CARACTERES PROPEDÊUTICOS DOS PRINCIPAIS SINTOMAS.pdf", "pages": 3 }
+  ],
+  "groups": [
+    {
+      "id": "cianose", "label": "Cianose",
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 2, "locator": "Heading CIANOSE and its seven prompts, between PALPITAÇÃO and SÍNCOPE / LIPOTÍMIA" },
+      "fields": [
+        { "id": "inicio", "sourceLabel": "Início", "safeUiLabel": "Início", "reviewRule": { "components": ["situacao-temporal-do-inicio"], "rule": "Situar início do quadro. Data relativa é suficiente; circunstância de cada crise não situa automaticamente o primeiro aparecimento." }, "sourcePage": 2 },
+        { "id": "fatores-desencadeantes", "sourceLabel": "Fatores desencadeantes", "safeUiLabel": "Fatores desencadeantes", "reviewRule": { "components": ["gatilho"], "rule": "Circunstância de desencadeamento ou negativa percebida; não inferir." }, "sourcePage": 2 },
+        { "id": "localizacao", "sourceLabel": "Localização", "safeUiLabel": "Localização", "reviewRule": { "components": ["regiao-anatomica"], "rule": "Identificar a região referida; não inferir mecanismo ou localização não descrita." }, "sourcePage": 2 },
+        { "id": "duracao", "sourceLabel": "Duração", "safeUiLabel": "Duração", "reviewRule": { "components": ["duracao"], "rule": "Aceitar duração global ou de episódio explicitamente narrada; não inventar a outra." }, "sourcePage": 2 },
+        { "id": "fenomenos-acompanhantes", "sourceLabel": "Fenômenos que acompanham", "safeUiLabel": "Fenômenos que acompanham", "reviewRule": { "components": ["acompanhantes"], "rule": "Sintoma associado ou negativa explícita; não inferir ausência a partir de silêncio." }, "sourcePage": 2 },
+        { "id": "fatores-melhora-piora", "sourceLabel": "Fatores de melhora e piora", "safeUiLabel": "Fatores de melhora e piora", "evidenceRule": "Exige melhora e piora, inclusive negativas explícitas de relação percebida.", "reviewRule": { "components": ["melhora", "piora"], "rule": "Cobrir as duas direções; gatilho não prova piora de manifestação instalada." }, "sourcePage": 2 },
+        { "id": "periodos", "sourceLabel": "Períodos de semelhança e dissemelhança ou de acalmia", "safeUiLabel": "Períodos de semelhança e dissemelhança ou de acalmia", "reviewRule": { "components": ["periodos-comparacao-ou-acalmia"], "rule": "Comparação explícita OU presença/ausência de acalmia." }, "sourcePage": 2 }
+      ]
+    },
+    {
+      "id": "ictericia", "label": "Icterícia",
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 3, "locator": "Heading ICTERÍCIA and its nine prompts between VERTIGEM / TONTURA and FEBRE" },
+      "fields": [
+        { "id": "inicio", "sourceLabel": "Início", "safeUiLabel": "Início", "sourcePage": 3 },
+        { "id": "duracao", "sourceLabel": "Duração", "safeUiLabel": "Duração", "sourcePage": 3 },
+        { "id": "evolucao", "sourceLabel": "Evolução", "safeUiLabel": "Evolução", "sourcePage": 3 },
+        { "id": "acolia-coluria", "sourceLabel": "Acolia fecal/ Colúria", "safeUiLabel": "Acolia fecal/ Colúria", "notes": "Source field retained as one field; report both stool color and urine color explicitly.", "evidenceRule": "Exige informação sobre a cor das fezes e da urina.", "sourcePage": 3 },
+        { "id": "intensidade-localizacao", "sourceLabel": "Intensidade e relação com a localização", "safeUiLabel": "Intensidade e relação com a localização", "notes": "Source field retained as one field; document both intensity and its distribution by location.", "evidenceRule": "Exige grau atual e distribuição por local, não apenas progressão.", "sourcePage": 3 },
+        { "id": "fatores-desencadeantes", "sourceLabel": "Fatores desencadeantes (contágio, medicamentos, fatores estressores)", "safeUiLabel": "Fatores desencadeantes (contágio, medicamentos, fatores estressores)", "sourcePage": 3 },
+        { "id": "fenomenos-acompanhantes", "sourceLabel": "Fenômenos que acompanham (dor, prurido, astenia, febre, calafrios, etc)", "safeUiLabel": "Fenômenos que acompanham (dor, prurido, astenia, febre, calafrios, etc)", "sourcePage": 3 },
+        { "id": "fatores-melhora-piora", "sourceLabel": "Fatores de melhora e piora", "safeUiLabel": "Fatores de melhora e piora", "evidenceRule": "Exige melhora e piora, inclusive negativas explícitas de relação percebida.", "sourcePage": 3 },
+        { "id": "periodos", "sourceLabel": "Períodos de semelhança e dissemelhança ou de acalmia", "safeUiLabel": "Períodos de semelhança e dissemelhança ou de acalmia", "sourcePage": 3 }
+      ]
+    },
+    {
+      "id": "dor", "label": "Dor",
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 1, "locator": "Heading DOR and its ten prompts, under the document title" },
+      "fields": [
+        { "id": "localizacao", "sourceLabel": "Localização", "safeUiLabel": "Localização", "sourcePage": 1 },
+        { "id": "irradiacao", "sourceLabel": "Irradiação", "safeUiLabel": "Irradiação", "sourcePage": 1 },
+        { "id": "qualidade-carater", "sourceLabel": "Qualidade/caráter", "safeUiLabel": "Qualidade/caráter", "sourcePage": 1 },
+        { "id": "intensidade", "sourceLabel": "Intensidade", "safeUiLabel": "Intensidade", "sourcePage": 1 },
+        { "id": "duracao", "sourceLabel": "Duração", "safeUiLabel": "Duração", "sourcePage": 1 },
+        { "id": "evolucao", "sourceLabel": "Evolução", "safeUiLabel": "Evolução", "sourcePage": 1 },
+        { "id": "relacao-funcoes-organicas", "sourceLabel": "Relação com funções orgânicas", "safeUiLabel": "Relação com funções orgânicas", "sourcePage": 1 },
+        { "id": "desencadeantes-agravantes", "sourceLabel": "Fatores desencadeantes/agravantes", "safeUiLabel": "Fatores desencadeantes/agravantes", "evidenceRule": "Exige gatilho e agravante, ou negativas explícitas para ambos.", "sourcePage": 1 },
+        { "id": "atenuantes", "sourceLabel": "Fatores atenuantes", "safeUiLabel": "Fatores atenuantes", "sourcePage": 1 },
+        { "id": "manifestacoes-concomitantes", "sourceLabel": "Manifestações concomitantes", "safeUiLabel": "Manifestações concomitantes", "sourcePage": 1 }
+      ]
+    },
+    {
+      "id": "tosse", "label": "Tosse",
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 1, "locator": "Heading TOSSE and its ten prompts, between DOR and EXPECTORAÇÃO" },
+      "fields": [
+        { "id": "inicio-duracao-evolucao", "sourceLabel": "Início / duração / evolução", "safeUiLabel": "Início / duração / evolução", "notes": "Source field retained as one field; mark present only when onset, duration and course are all explicit.", "evidenceRule": "Exige início, duração e curso posterior.", "sourcePage": 1 },
+        { "id": "horario", "sourceLabel": "Horário", "safeUiLabel": "Horário", "sourcePage": 1 },
+        { "id": "frequencia", "sourceLabel": "Frequência", "safeUiLabel": "Frequência", "sourcePage": 1 },
+        { "id": "intensidade", "sourceLabel": "Intensidade", "safeUiLabel": "Intensidade", "sourcePage": 1 },
+        { "id": "fatores-desencadeantes", "sourceLabel": "Fatores desencadeantes", "safeUiLabel": "Fatores desencadeantes", "sourcePage": 1 },
+        { "id": "fenomenos-acompanhantes", "sourceLabel": "Fenômenos que acompanham", "safeUiLabel": "Fenômenos que acompanham", "sourcePage": 1 },
+        { "id": "fatores-melhora-piora", "sourceLabel": "Fatores de melhora e piora", "safeUiLabel": "Fatores de melhora e piora", "evidenceRule": "Exige melhora e piora, inclusive negativas explícitas de relação percebida.", "sourcePage": 1 },
+        { "id": "relacao-decubito", "sourceLabel": "Relação com o decúbito", "safeUiLabel": "Relação com o decúbito", "sourcePage": 1 },
+        { "id": "seca-produtiva", "sourceLabel": "Seca ou produtiva", "safeUiLabel": "Seca ou produtiva", "sourcePage": 1 },
+        { "id": "periodos", "sourceLabel": "Períodos de semelhança e dissemelhança ou de acalmia", "safeUiLabel": "Períodos de semelhança e dissemelhança ou de acalmia", "sourcePage": 1 }
+      ]
+    }
+  ],
+  "generation": { "model": "unknown", "modelRequested": "codex", "executionVersion": "unknown", "promptVersion": "caracteres-repairs-001", "date": "2026-11-15", "authorship": "editorial-repair" },
+  "review": { "status": "draft", "clinicalReview": "not-recorded", "independentReview": "pending", "clinicalApproval": false, "editorialApproval": false },
+  "stories": [
+    {
+      "id": "cianose-01", "groupId": "cianose",
+      "text": "Há quatro dias, a família notou coloração arroxeada nos lábios durante episódios de frio intenso, com duração aproximada de dez minutos. Não percebeu alteração nos dedos nem falta de ar. Ao entrar em local aquecido, a cor volta gradualmente ao habitual; não foi informado se algo intensifica a coloração depois que ela aparece. Os episódios ocorreram em duas manhãs e não apareceram nos demais dias.",
+      "missingFieldIds": [], "incompleteFieldIds": ["fatores-melhora-piora"], "unknownFieldIds": [], "missingContextFieldIds": ["fatores-melhora-piora"],
+      "answer": { "policy": "missing-context-v2", "fieldIds": ["fatores-melhora-piora"], "noneMissing": false, "exclusiveNoneLabel": "Nenhum dado ausente" },
+      "evidence": [
+        { "fieldId": "inicio", "status": "documented", "quote": "Há quatro dias, a família notou", "start": 0, "end": 31, "rationale": "Início: A data relativa situa quando o quadro foi notado." },
+        { "fieldId": "fatores-desencadeantes", "status": "documented", "quote": "durante episódios de frio intenso", "start": 63, "end": 96, "rationale": "Fatores desencadeantes: O frio é explicitamente associado ao aparecimento dos episódios." },
+        { "fieldId": "localizacao", "status": "documented", "quote": "coloração arroxeada nos lábios", "start": 32, "end": 62, "rationale": "Localização: O trecho nomeia a região observada." },
+        { "fieldId": "duracao", "status": "documented", "quote": "duração aproximada de dez minutos", "start": 102, "end": 135, "rationale": "Duração: O trecho informa a duração aproximada dos episódios." },
+        { "fieldId": "fenomenos-acompanhantes", "status": "documented", "quote": "Não percebeu alteração nos dedos nem falta de ar", "start": 137, "end": 185, "rationale": "Fenômenos que acompanham: A negativa explícita cobre as manifestações relatadas nesse trecho." },
+        { "fieldId": "fatores-melhora-piora", "status": "partial", "quote": "Ao entrar em local aquecido, a cor volta gradualmente ao habitual; não foi informado se algo intensifica a coloração depois que ela aparece", "start": 187, "end": 326, "rationale": "Fatores de melhora e piora: Há melhora observada no aquecimento, mas não se informa piora após o aparecimento; o frio como gatilho não completa essa direção." },
+        { "fieldId": "periodos", "status": "documented", "quote": "Os episódios ocorreram em duas manhãs e não apareceram nos demais dias", "start": 328, "end": 398, "rationale": "Períodos: O trecho compara dias com episódios e dias sem ocorrência." }
+      ],
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 2, "locator": "Heading CIANOSE and its seven prompts, between PALPITAÇÃO and SÍNCOPE / LIPOTÍMIA" },
+      "clinicalReferenceIds": ["nhs-cyanosis"],
+      "generation": { "model": "gpt-6-luna", "promptVersion": "content-bank-v1", "modelVersion": "unknown" },
+      "editorialRevision": { "status": "draft-awaiting-independent-rereview", "sourceReviewId": "caracteres-v1", "originalTextSha256": "ee16a7beaeaa69eb107d90bb549345e489e109734cce50f63dcdd40a2f5bc97b", "findingIds": ["CAR-018"], "model": "unknown", "modelVersion": "unknown", "clinicalApproval": false, "releaseApproved": false },
+      "review": { "status": "draft", "clinicalReview": "not-recorded", "independentReview": "pending", "policyReview": "needs-educational-review", "findings": ["Reparo editorial vinculado a CAR2-001; aguarda nova revisão independente e revisão clínica."] },
+      "repair": { "previousRecordSha256": "664c3e36227a2142e28a07a2317356525c5176d8f0ebbf4dfdc4b5a30ec16eee", "baseDraftSha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda", "previousReviewStatus": "needs-revision", "reason": "Reassociar o início já narrado; frio é gatilho e não prova piora após instalação. Preservar o modificador como parcial.", "findingIds": ["CAR2-001"], "sourceReviewId": "caracteres-v2" }
+    },
+    {
+      "id": "ictericia-02", "groupId": "ictericia",
+      "text": "Há duas semanas, percebeu a pele amarelada, mais evidente no tronco do que nos braços; não foi atribuída uma graduação como leve, moderada ou intensa. Notou fezes claras e urina escura. O quadro começou alguns dias após iniciar um medicamento prescrito; essa sequência temporal não confirma causa, e não identifica outro fator. Tem enjoo e coceira, sem febre. A intensidade parece estável.",
+      "missingFieldIds": ["fatores-melhora-piora"], "incompleteFieldIds": ["intensidade-localizacao"], "unknownFieldIds": [], "missingContextFieldIds": ["intensidade-localizacao", "fatores-melhora-piora"],
+      "answer": { "policy": "missing-context-v2", "fieldIds": ["intensidade-localizacao", "fatores-melhora-piora"], "noneMissing": false, "exclusiveNoneLabel": "Nenhum dado ausente" },
+      "evidence": [
+        { "fieldId": "inicio", "status": "documented", "quote": "Há duas semanas", "start": 0, "end": 15, "rationale": "Início: O período situa quando a alteração foi percebida." },
+        { "fieldId": "duracao", "status": "documented", "quote": "Há duas semanas", "start": 0, "end": 15, "rationale": "Duração: O relato informa há quanto tempo a alteração é percebida." },
+        { "fieldId": "evolucao", "status": "documented", "quote": "A intensidade parece estável", "start": 360, "end": 388, "rationale": "Evolução: Estabilidade é uma descrição do curso temporal." },
+        { "fieldId": "acolia-coluria", "status": "documented", "quote": "Notou fezes claras e urina escura", "start": 151, "end": 184, "rationale": "Acolia fecal/Colúria: As cores de fezes e urina são ambas mencionadas." },
+        { "fieldId": "intensidade-localizacao", "status": "partial", "quote": "amarelada, mais evidente no tronco do que nos braços; não foi atribuída uma graduação como leve, moderada ou intensa", "start": 33, "end": 149, "rationale": "Intensidade e localização: A distribuição está descrita, mas não há grau atual; mantém-se parcial sem inferir gravidade." },
+        { "fieldId": "fatores-desencadeantes", "status": "documented", "quote": "O quadro começou alguns dias após iniciar um medicamento prescrito; essa sequência temporal não confirma causa, e não identifica outro fator", "start": 186, "end": 326, "rationale": "Fatores desencadeantes: A sequência temporal com o medicamento é explicitamente relatada sem afirmar causalidade." },
+        { "fieldId": "fenomenos-acompanhantes", "status": "documented", "quote": "Tem enjoo e coceira, sem febre", "start": 328, "end": 358, "rationale": "Fenômenos acompanhantes: Sintomas e negativa de febre estão explícitos." },
+        { "fieldId": "fatores-melhora-piora", "status": "omitted", "quote": null, "start": null, "end": null, "rationale": "Fatores de melhora e piora: Não há relato de modificação ou de sua ausência em condição observada." },
+        { "fieldId": "periodos", "status": "documented", "quote": "A intensidade parece estável", "start": 360, "end": 388, "rationale": "Períodos: Estabilidade compara o estado ao longo do período relatado; a pergunta sobre acalmia não apaga essa informação." }
+      ],
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 3, "locator": "Heading ICTERÍCIA and its nine prompts between VERTIGEM / TONTURA and FEBRE" },
+      "clinicalReferenceIds": ["nhs-jaundice"],
+      "generation": { "model": "gpt-6-luna", "promptVersion": "content-bank-v1", "modelVersion": "unknown" },
+      "editorialRevision": { "status": "draft-awaiting-independent-rereview", "sourceReviewId": "caracteres-v1", "originalTextSha256": "ef0e9071e3c031078b90d44adc2f451d4c50a1bdc9a2036f097577d24b601ca0", "findingIds": ["CAR-035", "CAR-037"], "model": "unknown", "modelVersion": "unknown", "clinicalApproval": false, "releaseApproved": false },
+      "review": { "status": "draft", "clinicalReview": "not-recorded", "independentReview": "pending", "policyReview": "needs-educational-review", "findings": ["Reparo editorial vinculado a CAR2-002; aguarda nova revisão independente e revisão clínica."] },
+      "repair": { "previousRecordSha256": "abe1c00db0906452ecad5d9a1a215391531a081d78d5eb01250de0d355a5b7a2", "baseDraftSha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda", "previousReviewStatus": "needs-revision", "reason": "Estabilidade também documenta comparação entre períodos; a intensidade-localização continua parcial e melhora/piora permanece omitida.", "findingIds": ["CAR2-002"], "sourceReviewId": "caracteres-v2" }
+    },
+    {
+      "id": "dor-08", "groupId": "dor",
+      "text": "Durante a consulta, descreve dor no tornozelo direito, sem se espalhar para outro local, mais fraca hoje do que ontem, sem escala ou nota de intensidade, desde a manhã de ontem. Hoje está menos intensa do que ontem. Começou após uma torção; apoiar o pé piora. Retirar o apoio alivia. Há inchaço no mesmo local, sem outras manifestações relatadas.",
+      "missingFieldIds": ["qualidade-carater", "relacao-funcoes-organicas"], "incompleteFieldIds": ["intensidade"], "unknownFieldIds": [], "missingContextFieldIds": ["qualidade-carater", "intensidade", "relacao-funcoes-organicas"],
+      "answer": { "policy": "missing-context-v2", "fieldIds": ["qualidade-carater", "intensidade", "relacao-funcoes-organicas"], "noneMissing": false, "exclusiveNoneLabel": "Nenhum dado ausente" },
+      "evidence": [
+        { "fieldId": "localizacao", "status": "documented", "quote": "no tornozelo direito", "start": 33, "end": 53, "rationale": "Localização: A região da dor está nomeada." },
+        { "fieldId": "irradiacao", "status": "documented", "quote": "sem se espalhar para outro local", "start": 55, "end": 87, "rationale": "Irradiação: A ausência de propagação é explícita." },
+        { "fieldId": "qualidade-carater", "status": "omitted", "quote": null, "start": null, "end": null, "rationale": "Qualidade/caráter: Nenhum descritor sensorial da dor foi informado." },
+        { "fieldId": "intensidade", "status": "partial", "quote": "mais fraca hoje do que ontem, sem escala ou nota de intensidade", "start": 89, "end": 152, "rationale": "Intensidade: A comparação relativa é informação parcial, sem graduação atual." },
+        { "fieldId": "duracao", "status": "documented", "quote": "desde a manhã de ontem", "start": 154, "end": 176, "rationale": "Duração: O trecho situa o tempo desde o qual a dor é relatada." },
+        { "fieldId": "evolucao", "status": "documented", "quote": "Hoje está menos intensa do que ontem", "start": 178, "end": 214, "rationale": "Evolução: A comparação descreve redução ao longo do tempo." },
+        { "fieldId": "relacao-funcoes-organicas", "status": "omitted", "quote": null, "start": null, "end": null, "rationale": "Relação com funções orgânicas: Apoiar o pé é relatado como agravante mecânico; nenhuma função orgânica é abordada." },
+        { "fieldId": "desencadeantes-agravantes", "status": "documented", "quote": "Começou após uma torção; apoiar o pé piora", "start": 216, "end": 258, "rationale": "Fatores desencadeantes/agravantes: O trecho informa circunstância de início e piora ao apoiar." },
+        { "fieldId": "atenuantes", "status": "documented", "quote": "Retirar o apoio alivia", "start": 260, "end": 282, "rationale": "Fatores atenuantes: O alívio ao retirar o apoio é explícito." },
+        { "fieldId": "manifestacoes-concomitantes", "status": "documented", "quote": "Há inchaço no mesmo local, sem outras manifestações relatadas", "start": 284, "end": 345, "rationale": "Manifestações concomitantes: Inchaço e ausência de outras manifestações relatadas estão explícitos." }
+      ],
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 1, "locator": "Heading DOR and its ten prompts, under the document title" },
+      "clinicalReferenceIds": ["ninds-pain"],
+      "generation": { "model": "gpt-6.1-sol", "modelVersion": "unknown", "promptVersion": "content-bank-v2", "date": "2026-11-14" },
+      "review": { "status": "draft", "clinicalReview": "not-recorded", "independentReview": "pending", "policyReview": "needs-educational-review", "findings": ["Reparo editorial vinculado a CAR2-003–CAR2-006; aguarda nova revisão independente e revisão clínica."] },
+      "editorialRevision": { "status": "draft-awaiting-independent-rereview", "sourceReviewId": "caracteres-v1", "originalTextSha256": "badd648da058d9a49b4e27e475788d3980c115145b940929fb8a824d592b3f1f", "findingIds": ["CAR-001"], "model": "unknown", "modelVersion": "unknown", "clinicalApproval": false, "releaseApproved": false },
+      "repair": { "previousRecordSha256": "2b00a552cb7e9f15141a54a343bea07f28b1869fd847f94bfb0bb8b5448a6222", "baseDraftSha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda", "previousReviewStatus": "needs-revision", "reason": "Realocar evidências de intensidade, duração e evolução; relação com funções orgânicas não foi relatada e permanece omissa.", "findingIds": ["CAR2-003", "CAR2-004", "CAR2-005", "CAR2-006"], "sourceReviewId": "caracteres-v2" }
+    },
+    {
+      "id": "tosse-05", "groupId": "tosse",
+      "text": "Descreve tosse seca, moderada, sem horário predominante, a cada duas horas. O ar frio desencadeia os acessos; o ambiente aquecido os alivia e a volta ao frio os intensifica. Deitar não altera a tosse. Nega outros sintomas junto. O padrão se manteve semelhante de um dia para outro; o início e a duração total não foram informados.",
+      "missingFieldIds": [], "incompleteFieldIds": ["inicio-duracao-evolucao"], "unknownFieldIds": [], "missingContextFieldIds": ["inicio-duracao-evolucao"],
+      "answer": { "policy": "missing-context-v2", "fieldIds": ["inicio-duracao-evolucao"], "noneMissing": false, "exclusiveNoneLabel": "Nenhum dado ausente" },
+      "evidence": [
+        { "fieldId": "inicio-duracao-evolucao", "status": "partial", "quote": "O padrão se manteve semelhante de um dia para outro; o início e a duração total não foram informados", "start": 229, "end": 329, "rationale": "Início/duração/evolução: O curso está descrito, mas início e duração total são explicitamente ausentes." },
+        { "fieldId": "horario", "status": "documented", "quote": "sem horário predominante", "start": 31, "end": 55, "rationale": "Horário: A ausência de horário predominante é explícita." },
+        { "fieldId": "frequencia", "status": "documented", "quote": "a cada duas horas", "start": 57, "end": 74, "rationale": "Frequência: O intervalo entre acessos está informado." },
+        { "fieldId": "intensidade", "status": "documented", "quote": "moderada", "start": 21, "end": 29, "rationale": "Intensidade: O grau qualitativo é informado." },
+        { "fieldId": "fatores-desencadeantes", "status": "documented", "quote": "O ar frio desencadeia os acessos", "start": 76, "end": 108, "rationale": "Fatores desencadeantes: O ar frio é associado aos acessos." },
+        { "fieldId": "fenomenos-acompanhantes", "status": "documented", "quote": "Nega outros sintomas junto", "start": 201, "end": 227, "rationale": "Fenômenos acompanhantes: A negativa explícita responde sobre sintomas associados." },
+        { "fieldId": "fatores-melhora-piora", "status": "documented", "quote": "o ambiente aquecido os alivia e a volta ao frio os intensifica", "start": 110, "end": 172, "rationale": "Fatores de melhora e piora: Alívio e intensificação após instalação estão descritos." },
+        { "fieldId": "relacao-decubito", "status": "documented", "quote": "Deitar não altera a tosse", "start": 174, "end": 199, "rationale": "Relação com decúbito: A posição e ausência de mudança estão explícitas." },
+        { "fieldId": "seca-produtiva", "status": "documented", "quote": "tosse seca", "start": 9, "end": 19, "rationale": "Seca ou produtiva: A tosse é descrita como seca." },
+        { "fieldId": "periodos", "status": "documented", "quote": "O padrão se manteve semelhante de um dia para outro", "start": 229, "end": 280, "rationale": "Períodos: A semelhança entre dias está explícita; não depende de informar início ou duração total." }
+      ],
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 1, "locator": "Heading TOSSE and its ten prompts, between DOR and EXPECTORAÇÃO" },
+      "clinicalReferenceIds": ["nhlbi-asthma-symptoms", "who-asthma"],
+      "generation": { "model": "gpt-6.1-sol", "modelVersion": "unknown", "promptVersion": "content-bank-v2", "date": "2026-11-14" },
+      "review": { "status": "draft", "clinicalReview": "not-recorded", "independentReview": "pending", "policyReview": "needs-educational-review", "findings": ["Reparo editorial vinculado a CAR2-007–CAR2-011; aguarda nova revisão independente e revisão clínica."] },
+      "editorialRevision": { "status": "draft-awaiting-independent-rereview", "sourceReviewId": "caracteres-v1", "originalTextSha256": "f395b04aef6b243d17ce975af3d91d27e40f28b4ca22b3b04de0e17d7991df65", "findingIds": ["CAR-003"], "model": "unknown", "modelVersion": "unknown", "clinicalApproval": false, "releaseApproved": false },
+      "repair": { "previousRecordSha256": "12c5894645040a32b33d0f35e3108dbdb9b07ff9d6f37c992c0838653b44e8ef", "baseDraftSha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda", "previousReviewStatus": "needs-revision", "reason": "Remapear curso parcial, gatilho, acompanhantes, melhora/piora e comparação entre dias conforme os trechos explícitos.", "findingIds": ["CAR2-007", "CAR2-008", "CAR2-009", "CAR2-010", "CAR2-011"], "sourceReviewId": "caracteres-v2" }
+    },
+    {
+      "id": "tosse-13", "groupId": "tosse",
+      "text": "Apresenta tosse produtiva, leve, concentrada no fim da manhã, três ou quatro vezes ao dia. Nega chiado e falta de ar. Sentar ou deitar não muda a tosse. Não identifica gatilho nem fator de melhora ou piora. Há dias sem tosse alternados com dias de padrão semelhante; início e duração total não foram informados.",
+      "missingFieldIds": [], "incompleteFieldIds": ["inicio-duracao-evolucao"], "unknownFieldIds": [], "missingContextFieldIds": ["inicio-duracao-evolucao"],
+      "answer": { "policy": "missing-context-v2", "fieldIds": ["inicio-duracao-evolucao"], "noneMissing": false, "exclusiveNoneLabel": "Nenhum dado ausente" },
+      "evidence": [
+        { "fieldId": "inicio-duracao-evolucao", "status": "partial", "quote": "Há dias sem tosse alternados com dias de padrão semelhante; início e duração total não foram informados", "start": 207, "end": 310, "rationale": "Início/duração/evolução: A alternância descreve o curso, mas início e duração total faltam." },
+        { "fieldId": "horario", "status": "documented", "quote": "concentrada no fim da manhã", "start": 33, "end": 60, "rationale": "Horário: O período do dia está explícito." },
+        { "fieldId": "frequencia", "status": "documented", "quote": "três ou quatro vezes ao dia", "start": 62, "end": 89, "rationale": "Frequência: A frequência diária está informada." },
+        { "fieldId": "intensidade", "status": "documented", "quote": "leve", "start": 27, "end": 31, "rationale": "Intensidade: O grau qualitativo é informado." },
+        { "fieldId": "fatores-desencadeantes", "status": "documented", "quote": "Não identifica gatilho nem fator de melhora ou piora", "start": 153, "end": 205, "rationale": "Fatores desencadeantes: A ausência de gatilho percebido é explicitamente relatada." },
+        { "fieldId": "fenomenos-acompanhantes", "status": "documented", "quote": "Nega chiado e falta de ar", "start": 91, "end": 116, "rationale": "Fenômenos acompanhantes: Chiado e falta de ar são explicitamente negados." },
+        { "fieldId": "fatores-melhora-piora", "status": "documented", "quote": "Não identifica gatilho nem fator de melhora ou piora", "start": 153, "end": 205, "rationale": "Fatores de melhora e piora: A pessoa não identifica fator em nenhuma das duas direções." },
+        { "fieldId": "relacao-decubito", "status": "documented", "quote": "Sentar ou deitar não muda a tosse", "start": 118, "end": 151, "rationale": "Relação com decúbito: As posições e ausência de mudança estão explícitas." },
+        { "fieldId": "seca-produtiva", "status": "documented", "quote": "tosse produtiva", "start": 10, "end": 25, "rationale": "Seca ou produtiva: O relato caracteriza a tosse como produtiva." },
+        { "fieldId": "periodos", "status": "documented", "quote": "Há dias sem tosse alternados com dias de padrão semelhante", "start": 207, "end": 265, "rationale": "Períodos: Há alternância entre dias sem tosse e dias de padrão semelhante." }
+      ],
+      "source": { "documentId": "caracteres-propedeuticos-principais-sintomas", "page": 1, "locator": "Heading TOSSE and its ten prompts, between DOR and EXPECTORAÇÃO" },
+      "clinicalReferenceIds": ["nhlbi-asthma-symptoms", "who-asthma"],
+      "generation": { "model": "gpt-6.1-sol", "modelVersion": "unknown", "promptVersion": "content-bank-v2", "date": "2026-11-14" },
+      "review": { "status": "draft", "clinicalReview": "not-recorded", "independentReview": "pending", "policyReview": "needs-educational-review", "findings": ["Reparo editorial vinculado a CAR2-012–CAR2-015; aguarda nova revisão independente e revisão clínica."] },
+      "editorialRevision": { "status": "draft-awaiting-independent-rereview", "sourceReviewId": "caracteres-v1", "originalTextSha256": "8aa61f09be0493c207bbc980fab0d9ea910ae20cc61737e91a4b9471e6148f0f", "findingIds": ["CAR-003"], "model": "unknown", "modelVersion": "unknown", "clinicalApproval": false, "releaseApproved": false },
+      "repair": { "previousRecordSha256": "5c406e9ecea4be2f08f186de266d4c22d72c8998365e15678f74efda829ae989", "baseDraftSha256": "6795ac58e156cee403a29dfc73d2425b87ab9b6a9d46a76b7e5120161fa85bda", "previousReviewStatus": "needs-revision", "reason": "Distinguir acompanhantes negados, ausência percebida de gatilho/modificadores, curso parcial e períodos documentados.", "findingIds": ["CAR2-012", "CAR2-013", "CAR2-014", "CAR2-015"], "sourceReviewId": "caracteres-v2" }
+    }
+  ]
+}
