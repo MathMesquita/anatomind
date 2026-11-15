@@ -22,6 +22,8 @@ node tools/content-status.mjs
 
 The status command recomputes counts from actual records, includes a SHA-256 checkpoint, and keeps the full original interrogation target visible even when contexts are withheld. Review counts are explicitly declared metadata, not independently established approval; self-reviewed repairs remain distinguishable. Generation, independent review, playable releases, and clinical approval are different milestones. Neither command promotes content into the app.
 
+Archived review decisions stay visible after a draft changes, but the status report counts no stories as model-reviewed in the current snapshot unless its exact bytes match the review fingerprint. A matching hash is an integrity check, not proof of medical accuracy or permission to publish.
+
 The validator checks source locators, IDs, exact story evidence spans, missing-field agreement, coherent reference mappings, image-marker coordinates, duplicate text, and coverage shortfalls. It cannot verify clinical claims, source fidelity, naturalness, visual accuracy, or whether a cited page genuinely supports a claim. Its output always separates structural success from clinical approval.
 
 ## Review and integration

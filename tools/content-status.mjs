@@ -1,7 +1,28 @@
-import { readFileSync, existsSync } from "node:fs"
+import { readFileSync, existsSync, readdirSync } from "node:fs"
 import { createHash } from "node:crypto"
 import path from "node:path"
 import { pathToFileURL } from "node:url"
+
+/** A review of an older snapshot must never silently approve edited content. */
+export function summarizeReview(bytes, report) {
+  const currentSha256 = createHash("sha256").update(bytes).digest("hex")
+  const reviewedSha256 = report.draftSha256 ?? report.input?.sha256 ?? null
+  const matchesCurrentSnapshot = reviewedSha256 === currentSha256
+  const stories = Array.isArray(report.stories) ? report.stories : []
+  return {
+    reviewedSha256,
+    matchesCurrentSnapshot,
+    recordedStoryDecisions: stories.length,
+    recordedDispositions: stories.reduce((counts, story) => {
+      const disposition = story.disposition ?? "not-recorded"
+      counts[disposition] = (counts[disposition] ?? 0) + 1
+      return counts
+    }, {}),
+    modelReviewedInMatchingSnapshot: matchesCurrentSnapshot ? stories.filter((story) => story.disposition === "model-reviewed" && !story.hold).length : 0,
+    clinicalApproval: false,
+    note: "Snapshot matching and model review are not clinical or publication approval.",
+  }
+}
 
 /** Coverage is computed from records, never from a generator's cached claims. */
 export function summarizeContent(bank) {
@@ -50,6 +71,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   for (const file of ["content/drafts/antecedentes.json", "content/drafts/caracteres.json", "content/drafts/interrogatorio.json", "content/drafts/regioes.json", "content/releases/regioes.v1.json"]) {
     if (!existsSync(file)) continue
     const bytes = readFileSync(file)
-    console.log(JSON.stringify({ file, sha256: createHash("sha256").update(bytes).digest("hex"), ...summarizeContent(JSON.parse(bytes)) }, null, 2))
+    const bank = JSON.parse(bytes)
+    const recordedReviews = existsSync("docs/reviews") ? readdirSync("docs/reviews")
+      .filter((name) => new RegExp(`^${bank.topic}-v\\d+\\.json$`).test(name))
+      .map((name) => {
+        const reviewPath = `docs/reviews/${name}`
+        return { path: reviewPath, ...summarizeReview(bytes, JSON.parse(readFileSync(reviewPath, "utf8"))) }
+      }) : []
+    console.log(JSON.stringify({ file, sha256: createHash("sha256").update(bytes).digest("hex"), ...summarizeContent(bank), recordedReviews }, null, 2))
   }
 }

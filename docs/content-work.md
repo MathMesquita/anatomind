@@ -13,7 +13,7 @@ This ledger separates shipped behavior from unfinished educational production. R
 
 ### Personal medical history
 
-The saved draft contains 14 source groups and a larger researched disease catalog. Some added or repaired records were checked by the same model that wrote the repair, which is not an independent second pass. Conditional memberships, unresolved cross-category associations, and curricular decisions must remain visible. Unresolved membership is not proof that a disease is a valid negative distractor.
+The 2026-11-15 saved draft contains 224 disease records, 328 recorded positive memberships, and at least 20 entries in each of the 14 source groups. This meets the gross generation target, not the reviewed release target. Some added or repaired records were checked by the same model that wrote the repair, which is not an independent second pass. Conditional memberships, unresolved cross-category associations, and curricular decisions must remain visible. Unresolved membership is not proof that a disease is a valid negative distractor.
 
 - Finish evidence-supported coverage, allowing honest shortfalls rather than duplicate diagnoses or variants invented to reach 20.
 - Independently recheck additions and repairs, including all applicable overlaps and safe negative pools.
@@ -29,7 +29,7 @@ Generation reached 220 draft stories: 20 for each of 11 source groups. This does
 
 ### Complementary interrogation
 
-The source inventory preserves 204 term/group contexts and their original descriptions. The original target remains 10 patient stories per context (2,040), even when an editorial eligibility decision temporarily reduces the active target. The earlier independent report covered only the initial 80 stories; it does not automatically approve later revisions or additions.
+The source inventory preserves 204 term/group contexts and their original descriptions. The 2026-11-15 checkpoint contains 340 stories in 34 complete ten-story context sets. The original target remains 10 patient stories per context (2,040), even when an editorial eligibility decision temporarily reduces the active target: 1,700 gross story slots remain, including excluded or held contexts. The earlier independent report covered only the initial 80 stories; it does not automatically approve later revisions or additions. A fresh independent review of the 340-story snapshot is pending.
 
 - Generate remaining contexts in traceable batches; preserve all source descriptions and explain every exclusion or hold.
 - Do not exclude a valid history milestone simply because it is normal rather than a symptom.
