@@ -67,3 +67,35 @@ test("interview alternatives must be source-defined and distinct from accepted p
   assert.ok(result.errors.some((message) => message.includes("unknown pathway")))
   assert.ok(result.errors.some((message) => message.includes("pathways overlap")))
 })
+
+function policyFixture() {
+  const bank = fixture(), story = bank.stories[0]
+  bank.evidencePolicy = { id: "missing-context-v2" }
+  story.evidence[0] = { ...story.evidence[0], status: "documented", start: 16, end: 26 }
+  story.evidence[1] = { ...story.evidence[1], status: "omitted", start: null, end: null }
+  story.incompleteFieldIds = []; story.unknownFieldIds = []; story.missingContextFieldIds = ["intensity"]
+  story.answer = { policy: "missing-context-v2", fieldIds: ["intensity"], noneMissing: false, exclusiveNoneLabel: "Nenhum dado ausente" }
+  return bank
+}
+
+test("v2 symptom answers include partial fields and exact evidence offsets", () => {
+  const bank = policyFixture(), story = bank.stories[0]
+  assert.equal(validateContent(bank).structuralPass, true)
+  story.evidence[0].status = "partial"
+  story.incompleteFieldIds = ["local"]
+  story.missingContextFieldIds.push("local"); story.answer.fieldIds.push("local")
+  assert.equal(validateContent(bank).structuralPass, true)
+  story.answer.fieldIds = ["intensity"]
+  story.evidence[0].start = 0
+  const errors = validateContent(bank).errors
+  assert.ok(errors.some((message) => message.includes("answer must include omitted and partial")))
+  assert.ok(errors.some((message) => message.includes("offsets do not match")))
+})
+
+test("explicitly unknown answers cannot be turned into automatic omissions or negatives", () => {
+  const bank = policyFixture(), story = bank.stories[0]
+  story.evidence[0].status = "addressed-unknown"; story.unknownFieldIds = ["local"]
+  assert.ok(validateContent(bank).errors.some((message) => message.includes("withhold automatic answer")))
+  story.answer = null; story.review.status = "needs-revision"
+  assert.equal(validateContent(bank).structuralPass, true)
+})

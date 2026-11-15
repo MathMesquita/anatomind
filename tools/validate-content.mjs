@@ -104,6 +104,29 @@ export function validateContent(bank, { sourceRegistry } = {}) {
         check((field.quote === null) === missing.includes(field.fieldId), `${item.id}/${field.fieldId}: missing set disagrees with evidence`)
         if (field.quote !== null) check(nonempty(field.quote) && item.text?.includes(field.quote), `${item.id}/${field.fieldId}: evidence quote not in story`)
       }
+      if (bank.evidencePolicy?.id === "missing-context-v2") {
+        const byStatus = (status) => evidence.filter((field) => field.status === status).map((field) => field.fieldId)
+        const sameSet = (left, right) => Array.isArray(left) && left.length === new Set(left).size && left.length === right.length && left.every((id) => right.includes(id))
+        const omitted = byStatus("omitted"), partial = byStatus("partial"), unknown = byStatus("addressed-unknown")
+        const expected = [...omitted, ...partial]
+        check(sameSet(item.missingFieldIds, omitted), `${item.id}: omissions disagree with evidence status`)
+        check(sameSet(item.incompleteFieldIds, partial), `${item.id}: partial fields disagree with evidence status`)
+        check(sameSet(item.unknownFieldIds, unknown), `${item.id}: unknown fields disagree with evidence status`)
+        check(sameSet(item.missingContextFieldIds, expected), `${item.id}: missing context must include omissions and partial fields`)
+        for (const field of evidence) {
+          check(["documented", "omitted", "partial", "addressed-unknown"].includes(field.status), `${item.id}/${field.fieldId}: unsupported evidence status`)
+          if (field.quote === null) check(field.start === null && field.end === null, `${item.id}/${field.fieldId}: omitted evidence needs null offsets`)
+          else check(Number.isInteger(field.start) && field.start >= 0 && Number.isInteger(field.end) && field.end > field.start && item.text?.slice(field.start, field.end) === field.quote, `${item.id}/${field.fieldId}: evidence offsets do not match quote`)
+        }
+        if (unknown.length) {
+          check(item.answer === null, `${item.id}: unknown information must withhold automatic answer`)
+          check(["needs-revision", "excluded"].includes(item.review?.status), `${item.id}: unknown information requires hold/revision`)
+        } else {
+          check(item.answer?.policy === "missing-context-v2" && sameSet(item.answer?.fieldIds, expected), `${item.id}: answer must include omitted and partial fields`)
+          check(item.answer?.noneMissing === (expected.length === 0), `${item.id}: none-missing answer disagrees with checklist`)
+          check(item.answer?.exclusiveNoneLabel === "Nenhum dado ausente", `${item.id}: explicit none label missing`)
+        }
+      }
     }
     Object.assign(counts, { groups: groups.size, stories: stories.size, targetStories: groups.size * 20 })
   }
