@@ -1,0 +1,2635 @@
+{
+ "date": "2026-11-16",
+ "sources": [
+  {
+   "id": "NEI-BLEPH",
+   "institution": "NEI/NIH",
+   "title": "Blepharitis",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/blepharitis",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MSD-BLEPH",
+   "institution": "MSD Manual Professional",
+   "title": "Blepharitis",
+   "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/blepharitis",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-ADPKD",
+   "institution": "NIDDK/NIH",
+   "title": "Autosomal Dominant PKD",
+   "url": "https://www.niddk.nih.gov/health-information/kidney-disease/polycystic-kidney-disease/autosomal-dominant-pkd",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MLP-PKD",
+   "institution": "MedlinePlus Genetics",
+   "title": "Polycystic kidney disease",
+   "url": "https://medlineplus.gov/genetics/condition/polycystic-kidney-disease/",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "EPMC-NOSE-ORPHAN",
+   "institution": "Europe PMC (PMC4702053)",
+   "title": "Orphan diseases of the nose and paranasal sinuses",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4702053/fullTextXML",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "PAMJ-RHINO",
+   "institution": "Pan African Medical Journal (PMC6691287)",
+   "title": "Rhinoscleroma: a rare chronic infection of the nasal cavities",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6691287/fullTextXML",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NHLBI-CHD",
+   "institution": "NHLBI/NIH",
+   "title": "Coronary Heart Disease",
+   "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NHLBI-CHD-CAUSES",
+   "institution": "NHLBI/NIH",
+   "title": "Coronary Heart Disease causes",
+   "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease/causes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NHLBI-CHD-RISK",
+   "institution": "NHLBI/NIH",
+   "title": "Coronary Heart Disease risk factors",
+   "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease/risk-factors",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIMH-BPD",
+   "institution": "NIMH/NIH",
+   "title": "Borderline Personality Disorder",
+   "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NHS-PD",
+   "institution": "NHS",
+   "title": "Personality disorders",
+   "url": "https://www.nhs.uk/mental-health/conditions/personality-disorder/",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NEI-ASTIG",
+   "institution": "NEI/NIH",
+   "title": "Astigmatism",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/astigmatism",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NEI-REFRACT",
+   "institution": "NEI/NIH",
+   "title": "Refractive errors",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/refractive-errors",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-UC-SYM",
+   "institution": "NIDDK/NIH",
+   "title": "Ulcerative colitis symptoms and causes",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/ulcerative-colitis/symptoms-causes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-UC-DEF",
+   "institution": "NIDDK/NIH",
+   "title": "Ulcerative colitis definition and facts",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/ulcerative-colitis/definition-facts",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MSD-UC",
+   "institution": "MSD Manual Professional",
+   "title": "Ulcerative colitis",
+   "url": "https://www.msdmanuals.com/professional/gastrointestinal-disorders/inflammatory-bowel-disease-ibd/ulcerative-colitis",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NHS-UC",
+   "institution": "NHS",
+   "title": "Ulcerative colitis",
+   "url": "https://www.nhs.uk/conditions/ulcerative-colitis/",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "ICD10-K51",
+   "institution": "WHO ICD-10 (2019)",
+   "title": "K51 Ulcerative colitis",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=K51",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-ICDSEER",
+   "institution": "NIDDK/NIH",
+   "title": "ICD and SEER codes for digestive diseases",
+   "url": "https://www.niddk.nih.gov/about-niddk/strategic-plans-reports/burden-of-digestive-diseases-in-united-states/icd-seer-codes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NEI-DR",
+   "institution": "NEI/NIH",
+   "title": "Diabetic retinopathy",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-EYE",
+   "institution": "NIDDK/NIH",
+   "title": "Diabetic eye disease",
+   "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-eye-disease",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NHS-CHOL",
+   "institution": "NHS",
+   "title": "Cholesteatoma",
+   "url": "https://www.nhs.uk/conditions/cholesteatoma/",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MLP-CHOL",
+   "institution": "MedlinePlus",
+   "title": "Cholesteatoma",
+   "url": "https://medlineplus.gov/ency/article/001050.htm",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NEI-RP",
+   "institution": "NEI/NIH",
+   "title": "Retinitis pigmentosa",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinitis-pigmentosa",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDCD-USHER",
+   "institution": "NIDCD/NIH",
+   "title": "Usher syndrome",
+   "url": "https://www.nidcd.nih.gov/health/usher-syndrome",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MSD-RP",
+   "institution": "MSD Manual Professional",
+   "title": "Retinitis pigmentosa",
+   "url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/retinitis-pigmentosa",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NCI-LIVER-CAUSES",
+   "institution": "NCI/NIH",
+   "title": "Liver cancer causes and risk factors",
+   "url": "https://www.cancer.gov/types/liver/what-is-liver-cancer/causes-risk-factors",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "INCA-FIGADO-POP",
+   "institution": "INCA / Ministerio da Saude",
+   "title": "Cancer de figado (versao para populacao)",
+   "url": "https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/figado/versao-para-populacao",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "WHO-HEPB",
+   "institution": "WHO",
+   "title": "Hepatitis B fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NCI-MDS",
+   "institution": "NCI/NIH",
+   "title": "Myelodysplastic syndromes treatment (PDQ)",
+   "url": "https://www.cancer.gov/types/myeloproliferative/patient/myelodysplastic-treatment-pdq",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MSD-MDS",
+   "institution": "MSD Manual Professional",
+   "title": "Myelodysplastic syndrome",
+   "url": "https://www.msdmanuals.com/professional/hematology-and-oncology/leukemias/myelodysplastic-syndrome-mds",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-T2D",
+   "institution": "NIDDK/NIH",
+   "title": "Type 2 diabetes",
+   "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MS-DIABETES",
+   "institution": "Ministerio da Saude (Brasil)",
+   "title": "Diabetes",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/diabetes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "WHO-DIABETES",
+   "institution": "WHO",
+   "title": "Diabetes fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NCI-ACC-WHAT",
+   "institution": "NCI/NIH",
+   "title": "What is adrenocortical carcinoma",
+   "url": "https://www.cancer.gov/types/adrenocortical/what-is-adrenocortical-carcinoma",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NCI-ACC-SYM",
+   "institution": "NCI/NIH",
+   "title": "Adrenocortical carcinoma symptoms",
+   "url": "https://www.cancer.gov/types/adrenocortical/symptoms",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NCI-ACC-PDQ",
+   "institution": "NCI/NIH",
+   "title": "Adrenocortical carcinoma treatment (PDQ, HP)",
+   "url": "https://www.cancer.gov/types/adrenocortical/hp/adrenocortical-treatment-pdq",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "WHO-ANX",
+   "institution": "WHO",
+   "title": "Anxiety disorders fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIMH-AGORA",
+   "institution": "NIMH/NIH",
+   "title": "Agoraphobia statistics",
+   "url": "https://www.nimh.nih.gov/health/statistics/agoraphobia",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-HEPA",
+   "institution": "NIDDK/NIH",
+   "title": "Hepatitis A",
+   "url": "https://www.niddk.nih.gov/health-information/liver-disease/viral-hepatitis/hepatitis-a",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "CDC-HEPA",
+   "institution": "CDC",
+   "title": "About hepatitis A",
+   "url": "https://www.cdc.gov/hepatitis-a/about/index.html",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "WHO-HEPA",
+   "institution": "WHO",
+   "title": "Hepatitis A fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-a",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-PYELO-SYM",
+   "institution": "NIDDK/NIH",
+   "title": "Kidney infection: symptoms and causes",
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-infection-pyelonephritis/symptoms-causes",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-PYELO-DEF",
+   "institution": "NIDDK/NIH",
+   "title": "Kidney infection: definition and facts",
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-infection-pyelonephritis/definition-facts",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NIDDK-DI",
+   "institution": "NIDDK/NIH",
+   "title": "Diabetes insipidus",
+   "url": "https://www.niddk.nih.gov/health-information/kidney-disease/diabetes-insipidus",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NEI-GLAUCOMA",
+   "institution": "NEI/NIH",
+   "title": "Glaucoma",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/glaucoma",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MLP-HEMO",
+   "institution": "MedlinePlus",
+   "title": "Hemophilia",
+   "url": "https://medlineplus.gov/hemophilia.html",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MEDLINEGEN-HEMO",
+   "institution": "MedlinePlus Genetics",
+   "title": "Hemophilia",
+   "url": "https://medlineplus.gov/genetics/condition/hemophilia/",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "MSD-HEMO",
+   "institution": "MSD Manual Professional",
+   "title": "Hemophilia",
+   "url": "https://www.msdmanuals.com/professional/hematology-and-oncology/coagulation-disorders/hemophilia",
+   "opened": true,
+   "chunk": 1
+  },
+  {
+   "id": "NEI-MYOPIA",
+   "institution": "NEI/NIH",
+   "title": "Nearsightedness (myopia)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/nearsightedness-myopia",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NHS-MASTOID",
+   "institution": "NHS",
+   "title": "Mastoiditis",
+   "url": "https://www.nhs.uk/conditions/mastoiditis/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MLP-MASTOID",
+   "institution": "MedlinePlus",
+   "title": "Mastoiditis",
+   "url": "https://medlineplus.gov/ency/article/001034.htm",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MSD-MASTOID",
+   "institution": "MSD Manual Professional",
+   "title": "Mastoiditis",
+   "url": "https://www.msdmanuals.com/professional/ear,-nose,-and-throat-disorders/middle-ear-and-tympanic-membrane-disorders/mastoiditis",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H70",
+   "institution": "WHO ICD-10 2019",
+   "title": "H70 (bloco H65-H75, capitulo VIII)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H70",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "EYEWIKI-RHINO",
+   "institution": "AAO EyeWiki",
+   "title": "Rhinosporidiosis",
+   "url": "https://eyewiki.aao.org/Rhinosporidiosis",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NEI-STARGARDT",
+   "institution": "NEI/NIH",
+   "title": "Stargardt disease",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/stargardt-disease",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H35",
+   "institution": "WHO ICD-10 2019",
+   "title": "H35 (inclui H35.5)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H35",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIDCD-BAL",
+   "institution": "NIDCD/NIH",
+   "title": "Balance disorders",
+   "url": "https://www.nidcd.nih.gov/health/balance-disorders",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NHS-VERTIGO",
+   "institution": "NHS",
+   "title": "Vertigo",
+   "url": "https://www.nhs.uk/conditions/vertigo/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIMH-ADHD",
+   "institution": "NIMH/NIH",
+   "title": "Attention-deficit/hyperactivity disorder",
+   "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NHS-ADHD",
+   "institution": "NHS",
+   "title": "ADHD",
+   "url": "https://www.nhs.uk/conditions/attention-deficit-hyperactivity-disorder-adhd/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MLP-ADHD",
+   "institution": "MedlinePlus",
+   "title": "ADHD",
+   "url": "https://medlineplus.gov/ency/article/001551.htm",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-F90",
+   "institution": "WHO ICD-10 2019",
+   "title": "F90.0",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F90.0",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "WHO-LEPROSY",
+   "institution": "WHO",
+   "title": "Leprosy fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/leprosy",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "CDC-LEPROSY",
+   "institution": "CDC",
+   "title": "Leprosy",
+   "url": "https://www.cdc.gov/leprosy/about/index.html",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MS-HANSEN",
+   "institution": "Ministerio da Saude (BR)",
+   "title": "Hanseniase",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/h/hanseniase",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MSD-LEPROSY",
+   "institution": "MSD Manual Professional",
+   "title": "Leprosy",
+   "url": "https://www.msdmanuals.com/professional/infectious-diseases/mycobacteria/leprosy",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-A30",
+   "institution": "WHO ICD-10 2019",
+   "title": "A30",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=A30",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NHS-AN",
+   "institution": "NHS",
+   "title": "Acoustic neuroma",
+   "url": "https://www.nhs.uk/conditions/acoustic-neuroma/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIDCD-VS",
+   "institution": "NIDCD/NIH",
+   "title": "Vestibular schwannoma and neurofibromatosis",
+   "url": "https://www.nidcd.nih.gov/health/vestibular-schwannoma-acoustic-neuroma-and-neurofibromatosis",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-D33",
+   "institution": "WHO ICD-10 2019",
+   "title": "D33 (D33.3 nervos cranianos)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=D33",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NEI-PINKEYE",
+   "institution": "NEI/NIH",
+   "title": "Pink eye (conjunctivitis)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/pink-eye",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "CDC-CONJ",
+   "institution": "CDC",
+   "title": "Conjunctivitis",
+   "url": "https://www.cdc.gov/conjunctivitis/about/index.html",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H10",
+   "institution": "WHO ICD-10 2019",
+   "title": "H10",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H10",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NCI-RETINO",
+   "institution": "NCI/NIH",
+   "title": "Retinoblastoma treatment (PDQ)",
+   "url": "https://www.cancer.gov/types/retinoblastoma/patient/retinoblastoma-treatment-pdq",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NEI-RETINO",
+   "institution": "NEI/NIH",
+   "title": "Retinoblastoma",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinoblastoma",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-C69",
+   "institution": "WHO ICD-10 2019",
+   "title": "C69 (C69.2 retina)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C69",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NEI-CATARACT",
+   "institution": "NEI/NIH",
+   "title": "Cataracts",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/cataracts",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "WHO-VISION",
+   "institution": "WHO",
+   "title": "Blindness and visual impairment",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "BVS-CATARATA",
+   "institution": "BVS / Ministerio da Saude (BR)",
+   "title": "Catarata",
+   "url": "https://bvsms.saude.gov.br/catarata/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H25",
+   "institution": "WHO ICD-10 2019",
+   "title": "H25 (catarata senil)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H25",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NHS-PERF",
+   "institution": "NHS",
+   "title": "Perforated eardrum",
+   "url": "https://www.nhs.uk/conditions/perforated-eardrum/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MLP-PERF",
+   "institution": "MedlinePlus",
+   "title": "Perforated eardrum",
+   "url": "https://medlineplus.gov/ency/article/001038.htm",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H72",
+   "institution": "WHO ICD-10 2019",
+   "title": "H72",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H72",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "WHO-SYPH",
+   "institution": "WHO",
+   "title": "Syphilis fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/syphilis",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "CDC-SYPH-TG",
+   "institution": "CDC",
+   "title": "Syphilis treatment guidelines",
+   "url": "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-A53",
+   "institution": "WHO ICD-10 2019",
+   "title": "A53 (sifilis, bloco A50-A53)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=A53",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MLP-HD",
+   "institution": "MedlinePlus",
+   "title": "Huntington disease",
+   "url": "https://medlineplus.gov/huntingtonsdisease.html",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MSD-HD",
+   "institution": "MSD Manual Professional",
+   "title": "Huntington disease",
+   "url": "https://www.msdmanuals.com/professional/neurology/movement-and-cerebellar-disorders/huntington-disease",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-G10",
+   "institution": "WHO ICD-10 2019",
+   "title": "G10",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=G10",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "WHO-HEAD",
+   "institution": "WHO",
+   "title": "Headache disorders",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NHS-CLUSTER",
+   "institution": "NHS",
+   "title": "Cluster headaches",
+   "url": "https://www.nhs.uk/conditions/cluster-headaches/",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "CDC-HPV",
+   "institution": "CDC",
+   "title": "About genital HPV infection",
+   "url": "https://www.cdc.gov/sti/about/about-genital-hpv-infection.html",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "WHO-HPV",
+   "institution": "WHO",
+   "title": "HPV and cancer",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MS-HPV",
+   "institution": "Ministerio da Saude (BR)",
+   "title": "HPV",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/h/hpv",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-A63",
+   "institution": "WHO ICD-10 2019",
+   "title": "A63 (A63.0 verrugas anogenitais)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=A63",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIDCD-ARHL",
+   "institution": "NIDCD/NIH",
+   "title": "Age-related hearing loss",
+   "url": "https://www.nidcd.nih.gov/health/age-related-hearing-loss",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "WHO-HL",
+   "institution": "WHO",
+   "title": "Deafness and hearing loss",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H91",
+   "institution": "WHO ICD-10 2019",
+   "title": "H91 (H91.1 presbiacusia)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H91",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIDDK-BPH",
+   "institution": "NIDDK/NIH",
+   "title": "Enlarged prostate (BPH)",
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/prostate-problems/enlarged-prostate-benign-prostatic-hyperplasia",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-N40",
+   "institution": "WHO ICD-10 2019",
+   "title": "N40",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=N40",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIDCD-OTOSCL",
+   "institution": "NIDCD/NIH",
+   "title": "Otosclerosis",
+   "url": "https://www.nidcd.nih.gov/health/otosclerosis",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H81",
+   "institution": "WHO ICD-10 2019",
+   "title": "H81.1 (pagina mostrou H80 otosclerose, capitulo VIII)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H81.1",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIDDK-PHPT",
+   "institution": "NIDDK/NIH",
+   "title": "Primary hyperparathyroidism",
+   "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/primary-hyperparathyroidism",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MSD-PHPT",
+   "institution": "MSD Manual Professional",
+   "title": "Hyperparathyroidism",
+   "url": "https://www.msdmanuals.com/professional/endocrine-and-metabolic-disorders/parathyroid-disorders/hyperparathyroidism",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MLP-PHPT",
+   "institution": "MedlinePlus",
+   "title": "Primary hyperparathyroidism",
+   "url": "https://medlineplus.gov/ency/article/001215.htm",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "ICD-H52",
+   "institution": "WHO ICD-10 2019",
+   "title": "H52 (H52.0-H52.7)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H52.1",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "CCF-HD",
+   "institution": "Cleveland Clinic",
+   "title": "Huntington's disease",
+   "url": "https://my.clevelandclinic.org/health/diseases/14369-huntingtons-disease",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "MLP-OTOSCL",
+   "institution": "MedlinePlus",
+   "title": "Otosclerosis",
+   "url": "https://medlineplus.gov/ency/article/001036.htm",
+   "opened": true,
+   "chunk": 2
+  },
+  {
+   "id": "NIMH-DMDD",
+   "institution": "NIH / NIMH",
+   "title": "Disruptive Mood Dysregulation Disorder: The Basics",
+   "url": "https://www.nimh.nih.gov/health/publications/disruptive-mood-dysregulation-disorder",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "WHO-MENTAL",
+   "institution": "WHO",
+   "title": "Mental disorders (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/mental-disorders",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-PANC-WHAT",
+   "institution": "NCI/NIH",
+   "title": "What Is Pancreatic Cancer?",
+   "url": "https://www.cancer.gov/types/pancreatic/what-is-pancreatic-cancer",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-PANC-PDQ",
+   "institution": "NCI/NIH",
+   "title": "Pancreatic Cancer Treatment (PDQ) - Patient",
+   "url": "https://www.cancer.gov/types/pancreatic/patient/pancreatic-treatment-pdq",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-METASTATIC",
+   "institution": "NCI/NIH",
+   "title": "Metastatic Cancer: When Cancer Spreads",
+   "url": "https://www.cancer.gov/types/metastatic-cancer",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ACS-PANC",
+   "institution": "American Cancer Society",
+   "title": "Signs and Symptoms of Pancreatic Cancer",
+   "url": "https://www.cancer.org/cancer/types/pancreatic-cancer/detection-diagnosis-staging/signs-and-symptoms.html",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NHS-PANC",
+   "institution": "NHS (UK)",
+   "title": "Pancreatic cancer - Symptoms",
+   "url": "https://www.nhs.uk/conditions/pancreatic-cancer/symptoms/",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIDCD-USHER",
+   "institution": "NIH / NIDCD",
+   "title": "Usher Syndrome",
+   "url": "https://www.nidcd.nih.gov/health/usher-syndrome",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MLP-USHER",
+   "institution": "NLM / MedlinePlus Genetics",
+   "title": "Usher syndrome",
+   "url": "https://medlineplus.gov/genetics/condition/usher-syndrome/",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NEI-USHER",
+   "institution": "NIH / NEI",
+   "title": "Usher Syndrome",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/usher-syndrome",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NEI-HYPER",
+   "institution": "NIH / NEI",
+   "title": "Farsightedness (Hyperopia)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/farsightedness-hyperopia",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NEI-AMBLY",
+   "institution": "NIH / NEI",
+   "title": "Amblyopia (Lazy Eye)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/amblyopia-lazy-eye",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-H52",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "H52 Disorders of refraction and accommodation",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H52",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MEDGEN-VESTIB",
+   "institution": "NCBI MedGen (NLM/NIH)",
+   "title": "Nasal vestibulitis (UID 573365)",
+   "url": "https://www.ncbi.nlm.nih.gov/medgen/573365",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MSD-FR-NOSE",
+   "institution": "Manuels MSD (versão francesa)",
+   "title": "Infections bactériennes du nez",
+   "url": "https://www.msdmanuals.com/fr/accueil/troubles-du-nez-de-la-gorge-et-de-l-oreille/troubles-du-nez-et-des-sinus/infections-bact%C3%A9riennes-du-nez",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIDDK-T1D",
+   "institution": "NIDDK (NIH)",
+   "title": "Type 1 Diabetes",
+   "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "WHO-DIABETES",
+   "institution": "WHO",
+   "title": "Diabetes (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "SCIDAILY-DM-HEARING",
+   "institution": "ScienceDaily (noticia sobre estudo financiado pelo NIH)",
+   "title": "Hearing loss and diabetes",
+   "url": "https://www.sciencedaily.com/releases/2008/06/080616170837.htm",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-E10",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "E10 Type 1 diabetes mellitus",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=E10",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIDDK-PROL",
+   "institution": "NIDDK (NIH)",
+   "title": "Prolactinoma",
+   "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/prolactinoma",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-PIT",
+   "institution": "NCI/NIH",
+   "title": "Pituitary Tumors",
+   "url": "https://www.cancer.gov/types/pituitary",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-E22",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "E22 Hyperfunction of pituitary gland",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=E22",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NHLBI-ASTHMA",
+   "institution": "NIH / NHLBI",
+   "title": "Asthma",
+   "url": "https://www.nhlbi.nih.gov/health/asthma",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "WHO-ASTHMA",
+   "institution": "WHO",
+   "title": "Asthma (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/asthma",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MS-ASMA",
+   "institution": "Ministerio da Saude (Brasil)",
+   "title": "Asma - Saude de A a Z",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/asma",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-J45",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "J45 Asthma",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=J45",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NHLBI-IPF",
+   "institution": "NIH / NHLBI",
+   "title": "Idiopathic Pulmonary Fibrosis",
+   "url": "https://www.nhlbi.nih.gov/health/idiopathic-pulmonary-fibrosis",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MLP-PF",
+   "institution": "NLM / MedlinePlus",
+   "title": "Pulmonary Fibrosis",
+   "url": "https://medlineplus.gov/pulmonaryfibrosis.html",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-J84",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "J84 Other interstitial pulmonary diseases",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=J84",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "WHO-PTSD",
+   "institution": "WHO",
+   "title": "Post-traumatic stress disorder (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-F43",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "F43 Reaction to severe stress, and adjustment disorders",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F43",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NEI-AMD",
+   "institution": "NIH / NEI",
+   "title": "Age-Related Macular Degeneration (AMD)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/age-related-macular-degeneration",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MLP-AMD",
+   "institution": "NLM / MedlinePlus",
+   "title": "Macular Degeneration",
+   "url": "https://medlineplus.gov/maculardegeneration.html",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-H35.3",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "H35.3 Degeneration of macula and posterior pole",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H35.3",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIMH-OCD",
+   "institution": "NIH / NIMH",
+   "title": "Obsessive-Compulsive Disorder (OCD)",
+   "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIMH-PANDAS",
+   "institution": "NIH / NIMH",
+   "title": "PANS and PANDAS: Questions and Answers",
+   "url": "https://www.nimh.nih.gov/health/publications/pandas",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-F42",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "F42 Obsessive-compulsive disorder",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F42",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "CDC-CHL-TG",
+   "institution": "CDC",
+   "title": "Chlamydial Infections - STI Treatment Guidelines",
+   "url": "https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "CDC-LGV",
+   "institution": "CDC",
+   "title": "Lymphogranuloma Venereum - STI Treatment Guidelines",
+   "url": "https://www.cdc.gov/std/treatment-guidelines/lgv.htm",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "WHO-CHL",
+   "institution": "WHO",
+   "title": "Chlamydia (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/chlamydia",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-A56",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "A56 Other sexually transmitted chlamydial diseases",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=A56",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MLP-PHEO",
+   "institution": "NIH / NLM MedlinePlus",
+   "title": "Pheochromocytoma",
+   "url": "https://medlineplus.gov/pheochromocytoma.html",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-PHEO",
+   "institution": "NIH / NCI",
+   "title": "Pheochromocytoma and Paraganglioma Treatment (PDQ) - Patient",
+   "url": "https://www.cancer.gov/types/pheochromocytoma/patient/pheochromocytoma-treatment-pdq",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-C74",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "C74 Malignant neoplasm of adrenal gland",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C74",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "WHO-COPD",
+   "institution": "WHO",
+   "title": "Chronic obstructive pulmonary disease (COPD) (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/chronic-obstructive-pulmonary-disease-(copd)",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NHLBI-COPD",
+   "institution": "NIH / NHLBI",
+   "title": "COPD",
+   "url": "https://www.nhlbi.nih.gov/health/copd",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-J44",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "J44 Other chronic obstructive pulmonary disease",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=J44",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-MESO-WHAT",
+   "institution": "NIH / NCI",
+   "title": "What Is Mesothelioma?",
+   "url": "https://www.cancer.gov/types/mesothelioma/what-is-mesothelioma",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NCI-MESO-PDQ",
+   "institution": "NIH / NCI",
+   "title": "Malignant Mesothelioma Treatment (PDQ) - Patient",
+   "url": "https://www.cancer.gov/types/mesothelioma/patient/mesothelioma-treatment-pdq",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-C45",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "C45 Mesothelioma",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C45",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIDDK-PROSTATITIS",
+   "institution": "NIH / NIDDK",
+   "title": "Prostatitis: Inflammation of the Prostate",
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/prostate-problems/prostatitis-inflammation-prostate",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NHS-PROSTATITIS",
+   "institution": "NHS (UK)",
+   "title": "Prostatitis",
+   "url": "https://www.nhs.uk/conditions/prostatitis/",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-N41",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "N41 Inflammatory diseases of prostate",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=N41",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NEI-DRY",
+   "institution": "NIH / NEI",
+   "title": "Dry Eye",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NEI-DRY-CAUSES",
+   "institution": "NIH / NEI",
+   "title": "Causes of Dry Eye",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye/causes-dry-eye",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "BVS-OLHOSECO",
+   "institution": "Ministerio da Saude (Brasil) - BVS",
+   "title": "Sindrome do olho seco",
+   "url": "https://bvsms.saude.gov.br/sindrome-do-olho-seco/",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-H04",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "H04 Disorders of lacrimal system",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H04",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NIMH-EATPUB",
+   "institution": "NIH / NIMH",
+   "title": "Eating Disorders: What You Need to Know",
+   "url": "https://www.nimh.nih.gov/health/publications/eating-disorders",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "OWH-AN",
+   "institution": "HHS / Office on Womens Health",
+   "title": "Anorexia nervosa",
+   "url": "https://womenshealth.gov/mental-health/mental-health-conditions/eating-disorders/anorexia-nervosa",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-F50",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "F50 Eating disorders",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F50",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MLP-MG",
+   "institution": "NIH / NLM MedlinePlus",
+   "title": "Myasthenia Gravis",
+   "url": "https://medlineplus.gov/myastheniagravis.html",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "NHS-MG",
+   "institution": "NHS (UK)",
+   "title": "Myasthenia gravis",
+   "url": "https://www.nhs.uk/conditions/myasthenia-gravis/",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MGORG-MG",
+   "institution": "Organizacao de pacientes com miastenia gravis (instituicao nao verificada)",
+   "title": "Myasthenia gravis information page",
+   "url": "https://www.myastheniagravis.org/?p=681",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "ICD10-G70.0",
+   "institution": "WHO ICD-10 (2019 browser)",
+   "title": "G70.0 Myasthenia gravis",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=G70.0",
+   "opened": true,
+   "chunk": 3
+  },
+  {
+   "id": "MP-JNA",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Juvenile angiofibroma",
+   "url": "https://medlineplus.gov/ency/article/001572.htm",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-JNA",
+   "institution": "NCI Dictionary of Cancer Terms",
+   "title": "juvenile nasopharyngeal angiofibroma",
+   "url": "https://webapis.cancer.gov/glossary/v1/Terms/Cancer.gov/Patient/en/juvenile-nasopharyngeal-angiofibroma",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-D10",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "D10 Benign neoplasm of mouth and pharynx",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=D10",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MP-SEPTO",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Septoplasty",
+   "url": "https://medlineplus.gov/ency/article/003012.htm",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-J34",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "J34 Other disorders of nose and nasal sinuses",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=J34",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-TESTIS",
+   "institution": "NIH / NCI",
+   "title": "What Is Testicular Cancer?",
+   "url": "https://www.cancer.gov/types/testicular/what-is-testicular-cancer",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-TESTIS-RISK",
+   "institution": "NIH / NCI",
+   "title": "Testicular Cancer Causes and Risk Factors",
+   "url": "https://www.cancer.gov/types/testicular/causes-risk-factors",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "SEER-GONADS",
+   "institution": "NIH / NCI SEER Training",
+   "title": "Gonads (Endocrine Glands & Their Hormones)",
+   "url": "https://training.seer.cancer.gov/anatomy/endocrine/glands/gonads.html",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-BODYLOC",
+   "institution": "NIH / NCI",
+   "title": "Cancers by Body Location/System",
+   "url": "https://www.cancer.gov/types/by-body-location",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-C62",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "C60-C63 Malignant neoplasms of male genital organs (C62)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C62",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-LEUK",
+   "institution": "NIH / NCI",
+   "title": "Leukemia—Patient Version",
+   "url": "https://www.cancer.gov/types/leukemia",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MP-LEUK",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Leukemia",
+   "url": "https://medlineplus.gov/leukemia.html",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MSD-ALL",
+   "institution": "MSD Manual Professional",
+   "title": "Acute Lymphoblastic Leukemia (ALL)",
+   "url": "https://www.msdmanuals.com/professional/oncology/leukemias/acute-lymphoblastic-leukemia-all",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-C95",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "C91-C95 Leukaemia",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C95",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NEI-AMBLY",
+   "institution": "NIH / NEI",
+   "title": "Amblyopia (Lazy Eye)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/amblyopia-lazy-eye",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-H53",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "H53-H54 Visual disturbances and blindness",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H53",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "WHO-SCD",
+   "institution": "WHO",
+   "title": "Sickle-cell disease",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/sickle-cell-disease",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NHLBI-SCD",
+   "institution": "NHLBI/NIH",
+   "title": "Sickle Cell Disease",
+   "url": "https://www.nhlbi.nih.gov/health/sickle-cell-disease",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NHLBI-SCD-SYMPT",
+   "institution": "NHLBI/NIH",
+   "title": "Sickle Cell Disease — Symptoms",
+   "url": "https://www.nhlbi.nih.gov/health/sickle-cell-disease/symptoms",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MS-FALC",
+   "institution": "Ministério da Saúde",
+   "title": "Doença Falciforme",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/doenca-falciforme",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-D57",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "D55-D59 Haemolytic anaemias (D57 Sickle-cell disorders)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=D57",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIAMS-REA",
+   "institution": "NIAMS (NIH)",
+   "title": "Reactive Arthritis",
+   "url": "https://www.niams.nih.gov/health-topics/reactive-arthritis",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-M02",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "M00-M03 Infectious arthropathies",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M02",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "WHO-CRC",
+   "institution": "WHO",
+   "title": "Colorectal cancer",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-METASTATIC",
+   "institution": "NCI/NIH",
+   "title": "Metastatic Cancer: When Cancer Spreads",
+   "url": "https://www.cancer.gov/types/metastatic-cancer",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NCI-CRC",
+   "institution": "NCI/NIH",
+   "title": "Colorectal Cancer—Patient Version",
+   "url": "https://www.cancer.gov/types/colorectal",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-C18",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "C15-C26 / C18-C20 Colon, rectosigmoid, rectum",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C18",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MP-TURB",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Turbinate surgery",
+   "url": "https://medlineplus.gov/ency/article/007563.htm",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIDDK-PU-SC",
+   "institution": "NIDDK (NIH)",
+   "title": "Symptoms & Causes of Peptic Ulcers",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/symptoms-causes",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-K25",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "K25-K28 Gastric, duodenal, peptic ulcer",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=K25",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIDDK-DIV-SC",
+   "institution": "NIDDK (NIH)",
+   "title": "Symptoms & Causes of Diverticular Disease",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/diverticulosis-diverticulitis/symptoms-causes",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIDDK-DIV-DEF",
+   "institution": "NIDDK (NIH)",
+   "title": "Definition & Facts for Diverticular Disease",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/diverticulosis-diverticulitis/definition-facts",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-K57",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "K57 Diverticular disease of intestine",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=K57",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIMH-EAT",
+   "institution": "NIH / NIMH",
+   "title": "Eating Disorders: What You Need to Know",
+   "url": "https://www.nimh.nih.gov/health/publications/eating-disorders",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-F50",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "F50 Eating disorders",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F50.8",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIDDK-HEMO",
+   "institution": "NIDDK (NIH)",
+   "title": "Hemochromatosis — Definition & Facts",
+   "url": "https://www.niddk.nih.gov/health-information/liver-disease/hemochromatosis/definition-facts",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIDDK-HEMO-SC",
+   "institution": "NIDDK (NIH)",
+   "title": "Hemochromatosis — Symptoms & Causes",
+   "url": "https://www.niddk.nih.gov/health-information/liver-disease/hemochromatosis/symptoms-causes",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-E83",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "E83 / E83.1 Disorders of iron metabolism",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=E83",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NHS-LABY",
+   "institution": "NHS (Reino Unido)",
+   "title": "Labyrinthitis and vestibular neuritis",
+   "url": "https://www.nhs.uk/conditions/labyrinthitis/",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIDCD-BAL",
+   "institution": "NIH / NIDCD",
+   "title": "Balance Disorders",
+   "url": "https://www.nidcd.nih.gov/health/balance-disorders",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-H81",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "H80-H83 Diseases of inner ear (H81.2)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H81",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIAMS-SS",
+   "institution": "NIAMS (NIH)",
+   "title": "Spinal Stenosis",
+   "url": "https://www.niams.nih.gov/health-topics/spinal-stenosis",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-M48",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "M48 Other spondylopathies (M48.0)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M48",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MP-SWIM",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Swimmer's ear",
+   "url": "https://medlineplus.gov/ency/article/000622.htm",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-H60",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "H60 Otitis externa",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H60",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MP-RHINO",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Rhinophyma",
+   "url": "https://medlineplus.gov/ency/article/001037.htm",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "MP-ROSACEA",
+   "institution": "MedlinePlus (NLM/NIH)",
+   "title": "Rosacea",
+   "url": "https://medlineplus.gov/ency/article/000879.htm",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-L71",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "L71 Rosacea (L71.1)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=L71",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIAMS-PMR",
+   "institution": "NIAMS (NIH)",
+   "title": "Polymyalgia Rheumatica and Giant Cell Arteritis",
+   "url": "https://www.niams.nih.gov/health-topics/polymyalgia-rheumatica-giant-cell-arteritis",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-M35",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "M35 Other systemic involvement of connective tissue (M35.3)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M35",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "WHO-GONO",
+   "institution": "WHO",
+   "title": "Gonorrhoea (Neisseria gonorrhoeae infection)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/gonorrhoea-(neisseria-gonorrhoeae-infection)",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-A54",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "A54 Gonococcal infection",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=A54",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIAMS-PSA",
+   "institution": "NIH / NIAMS",
+   "title": "Psoriatic Arthritis",
+   "url": "https://www.niams.nih.gov/health-topics/psoriatic-arthritis",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "ICD-L40",
+   "institution": "WHO ICD-10 (versão 2019)",
+   "title": "L40 Psoriasis (L40.5)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=L40",
+   "opened": true,
+   "chunk": 4
+  },
+  {
+   "id": "NIAMS-PAGET",
+   "institution": "NIAMS (NIH)",
+   "title": "Paget's Disease of Bone",
+   "url": "https://www.niams.nih.gov/health-topics/pagets-disease-bone",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MSD-PAGET",
+   "institution": "MSD Manual Professional",
+   "title": "Paget Disease of Bone",
+   "url": "https://www.msdmanuals.com/professional/musculoskeletal-and-connective-tissue-disorders/paget-disease-of-bone/paget-disease-of-bone",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-M88",
+   "institution": "WHO ICD-10 2019",
+   "title": "M86-M90 Other osteopathies (M88 Paget disease of bone)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M88",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHS-AR",
+   "institution": "NHS (UK)",
+   "title": "Allergic rhinitis",
+   "url": "https://www.nhs.uk/conditions/allergic-rhinitis/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MLP-HAYFEVER",
+   "institution": "MedlinePlus (NLM)",
+   "title": "Hay Fever",
+   "url": "https://medlineplus.gov/hayfever.html",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-J30",
+   "institution": "WHO ICD-10 2019",
+   "title": "J30 Vasomotor and allergic rhinitis",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=J30",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIDDK-BLD-DEF",
+   "institution": "NIDDK (NIH)",
+   "title": "Definition & Facts of Bladder Infection in Adults",
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-infection-uti-in-adults/definition-facts",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIDDK-BLD-SYM",
+   "institution": "NIDDK (NIH)",
+   "title": "Symptoms & Causes of Bladder Infection in Adults",
+   "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-infection-uti-in-adults/symptoms-causes",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MLP-UTI",
+   "institution": "MedlinePlus (NLM)",
+   "title": "Urinary Tract Infections",
+   "url": "https://medlineplus.gov/urinarytractinfections.html",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-N30",
+   "institution": "WHO ICD-10 2019",
+   "title": "N30 Cystitis",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=N30",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "WHO-ASD",
+   "institution": "WHO",
+   "title": "Autism (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIMH-ASD-PUB",
+   "institution": "NIH / NIMH",
+   "title": "Autism Spectrum Disorder",
+   "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "WHO-MENTAL",
+   "institution": "WHO",
+   "title": "Mental disorders (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/mental-disorders",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-F84",
+   "institution": "WHO ICD-10 2019",
+   "title": "F80-F89 Disorders of psychological development (F84)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F84.0",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIDDK-APP-SYM",
+   "institution": "NIDDK (NIH)",
+   "title": "Symptoms & Causes of Appendicitis",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/appendicitis/symptoms-causes",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIDDK-APP-DEF",
+   "institution": "NIDDK (NIH)",
+   "title": "Definition & Facts for Appendicitis",
+   "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/appendicitis/definition-facts",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MLP-APP",
+   "institution": "MedlinePlus (NLM)",
+   "title": "Appendicitis",
+   "url": "https://medlineplus.gov/appendicitis.html",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHS-APP",
+   "institution": "NHS (UK)",
+   "title": "Appendicitis",
+   "url": "https://www.nhs.uk/conditions/appendicitis/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-K35",
+   "institution": "WHO ICD-10 2019",
+   "title": "K35-K38 Diseases of appendix",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=K35",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "JSTAGE-SEPTABS",
+   "institution": "J-STAGE / Practica Oto-Rhino-Laryngologica (Tokyo)",
+   "title": "Nasal septal abscess (abstract)",
+   "url": "https://www.jstage.jst.go.jp/article/orltokyo/51/6/51_6_447/_article/-char/en",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MLP-SEPTHEM",
+   "institution": "MedlinePlus Medical Encyclopedia",
+   "title": "Nasal septal hematoma",
+   "url": "https://medlineplus.gov/ency/article/001292.htm",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHLBI-HF",
+   "institution": "NIH / NHLBI",
+   "title": "Heart Failure",
+   "url": "https://www.nhlbi.nih.gov/health/heart-failure",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHLBI-HF-CAUSES",
+   "institution": "NIH / NHLBI",
+   "title": "Heart Failure - Causes and Risk Factors",
+   "url": "https://www.nhlbi.nih.gov/health/heart-failure/causes",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHLBI-HF-SYMP",
+   "institution": "NIH / NHLBI",
+   "title": "Heart Failure - Symptoms",
+   "url": "https://www.nhlbi.nih.gov/health/heart-failure/symptoms",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "WHO-CVD",
+   "institution": "WHO",
+   "title": "Cardiovascular diseases (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-I50",
+   "institution": "WHO ICD-10 2019",
+   "title": "I30-I52 Other forms of heart disease (I50 Heart failure)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=I50",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "WHO-HEAD",
+   "institution": "WHO",
+   "title": "Migraine and other headache disorders (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MSD-TTH",
+   "institution": "MSD Manual Professional",
+   "title": "Tension-type headache",
+   "url": "https://www.msdmanuals.com/professional/neurologic-disorders/headache/tension-type-headache",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-G44",
+   "institution": "WHO ICD-10 2019",
+   "title": "G40-G47 Episodic and paroxysmal disorders (G44)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=G44.2",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NCI-OSTEO",
+   "institution": "NIH / NCI",
+   "title": "Osteosarcoma and Undifferentiated Pleomorphic Sarcoma of Bone Treatment (PDQ) - Patient",
+   "url": "https://www.cancer.gov/types/bone/patient/osteosarcoma-treatment-pdq",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "INCA-OSTEO",
+   "institution": "INCA / Ministerio da Saude",
+   "title": "Osteossarcoma - versao para populacao",
+   "url": "https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/infantojuvenil/especificos/osteossarcoma/versao-para-populacao",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-C40",
+   "institution": "WHO ICD-10 2019",
+   "title": "C40-C41 Malignant neoplasms of bone and articular cartilage",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C40",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NCI-ESOPH",
+   "institution": "NIH / NCI",
+   "title": "What Is Esophageal Cancer?",
+   "url": "https://www.cancer.gov/types/esophageal/what-is-esophageal-cancer",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NCI-ESOPH-RISK",
+   "institution": "NIH / NCI",
+   "title": "Esophageal Cancer Causes, Risk Factors, and Prevention",
+   "url": "https://www.cancer.gov/types/esophageal/causes-risks-prevention",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-C15",
+   "institution": "WHO ICD-10 2019",
+   "title": "C15-C26 Malignant neoplasms of digestive organs (C15)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=C15",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIDCD-MEN",
+   "institution": "NIH / NIDCD",
+   "title": "Meniere's Disease",
+   "url": "https://www.nidcd.nih.gov/health/menieres-disease",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHS-MEN",
+   "institution": "NHS (UK)",
+   "title": "Meniere's disease",
+   "url": "https://www.nhs.uk/conditions/menieres-disease/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-H81",
+   "institution": "WHO ICD-10 2019",
+   "title": "H81 Disorders of vestibular function (H81.0 Meniere disease)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H81",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "WHO-BIP",
+   "institution": "WHO",
+   "title": "Bipolar disorder (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/bipolar-disorder",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIMH-BIP",
+   "institution": "NIH / NIMH",
+   "title": "Bipolar Disorder",
+   "url": "https://www.nimh.nih.gov/health/topics/bipolar-disorder",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-F31",
+   "institution": "WHO ICD-10 2019",
+   "title": "F30-F39 Mood disorders (F31 Bipolar affective disorder)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F32",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIAMS-OI",
+   "institution": "NIAMS (NIH)",
+   "title": "Osteogenesis Imperfecta",
+   "url": "https://www.niams.nih.gov/health-topics/osteogenesis-imperfecta",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MPG-OI",
+   "institution": "MedlinePlus Genetics (NLM)",
+   "title": "Osteogenesis imperfecta",
+   "url": "https://medlineplus.gov/genetics/condition/osteogenesis-imperfecta/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-Q78",
+   "institution": "WHO ICD-10 2019",
+   "title": "Q78 Other osteochondrodysplasias (Q78.0 OI, Q78.2 osteopetrosis)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=Q78",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHS-COLD",
+   "institution": "NHS (UK)",
+   "title": "Common cold",
+   "url": "https://www.nhs.uk/conditions/common-cold/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "CDC-COLD",
+   "institution": "CDC",
+   "title": "About Common Cold",
+   "url": "https://www.cdc.gov/common-cold/about/index.html",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIDCD-EAR",
+   "institution": "NIH / NIDCD",
+   "title": "Ear Infections in Children",
+   "url": "https://www.nidcd.nih.gov/health/ear-infections-children",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "CDC-EAR",
+   "institution": "CDC",
+   "title": "Ear Infection Basics",
+   "url": "https://www.cdc.gov/ear-infection/about/index.html",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-J00",
+   "institution": "WHO ICD-10 2019",
+   "title": "J00-J06 Acute upper respiratory infections (J00 common cold)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=J00",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-H66",
+   "institution": "WHO ICD-10 2019",
+   "title": "H65-H75 Diseases of middle ear and mastoid (H66)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=H66",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "WHO-ANX",
+   "institution": "WHO",
+   "title": "Anxiety disorders (fact sheet)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIMH-PHOB",
+   "institution": "NIH / NIMH",
+   "title": "Specific Phobia (statistics)",
+   "url": "https://www.nimh.nih.gov/health/statistics/specific-phobia",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-F40",
+   "institution": "WHO ICD-10 2019",
+   "title": "F40 Phobic anxiety disorders (F40.2 specific phobias)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=F40",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NHLBI-AA",
+   "institution": "NIH / NHLBI",
+   "title": "Aplastic Anemia",
+   "url": "https://www.nhlbi.nih.gov/health/anemia/aplastic-anemia",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MSD-AA",
+   "institution": "MSD Manual Professional",
+   "title": "Aplastic Anemia",
+   "url": "https://www.msdmanuals.com/professional/hematology/anemias-caused-by-deficient-erythropoiesis/aplastic-anemia",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-D61",
+   "institution": "WHO ICD-10 2019",
+   "title": "D60-D64 Aplastic and other anaemias (D61)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=D61",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIAMS-CTS",
+   "institution": "NIAMS (NIH)",
+   "title": "Carpal Tunnel Syndrome",
+   "url": "https://www.niams.nih.gov/health-topics/carpal-tunnel-syndrome",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MLP-CTS",
+   "institution": "MedlinePlus (NLM)",
+   "title": "Carpal Tunnel Syndrome",
+   "url": "https://medlineplus.gov/carpaltunnelsyndrome.html",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-G56",
+   "institution": "WHO ICD-10 2019",
+   "title": "G50-G59 Nerve, nerve root and plexus disorders (G56)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=G56",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "NIAMS-OP",
+   "institution": "NIAMS (NIH)",
+   "title": "Osteopetrosis",
+   "url": "https://www.niams.nih.gov/health-topics/osteopetrosis",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "MPG-OP",
+   "institution": "MedlinePlus Genetics (NLM)",
+   "title": "Osteopetrosis",
+   "url": "https://medlineplus.gov/genetics/condition/osteopetrosis/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "GOSH-DERM",
+   "institution": "Great Ormond Street Hospital (NHS)",
+   "title": "Intracranial dermoid cysts",
+   "url": "https://www.gosh.nhs.uk/conditions-and-treatments/conditions-we-treat/intracranial-dermoid-cysts/",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ORPHA-141103",
+   "institution": "Orphanet (INSERM) - Orphadata",
+   "title": "Nasal dermoid cyst (ORPHA:141103)",
+   "url": "https://api.orphadata.com/rd-cross-referencing/orphacodes/141103?lang=en",
+   "opened": true,
+   "chunk": 5
+  },
+  {
+   "id": "ICD-Q18",
+   "institution": "WHO ICD-10 2019",
+   "title": "Q10-Q18 Malformations of eye, ear, face and neck (Q18.8)",
+   "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=Q18.8",
+   "opened": true,
+   "chunk": 5
+  }
+ ],
+ "couldNotOpen": [
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532934/ and NBK558864",
+   "why": "reCAPTCHA",
+   "chunk": 1
+  },
+  {
+   "url": "PMC4880720 and PMC3010789 (ncbi.nlm.nih.gov/pmc)",
+   "why": "reCAPTCHA",
+   "chunk": 1
+  },
+  {
+   "url": "Fusconi 2018 rhinoscleroma PDF (unicamillus)",
+   "why": "403",
+   "chunk": 1
+  },
+  {
+   "url": "Thieme-connect rhinoscleroma article",
+   "why": "JS interstitial",
+   "chunk": 1
+  },
+  {
+   "url": "bvsalud.org mdl-30168726",
+   "why": "403",
+   "chunk": 1
+  },
+  {
+   "url": "Medscape rhinoscleroma pages",
+   "why": "402",
+   "chunk": 1
+  },
+  {
+   "url": "MSD astigmatism page",
+   "why": "404",
+   "chunk": 1
+  },
+  {
+   "url": "MSD open-angle glaucoma page",
+   "why": "404",
+   "chunk": 1
+  },
+  {
+   "url": "NHLBI hemophilia page",
+   "why": "404",
+   "chunk": 1
+  },
+  {
+   "url": "NHLBI coronary heart disease complications page",
+   "why": "404",
+   "chunk": 1
+  },
+  {
+   "url": "ICD-10 browser F60.3",
+   "why": "JS only, no content",
+   "chunk": 1
+  },
+  {
+   "url": "medicalalgorithms.com rhinoscleroma",
+   "why": "empty",
+   "chunk": 1
+  },
+  {
+   "url": "MeSH pages id.nlm.nih.gov",
+   "why": "no useful content",
+   "chunk": 1
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK436017/",
+   "why": "reCAPTCHA",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK538255/",
+   "why": "reCAPTCHA",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.orpha.net/en/disease/detail/36256",
+   "why": "pagina de verificacao",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.ninds.nih.gov/health-information/disorders/huntingtons-disease",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.ninds.nih.gov/health-information/disorders/headache",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.ninds.nih.gov/health-information/disorders/cluster-headaches",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.mayoclinic.org/diseases-conditions/bppv/symptoms-causes/syc-20370055",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.mayoclinic.org/diseases-conditions/cluster-headache/symptoms-causes/syc-20352080",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.mayoclinic.org/diseases-conditions/otosclerosis/symptoms-causes/syc-20351805",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.statpearls.com/ArticleLibrary/viewarticle/22613",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.ama-assn.org/public-health/population-health/what-doctors-wish-patients-knew-about-huntington-s-disease",
+   "why": "403",
+   "chunk": 2
+  },
+  {
+   "url": "https://radiopaedia.org/articles/syphilis",
+   "why": "402",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.msdmanuals.com/professional/infectious-diseases/spirochetes/syphilis",
+   "why": "404",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.msdmanuals.com/professional/ear,-nose,-and-throat-disorders/middle-ear-and-tympanic-membrane-disorders/tympanic-membrane-perforation",
+   "why": "404",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.msdmanuals.com/professional/ear,-nose,-and-throat-disorders/inner-ear-disorders/otosclerosis",
+   "why": "404",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.msdmanuals.com/professional/ear,-nose,-and-throat-disorders/inner-ear-disorders/benign-paroxysmal-positional-vertigo-bppv",
+   "why": "404",
+   "chunk": 2
+  },
+  {
+   "url": "https://medlineplus.gov/genetics/condition/stargardt-disease/",
+   "why": "404",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.cdc.gov/ncbddd/birthdefects/surveillancemanual/chapters/chapter-5/chapter5-2.html",
+   "why": "404",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.who.int/news-room/fact-sheets/detail/attention-deficit-hyperactivity-disorder",
+   "why": "corpo vazio (so navegacao)",
+   "chunk": 2
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK541120/",
+   "why": "verificacao de navegador/CAPTCHA",
+   "chunk": 3
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK518996/",
+   "why": "verificacao de navegador/CAPTCHA",
+   "chunk": 3
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9847616",
+   "why": "verificacao de navegador/CAPTCHA",
+   "chunk": 3
+  },
+  {
+   "url": "nih.gov news release (hearing loss and diabetes)",
+   "why": "403",
+   "chunk": 3
+  },
+  {
+   "url": "https://www.ninds.nih.gov/health-information/disorders/myasthenia-gravis",
+   "why": "403",
+   "chunk": 3
+  },
+  {
+   "url": "mayoclinic.org myasthenia gravis",
+   "why": "403",
+   "chunk": 3
+  },
+  {
+   "url": "europepmc.org",
+   "why": "403",
+   "chunk": 3
+  },
+  {
+   "url": "myastheniagravisnews.com",
+   "why": "403",
+   "chunk": 3
+  },
+  {
+   "url": "MSD Manual professional (pancreatic cancer; Usher syndrome), MSD home English nose page, NIDDK diabetes mental-health page, first NEI amblyopia URL",
+   "why": "404",
+   "chunk": 3
+  },
+  {
+   "url": "id.nlm.nih.gov/mesh pages",
+   "why": "sem conteudo legivel",
+   "chunk": 3
+  },
+  {
+   "url": "icd.who.int/browse10/2019/en#/F34.8 and #/J34",
+   "why": "so texto de ajuda (sem CID de DMDD/vestibulite)",
+   "chunk": 3
+  },
+  {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31424824/",
+   "why": "Exigia cookies; sem conteúdo (StatPearls abstract).",
+   "chunk": 4
+  },
+  {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33620795/",
+   "why": "Exigia cookies; sem conteúdo.",
+   "chunk": 4
+  },
+  {
+   "url": "https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/testiculo",
+   "why": "Conteúdo das abas não carregou.",
+   "chunk": 4
+  },
+  {
+   "url": "https://my.clevelandclinic.org/health/diseases/17701-deviated-septum",
+   "why": "HTTP 404.",
+   "chunk": 4
+  },
+  {
+   "url": "https://www.msdmanuals.com/home/blood-disorders/leukemia/overview-of-leukemia",
+   "why": "HTTP 404.",
+   "chunk": 4
+  },
+  {
+   "url": "https://www.nhlbi.nih.gov/health/sickle-cell-disease/complications",
+   "why": "HTTP 404.",
+   "chunk": 4
+  },
+  {
+   "url": "https://discovery.ucl.ac.uk/1542903/1/Lund_Current%20management%20of%20Juvenile%20Angiofibromas%2014.0.pdf",
+   "why": "PDF ilegível.",
+   "chunk": 4
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/",
+   "why": "reCAPTCHA no NCBI Bookshelf.",
+   "chunk": 4
+  },
+  {
+   "url": "https://www.icd10data.com/",
+   "why": "HTTP 403.",
+   "chunk": 4
+  },
+  {
+   "url": "https://www.ncbi.nlm.nih.gov/books/ (StatPearls NBK538186, NBK470195, NBK430820)",
+   "why": "Página de verificação reCAPTCHA, conteúdo não carregou",
+   "chunk": 5
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8134265",
+   "why": "reCAPTCHA",
+   "chunk": 5
+  },
+  {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809408/",
+   "why": "exige cookies, resumo não carregou",
+   "chunk": 5
+  },
+  {
+   "url": "https://www.entuk.org/_userfiles/pages/files/guidelines/global%20ent%20guidelines/septal_abscess.pdf",
+   "why": "PDF sem texto extraível",
+   "chunk": 5
+  },
+  {
+   "url": "https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/esofago",
+   "why": "conteúdo das abas não carregou",
+   "chunk": 5
+  },
+  {
+   "url": "https://id.nlm.nih.gov/mesh/D065631",
+   "why": "MeSH RDF explorer sem conteúdo do registro",
+   "chunk": 5
+  },
+  {
+   "url": "https://www.ninds.nih.gov/health-information/disorders/headache",
+   "why": "HTTP 403",
+   "chunk": 5
+  },
+  {
+   "url": "https://www.cmaj.ca/content/185/6/E270",
+   "why": "HTTP 403",
+   "chunk": 5
+  }
+ ]
+}

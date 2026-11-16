@@ -1,0 +1,573 @@
+{
+ "curricularApproval": false,
+ "clinicalApproval": false,
+ "date": "2026-11-16",
+ "status": "PROPOSED rules only. Nothing here is approved; a teacher decides.",
+ "howSourcesWereRead": "ICD10-VOL2, ICD11-REFGUIDE, UFMG-REVIEW and UFV-RBMFC were downloaded and read directly as text. MESH-API data were read directly as JSON. All other web pages (ICD-10 browser pages, MSD Manual, WHO, NCI, NIMH, UCSD, Sanar, Medway, MeSH intro page, Harrison 2021) were read through a fetch tool that returns a machine summary of the page, so their wording here is a paraphrase of a paraphrase.",
+ "sources": [
+  {
+   "id": "HANDOUT",
+   "title": "Antecedentes Pessoais Patologicos, one-page course handout (14 headings with examples), as supplied in groups.json",
+   "institution": "The course (supplied by the launching agent as a local file, not a web source)",
+   "url": null,
+   "opened": true,
+   "whatItSays": "Lists 14 headings with examples. Relevant placements: stroke (AVE) under neurological; dyslipidemia under cardiovascular; leukemias and lymphomas under hematological; rhinitis and recurrent sinusitis under a separate nose heading while respiratory lists only pneumonia, COPD, asthma, bronchitis; chronic kidney disease under genito-urinary; meningitis and hepatitis under infectious; pneumonia under respiratory."
+  },
+  {
+   "id": "ICD10-VOL2",
+   "title": "International Statistical Classification of Diseases and Related Health Problems, 10th Revision, Volume 2: Instruction Manual (2019 edition)",
+   "institution": "World Health Organization",
+   "url": "https://icd.who.int/browse10/Content/statichtml/ICD10Volume2_en_2019.pdf",
+   "opened": true,
+   "whatItSays": "A statistical classification gives every condition one well-defined place in mutually exclusive categories; the chapter layout is a practical compromise between aetiology and anatomical site. Chapters are either 'special groups' (infections, neoplasms and others) or body-system chapters, and 'conditions are primarily classified to one of the special groups chapters'. A disease that shows itself in an organ gets two codes: the underlying disease (dagger, primary) in its own chapter and the manifestation (asterisk, never used alone) in the organ chapter. Cancer that has spread is coded as a secondary neoplasm of the site, still inside the neoplasm chapter. Sequelae are coded as the present condition, with the old cause as an optional addition."
+  },
+  {
+   "id": "ICD10-BROWSER",
+   "title": "ICD-10 Version:2019 online browser (pages for E78, G70, H46, F84, F90, J30, N18, C91, I64)",
+   "institution": "World Health Organization",
+   "url": "https://icd.who.int/browse10/2019/en",
+   "opened": true,
+   "whatItSays": "Chapter placement of the border-case diagnoses: lipid disorders (E78) in Chapter IV endocrine, nutritional and metabolic; myasthenia gravis (G70) in Chapter VI nervous system, in a block that also holds primary muscle diseases and excludes myositis to the musculoskeletal chapter; optic neuritis and optic nerve disorders (H46-H48) in Chapter VII eye, with an asterisk code for optic neuritis in multiple sclerosis and neuromyelitis optica excluded to the nervous chapter; autism (F84) and hyperkinetic disorders (F90) in Chapter V mental and behavioural; rhinitis and chronic sinusitis (J30-J32) in Chapter X respiratory under upper respiratory tract; chronic kidney disease (N18) in Chapter XIV genitourinary; lymphomas and leukaemias (C81-C96) in Chapter II neoplasms; stroke (I60-I69) in Chapter IX circulatory."
+  },
+  {
+   "id": "ICD11-REFGUIDE",
+   "title": "ICD-11 Reference Guide",
+   "institution": "World Health Organization",
+   "url": "https://icdcdn.who.int/icd11referenceguide/en/refguide.pdf",
+   "opened": true,
+   "whatItSays": "States that 'An entity may be correctly classified in two different places', by site or by aetiology (examples: oesophageal cancer as neoplasm or digestive; cerebral ischaemia as vascular or nervous), and that the single place used for statistics is fixed by agreement and legacy. Chapters are said not to mark out specialties. Conditions are classified mainly by aetiology (viral hepatitis in the infectious chapter) but stay with the body system when causes are mixed (gastric ulcer). Other valid places are recorded as secondary parents (colon cancer coded in neoplasms, also shown in digestive). Blood and lymphoid cancers sit primarily in the neoplasm chapter; diabetes complications sit in the body-system chapter and are linked to diabetes by 'code also'; cerebrovascular disease moved to the nervous system chapter with circulatory as second parent; upper respiratory tract disorders are a group inside the respiratory chapter; kidney disease is in the genitourinary chapter; lipoprotein metabolism disorders are listed in the endocrine, nutritional or metabolic chapter; Chapter 06 is titled mental, behavioural or neurodevelopmental disorders; some organ infections could equally sit in the infectious or the organ chapter."
+  },
+  {
+   "id": "HARRISON-2021",
+   "title": "Harrison JE, Weber S, Jakob R, Chute CG. ICD-11: an international classification of diseases for the twenty-first century. BMC Med Inform Decis Mak 2021;21(Suppl 6):206",
+   "institution": "BMC / PubMed Central",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8577172",
+   "opened": true,
+   "whatItSays": "Explains that the ICD-11 Foundation lets an entity have several parents, while each statistical list gives it one place because counting needs that. Stroke is given as an example: placed in neurology but also shown in the cardiovascular chapter with a note that its primary place is elsewhere."
+  },
+  {
+   "id": "MESH-TREES",
+   "title": "MeSH Tree Structures (introduction)",
+   "institution": "U.S. National Library of Medicine",
+   "url": "https://www.nlm.nih.gov/mesh/intro_trees.html",
+   "opened": true,
+   "whatItSays": "A MeSH heading sits in at least one tree and 'may appear in as many additional places as may be appropriate'. Tree numbers only locate headings; they carry no other meaning."
+  },
+  {
+   "id": "MESH-API",
+   "title": "MeSH descriptor records retrieved from the NLM MeSH linked-data service (about 40 descriptors)",
+   "institution": "U.S. National Library of Medicine",
+   "url": "https://id.nlm.nih.gov/mesh/",
+   "opened": true,
+   "whatItSays": "Tree placements read directly: Myasthenia Gravis under nervous system and immune (not musculoskeletal); ADHD and Autism Spectrum Disorder only under mental disorders (neurodevelopmental); Optic Neuritis and Optic Nerve Diseases under both nervous system and eye; Leukemia and Lymphoma under both neoplasms and hemic-lymphatic; Dyslipidemias only under nutritional and metabolic (not cardiovascular, not endocrine); Diabetes Mellitus only under metabolic and endocrine while Diabetic Retinopathy is under eye, cardiovascular and endocrine; Hypertension only under cardiovascular; Stroke and Cerebrovascular Disorders under both nervous system and cardiovascular; Uterine Cervical Neoplasms under neoplasms and urogenital (not infections) and Papillomavirus Infections under infections (not neoplasms); Lung Neoplasms under neoplasms and respiratory; Neoplasm Metastasis under neoplasms and pathological processes only; Rhinitis, Sinusitis and Nose Diseases under both respiratory tract and otorhinolaryngologic; Kidney Diseases and chronic renal insufficiency under urogenital."
+  },
+  {
+   "id": "NCI-METASTATIC",
+   "title": "Metastatic Cancer: When Cancer Spreads",
+   "institution": "U.S. National Cancer Institute",
+   "url": "https://www.cancer.gov/types/metastatic-cancer",
+   "opened": true,
+   "whatItSays": "Cancer that has spread keeps the name and nature of the primary cancer: breast cancer found in the lung is metastatic breast cancer, not lung cancer."
+  },
+  {
+   "id": "NCI-LEUKEMIA",
+   "title": "Leukemia (patient and professional overview page)",
+   "institution": "U.S. National Cancer Institute",
+   "url": "https://www.cancer.gov/types/leukemia",
+   "opened": true,
+   "whatItSays": "Describes leukemia as a group of cancers of the blood cells, typed by the blood cell involved and the speed of growth."
+  },
+  {
+   "id": "NCI-LYMPHOMA",
+   "title": "Lymphoma (overview page)",
+   "institution": "U.S. National Cancer Institute",
+   "url": "https://www.cancer.gov/types/lymphoma",
+   "opened": true,
+   "whatItSays": "Describes lymphoma as cancer that starts in cells of the lymph system."
+  },
+  {
+   "id": "UCSD-PMH",
+   "title": "A Practical Guide to Clinical Medicine: The Rest of the History",
+   "institution": "University of California San Diego School of Medicine",
+   "url": "https://sites.ucsd.edu/clinicalmedguide/the-rest-of-the-history/",
+   "opened": true,
+   "whatItSays": "Past medical history starts with an open question and continues with prompts (care received, procedures, hospital stays, medicines that reveal unreported diagnoses), because patients often 'simply need to be prompted by the right questions'. It does not describe a body-system list for past history and gives no filing rule."
+  },
+  {
+   "id": "UCSD-ROS",
+   "title": "A Practical Guide to Clinical Medicine: Review of Systems",
+   "institution": "University of California San Diego School of Medicine",
+   "url": "https://sites.ucsd.edu/clinicalmedguide/adult-review-of-systems/",
+   "opened": true,
+   "whatItSays": "The review of systems is an organ-system list of questions meant to uncover problems not yet mentioned. It says the overlap between systems is intended ('There is planned redundancy') and that its disease groupings are rough, with many exceptions. Only the first part of the page was read."
+  },
+  {
+   "id": "UFMG-REVIEW",
+   "title": "Camposmachado LJ, Ribeiro MMF, Guimaraes MMM. Entrevista e anamnese: uma analise critica dos varios autores e uma proposta de roteiro e de registro de consulta baseados no metodo clinico centrado no paciente. Rev Med Minas Gerais 2020;30:e-30502",
+   "institution": "Universidade Federal de Minas Gerais (institutional repository)",
+   "url": "https://repositorio.ufmg.br/items/f535c66a-8f14-4c64-825f-2d9c4ec4f35c/full",
+   "opened": true,
+   "whatItSays": "Compares the anamnesis outlines of Bates, Pinho (the anamnesis chapter in Porto), Lopez, Nunes, Coulehan and Ribeiro. As reported there, Bates groups past illnesses as medical, surgical, gynaeco-obstetric and psychiatric, not by body system; Porto treats the systems questionnaire as a complement whose main use is to pick up illnesses unrelated to the present one. The authors say section divisions are artificial. None of the reviewed authors is reported to give a rule for filing a diagnosis under a body-system heading or for using more than one heading."
+  },
+  {
+   "id": "UFV-RBMFC",
+   "title": "Wenceslau LD et al. Um roteiro de entrevista clinica centrada na pessoa para a graduacao medica. Rev Bras Med Fam Comunidade 2020",
+   "institution": "Universidade Federal de Vicosa / BVS",
+   "url": "https://docs.bvsalud.org/biblioref/2021/03/1095968/texto-do-artigo-12978-2-10-20200610.pdf",
+   "opened": true,
+   "whatItSays": "Describes the traditional anamnesis as including past pathological history plus an often exhaustive review of organs and systems. It gives no filing rule. Tangential."
+  },
+  {
+   "id": "SANAR-ANAMNESE",
+   "title": "Anamnese (two student-education articles)",
+   "institution": "Sanar (commercial medical-education site, low authority)",
+   "url": "https://sanarmed.com/anamnese/",
+   "opened": true,
+   "whatItSays": "Presents past history as a list of previous diseases, treatments, surgeries and trauma, organised by topic or time rather than by system; the system-by-system sweep belongs to the symptom questionnaire, which looks for problems not raised earlier. No filing rule."
+  },
+  {
+   "id": "MEDWAY-CHECKLIST",
+   "title": "Anamnese medica: checklist para estudantes de medicina",
+   "institution": "Medway (commercial medical-education site, low authority)",
+   "url": "https://www.medway.com.br/conteudos/anamnese-medica-checklist-para-estudantes-de-medicina/",
+   "opened": true,
+   "whatItSays": "Past personal history covers earlier illnesses, surgeries, admissions, allergies, medicines and vaccines, with the stated aim of judging risk and comorbidity. The systems sweep is described as a search for unmentioned symptoms. No filing rule."
+  },
+  {
+   "id": "HIDOCTOR-HPP",
+   "title": "Historia patologica pregressa na anamnese (blog PDF)",
+   "institution": "HiDoctor (commercial blog, low authority; only matching lines were read)",
+   "url": "https://news.hidoctor.com.br/fmfiles/index.asp/::hidoctor::/blog/2023/04/Historia-patologica-pregressa-anamnese.pdf",
+   "opened": true,
+   "whatItSays": "Lists disease categories to ask about in past history, with examples (pneumonia, tuberculosis and hepatitis given as infectious; infarction and angina as cardiovascular). It shows that the same disease (pneumonia) is filed differently from the course handout. No filing rule."
+  },
+  {
+   "id": "MSD-MG",
+   "title": "MSD Manual Professional Version: Myasthenia Gravis",
+   "institution": "Merck Sharp & Dohme (MSD Manuals)",
+   "url": "https://www.msdmanuals.com/professional/neurologic-disorders/peripheral-nervous-system-and-motor-unit-disorders/myasthenia-gravis",
+   "opened": true,
+   "whatItSays": "Filed under neurologic disorders, peripheral nervous system and motor unit disorders. Described as an autoimmune attack on receptors at the nerve-muscle junction causing weakness that worsens with use."
+  },
+  {
+   "id": "MSD-ADHD",
+   "title": "MSD Manual Professional Version: Attention-Deficit/Hyperactivity Disorder",
+   "institution": "Merck Sharp & Dohme (MSD Manuals)",
+   "url": "https://www.msdmanuals.com/professional/pediatrics/learning-and-developmental-disorders/attention-deficit-hyperactivity-disorder-adhd",
+   "opened": true,
+   "whatItSays": "Filed under pediatrics, learning and developmental disorders. Calls ADHD a neurodevelopmental disorder, groups it with autism and learning disorders as 'neurologically based conditions', and says it is diagnosed with psychiatric (DSM) criteria."
+  },
+  {
+   "id": "MSD-OPTIC",
+   "title": "MSD Manual Professional Version: Optic Neuritis",
+   "institution": "Merck Sharp & Dohme (MSD Manuals)",
+   "url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/optic-neuritis",
+   "opened": true,
+   "whatItSays": "Filed under eye disorders, optic nerve disorders. Describes inflammation of the optic nerve with pain and vision loss, most strongly linked to multiple sclerosis and often its first sign."
+  },
+  {
+   "id": "MSD-DYSLIP",
+   "title": "MSD Manual Professional Version: Dyslipidemia",
+   "institution": "Merck Sharp & Dohme (MSD Manuals)",
+   "url": "https://www.msdmanuals.com/professional/endocrine-and-metabolic-disorders/lipid-disorders/dyslipidemia",
+   "opened": true,
+   "whatItSays": "Filed under endocrine and metabolic disorders, lipid disorders. Defines dyslipidemia as abnormal blood lipid levels that contribute to atherosclerosis, that is, a cause of cardiovascular disease rather than a disease of the heart or vessels. Only the first part of the page was read."
+  },
+  {
+   "id": "MSD-CKD",
+   "title": "MSD Manual Professional Version: Chronic Kidney Disease",
+   "institution": "Merck Sharp & Dohme (MSD Manuals)",
+   "url": "https://www.msdmanuals.com/professional/genitourinary-disorders/chronic-kidney-disease/chronic-kidney-disease",
+   "opened": true,
+   "whatItSays": "Describes chronic kidney disease as long-standing progressive loss of kidney function, most often from diabetes, hypertension and glomerular disease. The section label was unclear: the address requested was under genitourinary disorders but the fetch tool reported a nephrology section, so this page is not used to support the kidney heading."
+  },
+  {
+   "id": "NIMH-ADHD",
+   "title": "Attention-Deficit/Hyperactivity Disorder (health topic page)",
+   "institution": "U.S. National Institute of Mental Health",
+   "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd",
+   "opened": true,
+   "whatItSays": "The national mental-health institute covers ADHD as one of its topics and describes it as a neurodevelopmental disorder that usually starts in childhood and can continue into adult life."
+  },
+  {
+   "id": "WHO-CERVICAL",
+   "title": "Cervical cancer (fact sheet)",
+   "institution": "World Health Organization",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/cervical-cancer",
+   "opened": true,
+   "whatItSays": "Nearly all cervical cancer is caused by long-lasting infection with high-risk HPV, a common sexually transmitted virus. The page treats cervical cancer as a cancer with an infectious cause, not as an infectious disease."
+  },
+  {
+   "id": "WHO-DIABETES",
+   "title": "Diabetes (fact sheet)",
+   "institution": "World Health Organization",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+   "opened": true,
+   "whatItSays": "Describes diabetes as a chronic disease of insulin production or use. Damage to eyes, kidneys, nerves, heart and blood vessels is described as something that develops over time and raises the risk of vision loss, kidney failure, heart attack and stroke."
+  }
+ ],
+ "couldNotOpen": [
+  {
+   "title": "Bates' Guide to Physical Examination and History Taking",
+   "why": "paywall; known only second-hand through UFMG-REVIEW and search snippets"
+  },
+  {
+   "title": "Porto & Porto, Semiologia Medica (anamnesis chapter by Pinho)",
+   "why": "paywall; known only second-hand through UFMG-REVIEW and student sites"
+  },
+  {
+   "title": "DATASUS CID-10 (Brazilian Portuguese ICD-10, www2.datasus.gov.br/cid10)",
+   "why": "blocked: connection refused on two attempts; the WHO English ICD-10 browser was used instead"
+  },
+  {
+   "title": "NINDS myasthenia gravis page (ninds.nih.gov)",
+   "why": "blocked (HTTP 403)"
+  },
+  {
+   "title": "Wayne State University, Guide to the Medical History",
+   "why": "not found (HTTP 404)"
+  },
+  {
+   "title": "USP e-Disciplinas anamnesis guides",
+   "why": "blocked: login required, only a landing page returned"
+  },
+  {
+   "title": "Raciocinio Clinico, Roteiro Anamnese Resumo (PDF)",
+   "why": "opened but image-only PDF; text could not be extracted; search snippet only"
+  },
+  {
+   "title": "UFSJ semiology PDF",
+   "why": "opened but it was only a course syllabus with nothing on the question"
+  },
+  {
+   "title": "Bahiana 'Iniciacao a Semiologia' syllabus; UFES Semiologia I programme; AMBOSS 'Medical history'",
+   "why": "search snippets only, not fetched; not used"
+  },
+  {
+   "title": "SNOMED CT documentation on multiple parents (NLM overview page)",
+   "why": "opened but the page says nothing about hierarchies, so SNOMED CT is not used as support"
+  },
+  {
+   "title": "ICD-11 browser pages for individual diseases (myasthenia gravis, ADHD, autism, optic neuritis)",
+   "why": "not opened; ICD-11 placement of these four is inferred from the Reference Guide chapter descriptions only and is not confirmed per disease"
+  }
+ ],
+ "questions": [
+  {
+   "id": 1,
+   "name": "ABSENCE",
+   "whatSourcesSay": "WHO's ICD manuals say a statistical classification gives each condition exactly one well-defined place, in categories that do not overlap, and that the place is a practical compromise fixed by agreement and legacy. The ICD-11 guide adds that a condition can correctly belong in two places, that chapters do not mark out specialties, and that the other valid places are recorded as secondary parents. MeSH says a heading is placed in every tree where it is appropriate. So 'not listed there' means different things: in a one-place list (an ICD-10 chapter) it only shows the disease was counted somewhere else, and that can be overturned (stroke is absent from the ICD-10 nervous chapter but ICD-11 makes that its primary place; leukaemia is absent from the ICD blood chapter but MeSH lists it under blood diseases). In a many-place list (MeSH trees, ICD-11 secondary parents) absence is closer to a real 'no', because those lists set out to show every appropriate place, but neither claims to be complete. A stated negative exists only where a source says so: an ICD exclusion note sending a condition elsewhere, or a statement such as the NCI one that breast cancer in the lung is not lung cancer. No semiology source read says anything about what the absence of a link means for the anamnesis.",
+   "sourceIds": [
+    "ICD10-VOL2",
+    "ICD11-REFGUIDE",
+    "HARRISON-2021",
+    "MESH-TREES",
+    "MESH-API",
+    "ICD10-BROWSER",
+    "NCI-METASTATIC"
+   ],
+   "disagreements": "ICD-10 (one place only) and ICD-11 Foundation or MeSH (several places) disagree on whether single placement implies exclusion from other systems. The ICD-11 guide explicitly warns that chapters are not meant to define specialty domains.",
+   "proposedRule": "Treat 'no relation found' as 'no' only when two conditions hold: (1) the disease has a positive home heading in the classifications, and (2) the check included a many-place source (MeSH trees or ICD-11 secondary parents), not just one ICD-10 chapter. Under those conditions the 'no' rests on consistent practice. If only a one-place list was checked, absence is silence and should not be scored as a confident 'no'. A 'no' backed by an exclusion note or an explicit statement is a real negative and belongs to the 'explicitly-distinguished' relation.",
+   "support": "weak"
+  },
+  {
+   "id": 2,
+   "name": "COMPLICATION",
+   "whatSourcesSay": "ICD-10 handles a disease that shows up in another organ with two codes: the underlying disease stays in its own chapter as the primary code, and the manifestation gets a second code in the organ chapter that may never be used alone (for example optic neuritis in multiple sclerosis, or myasthenic syndromes in diseases classified elsewhere). ICD-11 drops the dagger and asterisk symbols but keeps the idea: diabetes complications sit in the body-system chapter and are linked to the diabetes code. For late effects ICD-10 codes the present problem and adds the old cause only as an option. MeSH follows the same pattern: Diabetes Mellitus is under metabolic and endocrine only, while Diabetic Retinopathy is a separate heading under eye; Hypertension is under cardiovascular only, while Stroke is a separate heading. WHO's diabetes fact sheet describes eye, kidney, nerve and vessel damage as harm that builds up over time, not as part of what diabetes is.",
+   "sourceIds": [
+    "ICD10-VOL2",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "WHO-DIABETES"
+   ],
+   "disagreements": "None found on the principle. For mortality statistics only, ICD-10 folds a diabetic complication back into the diabetes code; that is a counting rule and does not move diabetes into the eye or kidney chapter.",
+   "proposedRule": "A disease is not filed under a system it reaches only through a complication or late manifestation. The complication itself is a separate diagnosis that is filed in that system. So the disease-by-heading link is 'conditional': count it only when the question text states that the complication is present (for example 'diabetes with retinopathy'), and then it is the complication that earns the heading.",
+   "support": "strong"
+  },
+  {
+   "id": 3,
+   "name": "CAUSE-OR-RISK-FACTOR",
+   "whatSourcesSay": "The classifications keep cause and consequence as separate entries in separate places. Cervical cancer is under neoplasms and the genital tract, not under infections; HPV infection is under infections, not under neoplasms; WHO describes cervical cancer as a cancer caused by persistent HPV infection. Dyslipidemia is under endocrine-metabolic in ICD-10, the ICD-11 guide, MeSH and the MSD Manual, which describes it as contributing to atherosclerosis. Hypertension and diabetes are each listed only in their own system in MeSH. The ICD-11 guide does say conditions are classified mainly by aetiology, but it applies this to where the disease itself goes (viral hepatitis is an infectious disease), and it keeps a condition with the body system when causes are mixed (gastric ulcer). No source read states in words that a risk factor is not to be listed under the system it threatens.",
+   "sourceIds": [
+    "MESH-API",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "WHO-CERVICAL",
+    "MSD-DYSLIP",
+    "HANDOUT"
+   ],
+   "disagreements": "The course handout lists dyslipidemia under cardiovascular diseases, which every classification read treats as a metabolic risk factor and not a cardiovascular disease. This is a direct conflict between the handout and the classifications.",
+   "proposedRule": "A cause or risk factor is not filed under the system of the disease it may lead to, and a disease is not filed under the category of its cause (cervical cancer is not 'infectious'; HPV infection is not 'neoplastic'; diabetes is not 'cardiovascular'). Exception to carry as a fixed override: dyslipidemia under cardiovascular, because the handout says so. Whether that exception extends to other cardiovascular risk factors is for the teacher.",
+   "support": "moderate"
+  },
+  {
+   "id": 4,
+   "name": "SPREAD",
+   "whatSourcesSay": "The NCI states that cancer which has spread is still the primary cancer: breast cancer in the lung is metastatic breast cancer, not lung cancer. ICD-10 codes the spread as a secondary neoplasm of the site, and that code stays in the neoplasm chapter, not in the organ chapter. MeSH lists Neoplasm Metastasis under neoplasms and general pathological processes only. For a primary organ tumour the picture is different: the ICD-11 guide says colon cancer is coded in the neoplasm chapter and also shown in the digestive chapter, and that oesophageal cancer could be classified either way; MeSH lists Lung Neoplasms under both neoplasms and respiratory diseases and cervical neoplasms under both neoplasms and urogenital diseases.",
+   "sourceIds": [
+    "NCI-METASTATIC",
+    "ICD10-VOL2",
+    "ICD11-REFGUIDE",
+    "MESH-API"
+   ],
+   "disagreements": "ICD-10 on its own gives an organ tumour one place only (neoplasms). ICD-11 and MeSH add the organ system as a second place. No source read addresses how the anamnesis should record a known metastasis.",
+   "proposedRule": "A primary tumour of an organ counts under both the neoplastic heading and the heading of that organ's system. A site reached only by metastasis does not add a heading: the disease stays under neoplastic plus the system of the primary organ. If a question states a metastasis outright, the patient still has neoplastic disease; whether the metastatic organ's heading should also count is not answered by the sources.",
+   "support": "strong"
+  },
+  {
+   "id": 5,
+   "name": "BORDER-CASES",
+   "whatSourcesSay": "See borderCases for each one. In short: myasthenia gravis is neurological in ICD-10, MeSH and the MSD Manual and musculoskeletal in none. ADHD and autism are in the mental-disorders chapter or tree in ICD-10, ICD-11 (chapter title) and MeSH, while the MSD Manual files ADHD under paediatric developmental disorders and calls such conditions neurologically based. Optic nerve disease is under eye in ICD-10 and the MSD Manual and under both eye and nervous system in MeSH. Leukaemias and lymphomas are under neoplasms only in ICD-10 and primarily so in ICD-11, under both neoplasms and blood-lymphatic diseases in MeSH, and the handout names them under hematological. Nose and sinus disease is inside the respiratory chapter in ICD-10 and ICD-11 and under both respiratory and ear-nose-throat in MeSH, while the handout gives the nose its own heading. Kidney disease is under genitourinary or urogenital in ICD-10, ICD-11 and MeSH. Dyslipidemia is metabolic everywhere except the handout, which puts it under cardiovascular.",
+   "sourceIds": [
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "MSD-MG",
+    "MSD-ADHD",
+    "MSD-OPTIC",
+    "MSD-DYSLIP",
+    "NIMH-ADHD",
+    "NCI-LEUKEMIA",
+    "NCI-LYMPHOMA",
+    "HANDOUT"
+   ],
+   "disagreements": "Stroke (ICD-10 circulatory; ICD-11 nervous first, circulatory second; MeSH both; handout neurological). Leukaemia and lymphoma (ICD neoplasms; MeSH and handout also hematological). Dyslipidemia (handout cardiovascular; classifications metabolic; MeSH keeps metabolic separate from endocrine). ADHD and autism (classified as mental disorders; described as neurologically based). Nose (classifications place it inside respiratory; handout separates it).",
+   "proposedRule": "When at least one recognised classification places the disease in a system, that system's heading counts, even if another classification puts its single place elsewhere; double placement is legitimate. Where the handout itself draws a line that the classifications do not draw (nose versus respiratory, dyslipidemia under cardiovascular, a muscle-bone-joint heading), the classifications cannot settle the matter and the teacher must.",
+   "support": "moderate"
+  },
+  {
+   "id": 6,
+   "name": "GENERAL-PRINCIPLE",
+   "whatSourcesSay": "None of the semiology material opened states what a body-system list inside past medical history is for, how to choose the heading for a diagnosis, or whether one diagnosis may sit under several headings. What they do say: past history is taken with an open question followed by prompts, because patients forget diagnoses until asked (UCSD); Bates, as reported by the UFMG review, groups past illnesses as medical, surgical, gynaeco-obstetric and psychiatric rather than by organ system; the system-by-system list belongs to the review of systems, whose stated purpose is to uncover problems not yet mentioned (UCSD; Porto as reported by the UFMG review; Sanar; Medway); UCSD says overlap between systems in that list is intentional and that its groupings are rough; the UFMG authors call the section divisions artificial. A Brazilian blog lists past-history disease categories much like the handout but files pneumonia under infectious, unlike the handout. The primary textbooks (Bates, Porto) could not be opened.",
+   "sourceIds": [
+    "UCSD-PMH",
+    "UCSD-ROS",
+    "UFMG-REVIEW",
+    "UFV-RBMFC",
+    "SANAR-ANAMNESE",
+    "MEDWAY-CHECKLIST",
+    "HIDOCTOR-HPP"
+   ],
+   "disagreements": "Sources differ on how past history is organised at all (by type of care, by time, or by disease category). None organises it by the handout's 14 headings, and two sources file the same disease (pneumonia) under different headings.",
+   "proposedRule": "Treat the 14 headings as prompts for recall, not as a one-place classification: a diagnosis may count under every heading where a recognised classification places it. This is an inference from how systems lists are used and from the classifications; the semiology sources themselves are silent, so the teacher must confirm whether more than one heading is allowed.",
+   "support": "weak"
+  }
+ ],
+ "relationOutcomes": [
+  {
+   "relation": "classified-in-system",
+   "outcome": "yes",
+   "basisSourceIds": [
+    "ICD10-VOL2",
+    "ICD11-REFGUIDE",
+    "MESH-TREES",
+    "MESH-API",
+    "ICD10-BROWSER"
+   ],
+   "support": "strong",
+   "note": "A disease counts under a heading when a recognised classification places it in that system. One classification is enough; a second place in another classification does not cancel the first."
+  },
+  {
+   "relation": "complication-or-manifestation",
+   "outcome": "conditional",
+   "basisSourceIds": [
+    "ICD10-VOL2",
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "WHO-DIABETES"
+   ],
+   "support": "strong",
+   "note": "Yes only when the question states the complication; the disease name alone does not earn the heading."
+  },
+  {
+   "relation": "cause-or-risk-factor-only",
+   "outcome": "no",
+   "basisSourceIds": [
+    "MESH-API",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "WHO-CERVICAL",
+    "MSD-DYSLIP"
+   ],
+   "support": "moderate",
+   "note": "Consistent practice, not a stated principle. Fixed exception from the handout: dyslipidemia under cardiovascular."
+  },
+  {
+   "relation": "metastatic-site-only",
+   "outcome": "no",
+   "basisSourceIds": [
+    "NCI-METASTATIC",
+    "ICD10-VOL2",
+    "MESH-API"
+   ],
+   "support": "strong",
+   "note": "Strong for the principle that spread does not make it a cancer of that organ. Whether a metastasis stated in the question should add the organ's heading is not addressed by the sources."
+  },
+  {
+   "relation": "border",
+   "outcome": "yes",
+   "basisSourceIds": [
+    "ICD11-REFGUIDE",
+    "HARRISON-2021",
+    "MESH-TREES",
+    "MESH-API"
+   ],
+   "support": "moderate",
+   "note": "Yes for each heading where at least one classification places the disease. The principle that two places can both be correct is stated outright by ICD-11 and MeSH; applying it to the anamnesis is the inference. Cases where the handout draws its own line are listed in borderCases as teacher-must-decide."
+  },
+  {
+   "relation": "no-relation-found",
+   "outcome": "no",
+   "basisSourceIds": [
+    "ICD10-VOL2",
+    "ICD11-REFGUIDE",
+    "MESH-TREES"
+   ],
+   "support": "weak",
+   "note": "An inference from how classifications are built. It rises to moderate only when the disease has a clear home heading and a many-place source (MeSH or ICD-11 secondary parents) was checked and does not list the heading. Absence from a single ICD-10 chapter alone is silence. The ICD-11 guide warns that chapters do not define specialty domains."
+  },
+  {
+   "relation": "explicitly-distinguished",
+   "outcome": "no",
+   "basisSourceIds": [
+    "ICD10-VOL2",
+    "ICD10-BROWSER",
+    "NCI-METASTATIC"
+   ],
+   "support": "strong",
+   "note": "Applies when a source states the separation (an ICD exclusion note, or a statement such as metastatic breast cancer is not lung cancer). If another recognised classification positively places the disease in that system (as ICD-11 does for stroke in the nervous system), treat it as 'border' instead."
+  }
+ ],
+ "borderCases": [
+  {
+   "case": "(a) myasthenia gravis",
+   "headings": {
+    "neurologicas": "yes",
+    "miostioarticulares": "no"
+   },
+   "sourceIds": [
+    "ICD10-BROWSER",
+    "MESH-API",
+    "MSD-MG"
+   ],
+   "note": "ICD-10, MeSH and the MSD Manual all file it under the nervous system; none files it under musculoskeletal disease. ICD-10 even keeps primary muscle diseases in the nervous chapter and sends only myositis to the musculoskeletal chapter. Support for 'no' is moderate (consistent practice). The handout heading includes muscle in its name but its examples are joint and bone diseases, so the teacher may still want to confirm. NINDS could not be opened."
+  },
+  {
+   "case": "(b) ADHD and autism",
+   "headings": {
+    "psiquiatricas": "yes",
+    "neurologicas": "teacher-must-decide"
+   },
+   "sourceIds": [
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "MSD-ADHD",
+    "NIMH-ADHD"
+   ],
+   "note": "ICD-10 and MeSH place both under mental disorders only; ICD-11 names its chapter mental, behavioural or neurodevelopmental disorders; the US mental-health institute covers ADHD. No classification read places them under nervous system diseases, so the classifications lean 'no' for neurological. But the MSD Manual files ADHD under developmental disorders and calls such conditions neurologically based, so the descriptive sources do not close the question."
+  },
+  {
+   "case": "(c) vision loss from optic or cranial nerve damage (optic neuritis, optic neuropathy)",
+   "headings": {
+    "oculares": "yes",
+    "neurologicas": "yes"
+   },
+   "sourceIds": [
+    "ICD10-BROWSER",
+    "MESH-API",
+    "MSD-OPTIC",
+    "ICD11-REFGUIDE"
+   ],
+   "note": "ICD-10 and the MSD Manual file optic nerve disorders under the eye; MeSH files them under both eye and nervous system (cranial nerve diseases). ICD-10 sends neuromyelitis optica to the nervous chapter and codes optic neuritis in multiple sclerosis with a secondary eye code. Eye is strongly supported; neurological is moderately supported (one classification). The ICD-11 guide cites eye-movement nerve palsies as a case where both places are equally valid."
+  },
+  {
+   "case": "(d) leukemias and lymphomas",
+   "headings": {
+    "hematologicas": "yes",
+    "neoplasicas": "yes"
+   },
+   "sourceIds": [
+    "HANDOUT",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "NCI-LEUKEMIA",
+    "NCI-LYMPHOMA"
+   ],
+   "note": "The handout names them under hematological. ICD-10 and ICD-11 give them their single place under neoplasms. MeSH lists them under both, and the NCI defines them as cancers of blood cells and of the lymph system. Both headings are supported."
+  },
+  {
+   "case": "(e) nose and sinus disease (rhinitis, sinusitis) versus respiratory",
+   "headings": {
+    "nasais": "yes",
+    "respiratorias": "teacher-must-decide"
+   },
+   "sourceIds": [
+    "HANDOUT",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API"
+   ],
+   "note": "ICD-10 and ICD-11 place nose and sinus disease inside the respiratory chapter as upper respiratory tract disease; MeSH lists it under both respiratory tract and ear-nose-throat diseases. By the classifications it would also count as respiratory. The handout, however, gives the nose its own heading and lists only lower-airway diseases under respiratory, which suggests the course separates them on purpose. Only the teacher can say."
+  },
+  {
+   "case": "(f) kidney disease versus genito-urinary",
+   "headings": {
+    "genitourinarias": "yes"
+   },
+   "sourceIds": [
+    "HANDOUT",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API"
+   ],
+   "note": "ICD-10 (chapter XIV), the ICD-11 guide (chapter 16, built with kidney societies) and MeSH (urogenital diseases) all put kidney disease under the genitourinary system, and the handout lists chronic kidney disease there. There is no separate kidney heading, so no conflict."
+  },
+  {
+   "case": "(g) dyslipidemia",
+   "headings": {
+    "cardiovasculares": "yes",
+    "endocrinologicas": "teacher-must-decide"
+   },
+   "sourceIds": [
+    "HANDOUT",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "MSD-DYSLIP"
+   ],
+   "note": "Cardiovascular is 'yes' only because the handout lists it there; no classification read supports that (they treat it as a metabolic cause of cardiovascular disease). For endocrine: ICD-10, the ICD-11 guide and the MSD Manual place it in a combined endocrine and metabolic chapter, but MeSH lists it under metabolic diseases and not under endocrine system diseases, and the handout's endocrine heading names only diabetes and thyroid. Whether the handout's endocrine heading is meant to cover metabolic disorders is for the teacher."
+  },
+  {
+   "case": "(extra) stroke",
+   "headings": {
+    "neurologicas": "yes",
+    "cardiovasculares": "yes"
+   },
+   "sourceIds": [
+    "HANDOUT",
+    "ICD10-BROWSER",
+    "ICD11-REFGUIDE",
+    "HARRISON-2021",
+    "MESH-API"
+   ],
+   "note": "Not one of the seven cases asked, but the clearest documented double placement: ICD-10 circulatory; ICD-11 nervous system first with circulatory as second parent; MeSH both; handout neurological. Note that this is about stroke itself. Hypertension, which can lead to stroke, stays cardiovascular only (complication rule)."
+  },
+  {
+   "case": "(extra) infections confined to one organ (pneumonia, meningitis, viral hepatitis, urinary infection)",
+   "headings": {
+    "infectocontagiosas": "teacher-must-decide"
+   },
+   "sourceIds": [
+    "ICD11-REFGUIDE",
+    "MESH-API",
+    "HANDOUT",
+    "HIDOCTOR-HPP"
+   ],
+   "note": "Not asked, but it affects many links. The ICD-11 guide says some infections could equally sit in the infectious chapter or the organ chapter and that legacy decided; it puts viral hepatitis and infectious lung disease in the infectious chapter. MeSH lists rhinitis, sinusitis and genital herpes under both infections and the organ system. The handout puts pneumonia under respiratory and meningitis and hepatitis under infectious; a Brazilian blog puts pneumonia under infectious. The classifications would allow both headings; the handout appears to pick one per disease. The same open question applies to the organ's own heading (respiratory, neurological, digestive, genito-urinary) for each of these infections."
+  }
+ ],
+ "limits": "1. The semiology textbooks that would speak with most authority (Bates, Porto) could not be opened, and the semiology material that was opened is silent on filing a diagnosis under body-system headings and on using more than one heading. Questions 1 and 6 therefore rest on inference from disease classifications. 2. ICD and MeSH were built for statistics and for indexing literature, not for the anamnesis; the ICD-11 guide itself says its chapters do not define specialty domains. Using them to decide what a student should file under a history heading is a choice the teacher has to accept or reject. 3. The handout's headings do not match any classification exactly (separate nose heading, a muscle-bone-joint heading, endocrine without 'metabolic', dyslipidemia under cardiovascular, no immune or skin heading). Where the handout draws its own line, only the teacher can say what was meant. 4. Placement in ICD-11 was read from the Reference Guide, not checked disease by disease in the ICD-11 browser; the Brazilian DATASUS edition of ICD-10 could not be reached, so the WHO English edition was used. 5. Most web pages were read through a tool that summarises the page, so fine wording may be lost; the ICD-10 manual, the ICD-11 guide, the UFMG review and the MeSH records were read directly. 6. This research did not look at the 224 diseases one by one; it proposes rules by relation type, and each disease still needs its relation type assigned correctly for the rules to give the right answer. 7. Nothing here is approved."
+}
