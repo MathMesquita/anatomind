@@ -56,7 +56,7 @@ export function RegionDiagram({ question }: { question: RegionQuestion }) {
         <span role="img" aria-label={`Ponto ao lado do número ${question.number}`} className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rounded-full border-white bg-[#D94040]" style={{ left: `${question.x}%`, top: `${question.y}%`, width: `${9 / zoom}px`, height: `${9 / zoom}px`, borderWidth: `${2 / zoom}px` }} />
       </div>
     </div>
-    <div className="absolute right-3 top-3 flex gap-1 rounded-lg border bg-white/95 p-1 text-primary shadow-sm">
+    <div className="absolute right-3 top-3 flex gap-1 rounded-lg border bg-white/95 p-1 dark:bg-card/95 text-primary shadow-sm">
       <Button type="button" variant="ghost" size="icon-sm" disabled={zoom <= 1} onClick={() => changeZoom(zoom - .5)} aria-label="Diminuir imagem"><Minus /></Button>
       <Button type="button" variant="ghost" size="icon-sm" disabled={zoom >= 3} onClick={() => changeZoom(zoom + .5)} aria-label="Ampliar imagem"><Plus /></Button>
       {zoom > 1 && <Button type="button" variant="ghost" size="icon-sm" onClick={() => { changeZoom(1); setPan({ x: 0, y: 0 }) }} aria-label="Restaurar imagem"><RotateCcw /></Button>}

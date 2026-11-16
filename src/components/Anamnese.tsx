@@ -39,7 +39,7 @@ export default function Anamnese({ onBack, debugEnabled, onComplete }: Props) {
     <StudyHeader onBack={onBack} label="Disciplinas / Anamnese" />
     <h1 className="text-3xl font-bold tracking-tight">Pratique a escuta.</h1>
     <p className="mt-2 text-[15px] leading-6 text-muted-foreground">Três atividades para pensar como na consulta.</p>
-    <div className="-mx-6 mt-6">{activities.map(([id, title, description], i) => <button key={id} type="button" onClick={() => start(id)} className="flex w-full items-center gap-3.5 border-t border-[#D8DDD5] px-6 py-5 text-left hover:bg-secondary focus-visible:outline-2 focus-visible:outline-primary">
+    <div className="-mx-6 mt-6">{activities.map(([id, title, description], i) => <button key={id} type="button" onClick={() => start(id)} className="flex w-full items-center gap-3.5 border-t border-border px-6 py-5 text-left hover:bg-secondary focus-visible:outline-2 focus-visible:outline-primary">
       <span className="w-7 shrink-0 text-xs text-primary">0{i + 1}</span>
       <span className="flex-1"><span className="block text-[17px] font-bold">{title}</span><span className="mt-1 block text-[13px] text-muted-foreground">{description}</span></span><ChevronRight className="size-5 text-primary" />
     </button>)}</div>
@@ -199,7 +199,7 @@ function AnamneseRound({ mode, onBack, debugEnabled, onComplete, onRestart }: Pr
         {mode === "caracteres" && <p className="mt-5 text-center text-xs font-bold uppercase tracking-[.08em] text-primary">História oculta</p>}
         <CountdownRing key={`${index}:${stage}`} seconds={timer.seconds} total={limit / 1000} paused={timer.paused}>
         <div className={`mt-5 grid gap-2.5 ${mode === "antecedentes" ? "grid-cols-2" : ""}`} role="group" aria-label={mode === "interrogatorio" ? `Etapa ${stage + 1}` : "Selecione as respostas"}>
-          {options.map((option) => <button key={option} type="button" aria-pressed={selected.includes(option)} onClick={() => toggle(option)} className={`flex min-h-12 items-center gap-3 rounded-[9px] border px-3.5 py-3 text-left text-[15px] leading-5 focus-visible:outline-2 focus-visible:outline-primary ${selected.includes(option) ? "border-primary bg-secondary" : "border-[#D8DDD5] bg-card"}`}><span aria-hidden="true" className="shrink-0 text-primary">{selected.includes(option) ? "●" : "○"}</span>{option}</button>)}
+          {options.map((option) => <button key={option} type="button" aria-pressed={selected.includes(option)} onClick={() => toggle(option)} className={`flex min-h-12 items-center gap-3 rounded-[9px] border px-3.5 py-3 text-left text-[15px] leading-5 focus-visible:outline-2 focus-visible:outline-primary ${selected.includes(option) ? "border-primary bg-secondary" : "border-border bg-card"}`}><span aria-hidden="true" className="shrink-0 text-primary">{selected.includes(option) ? "●" : "○"}</span>{option}</button>)}
         </div></CountdownRing>
       </>}
     </>}

@@ -13,7 +13,7 @@ export function CountdownRing({ seconds, total, paused, children }: { seconds: n
         <svg viewBox="0 0 64 64" className="size-16 -rotate-90" aria-hidden="true">
           <circle cx="32" cy="32" r="28" fill="none" strokeWidth="5" className="stroke-secondary" />
           <circle cx="32" cy="32" r="28" fill="none" strokeWidth="5" strokeLinecap="round" pathLength={100} strokeDasharray={100}
-            className={`countdown-ring ${seconds <= 3 ? "stroke-[#86594C]" : "stroke-primary"}`}
+            className={`countdown-ring ${seconds <= 3 ? "stroke-[#86594C] dark:stroke-[#E0AE9C]" : "stroke-primary"}`}
             style={{ animationDuration: `${total}s`, animationPlayState: paused ? "paused" : "running" }} />
         </svg>
         <span className="absolute inset-0 grid place-items-center text-xl font-bold tabular-nums">{seconds}</span>

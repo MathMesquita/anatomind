@@ -26,7 +26,7 @@ export function StudyHeader({ onBack, label, trailing }: { onBack: () => void; l
 
 export function QuestionDebug({ children }: { children: ReactNode }) {
   return <Dialog.Root>
-    <Dialog.Trigger asChild><Button type="button" variant="outline" size="icon" className="size-12 shrink-0 rounded-[10px] border-[#B9C9BA] text-primary" aria-label="Inspecionar contexto da questão"><Bug className="size-[22px]" /></Button></Dialog.Trigger>
+    <Dialog.Trigger asChild><Button type="button" variant="outline" size="icon" className="size-12 shrink-0 rounded-[10px] border-[#B9C9BA] text-primary dark:border-border" aria-label="Inspecionar contexto da questão"><Bug className="size-[22px]" /></Button></Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay className="fixed inset-0 z-50 bg-black/40" />
       <Dialog.Content className="fixed inset-x-4 top-1/2 z-50 mx-auto flex max-h-[85dvh] max-w-xl -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-background p-6 shadow-xl focus:outline-none">
@@ -40,8 +40,8 @@ export function QuestionDebug({ children }: { children: ReactNode }) {
 }
 
 export function FeedbackCard({ label, title, children, correct = true }: { label: string; title?: string; children?: ReactNode; correct?: boolean }) {
-  return <section className={cn("rounded-xl p-[18px]", correct ? "bg-secondary" : "bg-[#F1E9E4]")} aria-live="polite">
-    <p className={cn("text-xs font-bold uppercase tracking-[.06em]", correct ? "text-primary" : "text-[#86594C]")}>{label}</p>
+  return <section className={cn("rounded-xl p-[18px]", correct ? "bg-secondary" : "bg-[#F1E9E4] dark:bg-[#3A2C27]")} aria-live="polite">
+    <p className={cn("text-xs font-bold uppercase tracking-[.06em]", correct ? "text-primary" : "text-[#86594C] dark:text-[#E0AE9C]")}>{label}</p>
     {title && <h2 className="mt-2 text-lg font-semibold">{title}</h2>}
     {children && <div className="mt-2 text-sm leading-6 text-muted-foreground">{children}</div>}
   </section>

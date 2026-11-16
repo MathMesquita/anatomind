@@ -1,4 +1,7 @@
-import { BookOpen, ChevronRight, HeartPulse, MessageCircle } from "lucide-react"
+import { useState } from "react"
+import { BookOpen, ChevronRight, HeartPulse, MessageCircle, Moon, Sun } from "lucide-react"
+
+import { applyTheme, loadTheme } from "@/lib/theme"
 
 export type Subject = "anatomia" | "propedeutica" | "anamnese"
 
@@ -25,13 +28,25 @@ const activityNames: Record<string, string> = {
 }
 
 export function SubjectsScreen({ onSelect, onLogoTap, debugEnabled, progress }: SubjectsScreenProps) {
+  const [theme, setTheme] = useState(loadTheme)
+  const dark = theme === "dark"
+  function toggleTheme() {
+    const next = dark ? "light" : "dark"
+    applyTheme(next)
+    setTheme(next)
+  }
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-5 py-8 sm:px-8">
       <header className="mb-12 flex items-center justify-between">
         <button type="button" onClick={onLogoTap} className="text-xl font-bold tracking-tight" aria-label="AnatoMind, início">
           anatomind<span className="text-primary">.</span>
         </button>
-        <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Seu espaço de estudo</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground max-[400px]:hidden">Seu espaço de estudo</span>
+          <button type="button" onClick={toggleTheme} aria-pressed={dark} aria-label="Modo escuro" title={dark ? "Usar modo claro" : "Usar modo escuro"} className="grid size-11 place-items-center rounded-xl text-primary transition hover:bg-secondary focus-visible:outline-2 focus-visible:outline-primary">
+            {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
+          </button>
+        </div>
       </header>
       <section className="mb-8">
         <p className="mb-3 text-xs font-bold uppercase tracking-widest text-primary">Aprenda um pouco por dia</p>
