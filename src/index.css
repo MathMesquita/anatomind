@@ -106,6 +106,10 @@
 }
 .marker-dot { animation: marker-pulse 1.8s ease-out infinite; }
 @media (prefers-reduced-motion: reduce) { .marker-dot { animation: none; } }
+/* Round timer: the ring empties over the time limit (duration is set inline). */
+@keyframes countdown-ring { to { stroke-dashoffset: 100; } }
+.countdown-ring { animation: countdown-ring linear forwards; }
+@media (prefers-reduced-motion: reduce) { .countdown-ring { animation: none; } }
 
 .study-page { min-height: 100dvh; padding-bottom: 24px; }
 .study-page-with-footer { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)); }

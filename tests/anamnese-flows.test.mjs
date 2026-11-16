@@ -9,6 +9,7 @@ import * as sampling from "../src/lib/sampling.ts"
 import { sampleDiseaseOptions } from "../src/lib/disease-round.ts"
 import { starterCharacteristicStories as starterStories } from "../src/data/characteristics.ts"
 import { starterInterviews, getInterviewCatalog } from "../src/data/interviews.ts"
+import { loadCountdown } from "./countdown-host.mjs"
 
 // Exercise the component's own handlers/effects with a deterministic hook host.
 // Layout primitives are opaque: fixed positioning remains StudyLayout's contract.
@@ -46,10 +47,17 @@ function mount({ storyBank = starterStories, interviewBank = starterInterviews }
   const source = ts.transpileModule(readFileSync(new URL("../src/components/Anamnese.tsx", import.meta.url), "utf8"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, target: ts.ScriptTarget.ES2022 },
   }).outputText
-  vm.runInNewContext(source, {
-    module, exports: module.exports, document, performance: { now: () => now },
+  // The real countdown hook runs on this host's fake clock, timers and tab visibility.
+  const globals = {
+    document, performance: { now: () => now },
     window: { setInterval: (fn) => { timers.add(fn); return fn }, clearInterval: (fn) => timers.delete(fn), scrollTo() {} },
+  }
+  const countdown = loadCountdown(hooks, globals)
+  vm.runInNewContext(source, {
+    module, exports: module.exports, ...globals,
     require(name) {
+      if (name === "@/lib/countdown") return countdown
+      if (name === "@/components/CountdownRing") return { CountdownRing: "CountdownRing" }
       if (name === "react") return hooks
       if (name === "react/jsx-runtime") return { jsx, jsxs: jsx }
       if (name === "@/lib/anamnese") return scoring
@@ -65,7 +73,7 @@ function mount({ storyBank = starterStories, interviewBank = starterInterviews }
         chooseQuestions: (items, id, limit = items.length) => sampling.prioritize(items, id, exposure.read(), "questions").slice(0, limit),
         chooseOptions: (required, candidates, id, limit) => sampling.chooseOptions(required, candidates, id, limit, exposure.read()),
       }
-      if (name === "lucide-react") return { ChevronRight: "icon", Clock3: "icon" }
+      if (name === "lucide-react") return { ChevronRight: "icon" }
       if (name.endsWith("/button")) return { Button: "button" }
       if (name.endsWith("/progress")) return { Progress: "progress" }
       if (name.endsWith("/StudyLayout")) return Object.fromEntries(["StudyPage", "StudyHeader", "StudyFooter", "QuestionDebug", "FeedbackCard"].map((name) => [name, name]))
@@ -117,6 +125,8 @@ function mount({ storyBank = starterStories, interviewBank = starterInterviews }
     footer() { return find("StudyFooter")[0] },
     choices() { return find("button").filter((node) => "aria-pressed" in node.props) },
     advance(ms) { now += ms; for (const fn of timers) fn(); render() },
+    /** Moves the clock only, as if no timer tick had run yet. */
+    wait(ms) { now += ms },
     hide(hidden) { document.hidden = hidden; for (const fn of listeners) fn(); render() },
     back() { find("StudyHeader")[0].props.onBack(); render() },
   }
@@ -126,6 +136,8 @@ test("disease rounds have 20 choices, grade once, finish once, and restart clean
   const app = mount()
   app.start("Antecedentes pessoais")
   for (let i = 0; i < 2; i++) {
+    assert.equal(app.choices().length, 0)
+    app.click(app.footer()) // see options
     assert.equal(app.choices().length, 20)
     const submit = app.footer()
     app.click(submit)
@@ -138,7 +150,8 @@ test("disease rounds have 20 choices, grade once, finish once, and restart clean
   }
   assert.equal(app.completions.length, 1)
   assert.equal(app.completions[0][1], 0)
-  app.click(app.footer())
+  app.click(app.footer()) // play again
+  app.click(app.footer()) // see options
   assert.equal(app.choices().length, 20)
   assert.equal(app.find("QuestionDebug").length, 0)
 })
@@ -162,6 +175,7 @@ test("disease positive choices award 70 points across both starter groups", () =
   app.start("Antecedentes pessoais")
   for (let i = 0; i < 2; i++) {
     const respiratory = app.text(app.find("h1")[0]).includes("respiratórias")
+    app.click(app.footer()) // see options
     if (respiratory) assert.ok(!app.choices().some((node) => app.text(node).endsWith("Rinite")), "rhinitis must not be a respiratory distractor")
     const answers = respiratory ? ["Pneumonia", "DPOC", "Asma", "Bronquite"] : ["Glaucoma", "Miopia", "Catarata"]
     for (const answer of answers) app.click(app.choices().find((node) => app.text(node).endsWith(answer)))
@@ -175,6 +189,8 @@ test("interview requires Continue at each of three four-option stages and surviv
   const app = mount()
   app.start("Interrogatório complementar")
   for (let question = 0; question < 4; question++) {
+    assert.equal(app.choices().length, 0)
+    app.click(app.footer()) // see options
     for (let stage = 0; stage < 3; stage++) {
       assert.equal(app.choices().length, 4)
       if (stage === 1) assert.ok(app.choices().some((node) => app.text(node).includes(scoring.NO_SUBGROUP)))
@@ -203,6 +219,7 @@ test("interview feedback and total agree for all accepted starter paths", () => 
   for (let i = 0; i < 4; i++) {
     const story = app.text(app.find("blockquote")[0])
     const path = paths.find(([cue]) => story.includes(cue))
+    app.click(app.footer()) // see options
     for (const answer of path.slice(1)) {
       app.click(app.choices().find((node) => app.text(node).endsWith(answer)))
       app.click(app.footer())
@@ -325,4 +342,66 @@ test("symptom rounds use each group's own full checklist and stop at ten stories
   assert.equal(seen.size, 10)
   assert.deepEqual(app.completions, [["caracteres", 100]])
   assert.equal(Object.keys(app.exposure().questions).length, 10, "queued unshown stories must stay unseen")
+})
+
+test("disease options stay hidden until asked, then ten seconds grade the current picks", () => {
+  const app = mount()
+  app.start("Antecedentes pessoais")
+  assert.equal(app.footer().props.label, "Ver opções")
+  assert.equal(app.choices().length, 0)
+  assert.equal(app.find("CountdownRing").length, 0)
+  assert.equal(Object.keys(app.exposure().alternatives).length, 0, "hidden options do not count as shown")
+  app.advance(60_000) // the clock does not run while the options are hidden
+  app.click(app.footer())
+  assert.equal(app.choices().length, 20)
+  assert.equal(Object.keys(app.exposure().alternatives).length, 20)
+  assert.equal(app.find("CountdownRing")[0].props.seconds, 10)
+  const answer = app.text(app.find("h1")[0]).includes("respiratórias") ? "Asma" : "Miopia"
+  app.click(app.choices().find((node) => app.text(node).endsWith(answer)))
+  app.advance(9_999)
+  assert.equal(app.find("FeedbackCard").length, 0)
+  assert.equal(app.find("CountdownRing")[0].props.seconds, 1)
+  app.advance(1)
+  assert.equal(app.find("FeedbackCard").length, 3)
+  assert.equal(app.text(app.find("h1")[0]), "+10 pontos")
+  app.click(app.footer())
+  app.click(app.footer()) // see options
+  const late = app.choices()[0]
+  app.wait(10_000)
+  app.click(late) // a tap after the limit, before the next tick, is not counted
+  assert.equal(app.text(app.find("h1")[0]), "Não respondida")
+  app.click(app.footer())
+  assert.deepEqual(app.completions, [["antecedentes", 10]])
+})
+
+test("interview stages each get ten seconds; a stage without an answer scores zero", () => {
+  const app = mount()
+  app.start("Interrogatório complementar")
+  assert.equal(app.footer().props.label, "Ver opções")
+  assert.equal(app.choices().length, 0)
+  app.click(app.footer())
+  assert.equal(app.choices().length, 4)
+  const first = app.text(app.find("h1")[0])
+  app.advance(10_000) // stage 1 left blank
+  assert.equal(app.find("FeedbackCard").length, 0)
+  assert.equal(app.choices().length, 4)
+  const second = app.text(app.find("h1")[0])
+  assert.notEqual(second, first)
+  const pick = app.choices()[0], picked = app.text(pick)
+  app.click(pick)
+  app.advance(9_999)
+  assert.equal(app.text(app.find("h1")[0]), second)
+  app.advance(1) // stage 2 keeps the pick made before the limit
+  assert.notEqual(app.text(app.find("h1")[0]), second)
+  assert.equal(app.find("FeedbackCard").length, 0)
+  app.advance(10_000) // stage 3 left blank
+  const cards = app.find("FeedbackCard")
+  assert.equal(cards.length, 3)
+  assert.equal(cards[0].props.title, "Sem resposta")
+  assert.equal(cards[2].props.title, "Sem resposta")
+  assert.ok(cards[0].props.label.endsWith("· 0") && cards[2].props.label.endsWith("· 0"))
+  assert.ok(picked.endsWith(cards[1].props.title))
+  app.click(app.footer())
+  assert.equal(app.choices().length, 0)
+  assert.equal(app.footer().props.label, "Ver opções")
 })

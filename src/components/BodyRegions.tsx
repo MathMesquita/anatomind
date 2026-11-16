@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { FeedbackCard, QuestionDebug, StudyFooter, StudyHeader, StudyPage } from "@/components/StudyLayout"
 import { RegionDiagram } from "@/components/RegionDiagram"
+import { CountdownRing } from "@/components/CountdownRing"
+import { OPTIONS_MS, useCountdown } from "@/lib/countdown"
 import { regionCoverage, regionQuestions, regionSource, regionViews, type RegionQuestion } from "@/data/regions"
 import { alternativeId, chooseOptions, getExposure, newPresentationId, recordExposure } from "@/lib/sampling"
 import { buildRegionRound } from "@/lib/region-round"
@@ -11,6 +13,8 @@ import { buildRegionRound } from "@/lib/region-round"
 type Props = { onBack: () => void; debugEnabled: boolean; onComplete?: (activity: string, score: number) => void }
 const headView = (view: RegionQuestion["view"]) => view === "face" || view === "occipital"
 const createRound = () => buildRegionRound(regionQuestions)
+// Stored as the pick when the clock runs out before any option is tapped.
+const TIMEOUT = "Sem resposta"
 
 export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props) {
   const [phase, setPhase] = useState<"library" | "round" | "results">("library")
@@ -18,6 +22,8 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
   const [roundId, setRoundId] = useState(newPresentationId)
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<string | null>(null)
+  // Options stay hidden until the player asks, then the clock runs.
+  const [open, setOpen] = useState(false)
   const [answers, setAnswers] = useState<{ question: RegionQuestion; picked: string }[]>([])
   const selected = useRef(false)
   const completionSent = useRef(false)
@@ -28,16 +34,21 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
   }, [question, roundId])
   const settled = picked !== null
   const correct = picked === question.answer
+  const timedOut = picked === TIMEOUT
   const score = answers.filter((item) => item.picked === item.question.answer).length * 10
 
   const start = () => {
-    setQuestions(createRound()); setRoundId(newPresentationId()); setIndex(0); setPicked(null); setAnswers([]); setPhase("round"); selected.current = false; completionSent.current = false
+    setQuestions(createRound()); setRoundId(newPresentationId()); setIndex(0); setPicked(null); setOpen(false); setAnswers([]); setPhase("round"); selected.current = false; completionSent.current = false
     window.scrollTo(0, 0)
   }
   useEffect(() => {
     if (phase !== "round") return
-    recordExposure([`propedeutica:region:${question.regionId}`, `propedeutica:question:${question.id}`], options.map((text) => alternativeId("propedeutica", text)), `${roundId}:${question.id}`)
-  }, [phase, question, roundId, options])
+    recordExposure([`propedeutica:region:${question.regionId}`, `propedeutica:question:${question.id}`], [], `${roundId}:${question.id}:question`)
+  }, [phase, question, roundId])
+  useEffect(() => {
+    if (phase !== "round" || !open) return
+    recordExposure([], options.map((text) => alternativeId("propedeutica", text)), `${roundId}:${question.id}:options`)
+  }, [phase, question, roundId, options, open])
   const choose = (value: string) => {
     if (selected.current) return
     selected.current = true
@@ -45,12 +56,13 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
     setAnswers((current) => [...current, { question, picked: value }])
     window.scrollTo(0, 0)
   }
+  const timer = useCountdown(phase === "round" && open && !settled ? `${roundId}:${question.id}` : null, OPTIONS_MS, () => choose(TIMEOUT))
   const next = () => {
     if (!settled) return
     if (index + 1 === questions.length) {
       setPhase("results")
       if (!completionSent.current) { completionSent.current = true; onComplete?.("regioes", score) }
-    } else { setIndex(index + 1); setPicked(null); selected.current = false }
+    } else { setIndex(index + 1); setPicked(null); setOpen(false); selected.current = false }
     window.scrollTo(0, 0)
   }
   const debug = settled && debugEnabled ? <QuestionDebug key={question.id}>
@@ -81,12 +93,12 @@ export default function BodyRegions({ onBack, debugEnabled, onComplete }: Props)
     <div className="mt-6 space-y-3">{answers.map((item) => <FeedbackCard key={item.question.id} correct={item.picked === item.question.answer} label={`NÚMERO ${item.question.number} · ${item.picked === item.question.answer ? "ACERTOU" : "PARA REVISAR"}`} title={item.question.answer}>{item.picked !== item.question.answer && `Sua escolha: ${item.picked}`}</FeedbackCard>)}</div>
   </StudyPage>
 
-  return <StudyPage footer={settled ? <StudyFooter label={index + 1 === questions.length ? "Ver resultado" : "Próxima questão"} onClick={next} debug={debug} /> : undefined}>
+  return <StudyPage footer={settled ? <StudyFooter label={index + 1 === questions.length ? "Ver resultado" : "Próxima questão"} onClick={next} debug={debug} /> : open ? undefined : <StudyFooter label="Ver opções" onClick={() => setOpen(true)} />}>
     <StudyHeader onBack={() => setPhase("library")} label={settled ? "Propedêutica · feedback" : "Propedêutica médica"} trailing={`${score} pts`} />
     {!settled && <><Progress value={index / questions.length * 100} className="mb-2 h-1" /><p className="mb-4 text-xs text-muted-foreground">{index + 1} de {questions.length}</p></>}
-    <h1 className="text-[25px] font-bold leading-[30px] tracking-tight">{settled ? correct ? "Resposta correta!" : "Quase lá!" : `Qual região corresponde ao número ${question.number}?`}</h1>
-    <p className="mb-5 mt-2 text-sm leading-5 text-muted-foreground">{settled ? `Confira a região indicada pelo número ${question.number}.` : "Observe a ilustração e escolha uma resposta."}</p>
+    <h1 className="text-[25px] font-bold leading-[30px] tracking-tight">{settled ? correct ? "Resposta correta!" : timedOut ? "Tempo esgotado!" : "Quase lá!" : `Qual região corresponde ao número ${question.number}?`}</h1>
+    <p className="mb-5 mt-2 text-sm leading-5 text-muted-foreground">{settled ? `Confira a região indicada pelo número ${question.number}.` : open ? "Escolha uma resposta antes que o tempo acabe." : "Observe a ilustração e pense na resposta. As opções ficam visíveis por 10 segundos."}</p>
     <RegionDiagram key={question.id} question={question} />
-    {settled ? <div className="mt-4"><FeedbackCard correct={correct} label={correct ? "✓ Acertou · +10 pontos" : `Sua resposta · ${picked}`} title={question.answer}><p>{correct ? "" : "Resposta correta · "}Número {question.number} · {regionViews[question.view].title.toLowerCase()}.</p></FeedbackCard></div> : <div className="mt-4 grid gap-2" role="group" aria-label="Opções de resposta">{options.map((option) => <button key={option} type="button" onClick={() => choose(option)} className="flex min-h-12 items-center gap-3 rounded-[10px] border bg-card px-4 py-3 text-left text-[15px] transition hover:border-primary hover:bg-secondary/30"><span aria-hidden="true" className="size-3 shrink-0 rounded-full border border-primary" /><span>{option}</span></button>)}</div>}
+    {settled ? <div className="mt-4"><FeedbackCard correct={correct} label={correct ? "✓ Acertou · +10 pontos" : timedOut ? "Tempo esgotado" : `Sua resposta · ${picked}`} title={question.answer}><p>{correct ? "" : "Resposta correta · "}Número {question.number} · {regionViews[question.view].title.toLowerCase()}.</p></FeedbackCard></div> : open && <CountdownRing key={question.id} seconds={timer.seconds} total={OPTIONS_MS / 1000} paused={timer.paused}><div className="mt-4 grid gap-2" role="group" aria-label="Opções de resposta">{options.map((option) => <button key={option} type="button" onClick={() => { if (!timer.settle()) choose(option) }} className="flex min-h-12 items-center gap-3 rounded-[10px] border bg-card px-4 py-3 text-left text-[15px] transition hover:border-primary hover:bg-secondary/30"><span aria-hidden="true" className="size-3 shrink-0 rounded-full border border-primary" /><span>{option}</span></button>)}</div></CountdownRing>}
   </StudyPage>
 }
