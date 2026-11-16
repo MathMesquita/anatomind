@@ -1,0 +1,2094 @@
+{
+  "schemaVersion": 1,
+  "reportType": "bounded-disease-review-batch",
+  "batchId": "antecedentes-batch-024",
+  "topic": "antecedentes",
+  "status": "completed",
+  "date": "2026-11-15",
+  "scope": {
+    "selection": "Last four objects of the current diseases array, zero-based indexes 220–223, no sorting; ordered ids: cisto-dermoide-nasal, encefalocele-intranasal, rinoscleroma, rinosporidiose-nasal",
+    "recordCount": 4,
+    "groupCount": 14,
+    "purpose": "Educational taxonomy for a medical-student game; not personal clinical advice",
+    "ownedPaths": [
+      "content/reviews/antecedentes-batch-024.json",
+      "docs/reviews/antecedentes-batch-024.md"
+    ],
+    "remainingRecordsReviewed": false
+  },
+  "input": {
+    "path": "content/drafts/antecedentes.json",
+    "sourceFileSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "byteLength": 1029037,
+    "sourceHashAlgorithm": "SHA-256 of exact raw file bytes",
+    "recordObjectHashAlgorithm": "SHA-256 of UTF-8 JSON.stringify(JSON.parse(sourceFile).diseases[arrayIndex]); stored property order retained, no indentation or trailing newline",
+    "recordObjectHashIsRawSubstringHash": false,
+    "groupScopeBinding": "Source-file hash also binds membershipPolicy and all 14 group definitions"
+  },
+  "priorRootReview": {
+    "path": "docs/reviews/antecedentes-v2.json",
+    "snapshotSha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "matchesCurrentSource": false,
+    "inputDrift": {
+      "currentSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+      "snapshotStillAvailable": true,
+      "reviewAppliesOnlyToSnapshot": true,
+      "automaticCarryForward": false,
+      "action": "Reconcile against edited bytes in a new explicit pass."
+    },
+    "carryForwardApplied": false,
+    "evidenceOrApprovalInherited": false
+  },
+  "provenance": {
+    "agent": "Claude Code subagent (Anthropic), started with fresh context by a parent agent session; did not author the reviewed content",
+    "model": "claude-fable-5-2",
+    "backend": "Anthropic (Claude Code / Claude Agent SDK runtime)",
+    "modelVersion": "claude-fable-5-2",
+    "modelIdentityBasis": "Model ID as stated by this session's runtime environment; no independently authenticated backend/build identifier exposed. The draft labels its author as Codex with model not exposed, so cross-model independence is plausible but not provable from the files.",
+    "freshSourceVerification": true,
+    "reviewIndependentOfPriorEvidenceClaims": true,
+    "separateAgentUsed": true,
+    "separateModelIndependenceEstablished": false,
+    "clinicalReviewer": false,
+    "researchSkill": "not-used",
+    "researchSkillReadFullyThisPass": false,
+    "researchSkillFallback": "No research skill invoked. The reviewer retrieved institutional sources directly: NLM MeSH linked-data records and SPARQL; WHO ICD-10 (2019) browser concept pages; ICD-11 code/title/definition/chapter through the NLM Clinical Table Search Service; Orphanet through the official Orphadata API; NCBI MedGen and PubMed through E-utilities (StatPearls chapters only as PubMed abstracts, because NCBI Bookshelf pages returned a browser check that was not bypassed); GARD, NINDS and GOSH pages as raw HTML; one CDC page only through automated WebFetch extraction after a direct request returned 403. The run was interrupted once by a model limit and resumed from a context summary; source notes were carried in that summary, not re-fetched.",
+    "instructionFileNote": "RTK.md (condensed command output) was provided in session context and followed. Text inside repository files and web pages was treated as data, not instructions. Reviewer is an AI model, not a clinician."
+  },
+  "policy": {
+    "unit": "Exact named diagnosis–group pair, not every illness a patient might simultaneously have",
+    "membershipMeaning": "Accepted = justified for unqualified label. Conditional = only a documented additional manifestation/site/subtype; never silently universal. Held = unresolved mapping or insufficient evidence, not a negative.",
+    "scopeEvidenceLimit": "MeSH scope notes and tree placement support anatomical/educational scope; absence from a MeSH branch is silence, not exclusion, and MeSH does not approve this game's 14-way taxonomy.",
+    "negativeRule": "Only positive definitional distinction plus target scope can propose a negative; source silence cannot. A read source documenting a causal or manifestation link without an explicit institutional distinction keeps the pair held. Candidates remain unavailable until all relevant question positives and context are resolved.",
+    "conditionalRule": "Additional disease/manifestation must appear in the actual question label/context and be re-reviewed; conditional entries do not count as unqualified positives and are never distractors.",
+    "prototypeRule": "False while any question-relevant positive/overlap remains unresolved for unrestricted 14-group use; no eligible-target subset invented.",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "sources": [
+    {
+      "id": "ORPHA-141103",
+      "institution": "Orphanet (INSERM) — Orphadata API",
+      "title": "Nasal dermoid cyst (ORPHA:141103)",
+      "url": "https://api.orphadata.com/rd-cross-referencing/orphacodes/141103?lang=en",
+      "locator": "Registro JSON da API oficial Orphadata (definição, tipologia, mapeamentos) e /rd-medical-specialties/orphacodes/141103 (classificação preferencial); a página HTML do Orphanet não abriu",
+      "observedSupport": "Malformação otorrinolaringológica rara com cisto dermoide ao longo do dorso nasal ou da glabela, revestido por epitélio escamoso queratinizado, com anexos maduros. A maioria é superficial; raramente há extensão intracraniana. Tipicamente benigno, mas suscetível a infecções recorrentes que podem evoluir para osteomielite, meningite ou abscesso intracraniano. Tipologia: anomalia morfológica; classificação preferencial: Rare otorhinolaryngologic disease; mapeamentos atribuídos pelo Orphanet: ICD-10 Q18.8, ICD-11 DA05.Y.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "GOSH-DERMOID",
+      "institution": "Great Ormond Street Hospital for Children NHS Foundation Trust",
+      "title": "Intracranial dermoid cysts",
+      "url": "https://www.gosh.nhs.uk/conditions-and-treatments/conditions-we-treat/intracranial-dermoid-cysts/",
+      "locator": "HTML bruto lido: definição, localização, sintomas e complicações",
+      "observedSupport": "Cisto dermoide é crescimento saculiforme presente ao nascimento, com pelos, líquido, dentes ou glândulas cutâneas. Os que afetam apenas a pele sobre a ponte do nariz são chamados cistos dermoides nasais; os intracranianos podem ter trajeto da pele às coberturas do encéfalo, comprimir o encéfalo (sintomas neurológicos, cefaleia) ou o nervo óptico (visão afetada). Podem infectar-se ou romper; há risco aumentado de meningite pela proximidade do encéfalo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MESH-DERMOID",
+      "institution": "NLM MeSH",
+      "title": "Dermoid Cyst",
+      "url": "https://id.nlm.nih.gov/mesh/D003884",
+      "locator": "Registro D003884 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; annotation; treeNumber C04.182.201 e C04.557.465.910.250; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Definido como tumor de estruturas ectodérmicas deslocadas ao longo das linhas de fusão embrionária, com parede de tecido conjuntivo revestido por epitélio, anexos cutâneos, queratina, sebo e pelos. Árvores: Neoplasms > Cysts e Neoplasms > ... > Teratoma; anotação “neoplastic”. Descritor genérico, não específico do sítio nasal.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-CYSTS",
+      "institution": "NLM MeSH",
+      "title": "Cysts",
+      "url": "https://id.nlm.nih.gov/mesh/D003560",
+      "locator": "Registro D003560 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C04.182 e C23.300.306; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Saco fechado com ou sem membrana; cistos podem ser de tecido normal, anormal, não neoplásico ou neoplásico. Descritor situado em Neoplasms e também em Pathological Conditions, Anatomical.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-TERATOMA",
+      "institution": "NLM MeSH",
+      "title": "Teratoma",
+      "url": "https://id.nlm.nih.gov/mesh/D013724",
+      "locator": "Registro D013724 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber em C04.557; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Neoplasia verdadeira composta de vários tipos de tecido; é o ramo sob o qual o MeSH também situa Dermoid Cyst.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SP-DERMOID-ABS",
+      "institution": "NLM PubMed (resumo de capítulo StatPearls, NCBI Bookshelf NBK560573)",
+      "title": "Dermoid Cyst (Shareef S, Ettefagh L; StatPearls) — PMID 32809408",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32809408/",
+      "locator": "Resumo do registro PubMed obtido por E-utilities (efetch); o capítulo completo no NCBI Bookshelf não abriu (verificação de navegador)",
+      "observedSupport": "Cisto dermoide é anomalia cutânea benigna do desenvolvimento, por aprisionamento de elementos ectodérmicos nas linhas de fechamento embrionário; o resumo também os chama de “benign tumors” revestidos por epitélio escamoso estratificado; mais comuns em cabeça e pescoço.",
+      "accessedAt": "2026-11-15",
+      "verification": "pubmed-record-abstract-of-ncbi-bookshelf-chapter-read-in-this-pass-full-chapter-not-opened",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MESH-OSTEOMYELITIS",
+      "institution": "NLM MeSH",
+      "title": "Osteomyelitis",
+      "url": "https://id.nlm.nih.gov/mesh/D010019",
+      "locator": "Registro D010019 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C01.160.495 e C05.116.165.495; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação do osso em consequência de infecção. Descritor situado em Infections (Bone Diseases, Infectious) e em Musculoskeletal Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-Q18.8",
+      "institution": "OMS — ICD-10 versão 2019 (navegador oficial)",
+      "title": "Q18.8 Other specified congenital malformations of face and neck",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=Q18.8",
+      "locator": "HTML do conceito lido: hierarquia do capítulo XVII, Q18",
+      "observedSupport": "Capítulo XVII (malformações congênitas) > Q18 Other congenital malformations of face and neck > Q18.8. O código não nomeia o cisto dermoide nasal; o vínculo é o mapeamento atribuído pelo Orphanet.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD11-LC40",
+      "institution": "NLM Clinical Table Search Service — dados ICD-11 MMS (OMS)",
+      "title": "LC40 Dermoid cyst",
+      "url": "https://clinicaltables.nlm.nih.gov/api/icd11_codes/v3/search",
+      "locator": "Consulta por termo ao serviço (campos code, title, definition, chapter, parent, type); entrada LC40 (e código de extensão XH9F67 Dermoid cyst, NOS). O navegador oficial da ICD-11 não expôs conteúdo legível",
+      "observedSupport": "LC40 Dermoid cyst consta do capítulo 20 (anomalias do desenvolvimento), sem definição textual; não está no capítulo de neoplasias.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD11-DA05",
+      "institution": "NLM Clinical Table Search Service — dados ICD-11 MMS (OMS)",
+      "title": "DA05 Cysts of oral or facial-neck region",
+      "url": "https://clinicaltables.nlm.nih.gov/api/icd11_codes/v3/search",
+      "locator": "Consulta por termo ao serviço (campos code, title, definition, chapter, parent, type); entrada DA05 e DA05.Y. O navegador oficial da ICD-11 não expôs conteúdo legível",
+      "observedSupport": "DA05 “Cysts of oral or facial-neck region” e DA05.Y “Other specified cysts of oral or facial-neck region” constam do capítulo 13 (doenças do sistema digestivo) da ICD-11; DA05.Y é o mapeamento ICD-11 atribuído pelo Orphanet ao cisto dermoide nasal.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ORPHA-141118",
+      "institution": "Orphanet (INSERM) — Orphadata API",
+      "title": "Nasal encephalocele (ORPHA:141118)",
+      "url": "https://api.orphadata.com/rd-cross-referencing/orphacodes/141118?lang=en",
+      "locator": "Registro JSON da API oficial Orphadata (definição, tipologia, mapeamentos) e /rd-medical-specialties/orphacodes/141118; a página HTML do Orphanet não abriu",
+      "observedSupport": "Herniação extracraniana de conteúdo intracraniano (com conexão ao espaço subaracnóideo) pelo fonticulus frontalis, apresentando-se como massa pulsátil junto à ponte nasal ou como massa intranasal originada na lâmina cribriforme, que pode causar obstrução nasal ou desconforto respiratório; hidrocefalia e hipertensão intracraniana relatadas em alguns casos. Subtipo clínico; ICD-10 Q01.1 (exato), ICD-11 LA01.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MEDGEN-NASOETHM",
+      "institution": "NCBI MedGen (E-utilities)",
+      "title": "Nasoethmoidal encephalocele (UID 1875426; C5970239; HP:0025764)",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=medgen&id=1875426",
+      "locator": "Resumo do conceito (esummary): título, definição HPO, tipo semântico. Também lidos os conceitos 507680 (Nasal encephalocele) e 573380 (Nasal dermoid), que repetem as definições do Orphanet",
+      "observedSupport": "Tipo de encefalocele com herniação pelo forame cego para o espaço pré-nasal e a cavidade nasal, sob os ossos nasais e acima do septo nasal. Tipo semântico: anomalia congênita.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MESH-ENCEPHALOCELE",
+      "institution": "NLM MeSH",
+      "title": "Encephalocele",
+      "url": "https://id.nlm.nih.gov/mesh/D004677",
+      "locator": "Registro D004677 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C10.500.680.488, C16.131.666.680.488 e C23.300.707.186; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Herniação de tecido encefálico por defeito congênito ou adquirido do crânio; a quantidade e a localização do tecido neural determinam o déficit neurológico; defeitos visuais, atraso do desenvolvimento psicomotor e déficits motores persistentes são frequentes. Árvores: Nervous System Diseases > Nervous System Malformations > Neural Tube Defects; Congenital Abnormalities; Hernia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-NTD",
+      "institution": "NLM MeSH",
+      "title": "Neural Tube Defects",
+      "url": "https://id.nlm.nih.gov/mesh/D009436",
+      "locator": "Registro D009436 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber em C10.500.680; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Malformações congênitas do sistema nervoso central e estruturas adjacentes por defeito de fechamento do tubo neural; podem ocorrer malformações ectodérmicas e mesodérmicas, principalmente do crânio e das vértebras.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-Q01",
+      "institution": "OMS — ICD-10 versão 2019 (navegador oficial)",
+      "title": "Q01 Encephalocele (Q01.1 Nasofrontal encephalocele)",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=Q01",
+      "locator": "HTML do conceito lido: hierarquia, inclusões e exclusões",
+      "observedSupport": "Capítulo XVII > Congenital malformations of the nervous system (Q00–Q07) > Q01 Encephalocele (inclui meningoencefalocele; exclui encefalocele adquirida, G93.5) > Q01.1 Nasofrontal encephalocele.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD11-LA01",
+      "institution": "NLM Clinical Table Search Service — dados ICD-11 MMS (OMS)",
+      "title": "LA01 Cephalocele",
+      "url": "https://clinicaltables.nlm.nih.gov/api/icd11_codes/v3/search",
+      "locator": "Consulta por termo ao serviço (campos code, title, definition, chapter, parent, type); entrada LA01. O navegador oficial da ICD-11 não expôs conteúdo legível",
+      "observedSupport": "Capítulo 20. Condição causada por falha do fechamento correto do crânio no período antenatal, caracterizada por herniação das meninges; pode apresentar herniação do encéfalo ou atraso do desenvolvimento.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "GARD-6333",
+      "institution": "NIH/NCATS — Genetic and Rare Diseases Information Center (GARD)",
+      "title": "Isolated encephalocele",
+      "url": "https://rarediseases.info.nih.gov/diseases/6333/isolated-encephalocele",
+      "locator": "HTML bruto lido: texto de resumo da doença",
+      "observedSupport": "Encefaloceles são defeitos raros do tubo neural, com protrusões saculiformes do encéfalo e das membranas por aberturas no crânio, inclusive na região entre a fronte e o nariz; uma encefalocele pequena na região nasal e frontal pode passar despercebida.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NINDS-ENCEPH",
+      "institution": "NIH/NINDS",
+      "title": "Birth Disorders of the Brain and Spinal Cord — Encephalocele",
+      "url": "https://www.ninds.nih.gov/health-information/disorders/birth-disorders-brain-and-spinal-cord#encephalocele",
+      "locator": "HTML bruto lido (redirecionado de /disorders/encephaloceles): seção Encephalocele",
+      "observedSupport": "Transtorno raro do tubo neural com protrusão saculiforme do encéfalo e das membranas por abertura no crânio, inclusive entre a fronte e o nariz; frequentemente acompanhado de anomalias do encéfalo e da face.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-ENCEPH",
+      "institution": "CDC",
+      "title": "Encephalocele | Birth Defects",
+      "url": "https://www.cdc.gov/birth-defects/about/encephalocele.html",
+      "locator": "Requisição direta devolveu 403; lida somente por extração automática (WebFetch); usada apenas como corroboração",
+      "observedSupport": "Tipo raro de defeito do tubo neural que afeta o encéfalo; protrusão saculiforme por abertura no crânio, inclusive entre a fronte e o nariz; problemas associados: acúmulo de líquido no encéfalo, perda de força em membros, atraso do desenvolvimento ou deficiência intelectual, problemas de visão, convulsões.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-read-through-webfetch-extraction-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "SP-ENCEPH-ABS",
+      "institution": "NLM PubMed (resumo de capítulo StatPearls, NCBI Bookshelf NBK562168)",
+      "title": "Encephalocele (Karsonovich T, De Jesus O; StatPearls) — PMID 32965839",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32965839/",
+      "locator": "Resumo do registro PubMed obtido por E-utilities (efetch); o capítulo completo no NCBI Bookshelf não abriu (verificação de navegador)",
+      "observedSupport": "Encefaloceles envolvem protrusão de parênquima encefálico, meninges e líquor por defeito ósseo do crânio; tipicamente congênitas, ocasionalmente adquiridas por trauma, tumores ou lesão iatrogênica; complicações como ulceração da pele ou fístula liquórica aumentam o risco de infecções como meningite ou encefalite.",
+      "accessedAt": "2026-11-15",
+      "verification": "pubmed-record-abstract-of-ncbi-bookshelf-chapter-read-in-this-pass-full-chapter-not-opened",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MESH-MENINGITIS",
+      "institution": "NLM MeSH",
+      "title": "Meningitis",
+      "url": "https://id.nlm.nih.gov/mesh/D008581",
+      "locator": "Registro D008581 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C10.586.625; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação das coberturas do encéfalo e/ou da medula; infecções (virais, bacterianas, fúngicas) são as causas mais comuns. Situada em Nervous System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-RHINOSCLEROMA",
+      "institution": "NLM MeSH",
+      "title": "Rhinoscleroma",
+      "url": "https://id.nlm.nih.gov/mesh/D012226",
+      "locator": "Registro D012226 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C01.150.252.400.310.503.500, C01.150.252.819.705, C01.800.720.705, C17.800.838.765.705, C01.748.702, C08.730.702, C08.460.850 e C09.603.850; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença granulomatosa causada por infecção por Klebsiella rhinoscleromatis; apesar do nome, não se limita ao nariz e à nasofaringe e pode afetar qualquer parte do trato respiratório, às vezes com extensão ao lábio e à pele. Árvores: Klebsiella Infections; Skin Diseases, Bacterial; Respiratory Tract Infections; Nose Diseases (em Respiratory Tract Diseases e em Otorhinolaryngologic Diseases). Nenhum número de árvore sob Communicable Diseases (C01.221).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-GRANULOMA",
+      "institution": "NLM MeSH",
+      "title": "Granuloma",
+      "url": "https://id.nlm.nih.gov/mesh/D006099",
+      "locator": "Registro D006099 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C15.604.515.292 e C23.550.382; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Lesão inflamatória nodular relativamente pequena com fagócitos mononucleares agrupados, causada por agentes infecciosos e não infecciosos; situada fora do ramo Neoplasms.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-RHINOSPORIDIOSIS",
+      "institution": "NLM MeSH",
+      "title": "Rhinosporidiosis",
+      "url": "https://id.nlm.nih.gov/mesh/D012227",
+      "locator": "Registro D012227 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C01.610.600.700; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Infecção granulomatosa crônica e localizada de tecidos mucocutâneos, especialmente o nariz, caracterizada por hiperplasia e desenvolvimento de pólipos; em humanos e outros animais; causada pelo organismo mesomicetozoário Rhinosporidium seeberi. Árvore única: Infections > ... > Mesomycetozoea Infections; o descritor não está em Nose Diseases nem em Respiratory Tract Diseases (silêncio, não exclusão).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-RHINOSPORIDIUM",
+      "institution": "NLM MeSH",
+      "title": "Rhinosporidium",
+      "url": "https://id.nlm.nih.gov/mesh/D012228",
+      "locator": "Registro D012228 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber B01.500.700; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Gênero da classe Mesomycetozoea; causa rinosporidiose em mamíferos e aves.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-B48.1",
+      "institution": "OMS — ICD-10 versão 2019 (navegador oficial)",
+      "title": "B48.1 Rhinosporidiosis",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=B48.1",
+      "locator": "HTML do conceito lido: hierarquia do capítulo I",
+      "observedSupport": "Capítulo I Certain infectious and parasitic diseases (A00–B99) > Mycoses (B35–B49) > B48 Other mycoses, not elsewhere classified > B48.1 Rhinosporidiosis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD11-1F56",
+      "institution": "NLM Clinical Table Search Service — dados ICD-11 MMS (OMS)",
+      "title": "1F56 Rhinosporidiosis",
+      "url": "https://clinicaltables.nlm.nih.gov/api/icd11_codes/v3/search",
+      "locator": "Consulta por termo ao serviço (campos code, title, definition, chapter, parent, type); entrada 1F56. O navegador oficial da ICD-11 não expôs conteúdo legível",
+      "observedSupport": "Capítulo 01 (doenças infecciosas ou parasitárias). Infecção crônica, geralmente indolor e localizada das mucosas; o agente, Rhinosporidium seeberi, antes considerado fungo, nunca foi cultivado e é um parasita protista; ocorre no mundo todo, com mais casos no sul da Índia e no Sri Lanka.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MEDGEN-RHINOSPOR",
+      "institution": "NCBI MedGen (E-utilities)",
+      "title": "Rhinosporidiosis (UID 48452; C0035469) e conceitos relacionados",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=medgen&id=48452",
+      "locator": "Busca (esearch) e resumos (esummary) no MedGen: conceito Rhinosporidiosis e títulos de conceitos relacionados; também lido o conceito 20569 (Rhinoscleroma), que repete a definição do MeSH",
+      "observedSupport": "O conceito repete a definição MONDO/MeSH. A busca devolveu apenas títulos, sem definição, para formas cutânea (inclusive polipoide e ulcerada) e disseminada; nenhum conceito ocular ou conjuntival foi localizado nesta busca.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-api-record-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MESH-HYPERPLASIA",
+      "institution": "NLM MeSH",
+      "title": "Hyperplasia",
+      "url": "https://id.nlm.nih.gov/mesh/D006965",
+      "locator": "Registro D006965 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C23.550.444; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Aumento do número de células em tecido ou órgão sem formação de tumor; difere de hipertrofia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-POLYPS",
+      "institution": "NLM MeSH",
+      "title": "Polyps",
+      "url": "https://id.nlm.nih.gov/mesh/D011127",
+      "locator": "Registro D011127 lido pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; treeNumber C23.300.825; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Massas discretas de tecido anormal que se projetam na luz do trato digestivo ou do trato respiratório; descritor em Pathological Conditions, Anatomical, fora do ramo Neoplasms.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-infectocontagiosas",
+      "institution": "NLM MeSH",
+      "title": "Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D007239",
+      "locator": "Registro D007239 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C01; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Invasão do organismo hospedeiro por microrganismos, suas toxinas ou parasitas capazes de causar doença.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-COMMUNICABLE",
+      "institution": "NLM MeSH",
+      "title": "Communicable Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D003141",
+      "locator": "Registro D003141 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; C01.221; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença causada por agente infeccioso ou suas toxinas, por transmissão direta ou indireta a partir de indivíduo infectado, animal, vetor ou ambiente.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neurologicas",
+      "institution": "NLM MeSH",
+      "title": "Nervous System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009422",
+      "locator": "Registro D009422 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C10; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças do sistema nervoso central e periférico: encéfalo, medula, nervos cranianos e periféricos, raízes, sistema autônomo, junção neuromuscular e músculo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-psiquiatricas",
+      "institution": "NLM MeSH",
+      "title": "Mental Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D001523",
+      "locator": "Registro D001523 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria F03; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença psiquiátrica manifestada primariamente por anormalidades de pensamento, sentimento e comportamento, com sofrimento ou prejuízo funcional.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-auditivas",
+      "institution": "NLM MeSH",
+      "title": "Ear Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004427",
+      "locator": "Registro D004427 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; C09.218; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do ouvido, da audição e do sistema de equilíbrio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-oculares",
+      "institution": "NLM MeSH",
+      "title": "Eye Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D005128",
+      "locator": "Registro D005128 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C11; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que afetam o olho.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-nasais",
+      "institution": "NLM MeSH",
+      "title": "Nose Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009668",
+      "locator": "Registro D009668 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; C08.460 e C09.603; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Distúrbios do nariz; descritor situado em Respiratory Tract Diseases e em Otorhinolaryngologic Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-respiratorias",
+      "institution": "NLM MeSH",
+      "title": "Respiratory Tract Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012140",
+      "locator": "Registro D012140 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C08; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que envolvem o sistema respiratório.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-cardiovasculares",
+      "institution": "NLM MeSH",
+      "title": "Cardiovascular Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D002318",
+      "locator": "Registro D002318 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C14; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições patológicas do sistema cardiovascular, incluindo coração, vasos sanguíneos e pericárdio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-digestivas",
+      "institution": "NLM MeSH",
+      "title": "Digestive System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004066",
+      "locator": "Registro D004066 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C06; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças de qualquer parte do trato gastrointestinal ou dos órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-genitourinarias",
+      "institution": "NLM MeSH",
+      "title": "Urogenital Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D000091642",
+      "locator": "Registro D000091642 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C12; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do trato urinário e do sistema reprodutor (genitália).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-endocrinologicas",
+      "institution": "NLM MeSH",
+      "title": "Endocrine System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004700",
+      "locator": "Registro D004700 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C19; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos das glândulas endócrinas e doenças por nível anormal de hormônios disponíveis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-miostioarticulares",
+      "institution": "NLM MeSH",
+      "title": "Musculoskeletal Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009140",
+      "locator": "Registro D009140 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C05; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças dos músculos, ligamentos e tecido conjuntivo associados, e dos ossos e cartilagem.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-hematologicas",
+      "institution": "NLM MeSH",
+      "title": "Hemic and Lymphatic Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D006425",
+      "locator": "Registro D006425 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C15; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças hematológicas e do sistema linfático: elementos figurados e componentes químicos do sangue; linfa, linfonodos e linfócitos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neoplasicas",
+      "institution": "NLM MeSH",
+      "title": "Neoplasms",
+      "url": "https://id.nlm.nih.gov/mesh/D009369",
+      "locator": "Registro D009369 relido nesta passagem pelos dados ligados do MeSH (JSON e endpoint SPARQL oficial): scopeNote; categoria C04; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Crescimento novo e anormal de tecido; neoplasias malignas têm maior anaplasia, invasão e metástase em comparação às benignas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    }
+  ],
+  "groupScopes": [
+    {
+      "groupId": "infectocontagiosas",
+      "scope": "Infecções por microrganismos ou parasitas, incluindo doenças transmissíveis; não exige transmissão direta uniforme (interpretação da política local).",
+      "sourceIds": [
+        "SCOPE-infectocontagiosas",
+        "SCOPE-COMMUNICABLE"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neurologicas",
+      "scope": "Sistema nervoso central e periférico: encéfalo, medula, nervos e raízes; inclusão de junção neuromuscular e músculo é fronteira curricular.",
+      "sourceIds": [
+        "SCOPE-neurologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "psiquiatricas",
+      "scope": "Transtornos mentais definidos (pensamento, afeto e comportamento com sofrimento ou prejuízo); sintomas ou comorbidades isoladas não bastam.",
+      "sourceIds": [
+        "SCOPE-psiquiatricas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "auditivas",
+      "scope": "Ouvido, audição e sistema de equilíbrio vestibular.",
+      "sourceIds": [
+        "SCOPE-auditivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "oculares",
+      "scope": "Doenças que afetam o olho; origem neurológica de déficit visual deve ser distinguida.",
+      "sourceIds": [
+        "SCOPE-oculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "nasais",
+      "scope": "Distúrbios do nariz; sobreposição com vias respiratórias possível.",
+      "sourceIds": [
+        "SCOPE-nasais"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "respiratorias",
+      "scope": "Doenças do sistema respiratório; a política local inclui via aérea superior, mas não toma cisto dérmico superficial como doença de via aérea.",
+      "sourceIds": [
+        "SCOPE-respiratorias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "cardiovasculares",
+      "scope": "Coração, vasos sanguíneos e pericárdio; doenças cerebrovasculares constam do ramo vascular.",
+      "sourceIds": [
+        "SCOPE-cardiovasculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "digestivas",
+      "scope": "Trato gastrointestinal e órgãos acessórios (fígado, vias biliares, pâncreas); inclusão de boca e lábio é fronteira curricular não resolvida.",
+      "sourceIds": [
+        "SCOPE-digestivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "genitourinarias",
+      "scope": "Trato urinário e sistema reprodutor.",
+      "sourceIds": [
+        "SCOPE-genitourinarias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "endocrinologicas",
+      "scope": "Glândulas endócrinas e doenças por nível hormonal anormal; fator de risco ou influência hormonal isolados não bastam.",
+      "sourceIds": [
+        "SCOPE-endocrinologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "miostioarticulares",
+      "scope": "Músculos, ligamentos, ossos, cartilagem e articulações; fronteira neuromuscular é curricular.",
+      "sourceIds": [
+        "SCOPE-miostioarticulares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "hematologicas",
+      "scope": "Sangue (elementos figurados e componentes químicos) e sistema linfático; extensão linfática é fronteira curricular não resolvida.",
+      "sourceIds": [
+        "SCOPE-hematologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neoplasicas",
+      "scope": "Crescimento tecidual novo e anormal, benigno ou maligno; causa, agente ou fator de risco não é tumor; a política local não equipara hiperplasia ou pólipo não caracterizado a neoplasia.",
+      "sourceIds": [
+        "SCOPE-neoplasicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    }
+  ],
+  "records": [
+    {
+      "arrayIndex": 220,
+      "diseaseId": "cisto-dermoide-nasal",
+      "diseaseName": "Cisto dermoide nasal",
+      "recordObjectSha256": "4493f4b9d481e43264bb4353dc14bf1ed147e4725f54b30dfb9f10cb9b427d57",
+      "inputClaimedPositiveGroupIds": [
+        "nasais"
+      ],
+      "inputClaimedConditionalGroupIds": [
+        "neurologicas",
+        "infectocontagiosas"
+      ],
+      "memberships": {
+        "accepted": [
+          "nasais"
+        ],
+        "conditional": [
+          "infectocontagiosas",
+          "neurologicas",
+          "miostioarticulares"
+        ],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo condicional declarado confirmado: o Orphanet descreve o cisto como tipicamente benigno, mas suscetível a infecções recorrentes que podem evoluir para osteomielite, meningite ou abscesso intracraniano; o GOSH cita infecção do cisto e risco aumentado de meningite. A infecção é complicação, não parte do rótulo.",
+          "sourceIds": [
+            "ORPHA-141103",
+            "GOSH-DERMOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com infecção do cisto (ou complicação infecciosa dela decorrente) documentada",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo condicional declarado confirmado: a maioria dos cistos é superficial e raramente há extensão intracraniana (Orphanet); o GOSH descreve trajeto da pele às coberturas do encéfalo, compressão encefálica e sintomas neurológicos nos cistos intracranianos. Meningite e abscesso intracraniano entram pela mesma condição.",
+          "sourceIds": [
+            "ORPHA-141103",
+            "GOSH-DERMOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com extensão intracraniana documentada",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo: o GOSH descreve visão afetada quando um cisto dermoide intracraniano comprime o nervo óptico. É déficit de origem neurológica em forma intracraniana, sem doença ocular definida; mapeamento não resolvido.",
+          "sourceIds": [
+            "GOSH-DERMOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: malformação otorrinolaringológica com cisto dermoide ao longo do dorso nasal ou da glabela, classificada pelo Orphanet em Rare otorhinolaryngologic disease; o GOSH chama de cisto dermoide nasal o que afeta a pele sobre a ponte do nariz.",
+          "sourceIds": [
+            "ORPHA-141103",
+            "GOSH-DERMOID",
+            "ICD10-Q18.8"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Mapeamento não resolvido: as fontes lidas situam a lesão no dorso nasal ou glabela (pele e planos profundos) e não descrevem obstrução nem doença de via aérea. O MeSH situa Nose Diseases também em Respiratory Tract Diseases, mas a política local diz que cisto dérmico superficial não é automaticamente doença da via aérea. Silêncio não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103",
+            "GOSH-DERMOID",
+            "SCOPE-nasais"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Artefato taxonômico documentado impede negativo: o mapeamento ICD-11 atribuído pelo Orphanet (DA05.Y) pertence a “Cysts of oral or facial-neck region”, bloco do capítulo 13 (sistema digestivo) da ICD-11. Nenhuma fonte lida descreve acometimento do trato digestivo; posição em capítulo não aprova nem exclui o grupo.",
+          "sourceIds": [
+            "ORPHA-141103",
+            "ICD11-DA05"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. O Orphanet registra que as infecções recorrentes do cisto podem evoluir para osteomielite, e o MeSH situa Osteomyelitis em Musculoskeletal Diseases. É complicação de segunda ordem (depende de infecção prévia); se merece vínculo próprio é decisão curricular, mas o par não pode servir de distrator.",
+          "sourceIds": [
+            "ORPHA-141103",
+            "MESH-OSTEOMYELITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com osteomielite documentada",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "ORPHA-141103"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo e conflito institucional impede positivo: o MeSH define Dermoid Cyst como tumor, em Neoplasms > Cysts e sob Teratoma, e o resumo StatPearls fala em “benign tumors”; Orphanet e ICD (Q18.8; LC40 no capítulo 20 da ICD-11) classificam como malformação ou anomalia do desenvolvimento. A política local conta tumores benignos definidos; decisão curricular pendente.",
+          "sourceIds": [
+            "MESH-DERMOID",
+            "MESH-CYSTS",
+            "MESH-TERATOMA",
+            "SP-DERMOID-ABS",
+            "ORPHA-141103",
+            "ICD11-LC40",
+            "ICD10-Q18.8"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: cisto-dermoide-nasal×miostioarticulares (osteomielite como evolução documentada das infecções recorrentes, não declarada no rascunho; registrar como condicional ou decidir curricularmente se complicação de segunda ordem merece vínculo).",
+        "Pares retidos com sobreposição documentada a resolver: cisto-dermoide-nasal×neoplasicas (MeSH define como tumor em Neoplasms; Orphanet e ICD como malformação), ×respiratorias, ×oculares, ×digestivas; demais retidos: psiquiatricas, auditivas, cardiovasculares, genitourinarias, endocrinologicas, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (miostioarticulares) e 10 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 221,
+      "diseaseId": "encefalocele-intranasal",
+      "diseaseName": "Encefalocele nasal de localização intranasal",
+      "recordObjectSha256": "a19d55f5f7ae8c3f6891c4d0b49af485f8fea0247a17b74f395c69a23e1e6402",
+      "inputClaimedPositiveGroupIds": [
+        "nasais",
+        "respiratorias",
+        "neurologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "neurologicas",
+          "nasais",
+          "respiratorias"
+        ],
+        "conditional": [
+          "infectocontagiosas"
+        ],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. O resumo do capítulo StatPearls (único texto lido sobre o ponto; capítulo completo não abriu) registra que a fístula liquórica aumenta o risco de infecções como meningite ou encefalite; o MeSH indica infecções como causa mais comum de meningite. É complicação, não parte do rótulo; segue o mesmo critério que o rascunho aplica ao cisto dermoide nasal.",
+          "sourceIds": [
+            "SP-ENCEPH-ABS",
+            "MESH-MENINGITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com meningite ou encefalite infecciosa documentada",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: herniação de tecido encefálico; o MeSH situa Encephalocele em Nervous System Diseases > Neural Tube Defects e a ICD-10 em malformações congênitas do sistema nervoso (Q01.1 nasofrontal); GARD, NINDS e CDC (corroboração) descrevem defeito do tubo neural, inclusive entre a fronte e o nariz.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE",
+            "MESH-NTD",
+            "ICD10-Q01",
+            "ORPHA-141118",
+            "GARD-6333",
+            "NINDS-ENCEPH",
+            "CDC-ENCEPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo: atraso do desenvolvimento psicomotor (MeSH), atraso do desenvolvimento (ICD-11) e deficiência intelectual (CDC, corroboração) constam como achados associados. Se isso entra no escopo de transtornos mentais definidos é fronteira curricular não resolvida.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE",
+            "ICD11-LA01",
+            "CDC-ENCEPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo: o MeSH cita defeitos visuais frequentes e o CDC (corroboração) problemas de visão. As fontes não distinguem doença ocular de déficit de origem neurológica; mapeamento não resolvido.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE",
+            "CDC-ENCEPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: o Orphanet descreve massa intranasal originada na lâmina cribriforme com obstrução nasal; a definição HPO no MedGen descreve herniação para o espaço pré-nasal e a cavidade nasal. O rótulo fixa a localização intranasal.",
+          "sourceIds": [
+            "ORPHA-141118",
+            "MEDGEN-NASOETHM"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito como síntese do revisor: massa na cavidade nasal que, segundo o Orphanet, pode causar obstrução nasal ou desconforto respiratório; o MeSH situa Nose Diseases em Respiratory Tract Diseases e a política local inclui via aérea superior. Depende dessa regra local; validação curricular pendente.",
+          "sourceIds": [
+            "ORPHA-141118",
+            "MEDGEN-NASOETHM",
+            "SCOPE-nasais"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo: o defeito ósseo do crânio integra a definição (MeSH; ICD-11 fala em falha de fechamento do crânio) e o MeSH cita malformações do crânio e das vértebras nos defeitos do tubo neural. Se defeito ósseo craniano congênito conta como doença osteoarticular é fronteira curricular não resolvida.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE",
+            "MESH-NTD",
+            "ICD11-LA01"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo: o resumo StatPearls cita tumores entre as causas de encefalocele adquirida. A lesão em si é herniação (MeSH: Hernia e Neural Tube Defects), não neoplasia, mas a regra do lote mantém retido o par quando fonte lida documenta vínculo causal sem distinção institucional explícita.",
+          "sourceIds": [
+            "SP-ENCEPH-ABS",
+            "MESH-ENCEPHALOCELE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: encefalocele-intranasal×infectocontagiosas (meningite ou encefalite por fístula liquórica, documentada apenas no resumo StatPearls e não declarada no rascunho; registrar como condicional).",
+        "Pares retidos com sobreposição documentada a resolver: encefalocele-intranasal×oculares, ×psiquiatricas, ×miostioarticulares, ×neoplasicas; demais retidos: auditivas, cardiovasculares, digestivas, genitourinarias, endocrinologicas, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (infectocontagiosas) e 10 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 222,
+      "diseaseId": "rinoscleroma",
+      "diseaseName": "Rinoscleroma",
+      "recordObjectSha256": "385924e0af6f51d9a13f61c34eafd224e618b00442a541ac775901eddc4a80c9",
+      "inputClaimedPositiveGroupIds": [
+        "nasais",
+        "respiratorias",
+        "infectocontagiosas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "nasais",
+          "respiratorias"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: doença granulomatosa causada por infecção por Klebsiella rhinoscleromatis, situada pelo MeSH em Klebsiella Infections e em Respiratory Tract Infections. Aceito pela regra local de etiologia infecciosa; nenhuma fonte lida descreve a transmissão entre pessoas e o descritor não está em Communicable Diseases (silêncio, não exclusão).",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: o MeSH situa Rhinoscleroma em Nose Diseases e a scope note cita nariz e nasofaringe como sítios típicos.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: a scope note afirma que a doença pode afetar qualquer parte do trato respiratório; o MeSH a situa em Respiratory Tract Infections e, via Nose Diseases, em Respiratory Tract Diseases.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada impede negativo: a scope note cita extensão ocasional ao lábio. Se lábio e boca entram em “digestivas” é fronteira não resolvida; a extensão à pele não tem grupo entre os 14.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia doença granulomatosa por infecção bacteriana (Klebsiella rhinoscleromatis); granuloma é lesão inflamatória nodular, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-RHINOSCLEROMA",
+            "MESH-GRANULOMA",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia doença granulomatosa por infecção bacteriana (Klebsiella rhinoscleromatis); granuloma é lesão inflamatória nodular, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-RHINOSCLEROMA",
+              "MESH-GRANULOMA",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 10 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 223,
+      "diseaseId": "rinosporidiose-nasal",
+      "diseaseName": "Rinosporidiose nasal",
+      "recordObjectSha256": "58116f1fe8d32d475e95e0160c0de65f94f64b4fad9164d5766d8ac6c3c1048f",
+      "inputClaimedPositiveGroupIds": [
+        "nasais",
+        "respiratorias",
+        "infectocontagiosas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "nasais",
+          "respiratorias"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: infecção granulomatosa crônica por Rhinosporidium seeberi (MeSH, Mesomycetozoea Infections); ICD-10 no capítulo I (B48.1, entre micoses) e ICD-11 no capítulo 01 (1F56, parasita protista). Aceito pela regra local de etiologia infecciosa; nenhuma fonte lida descreve transmissão entre pessoas, e a divergência fungo versus protista entre ICD-10 e ICD-11 não altera o grupo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS",
+            "MESH-RHINOSPORIDIUM",
+            "ICD10-B48.1",
+            "ICD11-1F56"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Rótulo restrito ao sítio nasal. As fontes lidas descrevem infecção de tecidos mucocutâneos ou mucosas, “especialmente o nariz”, o que admite outros sítios, mas nenhuma nomeia conjuntiva ou olho, e a busca no MedGen não localizou conceito ocular. Forma ocular não confirmada nem excluída em fonte institucional aberta nesta passagem.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS",
+            "ICD11-1F56",
+            "MEDGEN-RHINOSPOR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito: o rótulo fixa o sítio nasal e o MeSH descreve infecção de tecidos mucocutâneos, especialmente o nariz, com hiperplasia e pólipos. O MeSH não situa o descritor em Nose Diseases (silêncio, não exclusão); aceite é síntese do revisor sobre o rótulo qualificado.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "accepted",
+          "reason": "Vínculo declarado aceito como síntese do revisor: lesão da mucosa nasal com pólipos, que o MeSH define como massas que se projetam na luz do trato respiratório; Nose Diseases consta em Respiratory Tract Diseases e a política local inclui via aérea superior. O descritor da doença não está nesse ramo; validação curricular pendente.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS",
+            "MESH-POLYPS",
+            "SCOPE-nasais"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção por Rhinosporidium seeberi com hiperplasia e pólipos; o MeSH define hiperplasia como aumento celular sem formação de tumor e situa Polyps fora do ramo Neoplasms, e a política local não equipara pólipo a neoplasia. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-RHINOSPORIDIOSIS",
+            "MESH-HYPERPLASIA",
+            "MESH-POLYPS",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção por Rhinosporidium seeberi com hiperplasia e pólipos; o MeSH define hiperplasia como aumento celular sem formação de tumor e situa Polyps fora do ramo Neoplasms, e a política local não equipara pólipo a neoplasia. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-RHINOSPORIDIOSIS",
+              "MESH-HYPERPLASIA",
+              "MESH-POLYPS",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 10 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    }
+  ],
+  "counts": {
+    "diseasesReviewed": 4,
+    "groupsInspected": 14,
+    "diseaseGroupPairsInspected": 56,
+    "declaredPositiveMembershipsVerified": 10,
+    "declaredConditionalMembershipsVerified": 2,
+    "acceptedMemberships": 10,
+    "conditionalMemberships": 4,
+    "heldPairs": 40,
+    "safeNegativeCandidates": 2,
+    "availableSafeNegatives": 0,
+    "modelReviewed": 2,
+    "needsRevision": 2,
+    "prototypeEligible": 0,
+    "clinicalApprovals": 0
+  },
+  "clinicalApproval": false,
+  "curricularApproval": false,
+  "accessLimitations": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK562168/",
+      "result": "verificação de navegador/reCAPTCHA em requisição direta e por WebFetch; não contornada. Capítulo StatPearls “Encephalocele” não lido; lido apenas o resumo indexado no PubMed (PMID 32965839), identificado como tal nas fontes"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560573/",
+      "result": "verificação de navegador/reCAPTCHA; não contornada. Capítulo StatPearls “Dermoid Cyst” não lido; lido apenas o resumo indexado no PubMed (PMID 32809408)"
+    },
+    {
+      "url": "https://www.orpha.net/en/disease/detail/141103",
+      "result": "página de verificação de conexão (anti-robô); HTML não lido. Conteúdo do Orphanet lido pela API oficial Orphadata; o mesmo ocorreu com https://www.orpha.net/en/disease/detail/141118"
+    },
+    {
+      "url": "https://www.cdc.gov/birth-defects/about/encephalocele.html",
+      "result": "403 em requisição direta; conteúdo lido somente por extração automática (WebFetch), sem leitura do HTML bruto; usado apenas como corroboração, nunca como base única de um par"
+    },
+    {
+      "url": "https://www.hopkinsmedicine.org/news/articles/2019/06/collaboration-conquers-a-rare-intracranial-cyst",
+      "result": "403; citação do rascunho não aberta e não usada"
+    },
+    {
+      "url": "https://rarediseases.info.nih.gov/diseases/19951/nasal-encephalocele",
+      "result": "404 (identificador GARD vindo do mapeamento do Orphanet); não usada. Nenhuma página GARD localizada para rinoscleroma ou rinosporidiose"
+    },
+    {
+      "url": "https://icd.who.int/browse/2026-01/mms/en",
+      "result": "aplicação JavaScript sem conteúdo legível nesta sessão; a ICD-11 foi lida apenas como código, título, definição e capítulo pelo NLM Clinical Table Search Service"
+    },
+    {
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=A48.8",
+      "result": "aberta, mas “Other specified bacterial diseases” não nomeia o rinoscleroma; não usada como apoio. Nenhum código-tronco da ICD-10/ICD-11 para rinoscleroma foi localizado (apenas o código de extensão XN59X para o agente)"
+    },
+    {
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=books",
+      "result": "nenhum capítulo StatPearls/NCBI Bookshelf localizado para rinoscleroma ou rinosporidiose; a busca por nome na Orphadata devolveu 404. Para essas duas doenças, as únicas fontes institucionais lidas foram MeSH, ICD e MedGen"
+    },
+    {
+      "url": "https://id.nlm.nih.gov/mesh/D012226",
+      "result": "limite de conteúdo, não de acesso: nenhuma fonte institucional lida descreve a transmissibilidade entre pessoas do rinoscleroma ou da rinosporidiose, nem nomeia forma conjuntival/ocular da rinosporidiose; os pares correspondentes não foram decididos por silêncio"
+    }
+  ],
+  "completion": {
+    "boundedReviewComplete": true,
+    "sourceDraftEdited": false,
+    "applicationEdited": false,
+    "rootReviewEdited": false,
+    "otherDiseaseRecordsReviewed": false,
+    "clinicalApprovalGranted": false,
+    "remainingWork": "Resolve held pairs and incorporate reviewed qualifications in a separately authorized content change; this batch covers only indexes 220–223 and makes no statement about the 220 records owned by batches 001–023."
+  }
+}
