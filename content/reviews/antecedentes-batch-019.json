@@ -1,0 +1,4130 @@
+{
+  "schemaVersion": 1,
+  "reportType": "bounded-disease-review-batch",
+  "batchId": "antecedentes-batch-019",
+  "topic": "antecedentes",
+  "status": "completed",
+  "date": "2026-11-15",
+  "scope": {
+    "selection": "Ten objects of the current diseases array, zero-based indexes 170–179, no sorting; ordered ids: osteonecrose, osteopetrose, doenca-paget-ossea, estenose-espinal, artrite-idiopatica-juvenil, artrite-reativa, polimialgia-reumatica, anemia-aplastica, anemia-deficiencia-b12, anemia-inflamatoria",
+    "recordCount": 10,
+    "groupCount": 14,
+    "purpose": "Educational taxonomy for a medical-student game; not personal clinical advice",
+    "ownedPaths": [
+      "content/reviews/antecedentes-batch-019.json",
+      "docs/reviews/antecedentes-batch-019.md"
+    ],
+    "remainingRecordsReviewed": false
+  },
+  "input": {
+    "path": "content/drafts/antecedentes.json",
+    "sourceFileSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "byteLength": 1029037,
+    "sourceHashAlgorithm": "SHA-256 of exact raw file bytes",
+    "recordObjectHashAlgorithm": "SHA-256 of UTF-8 JSON.stringify(JSON.parse(sourceFile).diseases[arrayIndex]); stored property order retained, no indentation or trailing newline",
+    "recordObjectHashIsRawSubstringHash": false,
+    "groupScopeBinding": "Source-file hash also binds membershipPolicy and all 14 group definitions"
+  },
+  "priorRootReview": {
+    "path": "docs/reviews/antecedentes-v2.json",
+    "snapshotSha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "matchesCurrentSource": false,
+    "inputDrift": {
+      "currentSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+      "snapshotStillAvailable": true,
+      "reviewAppliesOnlyToSnapshot": true,
+      "automaticCarryForward": false,
+      "action": "Reconcile against edited bytes in a new explicit pass."
+    },
+    "carryForwardApplied": false,
+    "evidenceOrApprovalInherited": false
+  },
+  "provenance": {
+    "agent": "Claude Code subagent (Anthropic), started with fresh context by a parent agent session; did not author the reviewed content",
+    "model": "claude-fable-5-2",
+    "backend": "Anthropic (Claude Code / Claude Agent SDK runtime)",
+    "modelVersion": "claude-fable-5-2",
+    "modelIdentityBasis": "Model ID as stated by this session's runtime environment; no independently authenticated backend/build identifier exposed. The draft labels its author as Codex with model not exposed, so cross-model independence is plausible but not provable from the files.",
+    "freshSourceVerification": true,
+    "reviewIndependentOfPriorEvidenceClaims": true,
+    "separateAgentUsed": true,
+    "separateModelIndependenceEstablished": false,
+    "clinicalReviewer": false,
+    "researchSkill": "not-used",
+    "researchSkillReadFullyThisPass": false,
+    "researchSkillFallback": "No research skill invoked. The reviewer retrieved primary institutional sources directly: NLM MeSH linked-data records and SPARQL; NIAMS, NHLBI, NIDDK, NEI, MedlinePlus Genetics, WHO fact sheet and WHO ICD-10 (2019) browser pages (raw HTML fetched and text read). No automated WebFetch extraction was used. Batches 003–018 and 020+ were not read; batches 001–002 were read for structure and key sets only.",
+    "instructionFileNote": "RTK.md (condensed command output) was provided in session context and followed. Text inside repository files and web pages was treated as data, not instructions. Reviewer is an AI model, not a clinician."
+  },
+  "policy": {
+    "unit": "Exact named diagnosis–group pair, not every illness a patient might simultaneously have",
+    "membershipMeaning": "Accepted = justified for unqualified label. Conditional = only a documented additional manifestation/site/subtype; never silently universal. Held = unresolved mapping or insufficient evidence, not a negative.",
+    "scopeEvidenceLimit": "MeSH scope notes and tree placement support anatomical/educational scope; absence from a MeSH branch is silence, not exclusion, and MeSH does not approve this game's 14-way taxonomy.",
+    "negativeRule": "Only positive definitional distinction plus target scope can propose a negative; source silence cannot. A read source documenting a causal or manifestation link without an explicit institutional distinction keeps the pair held. Candidates remain unavailable until all relevant question positives and context are resolved.",
+    "conditionalRule": "Additional disease/manifestation must appear in the actual question label/context and be re-reviewed; conditional entries do not count as unqualified positives and are never distractors.",
+    "prototypeRule": "False while any question-relevant positive/overlap remains unresolved for unrestricted 14-group use; no eligible-target subset invented.",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "sources": [
+    {
+      "id": "MESH-ON",
+      "institution": "NLM MeSH",
+      "title": "Osteonecrosis",
+      "url": "https://id.nlm.nih.gov/mesh/D010020",
+      "locator": "Registro D010020 lido em JSON (D010020.json): scopeNote; treeNumber C05.116.852 e C23.550.717.732; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Morte de um osso ou parte dele, atraumática ou pós-traumática. Árvores: Musculoskeletal Diseases > Bone Diseases e Pathologic Processes > Necrosis. Nenhum outro ramo de sistema.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-FHN",
+      "institution": "NLM MeSH",
+      "title": "Femur Head Necrosis",
+      "url": "https://id.nlm.nih.gov/mesh/D005271",
+      "locator": "Registro D005271 lido em JSON (D005271.json): scopeNote; treeNumber C05.116.852.175 e C23.550.717.732.368; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Necrose asséptica ou avascular da cabeça femoral; tipos idiopático, complicação de fratura/luxação e Legg-Calvé-Perthes. Descritor sob Osteonecrosis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OPETR",
+      "institution": "NLM MeSH",
+      "title": "Osteopetrosis",
+      "url": "https://id.nlm.nih.gov/mesh/D010022",
+      "locator": "Registro D010022 lido em JSON (D010022.json): scopeNote; treeNumber C05.116.099.708.702.678; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Formação excessiva de osso trabecular denso levando a fraturas patológicas, osteíte, esplenomegalia com infarto, anemia e hematopoese extramedular. Única árvore: Bone Diseases, Developmental > Osteochondrodysplasias > Osteosclerosis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-PAGET",
+      "institution": "NLM MeSH",
+      "title": "Osteitis Deformans",
+      "url": "https://id.nlm.nih.gov/mesh/D010001",
+      "locator": "Registro D010001 lido em JSON (D010001.json): scopeNote; treeNumber C05.116.692; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Episódios repetidos de reabsorção óssea aumentada seguidos de reparo excessivo, com ossos enfraquecidos, deformados e de massa aumentada. Única árvore: Musculoskeletal Diseases > Bone Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-SS",
+      "institution": "NLM MeSH",
+      "title": "Spinal Stenosis",
+      "url": "https://id.nlm.nih.gov/mesh/D013130",
+      "locator": "Registro D013130 lido em JSON (D013130.json): scopeNote; treeNumber C05.116.900.825; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Scope note integral: \"Narrowing of the spinal canal.\" Única árvore: Musculoskeletal Diseases > Bone Diseases > Spinal Diseases; o descritor não consta de Nervous System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-RADIC",
+      "institution": "NLM MeSH",
+      "title": "Radiculopathy",
+      "url": "https://id.nlm.nih.gov/mesh/D011843",
+      "locator": "Registro D011843 lido em JSON (D011843.json): scopeNote; treeNumber C10.668.829.820; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença de raiz nervosa espinal que pode resultar de compressão relacionada a doenças da coluna; dor radicular, fraqueza e perda sensitiva. Árvore: Nervous System Diseases > Peripheral Nervous System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-SCC",
+      "institution": "NLM MeSH",
+      "title": "Spinal Cord Compression",
+      "url": "https://id.nlm.nih.gov/mesh/D013117",
+      "locator": "Registro D013117 lido em JSON (D013117.json): scopeNote; treeNumber C10.228.854.761 e C26.819.678; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Compressão mecânica externa da medula espinal por neoplasia extramedular, abscesso epidural, fraturas, deformidades ósseas vertebrais e outras condições; dor, fraqueza, perda sensitiva, incontinência. Árvore: Nervous System Diseases > Spinal Cord Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-JIA",
+      "institution": "NLM MeSH",
+      "title": "Arthritis, Juvenile",
+      "url": "https://id.nlm.nih.gov/mesh/D001171",
+      "locator": "Registro D001171 lido em JSON (D001171.json): scopeNote; treeNumber C05.550.114.122, C05.799.056, C17.300.775.049 e C20.111.198; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Artrite em crianças com início antes dos 16 anos. Árvores: Joint Diseases > Arthritis, Rheumatic Diseases, Connective Tissue Diseases e Immune System Diseases > Autoimmune Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-REA",
+      "institution": "NLM MeSH",
+      "title": "Arthritis, Reactive",
+      "url": "https://id.nlm.nih.gov/mesh/D016918",
+      "locator": "Registro D016918 lido em JSON (D016918.json): scopeNote; treeNumber C01.100.500, C05.550.114.099.500, C05.550.114.865.800.637, C05.116.900.853.625.800.637 e C23.550.291.500.829.125; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Artrite inflamatória asséptica secundária a infecção extra-articular primária, tipicamente do trato gastrointestinal ou do sistema urogenital (Shigella, Salmonella, Yersinia, Campylobacter, Chlamydia trachomatis); associada a HLA-B27. Árvores: Infections > Arthritis, Infectious > Arthritis, Reactive; Joint Diseases; Spondylarthropathies; Post-Infectious Disorders.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-PMR",
+      "institution": "NLM MeSH",
+      "title": "Polymyalgia Rheumatica",
+      "url": "https://id.nlm.nih.gov/mesh/D011111",
+      "locator": "Registro D011111 lido em JSON (D011111.json): scopeNote; treeNumber C05.651.742, C05.799.720 e C17.300.775.720; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Síndrome em idosos com dor articular e muscular proximal, VHS elevada e curso autolimitado; frequentemente associada à arterite de células gigantes, havendo teorias de etiologia única ou mesma entidade. Árvores: Muscular Diseases, Rheumatic Diseases, Connective Tissue Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-GCA",
+      "institution": "NLM MeSH",
+      "title": "Giant Cell Arteritis",
+      "url": "https://id.nlm.nih.gov/mesh/D013700",
+      "locator": "Registro D013700 lido em JSON (D013700.json): scopeNote; treeNumber em C14.907 (Vascular Diseases > Vasculitis > Arteritis; Cerebrovascular Disorders), C10, C17 e C20; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença autoimune sistêmica de artérias médias e grandes com vasculite granulomatosa oclusiva; artéria temporal comumente envolvida; sintomas incluem comprometimento visual. Descritor em Cardiovascular Diseases e também em Nervous System Diseases (vasculite do SNC).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-AA",
+      "institution": "NLM MeSH",
+      "title": "Anemia, Aplastic",
+      "url": "https://id.nlm.nih.gov/mesh/D000741",
+      "locator": "Registro D000741 lido em JSON (D000741.json): scopeNote; treeNumber C15.378.050.085 e C15.378.190.223.250; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Forma de anemia em que a medula óssea não produz números adequados de elementos do sangue periférico. Árvores: Hematologic Diseases > Anemia e Bone Marrow Diseases > Bone Marrow Failure Disorders.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-B12",
+      "institution": "NLM MeSH",
+      "title": "Vitamin B 12 Deficiency",
+      "url": "https://id.nlm.nih.gov/mesh/D014806",
+      "locator": "Registro D014806 lido em JSON (D014806.json): scopeNote; treeNumber C18.654.521.500.133.699.923; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condição nutricional por deficiência de vitamina B12, caracterizada por anemia megaloblástica; ampla variedade de anormalidades neuropsiquiátricas também é vista. Única árvore: Nutritional and Metabolic Diseases > Deficiency Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-PERN",
+      "institution": "NLM MeSH",
+      "title": "Anemia, Pernicious",
+      "url": "https://id.nlm.nih.gov/mesh/D000752",
+      "locator": "Registro D000752 lido em JSON (D000752.json): scopeNote; treeNumber C15.378.050.252.196.500 e C18.654.521.500.133.699.923.280; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Anemia megaloblástica com acloridria, baseada em má absorção de vitamina B12 por falha da mucosa gástrica em secretar fator intrínseco. Árvores: Hematologic Diseases > Anemia, Megaloblastic e Vitamin B 12 Deficiency; não consta de Digestive System Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MEGALO",
+      "institution": "NLM MeSH",
+      "title": "Anemia, Megaloblastic",
+      "url": "https://id.nlm.nih.gov/mesh/D000749",
+      "locator": "Registro D000749 lido em JSON (D000749.json): scopeNote; treeNumber C15.378.050.252.196; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Anemia com eritrócitos anormalmente grandes e megaloblastos. Árvore: Hemic and Lymphatic Diseases > Hematologic Diseases > Anemia > Anemia, Macrocytic.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-SCD",
+      "institution": "NLM MeSH",
+      "title": "Subacute Combined Degeneration",
+      "url": "https://id.nlm.nih.gov/mesh/D052879",
+      "locator": "Registro D052879 lido em JSON (D052879.json): scopeNote; treeNumber C10.228.854.811, C10.314.875, C10.574.910, C23.550.737.625 e C18.654.521.500.133.699.923.640; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Neuropatia devida à deficiência de vitamina B12 (ou inalação excessiva de óxido nitroso). Árvores: Nervous System Diseases (Spinal Cord Diseases, Demyelinating Diseases, Neurodegenerative Diseases) e sob Vitamin B 12 Deficiency.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ANEMIA",
+      "institution": "NLM MeSH",
+      "title": "Anemia",
+      "url": "https://id.nlm.nih.gov/mesh/D000740",
+      "locator": "Registro D000740 lido em JSON (D000740.json): scopeNote; treeNumber C15.378.050; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Redução do número de eritrócitos circulantes ou da quantidade de hemoglobina. Árvore: Hemic and Lymphatic Diseases > Hematologic Diseases. A busca exata no MeSH por descritor de \"anemia of chronic disease/inflammation\" não retornou registro.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-UVEITIS",
+      "institution": "NLM MeSH",
+      "title": "Uveitis",
+      "url": "https://id.nlm.nih.gov/mesh/D014605",
+      "locator": "Registro D014605 lido em JSON (D014605.json): scopeNote; treeNumber C11.941.879; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação de parte ou de toda a úvea, comumente envolvendo outras túnicas do olho. Árvore: Eye Diseases > Uveal Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-STD",
+      "institution": "NLM MeSH",
+      "title": "Sexually Transmitted Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012749",
+      "locator": "Registro D012749 lido em JSON (D012749.json): scopeNote; treeNumber C01.221.812, C01.778, C12.100.937 e C23.550.291.531.937; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças devidas a ou propagadas por contato sexual. Árvores em Infections e também Urogenital Diseases > Genital Diseases; usado apenas na definição de escopo genito-urinário herdada dos lotes 001–002.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "NIAMS-MB",
+      "institution": "NIAMS (NIH)",
+      "title": "Muscle and Bone Diseases",
+      "url": "https://www.niams.nih.gov/health-topics/muscle-bone-diseases",
+      "locator": "Lista de condições (atualizada em junho de 2025): Osteonecrosis, Osteopetrosis, Paget's Disease of Bone, Spinal Stenosis",
+      "observedSupport": "A lista institucional de doenças de músculos e ossos inclui osteonecrose, osteopetrose, doença de Paget óssea e estenose espinal; a entrada de estenose espinal a descreve como estreitamento da coluna que pressiona medula e nervos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "NIAMS-ARD",
+      "institution": "NIAMS (NIH)",
+      "title": "Arthritis and Rheumatic Diseases",
+      "url": "https://www.niams.nih.gov/health-topics/arthritis-and-rheumatic-diseases",
+      "locator": "Lista de condições (atualizada em junho de 2025): Juvenile Idiopathic Arthritis; Polymyalgia Rheumatica and Giant Cell Arteritis; Reactive Arthritis",
+      "observedSupport": "A lista institucional de artrites e doenças reumáticas inclui artrite idiopática juvenil, polimialgia reumática/arterite de células gigantes e artrite reativa (causada por infecção; olhos vermelhos e trato urinário inflamado citados).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "NIAMS-ON",
+      "institution": "NIAMS (NIH)",
+      "title": "Osteonecrosis",
+      "url": "https://www.niams.nih.gov/health-topics/osteonecrosis",
+      "locator": "Overview; Who Gets; Types; Symptoms; Causes",
+      "observedSupport": "Interrupção do fluxo sanguíneo a parte de um osso com morte do tecido ósseo; também chamada necrose avascular, asséptica ou isquêmica. Fatores de risco listados: trauma, corticosteroides, álcool em excesso, doenças do sangue como a falciforme, cânceres como leucemia, quimioterapia e radioterapia, doença descompressiva, Gaucher, gota, infecção por HIV, pancreatite, artrite reumatoide, lúpus, transplante renal ou de outro órgão. Em casos não traumáticos o mecanismo é menos claro (coágulos ou pressão intraóssea).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIAMS-OP",
+      "institution": "NIAMS (NIH)",
+      "title": "Osteopetrosis",
+      "url": "https://www.niams.nih.gov/health-topics/osteopetrosis",
+      "locator": "Overview; Types; Symptoms; Causes",
+      "observedSupport": "Grupo de distúrbios genéticos com ossos excessivamente densos e frágeis. Alterações do crânio podem pressionar nervos com perda visual, perda auditiva e paralisia de músculos faciais; redução do espaço medular leva a baixos níveis de células que combatem infecção, transportam oxigênio ou controlam sangramento (anemia e infecção); congestão nasal por estreitamento de cavidades sinusais; osteomielite.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIAMS-PAGET",
+      "institution": "NIAMS (NIH)",
+      "title": "Paget's Disease of Bone",
+      "url": "https://www.niams.nih.gov/health-topics/pagets-disease-bone",
+      "locator": "Overview; Symptoms; Complications; Causes",
+      "observedSupport": "Distúrbio crônico em que ossos ficam maiores e mais fracos. Cefaleia e perda auditiva quando o crânio é afetado (alterações dos ossos do crânio e do ouvido); pressão sobre encéfalo, medula ou nervos e fluxo sanguíneo reduzido para encéfalo e medula; em pessoas com cardiopatia prévia e doença grave, a carga extra de bombeamento pode levar a insuficiência cardíaca; raramente, câncer ósseo. Causa desconhecida; certos vírus estão em estudo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIAMS-SS",
+      "institution": "NIAMS (NIH)",
+      "title": "Spinal Stenosis",
+      "url": "https://www.niams.nih.gov/health-topics/spinal-stenosis",
+      "locator": "Overview; Symptoms; Causes",
+      "observedSupport": "Os espaços da coluna se estreitam e criam pressão sobre a medula espinal e as raízes nervosas; algumas pessoas não têm sintomas; dormência, formigamento, fraqueza; em estenose grave, problemas de função intestinal, vesical e sexual. Causas: envelhecimento, osteoartrite, artrite reumatoide, tumores da coluna, fraturas, doença de Paget, ossificação do ligamento longitudinal posterior, estenose congênita, escoliose, acondroplasia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIAMS-JIA",
+      "institution": "NIAMS (NIH)",
+      "title": "Juvenile Idiopathic Arthritis (JIA)",
+      "url": "https://www.niams.nih.gov/health-topics/juvenile-arthritis",
+      "locator": "Overview; Types; Symptoms; Causes",
+      "observedSupport": "Idiopática, com origem não compreendida; o sistema imune ataca tecidos saudáveis; mistura de genes e fatores ambientais. Uveíte crônica em formas oligoarticular e poliarticular FR-negativa e uveíte anterior aguda na forma relacionada a entesite, podendo levar a catarata, glaucoma e perda visual. Na forma sistêmica grave, inflamação em torno de órgãos como baço, linfonodos, fígado e revestimentos do coração e pulmões; problemas de crescimento; familiares com doença tireoidiana autoimune, DII, doença celíaca e diabetes tipo 1.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIAMS-REA",
+      "institution": "NIAMS (NIH)",
+      "title": "Reactive Arthritis",
+      "url": "https://www.niams.nih.gov/health-topics/reactive-arthritis",
+      "locator": "Overview; Who Gets; Symptoms; Causes",
+      "observedSupport": "Causada por infecção bacteriana do trato digestivo, urinário ou genital, mas os sintomas articulares surgem tipicamente após a recuperação; é separada da infecção. Inflamação de articulações, olhos e trato urinário são marcos, mas nem todos têm os três. Inflamação do trato urinário (na mulher, colo uterino, tubas, vulva, vagina); conjuntivite e uveíte; diarreia e dor abdominal; úlceras orais; forma de espondiloartrite; Salmonella, Yersinia, Campylobacter, Shigella, Chlamydia; HIV aumenta o risco.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIAMS-PMR",
+      "institution": "NIAMS (NIH)",
+      "title": "Polymyalgia Rheumatica and Giant Cell Arteritis",
+      "url": "https://www.niams.nih.gov/health-topics/polymyalgia-rheumatica-giant-cell-arteritis",
+      "locator": "Overview; Symptoms; Cause",
+      "observedSupport": "Distúrbios inflamatórios estreitamente ligados. Polimialgia reumática: dor e rigidez muscular em ombros, braços, quadril e pescoço. Pessoas com polimialgia às vezes têm outro distúrbio, a arterite de células gigantes (cerca de 10%), inflamação de artérias incluindo aorta e ramos, com distúrbios visuais e possível cegueira permanente e aneurismas. Inflamação causa ambos, mas não se sabe o que a desencadeia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHLBI-AA",
+      "institution": "NHLBI (NIH)",
+      "title": "Aplastic Anemia",
+      "url": "https://www.nhlbi.nih.gov/health/anemia/aplastic-anemia",
+      "locator": "What is aplastic anemia; symptoms; causes; complications (atualizada em 24/03/2022)",
+      "observedSupport": "Anemia aplástica, ou falência da medula óssea, é condição sanguínea rara e grave em que a medula não produz células sanguíneas novas suficientes. Sintomas incluem infecções prolongadas e sangramento fácil; causa mais comum é ataque autoimune às células-tronco; também medicamentos como quimioterapia e toxinas; aumenta risco de sangramento, leucemia ou outras condições sanguíneas graves; sem tratamento pode levar a arritmia e insuficiência cardíaca. A página não menciona hepatite.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHLBI-B12",
+      "institution": "NHLBI (NIH)",
+      "title": "Vitamin B12–Deficiency Anemia",
+      "url": "https://www.nhlbi.nih.gov/health/anemia/vitamin-b12-deficiency-anemia",
+      "locator": "What is; symptoms; causes; complications (atualizada em 24/03/2022)",
+      "observedSupport": "O corpo não produz hemácias saudáveis suficientes por falta de vitamina B12. Causas: má absorção por problemas intestinais, anemia perniciosa (falta de fator intrínseco, proteína do estômago), álcool, medicamentos (antiácidos, metformina), doenças autoimunes (celíaca, diabetes tipo 1, doença tireoidiana), doença pancreática crônica, colite ulcerativa, Crohn, infecção por Helicobacter pylori, cirurgia gástrica. Sintomas neurológicos (formigamento, dificuldade para andar, confusão, perda de memória), alterações de humor ou mentais como depressão, problemas de olfato/paladar e de visão, diarreia, glossite; sem tratamento, danos permanentes de cérebro e nervos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDDK-ACI",
+      "institution": "NIDDK (NIH)",
+      "title": "Anemia of Inflammation or Chronic Disease",
+      "url": "https://www.niddk.nih.gov/health-information/blood-diseases/anemia-inflammation-chronic-disease",
+      "locator": "What is anemia of inflammation; causes; chronic conditions that cause it (revisada em setembro de 2018)",
+      "observedSupport": "Tipo de anemia que afeta pessoas com condições que causam inflamação, como infecções, doenças autoimunes, câncer e doença renal crônica; ferro armazenado normal ou aumentado com ferro sérico baixo. Condições listadas: autoimunes (artrite reumatoide, lúpus), câncer, infecções crônicas (HIV/AIDS, tuberculose), DRC, doença inflamatória intestinal, diabetes e insuficiência cardíaca. Em DRC, anemia grave aumenta a chance de problemas cardíacos. Listada sob Blood Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NEI-UVEITIS",
+      "institution": "National Eye Institute (NIH)",
+      "title": "Uveitis",
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/uveitis",
+      "locator": "What is uveitis?; What causes uveitis? (atualizada em 04/12/2024)",
+      "observedSupport": "Uveíte é inflamação dentro do olho, podendo causar perda visual; entre as causas por infecção ou condição relacionada a infecção a página lista a artrite reativa.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MLP-OP",
+      "institution": "NLM MedlinePlus Genetics",
+      "title": "Osteopetrosis",
+      "url": "https://medlineplus.gov/genetics/condition/osteopetrosis/",
+      "locator": "Description; Causes (atualizada em 01/09/2010)",
+      "observedSupport": "Doença óssea por variantes em genes da função dos osteoclastos: osso velho não é reabsorvido. Forma autossômica dominante é a mais comum e pode ser assintomática (fraturas, escoliose, artrite de quadril, osteomielite). Forma recessiva grave: nervos cranianos comprimidos com perda visual, auditiva e paralisia facial; função medular prejudicada com sangramento, anemia e infecções recorrentes; hepatoesplenomegalia; em alguns casos anormalidades cerebrais, deficiência intelectual, epilepsia; forma intermediária com acidose tubular renal.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-ANAEMIA",
+      "institution": "WHO",
+      "title": "Anaemia (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/anaemia",
+      "locator": "Overview; Causes",
+      "observedSupport": "Anemia pode ser causada por deficiências nutricionais (inclusive vitamina B12), infecções, inflamação, doenças crônicas e distúrbios hereditários das hemácias; muitas condições crônicas causam inflamação e levam à anemia da inflamação ou de doença crônica; malária, tuberculose, HIV e parasitoses são causas infecciosas citadas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "ICD10-M48",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "ICD-10 Chapter XIII — Dorsopathies: Spondylopathies (M45–M49)",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M48",
+      "locator": "Bloco M45–M49: M46, M48.0 Spinal stenosis (Incl. Caudal stenosis), M49",
+      "observedSupport": "M48.0 Spinal stenosis está no Capítulo XIII (doenças do sistema musculoesquelético e do tecido conjuntivo), em Other spondylopathies; espondilopatias infecciosas têm categorias próprias (M46.2–M46.5, M49.0–M49.3). Nenhuma remissão a capítulo neurológico em M48.0.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-M02",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "ICD-10 Chapter XIII — Infectious arthropathies (M00–M03)",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M02",
+      "locator": "Nota do bloco M00–M03; M02 Reactive arthropathies; M02.3 Reiter disease",
+      "observedSupport": "O bloco \"Infectious arthropathies\" compreende artropatias devidas a agentes microbiológicos e distingue infecção direta da articulação de infecção indireta; artropatia reativa é aquela em que a infecção do organismo está estabelecida mas nem organismos nem antígenos são identificados na articulação. M02 Reactive arthropathies integra esse bloco, no Capítulo XIII.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-D51",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "ICD-10 Chapter III — Nutritional anaemias (D50–D53)",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=D51",
+      "locator": "D51 Vitamin B12 deficiency anaemia; D51.0; D51.1; D51.3",
+      "observedSupport": "D51 está no Capítulo III (doenças do sangue e dos órgãos hematopoéticos), em Nutritional anaemias; D51.0 por deficiência de fator intrínseco (anemia perniciosa); D51.1 má absorção seletiva com proteinúria; exclui deficiência de vitamina B12 sem anemia (E53.8).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-D63",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "ICD-10 Chapter III — Aplastic and other anaemias (D60–D64)",
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=D63",
+      "locator": "D61 Other aplastic anaemias; D63* Anaemia in chronic diseases classified elsewhere",
+      "observedSupport": "D61 (anemias aplásticas: constitucional, induzida por drogas, por outros agentes externos, idiopática) e D63* (anemia em doenças crônicas classificadas em outra parte: D63.0* em doença neoplásica; D63.8* inclui doença renal crônica) estão no Capítulo III (doenças do sangue).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-infectocontagiosas",
+      "institution": "NLM MeSH",
+      "title": "Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D007239",
+      "locator": "Registro D007239 lido em JSON (D007239.json): scopeNote; categoria C01; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Invasão do organismo hospedeiro por microrganismos, suas toxinas ou parasitas, capaz de causar condições patológicas ou doenças.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-COMMUNICABLE",
+      "institution": "NLM MeSH",
+      "title": "Communicable Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D003141",
+      "locator": "Registro D003141 lido em JSON (D003141.json): scopeNote; C01.221; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença causada por agente infeccioso ou suas toxinas, por transmissão direta ou indireta a hospedeiro suscetível.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neurologicas",
+      "institution": "NLM MeSH",
+      "title": "Nervous System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009422",
+      "locator": "Registro D009422 lido em JSON (D009422.json): scopeNote; categoria C10; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças do sistema nervoso central e periférico: encéfalo, medula espinal, nervos cranianos, nervos periféricos, raízes nervosas, sistema autônomo, junção neuromuscular e músculo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-psiquiatricas",
+      "institution": "NLM MeSH",
+      "title": "Mental Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D001523",
+      "locator": "Registro D001523 lido em JSON (D001523.json): scopeNote; categoria F03; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças psiquiátricas manifestadas por anormalidades de pensamento, sentimento e comportamento, com sofrimento ou prejuízo funcional.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-auditivas",
+      "institution": "NLM MeSH",
+      "title": "Ear Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004427",
+      "locator": "Registro D004427 lido em JSON (D004427.json): scopeNote; C09.218; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do ouvido, da audição e do sistema de equilíbrio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-oculares",
+      "institution": "NLM MeSH",
+      "title": "Eye Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D005128",
+      "locator": "Registro D005128 lido em JSON (D005128.json): scopeNote; categoria C11; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que afetam o olho.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-nasais",
+      "institution": "NLM MeSH",
+      "title": "Nose Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009668",
+      "locator": "Registro D009668 lido em JSON (D009668.json): scopeNote; C08.460 e C09.603; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Distúrbios do nariz, gerais ou não especificados; descritor em Respiratory Tract Diseases e em Otorhinolaryngologic Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-respiratorias",
+      "institution": "NLM MeSH",
+      "title": "Respiratory Tract Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012140",
+      "locator": "Registro D012140 lido em JSON (D012140.json): scopeNote; categoria C08; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que envolvem o sistema respiratório.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-cardiovasculares",
+      "institution": "NLM MeSH",
+      "title": "Cardiovascular Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D002318",
+      "locator": "Registro D002318 lido em JSON (D002318.json): scopeNote; categoria C14; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições patológicas do sistema cardiovascular, incluindo coração, vasos sanguíneos ou pericárdio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-digestivas",
+      "institution": "NLM MeSH",
+      "title": "Digestive System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004066",
+      "locator": "Registro D004066 lido em JSON (D004066.json): scopeNote; categoria C06; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças de qualquer parte do trato gastrointestinal ou dos órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-genitourinarias",
+      "institution": "NLM MeSH",
+      "title": "Urogenital Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D000091642",
+      "locator": "Registro D000091642 lido em JSON (D000091642.json): scopeNote; categoria C12; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do trato urinário e do sistema reprodutor (genitália).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-endocrinologicas",
+      "institution": "NLM MeSH",
+      "title": "Endocrine System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004700",
+      "locator": "Registro D004700 lido em JSON (D004700.json): scopeNote; categoria C19; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos das glândulas endócrinas e doenças resultantes de nível anormal de hormônios disponíveis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-miostioarticulares",
+      "institution": "NLM MeSH",
+      "title": "Musculoskeletal Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009140",
+      "locator": "Registro D009140 lido em JSON (D009140.json): scopeNote; categoria C05; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças dos músculos e de seus ligamentos e outros tecidos conjuntivos associados, e dos ossos e cartilagens, vistos coletivamente.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-hematologicas",
+      "institution": "NLM MeSH",
+      "title": "Hemic and Lymphatic Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D006425",
+      "locator": "Registro D006425 lido em JSON (D006425.json): scopeNote; categoria C15; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças hematológicas e do sistema linfático: elementos figurados, componentes químicos do sangue, linfa, linfonodos e linfócitos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neoplasicas",
+      "institution": "NLM MeSH",
+      "title": "Neoplasms",
+      "url": "https://id.nlm.nih.gov/mesh/D009369",
+      "locator": "Registro D009369 lido em JSON (D009369.json): scopeNote; categoria C04; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Crescimento novo e anormal de tecido; neoplasias malignas têm maior anaplasia, invasão e metástase que as benignas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    }
+  ],
+  "groupScopes": [
+    {
+      "groupId": "infectocontagiosas",
+      "scope": "Infecções por microrganismos ou parasitas, incluindo doenças transmissíveis; não exige transmissão direta uniforme (interpretação da política local).",
+      "sourceIds": [
+        "SCOPE-infectocontagiosas",
+        "SCOPE-COMMUNICABLE"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neurologicas",
+      "scope": "Sistema nervoso central e periférico: encéfalo, medula, nervos e raízes; inclusão de junção neuromuscular e músculo é fronteira curricular.",
+      "sourceIds": [
+        "SCOPE-neurologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "psiquiatricas",
+      "scope": "Transtornos mentais definidos (pensamento, afeto e comportamento com sofrimento ou prejuízo); sintomas ou comorbidades isoladas não bastam.",
+      "sourceIds": [
+        "SCOPE-psiquiatricas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "auditivas",
+      "scope": "Ouvido, audição e sistema de equilíbrio vestibular.",
+      "sourceIds": [
+        "SCOPE-auditivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "oculares",
+      "scope": "Doenças que afetam o olho; origem neurológica de déficit visual deve ser distinguida.",
+      "sourceIds": [
+        "SCOPE-oculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "nasais",
+      "scope": "Distúrbios do nariz; sobreposição com vias respiratórias possível.",
+      "sourceIds": [
+        "SCOPE-nasais"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "respiratorias",
+      "scope": "Doenças do sistema respiratório.",
+      "sourceIds": [
+        "SCOPE-respiratorias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "cardiovasculares",
+      "scope": "Coração, vasos sanguíneos e pericárdio; doenças cerebrovasculares constam do ramo vascular.",
+      "sourceIds": [
+        "SCOPE-cardiovasculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "digestivas",
+      "scope": "Trato gastrointestinal e órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "sourceIds": [
+        "SCOPE-digestivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "genitourinarias",
+      "scope": "Trato urinário e sistema reprodutor; o MeSH situa ISTs em Genital Diseases, mas via sexual isolada não determina sítio (regra do lote 001 mantida).",
+      "sourceIds": [
+        "SCOPE-genitourinarias",
+        "MESH-STD"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "endocrinologicas",
+      "scope": "Glândulas endócrinas e doenças por nível hormonal anormal; fator de risco ou influência hormonal isolados não bastam.",
+      "sourceIds": [
+        "SCOPE-endocrinologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "miostioarticulares",
+      "scope": "Músculos, ligamentos, ossos, cartilagem e articulações; fronteira neuromuscular é curricular.",
+      "sourceIds": [
+        "SCOPE-miostioarticulares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "hematologicas",
+      "scope": "Sangue (elementos figurados e componentes químicos) e sistema linfático; extensão linfática é fronteira curricular não resolvida.",
+      "sourceIds": [
+        "SCOPE-hematologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neoplasicas",
+      "scope": "Crescimento tecidual novo e anormal, benigno ou maligno; causa, agente ou fator de risco não é tumor.",
+      "sourceIds": [
+        "SCOPE-neoplasicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    }
+  ],
+  "records": [
+    {
+      "arrayIndex": 170,
+      "diseaseId": "osteonecrose",
+      "diseaseName": "Osteonecrose",
+      "recordObjectSha256": "ea8d8696deb7dfd3cd73fdcd49205f3ba4e39d120dd9727ca1e63e451228524a",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NIAMS lista infecção por HIV entre os fatores de risco, embora o sinônimo \"necrose asséptica\" indique que o osso não está infectado; vínculo causal documentado sem distinção institucional explícita mantém o par retido.",
+          "sourceIds": [
+            "NIAMS-ON",
+            "MESH-FHN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O mecanismo descrito é interrupção do suprimento sanguíneo ao osso (lesão de vasos, coágulos, estreitamento vascular); não foi resolvido se mecanismo vascular local corresponde ao grupo cardiovascular. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIAMS-ON",
+            "MESH-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Pancreatite e uso excessivo de álcool constam entre os fatores de risco listados pelo NIAMS; fator de risco não é identidade da doença, mas impede negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Transplante renal (com corticoterapia) consta entre os contextos de risco listados; não estabelece doença genito-urinária nem a exclui.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Corticosteroides são o principal fator não traumático citado e a doença de Gaucher é listada; trata-se de exposição medicamentosa e doença metabólica, sem definição de vínculo endócrino nas fontes lidas.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Morte de tecido ósseo; o MeSH situa Osteonecrosis em Musculoskeletal Diseases > Bone Diseases e o NIAMS a lista entre as doenças de músculos e ossos.",
+          "sourceIds": [
+            "MESH-ON",
+            "MESH-FHN",
+            "NIAMS-MB",
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Doenças do sangue como a falciforme são fator de risco listado pelo NIAMS; causa associada não transfere categoria ao diagnóstico escrito, mas o vínculo documentado impede negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Cânceres como leucemia, quimioterapia e radioterapia constam entre os fatores de risco listados; não é tumor, mas o vínculo causal documentado impede negativo.",
+          "sourceIds": [
+            "NIAMS-ON"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 13 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 171,
+      "diseaseId": "osteopetrose",
+      "diseaseName": "Osteopetrose",
+      "recordObjectSha256": "7727a5e20391a4aed0ea348559b42ee8820afb19533bdc6ac810f812cec9a315",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "infectocontagiosas",
+          "neurologicas",
+          "auditivas",
+          "oculares",
+          "hematologicas"
+        ],
+        "held": [
+          "psiquiatricas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "conditional",
+          "reason": "Osteomielite é listada como manifestação pelo NIAMS e pelo MedlinePlus, e infecções recorrentes decorrem da falência medular nas formas graves; a doença em si é genética, não infecciosa.",
+          "sourceIds": [
+            "NIAMS-OP",
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com osteomielite ou infecção recorrente documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Ossos do crânio densos comprimem nervos cranianos, com paralisia facial; formas graves podem ter anormalidades cerebrais e epilepsia. A forma dominante, mais comum, pode ser assintomática.",
+          "sourceIds": [
+            "NIAMS-OP",
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com compressão de nervos cranianos ou outro acometimento neurológico documentado.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "O MedlinePlus cita deficiência intelectual em algumas formas graves; não foi resolvido se isso entra no escopo psiquiátrico local. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "conditional",
+          "reason": "Perda auditiva por compressão de nervos pelo crânio espessado é descrita pelo NIAMS e pelo MedlinePlus (forma recessiva grave); não é implicada pelo rótulo genérico.",
+          "sourceIds": [
+            "NIAMS-OP",
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com perda auditiva documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "conditional",
+          "reason": "Perda visual por compressão de nervos pelo crânio espessado é descrita pelo NIAMS e pelo MedlinePlus; a origem é neural (nervo óptico), e a fronteira entre ocular e neurológico é curricular.",
+          "sourceIds": [
+            "NIAMS-OP",
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com perda visual documentada por compressão do nervo óptico.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "O NIAMS lista congestão nasal por estreitamento das cavidades sinusais; sintoma isolado, sem diagnóstico nasal definido. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIAMS-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "O MedlinePlus cita hepatoesplenomegalia na forma recessiva; aumento do fígado por hematopoese extramedular não foi resolvido como doença digestiva.",
+          "sourceIds": [
+            "MLP-OP",
+            "MESH-OPETR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "O MedlinePlus cita acidose tubular renal na forma intermediária; subtipo raro, sem resolução quanto ao escopo local.",
+          "sourceIds": [
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Crescimento lento e baixa estatura são citados pelo MedlinePlus sem mecanismo endócrino; nenhuma fonte lida estabelece ou exclui o vínculo.",
+          "sourceIds": [
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Doença óssea genética com ossos densos e frágeis; única árvore MeSH em Bone Diseases, Developmental; listada pelo NIAMS entre as doenças de músculos e ossos.",
+          "sourceIds": [
+            "MESH-OPETR",
+            "NIAMS-MB",
+            "NIAMS-OP",
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "conditional",
+          "reason": "A própria scope note do MeSH inclui anemia, esplenomegalia e hematopoese extramedular; NIAMS e MedlinePlus descrevem falência medular com anemia, sangramento e infecções nas formas graves. A forma dominante mais comum pode não ter acometimento hematológico.",
+          "sourceIds": [
+            "MESH-OPETR",
+            "NIAMS-OP",
+            "MLP-OP"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com anemia, citopenia ou falência medular documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Distúrbio genético da função dos osteoclastos em que osso velho não é reabsorvido (MedlinePlus, NIAMS); o adensamento resulta de falha de remodelação, não de crescimento tecidual novo no sentido da scope note de Neoplasms. Nenhuma fonte lida documenta vínculo neoplásico.",
+          "sourceIds": [
+            "MLP-OP",
+            "NIAMS-OP",
+            "MESH-OPETR",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Distúrbio genético da função dos osteoclastos em que osso velho não é reabsorvido (MedlinePlus, NIAMS); o adensamento resulta de falha de remodelação, não de crescimento tecidual novo no sentido da scope note de Neoplasms. Nenhuma fonte lida documenta vínculo neoplásico.",
+            "sourceIds": [
+              "MLP-OP",
+              "NIAMS-OP",
+              "MESH-OPETR",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: osteopetrose×hematologicas (anemia e hematopoese extramedular constam da própria scope note do MeSH), ×neurologicas, ×auditivas, ×oculares (compressão de nervos cranianos) e ×infectocontagiosas (osteomielite) — sobreposições documentadas não declaradas no rascunho; registrar como condicionais.",
+        "Pares retidos com sobreposição documentada a resolver: osteopetrose×nasais, ×digestivas, ×genitourinarias, ×psiquiatricas, ×endocrinologicas; demais retidos: respiratorias, cardiovasculares.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 5 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (infectocontagiosas, neurologicas, auditivas, oculares, hematologicas) e 7 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 172,
+      "diseaseId": "doenca-paget-ossea",
+      "diseaseName": "Doença de Paget óssea",
+      "recordObjectSha256": "2cec04fed9f1e2cbcfe4861655078d2ccf58a02d50f1799a03a86dd48c8198a2",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "neurologicas",
+          "auditivas",
+          "cardiovasculares",
+          "neoplasicas"
+        ],
+        "held": [
+          "infectocontagiosas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "A causa é desconhecida e o NIAMS informa que certos vírus estão em estudo como possível causa; hipótese não resolvida impede negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Ossos aumentados do crânio e da coluna podem pressionar encéfalo, medula ou nervos e reduzir o fluxo sanguíneo para encéfalo e medula; não ocorre em todo paciente (muitos são assintomáticos).",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com compressão neural documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "conditional",
+          "reason": "Perda auditiva é descrita quando o crânio é afetado, por alterações dos ossos do crânio e do ouvido; não é implicada pelo rótulo genérico.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com acometimento do crânio e perda auditiva documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "conditional",
+          "reason": "O NIAMS descreve insuficiência cardíaca em pessoas com cardiopatia prévia e doença de Paget grave, pela carga extra de bombeamento; complicação específica, não universal.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com insuficiência cardíaca documentada em doença extensa.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Distúrbio crônico de remodelação óssea com ossos aumentados e enfraquecidos; única árvore MeSH em Musculoskeletal Diseases > Bone Diseases; listada pelo NIAMS entre as doenças de músculos e ossos.",
+          "sourceIds": [
+            "MESH-PAGET",
+            "NIAMS-MB",
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "conditional",
+          "reason": "O NIAMS informa que, raramente, pessoas com doença de Paget desenvolvem câncer ósseo; complicação rara, não característica do rótulo.",
+          "sourceIds": [
+            "NIAMS-PAGET"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com neoplasia óssea documentada como complicação.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Pares que bloqueiam: doenca-paget-ossea×auditivas, ×neurologicas, ×cardiovasculares e ×neoplasicas (perda auditiva, compressão neural, insuficiência cardíaca e câncer ósseo descritos pelo NIAMS e não declarados no rascunho; registrar como condicionais).",
+        "Par retido com hipótese documentada a resolver: doenca-paget-ossea×infectocontagiosas (vírus em estudo); demais retidos: psiquiatricas, oculares, nasais, respiratorias, digestivas, genitourinarias, endocrinologicas, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 4 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (neurologicas, auditivas, cardiovasculares, neoplasicas) e 9 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 173,
+      "diseaseId": "estenose-espinal",
+      "diseaseName": "Estenose espinal",
+      "recordObjectSha256": "1719be3181480f357f23ff9d4743378948c23ff7b031ce33d50c9836d9e86298",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares",
+        "neurologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "neurologicas"
+        ],
+        "held": [
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Definição anatômica: estreitamento do canal vertebral (MeSH), com causas degenerativas, congênitas, traumáticas ou tumorais listadas pelo NIAMS; a ICD-10 classifica espondilopatias infecciosas (M46.2–M46.5, M49.0–M49.3) em categorias distintas de M48.0. Nenhuma fonte lida atribui o diagnóstico escrito a agente infeccioso.",
+          "sourceIds": [
+            "MESH-SS",
+            "ICD10-M48",
+            "NIAMS-SS",
+            "SCOPE-infectocontagiosas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Definição anatômica: estreitamento do canal vertebral (MeSH), com causas degenerativas, congênitas, traumáticas ou tumorais listadas pelo NIAMS; a ICD-10 classifica espondilopatias infecciosas (M46.2–M46.5, M49.0–M49.3) em categorias distintas de M48.0. Nenhuma fonte lida atribui o diagnóstico escrito a agente infeccioso.",
+            "sourceIds": [
+              "MESH-SS",
+              "ICD10-M48",
+              "NIAMS-SS",
+              "SCOPE-infectocontagiosas"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "O rascunho declara positivo irrestrito. O NIAMS define a condição pela pressão sobre medula e raízes, mas informa que algumas pessoas não têm sintomas; MeSH (única árvore em Bone Diseases > Spinal Diseases, scope note \"Narrowing of the spinal canal\") e ICD-10 (M48.0, Capítulo XIII) a classificam apenas como doença da coluna, e os quadros neurológicos resultantes são descritores próprios (Radiculopathy, Spinal Cord Compression). O texto do rascunho também cita \"nervo mediano\", estrutura alheia a esta doença.",
+          "sourceIds": [
+            "NIAMS-SS",
+            "MESH-SS",
+            "ICD10-M48",
+            "MESH-RADIC",
+            "MESH-SCC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com compressão neural sintomática documentada (radiculopatia, mielopatia, claudicação neurogênica ou cauda equina).",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "O NIAMS cita problemas de função intestinal na estenose grave, por compressão neural; disfunção secundária sem diagnóstico digestivo definido. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "O NIAMS cita problemas de função vesical e sexual na estenose grave, e o MeSH cita incontinência e impotência na compressão medular; disfunção neurogênica sem resolução quanto ao escopo genito-urinário.",
+          "sourceIds": [
+            "NIAMS-SS",
+            "MESH-SCC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Estreitamento do canal vertebral; única árvore MeSH em Musculoskeletal Diseases > Bone Diseases > Spinal Diseases; ICD-10 M48.0 no capítulo musculoesquelético; listada pelo NIAMS entre as doenças de músculos e ossos.",
+          "sourceIds": [
+            "MESH-SS",
+            "ICD10-M48",
+            "NIAMS-MB",
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-SS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Tumores da coluna constam entre as causas listadas pelo NIAMS, e o MeSH cita neoplasia extramedular na compressão medular; causa não é identidade, mas o vínculo documentado impede negativo.",
+          "sourceIds": [
+            "NIAMS-SS",
+            "MESH-SCC"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: estenose-espinal×neurologicas está declarado como positivo irrestrito, mas MeSH e ICD-10 classificam a doença só como musculoesquelética e o NIAMS admite casos sem sintomas; rebaixar a condicional (compressão neural documentada) ou obter decisão curricular explícita para mantê-lo positivo.",
+        "Defeito editorial: a justificativa do vínculo neurológico cita \"nervo mediano\", estrutura do túnel do carpo e não da estenose espinal; corrigir o texto.",
+        "Pares retidos com sobreposição documentada a resolver: estenose-espinal×genitourinarias, ×digestivas (disfunção vesical, sexual e intestinal na estenose grave) e ×neoplasicas (tumores como causa); demais retidos: psiquiatricas, auditivas, oculares, nasais, respiratorias, cardiovasculares, endocrinologicas, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": false,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (neurologicas), das quais 1 é(são) positivo(s) declarado(s) não confirmado(s) como irrestrito(s) (neurologicas), e 11 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 174,
+      "diseaseId": "artrite-idiopatica-juvenil",
+      "diseaseName": "Artrite idiopática juvenil",
+      "recordObjectSha256": "b053b20333b7be0ed29bfe8410ed79a0ef999e8d2d180b234714a48cd5a4b920",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "oculares"
+        ],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "O NIAMS descreve a doença como idiopática com ataque do sistema imune a tecidos próprios, e o MeSH a situa em Autoimmune Diseases; nenhuma fonte lida atribui o diagnóstico a microrganismo. Como a origem permanece desconhecida (genes e fatores ambientais), o candidato exige confirmação curricular.",
+          "sourceIds": [
+            "NIAMS-JIA",
+            "MESH-JIA",
+            "SCOPE-infectocontagiosas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "O NIAMS descreve a doença como idiopática com ataque do sistema imune a tecidos próprios, e o MeSH a situa em Autoimmune Diseases; nenhuma fonte lida atribui o diagnóstico a microrganismo. Como a origem permanece desconhecida (genes e fatores ambientais), o candidato exige confirmação curricular.",
+            "sourceIds": [
+              "NIAMS-JIA",
+              "MESH-JIA",
+              "SCOPE-infectocontagiosas"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "conditional",
+          "reason": "Uveíte crônica (formas oligoarticular e poliarticular FR-negativa) e uveíte anterior aguda (forma relacionada a entesite) são descritas pelo NIAMS, com risco de catarata, glaucoma e perda visual; o MeSH situa Uveitis em Eye Diseases. Não ocorre em toda criança com AIJ.",
+          "sourceIds": [
+            "NIAMS-JIA",
+            "MESH-UVEITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com uveíte documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Na forma sistêmica grave o NIAMS descreve inflamação nos revestimentos dos pulmões; manifestação de subtipo, sem entidade respiratória definida nas fontes lidas. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Na forma sistêmica grave o NIAMS descreve inflamação nos revestimentos do coração; manifestação de subtipo ainda não resolvida como vínculo cardiovascular. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Na forma sistêmica grave o NIAMS cita inflamação em torno do fígado; familiares podem ter doença inflamatória intestinal ou celíaca. Nada disso define doença digestiva do paciente, mas impede negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "O NIAMS cita problemas de crescimento e familiares com doença tireoidiana autoimune ou diabetes tipo 1; não estabelece doença endócrina do paciente nem a exclui.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Artrite crônica da infância; o MeSH a situa em Joint Diseases > Arthritis e Rheumatic Diseases, e o NIAMS a lista entre as artrites e doenças reumáticas.",
+          "sourceIds": [
+            "MESH-JIA",
+            "NIAMS-ARD",
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Na forma sistêmica grave o NIAMS cita inflamação de baço e linfonodos; a extensão linfática do grupo hematológico é fronteira curricular não resolvida.",
+          "sourceIds": [
+            "NIAMS-JIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Artrite inflamatória autoimune/autoinflamatória da infância (NIAMS; MeSH em Autoimmune Diseases), sem crescimento tecidual novo no sentido da scope note de Neoplasms; nenhuma fonte lida documenta vínculo neoplásico.",
+          "sourceIds": [
+            "NIAMS-JIA",
+            "MESH-JIA",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Artrite inflamatória autoimune/autoinflamatória da infância (NIAMS; MeSH em Autoimmune Diseases), sem crescimento tecidual novo no sentido da scope note de Neoplasms; nenhuma fonte lida documenta vínculo neoplásico.",
+            "sourceIds": [
+              "NIAMS-JIA",
+              "MESH-JIA",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: artrite-idiopatica-juvenil×oculares (uveíte descrita pelo NIAMS como frequente e ausente do rascunho; registrar como condicional).",
+        "Pares retidos com sobreposição documentada a resolver (forma sistêmica): artrite-idiopatica-juvenil×cardiovasculares, ×respiratorias, ×digestivas, ×hematologicas, ×endocrinologicas; demais retidos: neurologicas, psiquiatricas, auditivas, nasais, genitourinarias.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (oculares) e 10 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 175,
+      "diseaseId": "artrite-reativa",
+      "diseaseName": "Artrite reativa",
+      "recordObjectSha256": "549f8cba0a458784fe915f043c0b0b070de7b396cefaabaedcc276df162a2674",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [
+        "oculares"
+      ],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "oculares",
+          "genitourinarias"
+        ],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "Mapeamento não resolvido: o MeSH situa o descritor em Infections > Arthritis, Infectious e a ICD-10 inclui M02 no bloco \"Infectious arthropathies\", mas a scope note do MeSH a define como asséptica e o NIAMS afirma que é separada da infecção e surge após sua resolução. A política local define o grupo por etiologia infecciosa; a decisão é curricular e o par nunca pode ser distrator.",
+          "sourceIds": [
+            "MESH-REA",
+            "ICD10-M02",
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "conditional",
+          "reason": "Condicional declarado e confirmado: o NIAMS descreve conjuntivite e uveíte, com inflamação ocular como um dos marcos que nem todos apresentam; o NEI lista a artrite reativa entre as condições relacionadas a infecção que causam uveíte.",
+          "sourceIds": [
+            "NIAMS-REA",
+            "NEI-UVEITIS",
+            "MESH-UVEITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com conjuntivite, uveíte ou outro acometimento ocular documentado.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "A infecção desencadeante é com frequência entérica (MeSH, NIAMS) e o NIAMS lista diarreia, dor abdominal e úlceras orais; infecção antecedente e sintomas não definem doença digestiva, mas impedem negativo.",
+          "sourceIds": [
+            "MESH-REA",
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "conditional",
+          "reason": "Inflamação do trato urinário (e, na mulher, de colo uterino, tubas, vulva e vagina) é um dos marcos descritos pelo NIAMS, mas nem todos a apresentam; a infecção desencadeante pode ser urogenital (MeSH). Ausente do rascunho.",
+          "sourceIds": [
+            "NIAMS-REA",
+            "NIAMS-ARD",
+            "MESH-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com uretrite, cervicite ou outra inflamação urogenital documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Artrite inflamatória, forma de espondiloartrite; o MeSH a situa em Joint Diseases > Arthritis e Spondylarthropathies, a ICD-10 em M02 (Capítulo XIII) e o NIAMS a lista entre as artrites e doenças reumáticas.",
+          "sourceIds": [
+            "MESH-REA",
+            "ICD10-M02",
+            "NIAMS-ARD",
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-REA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Artrite inflamatória asséptica pós-infecciosa (MeSH, NIAMS), sem crescimento tecidual novo no sentido da scope note de Neoplasms; nenhuma fonte lida documenta vínculo neoplásico.",
+          "sourceIds": [
+            "MESH-REA",
+            "NIAMS-REA",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Artrite inflamatória asséptica pós-infecciosa (MeSH, NIAMS), sem crescimento tecidual novo no sentido da scope note de Neoplasms; nenhuma fonte lida documenta vínculo neoplásico.",
+            "sourceIds": [
+              "MESH-REA",
+              "NIAMS-REA",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: artrite-reativa×genitourinarias (inflamação urogenital é um dos marcos descritos pelo NIAMS e está ausente do rascunho; registrar como condicional).",
+        "Par retido que exige decisão curricular: artrite-reativa×infectocontagiosas (MeSH e ICD-10 a situam entre artropatias infecciosas; NIAMS e scope note a descrevem como asséptica e separada da infecção). Outro retido com sobreposição documentada: ×digestivas; demais retidos: neurologicas, psiquiatricas, auditivas, nasais, respiratorias, cardiovasculares, endocrinologicas, hematologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (genitourinarias) e 10 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 176,
+      "diseaseId": "polimialgia-reumatica",
+      "diseaseName": "Polimialgia reumática",
+      "recordObjectSha256": "286d5094413db35ebb2596f2714b097a9a3ad6229284b557bf53e4f83018ca0c",
+      "inputClaimedPositiveGroupIds": [
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "cardiovasculares"
+        ],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NIAMS informa que a inflamação causa a doença mas não se sabe o que a desencadeia; causa desconhecida não permite negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "A arterite de células gigantes associada é situada pelo MeSH também em Nervous System Diseases (vasculite do SNC); nenhuma fonte lida descreve acometimento neurológico da polimialgia isolada.",
+          "sourceIds": [
+            "MESH-GCA",
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Distúrbios visuais e cegueira pertencem à arterite de células gigantes associada (NIAMS, MeSH), por isquemia arterial; efeito de segunda ordem cuja classificação como doença ocular não foi resolvida. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIAMS-PMR",
+            "MESH-GCA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "conditional",
+          "reason": "Cerca de 10% das pessoas com polimialgia têm arterite de células gigantes (NIAMS), vasculite de artérias incluindo aorta, situada pelo MeSH em Cardiovascular Diseases > Vascular Diseases; a scope note do MeSH admite que possam ser a mesma entidade. Ausente do rascunho, cuja própria fonte tem as duas doenças no título.",
+          "sourceIds": [
+            "NIAMS-PMR",
+            "MESH-PMR",
+            "MESH-GCA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com arterite de células gigantes associada documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Síndrome de dor e rigidez muscular e articular proximal; o MeSH a situa em Muscular Diseases e Rheumatic Diseases e o NIAMS a lista entre as artrites e doenças reumáticas.",
+          "sourceIds": [
+            "MESH-PMR",
+            "NIAMS-ARD",
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "VHS elevada (MeSH) é achado laboratorial inflamatório, não doença do sangue; nenhuma fonte lida estabelece ou exclui vínculo hematológico.",
+          "sourceIds": [
+            "MESH-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIAMS-PMR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: polimialgia-reumatica×cardiovasculares (arterite de células gigantes associada em cerca de 10%, situada pelo MeSH em Vascular Diseases, não declarada no rascunho; registrar como condicional).",
+        "Pares retidos com sobreposição documentada a resolver: polimialgia-reumatica×oculares e ×neurologicas (via arterite de células gigantes), ×infectocontagiosas (causa desconhecida); demais retidos: psiquiatricas, auditivas, nasais, respiratorias, digestivas, genitourinarias, endocrinologicas, hematologicas, neoplasicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (cardiovasculares) e 12 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 177,
+      "diseaseId": "anemia-aplastica",
+      "diseaseName": "Anemia aplástica",
+      "recordObjectSha256": "2d61a0eee50c5c5e778b8dbaef2291dd5833c660a860cf7243c415ec44a45542",
+      "inputClaimedPositiveGroupIds": [
+        "hematologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "hematologicas"
+        ],
+        "conditional": [
+          "neoplasicas"
+        ],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NHLBI lista infecções prolongadas entre os sintomas, por falta de leucócitos; consequência inespecífica, sem agente definidor. A página lida não menciona hepatite ou outra infecção como causa. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O NHLBI informa que, sem tratamento, pode levar a arritmia e insuficiência cardíaca; consequência genérica de anemia grave não tratada, não forma própria da doença. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "A doença é da medula óssea (tecido hematopoético dentro dos ossos); MeSH e ICD-10 a situam apenas entre doenças do sangue e nenhuma fonte lida a trata como doença óssea, mas não há distinção explícita.",
+          "sourceIds": [
+            "MESH-AA",
+            "ICD10-D63"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "accepted",
+          "reason": "Falência da medula óssea com produção insuficiente de células sanguíneas; MeSH em Hematologic Diseases > Anemia e Bone Marrow Failure Disorders, ICD-10 D61 no Capítulo III e NHLBI como condição sanguínea.",
+          "sourceIds": [
+            "MESH-AA",
+            "ICD10-D63",
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "conditional",
+          "reason": "O NHLBI informa que a doença aumenta o risco de complicações como leucemia ou outras condições sanguíneas graves; quimioterapia também consta entre as causas. Evolução específica, não característica do rótulo.",
+          "sourceIds": [
+            "NHLBI-AA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com evolução documentada para leucemia ou outra neoplasia hematológica.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: anemia-aplastica×neoplasicas (risco de evolução para leucemia descrito pelo NHLBI e não declarado no rascunho; registrar como condicional).",
+        "Pares retidos com sobreposição documentada a resolver: anemia-aplastica×infectocontagiosas (infecções prolongadas), ×cardiovasculares (arritmia e insuficiência cardíaca sem tratamento), ×miostioarticulares (medula óssea); demais retidos: neurologicas, psiquiatricas, auditivas, oculares, nasais, respiratorias, digestivas, genitourinarias, endocrinologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (neoplasicas) e 12 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 178,
+      "diseaseId": "anemia-deficiencia-b12",
+      "diseaseName": "Anemia por deficiência de vitamina B12",
+      "recordObjectSha256": "53a926bc0c80ba15c2dca7e63c0925844021d0dcbd5934c06b5ddcd5f177bcfc",
+      "inputClaimedPositiveGroupIds": [
+        "hematologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "hematologicas"
+        ],
+        "conditional": [
+          "neurologicas"
+        ],
+        "held": [
+          "infectocontagiosas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NHLBI lista infecção por Helicobacter pylori entre as condições que levam à deficiência, e a OMS cita infecções como causa de anemia; causa não é identidade, mas o vínculo documentado impede negativo.",
+          "sourceIds": [
+            "NHLBI-B12",
+            "WHO-ANAEMIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "O NHLBI descreve formigamento, dificuldade para andar, confusão e perda de memória, com dano possivelmente permanente a cérebro e nervos; o MeSH situa a degeneração combinada subaguda (neuropatia por deficiência de B12) em Nervous System Diseases. Ausente do rascunho.",
+          "sourceIds": [
+            "NHLBI-B12",
+            "MESH-SCD",
+            "MESH-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com manifestação neurológica documentada (neuropatia ou degeneração combinada subaguda).",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "O NHLBI cita alterações de humor ou mentais como depressão e irritabilidade, e a scope note do MeSH menciona anormalidades neuropsiquiátricas; sintoma isolado não basta para o escopo psiquiátrico local, mas a sobreposição impede negativo.",
+          "sourceIds": [
+            "NHLBI-B12",
+            "MESH-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "O NHLBI lista problemas de visão entre os sintomas neurológicos; sintoma sem diagnóstico ocular definido. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "O NHLBI lista problemas de olfato e paladar entre os sintomas; sintoma de origem neural, sem doença nasal definida. Sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição forte e não resolvida: a anemia perniciosa decorre de falha da mucosa gástrica em secretar fator intrínseco, com acloridria (MeSH; ICD-10 D51.0), e o NHLBI lista má absorção intestinal, Crohn, colite ulcerativa, doença celíaca, doença pancreática e cirurgia gástrica entre as causas. O MeSH não situa Anemia, Pernicious em Digestive System Diseases; decisão curricular pendente.",
+          "sourceIds": [
+            "MESH-PERN",
+            "ICD10-D51",
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "A ICD-10 lista um subtipo com proteinúria (D51.1, má absorção seletiva); subtipo raro, sem outra fonte lida e sem resolução quanto ao escopo local.",
+          "sourceIds": [
+            "ICD10-D51"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "O MeSH situa Vitamin B 12 Deficiency apenas em Nutritional and Metabolic Diseases, categoria sem grupo próprio na taxonomia local; o NHLBI cita doença tireoidiana, diabetes tipo 1 e metformina como associações. Não foi resolvido se o grupo endocrinológico local abrange doenças nutricionais/metabólicas.",
+          "sourceIds": [
+            "MESH-B12",
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "accepted",
+          "reason": "Anemia megaloblástica por falta de vitamina B12; ICD-10 D51 no Capítulo III (anemias nutricionais), MeSH Anemia, Pernicious e Anemia, Megaloblastic em Hematologic Diseases e NHLBI como tipo de anemia.",
+          "sourceIds": [
+            "ICD10-D51",
+            "MESH-PERN",
+            "MESH-MEGALO",
+            "MESH-B12",
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHLBI-B12"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: anemia-deficiencia-b12×neurologicas (neuropatia e degeneração combinada subaguda, situada pelo MeSH em Nervous System Diseases, não declaradas no rascunho; registrar como condicional).",
+        "Pares retidos com sobreposição documentada a resolver: anemia-deficiencia-b12×digestivas (anemia perniciosa e má absorção), ×psiquiatricas, ×endocrinologicas (ramo nutricional/metabólico do MeSH), ×infectocontagiosas (H. pylori), ×oculares, ×nasais, ×genitourinarias; demais retidos: auditivas, respiratorias, cardiovasculares, miostioarticulares, neoplasicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (neurologicas) e 12 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 179,
+      "diseaseId": "anemia-inflamatoria",
+      "diseaseName": "Anemia da inflamação/doença crônica",
+      "recordObjectSha256": "b82384a5c0c14d9ba66c7f559b422080d909f84c13c5daab69201c31c729dee5",
+      "inputClaimedPositiveGroupIds": [
+        "hematologicas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "hematologicas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "Infecções crônicas como HIV/AIDS e tuberculose (NIDDK, OMS) e infecções agudas graves (anemia da doença crítica) são causas listadas; a doença de base é outro diagnóstico do paciente, mas o vínculo causal documentado impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI",
+            "WHO-ANAEMIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O NIDDK lista insuficiência cardíaca entre as doenças crônicas inflamatórias causadoras e informa que, na DRC, anemia grave aumenta a chance de problemas cardíacos; vínculo documentado impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Doença inflamatória intestinal (Crohn, colite ulcerativa) é causa listada pelo NIDDK; doença de base não é identidade da anemia, mas impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Doença renal crônica é causa listada pelo NIDDK e a ICD-10 inclui anemia na DRC em D63.8*; doença de base não é identidade da anemia, mas impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI",
+            "ICD10-D63"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "O NIDDK lista diabetes entre as doenças crônicas causadoras e descreve menor produção renal de eritropoetina (hormônio) como mecanismo; vínculo documentado impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Doenças autoimunes como artrite reumatoide e lúpus são causas listadas pelo NIDDK; doença de base não é identidade da anemia, mas impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "accepted",
+          "reason": "Tipo de anemia (segunda mais comum) com ferro sérico baixo e estoques normais; NIDDK a lista em Blood Diseases, a OMS a descreve como anemia da inflamação/doença crônica e a ICD-10 situa D63* no Capítulo III. Não há descritor MeSH próprio; o descritor Anemia está em Hematologic Diseases.",
+          "sourceIds": [
+            "NIDDK-ACI",
+            "WHO-ANAEMIA",
+            "ICD10-D63",
+            "MESH-ANEMIA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "Câncer é causa listada pelo NIDDK e a ICD-10 tem D63.0* (anemia em doença neoplásica); a anemia não é tumor, mas o vínculo causal documentado impede negativo.",
+          "sourceIds": [
+            "NIDDK-ACI",
+            "ICD10-D63"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 13 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    }
+  ],
+  "counts": {
+    "diseasesReviewed": 10,
+    "groupsInspected": 14,
+    "diseaseGroupPairsInspected": 140,
+    "declaredPositiveMembershipsVerified": 10,
+    "declaredConditionalMembershipsVerified": 1,
+    "acceptedMemberships": 10,
+    "conditionalMemberships": 16,
+    "heldPairs": 109,
+    "safeNegativeCandidates": 5,
+    "availableSafeNegatives": 0,
+    "modelReviewed": 2,
+    "needsRevision": 8,
+    "prototypeEligible": 0,
+    "clinicalApprovals": 0
+  },
+  "clinicalApproval": false,
+  "curricularApproval": false,
+  "accessLimitations": [
+    {
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+      "result": "403 com página de verificação anti-robô em requisição direta; conteúdo não lido e não usado como evidência de nenhum par"
+    },
+    {
+      "url": "https://id.nlm.nih.gov/mesh/lookup/descriptor?label=Anemia%20of%20Chronic%20Disease&match=exact",
+      "result": "busca exata (e variantes \"Anemia of Inflammation\") sem resultado: não há descritor MeSH próprio lido para a anemia da inflamação/doença crônica; o par hematológico apoia-se em NIDDK, OMS, ICD-10 e no descritor genérico Anemia"
+    },
+    {
+      "url": "https://icd.who.int/browse10/2019/en/GetConcept?ConceptId=M48",
+      "result": "lido com sucesso, mas somente os blocos ICD-10 de M45–M49, M00–M03, D50–D53 e D60–D64; categorias ICD-10 de osteonecrose, osteopetrose, doença de Paget, artrite juvenil e polimialgia não foram abertas, e a ICD-11 não foi consultada"
+    },
+    {
+      "url": "https://www.nhlbi.nih.gov/health/anemia/aplastic-anemia",
+      "result": "lida com sucesso, mas não menciona hepatite nem outras infecções como causa; essa sobreposição sugerida não pôde ser verificada em fonte aberta nesta passagem e não sustenta veredito"
+    }
+  ],
+  "completion": {
+    "boundedReviewComplete": true,
+    "sourceDraftEdited": false,
+    "applicationEdited": false,
+    "rootReviewEdited": false,
+    "otherDiseaseRecordsReviewed": false,
+    "clinicalApprovalGranted": false,
+    "remainingWork": "Resolve held pairs and incorporate reviewed qualifications in a separately authorized content change; no extension to the 214 records outside indexes 170–179, which belong to other batches not read in this pass."
+  }
+}
