@@ -1,0 +1,4196 @@
+{
+  "schemaVersion": 1,
+  "reportType": "bounded-disease-review-batch",
+  "batchId": "antecedentes-batch-022",
+  "topic": "antecedentes",
+  "status": "completed",
+  "date": "2026-11-15",
+  "scope": {
+    "selection": "Ten objects of the current diseases array, zero-based indexes 200–209, no sorting; ordered ids: hiperplasia-prostatica-benigna, prostatite-bacteriana, endometriose, transtorno-ansiedade-separacao, mastoidite, resfriado-comum, otite-media-efusao, perfuracao-timpanica, disfuncao-tuba-auditiva, perda-auditiva-neurossensorial-subita-idiopatica",
+    "recordCount": 10,
+    "groupCount": 14,
+    "purpose": "Educational taxonomy for a medical-student game; not personal clinical advice",
+    "ownedPaths": [
+      "content/reviews/antecedentes-batch-022.json",
+      "docs/reviews/antecedentes-batch-022.md"
+    ],
+    "remainingRecordsReviewed": false
+  },
+  "input": {
+    "path": "content/drafts/antecedentes.json",
+    "sourceFileSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+    "byteLength": 1029037,
+    "sourceHashAlgorithm": "SHA-256 of exact raw file bytes",
+    "recordObjectHashAlgorithm": "SHA-256 of UTF-8 JSON.stringify(JSON.parse(sourceFile).diseases[arrayIndex]); stored property order retained, no indentation or trailing newline",
+    "recordObjectHashIsRawSubstringHash": false,
+    "groupScopeBinding": "Source-file hash also binds membershipPolicy and all 14 group definitions"
+  },
+  "priorRootReview": {
+    "path": "docs/reviews/antecedentes-v2.json",
+    "snapshotSha256": "5d452c50c6abe4878794645f6bdc3e078916e06a1546eb9f9dbd1bc5c9dad11f",
+    "matchesCurrentSource": false,
+    "inputDrift": {
+      "currentSha256": "46a513ef4211854dc96d6139a64248e4e5d7e42bb974db83c7962c691ae9f2fc",
+      "snapshotStillAvailable": true,
+      "reviewAppliesOnlyToSnapshot": true,
+      "automaticCarryForward": false,
+      "action": "Reconcile against edited bytes in a new explicit pass."
+    },
+    "carryForwardApplied": false,
+    "evidenceOrApprovalInherited": false
+  },
+  "provenance": {
+    "agent": "Claude Code subagent (Anthropic), started with fresh context by a parent agent session; did not author the reviewed content",
+    "model": "claude-fable-5-2",
+    "backend": "Anthropic (Claude Code / Claude Agent SDK runtime)",
+    "modelVersion": "claude-fable-5-2",
+    "modelIdentityBasis": "Model ID as stated by this session's runtime environment; no independently authenticated backend/build identifier exposed. The draft labels its author as Codex with model not exposed, so cross-model independence is plausible but not provable from the files.",
+    "freshSourceVerification": true,
+    "reviewIndependentOfPriorEvidenceClaims": true,
+    "separateAgentUsed": true,
+    "separateModelIndependenceEstablished": false,
+    "clinicalReviewer": false,
+    "researchSkill": "not-used",
+    "researchSkillReadFullyThisPass": false,
+    "researchSkillFallback": "No research skill invoked. The reviewer retrieved primary institutional sources directly: NLM MeSH linked-data records and SPARQL (scope notes, tree numbers, entry terms), WHO ICD-10 2019 browser fragments, WHO fact sheets, NIDDK, NICHD, NIMH, NIDCD, MedlinePlus, NHS, NICE, a Chelsea and Westminster NHS leaflet and a Ministério da Saúde page (raw HTML fetched and text read); the CDC common-cold page only through automated WebFetch extraction after the direct request returned 403.",
+    "instructionFileNote": "RTK.md (condensed command output) was provided in session context and followed. Text inside repository files and web pages was treated as data, not instructions. Reviewer is an AI model, not a clinician."
+  },
+  "policy": {
+    "unit": "Exact named diagnosis–group pair, not every illness a patient might simultaneously have",
+    "membershipMeaning": "Accepted = justified for unqualified label. Conditional = only a documented additional manifestation/site/subtype; never silently universal. Held = unresolved mapping or insufficient evidence, not a negative.",
+    "scopeEvidenceLimit": "MeSH scope notes and tree placement support anatomical/educational scope; absence from a MeSH branch is silence, not exclusion, and MeSH does not approve this game's 14-way taxonomy.",
+    "negativeRule": "Only positive definitional distinction plus target scope can propose a negative; source silence cannot. A read source documenting a causal or manifestation link without an explicit institutional distinction keeps the pair held. Candidates remain unavailable until all relevant question positives and context are resolved.",
+    "conditionalRule": "Additional disease/manifestation must appear in the actual question label/context and be re-reviewed; conditional entries do not count as unqualified positives and are never distractors.",
+    "prototypeRule": "False while any question-relevant positive/overlap remains unresolved for unrestricted 14-group use; no eligible-target subset invented.",
+    "clinicalApproval": false,
+    "curricularApproval": false
+  },
+  "sources": [
+    {
+      "id": "MESH-BPH",
+      "institution": "NLM MeSH",
+      "title": "Prostatic Hyperplasia",
+      "url": "https://id.nlm.nih.gov/mesh/D011470",
+      "locator": "Registro D011470 lido em JSON (D011470.json): scopeNote; annotation; treeNumber C12.100.500.565.500 e C12.200.294.565.500; termos de entrada; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Aumento das células constituintes da próstata, com aumento do órgão e impacto na função do trato urinário inferior. Anotação do registro: \"note category: non-neoplastic despite entry terms ADENOMA, PROSTATIC, and PROSTATIC ADENOMA\". Árvores apenas em Urogenital Diseases (Genital Diseases, Male > Prostatic Diseases), não em Neoplasms. Termos de entrada incluem \"Prostatic Adenoma\" e \"Benign Prostatic Hypertrophy\".",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-HYPERPLASIA",
+      "institution": "NLM MeSH",
+      "title": "Hyperplasia",
+      "url": "https://id.nlm.nih.gov/mesh/D006965",
+      "locator": "Registro D006965 lido em JSON (D006965.json): scopeNote; treeNumber C23.550.444; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Aumento do número de células em tecido ou órgão sem formação de tumor.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-PROSTATITIS",
+      "institution": "NLM MeSH",
+      "title": "Prostatitis",
+      "url": "https://id.nlm.nih.gov/mesh/D011472",
+      "locator": "Registro D011472 lido em JSON (D011472.json): scopeNote; annotation; treeNumber C12.100.500.565.750 e C12.200.294.565.750; termos de entrada; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Infiltração de células inflamatórias no parênquima da próstata; termos de entrada incluem prostatite bacteriana aguda e crônica. Anotação: coordenar com o termo de infecção apropriado, se pertinente. Árvores apenas em Urogenital Diseases (Genital Diseases, Male > Prostatic Diseases), não em Infections.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ENDO",
+      "institution": "NLM MeSH",
+      "title": "Endometriosis",
+      "url": "https://id.nlm.nih.gov/mesh/D004715",
+      "locator": "Registro D004715 lido em JSON (D004715.json): scopeNote; annotation; treeNumber C12.050.351.500.163 e C12.100.250.163; termos de entrada; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Tecido endometrial funcional presente fora do útero, em geral confinado à pelve (ovário, ligamentos, fundo de saco, peritônio uterovesical). Anotação do registro: \"non-neoplastic & nothing to do with \"endometrial carcinoma\" ( = ENDOMETRIAL NEOPLASMS)\". Árvores apenas em Urogenital Diseases (Genital Diseases, Female), não em Neoplasms. Termo de entrada \"Endometrioma\".",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-SEPANX",
+      "institution": "NLM MeSH",
+      "title": "Anxiety, Separation",
+      "url": "https://id.nlm.nih.gov/mesh/D001010",
+      "locator": "Registro D001010 lido em JSON (D001010.json): scopeNote; treeNumber F03.080.300 e F03.625.047; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Ansiedade vivida na separação de pessoa ou objeto de significado particular. Árvores: Mental Disorders > Anxiety Disorders e Mental Disorders > Neurodevelopmental Disorders.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ANXDIS",
+      "institution": "NLM MeSH",
+      "title": "Anxiety Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D001008",
+      "locator": "Registro D001008 lido em JSON (D001008.json): scopeNote; treeNumber F03.080; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Ansiedade persistente e incapacitante; ramo de Mental Disorders.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-MASTOID",
+      "institution": "NLM MeSH",
+      "title": "Mastoiditis",
+      "url": "https://id.nlm.nih.gov/mesh/D008417",
+      "locator": "Registro D008417 lido em JSON (D008417.json): scopeNote; treeNumber C01.160.495.500, C05.116.165.495.249 e C09.218.705.663.652; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação do osso mastoide, em geral complicação de otite média. Árvores: Infections > Bone Diseases, Infectious > Osteomyelitis; Musculoskeletal Diseases > Bone Diseases > Bone Diseases, Infectious > Osteomyelitis; Ear Diseases > Otitis > Otitis Media.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-BONEINF",
+      "institution": "NLM MeSH",
+      "title": "Bone Diseases, Infectious",
+      "url": "https://id.nlm.nih.gov/mesh/D001850",
+      "locator": "Registro D001850 lido em JSON (D001850.json): scopeNote; treeNumber C01.160 e C05.116.165; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças ósseas causadas por microrganismos patogênicos; descritor situado em Infections e em Musculoskeletal Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-COLD",
+      "institution": "NLM MeSH",
+      "title": "Common Cold",
+      "url": "https://id.nlm.nih.gov/mesh/D003139",
+      "locator": "Registro D003139 lido em JSON (D003139.json): scopeNote; treeNumber C01.748.162, C01.925.782.687.207 e C08.730.162; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Distúrbio catarral do trato respiratório superior, viral ou infecção mista, em geral com coriza, congestão nasal e espirros. Árvores: Infections > Respiratory Tract Infections; Virus Diseases > Picornaviridae Infections; Respiratory Tract Diseases > Respiratory Tract Infections. Não está sob Nose Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-NASOPH",
+      "institution": "NLM MeSH",
+      "title": "Nasopharyngitis",
+      "url": "https://id.nlm.nih.gov/mesh/D009304",
+      "locator": "Registro D009304 lido em JSON (D009304.json): scopeNote; annotation; treeNumber C01.748.561.500, C07.550.350.700, C07.550.781.500, C08.730.561.500, C09.775.350.700 e C09.775.649.500; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação da nasofaringe (mucosa, estrutura linfoide e glândulas). Anotação: inflamação da porção nasofaríngea da faringe, \"not nose & pharynx\". Árvores sob Pharyngitis e Nasopharyngeal Diseases; nenhuma sob Nose Diseases. Descritor distinto de Common Cold.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-RTI",
+      "institution": "NLM MeSH",
+      "title": "Respiratory Tract Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D012141",
+      "locator": "Registro D012141 lido em JSON (D012141.json): scopeNote; treeNumber C01.748 e C08.730; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Invasão do sistema respiratório do hospedeiro por microrganismos; descritor situado em Infections e em Respiratory Tract Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OM",
+      "institution": "NLM MeSH",
+      "title": "Otitis Media",
+      "url": "https://id.nlm.nih.gov/mesh/D010033",
+      "locator": "Registro D010033 lido em JSON (D010033.json): scopeNote; treeNumber C09.218.705.663; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação da orelha média, incluindo os ossículos e a tuba auditiva (Eustachian tube).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-OME",
+      "institution": "NLM MeSH",
+      "title": "Otitis Media with Effusion",
+      "url": "https://id.nlm.nih.gov/mesh/D010034",
+      "locator": "Registro D010034 lido em JSON (D010034.json): scopeNote; treeNumber C09.218.705.663.670 (única árvore); termos de entrada; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Inflamação da orelha média com transudato claro amarelo-pálido; sinônimos: otite média secretora/serosa, efusão da orelha média. Única árvore: Ear Diseases > Otitis > Otitis Media (não em Infections).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-TMP",
+      "institution": "NLM MeSH",
+      "title": "Tympanic Membrane Perforation",
+      "url": "https://id.nlm.nih.gov/mesh/D018058",
+      "locator": "Registro D018058 lido em JSON (D018058.json): scopeNote; treeNumber C09.218.903 e C26.930; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Abertura temporária ou persistente no tímpano; sinais dependem do tamanho, da localização e da condição patológica associada. Árvores: Ear Diseases e Wounds and Injuries.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ETUBE",
+      "institution": "NLM MeSH",
+      "title": "Eustachian Tube",
+      "url": "https://id.nlm.nih.gov/mesh/D005064",
+      "locator": "Registro D005064 lido em JSON (D005064.json): scopeNote; treeNumber A09.246.397.369 (anatomia); rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Descritor anatômico da tuba auditiva, parte da orelha média; a busca no MeSH não retornou descritor de doença próprio para a disfunção da tuba.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-SUDDENHL",
+      "institution": "NLM MeSH",
+      "title": "Hearing Loss, Sudden",
+      "url": "https://id.nlm.nih.gov/mesh/D003639",
+      "locator": "Registro D003639 lido em JSON (D003639.json): scopeNote; treeNumber C09.218.458.341.900, C10.597.751.418.341.900 e C23.888.592.763.393.341.900; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Perda auditiva sensorioneural que se instala em horas ou poucos dias; pode dever-se a traumatismo craniano, doenças vasculares, infecções ou surgir sem causa evidente. Árvores: Ear Diseases > Hearing Disorders > Hearing Loss; Nervous System Diseases > Neurologic Manifestations > Sensation Disorders > Hearing Disorders; sinais e sintomas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-SNHL",
+      "institution": "NLM MeSH",
+      "title": "Hearing Loss, Sensorineural",
+      "url": "https://id.nlm.nih.gov/mesh/D006319",
+      "locator": "Registro D006319 lido em JSON (D006319.json): scopeNote; treeNumber C09.218.458.341.887, C10.597.751.418.341.887 e C23.888.592.763.393.341.887; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Perda auditiva por lesão da cóclea e dos elementos sensorioneurais, que incluem o nervo auditivo e suas conexões no tronco encefálico.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "MESH-ACNEUROMA",
+      "institution": "NLM MeSH",
+      "title": "Neuroma, Acoustic",
+      "url": "https://id.nlm.nih.gov/mesh/D009464",
+      "locator": "Registro D009464 lido em JSON (D009464.json): scopeNote; treeNumber em C04 (várias), C09.218.807.800.675, C09.647.675, C10.292.225.750 e C10.292.910.600; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Schwannoma benigno do oitavo nervo craniano; manifestações incluem perda auditiva. Descritor em Neoplasms, Ear Diseases e Cranial Nerve Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-N40-N51",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "Diseases of male genital organs (N40–N51): N40 Hyperplasia of prostate; N41 Inflammatory diseases of prostate",
+      "url": "https://icd.who.int/browse10/2019/en#/N40",
+      "locator": "Fragmento GetConcept?ConceptId=N40 do navegador ICD-10 2019 (HTML bruto lido): bloco N40–N51 do capítulo XIV; inclusões e exclusões de N40; nota de N41",
+      "observedSupport": "Capítulo XIV, doenças do aparelho geniturinário. N40 inclui hipertrofia adenofibromatosa, aumento (benigno) e obstrução prostática; \"Excl.: benign neoplasms of prostate (D29.1)\". N41 (prostatite aguda, crônica, abscesso, prostatocistite): código adicional B95–B98 para identificar o agente infeccioso.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-N80",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "Noninflammatory disorders of female genital tract (N80–N98): N80 Endometriosis",
+      "url": "https://icd.who.int/browse10/2019/en#/N80",
+      "locator": "Fragmento GetConcept?ConceptId=N80 do navegador ICD-10 2019 (HTML bruto lido): bloco N80–N98 do capítulo XIV; subcategorias N80.0–N80.9",
+      "observedSupport": "Capítulo XIV. N80.0 útero; N80.1 ovário; N80.2 tuba; N80.3 peritônio pélvico; N80.4 septo retovaginal e vagina; N80.5 intestino; N80.6 cicatriz cutânea; N80.8 outras (inclui endometriose do tórax); N80.9.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-F93",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "Behavioural and emotional disorders with onset usually occurring in childhood and adolescence (F90–F98): F93.0 Separation anxiety disorder of childhood",
+      "url": "https://icd.who.int/browse10/2019/en#/F93",
+      "locator": "Fragmento GetConcept?ConceptId=F93 do navegador ICD-10 2019 (HTML bruto lido): bloco F90–F98 do capítulo V; texto de F93.0",
+      "observedSupport": "Capítulo V, transtornos mentais e comportamentais. F93.0 distingue-se da ansiedade de separação normal por gravidade ou persistência estatisticamente incomuns e por prejuízo do funcionamento social.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-H65-H75",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "Diseases of middle ear and mastoid (H65–H75): H65 Nonsuppurative otitis media; H68–H69 Eustachian tube; H70 Mastoiditis; H72 Perforation of tympanic membrane",
+      "url": "https://icd.who.int/browse10/2019/en#/H65",
+      "locator": "Fragmento GetConcept?ConceptId=H65 do navegador ICD-10 2019 (HTML bruto lido): bloco H65–H75 do capítulo VIII; inclusões e exclusões de H65, H68, H69, H70 e H72",
+      "observedSupport": "Capítulo VIII, doenças do ouvido e da apófise mastoide. H65 otite média não supurativa (H65.3 inclui glue ear; formas \"with effusion (nonpurulent)\"). H68 salpingite e obstrução da tuba auditiva; H69 outros transtornos da tuba (tuba patulosa; não especificado). H70 mastoidite (aguda com abscesso/empiema; crônica; petrosite). H72 perfuração da membrana timpânica (inclui pós-traumática persistente e pós-inflamatória; \"Excl.: traumatic rupture of ear drum (S09.2)\").",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-H90-H95",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "Other disorders of ear (H90–H95): H91.2 Sudden idiopathic hearing loss",
+      "url": "https://icd.who.int/browse10/2019/en#/H91",
+      "locator": "Fragmento GetConcept?ConceptId=H91 do navegador ICD-10 2019 (HTML bruto lido): bloco H90–H95 do capítulo VIII; H91 e suas exclusões",
+      "observedSupport": "Capítulo VIII. H91.2 perda auditiva súbita idiopática (inclui perda súbita SOE). H91 exclui surdez psicogênica (F44.6), surdez isquêmica transitória (H93.0) e perda induzida por ruído (H83.3).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "ICD10-J00-J06",
+      "institution": "WHO ICD-10 (versão 2019)",
+      "title": "Acute upper respiratory infections (J00–J06): J00 Acute nasopharyngitis [common cold]",
+      "url": "https://icd.who.int/browse10/2019/en#/J00",
+      "locator": "Fragmento GetConcept?ConceptId=J00 do navegador ICD-10 2019 (HTML bruto lido): bloco J00–J06 do capítulo X; inclusões de J00",
+      "observedSupport": "Capítulo X, doenças do aparelho respiratório. J00 nasofaringite aguda [resfriado comum]; inclui coriza (aguda), catarro nasal agudo, nasofaringite SOE/infecciosa e rinite aguda/infecciosa.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-record-not-exhaustive-exclusion"
+    },
+    {
+      "id": "NIDDK-BPH",
+      "institution": "NIH / NIDDK",
+      "title": "Enlarged Prostate (Benign Prostatic Hyperplasia)",
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/prostate-problems/enlarged-prostate-benign-prostatic-hyperplasia",
+      "locator": "What is BPH?; another name; Who is more likely; complications; symptoms; causes (Last Reviewed June 2024)",
+      "observedSupport": "Próstata maior que o normal, com crescimento não causado por câncer; também chamada próstata aumentada, hipertrofia ou obstrução prostática benigna. Sintomas urinários; complicações: retenção urinária, sangue na urina, infecções do trato urinário, doença renal, cálculos vesicais. Câncer de próstata citado como outra condição a diferenciar. Maior probabilidade com doença cardíaca e vascular, diabetes tipo 2 e obesidade. Causa incerta, ligada a envelhecimento e alterações hormonais.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDDK-PROSTATITIS",
+      "institution": "NIH / NIDDK",
+      "title": "Prostatitis: Inflammation of the Prostate",
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/prostate-problems/prostatitis-inflammation-prostate",
+      "locator": "What is prostatitis?; types; causes; symptoms; complications; diagnosis (Last Reviewed July 2014)",
+      "observedSupport": "Quatro tipos, entre eles prostatite bacteriana aguda e crônica: infecção bacteriana da próstata, com bactérias que passam da uretra à próstata. Próstata como parte do sistema reprodutor masculino; problema de trato urinário mais comum em homens com menos de 50 anos. Sintomas urinários, dor genital, inguinal e lombar, febre, calafrios, náusea e vômito. Complicações: infecção bacteriana na corrente sanguínea, abscesso prostático. Sintomas também podem sinalizar câncer de próstata (condição distinta). Não descreve transmissão entre pessoas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-ENDO",
+      "institution": "WHO",
+      "title": "Endometriosis (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/endometriosis",
+      "locator": "Key facts; Overview; Causes; Treatment; Impact",
+      "observedSupport": "Tecido semelhante ao endométrio cresce fora do útero, com inflamação e cicatriz; mais comum na pelve, mas pode ocorrer em abdome e tórax. Dor pélvica, dismenorreia, infertilidade; impacto em evacuação, micção e saúde mental (depressão, ansiedade). Causas desconhecidas; associação com desregulação imune (lúpus, esclerose múltipla, doença inflamatória intestinal). Sangramento intenso pode contribuir para deficiência de ferro; alterações do assoalho pélvico contribuem para dor crônica. Tratamento hormonal.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NICHD-ENDO",
+      "institution": "NIH / NICHD",
+      "title": "About Endometriosis",
+      "url": "https://www.nichd.nih.gov/health/topics/endometri/conditioninfo",
+      "locator": "About Endometriosis (Last Reviewed 2/21/2020)",
+      "observedSupport": "Tecido semelhante ao revestimento do útero cresce em outros locais. Teorias: menstruação retrógrada, metaplasia celômica; possível disseminação por sangue ou linfáticos para órgãos como os pulmões. Focos mais comuns em ovários, tubas, atrás do útero, ligamentos, intestinos ou bexiga; raramente fora da pelve, como nos pulmões.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NICHD-ENDO-SYM",
+      "institution": "NIH / NICHD",
+      "title": "What are the symptoms of endometriosis?",
+      "url": "https://www.nichd.nih.gov/health/topics/endometri/conditioninfo/symptoms",
+      "locator": "Symptoms; Endometriosis-Related Pain (Last Reviewed 2/21/2020)",
+      "observedSupport": "Dor e infertilidade; dor intestinal, evacuação ou micção dolorosas no período menstrual; sintomas gastrointestinais semelhantes a transtorno intestinal. Lesões respondem a hormônios, podem formar nódulos ou cistos ovarianos e conter nervos ligados ao sistema nervoso central.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MS-ENDO",
+      "institution": "Ministério da Saúde (Brasil)",
+      "title": "Endometriose — Saúde de A a Z",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/endometriose",
+      "locator": "Tipos; Sintomas; Diagnóstico; Tratamento",
+      "observedSupport": "Endometriose peritoneal superficial, ovariana (endometrioma) e infiltrativa profunda; dismenorreia, dor pélvica crônica, dispareunia, infertilidade e queixas intestinais e urinárias de padrão cíclico; impacto em saúde mental; terapia hormonal e cirurgia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "WHO-ANX",
+      "institution": "WHO",
+      "title": "Anxiety disorders (fact sheet)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders",
+      "locator": "Key facts; Symptoms and patterns; Contributing factors and prevention",
+      "observedSupport": "Transtornos de ansiedade são os transtornos mentais mais comuns; a lista de tipos inclui o transtorno de ansiedade de separação (medo ou preocupação excessivos com a separação de pessoas de vínculo afetivo profundo). Sintomas podem incluir náusea ou desconforto abdominal e palpitações. Resultam de interação de fatores sociais, psicológicos e biológicos; relação com risco cardiovascular.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIMH-ANX",
+      "institution": "NIH / NIMH",
+      "title": "Anxiety Disorders",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+      "locator": "What is anxiety?",
+      "observedSupport": "Transtornos de ansiedade como tema de saúde mental: ansiedade que não cessa e piora com o tempo; lista generalizada, pânico, social e fobias. A página não nomeia o transtorno de ansiedade de separação; usada só como contexto do grupo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIMH-PANDAS",
+      "institution": "NIH / NIMH",
+      "title": "PANS and PANDAS: Questions and Answers",
+      "url": "https://www.nimh.nih.gov/health/publications/pandas",
+      "locator": "What are PANS and PANDAS?; What causes; What are the symptoms (Revised 2025)",
+      "observedSupport": "PANS/PANDAS: início súbito de TOC ou restrição alimentar em crianças; PANDAS associado a infecção estreptocócica. Sintomas listados incluem preocupação incomum com separar-se da família e \"início súbito de ansiedade de separação\". Hipótese de resposta imune com inflamação cerebral.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHS-MASTOID",
+      "institution": "NHS (Reino Unido)",
+      "title": "Mastoiditis",
+      "url": "https://www.nhs.uk/conditions/mastoiditis/",
+      "locator": "Introdução; Symptoms; urgent advice; Treatments (Page last reviewed 17 August 2026)",
+      "observedSupport": "Infecção rara e grave do osso mastoide atrás da orelha; dor, vermelhidão e inchaço retroauricular, otorreia, febre, cefaleia e perda auditiva; mais provável após infecção de ouvido grave ou repetida. Pode levar a perda auditiva permanente ou meningite se não tratada. Antibiótico intravenoso; mastoidectomia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MLP-MASTOID",
+      "institution": "NIH / NLM MedlinePlus",
+      "title": "Mastoiditis (Medical Encyclopedia)",
+      "url": "https://medlineplus.gov/ency/article/001034.htm",
+      "locator": "Definição; Causes; Symptoms; Possible Complications (Review Date 4/29/2026)",
+      "observedSupport": "Infecção do osso mastoide do crânio, mais frequentemente por extensão de otite média aguda; o osso pode ser destruído. Complicações: destruição do mastoide, vertigem, abscesso epidural, paralisia facial, meningite, perda auditiva, disseminação da infecção para o cérebro ou pelo corpo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHS-COLD",
+      "institution": "NHS (Reino Unido)",
+      "title": "Common cold",
+      "url": "https://www.nhs.uk/conditions/common-cold/",
+      "locator": "Symptoms; difference between cold and flu; How to avoid spreading a cold (Page last reviewed 22 March 2024)",
+      "observedSupport": "Nariz entupido ou escorrendo, espirros, dor de garganta, tosse; também dores musculares, perda de paladar e olfato e sensação de pressão em ouvidos e face. Afeta principalmente nariz e garganta. Causado por vírus que se espalham facilmente por tosse, espirros, mãos e superfícies.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CDC-COLD",
+      "institution": "CDC",
+      "title": "About Common Cold",
+      "url": "https://www.cdc.gov/common-cold/about/index.html",
+      "locator": "Causes; spread; symptoms; complications (página datada de 19/02/2026)",
+      "observedSupport": "Causado por diferentes vírus respiratórios, com rinovírus como os mais frequentes; transmissão por gotículas; coriza e congestão nasal entre os sintomas. Complicações listadas: infecções do ouvido médio, sinusite, crises de asma. Requisição direta retornou 403; conteúdo lido somente por extração automática e usado só como corroboração.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-read-through-webfetch-extraction-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDCD-EAR",
+      "institution": "NIH / NIDCD",
+      "title": "Ear Infections in Children",
+      "url": "https://www.nidcd.nih.gov/health/ear-infections-children",
+      "locator": "What is an ear infection?; symptoms (AOM, OME, COME); What causes an ear infection?; Why are children more likely",
+      "observedSupport": "Otite média com efusão listada entre os três tipos de \"ear infection\": ocorre às vezes após a infecção, com líquido retido atrás do tímpano; na forma crônica o líquido persiste mesmo sem infecção. Infecção de ouvido começa com frequência após resfriado ou outra infecção respiratória alta (infecção bacteriana secundária). A tuba auditiva liga a parte alta da garganta à orelha média e a ventila; adenoides próximas às tubas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHS-GLUE",
+      "institution": "NHS (Reino Unido)",
+      "title": "Glue ear",
+      "url": "https://www.nhs.uk/conditions/glue-ear/",
+      "locator": "Introdução; Symptoms; Treatment from a GP; Hospital treatment (Page last reviewed 05 June 2023)",
+      "observedSupport": "Orelha média preenchida por líquido, com perda auditiva temporária; também otalgia, zumbido e problemas de equilíbrio. Sem medicamento eficaz; antibiótico apenas se causar infecção de ouvido. Menor resolução espontânea em síndrome de Down e fenda labiopalatina. Tubos de ventilação; adenoidectomia ocasional.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NICE-NG233",
+      "institution": "NICE (Reino Unido)",
+      "title": "Otitis media with effusion in under 12s (NG233) — Recommendations",
+      "url": "https://www.nice.org.uk/guidance/ng233/chapter/Recommendations",
+      "locator": "Recomendações 1.2.1–1.2.4; 1.5; 1.6; Terms used in this guideline: Otitis media with effusion",
+      "observedSupport": "OME: efusão na orelha média sem sinais de inflamação aguda ou infecção, distinta da otite média aguda. Diretriz para menores de 12 anos. Associações: dificuldades auditivas, atraso de fala, problemas de comportamento e de equilíbrio; suspeita maior com histórico de IVAS, otite média aguda, anomalias craniofaciais, asma, sibilância, espirros/prurido nasal, conjuntivite, respiração bucal; obstrução nasal, rinorreia e hipertrofia de adenoides. Adenoidectomia adjuvante.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NHS-PERF",
+      "institution": "NHS (Reino Unido)",
+      "title": "Perforated eardrum",
+      "url": "https://www.nhs.uk/conditions/perforated-eardrum/",
+      "locator": "Introdução; Symptoms; Treatment (Page last reviewed 19 April 2023)",
+      "observedSupport": "Orifício ou ruptura do tímpano; costuma surgir após infecção de ouvido, lesão, ruído intenso ou mudança brusca de pressão. Perda auditiva, zumbido, otalgia, secreção, tontura. Antibióticos se houver infecção; miringoplastia.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "MLP-PERF",
+      "institution": "NIH / NLM MedlinePlus",
+      "title": "Ruptured eardrum (Medical Encyclopedia)",
+      "url": "https://medlineplus.gov/ency/article/001038.htm",
+      "locator": "Definição; Causes; Symptoms; Outlook",
+      "observedSupport": "Abertura no tímpano, membrana que separa orelha externa e média. Causas: infecções de ouvido, ruído intenso, mudança rápida de pressão, corpo estranho, trauma. Sintomas: secreção, zumbido, perda auditiva; fraqueza da face ou tontura em casos graves. Complicações raras: perda auditiva prolongada, mastoidite, vertigem, infecção crônica.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "CHELWEST-ETD",
+      "institution": "Chelsea and Westminster Hospital NHS Foundation Trust",
+      "title": "Eustachian tube dysfunction (patient leaflet)",
+      "url": "https://www.chelwest.nhs.uk/your-visit/patient-leaflets/ent-audiology/eustachian-tube-dysfunction",
+      "locator": "What is eustachian tube dysfunction?; symptoms; Treatment",
+      "observedSupport": "Falha prolongada em equalizar a pressão na orelha média; pode resultar de condições de seios da face, garganta, nariz e ouvido, incluindo resfriados comuns e alergias. Audição abafada, dor, plenitude, zumbido, tontura. Descongestionante nasal, corticoide nasal, anti-histamínico.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "NIDCD-SUDDEN",
+      "institution": "NIH / NIDCD",
+      "title": "Sudden Deafness",
+      "url": "https://www.nidcd.nih.gov/health/sudden-deafness",
+      "locator": "What is sudden deafness?; What causes sudden deafness?; diagnosis; research",
+      "observedSupport": "Perda auditiva sensorioneural (\"da orelha interna\") súbita e inexplicada, por alteração dos órgãos sensoriais da orelha interna. Só cerca de 10% têm causa identificável: infecções, traumatismo craniano, doenças autoimunes, fármacos contra câncer ou infecções graves, problemas de circulação sanguínea, doenças neurológicas como esclerose múltipla, doenças da orelha interna. Na perda unilateral, tumores do nervo auditivo devem ser afastados. Pesquisa sobre fluxo sanguíneo e inflamação da orelha interna.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-page-relevant-text-read-in-this-pass",
+      "evidenceType": "institutional-definition-or-guideline"
+    },
+    {
+      "id": "SCOPE-infectocontagiosas",
+      "institution": "NLM MeSH",
+      "title": "Infections",
+      "url": "https://id.nlm.nih.gov/mesh/D007239",
+      "locator": "Registro D007239 lido em JSON (D007239.json): scopeNote; categoria C01; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Invasão do organismo hospedeiro por microrganismos, suas toxinas ou parasitas capazes de causar doença.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-COMMUNICABLE",
+      "institution": "NLM MeSH",
+      "title": "Communicable Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D003141",
+      "locator": "Registro D003141 lido em JSON (D003141.json): scopeNote; C01.221; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença causada por agente infeccioso ou suas toxinas, por transmissão direta ou indireta a partir de indivíduo infectado, animal, vetor ou ambiente.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neurologicas",
+      "institution": "NLM MeSH",
+      "title": "Nervous System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009422",
+      "locator": "Registro D009422 lido em JSON (D009422.json): scopeNote; categoria C10; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças do sistema nervoso central e periférico: encéfalo, medula, nervos cranianos e periféricos, raízes, sistema autônomo, junção neuromuscular e músculo.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-psiquiatricas",
+      "institution": "NLM MeSH",
+      "title": "Mental Disorders",
+      "url": "https://id.nlm.nih.gov/mesh/D001523",
+      "locator": "Registro D001523 lido em JSON (D001523.json): scopeNote; categoria F03; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doença psiquiátrica manifestada primariamente por anormalidades de pensamento, sentimento e comportamento, com sofrimento ou prejuízo funcional.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-auditivas",
+      "institution": "NLM MeSH",
+      "title": "Ear Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004427",
+      "locator": "Registro D004427 lido em JSON (D004427.json): scopeNote; C09.218; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do ouvido, da audição e do sistema de equilíbrio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-oculares",
+      "institution": "NLM MeSH",
+      "title": "Eye Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D005128",
+      "locator": "Registro D005128 lido em JSON (D005128.json): scopeNote; categoria C11; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que afetam o olho.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-nasais",
+      "institution": "NLM MeSH",
+      "title": "Nose Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009668",
+      "locator": "Registro D009668 lido em JSON (D009668.json): scopeNote; C08.460 e C09.603; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Distúrbios do nariz; descritor situado em Respiratory Tract Diseases e em Otorhinolaryngologic Diseases.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-respiratorias",
+      "institution": "NLM MeSH",
+      "title": "Respiratory Tract Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D012140",
+      "locator": "Registro D012140 lido em JSON (D012140.json): scopeNote; categoria C08; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças que envolvem o sistema respiratório.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-cardiovasculares",
+      "institution": "NLM MeSH",
+      "title": "Cardiovascular Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D002318",
+      "locator": "Registro D002318 lido em JSON (D002318.json): scopeNote; categoria C14; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Condições patológicas do sistema cardiovascular, incluindo coração, vasos sanguíneos e pericárdio.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-digestivas",
+      "institution": "NLM MeSH",
+      "title": "Digestive System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004066",
+      "locator": "Registro D004066 lido em JSON (D004066.json): scopeNote; categoria C06; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças de qualquer parte do trato gastrointestinal ou dos órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-genitourinarias",
+      "institution": "NLM MeSH",
+      "title": "Urogenital Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D000091642",
+      "locator": "Registro D000091642 lido em JSON (D000091642.json): scopeNote; categoria C12; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos do trato urinário e do sistema reprodutor (genitália).",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-endocrinologicas",
+      "institution": "NLM MeSH",
+      "title": "Endocrine System Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D004700",
+      "locator": "Registro D004700 lido em JSON (D004700.json): scopeNote; categoria C19; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Processos patológicos das glândulas endócrinas e doenças por nível anormal de hormônios disponíveis.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-miostioarticulares",
+      "institution": "NLM MeSH",
+      "title": "Musculoskeletal Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D009140",
+      "locator": "Registro D009140 lido em JSON (D009140.json): scopeNote; categoria C05; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças dos músculos, ligamentos e tecido conjuntivo associados, e dos ossos e cartilagem.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-hematologicas",
+      "institution": "NLM MeSH",
+      "title": "Hemic and Lymphatic Diseases",
+      "url": "https://id.nlm.nih.gov/mesh/D006425",
+      "locator": "Registro D006425 lido em JSON (D006425.json): scopeNote; categoria C15; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Doenças hematológicas e do sistema linfático: elementos figurados e componentes químicos do sangue; linfa, linfonodos e linfócitos.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    },
+    {
+      "id": "SCOPE-neoplasicas",
+      "institution": "NLM MeSH",
+      "title": "Neoplasms",
+      "url": "https://id.nlm.nih.gov/mesh/D009369",
+      "locator": "Registro D009369 lido em JSON (D009369.json): scopeNote; categoria C04; rótulos da árvore resolvidos pelo endpoint SPARQL do MeSH",
+      "observedSupport": "Crescimento novo e anormal de tecido; neoplasias malignas têm maior anaplasia, invasão e metástase em comparação às benignas.",
+      "accessedAt": "2026-11-15",
+      "verification": "primary-institutional-linked-data-record-scope-note-and-tree-read-in-this-pass",
+      "evidenceType": "institutional-taxonomy-list-not-exhaustive-exclusion"
+    }
+  ],
+  "groupScopes": [
+    {
+      "groupId": "infectocontagiosas",
+      "scope": "Infecções por microrganismos ou parasitas, incluindo doenças transmissíveis; não exige transmissão direta uniforme (interpretação da política local).",
+      "sourceIds": [
+        "SCOPE-infectocontagiosas",
+        "SCOPE-COMMUNICABLE"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neurologicas",
+      "scope": "Sistema nervoso central e periférico: encéfalo, medula, nervos e raízes; inclusão de junção neuromuscular e músculo é fronteira curricular.",
+      "sourceIds": [
+        "SCOPE-neurologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "psiquiatricas",
+      "scope": "Transtornos mentais definidos (pensamento, afeto e comportamento com sofrimento ou prejuízo); sintomas ou comorbidades isoladas não bastam.",
+      "sourceIds": [
+        "SCOPE-psiquiatricas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "auditivas",
+      "scope": "Ouvido, audição e sistema de equilíbrio vestibular.",
+      "sourceIds": [
+        "SCOPE-auditivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "oculares",
+      "scope": "Doenças que afetam o olho; origem neurológica de déficit visual deve ser distinguida.",
+      "sourceIds": [
+        "SCOPE-oculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "nasais",
+      "scope": "Distúrbios do nariz; sobreposição com vias respiratórias possível.",
+      "sourceIds": [
+        "SCOPE-nasais"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "respiratorias",
+      "scope": "Doenças do sistema respiratório.",
+      "sourceIds": [
+        "SCOPE-respiratorias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "cardiovasculares",
+      "scope": "Coração, vasos sanguíneos e pericárdio; doenças cerebrovasculares constam do ramo vascular.",
+      "sourceIds": [
+        "SCOPE-cardiovasculares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "digestivas",
+      "scope": "Trato gastrointestinal e órgãos acessórios (fígado, vias biliares, pâncreas).",
+      "sourceIds": [
+        "SCOPE-digestivas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "genitourinarias",
+      "scope": "Trato urinário e sistema reprodutor (inclui próstata e trato genital feminino).",
+      "sourceIds": [
+        "SCOPE-genitourinarias"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "endocrinologicas",
+      "scope": "Glândulas endócrinas e doenças por nível hormonal anormal; fator de risco ou influência hormonal isolados não bastam.",
+      "sourceIds": [
+        "SCOPE-endocrinologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "miostioarticulares",
+      "scope": "Músculos, ligamentos, ossos, cartilagem e articulações; fronteira neuromuscular é curricular.",
+      "sourceIds": [
+        "SCOPE-miostioarticulares"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "hematologicas",
+      "scope": "Sangue (elementos figurados e componentes químicos) e sistema linfático; extensão linfática é fronteira curricular não resolvida.",
+      "sourceIds": [
+        "SCOPE-hematologicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    },
+    {
+      "groupId": "neoplasicas",
+      "scope": "Crescimento tecidual novo e anormal, benigno ou maligno; causa, agente ou fator de risco não é tumor.",
+      "sourceIds": [
+        "SCOPE-neoplasicas"
+      ],
+      "classificationBasis": "reviewer-mapping-of-local-educational-taxonomy-to-institutional-scope",
+      "curricularApproval": false
+    }
+  ],
+  "records": [
+    {
+      "arrayIndex": 200,
+      "diseaseId": "hiperplasia-prostatica-benigna",
+      "diseaseName": "Hiperplasia prostática benigna (HPB)",
+      "recordObjectSha256": "3c39b5f1c41740a8c835aab600439ffe7798e0755472bf8190c8d43783da2025",
+      "inputClaimedPositiveGroupIds": [
+        "genitourinarias"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "genitourinarias"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NIDDK cita infecções do trato urinário entre as complicações da HPB; complicação infecciosa é diagnóstico distinto e não define a HPB, mas a sobreposição documentada impede negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "O NIDDK lista doença cardíaca e vascular entre as condições associadas a maior probabilidade de HPB; associação de risco não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "accepted",
+          "reason": "Aumento não canceroso da próstata com sintomas e complicações do trato urinário (retenção, cálculos vesicais, doença renal). O MeSH situa Prostatic Hyperplasia em Urogenital Diseases > Genital Diseases, Male > Prostatic Diseases e a ICD-10 em N40, capítulo XIV (aparelho geniturinário).",
+          "sourceIds": [
+            "NIDDK-BPH",
+            "MESH-BPH",
+            "ICD10-N40-N51"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "O NIDDK relaciona a causa, ainda incerta, a alterações hormonais do envelhecimento e cita diabetes tipo 2 entre as condições associadas; não define doença de glândula endócrina nem permite exclusão.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-BPH"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Distinção institucional explícita: o registro MeSH Prostatic Hyperplasia traz a anotação \"non-neoplastic despite entry terms ADENOMA, PROSTATIC, and PROSTATIC ADENOMA\"; a ICD-10 exclui de N40 as neoplasias benignas da próstata (D29.1); o MeSH define hiperplasia como aumento do número de células sem formação de tumor; o NIDDK afirma que o crescimento não é causado por câncer. O sinônimo \"adenoma de próstata\" é tratado pela própria fonte como não neoplásico. Inferência definicional sobre o rótulo; não exclui câncer de próstata coexistente, que o NIDDK cita como condição distinta. Validação curricular pendente.",
+          "sourceIds": [
+            "MESH-BPH",
+            "ICD10-N40-N51",
+            "MESH-HYPERPLASIA",
+            "NIDDK-BPH",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Distinção institucional explícita: o registro MeSH Prostatic Hyperplasia traz a anotação \"non-neoplastic despite entry terms ADENOMA, PROSTATIC, and PROSTATIC ADENOMA\"; a ICD-10 exclui de N40 as neoplasias benignas da próstata (D29.1); o MeSH define hiperplasia como aumento do número de células sem formação de tumor; o NIDDK afirma que o crescimento não é causado por câncer. O sinônimo \"adenoma de próstata\" é tratado pela própria fonte como não neoplásico. Inferência definicional sobre o rótulo; não exclui câncer de próstata coexistente, que o NIDDK cita como condição distinta. Validação curricular pendente.",
+            "sourceIds": [
+              "MESH-BPH",
+              "ICD10-N40-N51",
+              "MESH-HYPERPLASIA",
+              "NIDDK-BPH",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 201,
+      "diseaseId": "prostatite-bacteriana",
+      "diseaseName": "Prostatite bacteriana",
+      "recordObjectSha256": "16cf9874e19a279cd9bf2eef90d206126a0a2dd5715a4f34dbb60c248dc5b54d",
+      "inputClaimedPositiveGroupIds": [
+        "genitourinarias",
+        "infectocontagiosas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "genitourinarias"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "O NIDDK descreve a prostatite bacteriana (aguda e crônica) como infecção bacteriana da próstata, por bactérias que passam da uretra à glândula; a ICD-10 orienta código adicional B95–B98 para o agente em N41. A política local define o grupo por etiologia infecciosa, sem exigir transmissão direta. Nenhuma fonte lida descreve contágio entre pessoas e o MeSH situa Prostatitis apenas em Urogenital Diseases (silêncio, não exclusão); aceito sob a política local, com validação curricular pendente.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS",
+            "ICD10-N40-N51",
+            "MESH-PROSTATITIS",
+            "SCOPE-infectocontagiosas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Náusea e vômito são sintomas descritos na prostatite bacteriana aguda; não definem doença digestiva nem a excluem.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "accepted",
+          "reason": "Inflamação da próstata por infecção bacteriana, com sintomas urinários e dor genital; a próstata integra o sistema reprodutor masculino e o NIDDK a trata entre os problemas do trato urinário. MeSH: Prostatitis em Urogenital Diseases > Genital Diseases, Male > Prostatic Diseases; ICD-10 N41 (doenças inflamatórias da próstata), capítulo XIV.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS",
+            "MESH-PROSTATITIS",
+            "ICD10-N40-N51"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Dor lombar e inguinal é sintoma descrito; não define doença musculoesquelética nem a exclui.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "O NIDDK cita infecção bacteriana na corrente sanguínea entre as complicações e o exame de linfonodos inguinais; complicação não é identidade, e o enquadramento de bacteriemia no escopo hematológico não foi resolvido.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS",
+            "SCOPE-hematologicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção bacteriana da próstata, não crescimento tecidual novo e anormal; o NIDDK trata o câncer de próstata como condição distinta a diferenciar. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "NIDDK-PROSTATITIS",
+            "MESH-PROSTATITIS",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção bacteriana da próstata, não crescimento tecidual novo e anormal; o NIDDK trata o câncer de próstata como condição distinta a diferenciar. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "NIDDK-PROSTATITIS",
+              "MESH-PROSTATITIS",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 11 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 202,
+      "diseaseId": "endometriose",
+      "diseaseName": "Endometriose",
+      "recordObjectSha256": "81204e638dbaa6455e93f044792d9bdc37dbcb24a2acb4bd70b2b9ee5698af36",
+      "inputClaimedPositiveGroupIds": [
+        "genitourinarias"
+      ],
+      "inputClaimedConditionalGroupIds": [
+        "digestivas",
+        "respiratorias"
+      ],
+      "memberships": {
+        "accepted": [
+          "genitourinarias"
+        ],
+        "conditional": [
+          "respiratorias",
+          "digestivas"
+        ],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "cardiovasculares",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "A WHO declara causas desconhecidas e cita desregulação imune; o NICHD lista teorias (menstruação retrógrada, metaplasia celômica). Nenhuma fonte lida estabelece ou exclui etiologia infecciosa.",
+          "sourceIds": [
+            "WHO-ENDO",
+            "NICHD-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "O NICHD descreve lesões com nervos e mecanismos de dor ligados ao sistema nervoso central, e a WHO cita maior frequência de esclerose múltipla; mecanismo de dor e associação não definem doença neurológica nem a excluem.",
+          "sourceIds": [
+            "NICHD-ENDO-SYM",
+            "WHO-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "A WHO e o Ministério da Saúde descrevem impacto em saúde mental (depressão e ansiedade); impacto ou comorbidade não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "WHO-ENDO",
+            "MS-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "conditional",
+          "reason": "Condicional declarado e confirmado: a WHO cita ocorrência no tórax, o NICHD nos pulmões (casos raros) e a ICD-10 inclui endometriose do tórax em N80.8. O rótulo genérico não implica acometimento torácico.",
+          "sourceIds": [
+            "WHO-ENDO",
+            "NICHD-ENDO",
+            "ICD10-N80"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com endometriose torácica (pleural ou pulmonar) documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "conditional",
+          "reason": "Condicional declarado e confirmado: a ICD-10 tem N80.5 (endometriose do intestino), o NICHD cita focos nos intestinos e o Ministério da Saúde descreve queixas intestinais de padrão cíclico. O rótulo genérico não implica acometimento intestinal.",
+          "sourceIds": [
+            "ICD10-N80",
+            "NICHD-ENDO",
+            "NICHD-ENDO-SYM",
+            "MS-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com endometriose intestinal documentada.",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "accepted",
+          "reason": "Tecido semelhante ao endométrio fora do útero, mais comum na pelve (ovários, tubas, ligamentos, bexiga), com dismenorreia, dor pélvica e infertilidade. MeSH: Urogenital Diseases > Genital Diseases, Female; ICD-10 N80, capítulo XIV (trato genital feminino).",
+          "sourceIds": [
+            "WHO-ENDO",
+            "NICHD-ENDO",
+            "MESH-ENDO",
+            "ICD10-N80",
+            "MS-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "As lesões respondem a hormônios e o tratamento inclui terapia hormonal (WHO, NICHD, Ministério da Saúde); dependência hormonal não define doença de glândula endócrina nem a exclui.",
+          "sourceIds": [
+            "WHO-ENDO",
+            "NICHD-ENDO-SYM",
+            "MS-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "A WHO cita alterações da musculatura do assoalho pélvico como contribuintes da dor pélvica crônica e associação com lúpus; não definem doença musculoesquelética nem a excluem.",
+          "sourceIds": [
+            "WHO-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "A WHO relaciona sangramento menstrual intenso a deficiência de ferro e o NICHD cita possível disseminação por sangue ou linfáticos; consequência e hipótese de disseminação não são identidade nem base para exclusão.",
+          "sourceIds": [
+            "WHO-ENDO",
+            "NICHD-ENDO"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Distinção institucional explícita: o registro MeSH Endometriosis traz a anotação \"non-neoplastic & nothing to do with endometrial carcinoma ( = ENDOMETRIAL NEOPLASMS)\" e situa o descritor apenas em Urogenital Diseases; a ICD-10 classifica N80 entre os transtornos não inflamatórios do trato genital feminino (capítulo XIV), fora do capítulo de neoplasias. O termo \"endometrioma\" designa a endometriose ovariana (Ministério da Saúde), não um tumor. Inferência definicional sobre o rótulo; não exclui neoplasia coexistente. Validação curricular pendente, pois as fontes descrevem crescimento de tecido fora do útero.",
+          "sourceIds": [
+            "MESH-ENDO",
+            "ICD10-N80",
+            "MS-ENDO",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Distinção institucional explícita: o registro MeSH Endometriosis traz a anotação \"non-neoplastic & nothing to do with endometrial carcinoma ( = ENDOMETRIAL NEOPLASMS)\" e situa o descritor apenas em Urogenital Diseases; a ICD-10 classifica N80 entre os transtornos não inflamatórios do trato genital feminino (capítulo XIV), fora do capítulo de neoplasias. O termo \"endometrioma\" designa a endometriose ovariana (Ministério da Saúde), não um tumor. Inferência definicional sobre o rótulo; não exclui neoplasia coexistente. Validação curricular pendente, pois as fontes descrevem crescimento de tecido fora do útero.",
+            "sourceIds": [
+              "MESH-ENDO",
+              "ICD10-N80",
+              "MS-ENDO",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 10 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 203,
+      "diseaseId": "transtorno-ansiedade-separacao",
+      "diseaseName": "Transtorno de ansiedade de separação",
+      "recordObjectSha256": "1dfbb83c374e172bfc60241c109bc0b70b13a1e4ef0b01f479047060cc158852",
+      "inputClaimedPositiveGroupIds": [
+        "psiquiatricas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "psiquiatricas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "auditivas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "A WHO atribui os transtornos de ansiedade à interação de fatores sociais, psicológicos e biológicos, sem agente infeccioso. Porém o NIMH lista início súbito de ansiedade de separação entre os sintomas de PANS/PANDAS, síndrome associada a infecção estreptocócica. É sintoma em outra síndrome, não a identidade do transtorno, mas o vínculo documentado impede propor negativo.",
+          "sourceIds": [
+            "WHO-ANX",
+            "NIMH-PANDAS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "O MeSH situa Anxiety, Separation apenas em Mental Disorders (Anxiety Disorders e Neurodevelopmental Disorders, ambos ramos de transtornos mentais); o NIMH descreve PANS/PANDAS com hipótese de inflamação cerebral. Nenhuma fonte lida define ou exclui doença neurológica.",
+          "sourceIds": [
+            "MESH-SEPANX",
+            "NIMH-PANDAS"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "accepted",
+          "reason": "A WHO lista o transtorno de ansiedade de separação entre os transtornos de ansiedade, os transtornos mentais mais comuns; ICD-10 F93.0, capítulo V (transtornos mentais e comportamentais); MeSH em Mental Disorders > Anxiety Disorders.",
+          "sourceIds": [
+            "WHO-ANX",
+            "ICD10-F93",
+            "MESH-SEPANX",
+            "MESH-ANXDIS",
+            "NIMH-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "A WHO cita palpitações entre os sintomas dos transtornos de ansiedade e relaciona seus efeitos a fatores de risco cardiovascular; sintoma e risco não são identidade nem base para exclusão.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Náusea e desconforto abdominal figuram entre os sintomas dos transtornos de ansiedade (WHO); não definem doença digestiva nem a excluem.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "WHO-ANX"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia transtorno de ansiedade (medo ou preocupação excessivos com a separação de figuras de vínculo), classificado entre os transtornos mentais (ICD-10 F93.0; MeSH F03), não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "WHO-ANX",
+            "ICD10-F93",
+            "MESH-SEPANX",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia transtorno de ansiedade (medo ou preocupação excessivos com a separação de figuras de vínculo), classificado entre os transtornos mentais (ICD-10 F93.0; MeSH F03), não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "WHO-ANX",
+              "ICD10-F93",
+              "MESH-SEPANX",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 204,
+      "diseaseId": "mastoidite",
+      "diseaseName": "Mastoidite",
+      "recordObjectSha256": "b938be218b09d109847320c99d00a669209d28e506d5ef0c1b2b2acf3c30dcdf",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas",
+        "infectocontagiosas",
+        "miostioarticulares"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "auditivas",
+          "miostioarticulares"
+        ],
+        "conditional": [
+          "neurologicas"
+        ],
+        "held": [
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção do osso mastoide, em geral por extensão de otite média aguda, tratada com antibióticos (NHS, MedlinePlus); o MeSH situa Mastoiditis em Infections > Bone Diseases, Infectious > Osteomyelitis. Aceito pela etiologia infecciosa da política local; nenhuma fonte lida descreve contágio entre pessoas (validação curricular pendente).",
+          "sourceIds": [
+            "NHS-MASTOID",
+            "MLP-MASTOID",
+            "MESH-MASTOID",
+            "MESH-BONEINF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "conditional",
+          "reason": "Vínculo não declarado no rascunho. O NHS cita meningite como complicação se não tratada; o MedlinePlus lista abscesso epidural, paralisia facial, meningite e disseminação da infecção para o cérebro. É extensão da mesma infecção a estruturas do sistema nervoso; o rótulo genérico não a implica.",
+          "sourceIds": [
+            "NHS-MASTOID",
+            "MLP-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "requires": "Somente com complicação neurológica documentada da mastoidite (meningite, abscesso epidural ou encefálico, paralisia facial).",
+          "usableAsUnqualifiedPositive": false,
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção do osso mastoide atrás da orelha, complicação de otite média, com otorreia e perda auditiva; MeSH em Ear Diseases > Otitis > Otitis Media; ICD-10 H70, capítulo VIII (doenças do ouvido e da apófise mastoide).",
+          "sourceIds": [
+            "NHS-MASTOID",
+            "MLP-MASTOID",
+            "MESH-MASTOID",
+            "ICD10-H65-H75"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "accepted",
+          "reason": "Infecção de um osso do crânio (mastoide), com possível destruição óssea; o MeSH situa Mastoiditis em Musculoskeletal Diseases > Bone Diseases > Bone Diseases, Infectious > Osteomyelitis, e a política local inclui osso no grupo. A ICD-10 a classifica somente no capítulo do ouvido (silêncio, não exclusão).",
+          "sourceIds": [
+            "MESH-MASTOID",
+            "MESH-BONEINF",
+            "MLP-MASTOID",
+            "NHS-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "O MedlinePlus cita disseminação da infecção pelo corpo como complicação; não define doença hematológica nem a exclui.",
+          "sourceIds": [
+            "MLP-MASTOID"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção do osso mastoide, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-MASTOID",
+            "NHS-MASTOID",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção do osso mastoide, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-MASTOID",
+              "NHS-MASTOID",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "needs-revision",
+      "reviewCompleted": true,
+      "revisionReason": [
+        "Par que bloqueia: mastoidite×neurologicas (complicações intracranianas e do nervo facial documentadas e não declaradas no rascunho; registrar como condicional).",
+        "Pares retidos: mastoidite×hematologicas (disseminação da infecção, a resolver) e, sem fonte, psiquiatricas, oculares, nasais, respiratorias, cardiovasculares, digestivas, genitourinarias, endocrinologicas.",
+        "Propostas estão somente neste relatório; o registro-fonte não foi alterado."
+      ],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Disponibilidade irrestrita nos 14 grupos permanece bloqueada: 1 sobreposição(ões) condicional(is) não incorporada(s) ao conteúdo (neurologicas) e 9 par(es) retido(s)."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 205,
+      "diseaseId": "resfriado-comum",
+      "diseaseName": "Resfriado comum (rinofaringite viral)",
+      "recordObjectSha256": "7c04cd48acac6be4d442678241cd06a9ac33c15ef03bf609683a5a4a0a9dc632",
+      "inputClaimedPositiveGroupIds": [
+        "infectocontagiosas",
+        "respiratorias",
+        "nasais"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "infectocontagiosas",
+          "nasais",
+          "respiratorias"
+        ],
+        "conditional": [],
+        "held": [
+          "neurologicas",
+          "psiquiatricas",
+          "auditivas",
+          "oculares",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "accepted",
+          "reason": "Infecção viral das vias aéreas superiores que se transmite facilmente por tosse, espirros, mãos e superfícies (NHS); MeSH em Infections > Respiratory Tract Infections e em Virus Diseases; ICD-10 J00 entre as infecções agudas das vias aéreas superiores. O CDC, lido só por extração automática, corrobora.",
+          "sourceIds": [
+            "NHS-COLD",
+            "MESH-COLD",
+            "MESH-RTI",
+            "ICD10-J00-J06",
+            "CDC-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Perda de paladar e olfato é sintoma descrito pelo NHS; sintoma não define doença neurológica nem a exclui.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "held",
+          "reason": "Sobreposição documentada e não declarada: o NIDCD descreve que a infecção de ouvido frequentemente começa após resfriado, como infecção bacteriana secundária; o NHS cita sensação de pressão nos ouvidos e o CDC (por extração) lista infecção do ouvido médio entre as complicações. A otite é diagnóstico secundário distinto, não manifestação do resfriado; fica retido, nunca negativo, e é candidato a condicional em nova passagem.",
+          "sourceIds": [
+            "NIDCD-EAR",
+            "NHS-COLD",
+            "CDC-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "accepted",
+          "reason": "A ICD-10 nomeia J00 \"nasofaringite aguda [resfriado comum]\" e inclui coriza aguda, catarro nasal agudo e rinite aguda ou infecciosa; a scope note do MeSH descreve coriza, congestão nasal e espirros; o NHS afirma que o resfriado afeta principalmente nariz e garganta. Ressalva: o MeSH não situa Common Cold sob Nose Diseases e anota Nasopharyngitis como inflamação da porção nasofaríngea da faringe, não do nariz (silêncio de árvore, não exclusão); validação curricular pendente.",
+          "sourceIds": [
+            "ICD10-J00-J06",
+            "MESH-COLD",
+            "MESH-NASOPH",
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "accepted",
+          "reason": "Distúrbio catarral do trato respiratório superior; MeSH em Respiratory Tract Diseases > Respiratory Tract Infections; ICD-10 J00, capítulo X (doenças do aparelho respiratório).",
+          "sourceIds": [
+            "MESH-COLD",
+            "MESH-RTI",
+            "ICD10-J00-J06",
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Dores musculares são sintoma descrito (NHS); não definem doença musculoesquelética nem a excluem.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-COLD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia infecção viral aguda das vias aéreas superiores, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-COLD",
+            "NHS-COLD",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia infecção viral aguda das vias aéreas superiores, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-COLD",
+              "NHS-COLD",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 10 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 206,
+      "diseaseId": "otite-media-efusao",
+      "diseaseName": "Otite média com efusão",
+      "recordObjectSha256": "1c70b3e70363b4c32357bd4e8a8a6c1c648745c970dba84e7fd9c0069594df8c",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "Enquadramentos institucionais divergentes. O NICE define OME como efusão na orelha média sem sinais de inflamação aguda ou infecção e a ICD-10 a classifica como otite média não supurativa (H65); já o NIDCD a lista entre os tipos de \"ear infection\" e descreve que surge após infecção de ouvido, e o NICE cita histórico de infecções de vias aéreas superiores e de otite média aguda. Sem decisão curricular, o par fica retido.",
+          "sourceIds": [
+            "NICE-NG233",
+            "NIDCD-EAR",
+            "ICD10-H65-H75",
+            "NHS-GLUE",
+            "MESH-OME"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Problemas de equilíbrio e atraso de fala e linguagem são descritos (NHS, NICE); não definem doença neurológica nem a excluem.",
+          "sourceIds": [
+            "NHS-GLUE",
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "O NICE cita problemas de comportamento (desatenção, retraimento, irritabilidade) associados à OME; associação não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Líquido na orelha média com perda auditiva temporária; MeSH Otitis Media with Effusion em Ear Diseases > Otitis > Otitis Media; ICD-10 H65 (otite média não supurativa; inclui glue ear), capítulo VIII.",
+          "sourceIds": [
+            "NHS-GLUE",
+            "NICE-NG233",
+            "NIDCD-EAR",
+            "MESH-OME",
+            "MESH-OM",
+            "ICD10-H65-H75"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "O NICE lista conjuntivite entre os antecedentes que elevam a suspeita de OME; associação não define doença ocular nem a exclui.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Obstrução nasal, rinorreia, espirros ou prurido nasal e hipertrofia de adenoides são achados associados (NICE) e a adenoidectomia é opção de tratamento (NHS, NICE); fator associado não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "NICE-NG233",
+            "NHS-GLUE",
+            "NIDCD-EAR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Histórico de infecções de vias aéreas superiores, asma, sibilância e respiração bucal eleva a suspeita de OME (NICE); associação não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Anomalias craniofaciais (fenda palatina, síndrome de Down) são citadas como fatores associados (NICE, NHS); não definem doença musculoesquelética nem a excluem.",
+          "sourceIds": [
+            "NICE-NG233",
+            "NHS-GLUE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NICE-NG233"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "As fontes lidas tratam sobretudo de crianças (a diretriz NICE NG233 cobre menores de 12 anos) e não discutem causas obstrutivas em adultos, enquanto o rótulo não tem faixa etária. Nenhuma fonte lida estabelece ou exclui vínculo com neoplasia; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NICE-NG233",
+            "NHS-GLUE"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 13 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 207,
+      "diseaseId": "perfuracao-timpanica",
+      "diseaseName": "Perfuração da membrana timpânica",
+      "recordObjectSha256": "172c9b728b54275b26acf4ba4dbb180ec6a06874c46335f9dff198e7cda42459",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "Infecção de ouvido é causa frequente (NHS, MedlinePlus; a ICD-10 inclui a perfuração pós-inflamatória em H72) e antibióticos podem ser usados; causa não é identidade do diagnóstico, mas o vínculo causal documentado impede negativo. Candidato a condicional em nova passagem.",
+          "sourceIds": [
+            "NHS-PERF",
+            "MLP-PERF",
+            "ICD10-H65-H75"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Tontura e, em casos graves, fraqueza da face são sintomas descritos (NHS, MedlinePlus); não definem doença neurológica nem a excluem.",
+          "sourceIds": [
+            "NHS-PERF",
+            "MLP-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Orifício ou ruptura da membrana timpânica com perda auditiva e zumbido; MeSH Tympanic Membrane Perforation em Ear Diseases; ICD-10 H72, capítulo VIII.",
+          "sourceIds": [
+            "NHS-PERF",
+            "MLP-PERF",
+            "MESH-TMP",
+            "ICD10-H65-H75"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Trauma (pancada, objeto, mudança de pressão, ruído) é causa descrita e o MeSH também situa o descritor em Wounds and Injuries; a ICD-10 remete a ruptura traumática a S09.2. Não há grupo de trauma entre os 14 e nenhuma fonte lida estabelece ou exclui vínculo musculoesquelético.",
+          "sourceIds": [
+            "NHS-PERF",
+            "MLP-PERF",
+            "MESH-TMP",
+            "ICD10-H65-H75"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NHS-PERF"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "Diagnóstico nomeia orifício ou ruptura da membrana timpânica, de causa infecciosa, traumática ou pressórica segundo as fontes lidas, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+          "sourceIds": [
+            "MESH-TMP",
+            "NHS-PERF",
+            "MLP-PERF",
+            "SCOPE-neoplasicas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "Diagnóstico nomeia orifício ou ruptura da membrana timpânica, de causa infecciosa, traumática ou pressórica segundo as fontes lidas, não crescimento tecidual novo e anormal. Inferência definicional sobre o rótulo; não exclui tumor coexistente.",
+            "sourceIds": [
+              "MESH-TMP",
+              "NHS-PERF",
+              "MLP-PERF",
+              "SCOPE-neoplasicas"
+            ]
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 208,
+      "diseaseId": "disfuncao-tuba-auditiva",
+      "diseaseName": "Disfunção da tuba auditiva",
+      "recordObjectSha256": "7bfcfa4c8dcdb8321cb2f5d981eb44ed1d476162c9864546eed9cc4932ee6b75",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "psiquiatricas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O folheto do Chelsea and Westminster atribui a disfunção a condições de seios da face, garganta, nariz e ouvido, incluindo resfriados comuns; causa infecciosa possível não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Tontura é sintoma descrito; não define doença neurológica nem a exclui.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Falha prolongada em equalizar a pressão da orelha média, com audição abafada, plenitude e zumbido (folheto hospitalar do NHS). A ICD-10 classifica os transtornos da tuba auditiva em H68–H69, dentro das doenças da orelha média e da mastoide (capítulo VIII); o MeSH inclui a tuba auditiva na definição de Otitis Media e o NIDCD descreve sua função de ventilar a orelha média. Não há descritor MeSH de doença próprio para a disfunção.",
+          "sourceIds": [
+            "CHELWEST-ETD",
+            "ICD10-H65-H75",
+            "MESH-OM",
+            "MESH-ETUBE",
+            "NIDCD-EAR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Condições do nariz e dos seios da face, resfriados e alergias são causas descritas, e o tratamento inclui descongestionante e corticoide nasais; a tuba liga a orelha média à parte alta da garganta (NIDCD). Causa e vizinhança anatômica não são identidade; sobreposição documentada, retida para decisão curricular.",
+          "sourceIds": [
+            "CHELWEST-ETD",
+            "NIDCD-EAR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Resfriados comuns e alergias são causas descritas; causa não é identidade nem base para exclusão.",
+          "sourceIds": [
+            "CHELWEST-ETD",
+            "NIDCD-EAR"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "A única definição lida é um folheto hospitalar que atribui a disfunção a condições de seios da face, garganta, nariz e ouvido sem enumerá-las; nenhuma fonte lida estabelece ou exclui causa obstrutiva tumoral. Silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "CHELWEST-ETD"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 13 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    },
+    {
+      "arrayIndex": 209,
+      "diseaseId": "perda-auditiva-neurossensorial-subita-idiopatica",
+      "diseaseName": "Perda auditiva neurossensorial súbita idiopática",
+      "recordObjectSha256": "16a7cb991a8c06688b114beaba5b5fea3247de0481e14050639b3831413d2be3",
+      "inputClaimedPositiveGroupIds": [
+        "auditivas"
+      ],
+      "inputClaimedConditionalGroupIds": [],
+      "memberships": {
+        "accepted": [
+          "auditivas"
+        ],
+        "conditional": [],
+        "held": [
+          "infectocontagiosas",
+          "neurologicas",
+          "oculares",
+          "nasais",
+          "respiratorias",
+          "cardiovasculares",
+          "digestivas",
+          "genitourinarias",
+          "endocrinologicas",
+          "miostioarticulares",
+          "hematologicas",
+          "neoplasicas"
+        ]
+      },
+      "groupReviews": [
+        {
+          "groupId": "infectocontagiosas",
+          "membershipStatus": "held",
+          "reason": "O NIDCD lista infecções entre as causas identificáveis de surdez súbita (cerca de 10% dos casos) e a scope note do MeSH também as cita. A forma idiopática é, por definição, sem causa identificada, mas \"causa não identificada\" não equivale a distinção institucional de \"não infecciosa\". Retido.",
+          "sourceIds": [
+            "NIDCD-SUDDEN",
+            "MESH-SUDDENHL",
+            "ICD10-H90-H95"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-infectocontagiosas",
+            "SCOPE-COMMUNICABLE"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neurologicas",
+          "membershipStatus": "held",
+          "reason": "Mapeamento não resolvido. O MeSH situa Hearing Loss, Sudden também em Nervous System Diseases > Neurologic Manifestations > Sensation Disorders > Hearing Disorders e define a perda sensorioneural como lesão da cóclea e dos elementos neurais (nervo auditivo e conexões no tronco encefálico); o NIDCD a descreve como alteração dos órgãos sensoriais da orelha interna e cita doenças neurológicas (esclerose múltipla) entre as causas. Ramo de manifestação neurológica não equivale a doença neurológica; exige decisão curricular. Nunca negativo.",
+          "sourceIds": [
+            "MESH-SUDDENHL",
+            "MESH-SNHL",
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neurologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "psiquiatricas",
+          "membershipStatus": "not-accepted-for-named-diagnosis",
+          "reason": "A ICD-10 exclui de H91 a surdez psicogênica (F44.6), classificada entre os transtornos mentais; o diagnóstico nomeia perda sensorioneural por alteração dos órgãos sensoriais da orelha interna (NIDCD), não transtorno mental, e nenhuma fonte lida documenta vínculo psiquiátrico. Inferência definicional sobre o rótulo; não exclui transtorno mental coexistente.",
+          "sourceIds": [
+            "ICD10-H90-H95",
+            "NIDCD-SUDDEN",
+            "MESH-SNHL",
+            "SCOPE-psiquiatricas"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-psiquiatricas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "candidate",
+            "available": false,
+            "reason": "A ICD-10 exclui de H91 a surdez psicogênica (F44.6), classificada entre os transtornos mentais; o diagnóstico nomeia perda sensorioneural por alteração dos órgãos sensoriais da orelha interna (NIDCD), não transtorno mental, e nenhuma fonte lida documenta vínculo psiquiátrico. Inferência definicional sobre o rótulo; não exclui transtorno mental coexistente.",
+            "sourceIds": [
+              "ICD10-H90-H95",
+              "NIDCD-SUDDEN",
+              "MESH-SNHL",
+              "SCOPE-psiquiatricas"
+            ]
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "auditivas",
+          "membershipStatus": "accepted",
+          "reason": "Perda auditiva sensorioneural (\"da orelha interna\") rápida e sem causa identificada; MeSH em Ear Diseases > Hearing Disorders > Hearing Loss; ICD-10 H91.2 (perda auditiva súbita idiopática), capítulo VIII.",
+          "sourceIds": [
+            "NIDCD-SUDDEN",
+            "MESH-SUDDENHL",
+            "MESH-SNHL",
+            "ICD10-H90-H95"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-auditivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "ineligible-positive-or-conditional",
+            "available": false,
+            "reason": "Vínculo positivo ou condicional impede distrator negativo.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "oculares",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-oculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "nasais",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-nasais"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "respiratorias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-respiratorias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "cardiovasculares",
+          "membershipStatus": "held",
+          "reason": "Problemas de circulação sanguínea figuram entre as causas identificáveis (NIDCD), a scope note do MeSH cita doenças vasculares e há pesquisa sobre o fluxo sanguíneo da orelha interna; a ICD-10 separa a surdez isquêmica transitória (H93.0). Hipótese causal documentada impede negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN",
+            "MESH-SUDDENHL",
+            "ICD10-H90-H95"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-cardiovasculares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "digestivas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-digestivas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "genitourinarias",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-genitourinarias"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "endocrinologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-endocrinologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "miostioarticulares",
+          "membershipStatus": "held",
+          "reason": "Traumatismo craniano é causa identificável citada (NIDCD, MeSH); não há grupo de trauma entre os 14 e nenhuma fonte lida estabelece ou exclui vínculo musculoesquelético.",
+          "sourceIds": [
+            "NIDCD-SUDDEN",
+            "MESH-SUDDENHL"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-miostioarticulares"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "hematologicas",
+          "membershipStatus": "held",
+          "reason": "Nenhuma fonte lida estabelece ou exclui este vínculo; silêncio de fonte não é negativo.",
+          "sourceIds": [
+            "NIDCD-SUDDEN"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-hematologicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        },
+        {
+          "groupId": "neoplasicas",
+          "membershipStatus": "held",
+          "reason": "O NIDCD orienta afastar tumores do nervo auditivo na perda súbita unilateral e cita fármacos usados contra o câncer entre as causas; o MeSH descreve o neuroma do acústico (em Neoplasms) com perda auditiva. Na forma idiopática o tumor foi, por definição, afastado, mas o vínculo diagnóstico documentado torna imprudente propor negativo nesta passagem.",
+          "sourceIds": [
+            "NIDCD-SUDDEN",
+            "MESH-ACNEUROMA"
+          ],
+          "scopeSourceIds": [
+            "SCOPE-neoplasicas"
+          ],
+          "classificationBasis": "reviewer-educational-taxonomy-synthesis-from-read-institutional-content",
+          "safeNegativeCandidate": {
+            "status": "unknown/held",
+            "available": false,
+            "reason": "Não há justificativa suficiente para exclusão deste par.",
+            "sourceIds": []
+          },
+          "clinicalApproval": false
+        }
+      ],
+      "disposition": "model-reviewed",
+      "reviewCompleted": true,
+      "revisionReason": [],
+      "questionRelevantPositiveResolution": {
+        "declaredPositiveMembershipsResolved": true,
+        "declaredConditionalMembershipsResolved": true,
+        "allQuestionRelevantPositivesResolved": false,
+        "reason": "Vínculos declarados verificados e nenhuma sobreposição adicional documentada exige alteração do registro; ainda assim 12 par(es) permanecem retidos (desconhecidos, não negativos), o que bloqueia uso irrestrito nos 14 grupos."
+      },
+      "prototypeEligible": false,
+      "clinicalApproval": false,
+      "curricularApproval": false,
+      "usableInApp": false
+    }
+  ],
+  "counts": {
+    "diseasesReviewed": 10,
+    "groupsInspected": 14,
+    "diseaseGroupPairsInspected": 140,
+    "declaredPositiveMembershipsVerified": 15,
+    "declaredConditionalMembershipsVerified": 2,
+    "acceptedMemberships": 15,
+    "conditionalMemberships": 3,
+    "heldPairs": 114,
+    "safeNegativeCandidates": 8,
+    "availableSafeNegatives": 0,
+    "modelReviewed": 9,
+    "needsRevision": 1,
+    "prototypeEligible": 0,
+    "clinicalApprovals": 0
+  },
+  "clinicalApproval": false,
+  "curricularApproval": false,
+  "accessLimitations": [
+    {
+      "url": "https://www.cdc.gov/common-cold/about/index.html",
+      "result": "403 em requisição direta; conteúdo lido somente por extração automática (WebFetch), sem leitura do HTML bruto; usado apenas como corroboração, nunca como base única de um par"
+    },
+    {
+      "url": "https://icd.who.int/browse/2025-01/mms/en",
+      "result": "ICD-11 não consultada nesta passagem (o lote 002 registrou o navegador como aplicação JavaScript ilegível); a evidência de classificação vem da ICD-10 versão 2019 da WHO, lida por fragmentos GetConcept"
+    },
+    {
+      "url": "https://id.nlm.nih.gov/mesh/lookup/descriptor?label=Eustachian&match=contains",
+      "result": "a busca retornou apenas o descritor anatômico Eustachian Tube (D005064); não há descritor MeSH de doença para disfunção da tuba auditiva, e o par auditivo desse registro apoia-se na ICD-10 e no folheto hospitalar"
+    },
+    {
+      "url": "https://medlineplus.gov/ency/article/000039.htm",
+      "result": "primeira tentativa de abrir o verbete de perfuração timpânica trouxe artigo de outro tema (Shock); descartado. O verbete correto (article/001038.htm) foi aberto e lido"
+    },
+    {
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+      "result": "página aberta e lida, mas não nomeia o transtorno de ansiedade de separação; serve apenas de contexto e não sustenta sozinha nenhum par"
+    },
+    {
+      "url": "https://decs.bvsalud.org/",
+      "result": "DeCS e Orphanet não foram consultados nesta passagem"
+    }
+  ],
+  "completion": {
+    "boundedReviewComplete": true,
+    "sourceDraftEdited": false,
+    "applicationEdited": false,
+    "rootReviewEdited": false,
+    "otherDiseaseRecordsReviewed": false,
+    "clinicalApprovalGranted": false,
+    "remainingWork": "Resolve held pairs and incorporate reviewed qualifications in a separately authorized content change; no extension to the 214 records outside indexes 200–209, which belong to other batches not read by this reviewer."
+  }
+}
